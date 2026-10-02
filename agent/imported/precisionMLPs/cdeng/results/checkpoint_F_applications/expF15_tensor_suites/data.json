@@ -1,0 +1,1718 @@
+{
+  "scope": {
+    "bwler": "oracle tensor-Chebyshev representation ceiling; not a PDE solve",
+    "dysts": "optimal function-space rank compression of solved QI trajectory; not rank-constrained solve"
+  },
+  "bwler": {
+    "convection_c40": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 1.0931969362860867
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 1.1067797641436248
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 1.1067797641436248
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 1.1067797641436248
+        },
+        {
+          "degree": 16,
+          "rank": 16,
+          "parameters": 544,
+          "relative_l2": 1.1067797641436248
+        },
+        {
+          "degree": 16,
+          "rank": 32,
+          "parameters": 1088,
+          "relative_l2": 1.1067797641436248
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.7014522206885568
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 0.025843673854327832
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 0.025843673854327832
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 0.025843673854327818
+        },
+        {
+          "degree": 24,
+          "rank": 16,
+          "parameters": 800,
+          "relative_l2": 0.025843673854327814
+        },
+        {
+          "degree": 24,
+          "rank": 32,
+          "parameters": 1600,
+          "relative_l2": 0.025843673854327814
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.7014385849767217
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 1.3047993285330804e-05
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 1.3047993285332174e-05
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 1.3047993285332246e-05
+        },
+        {
+          "degree": 32,
+          "rank": 16,
+          "parameters": 1056,
+          "relative_l2": 1.3047993285330692e-05
+        },
+        {
+          "degree": 32,
+          "rank": 32,
+          "parameters": 2112,
+          "relative_l2": 1.3047993285330792e-05
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.7014385893918136
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 5.582697156930007e-15
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 5.615647037035714e-15
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 5.637612513156537e-15
+        },
+        {
+          "degree": 48,
+          "rank": 16,
+          "parameters": 1568,
+          "relative_l2": 5.651485246971966e-15
+        },
+        {
+          "degree": 48,
+          "rank": 32,
+          "parameters": 3136,
+          "relative_l2": 5.659096595797461e-15
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.7014385893918136
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 2.5483922711814556e-15
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 2.71078507311688e-15
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 2.8074382572819735e-15
+        },
+        {
+          "degree": 64,
+          "rank": 16,
+          "parameters": 2080,
+          "relative_l2": 2.863229150734706e-15
+        },
+        {
+          "degree": 64,
+          "rank": 32,
+          "parameters": 4160,
+          "relative_l2": 2.8789394551653384e-15
+        },
+        {
+          "degree": 96,
+          "rank": 1,
+          "parameters": 194,
+          "relative_l2": 0.7014385893918136
+        },
+        {
+          "degree": 96,
+          "rank": 2,
+          "parameters": 388,
+          "relative_l2": 2.787807709052903e-15
+        },
+        {
+          "degree": 96,
+          "rank": 4,
+          "parameters": 776,
+          "relative_l2": 2.856880281956201e-15
+        },
+        {
+          "degree": 96,
+          "rank": 8,
+          "parameters": 1552,
+          "relative_l2": 2.9104745430693273e-15
+        },
+        {
+          "degree": 96,
+          "rank": 16,
+          "parameters": 3104,
+          "relative_l2": 2.9543711224283735e-15
+        },
+        {
+          "degree": 96,
+          "rank": 32,
+          "parameters": 6208,
+          "relative_l2": 2.9719174072084256e-15
+        },
+        {
+          "degree": 128,
+          "rank": 1,
+          "parameters": 258,
+          "relative_l2": 0.7014385893918136
+        },
+        {
+          "degree": 128,
+          "rank": 2,
+          "parameters": 516,
+          "relative_l2": 2.7347054175979614e-15
+        },
+        {
+          "degree": 128,
+          "rank": 4,
+          "parameters": 1032,
+          "relative_l2": 2.868897780593124e-15
+        },
+        {
+          "degree": 128,
+          "rank": 8,
+          "parameters": 2064,
+          "relative_l2": 2.9824657730915223e-15
+        },
+        {
+          "degree": 128,
+          "rank": 16,
+          "parameters": 4128,
+          "relative_l2": 3.025555809912011e-15
+        },
+        {
+          "degree": 128,
+          "rank": 32,
+          "parameters": 8256,
+          "relative_l2": 3.0377658886630133e-15
+        }
+      ],
+      "bwler": {
+        "error": 6.2e-12,
+        "parameters": 9216
+      },
+      "geometry": "rectangle"
+    },
+    "convection_c80": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 1.2066137761037143
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 1.3639849036100469
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 1.3639849036100469
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 1.3639849036100469
+        },
+        {
+          "degree": 16,
+          "rank": 16,
+          "parameters": 544,
+          "relative_l2": 1.3639849036100469
+        },
+        {
+          "degree": 16,
+          "rank": 32,
+          "parameters": 1088,
+          "relative_l2": 1.3639849036100469
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 1.1414792051463147
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 1.2573147350111813
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 1.2573147350111813
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 1.2573147350111815
+        },
+        {
+          "degree": 24,
+          "rank": 16,
+          "parameters": 800,
+          "relative_l2": 1.2573147350111813
+        },
+        {
+          "degree": 24,
+          "rank": 32,
+          "parameters": 1600,
+          "relative_l2": 1.2573147350111813
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 1.0265542476754481
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 1.0558077272282802
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 1.0558077272282802
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 1.0558077272282802
+        },
+        {
+          "degree": 32,
+          "rank": 16,
+          "parameters": 1056,
+          "relative_l2": 1.0558077272282802
+        },
+        {
+          "degree": 32,
+          "rank": 32,
+          "parameters": 2112,
+          "relative_l2": 1.0558077272282802
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.7063593719917054
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 0.003714127986926223
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 0.0037141279869262276
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 0.003714127986926231
+        },
+        {
+          "degree": 48,
+          "rank": 16,
+          "parameters": 1568,
+          "relative_l2": 0.003714127986926211
+        },
+        {
+          "degree": 48,
+          "rank": 32,
+          "parameters": 3136,
+          "relative_l2": 0.0037141279869262107
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.706352455910754
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 1.8891076308762112e-09
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 1.889107640469587e-09
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 1.8891076439820104e-09
+        },
+        {
+          "degree": 64,
+          "rank": 16,
+          "parameters": 2080,
+          "relative_l2": 1.889107644879367e-09
+        },
+        {
+          "degree": 64,
+          "rank": 32,
+          "parameters": 4160,
+          "relative_l2": 1.8891076444732126e-09
+        },
+        {
+          "degree": 96,
+          "rank": 1,
+          "parameters": 194,
+          "relative_l2": 0.7063524559147067
+        },
+        {
+          "degree": 96,
+          "rank": 2,
+          "parameters": 388,
+          "relative_l2": 5.0269342806250885e-15
+        },
+        {
+          "degree": 96,
+          "rank": 4,
+          "parameters": 776,
+          "relative_l2": 5.2266011290111494e-15
+        },
+        {
+          "degree": 96,
+          "rank": 8,
+          "parameters": 1552,
+          "relative_l2": 5.344470704521788e-15
+        },
+        {
+          "degree": 96,
+          "rank": 16,
+          "parameters": 3104,
+          "relative_l2": 5.414957631168056e-15
+        },
+        {
+          "degree": 96,
+          "rank": 32,
+          "parameters": 6208,
+          "relative_l2": 5.4292316772068744e-15
+        },
+        {
+          "degree": 128,
+          "rank": 1,
+          "parameters": 258,
+          "relative_l2": 0.7063524559147069
+        },
+        {
+          "degree": 128,
+          "rank": 2,
+          "parameters": 516,
+          "relative_l2": 5.0934669633027595e-15
+        },
+        {
+          "degree": 128,
+          "rank": 4,
+          "parameters": 1032,
+          "relative_l2": 5.2714443413974e-15
+        },
+        {
+          "degree": 128,
+          "rank": 8,
+          "parameters": 2064,
+          "relative_l2": 5.565269543862281e-15
+        },
+        {
+          "degree": 128,
+          "rank": 16,
+          "parameters": 4128,
+          "relative_l2": 5.618304304385695e-15
+        },
+        {
+          "degree": 128,
+          "rank": 32,
+          "parameters": 8256,
+          "relative_l2": 5.630125732662062e-15
+        }
+      ],
+      "bwler": {
+        "error": 1e-09,
+        "parameters": 9216
+      },
+      "geometry": "rectangle"
+    },
+    "reaction": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 0.20423202756926034
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 0.057466736569761874
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 0.004682529304183724
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 0.0011368525619778335
+        },
+        {
+          "degree": 16,
+          "rank": 16,
+          "parameters": 544,
+          "relative_l2": 0.00113685250952609
+        },
+        {
+          "degree": 16,
+          "rank": 32,
+          "parameters": 1088,
+          "relative_l2": 0.00113685250952609
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.2042317011908424
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 0.05745862693033445
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 0.004688155688059137
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 6.626709195720775e-05
+        },
+        {
+          "degree": 24,
+          "rank": 16,
+          "parameters": 800,
+          "relative_l2": 5.917151745535165e-05
+        },
+        {
+          "degree": 24,
+          "rank": 32,
+          "parameters": 1600,
+          "relative_l2": 5.917151745535163e-05
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.20423158145994738
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 0.057458504198044186
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 0.004688851559630159
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 2.8673817226649103e-05
+        },
+        {
+          "degree": 32,
+          "rank": 16,
+          "parameters": 1056,
+          "relative_l2": 3.2278912174608955e-06
+        },
+        {
+          "degree": 32,
+          "rank": 32,
+          "parameters": 2112,
+          "relative_l2": 3.2278912174617654e-06
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.20423157477691634
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 0.05745849321818338
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 0.0046888594404928844
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 2.861935235703766e-05
+        },
+        {
+          "degree": 48,
+          "rank": 16,
+          "parameters": 1568,
+          "relative_l2": 9.280415374089424e-09
+        },
+        {
+          "degree": 48,
+          "rank": 32,
+          "parameters": 3136,
+          "relative_l2": 9.230189305674489e-09
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.20423157478087697
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 0.057458493226055445
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 0.004688859447253416
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 2.8619381203622218e-05
+        },
+        {
+          "degree": 64,
+          "rank": 16,
+          "parameters": 2080,
+          "relative_l2": 1.0628228626832215e-09
+        },
+        {
+          "degree": 64,
+          "rank": 32,
+          "parameters": 4160,
+          "relative_l2": 2.751794650918021e-11
+        },
+        {
+          "degree": 96,
+          "rank": 1,
+          "parameters": 194,
+          "relative_l2": 0.2042315747808539
+        },
+        {
+          "degree": 96,
+          "rank": 2,
+          "parameters": 388,
+          "relative_l2": 0.05745849322603508
+        },
+        {
+          "degree": 96,
+          "rank": 4,
+          "parameters": 776,
+          "relative_l2": 0.004688859447278965
+        },
+        {
+          "degree": 96,
+          "rank": 8,
+          "parameters": 1552,
+          "relative_l2": 2.8619381231167594e-05
+        },
+        {
+          "degree": 96,
+          "rank": 16,
+          "parameters": 3104,
+          "relative_l2": 1.0620541944681026e-09
+        },
+        {
+          "degree": 96,
+          "rank": 32,
+          "parameters": 6208,
+          "relative_l2": 8.439906183596116e-16
+        },
+        {
+          "degree": 128,
+          "rank": 1,
+          "parameters": 258,
+          "relative_l2": 0.2042315747808539
+        },
+        {
+          "degree": 128,
+          "rank": 2,
+          "parameters": 516,
+          "relative_l2": 0.057458493226035086
+        },
+        {
+          "degree": 128,
+          "rank": 4,
+          "parameters": 1032,
+          "relative_l2": 0.004688859447278977
+        },
+        {
+          "degree": 128,
+          "rank": 8,
+          "parameters": 2064,
+          "relative_l2": 2.8619381231160276e-05
+        },
+        {
+          "degree": 128,
+          "rank": 16,
+          "parameters": 4128,
+          "relative_l2": 1.0620542006037428e-09
+        },
+        {
+          "degree": 128,
+          "rank": 32,
+          "parameters": 8256,
+          "relative_l2": 7.847363583008275e-16
+        }
+      ],
+      "bwler": {
+        "error": 4.6e-07,
+        "parameters": 6400
+      },
+      "geometry": "rectangle"
+    },
+    "wave": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 0.46018562699227544
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 0.08037099980499678
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 0.08037099980499678
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 0.08037099980499678
+        },
+        {
+          "degree": 16,
+          "rank": 16,
+          "parameters": 544,
+          "relative_l2": 0.08037099980499678
+        },
+        {
+          "degree": 16,
+          "rank": 32,
+          "parameters": 1088,
+          "relative_l2": 0.08037099980499678
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.45931484760554947
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 5.777471754787496e-05
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 5.7774717547876476e-05
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 5.77747175478749e-05
+        },
+        {
+          "degree": 24,
+          "rank": 16,
+          "parameters": 800,
+          "relative_l2": 5.777471754787631e-05
+        },
+        {
+          "degree": 24,
+          "rank": 32,
+          "parameters": 1600,
+          "relative_l2": 5.7774717547876286e-05
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.459314828464784
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 2.0146080629907083e-09
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 2.0146080658680077e-09
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 2.0146080643104663e-09
+        },
+        {
+          "degree": 32,
+          "rank": 16,
+          "parameters": 1056,
+          "relative_l2": 2.0146080644312607e-09
+        },
+        {
+          "degree": 32,
+          "rank": 32,
+          "parameters": 2112,
+          "relative_l2": 2.0146080654471684e-09
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.45931482846585153
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 1.0559260458833646e-15
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 1.0863435021341371e-15
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 1.1079939717097966e-15
+        },
+        {
+          "degree": 48,
+          "rank": 16,
+          "parameters": 1568,
+          "relative_l2": 1.1257557851049332e-15
+        },
+        {
+          "degree": 48,
+          "rank": 32,
+          "parameters": 3136,
+          "relative_l2": 1.1524651111148885e-15
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.45931482846585153
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 1.0518842453565873e-15
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 1.1307432882976917e-15
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 1.152045487644424e-15
+        },
+        {
+          "degree": 64,
+          "rank": 16,
+          "parameters": 2080,
+          "relative_l2": 1.1664053847588987e-15
+        },
+        {
+          "degree": 64,
+          "rank": 32,
+          "parameters": 4160,
+          "relative_l2": 1.1943238021053332e-15
+        },
+        {
+          "degree": 96,
+          "rank": 1,
+          "parameters": 194,
+          "relative_l2": 0.45931482846585153
+        },
+        {
+          "degree": 96,
+          "rank": 2,
+          "parameters": 388,
+          "relative_l2": 1.1878471671936696e-15
+        },
+        {
+          "degree": 96,
+          "rank": 4,
+          "parameters": 776,
+          "relative_l2": 1.2293929462145116e-15
+        },
+        {
+          "degree": 96,
+          "rank": 8,
+          "parameters": 1552,
+          "relative_l2": 1.2626115370418966e-15
+        },
+        {
+          "degree": 96,
+          "rank": 16,
+          "parameters": 3104,
+          "relative_l2": 1.276580244152295e-15
+        },
+        {
+          "degree": 96,
+          "rank": 32,
+          "parameters": 6208,
+          "relative_l2": 1.3058874679762382e-15
+        },
+        {
+          "degree": 128,
+          "rank": 1,
+          "parameters": 258,
+          "relative_l2": 0.45931482846585153
+        },
+        {
+          "degree": 128,
+          "rank": 2,
+          "parameters": 516,
+          "relative_l2": 1.1420730690878053e-15
+        },
+        {
+          "degree": 128,
+          "rank": 4,
+          "parameters": 1032,
+          "relative_l2": 1.2839980464171954e-15
+        },
+        {
+          "degree": 128,
+          "rank": 8,
+          "parameters": 2064,
+          "relative_l2": 1.3273808853666652e-15
+        },
+        {
+          "degree": 128,
+          "rank": 16,
+          "parameters": 4128,
+          "relative_l2": 1.3411192662052062e-15
+        },
+        {
+          "degree": 128,
+          "rank": 32,
+          "parameters": 8256,
+          "relative_l2": 1.364319267135275e-15
+        }
+      ],
+      "bwler": {
+        "error": 1.6e-13,
+        "parameters": 9216
+      },
+      "geometry": "rectangle"
+    },
+    "burgers": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 0.33413431070494587
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 0.25435647565258246
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 0.2525541287885608
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 0.2525538835718385
+        },
+        {
+          "degree": 16,
+          "rank": 16,
+          "parameters": 544,
+          "relative_l2": 0.25255388357183794
+        },
+        {
+          "degree": 16,
+          "rank": 32,
+          "parameters": 1088,
+          "relative_l2": 0.25255388357183794
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.30372935814219987
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 0.1980824308354909
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 0.19441001676266437
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 0.19440756124052494
+        },
+        {
+          "degree": 24,
+          "rank": 16,
+          "parameters": 800,
+          "relative_l2": 0.19440756123947345
+        },
+        {
+          "degree": 24,
+          "rank": 32,
+          "parameters": 1600,
+          "relative_l2": 0.19440756123947345
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.2881691388319882
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 0.1655789560185761
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 0.1601532031043332
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 0.16014621559260894
+        },
+        {
+          "degree": 32,
+          "rank": 16,
+          "parameters": 1056,
+          "relative_l2": 0.16014621558348938
+        },
+        {
+          "degree": 32,
+          "rank": 32,
+          "parameters": 2112,
+          "relative_l2": 0.16014621558348968
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.2727968787332808
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 0.12795356065198546
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 0.11925982843310644
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 0.11923916722299244
+        },
+        {
+          "degree": 48,
+          "rank": 16,
+          "parameters": 1568,
+          "relative_l2": 0.11923916681624434
+        },
+        {
+          "degree": 48,
+          "rank": 32,
+          "parameters": 3136,
+          "relative_l2": 0.11923916681623815
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.2653789075339011
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 0.10597489523251716
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 0.09411110684113437
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 0.09407151728879838
+        },
+        {
+          "degree": 64,
+          "rank": 16,
+          "parameters": 2080,
+          "relative_l2": 0.09407151529596466
+        },
+        {
+          "degree": 64,
+          "rank": 32,
+          "parameters": 4160,
+          "relative_l2": 0.09407151529570106
+        },
+        {
+          "degree": 96,
+          "rank": 1,
+          "parameters": 194,
+          "relative_l2": 0.25842289808211
+        },
+        {
+          "degree": 96,
+          "rank": 2,
+          "parameters": 388,
+          "relative_l2": 0.08113846668196033
+        },
+        {
+          "degree": 96,
+          "rank": 4,
+          "parameters": 776,
+          "relative_l2": 0.06304496865684017
+        },
+        {
+          "degree": 96,
+          "rank": 8,
+          "parameters": 1552,
+          "relative_l2": 0.06295099775529453
+        },
+        {
+          "degree": 96,
+          "rank": 16,
+          "parameters": 3104,
+          "relative_l2": 0.06295096428108135
+        },
+        {
+          "degree": 96,
+          "rank": 32,
+          "parameters": 6208,
+          "relative_l2": 0.06295096427869316
+        },
+        {
+          "degree": 128,
+          "rank": 1,
+          "parameters": 258,
+          "relative_l2": 0.25529258666967086
+        },
+        {
+          "degree": 128,
+          "rank": 2,
+          "parameters": 516,
+          "relative_l2": 0.06817240632002287
+        },
+        {
+          "degree": 128,
+          "rank": 4,
+          "parameters": 1032,
+          "relative_l2": 0.04391621822687995
+        },
+        {
+          "degree": 128,
+          "rank": 8,
+          "parameters": 2064,
+          "relative_l2": 0.04372777538068071
+        },
+        {
+          "degree": 128,
+          "rank": 16,
+          "parameters": 4128,
+          "relative_l2": 0.043727530937458514
+        },
+        {
+          "degree": 128,
+          "rank": 32,
+          "parameters": 8256,
+          "relative_l2": 0.04372753093291606
+        }
+      ],
+      "bwler": {
+        "error": 0.29,
+        "parameters": 4096
+      },
+      "geometry": "rectangle"
+    },
+    "poisson_cg": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 0.35094930424114806
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 0.21289332975840058
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 0.011038099342290395
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 0.007097878450095981
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.3626749245833444
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 0.2188984213510931
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 0.010819083880901902
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 0.014438465607554081
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.3612400653179989
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 0.2430332611565034
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 0.03468160319784933
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 1.756060730264066
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.517166486159876
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 0.9047809667522888
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 15.21078838801471
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 25061.423718274473
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 3.419557829869958
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 151.97752079857318
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 203.87324540998776
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 108599.37972376053
+        }
+      ],
+      "bwler": {
+        "error": 9.4e-05,
+        "parameters": 4096
+      },
+      "geometry": "perforated_scattered_ALS"
+    },
+    "poisson_man": {
+      "cells": [
+        {
+          "degree": 16,
+          "rank": 1,
+          "parameters": 34,
+          "relative_l2": 0.02028889990477669
+        },
+        {
+          "degree": 16,
+          "rank": 2,
+          "parameters": 68,
+          "relative_l2": 0.0033534307139556335
+        },
+        {
+          "degree": 16,
+          "rank": 4,
+          "parameters": 136,
+          "relative_l2": 0.00029302928592505717
+        },
+        {
+          "degree": 16,
+          "rank": 8,
+          "parameters": 272,
+          "relative_l2": 0.0002686033720122073
+        },
+        {
+          "degree": 24,
+          "rank": 1,
+          "parameters": 50,
+          "relative_l2": 0.02012884164681012
+        },
+        {
+          "degree": 24,
+          "rank": 2,
+          "parameters": 100,
+          "relative_l2": 0.003340958204640492
+        },
+        {
+          "degree": 24,
+          "rank": 4,
+          "parameters": 200,
+          "relative_l2": 0.0006158959472703392
+        },
+        {
+          "degree": 24,
+          "rank": 8,
+          "parameters": 400,
+          "relative_l2": 4.847643314743299e-05
+        },
+        {
+          "degree": 32,
+          "rank": 1,
+          "parameters": 66,
+          "relative_l2": 0.02017283131814654
+        },
+        {
+          "degree": 32,
+          "rank": 2,
+          "parameters": 132,
+          "relative_l2": 0.013436667084698135
+        },
+        {
+          "degree": 32,
+          "rank": 4,
+          "parameters": 264,
+          "relative_l2": 0.00010227761736958208
+        },
+        {
+          "degree": 32,
+          "rank": 8,
+          "parameters": 528,
+          "relative_l2": 8.664037050769164e-06
+        },
+        {
+          "degree": 48,
+          "rank": 1,
+          "parameters": 98,
+          "relative_l2": 0.02020294398903139
+        },
+        {
+          "degree": 48,
+          "rank": 2,
+          "parameters": 196,
+          "relative_l2": 0.0033720898859169158
+        },
+        {
+          "degree": 48,
+          "rank": 4,
+          "parameters": 392,
+          "relative_l2": 0.0005177355731141362
+        },
+        {
+          "degree": 48,
+          "rank": 8,
+          "parameters": 784,
+          "relative_l2": 9.770912057264334e-06
+        },
+        {
+          "degree": 64,
+          "rank": 1,
+          "parameters": 130,
+          "relative_l2": 0.020275641243672995
+        },
+        {
+          "degree": 64,
+          "rank": 2,
+          "parameters": 260,
+          "relative_l2": 0.0035198785347340298
+        },
+        {
+          "degree": 64,
+          "rank": 4,
+          "parameters": 520,
+          "relative_l2": 0.0005117356274691634
+        },
+        {
+          "degree": 64,
+          "rank": 8,
+          "parameters": 1040,
+          "relative_l2": 9.999337695942921e-05
+        }
+      ],
+      "bwler": {
+        "error": 1.1e-06,
+        "parameters": 4096
+      },
+      "geometry": "perforated_scattered_ALS"
+    }
+  },
+  "dysts": {
+    "Lorenz": {
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "d": 3,
+      "full_parameters": 2091,
+      "full_vs_dop853_relative_l2": 8.266041906119571e-13,
+      "certified_full_relative_l2": 1.1e-13,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 5702,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 700,
+          "relative_l2": 0.36269304961559296
+        },
+        {
+          "rank": 2,
+          "parameters": 1400,
+          "relative_l2": 0.10196455679023043
+        },
+        {
+          "rank": 3,
+          "parameters": 2100,
+          "relative_l2": 8.265839122843416e-13
+        }
+      ]
+    },
+    "Rossler": {
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "d": 3,
+      "full_parameters": 2091,
+      "full_vs_dop853_relative_l2": 4.361263983834228e-13,
+      "certified_full_relative_l2": 4.3e-13,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 8660,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 700,
+          "relative_l2": 0.6921928353469363
+        },
+        {
+          "rank": 2,
+          "parameters": 1400,
+          "relative_l2": 0.3163426848592473
+        },
+        {
+          "rank": 3,
+          "parameters": 2100,
+          "relative_l2": 4.361178937190207e-13
+        }
+      ]
+    },
+    "Thomas": {
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "d": 3,
+      "full_parameters": 2091,
+      "full_vs_dop853_relative_l2": 9.811960666130801e-12,
+      "certified_full_relative_l2": 1.4e-12,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 4736,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 700,
+          "relative_l2": 0.39789001501316185
+        },
+        {
+          "rank": 2,
+          "parameters": 1400,
+          "relative_l2": 0.20087432349842854
+        },
+        {
+          "rank": 3,
+          "parameters": 2100,
+          "relative_l2": 9.8118899099535e-12
+        }
+      ]
+    },
+    "Halvorsen": {
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "d": 3,
+      "full_parameters": 2091,
+      "full_vs_dop853_relative_l2": 1.881768963157476e-13,
+      "certified_full_relative_l2": 4.9e-13,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 5735,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 700,
+          "relative_l2": 0.784183254340538
+        },
+        {
+          "rank": 2,
+          "parameters": 1400,
+          "relative_l2": 0.5524872873564645
+        },
+        {
+          "rank": 3,
+          "parameters": 2100,
+          "relative_l2": 1.8817297150845548e-13
+        }
+      ]
+    },
+    "Lorenz96": {
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "d": 4,
+      "full_parameters": 2788,
+      "full_vs_dop853_relative_l2": 2.817375116195666e-13,
+      "certified_full_relative_l2": 1.3e-13,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 4982,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 701,
+          "relative_l2": 0.7844694562465646
+        },
+        {
+          "rank": 2,
+          "parameters": 1402,
+          "relative_l2": 0.568441126872788
+        },
+        {
+          "rank": 3,
+          "parameters": 2103,
+          "relative_l2": 0.35383270653851745
+        },
+        {
+          "rank": 4,
+          "parameters": 2804,
+          "relative_l2": 2.8177429064753847e-13
+        }
+      ]
+    }
+  }
+}

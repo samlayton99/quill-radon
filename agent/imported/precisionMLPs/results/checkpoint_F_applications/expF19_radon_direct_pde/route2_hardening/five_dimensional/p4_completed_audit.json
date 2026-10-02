@@ -1,0 +1,22 @@
+{
+  "field_relative_l2": 3.315557059332499e-05,
+  "field_max_absolute": 0.00018655905995990096,
+  "pde_rms": 8.882627534149481e-05,
+  "pde_max": 0.00024857466192829136,
+  "boundary_rms": 4.641745915711697e-05,
+  "boundary_max": 0.00019532275696310109,
+  "corner_rms": 0.00038553238500671423,
+  "corner_max": 0.0009414001676921746,
+  "ordinary_minus_stable_rms": 2.39369859446566e-15,
+  "readout_l1": 1.4533009663015486,
+  "model_parameter_bytes": 5355008,
+  "architecture": [
+    "Linear",
+    "Tanh",
+    "Linear"
+  ],
+  "interior_truth_used_only_after_solver_returned": true,
+  "degree": 4,
+  "directions": 625,
+  "neurons": 95625
+}

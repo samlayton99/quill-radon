@@ -1,0 +1,643 @@
+{
+  "scope": "Restricted moving tanh-front family; generic scalar flux and entropy callbacks; not automatic shock/rarefaction discovery.",
+  "fit_input": "Initial step mass and spacetime conservation balances only. No PDE solution labels or analytic speed enters residuals.",
+  "optimization": "Damped Gauss-Newton in two/three front parameters, finite-difference Jacobian, tiny dense linear solve; separate diagnostic, not general residual engine.",
+  "quadrature": "48-point Gauss-Legendre on subintervals split at the current represented transition; no reference solution breakpoints.",
+  "interpretation": "Conservation determines front speed but permits an expansion shock. Adding an unknown spreading rate and entropy inequalities selects the rarefaction in a restricted ramp family. This is not automatic representation discovery.",
+  "fits": [
+    {
+      "law": "quadratic flux",
+      "left": 1.0,
+      "right": 0.0,
+      "epsilon": 0.001,
+      "position": 5.978357170586268e-14,
+      "speed": 0.49999999999735073,
+      "reference_speed_only_for_evaluation": 0.5,
+      "speed_absolute_error": 2.6492696925117798e-12,
+      "fit_residual_l2": 1.2459703120680227e-12,
+      "independent_entropy_production_rate": -0.08333333333465485,
+      "entropy_violation": 0.0,
+      "reference_entropy_rate_only_for_evaluation": -0.08333333333333331,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.3,
+            -0.15
+          ],
+          "residual_l2": 0.42861462877508405
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            3.00001661068805e-07,
+            0.4999970694370307
+          ],
+          "residual_l2": 1.4123964020553742e-06
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            5.978357170586268e-14,
+            0.49999999999735073
+          ],
+          "residual_l2": 1.2459703120680227e-12
+        }
+      ]
+    },
+    {
+      "law": "quadratic flux",
+      "left": 0.0,
+      "right": 1.0,
+      "epsilon": 0.001,
+      "position": 6.022366392605333e-14,
+      "speed": 0.49999999999734973,
+      "reference_speed_only_for_evaluation": 0.5,
+      "speed_absolute_error": 2.6502688932339424e-12,
+      "fit_residual_l2": 1.2460362349620488e-12,
+      "independent_entropy_production_rate": 0.0833333333346545,
+      "entropy_violation": 0.0833333333346545,
+      "reference_entropy_rate_only_for_evaluation": 0.08333333333333331,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.3,
+            -0.15
+          ],
+          "residual_l2": 0.4286146287750841
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            2.999983303997311e-07,
+            0.499997069443613
+          ],
+          "residual_l2": 1.4123926647985628e-06
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            6.022366392605333e-14,
+            0.49999999999734973
+          ],
+          "residual_l2": 1.2460362349620488e-12
+        }
+      ]
+    },
+    {
+      "law": "cubic flux",
+      "left": 1.0,
+      "right": 0.0,
+      "epsilon": 0.001,
+      "position": 5.978357159998357e-14,
+      "speed": 0.3333333333313639,
+      "reference_speed_only_for_evaluation": 0.3333333333333333,
+      "speed_absolute_error": 1.969424623382565e-12,
+      "fit_residual_l2": 9.271935904743822e-13,
+      "independent_entropy_production_rate": -0.08333333333431543,
+      "entropy_violation": 0.0,
+      "reference_entropy_rate_only_for_evaluation": -0.08333333333333334,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.3,
+            -0.15
+          ],
+          "residual_l2": 0.3765832503503673
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            3.00001661068805e-07,
+            0.33333115419422565
+          ],
+          "residual_l2": 1.0692291394568286e-06
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            5.978357159998357e-14,
+            0.3333333333313639
+          ],
+          "residual_l2": 9.271935904743822e-13
+        }
+      ]
+    },
+    {
+      "law": "cubic flux",
+      "left": 0.0,
+      "right": 1.0,
+      "epsilon": 0.001,
+      "position": 6.022366392605333e-14,
+      "speed": 0.3333333333313637,
+      "reference_speed_only_for_evaluation": 0.3333333333333333,
+      "speed_absolute_error": 1.969591156836259e-12,
+      "fit_residual_l2": 9.273533485767144e-13,
+      "independent_entropy_production_rate": 0.08333333333431579,
+      "entropy_violation": 0.08333333333431579,
+      "reference_entropy_rate_only_for_evaluation": 0.08333333333333334,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.3,
+            -0.15
+          ],
+          "residual_l2": 0.3765832503503673
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            2.999983303997311e-07,
+            0.33333115420139203
+          ],
+          "residual_l2": 1.06922496525844e-06
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            6.022366392605333e-14,
+            0.3333333333313637
+          ],
+          "residual_l2": 9.273533485767144e-13
+        }
+      ]
+    }
+  ],
+  "width_diagnostic": [
+    {
+      "epsilon": 0.1,
+      "weak_cell_balance_l2": 0.07756023622941222,
+      "weak_cell_balance_max": 0.045258491638610565,
+      "strong_residual_l2_space": 0.40824829046386285,
+      "strong_residual_squared_exact": 0.16666666666666666,
+      "strong_integral_relative_error": 6.661338147750939e-16
+    },
+    {
+      "epsilon": 0.03,
+      "weak_cell_balance_l2": 0.031915298051044975,
+      "weak_cell_balance_max": 0.014998912089400213,
+      "strong_residual_l2_space": 0.7453559924999297,
+      "strong_residual_squared_exact": 0.5555555555555556,
+      "strong_integral_relative_error": 5.551115123125783e-16
+    },
+    {
+      "epsilon": 0.01,
+      "weak_cell_balance_l2": 0.011177001920413234,
+      "weak_cell_balance_max": 0.004999999999998839,
+      "strong_residual_l2_space": 1.2909944487358052,
+      "strong_residual_squared_exact": 1.6666666666666667,
+      "strong_integral_relative_error": 5.551115123125783e-16
+    },
+    {
+      "epsilon": 0.003,
+      "weak_cell_balance_l2": 0.0033541019661986094,
+      "weak_cell_balance_max": 0.0015000000000000846,
+      "strong_residual_l2_space": 2.3570226039551576,
+      "strong_residual_squared_exact": 5.555555555555555,
+      "strong_integral_relative_error": 6.661338147750939e-16
+    },
+    {
+      "epsilon": 0.001,
+      "weak_cell_balance_l2": 0.0011180339887498958,
+      "weak_cell_balance_max": 0.0005000000000000282,
+      "strong_residual_l2_space": 4.082482904638629,
+      "strong_residual_squared_exact": 16.666666666666668,
+      "strong_integral_relative_error": 5.551115123125783e-16
+    },
+    {
+      "epsilon": 0.0003,
+      "weak_cell_balance_l2": 0.00033541019662493147,
+      "weak_cell_balance_max": 0.0001500000000005386,
+      "strong_residual_l2_space": 7.453559924999297,
+      "strong_residual_squared_exact": 55.55555555555556,
+      "strong_integral_relative_error": 7.771561172376096e-16
+    }
+  ],
+  "expansion_branch_selection": [
+    {
+      "entropy_enforced": false,
+      "epsilon": 1e-05,
+      "position": -3.8232415792568216e-12,
+      "speed": 0.49999976099634846,
+      "spreading_rate": 0.0,
+      "fit_residual_l2": 3.7169403896522677e-06,
+      "independent_weak_balance_l2": 1.606214495698101e-06,
+      "maximum_independent_entropy_violation": 0.06583342773977574,
+      "heldout_l1_error_t0_8": 0.19997595603372217,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.0,
+            0.5,
+            0.001
+          ],
+          "residual_l2": 0.00017287970843875275
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            4.127895818464074e-10,
+            0.5000004558096844,
+            0.0
+          ],
+          "residual_l2": 3.7970355051417795e-06
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            1.2474551774464295e-12,
+            0.500000451984685,
+            0.0
+          ],
+          "residual_l2": 3.7961717203754525e-06
+        },
+        {
+          "iteration": 3,
+          "parameters": [
+            1.2010359182196183e-12,
+            0.500000446971637,
+            0.0
+          ],
+          "residual_l2": 3.795046541938793e-06
+        },
+        {
+          "iteration": 4,
+          "parameters": [
+            1.275970167289248e-12,
+            0.5000004371619947,
+            0.0
+          ],
+          "residual_l2": 3.7928673408283955e-06
+        },
+        {
+          "iteration": 5,
+          "parameters": [
+            1.413570208551564e-12,
+            0.5000004183647232,
+            0.0
+          ],
+          "residual_l2": 3.7887751890782613e-06
+        },
+        {
+          "iteration": 6,
+          "parameters": [
+            1.6443754762465692e-12,
+            0.500000383755163,
+            0.0
+          ],
+          "residual_l2": 3.7815292576707326e-06
+        },
+        {
+          "iteration": 7,
+          "parameters": [
+            1.9668735860176218e-12,
+            0.5000003244837525,
+            0.0
+          ],
+          "residual_l2": 3.769994065135691e-06
+        },
+        {
+          "iteration": 8,
+          "parameters": [
+            2.2528230205189665e-12,
+            0.5000002345714124,
+            0.0
+          ],
+          "residual_l2": 3.7546220881049682e-06
+        },
+        {
+          "iteration": 9,
+          "parameters": [
+            2.1785841615917587e-12,
+            0.5000001205681712,
+            0.0
+          ],
+          "residual_l2": 3.738859976037584e-06
+        },
+        {
+          "iteration": 10,
+          "parameters": [
+            1.4433387417551256e-12,
+            0.5000000049574665,
+            0.0
+          ],
+          "residual_l2": 3.7271830211218353e-06
+        },
+        {
+          "iteration": 11,
+          "parameters": [
+            1.9527573293071742e-13,
+            0.49999991152890294,
+            0.0
+          ],
+          "residual_l2": 3.720943798350421e-06
+        },
+        {
+          "iteration": 12,
+          "parameters": [
+            -1.0620367243088267e-12,
+            0.49999984891348737,
+            0.0
+          ],
+          "residual_l2": 3.7183701746137044e-06
+        },
+        {
+          "iteration": 13,
+          "parameters": [
+            -1.991286527932661e-12,
+            0.4999998120043964,
+            0.0
+          ],
+          "residual_l2": 3.717459057921861e-06
+        },
+        {
+          "iteration": 14,
+          "parameters": [
+            -2.5631843051374952e-12,
+            0.499999791858745,
+            0.0
+          ],
+          "residual_l2": 3.7171515212637254e-06
+        },
+        {
+          "iteration": 15,
+          "parameters": [
+            -2.881604713923516e-12,
+            0.4999997813190246,
+            0.0
+          ],
+          "residual_l2": 3.7170440384122052e-06
+        },
+        {
+          "iteration": 16,
+          "parameters": [
+            -3.0497860654100285e-12,
+            0.49999977592633965,
+            0.0
+          ],
+          "residual_l2": 3.7170032357144174e-06
+        },
+        {
+          "iteration": 17,
+          "parameters": [
+            -3.136273101804969e-12,
+            0.49999977319848793,
+            0.0
+          ],
+          "residual_l2": 3.7169862549605142e-06
+        },
+        {
+          "iteration": 18,
+          "parameters": [
+            -3.3779799659064264e-12,
+            0.4999997716846111,
+            0.0
+          ],
+          "residual_l2": 3.7169778917890515e-06
+        },
+        {
+          "iteration": 19,
+          "parameters": [
+            -3.4814128037533423e-12,
+            0.49999976890487213,
+            0.0
+          ],
+          "residual_l2": 3.7169645071244688e-06
+        },
+        {
+          "iteration": 20,
+          "parameters": [
+            -3.5348726490182842e-12,
+            0.49999976709442684,
+            0.0
+          ],
+          "residual_l2": 3.71695716234504e-06
+        },
+        {
+          "iteration": 21,
+          "parameters": [
+            -3.5626001053777466e-12,
+            0.49999976609356717,
+            0.0
+          ],
+          "residual_l2": 3.716953566795197e-06
+        },
+        {
+          "iteration": 22,
+          "parameters": [
+            -3.650709514111115e-12,
+            0.4999997655998865,
+            0.0
+          ],
+          "residual_l2": 3.7169519151142735e-06
+        },
+        {
+          "iteration": 23,
+          "parameters": [
+            -3.692009014044298e-12,
+            0.49999976439255517,
+            0.0
+          ],
+          "residual_l2": 3.7169482151384497e-06
+        },
+        {
+          "iteration": 24,
+          "parameters": [
+            -3.713738023953875e-12,
+            0.4999997635765232,
+            0.0
+          ],
+          "residual_l2": 3.7169459870619054e-06
+        },
+        {
+          "iteration": 25,
+          "parameters": [
+            -3.7250567728266945e-12,
+            0.49999976311864613,
+            0.0
+          ],
+          "residual_l2": 3.7169448332525944e-06
+        },
+        {
+          "iteration": 26,
+          "parameters": [
+            -3.765283640585463e-12,
+            0.4999997626570077,
+            0.0
+          ],
+          "residual_l2": 3.716943740015874e-06
+        },
+        {
+          "iteration": 27,
+          "parameters": [
+            -3.7855845891170774e-12,
+            0.4999997620247971,
+            0.0
+          ],
+          "residual_l2": 3.7169423571292184e-06
+        },
+        {
+          "iteration": 28,
+          "parameters": [
+            -3.7962253209143324e-12,
+            0.49999976161600257,
+            0.0
+          ],
+          "residual_l2": 3.7169415332316205e-06
+        },
+        {
+          "iteration": 29,
+          "parameters": [
+            -3.801721488532187e-12,
+            0.49999976138934804,
+            0.0
+          ],
+          "residual_l2": 3.716941100270582e-06
+        }
+      ]
+    },
+    {
+      "entropy_enforced": true,
+      "epsilon": 1e-05,
+      "position": 5.3066924147840937e-17,
+      "speed": 0.500000000000875,
+      "spreading_rate": 1.000000000012597,
+      "fit_residual_l2": 1.27154573686722e-12,
+      "independent_weak_balance_l2": 1.0476886859602524e-12,
+      "maximum_independent_entropy_violation": 0.0,
+      "heldout_l1_error_t0_8": 2.500283766150637e-06,
+      "trace": [
+        {
+          "iteration": 0,
+          "parameters": [
+            0.0,
+            0.5,
+            0.001
+          ],
+          "residual_l2": 0.10569484031069305
+        },
+        {
+          "iteration": 1,
+          "parameters": [
+            -0.0046072116313927184,
+            0.5267448365353922,
+            0.18652116310276617
+          ],
+          "residual_l2": 0.07861001618529445
+        },
+        {
+          "iteration": 2,
+          "parameters": [
+            0.004348930419930859,
+            0.5136720694037337,
+            0.47933369373968904
+          ],
+          "residual_l2": 0.05760496476730413
+        },
+        {
+          "iteration": 3,
+          "parameters": [
+            0.006191619508285594,
+            0.50558052910887,
+            0.8995028995295878
+          ],
+          "residual_l2": 0.014830655300185578
+        },
+        {
+          "iteration": 4,
+          "parameters": [
+            6.015918749922161e-05,
+            0.5002707836064122,
+            1.0008244719814685
+          ],
+          "residual_l2": 0.00025817218512674464
+        },
+        {
+          "iteration": 5,
+          "parameters": [
+            9.360024589438482e-12,
+            0.4999998571440179,
+            1.0000003987524417
+          ],
+          "residual_l2": 1.541600020419284e-07
+        },
+        {
+          "iteration": 6,
+          "parameters": [
+            3.788240313373458e-15,
+            0.500000007364277,
+            1.000000096700199
+          ],
+          "residual_l2": 1.0056139256626519e-08
+        },
+        {
+          "iteration": 7,
+          "parameters": [
+            4.981828122313515e-17,
+            0.5000000019062454,
+            1.0000000272013638
+          ],
+          "residual_l2": 2.752320179436709e-09
+        },
+        {
+          "iteration": 8,
+          "parameters": [
+            5.28150016302997e-17,
+            0.500000000525685,
+            1.0000000075546678
+          ],
+          "residual_l2": 7.62759157584909e-10
+        },
+        {
+          "iteration": 9,
+          "parameters": [
+            5.3047421087668396e-17,
+            0.500000000145965,
+            1.000000002101094
+          ],
+          "residual_l2": 2.1203353792419614e-10
+        },
+        {
+          "iteration": 10,
+          "parameters": [
+            5.306536805272403e-17,
+            0.5000000000405974,
+            1.0000000005846346
+          ],
+          "residual_l2": 5.899133788944124e-11
+        },
+        {
+          "iteration": 11,
+          "parameters": [
+            5.306678940301653e-17,
+            0.5000000000112966,
+            1.0000000001626959
+          ],
+          "residual_l2": 1.641624389571889e-11
+        },
+        {
+          "iteration": 12,
+          "parameters": [
+            5.3066915052816826e-17,
+            0.5000000000031438,
+            1.0000000000452751
+          ],
+          "residual_l2": 4.568642244313325e-12
+        },
+        {
+          "iteration": 13,
+          "parameters": [
+            5.3066924147840937e-17,
+            0.500000000000875,
+            1.000000000012597
+          ],
+          "residual_l2": 1.27154573686722e-12
+        }
+      ]
+    }
+  ]
+}

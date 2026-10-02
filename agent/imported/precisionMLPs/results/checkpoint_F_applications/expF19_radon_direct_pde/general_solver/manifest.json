@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-10-01T05:16:53.049788+00:00",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "dependencies": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "torch": "2.4.1",
+    "deepxde": "1.15.0"
+  },
+  "execution": "local CPU, one thread; no remote jobs or publication",
+  "source_sha256": {
+    "experiments/expF19_radon_direct_pde/general_api.py": "04668c1d859bb2c4066dbf784230a19c8e5a2fba3aac8f6f2927dc51309603b9",
+    "experiments/expF19_radon_direct_pde/general_baseline.py": "1fd117b8f1314879090835a8bb9031fc5416846b7053545159c45cff7a33a2c0",
+    "experiments/expF19_radon_direct_pde/general_compare.py": "260cf7973a81ac0812f46fb016b5033baaa259084683a7f3b055f68abcd13bee",
+    "experiments/expF19_radon_direct_pde/general_dimensions.py": "a0ab9d3addbc789e2d035c0d57727f40a6688601278827c8ecd607a9b20693c7",
+    "experiments/expF19_radon_direct_pde/general_domains.py": "dc7d33c31f835d45358c82d9c367b7f129d18d2b0f2505011e9633b01b8017bb",
+    "experiments/expF19_radon_direct_pde/general_hard.py": "70d46337bf9567e83235e01d350d93bd248a6140e065a230f61169d6825629d5",
+    "experiments/expF19_radon_direct_pde/general_inverse_uq.py": "27f047afd7f77ac5cbc6dc2969bff65e8780719a63d82af5cb3d6c27de40910b",
+    "experiments/expF19_radon_direct_pde/solver/__init__.py": "d2ba38dc25b5b24e71413f0affe630dd1451b65fad2c91f19f845ea0e8723770",
+    "experiments/expF19_radon_direct_pde/solver/base.py": "b53d6a4dbd9ed08abe6f1c4d6ee7068f9d2ce49093aca7eea9c43219289c0804",
+    "experiments/expF19_radon_direct_pde/solver/elliptic.py": "3f316b530d185b9d02867be85276c015a47221bd13809035847c5b2c58e6145a",
+    "experiments/expF19_radon_direct_pde/solver/highdim.py": "bbb80e28852969417228be4a8cca61c42c971f280003bba3ff490a0cbb54f54e",
+    "experiments/expF19_radon_direct_pde/solver/hyperbolic.py": "e172252e80f2908b3df5ed3efa259b11da237b387e8ccf0b24ae0d259d8c0d0b",
+    "experiments/expF19_radon_direct_pde/solver/pinn_baseline.py": "6fd58332851874bd7a88b006af3ccb9e023b244d0af22dbed6830ff1f94fe3ac",
+    "experiments/expF19_radon_direct_pde/solver/reaction.py": "9ca3cb418e9ea0459317e138604188bc4782f058273e3cd4b66454c9a3423098",
+    "experiments/expF19_radon_direct_pde/solver/tensor_box.py": "ed016c33ddeb60fc98041b0fb481dc3f29088502b1a86e6365e6531b3dc7678f",
+    "experiments/expF19_radon_direct_pde/quill_boundary.py": "5c1594c8dc25812d7f1e4f343f4971b82cca05a1e79fee5a1ebc5030c1ac60b0",
+    "experiments/expF19_radon_direct_pde/native_tanh.py": "7581f41ae8875525ce16b6d58845c8dc68e58c37ca7c62ef2283eedcbaa28609",
+    "experiments/expF19_radon_direct_pde/native_inverse.py": "7684aa7b18273ebd2055f54602f5cccbc2f68135fba280b08e7a41b6ea441622",
+    "tests/test_quill_general_solver.py": "c57a06a99003b1aeb4547b889a8b63d375941cc198e22577c76f3faef1657365"
+  },
+  "results_sha256": {
+    "api_metrics.json": "90b6ed3fe4fac942d409517fa0ee1343a8622117b440bf746db4dd0f459c0ffd",
+    "comparison_metrics.json": "53d3ad0dda99a6494e8f22bcec1709fd74ba345e85dbafbe879843590abad85f",
+    "dimension_frontier.json": "c532479994ddc622583eff04f15976ad0cfbefa452258a56c6224c37cd22f7f4",
+    "dimension_linear.json": "72d8657229d9a451754e591d776cdd8c37e37d84edd04bdc444974722470e720",
+    "dimension_nonlinear.json": "90343914f8ae3bdce57145b0cc0899ab8b3e2eabea5d99500ed3f51358b975f2",
+    "dimension_support_counts.json": "cd4b2157d4578ffe4a0a3b1e65aee2ed87324e4362b775ac9a6de3502eeca28b",
+    "dimension_validation.json": "d68d63ef542d924fce902469de9f9b7dcc8c651602046105267a6aa5565e4478",
+    "domain_metrics.json": "bf02bcfc0c6ac022491cd57a53dd07d393b8d9bd8393b52561d72bb7bc679368",
+    "hard_invariant_guards.json": "8c6cfb37deb3c9fa31923730356277612d43cf644bd30f727e15c3a2a55cdab5",
+    "hard_metrics.json": "5e01fef313bfb9db59512197025f6bf794c9920b410280dc98dcdae966235771",
+    "inverse_uq_metrics.json": "0f062f2d301629896c82fb1679c37fa24983182f48e817959e4954f2a80c8300",
+    "pinn_w32_seed0_metrics.json": "93236ab15cf1c6d5b139161d262c749e984924627a90527cae17851acaed2b6a",
+    "pinn_w32_seed1_metrics.json": "ed0a0dc953ed55287a0da4a92d5bf3a614b76f76ce4487e20b01e17e94d582d6",
+    "pinn_w64_seed0_metrics.json": "2e9b8f8e36550fe41e3a15ceac48474849594496a69c2e278b164f2a8083baba"
+  },
+  "validation": "tests/test_quill_general_solver.py: 6 passed; backend-specific controls stored in corresponding metrics",
+  "forward_policy": "No reference solution values enter native QUILL forward solves; separately disclosed classical dimension controls and finite-volume shock backend are not native QUILL.",
+  "measurement_policy": "Inverse data deliberately synthesized by an independent solver and then perturbed; known-noise conditional inference.",
+  "scope": "Research solver family, not arbitrary-PDE parsing or universal PINN superiority."
+}

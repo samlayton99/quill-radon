@@ -1,0 +1,73 @@
+{
+  "periodic_boundary": [
+    {
+      "axis": 0,
+      "max_velocity_periodic_mismatch": 1.3639263329867646e-15,
+      "max_velocity_gradient_periodic_mismatch": 2.1332185255167448e-15,
+      "max_pressure_periodic_mismatch": 3.885780586188048e-16
+    },
+    {
+      "axis": 1,
+      "max_velocity_periodic_mismatch": 1.840491001361626e-15,
+      "max_velocity_gradient_periodic_mismatch": 2.277185152707151e-15,
+      "max_pressure_periodic_mismatch": 5.516420653606247e-16
+    },
+    {
+      "axis": 2,
+      "max_velocity_periodic_mismatch": 1.6930901125533637e-15,
+      "max_velocity_gradient_periodic_mismatch": 2.198158727034023e-15,
+      "max_pressure_periodic_mismatch": 7.216449660063518e-16
+    }
+  ],
+  "initial_condition_rel_l2": 1.5073043305613123e-15,
+  "sparse_export": [
+    {
+      "mode_threshold": 0.0001,
+      "directions": 49,
+      "neurons": 20825,
+      "velocity_rel_l2_vs_full": 0.001183136256841579,
+      "pressure_rel_l2_vs_full": 0.002247144128111026,
+      "uniform_velocity_absolute_error_bound": 0.0054063163970797185
+    },
+    {
+      "mode_threshold": 1e-06,
+      "directions": 177,
+      "neurons": 75225,
+      "velocity_rel_l2_vs_full": 1.1680935094759794e-05,
+      "pressure_rel_l2_vs_full": 2.4705318532090073e-05,
+      "uniform_velocity_absolute_error_bound": 8.11994964847347e-05
+    },
+    {
+      "mode_threshold": 1e-08,
+      "directions": 393,
+      "neurons": 167025,
+      "velocity_rel_l2_vs_full": 2.50603842213003e-07,
+      "pressure_rel_l2_vs_full": 4.2481017400233146e-07,
+      "uniform_velocity_absolute_error_bound": 2.119455824537905e-06
+    },
+    {
+      "mode_threshold": 1e-10,
+      "directions": 813,
+      "neurons": 345525,
+      "velocity_rel_l2_vs_full": 2.3478304859699294e-09,
+      "pressure_rel_l2_vs_full": 3.8269580674049074e-09,
+      "uniform_velocity_absolute_error_bound": 2.5697831484391135e-08
+    },
+    {
+      "mode_threshold": 1e-12,
+      "directions": 1365,
+      "neurons": 580125,
+      "velocity_rel_l2_vs_full": 3.010334773259296e-11,
+      "pressure_rel_l2_vs_full": 6.937104715287053e-11,
+      "uniform_velocity_absolute_error_bound": 3.2448813970431216e-10
+    },
+    {
+      "mode_threshold": 1e-14,
+      "directions": 2037,
+      "neurons": 865725,
+      "velocity_rel_l2_vs_full": 2.463197848288963e-13,
+      "pressure_rel_l2_vs_full": 1.1200545717702419e-12,
+      "uniform_velocity_absolute_error_bound": 2.580186692115751e-12
+    }
+  ]
+}

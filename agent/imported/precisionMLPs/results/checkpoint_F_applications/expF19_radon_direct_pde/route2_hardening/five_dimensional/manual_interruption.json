@@ -1,0 +1,32 @@
+{
+  "status": "manual_resource_interruption",
+  "elapsed_seconds": 929.0508816242218,
+  "planned_external_ceiling_seconds": 900,
+  "signal": "SIGINT",
+  "process_id": 20594,
+  "original_frozen_budget": "900s soft between indivisible numerical calls",
+  "amendment": "Assistant imposed an external resource ceiling after the actual-J LSMR call ceased to honor a practical bounded run; this is not the frozen solver returning time_budget.",
+  "last_saved_iteration": {
+    "iteration": 4,
+    "objective": 8.721026706778832e-13,
+    "maximum_scaled_block_rms": 1.2304702514517075e-06,
+    "damping": 5.6154670253906555e-14,
+    "scheduled_inner_tolerance": 2.220446049250313e-16,
+    "tight_inner_switch_rms": 1.4901161193847656e-08,
+    "linearization_basis": "actual",
+    "elapsed_seconds": 356.03473312500864,
+    "linearization_fallbacks": [
+      "previous_ideal_step_negligible"
+    ],
+    "tight_actual_model_check": "previous_accepted_inexact_step_negligible",
+    "degree": 6,
+    "saved_initialization": "zero then native previous-stage coefficients only"
+  },
+  "accepted_p6_checkpoint_audited": true,
+  "p6_stage_completed": false,
+  "p8_attempted": false,
+  "physical_footprint_peak_reported_mb": 216.0,
+  "physical_footprint_source": "macOS sample at ~808s; not peak RSS",
+  "sampled_rss_kib": 142160,
+  "scope": "Baseline retained; new control uses a separate directory and cold initialization."
+}

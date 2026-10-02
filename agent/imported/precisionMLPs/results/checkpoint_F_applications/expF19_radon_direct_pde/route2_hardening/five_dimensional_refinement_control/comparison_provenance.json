@@ -1,0 +1,140 @@
+{
+  "baseline": "results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/five_dimensional",
+  "control": "results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/five_dimensional_refinement_control",
+  "p4_coefficients_bitwise_identical": true,
+  "p4_coefficient_sha256": "ef8d8b5e97a282558baf165b6e4fa8fb21527c959cdecc16b9a8c0b69374c092",
+  "matching_predecision_records": [
+    {
+      "degree": 4,
+      "iteration": 0,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 1,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 2,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 3,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 4,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 5,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 6,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 7,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 4,
+      "iteration": 8,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 6,
+      "iteration": 0,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 6,
+      "iteration": 1,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 6,
+      "iteration": 2,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    },
+    {
+      "degree": 6,
+      "iteration": 3,
+      "exactly_equal_fields": {
+        "objective": true,
+        "maximum_scaled_block_rms": true,
+        "damping": true
+      }
+    }
+  ],
+  "scope": "Cold runs; comparison before the ideal-stall policy changes control flow. This does not establish convergence or accuracy.",
+  "p8_initial_from_native_p6_record": {
+    "iteration": 0,
+    "objective": 1.4705587937285638e-12,
+    "maximum_scaled_block_rms": 1.6124162646905228e-06,
+    "damping": 2.599886210638538e-12,
+    "scheduled_inner_tolerance": 0.00012698095387460762,
+    "tight_inner_switch_rms": 1.4901161193847656e-08,
+    "linearization_basis": "ideal",
+    "elapsed_seconds": 161.98811604175717,
+    "degree": 8,
+    "saved_initialization": "zero then native previous-stage coefficients only"
+  },
+  "p8_initial_lower_modes_bitwise_equal_to_baseline_last_accepted_p6": true,
+  "p8_new_modes_exactly_zero": true
+}

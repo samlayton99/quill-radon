@@ -1,0 +1,24 @@
+{
+  "source": "Native contrast10 PDE+BC solve, no interior labels",
+  "destination": "Contrast1000 PDE with the identical manufactured solution",
+  "scope": "Post-fit evaluation-only capacity witness. No coefficients supplied to either baseline solve; no additional fitting.",
+  "architecture": "Linear/Tanh/Linear",
+  "degree": 32,
+  "neurons": 9603,
+  "raw_pde_rms_2048": 3.917054662245285e-11,
+  "raw_pde_max_2048": 7.080454000885084e-10,
+  "fresh_checks": [
+    {
+      "name": "PDE",
+      "raw_rms": 9.15921081747546e-11,
+      "raw_max": 1.3717449398598092e-09,
+      "points": 257
+    },
+    {
+      "name": "Dirichlet",
+      "raw_rms": 3.2633439363765363e-13,
+      "raw_max": 1.2067014054650826e-12,
+      "points": 512
+    }
+  ]
+}

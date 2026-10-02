@@ -1,0 +1,73 @@
+{
+  "run_id": "G012_p32_c1000_column_scaled",
+  "status": "complete",
+  "case": "diffusion_c1000",
+  "degree": 32,
+  "neurons": 9603,
+  "coordinates": 561,
+  "rows": 5222,
+  "basis": "actual",
+  "weighting": "raw",
+  "rank": 561,
+  "singular_max": 7.8096078858504585,
+  "singular_min": 2.534093674378143e-10,
+  "condition": 30818149955.59273,
+  "algebraic_residual_norm": 3.792856981567707e-12,
+  "normal_residual_norm": 2.3457055288852062e-14,
+  "dense_matrix_bytes": 23436336,
+  "assembly_seconds": 2.6870050420984626,
+  "solve_seconds": 0.07338500022888184,
+  "column_scaled": true,
+  "rcond": 1e-14,
+  "blocks": [
+    {
+      "name": "PDE",
+      "start": 0,
+      "stop": 3366,
+      "factor": 0.017236256333167305
+    },
+    {
+      "name": "Dirichlet",
+      "start": 3366,
+      "stop": 5222,
+      "factor": 0.023211917272131483
+    }
+  ],
+  "assembly_rhs_discrepancy": 0.0,
+  "assembly_operator_discrepancy": 1.3120247838630307e-13,
+  "refinements": [
+    {
+      "iteration": 0,
+      "before_norm": 3.796754737492913e-12,
+      "after_norm": 3.792049534294245e-12,
+      "step_norm": 2.279876510717134e-09,
+      "rank": 561,
+      "accepted": true
+    },
+    {
+      "iteration": 1,
+      "before_norm": 3.792049534294245e-12,
+      "after_norm": 3.792888201166211e-12,
+      "step_norm": 9.663735483574374e-10,
+      "rank": 561,
+      "accepted": false
+    }
+  ],
+  "final_native_objective_residual_norm": 3.792049534294245e-12,
+  "ordinary_relative_l2": 7.900167962632893e-13,
+  "ideal_relative_l2": 7.900173736423967e-13,
+  "stable_neural_relative_l2": 7.900444982055808e-13,
+  "ordinary_vs_ideal_relative_l2": 2.78842659416796e-16,
+  "ordinary_pde_rms": 5.107399465675894e-12,
+  "ordinary_pde_max": 5.306688422024308e-11,
+  "ideal_pde_rms": 5.124503219377386e-12,
+  "boundary_rms": 9.96937386953978e-13,
+  "readout_l1": 3.7332123256571927,
+  "coordinate_norm": 1.1739032873568245,
+  "fit_basis": "actual",
+  "field_points": 2048,
+  "pde_points": 257,
+  "reference_used_in_fit": false,
+  "seconds": 7.246652291156352,
+  "process_peak_rss_bytes": 447676416
+}

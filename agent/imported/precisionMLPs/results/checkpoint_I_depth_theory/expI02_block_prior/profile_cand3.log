@@ -1,0 +1,33 @@
+cand_comp_varpro: composition d=3 M=8 N1=128 K=8 N2=128 steps=3000 lr=0.02 head=varpro
+** On entry to DLASCL, parameter number  4 had an illegal value
+** On entry to DLASCL, parameter number  4 had an illegal value
+** On entry to DLASCL, parameter number  5 had an illegal value
+Traceback (most recent call last):
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 167, in <module>
+    
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 155, in main
+    else:
+          
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 74, in train_with_snapshots
+    take(t)
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 60, in take
+    err_solved = qi2.refit_eval(net, D["Xtr"], Y, D["Xte"], D["Yte"].view(-1, 1))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/qi2.py", line 578, in refit_eval
+    model.solve_readout(Xtr, Yfit, rcond)
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/qi2.py", line 291, in solve_readout
+    W, b, rank = lstsq_bias(self.feats(X), Y.reshape(len(Y), -1), eff_rcond(rcond, X.dtype))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI01_compositional_qi/qiblocks.py", line 61, in lstsq_bias
+    W, rank = tsvd_solve(A, Y, rcond)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI01_compositional_qi/qiblocks.py", line 53, in tsvd_solve
+    U, s, Vh = torch.linalg.svd(R, full_matrices=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._C._LinAlgError: linalg.svd: The algorithm failed to converge because the input matrix is ill-conditioned or has too many repeated singular values (error code: 15).

@@ -1,0 +1,239 @@
+{
+  "cases": [
+    {
+      "name": "heat_advection_scaled_domain",
+      "metrics": {
+        "modes": 16,
+        "reduced_coordinates": 33,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "neurons": 291,
+        "lam": 0.2,
+        "lambda_sweep": [
+          {
+            "lam": 0.15,
+            "value_error": 2.4730941281310544e-14,
+            "d2_error": 3.3831872606699336e-15
+          },
+          {
+            "lam": 0.2,
+            "value_error": 8.849202897344012e-15,
+            "d2_error": 2.6956781017023914e-15
+          },
+          {
+            "lam": 0.25,
+            "value_error": 6.335672205142796e-15,
+            "d2_error": 1.6804554406611967e-13
+          },
+          {
+            "lam": 0.3,
+            "value_error": 1.614634647967721e-13,
+            "d2_error": 5.506556922145716e-11
+          }
+        ],
+        "quadrature_points": 100,
+        "cached_bytes": 182688,
+        "setup_seconds": 0.01276308298110962,
+        "geometry": "uniform centers, corrected sqrt(N) halos; actual QUILL derivatives",
+        "solve_seconds": 0.00041800038889050484,
+        "nfev": 32,
+        "implicit_factorizations": 0,
+        "initial_projection_relative_error": 1.3288032247744722e-15,
+        "accepted_steps": 2,
+        "final_time": 0.03,
+        "tail_ratio": 1.0692382778905395e-15,
+        "time_method": "DOP853",
+        "status": "reached_t_end",
+        "scope": "scalar smooth periodic 1D, actual neural RHS; no solution labels or neural readout fit",
+        "residual_note": "Spatial semidiscrete residual; time error is controlled separately by integrator/refinement.",
+        "validity_note": "Tail/amplitude events are diagnostics, not certified PDE error or blow-up proofs.",
+        "refinement_history": [
+          {
+            "modes": 8,
+            "status": "reached_t_end",
+            "setup_seconds": 0.00835025031119585,
+            "solve_seconds": 0.0002959161065518856
+          },
+          {
+            "modes": 16,
+            "status": "reached_t_end",
+            "setup_seconds": 0.01276308298110962,
+            "solve_seconds": 0.00041800038889050484,
+            "relative_refinement_discrepancy": 5.560145525485195e-15
+          }
+        ],
+        "requested_spatial_tolerance": 1e-08,
+        "spatial_tolerance_met_empirically": true,
+        "all_refinements_seconds": 0.02182724978774786
+      },
+      "relative_l2": 1.4945634357245488e-15
+    },
+    {
+      "name": "viscous_burgers",
+      "metrics": {
+        "modes": 64,
+        "reduced_coordinates": 129,
+        "interior_centers": 1025,
+        "halo_per_side": 33,
+        "neurons": 1091,
+        "lam": 0.2,
+        "lambda_sweep": [
+          {
+            "lam": 0.15,
+            "value_error": 1.8474939771043775e-13,
+            "d2_error": 7.244020140957973e-15
+          },
+          {
+            "lam": 0.2,
+            "value_error": 8.917241704307316e-14,
+            "d2_error": 6.488045418565449e-15
+          },
+          {
+            "lam": 0.25,
+            "value_error": 6.377227149480066e-14,
+            "d2_error": 1.5964999832931643e-13
+          },
+          {
+            "lam": 0.3,
+            "value_error": 1.6019116316270721e-13,
+            "d2_error": 5.301565190074868e-11
+          }
+        ],
+        "quadrature_points": 388,
+        "cached_bytes": 2728608,
+        "setup_seconds": 0.05582920787855983,
+        "geometry": "uniform centers, corrected sqrt(N) halos; actual QUILL derivatives",
+        "solve_seconds": 0.004781499970704317,
+        "nfev": 290,
+        "implicit_factorizations": 0,
+        "initial_projection_relative_error": 4.888055743652263e-15,
+        "accepted_steps": 16,
+        "final_time": 0.5,
+        "tail_ratio": 3.2830058444961996e-11,
+        "time_method": "DOP853",
+        "status": "reached_t_end",
+        "scope": "scalar smooth periodic 1D, actual neural RHS; no solution labels or neural readout fit",
+        "residual_note": "Spatial semidiscrete residual; time error is controlled separately by integrator/refinement.",
+        "validity_note": "Tail/amplitude events are diagnostics, not certified PDE error or blow-up proofs.",
+        "refinement_history": [
+          {
+            "modes": 8,
+            "status": "underresolved",
+            "setup_seconds": 0.007747499737888575,
+            "solve_seconds": 0.0010678749531507492
+          },
+          {
+            "modes": 16,
+            "status": "reached_t_end",
+            "setup_seconds": 0.012328041717410088,
+            "solve_seconds": 0.0018774583004415035
+          },
+          {
+            "modes": 32,
+            "status": "reached_t_end",
+            "setup_seconds": 0.023836083244532347,
+            "solve_seconds": 0.002169583924114704,
+            "relative_refinement_discrepancy": 4.4666306143117146e-05
+          },
+          {
+            "modes": 64,
+            "status": "reached_t_end",
+            "setup_seconds": 0.05582920787855983,
+            "solve_seconds": 0.004781499970704317,
+            "relative_refinement_discrepancy": 2.5230428417397057e-08
+          }
+        ],
+        "requested_spatial_tolerance": 1e-06,
+        "spatial_tolerance_met_empirically": true,
+        "all_refinements_seconds": 0.10963724972680211
+      },
+      "relative_l2": 1.1413762293627684e-12,
+      "offgrid_residual_rms": 3.4196861631430483e-12,
+      "exported_readout_equivalence": 1.5543122344752192e-15
+    },
+    {
+      "name": "adaptive_nonlinear_dirichlet_box",
+      "metrics": {
+        "backend": "quill",
+        "representation": "shared 1D QUILL banks + exact affine boundary correction + product gates",
+        "modes": 16,
+        "independent_coefficients": 256,
+        "neurons": 582,
+        "quadrature_points": 4225,
+        "setup_seconds": 0.0294412923976779,
+        "solve_seconds": 0.009622375015169382,
+        "total_seconds": 0.03906387509778142,
+        "converged": true,
+        "updates": 22,
+        "projected_residual": 6.225522770971535e-13,
+        "history": [
+          1.0,
+          0.6386052365466519,
+          0.24329595497867793,
+          0.07845947361402089,
+          0.020013753521063,
+          0.005464733474438015,
+          0.0013819110933412332,
+          0.00036815634192522594,
+          9.371265278499742e-05,
+          2.476691345980354e-05,
+          6.3453589674756625e-06,
+          1.6698317087842137e-06,
+          4.299629564402801e-07,
+          1.12845351720273e-07,
+          2.9165078644107254e-08,
+          7.64095610135081e-09,
+          1.980250232845377e-09,
+          5.181910774336757e-10,
+          1.3456576058218234e-10,
+          3.5185132097631195e-11,
+          9.150396248731691e-12,
+          2.3912997701424537e-12,
+          6.225522770971535e-13
+        ],
+        "cached_bytes": 25958400,
+        "no_readout_fit": true,
+        "scope": "2D box, constantpositive diffusion, cubicnonlinearity, homogeneousDirichlet; explicit iteration can fail",
+        "independent_relative_residual": 2.148747399323652e-08,
+        "spatial_residual_tolerance": 1e-06,
+        "spatial_verification": "independent sampled residual; not a continuum error certificate",
+        "spatial_residual_check_passed": true,
+        "status": "residual_checks_passed",
+        "total_with_check_seconds": 0.04199575027450919,
+        "refinement_history": [
+          {
+            "modes": 4,
+            "status": "underresolved",
+            "seconds": 0.00292004132643342,
+            "independent_relative_residual": 0.030850350203627388
+          },
+          {
+            "modes": 8,
+            "status": "underresolved",
+            "seconds": 0.006410875357687473,
+            "independent_relative_residual": 0.00038732946397267035,
+            "relative_refinement_discrepancy": 0.004063194143639028
+          },
+          {
+            "modes": 12,
+            "status": "underresolved",
+            "seconds": 0.015084750019013882,
+            "independent_relative_residual": 3.2674629900546716e-06,
+            "relative_refinement_discrepancy": 1.6251644286450235e-05
+          },
+          {
+            "modes": 16,
+            "status": "residual_checks_passed",
+            "seconds": 0.04199575027450919,
+            "independent_relative_residual": 2.148747399323652e-08,
+            "relative_refinement_discrepancy": 6.425171971885104e-08
+          }
+        ],
+        "all_refinements_seconds": 0.06641141697764397
+      },
+      "entire_adaptive_call_seconds": 0.0696288337931037,
+      "relative_l2": 2.7491983429462355e-10
+    }
+  ],
+  "interface": "Declared problem + solve(problem,t_end=...,adaptive=True,tolerance=...). Empirical refinement; no universal arbitrary-PDE parsing."
+}

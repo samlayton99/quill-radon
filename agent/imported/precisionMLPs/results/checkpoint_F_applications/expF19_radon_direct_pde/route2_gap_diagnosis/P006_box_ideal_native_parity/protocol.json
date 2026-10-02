@@ -1,0 +1,18 @@
+{
+  "run_id": "P006_box_ideal_native_parity",
+  "basis": "ideal",
+  "coordinates": "box",
+  "grouping": "auto",
+  "block_size": 1024,
+  "iterations": 4000,
+  "started": "2026-10-02 07:28:21 UTC",
+  "threads": 1,
+  "dtype": "float64",
+  "source_sha256": "adb2e1f3e904504b2ee0762faebce796c1851c54242a1fc6df921b83f2612b4d",
+  "reference_used_in_fit": false,
+  "scope": "Dense diagnostic only, not production scaling",
+  "weighting": "fixed zero-jet PDE normalization",
+  "lsmr_tolerance": 1e-14,
+  "gram_ridge": 1e-10,
+  "qr_relative_rank_guard": 1e-13
+}

@@ -1,0 +1,215 @@
+{
+  "protocol": "No joint or scalar least squares; analytic target-to-readout encoding.",
+  "x_domain": "512 independent Sobol points in [-0.6,0.6]^3",
+  "h": 0.04,
+  "gamma": 6.25,
+  "lambda_value": 0.25,
+  "centers": 201,
+  "centers_interval": [
+    -4,
+    4
+  ],
+  "rows": [
+    {
+      "nz": 4,
+      "directions": 16,
+      "neurons": 3216,
+      "target": "isotropic",
+      "continuous_rel_l2": 0.0033611963126282097,
+      "tanh_rel_l2": 0.0033611963126281203,
+      "tanh_conversion_rel_l2": 4.083666412266662e-15
+    },
+    {
+      "nz": 4,
+      "directions": 16,
+      "neurons": 3216,
+      "target": "anisotropic",
+      "continuous_rel_l2": 0.03993361247623927,
+      "tanh_rel_l2": 0.039933612476239444,
+      "tanh_conversion_rel_l2": 2.235229980295601e-15
+    },
+    {
+      "nz": 4,
+      "directions": 16,
+      "neurons": 3216,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 0.06471774838596207,
+      "tanh_rel_l2": 0.06471774838596224,
+      "tanh_conversion_rel_l2": 1.890659044615786e-15
+    },
+    {
+      "nz": 8,
+      "directions": 64,
+      "neurons": 12864,
+      "target": "isotropic",
+      "continuous_rel_l2": 2.871196861234172e-07,
+      "tanh_rel_l2": 2.8711968594679476e-07,
+      "tanh_conversion_rel_l2": 3.67496192748141e-15
+    },
+    {
+      "nz": 8,
+      "directions": 64,
+      "neurons": 12864,
+      "target": "anisotropic",
+      "continuous_rel_l2": 0.0010960523631151128,
+      "tanh_rel_l2": 0.0010960523631149306,
+      "tanh_conversion_rel_l2": 1.23750017086041e-15
+    },
+    {
+      "nz": 8,
+      "directions": 64,
+      "neurons": 12864,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 0.00179740769560368,
+      "tanh_rel_l2": 0.0017974076956034804,
+      "tanh_conversion_rel_l2": 1.73329606213122e-15
+    },
+    {
+      "nz": 12,
+      "directions": 144,
+      "neurons": 28944,
+      "target": "isotropic",
+      "continuous_rel_l2": 8.790336033216166e-12,
+      "tanh_rel_l2": 8.790160644502643e-12,
+      "tanh_conversion_rel_l2": 2.8305124268896456e-15
+    },
+    {
+      "nz": 12,
+      "directions": 144,
+      "neurons": 28944,
+      "target": "anisotropic",
+      "continuous_rel_l2": 2.4025986737422447e-05,
+      "tanh_rel_l2": 2.402598673751659e-05,
+      "tanh_conversion_rel_l2": 1.805461711581564e-15
+    },
+    {
+      "nz": 12,
+      "directions": 144,
+      "neurons": 28944,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 3.8746336330683056e-05,
+      "tanh_rel_l2": 3.8746336330766803e-05,
+      "tanh_conversion_rel_l2": 1.477611153697733e-15
+    },
+    {
+      "nz": 20,
+      "directions": 400,
+      "neurons": 80400,
+      "target": "isotropic",
+      "continuous_rel_l2": 7.046810083165466e-16,
+      "tanh_rel_l2": 2.0743938441459215e-15,
+      "tanh_conversion_rel_l2": 2.1931856001720873e-15
+    },
+    {
+      "nz": 20,
+      "directions": 400,
+      "neurons": 80400,
+      "target": "anisotropic",
+      "continuous_rel_l2": 1.178472419058348e-08,
+      "tanh_rel_l2": 1.1784724242956914e-08,
+      "tanh_conversion_rel_l2": 1.69164593699386e-15
+    },
+    {
+      "nz": 20,
+      "directions": 400,
+      "neurons": 80400,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 1.5694254530511763e-08,
+      "tanh_rel_l2": 1.5694254554476237e-08,
+      "tanh_conversion_rel_l2": 1.284779830028874e-15
+    },
+    {
+      "nz": 32,
+      "directions": 1024,
+      "neurons": 205824,
+      "target": "isotropic",
+      "continuous_rel_l2": 2.0798975440609082e-15,
+      "tanh_rel_l2": 2.261265836846612e-15,
+      "tanh_conversion_rel_l2": 1.677466051941402e-15
+    },
+    {
+      "nz": 32,
+      "directions": 1024,
+      "neurons": 205824,
+      "target": "anisotropic",
+      "continuous_rel_l2": 5.2804439771737324e-14,
+      "tanh_rel_l2": 5.2830818272394016e-14,
+      "tanh_conversion_rel_l2": 2.0463062005609407e-15
+    },
+    {
+      "nz": 32,
+      "directions": 1024,
+      "neurons": 205824,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 1.228230406168583e-13,
+      "tanh_rel_l2": 1.2279412709295247e-13,
+      "tanh_conversion_rel_l2": 1.691571938146458e-15
+    },
+    {
+      "nz": 48,
+      "directions": 2304,
+      "neurons": 463104,
+      "target": "isotropic",
+      "continuous_rel_l2": 4.07463348990533e-15,
+      "tanh_rel_l2": 4.2393029556877135e-15,
+      "tanh_conversion_rel_l2": 2.475823593531384e-15
+    },
+    {
+      "nz": 48,
+      "directions": 2304,
+      "neurons": 463104,
+      "target": "anisotropic",
+      "continuous_rel_l2": 6.2895869148439786e-15,
+      "tanh_rel_l2": 6.445994333803718e-15,
+      "tanh_conversion_rel_l2": 2.0297483559417806e-15
+    },
+    {
+      "nz": 48,
+      "directions": 2304,
+      "neurons": 463104,
+      "target": "shifted mixture",
+      "continuous_rel_l2": 8.748181615232782e-15,
+      "tanh_rel_l2": 8.784395997736735e-15,
+      "tanh_conversion_rel_l2": 1.9229376501170363e-15
+    }
+  ],
+  "leading_errors_at_2304_directions": {
+    "isotropic": 0.2930966896025612,
+    "anisotropic": 0.35578365383787075,
+    "shifted mixture": 0.3259854294327866
+  },
+  "corrected_max_abs": [
+    3.941291737419306e-15,
+    4.85722573273506e-15,
+    4.010680676458378e-15
+  ],
+  "gauge": [
+    {
+      "tau": 0.0,
+      "tanh_rel_l2": 3.5995920015600495e-14,
+      "exact_polynomial_rel_l2": 0.0,
+      "invariant_quadratic_tensor_error": 0.0,
+      "coefficient_l2": 2.2797052441050356,
+      "bias": 48.41763453183303
+    },
+    {
+      "tau": 1.0,
+      "tanh_rel_l2": 3.5880783934859084e-14,
+      "exact_polynomial_rel_l2": 1.9384097871019505e-16,
+      "invariant_quadratic_tensor_error": 3.516031360954876e-16,
+      "coefficient_l2": 2.2797052441050356,
+      "bias": 48.41763453183303
+    },
+    {
+      "tau": 5.0,
+      "tanh_rel_l2": 1.938062714719715e-13,
+      "exact_polynomial_rel_l2": 9.607722702571036e-16,
+      "invariant_quadratic_tensor_error": 1.3753901133062439e-15,
+      "coefficient_l2": 14.597235902731724,
+      "bias": 48.417634531833045
+    }
+  ],
+  "gauge_relative_coefficient_change": 7.071067811865475,
+  "gauge_relative_function_change": 2.213610495244939e-13,
+  "elapsed_seconds": 4.671107082627714
+}

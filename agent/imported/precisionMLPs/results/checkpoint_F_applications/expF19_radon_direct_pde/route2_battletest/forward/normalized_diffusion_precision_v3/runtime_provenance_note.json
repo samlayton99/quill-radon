@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-10-02T05:24:49Z",
+  "frozen_protocol_core_disk_hash": "cbce10f4a2eb791739633b2a3341065311abbf8b6c772396702a3ee679f5faf3",
+  "retained_running_claims": {
+    "diffusion_c1000_s0.running.json": {
+      "pid": 20813,
+      "started_utc": "2026-10-02T05:17:17Z",
+      "campaign": "normalized_diffusion_precision_v3",
+      "name": "diffusion_c1000",
+      "seed": 0
+    },
+    "diffusion_c10_s0.running.json": {
+      "pid": 20778,
+      "started_utc": "2026-10-02T05:16:32Z",
+      "campaign": "normalized_diffusion_precision_v3",
+      "name": "diffusion_c10",
+      "seed": 0
+    }
+  },
+  "parent_report": "Root clarified that the default-off shared core option was edited approximately05:22 UTC and before05:23:25 UTC, rather than the earlier approximate05:25 statement. Both retained precision child starts precede this edit.",
+  "interpretation": "Both children imported solver modules before the later reported disk edits. Their legacy source_files_sha256 is measured at completion and may hash the newer disk files. It is not a startup hash. No startup code-object snapshot was recorded by this older driver; no historical loaded-code fingerprint is being invented. Frozen protocol and original hashes are preserved. Future fits now capture before-fit disk and loaded-function code-object hashes.",
+  "normalization_count": "These paired child fits use exactly one normalization inside _fit_case. They do not use the separate root wrapper that monkeypatches make_declaration.",
+  "parent_verified_historical_completed_source_hashes": {
+    "solver/general_residual.py": "dca8b9ee45bd89b3615b811d278051aebbe1fe6bbf13ae1110d2ac354ad2c92c",
+    "solver/route2.py": "cbce10f4a2eb791739633b2a3341065311abbf8b6c772396702a3ee679f5faf3"
+  }
+}

@@ -1,0 +1,81 @@
+investigation: checkpoint_I_20260906
+environment:
+  python: .venv/bin/python
+  torch: 2.4.1
+  dtype: float64
+  device: cpu
+  threads: 1
+analytic_confirmation:
+  targets: [fast_waves, composition, product_peak, random_ridges]
+  seeds: [3, 4, 5]
+  data_seed_offset: 1200
+  dimension: 3
+  training_rows: 2560
+  inner_test_rows: 4096
+  full_ball_test_rows: 4096
+  full_ball_seed: 45678
+  M: 6
+  N1: 32
+  K: 2
+  N2: 64
+  bank_lambda: 0.25
+  adam_steps: 2000
+  learning_rate: 0.005
+  warmup_steps: 50
+  schedule: cosine
+  band_beta: 0.01
+  head_ridge: 0.000001
+  arms: [raw, poly3, quadratic, mlp]
+  selection: final_step
+analytic_followups:
+  quadratic_initialization: {target: fast_waves, arms: [poly2], N1: 32}
+  quadratic_resolution: {target: fast_waves, arms: [poly2, quadratic], N1: 64}
+  release_restriction:
+    targets: [fast_waves, composition, random_ridges]
+    arms: [quadratic_free]
+    N1: 32
+  refinement:
+    target: fast_waves
+    seeds: [3]
+    arms: [raw, poly3, quadratic, mlp]
+    method: LBFGS
+    history_pairs: 10
+    ridge_stages: [0.000001, 0.00000001, 0.0000000001]
+    soft_eval_budget_per_stage: 150
+    selection: monotone_training_objective_within_each_stage
+canonical_tabular:
+  tasks: [airfoil, parkinsons, bike]
+  seeds: [0, 1, 2]
+  outer_test: existing_cached_split
+  validation_fraction_of_original_training: 0.2
+  max_training_rows: 4096
+  channels: [12, 12]
+  centers: [11, 11]
+  bank_lambda: 0.25
+  initialization: unit_random_rows_then_layerwise_abs_quantile_calibration
+  calibration_quantile: 0.999
+  max_calibration_rows: 4096
+  adam_steps: 5000
+  batch_size: 128
+  learning_rate: 0.001
+  evaluation_interval: 100
+  selection: minimum_validation_loss
+  head_solve: false
+  forward_normalization: false
+  band_penalty: false
+  resolution_sweep:
+    centers: [4, 8, 16, 32]
+    parameter_budget: 1800
+    channels: nearest_equal_channel_counts_by_actual_parameters
+depth:
+  primary_target: fast_waves
+  dimension: 4
+  seed: 0
+  training_rows: 12288
+  test_rows: 10000
+  reproduction_steps: 2000
+  continuation_steps: 1000
+  original_layer_lr: 0.001
+  inserted_layer_lr: 0.0003
+  initial_function: exactly_preserved
+  initial_regularized_objective: exactly_preserved_in_primary_continuation

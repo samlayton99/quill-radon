@@ -1,0 +1,111 @@
+{
+ "d": 3,
+ "r": 0.3,
+ "targets": [
+  "fast_waves",
+  "radial_runge",
+  "composition",
+  "gauss_bump",
+  "product_sines",
+  "spatial_packet"
+ ],
+ "n_train": 49152,
+ "cells": [
+  {
+   "M": 256,
+   "N": 48,
+   "units": 12288,
+   "rank": 8933,
+   "n_cols": 12289,
+   "rel_l2": {
+    "fast_waves": 1.1677989446786308e-11,
+    "radial_runge": 1.3115000307840693e-11,
+    "composition": 1.3488487169094348e-12,
+    "gauss_bump": 1.726821791156235e-13,
+    "product_sines": 3.3542214595382203e-13,
+    "spatial_packet": 5.528315570411863e-09
+   },
+   "max_abs": {
+    "fast_waves": 6.520861628445118e-11,
+    "radial_runge": 6.932843188423021e-11,
+    "composition": 2.0525359190060044e-11,
+    "gauss_bump": 9.532930000943907e-13,
+    "product_sines": 8.523459715803483e-13,
+    "spatial_packet": 2.5805771741715944e-08
+   },
+   "weight_norm": {
+    "fast_waves": 1.906175826070949,
+    "radial_runge": 0.0893032540730336,
+    "composition": 0.4599099839897388,
+    "gauss_bump": 0.024726741271171606,
+    "product_sines": 0.11969422877797323,
+    "spatial_packet": 33.89009849173825
+   },
+   "seconds": 878.3
+  },
+  {
+   "M": 320,
+   "N": 32,
+   "units": 10240,
+   "rank": 6792,
+   "n_cols": 10241,
+   "rel_l2": {
+    "fast_waves": 2.733139937641691e-10,
+    "radial_runge": 1.6838224643271151e-12,
+    "composition": 8.490215873950092e-12,
+    "gauss_bump": 1.0248349523008768e-11,
+    "product_sines": 5.574247066492931e-11,
+    "spatial_packet": 1.7062284185599964e-10
+   },
+   "max_abs": {
+    "fast_waves": 1.3189557224180248e-09,
+    "radial_runge": 8.170797372031302e-12,
+    "composition": 9.726841554424936e-11,
+    "gauss_bump": 3.1486591112184215e-11,
+    "product_sines": 1.4856710349800406e-10,
+    "spatial_packet": 9.826388591704927e-10
+   },
+   "weight_norm": {
+    "fast_waves": 18.71140427680707,
+    "radial_runge": 0.10825606862642716,
+    "composition": 1.5815480329725866,
+    "gauss_bump": 0.542508464901166,
+    "product_sines": 2.2659489641306534,
+    "spatial_packet": 4.356131826790141
+   },
+   "seconds": 551.1
+  },
+  {
+   "M": 384,
+   "N": 32,
+   "units": 12288,
+   "rank": 7643,
+   "n_cols": 12289,
+   "rel_l2": {
+    "fast_waves": 2.843630139557498e-10,
+    "radial_runge": 1.5242235714566034e-12,
+    "composition": 8.603006765548451e-12,
+    "gauss_bump": 1.047752702825348e-11,
+    "product_sines": 5.800422920308826e-11,
+    "spatial_packet": 4.982431367847628e-11
+   },
+   "max_abs": {
+    "fast_waves": 1.6628886045921831e-09,
+    "radial_runge": 7.02016222930979e-12,
+    "composition": 1.2151657458048248e-10,
+    "gauss_bump": 3.475930654417425e-11,
+    "product_sines": 1.2704424318110696e-10,
+    "spatial_packet": 1.9164814180072653e-10
+   },
+   "weight_norm": {
+    "fast_waves": 13.585107141857671,
+    "radial_runge": 0.0850302380462004,
+    "composition": 1.22714218306651,
+    "gauss_bump": 0.4221897030474191,
+    "product_sines": 1.6635935887324447,
+    "spatial_packet": 2.7163484895450614
+   },
+   "seconds": 761.0
+  }
+ ]
+}

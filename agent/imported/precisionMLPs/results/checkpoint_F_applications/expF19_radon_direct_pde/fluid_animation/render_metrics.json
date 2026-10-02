@@ -1,0 +1,780 @@
+{
+  "source": "results/checkpoint_F_applications/expF19_radon_direct_pde/fluid_animation/trajectory.npz",
+  "source_sha256": "4d1e90889ddc277d8f99283362c2fc2612922b6b6162837eb835bd19ba8a187b",
+  "source_shape": [
+    121,
+    738,
+    3
+  ],
+  "source_time_interval": [
+    0.0,
+    4.0
+  ],
+  "source_frames": 121,
+  "material_sheet_markers": 578,
+  "passive_tracers": 160,
+  "scientific_rendering": "Fixed camera; piecewise-linear sampled material sheets; actual saved trajectories only",
+  "periodic_rule": "Exclude each triangle/trail segment if any edge coordinate jump exceeds pi",
+  "color_scale": {
+    "quantity": "particle speed",
+    "maximum": 1.7968825101852417,
+    "clips_above_quantile": 0.995
+  },
+  "viscosity_label": 0.075,
+  "fps": 15,
+  "movie": {
+    "decoded_first_height": 800,
+    "decoded_first_width": 1280,
+    "duration_seconds": 8.066666666666666,
+    "encoder": "macOS AVFoundation H.264",
+    "fps": 15,
+    "frames": 121,
+    "height": 800,
+    "width": 1280,
+    "decoded_first_mean_absolute_rgb_error": 1.1571350911458333,
+    "decoded_first_flipped_mean_absolute_rgb_error": 8.043671549479166
+  },
+  "gif": {
+    "frames": 121,
+    "milliseconds": 8070,
+    "width": 768
+  },
+  "encoder_error": null,
+  "poster_frame": 86,
+  "per_frame": [
+    {
+      "time": 0.0,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 0
+    },
+    {
+      "time": 0.03333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 160
+    },
+    {
+      "time": 0.06666666666666667,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 320
+    },
+    {
+      "time": 0.1,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 480
+    },
+    {
+      "time": 0.13333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 640
+    },
+    {
+      "time": 0.16666666666666666,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 800
+    },
+    {
+      "time": 0.2,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 960
+    },
+    {
+      "time": 0.23333333333333334,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1120
+    },
+    {
+      "time": 0.26666666666666666,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1279
+    },
+    {
+      "time": 0.3,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1438
+    },
+    {
+      "time": 0.3333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1597
+    },
+    {
+      "time": 0.36666666666666664,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1757
+    },
+    {
+      "time": 0.4,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 1917
+    },
+    {
+      "time": 0.43333333333333335,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2076
+    },
+    {
+      "time": 0.4666666666666667,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2235
+    },
+    {
+      "time": 0.5,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2394
+    },
+    {
+      "time": 0.5333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2551
+    },
+    {
+      "time": 0.5666666666666667,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2710
+    },
+    {
+      "time": 0.6,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 2869
+    },
+    {
+      "time": 0.6333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3027
+    },
+    {
+      "time": 0.6666666666666666,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3187
+    },
+    {
+      "time": 0.7,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3347
+    },
+    {
+      "time": 0.7333333333333333,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3506
+    },
+    {
+      "time": 0.7666666666666666,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3506
+    },
+    {
+      "time": 0.8,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3504
+    },
+    {
+      "time": 0.8333333333333334,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3504
+    },
+    {
+      "time": 0.8666666666666667,
+      "dropped_periodic_triangles": 0,
+      "visible_triangles": 1024,
+      "trail_segments": 3503
+    },
+    {
+      "time": 0.9,
+      "dropped_periodic_triangles": 7,
+      "visible_triangles": 1017,
+      "trail_segments": 3502
+    },
+    {
+      "time": 0.9333333333333333,
+      "dropped_periodic_triangles": 9,
+      "visible_triangles": 1015,
+      "trail_segments": 3501
+    },
+    {
+      "time": 0.9666666666666667,
+      "dropped_periodic_triangles": 11,
+      "visible_triangles": 1013,
+      "trail_segments": 3501
+    },
+    {
+      "time": 1.0,
+      "dropped_periodic_triangles": 16,
+      "visible_triangles": 1008,
+      "trail_segments": 3501
+    },
+    {
+      "time": 1.0333333333333332,
+      "dropped_periodic_triangles": 27,
+      "visible_triangles": 997,
+      "trail_segments": 3501
+    },
+    {
+      "time": 1.0666666666666667,
+      "dropped_periodic_triangles": 27,
+      "visible_triangles": 997,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.1,
+      "dropped_periodic_triangles": 31,
+      "visible_triangles": 993,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.1333333333333333,
+      "dropped_periodic_triangles": 35,
+      "visible_triangles": 989,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.1666666666666667,
+      "dropped_periodic_triangles": 40,
+      "visible_triangles": 984,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.2,
+      "dropped_periodic_triangles": 44,
+      "visible_triangles": 980,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.2333333333333334,
+      "dropped_periodic_triangles": 48,
+      "visible_triangles": 976,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.2666666666666666,
+      "dropped_periodic_triangles": 52,
+      "visible_triangles": 972,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.3,
+      "dropped_periodic_triangles": 54,
+      "visible_triangles": 970,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.3333333333333333,
+      "dropped_periodic_triangles": 54,
+      "visible_triangles": 970,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.3666666666666667,
+      "dropped_periodic_triangles": 54,
+      "visible_triangles": 970,
+      "trail_segments": 3502
+    },
+    {
+      "time": 1.4,
+      "dropped_periodic_triangles": 56,
+      "visible_triangles": 968,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.4333333333333333,
+      "dropped_periodic_triangles": 61,
+      "visible_triangles": 963,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.4666666666666666,
+      "dropped_periodic_triangles": 67,
+      "visible_triangles": 957,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.5,
+      "dropped_periodic_triangles": 71,
+      "visible_triangles": 953,
+      "trail_segments": 3497
+    },
+    {
+      "time": 1.5333333333333332,
+      "dropped_periodic_triangles": 73,
+      "visible_triangles": 951,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.5666666666666667,
+      "dropped_periodic_triangles": 79,
+      "visible_triangles": 945,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.6,
+      "dropped_periodic_triangles": 82,
+      "visible_triangles": 942,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.6333333333333333,
+      "dropped_periodic_triangles": 86,
+      "visible_triangles": 938,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.6666666666666667,
+      "dropped_periodic_triangles": 92,
+      "visible_triangles": 932,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.7,
+      "dropped_periodic_triangles": 92,
+      "visible_triangles": 932,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.7333333333333334,
+      "dropped_periodic_triangles": 96,
+      "visible_triangles": 928,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.7666666666666666,
+      "dropped_periodic_triangles": 98,
+      "visible_triangles": 926,
+      "trail_segments": 3499
+    },
+    {
+      "time": 1.8,
+      "dropped_periodic_triangles": 98,
+      "visible_triangles": 926,
+      "trail_segments": 3501
+    },
+    {
+      "time": 1.8333333333333333,
+      "dropped_periodic_triangles": 102,
+      "visible_triangles": 922,
+      "trail_segments": 3502
+    },
+    {
+      "time": 1.8666666666666667,
+      "dropped_periodic_triangles": 102,
+      "visible_triangles": 922,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.9,
+      "dropped_periodic_triangles": 105,
+      "visible_triangles": 919,
+      "trail_segments": 3498
+    },
+    {
+      "time": 1.9333333333333333,
+      "dropped_periodic_triangles": 108,
+      "visible_triangles": 916,
+      "trail_segments": 3500
+    },
+    {
+      "time": 1.9666666666666666,
+      "dropped_periodic_triangles": 111,
+      "visible_triangles": 913,
+      "trail_segments": 3499
+    },
+    {
+      "time": 2.0,
+      "dropped_periodic_triangles": 109,
+      "visible_triangles": 915,
+      "trail_segments": 3500
+    },
+    {
+      "time": 2.033333333333333,
+      "dropped_periodic_triangles": 113,
+      "visible_triangles": 911,
+      "trail_segments": 3497
+    },
+    {
+      "time": 2.0666666666666664,
+      "dropped_periodic_triangles": 117,
+      "visible_triangles": 907,
+      "trail_segments": 3497
+    },
+    {
+      "time": 2.1,
+      "dropped_periodic_triangles": 120,
+      "visible_triangles": 904,
+      "trail_segments": 3495
+    },
+    {
+      "time": 2.1333333333333333,
+      "dropped_periodic_triangles": 126,
+      "visible_triangles": 898,
+      "trail_segments": 3497
+    },
+    {
+      "time": 2.1666666666666665,
+      "dropped_periodic_triangles": 124,
+      "visible_triangles": 900,
+      "trail_segments": 3496
+    },
+    {
+      "time": 2.2,
+      "dropped_periodic_triangles": 130,
+      "visible_triangles": 894,
+      "trail_segments": 3497
+    },
+    {
+      "time": 2.2333333333333334,
+      "dropped_periodic_triangles": 130,
+      "visible_triangles": 894,
+      "trail_segments": 3497
+    },
+    {
+      "time": 2.2666666666666666,
+      "dropped_periodic_triangles": 135,
+      "visible_triangles": 889,
+      "trail_segments": 3495
+    },
+    {
+      "time": 2.3,
+      "dropped_periodic_triangles": 133,
+      "visible_triangles": 891,
+      "trail_segments": 3494
+    },
+    {
+      "time": 2.3333333333333335,
+      "dropped_periodic_triangles": 133,
+      "visible_triangles": 891,
+      "trail_segments": 3493
+    },
+    {
+      "time": 2.3666666666666667,
+      "dropped_periodic_triangles": 137,
+      "visible_triangles": 887,
+      "trail_segments": 3495
+    },
+    {
+      "time": 2.4,
+      "dropped_periodic_triangles": 139,
+      "visible_triangles": 885,
+      "trail_segments": 3494
+    },
+    {
+      "time": 2.433333333333333,
+      "dropped_periodic_triangles": 144,
+      "visible_triangles": 880,
+      "trail_segments": 3491
+    },
+    {
+      "time": 2.466666666666667,
+      "dropped_periodic_triangles": 150,
+      "visible_triangles": 874,
+      "trail_segments": 3489
+    },
+    {
+      "time": 2.5,
+      "dropped_periodic_triangles": 152,
+      "visible_triangles": 872,
+      "trail_segments": 3489
+    },
+    {
+      "time": 2.533333333333333,
+      "dropped_periodic_triangles": 152,
+      "visible_triangles": 872,
+      "trail_segments": 3489
+    },
+    {
+      "time": 2.5666666666666664,
+      "dropped_periodic_triangles": 154,
+      "visible_triangles": 870,
+      "trail_segments": 3488
+    },
+    {
+      "time": 2.6,
+      "dropped_periodic_triangles": 155,
+      "visible_triangles": 869,
+      "trail_segments": 3490
+    },
+    {
+      "time": 2.6333333333333333,
+      "dropped_periodic_triangles": 155,
+      "visible_triangles": 869,
+      "trail_segments": 3490
+    },
+    {
+      "time": 2.6666666666666665,
+      "dropped_periodic_triangles": 155,
+      "visible_triangles": 869,
+      "trail_segments": 3487
+    },
+    {
+      "time": 2.7,
+      "dropped_periodic_triangles": 157,
+      "visible_triangles": 867,
+      "trail_segments": 3488
+    },
+    {
+      "time": 2.7333333333333334,
+      "dropped_periodic_triangles": 164,
+      "visible_triangles": 860,
+      "trail_segments": 3489
+    },
+    {
+      "time": 2.7666666666666666,
+      "dropped_periodic_triangles": 164,
+      "visible_triangles": 860,
+      "trail_segments": 3491
+    },
+    {
+      "time": 2.8,
+      "dropped_periodic_triangles": 164,
+      "visible_triangles": 860,
+      "trail_segments": 3491
+    },
+    {
+      "time": 2.8333333333333335,
+      "dropped_periodic_triangles": 166,
+      "visible_triangles": 858,
+      "trail_segments": 3493
+    },
+    {
+      "time": 2.8666666666666667,
+      "dropped_periodic_triangles": 168,
+      "visible_triangles": 856,
+      "trail_segments": 3492
+    },
+    {
+      "time": 2.9,
+      "dropped_periodic_triangles": 171,
+      "visible_triangles": 853,
+      "trail_segments": 3493
+    },
+    {
+      "time": 2.933333333333333,
+      "dropped_periodic_triangles": 173,
+      "visible_triangles": 851,
+      "trail_segments": 3494
+    },
+    {
+      "time": 2.966666666666667,
+      "dropped_periodic_triangles": 185,
+      "visible_triangles": 839,
+      "trail_segments": 3492
+    },
+    {
+      "time": 3.0,
+      "dropped_periodic_triangles": 191,
+      "visible_triangles": 833,
+      "trail_segments": 3494
+    },
+    {
+      "time": 3.033333333333333,
+      "dropped_periodic_triangles": 192,
+      "visible_triangles": 832,
+      "trail_segments": 3496
+    },
+    {
+      "time": 3.0666666666666664,
+      "dropped_periodic_triangles": 194,
+      "visible_triangles": 830,
+      "trail_segments": 3497
+    },
+    {
+      "time": 3.1,
+      "dropped_periodic_triangles": 197,
+      "visible_triangles": 827,
+      "trail_segments": 3497
+    },
+    {
+      "time": 3.1333333333333333,
+      "dropped_periodic_triangles": 200,
+      "visible_triangles": 824,
+      "trail_segments": 3497
+    },
+    {
+      "time": 3.1666666666666665,
+      "dropped_periodic_triangles": 206,
+      "visible_triangles": 818,
+      "trail_segments": 3499
+    },
+    {
+      "time": 3.2,
+      "dropped_periodic_triangles": 214,
+      "visible_triangles": 810,
+      "trail_segments": 3501
+    },
+    {
+      "time": 3.2333333333333334,
+      "dropped_periodic_triangles": 218,
+      "visible_triangles": 806,
+      "trail_segments": 3503
+    },
+    {
+      "time": 3.2666666666666666,
+      "dropped_periodic_triangles": 216,
+      "visible_triangles": 808,
+      "trail_segments": 3504
+    },
+    {
+      "time": 3.3,
+      "dropped_periodic_triangles": 218,
+      "visible_triangles": 806,
+      "trail_segments": 3503
+    },
+    {
+      "time": 3.3333333333333335,
+      "dropped_periodic_triangles": 216,
+      "visible_triangles": 808,
+      "trail_segments": 3502
+    },
+    {
+      "time": 3.3666666666666667,
+      "dropped_periodic_triangles": 216,
+      "visible_triangles": 808,
+      "trail_segments": 3504
+    },
+    {
+      "time": 3.4,
+      "dropped_periodic_triangles": 215,
+      "visible_triangles": 809,
+      "trail_segments": 3507
+    },
+    {
+      "time": 3.433333333333333,
+      "dropped_periodic_triangles": 216,
+      "visible_triangles": 808,
+      "trail_segments": 3507
+    },
+    {
+      "time": 3.466666666666667,
+      "dropped_periodic_triangles": 220,
+      "visible_triangles": 804,
+      "trail_segments": 3507
+    },
+    {
+      "time": 3.5,
+      "dropped_periodic_triangles": 225,
+      "visible_triangles": 799,
+      "trail_segments": 3508
+    },
+    {
+      "time": 3.533333333333333,
+      "dropped_periodic_triangles": 227,
+      "visible_triangles": 797,
+      "trail_segments": 3509
+    },
+    {
+      "time": 3.5666666666666664,
+      "dropped_periodic_triangles": 227,
+      "visible_triangles": 797,
+      "trail_segments": 3509
+    },
+    {
+      "time": 3.6,
+      "dropped_periodic_triangles": 229,
+      "visible_triangles": 795,
+      "trail_segments": 3510
+    },
+    {
+      "time": 3.6333333333333333,
+      "dropped_periodic_triangles": 233,
+      "visible_triangles": 791,
+      "trail_segments": 3509
+    },
+    {
+      "time": 3.6666666666666665,
+      "dropped_periodic_triangles": 242,
+      "visible_triangles": 782,
+      "trail_segments": 3510
+    },
+    {
+      "time": 3.6999999999999997,
+      "dropped_periodic_triangles": 244,
+      "visible_triangles": 780,
+      "trail_segments": 3511
+    },
+    {
+      "time": 3.7333333333333334,
+      "dropped_periodic_triangles": 248,
+      "visible_triangles": 776,
+      "trail_segments": 3511
+    },
+    {
+      "time": 3.7666666666666666,
+      "dropped_periodic_triangles": 247,
+      "visible_triangles": 777,
+      "trail_segments": 3510
+    },
+    {
+      "time": 3.8,
+      "dropped_periodic_triangles": 250,
+      "visible_triangles": 774,
+      "trail_segments": 3508
+    },
+    {
+      "time": 3.8333333333333335,
+      "dropped_periodic_triangles": 252,
+      "visible_triangles": 772,
+      "trail_segments": 3506
+    },
+    {
+      "time": 3.8666666666666667,
+      "dropped_periodic_triangles": 252,
+      "visible_triangles": 772,
+      "trail_segments": 3506
+    },
+    {
+      "time": 3.9,
+      "dropped_periodic_triangles": 250,
+      "visible_triangles": 774,
+      "trail_segments": 3505
+    },
+    {
+      "time": 3.933333333333333,
+      "dropped_periodic_triangles": 248,
+      "visible_triangles": 776,
+      "trail_segments": 3504
+    },
+    {
+      "time": 3.966666666666667,
+      "dropped_periodic_triangles": 254,
+      "visible_triangles": 770,
+      "trail_segments": 3504
+    },
+    {
+      "time": 4.0,
+      "dropped_periodic_triangles": 257,
+      "visible_triangles": 767,
+      "trail_segments": 3504
+    }
+  ],
+  "render_seconds": 8.165731582790613,
+  "peak_rss_mb": 299.03125,
+  "artifact_bytes": {
+    "preview.mp4": 3703939,
+    "preview.gif": 7217830,
+    "poster.png": 262798
+  },
+  "scope": "This script performs visualization only; it neither substitutes a fluid solver nor changes the supplied particles."
+}

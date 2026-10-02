@@ -1,0 +1,1788 @@
+{
+  "case": "inverse_diffusivity",
+  "backend": "quill",
+  "metrics": {
+    "seconds": 0.2188878753222525,
+    "tolerance": 1e-06,
+    "status": "sampled_checks_passed",
+    "validated": true,
+    "stages": 5,
+    "best_residual_stage": 3,
+    "reference_solution_used": false,
+    "validation_scope": "Fresh equation/constraint residuals and successive-field agreement; empirical, not continuum certification",
+    "equations_are_declarations": true,
+    "named_equation_dispatch": false,
+    "memory_budget_scope": "Cached basis jet estimate only; not whole-process RSS"
+  },
+  "history": [
+    {
+      "degree": 4,
+      "coefficients": 15,
+      "tanh_count": 166,
+      "interior_samples": 256,
+      "estimated_basis_cache_bytes": 95040,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.13185949563698943,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "spatial_boundary",
+          "maximum_scaled_rms": 0.06658019373439016,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.15256759029153555,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "observations",
+          "maximum_scaled_rms": 0.1396883454798346,
+          "reuses_training_locations": true,
+          "points": 24
+        }
+      ],
+      "maximum_validation_rms": 0.15256759029153555,
+      "successive_field_difference": null,
+      "solver": {
+        "status": "stagnated",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 27,
+        "objective": 0.032183270005944065,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 256,
+            "output_rows": 256,
+            "equations": 1,
+            "rms": 0.13176323398701664,
+            "pre_relation_rms": 0.13176323398701664,
+            "relation": "eq",
+            "active_entries": 256,
+            "scaled_rms": [
+              0.13176323398701664
+            ],
+            "maximum_scaled_rms": 0.13176323398701664,
+            "weighted_norm": 0.13176323398701664
+          },
+          {
+            "name": "spatial_boundary",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.06643247575164568,
+            "pre_relation_rms": 0.06643247575164568,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.06643247575164568
+            ],
+            "maximum_scaled_rms": 0.06643247575164568,
+            "weighted_norm": 0.0664324757516457
+          },
+          {
+            "name": "initial",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.15191735412316862,
+            "pre_relation_rms": 0.15191735412316862,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.15191735412316862
+            ],
+            "maximum_scaled_rms": 0.15191735412316862,
+            "weighted_norm": 0.15191735412316865
+          },
+          {
+            "name": "observations",
+            "input_rows": 24,
+            "output_rows": 24,
+            "equations": 1,
+            "rms": 0.1396883454798346,
+            "pre_relation_rms": 0.1396883454798346,
+            "relation": "eq",
+            "active_entries": 24,
+            "scaled_rms": [
+              0.1396883454798346
+            ],
+            "maximum_scaled_rms": 0.1396883454798346,
+            "weighted_norm": 0.1396883454798346
+          }
+        ],
+        "residual_evaluations": 65,
+        "linearizations": 28,
+        "lsmr_iterations": 101,
+        "seconds": 0.03844187501817942,
+        "basis_setup_seconds": 0.000790333840996027,
+        "basis_cache_bytes": 95040,
+        "unknowns": 16,
+        "feature_metrics": {
+          "backend": "quill",
+          "dimension": 2,
+          "degree": 4,
+          "coefficient_count": 15,
+          "tanh_count": 166,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "interior_centers_per_axis": 65,
+          "halo_per_side": 9,
+          "lam": 0.3,
+          "normalized_gamma": 9.6,
+          "physical_gamma": [
+            9.6,
+            19.2
+          ],
+          "normalized_derivative_checks": [
+            {
+              "order": 0,
+              "max_absolute_error": 1.900257728948418e-12,
+              "max_scaled_error": 1.900257728948418e-12,
+              "per_mode_absolute_error": [
+                0.0,
+                1.0857981180834031e-13,
+                2.324807013565078e-13,
+                1.3627987627273797e-12,
+                1.900257728948418e-12
+              ]
+            },
+            {
+              "order": 1,
+              "max_absolute_error": 2.0933299538228312e-10,
+              "max_scaled_error": 2.093329953822831e-11,
+              "per_mode_absolute_error": [
+                0.0,
+                5.4821702732965605e-12,
+                2.3392399128852048e-11,
+                7.408118563034805e-11,
+                2.0933299538228312e-10
+              ]
+            },
+            {
+              "order": 2,
+              "max_absolute_error": 2.5189471841713384e-08,
+              "max_scaled_error": 9.779517936199984e-10,
+              "per_mode_absolute_error": [
+                0.0,
+                6.955558453225832e-10,
+                2.9338553808599954e-09,
+                9.118760857518282e-09,
+                2.5189471841713384e-08
+              ]
+            }
+          ],
+          "derivative_check_tolerance": 1e-08,
+          "encoding_value_error": 1.900257728948418e-12,
+          "encoding_derivative_errors": [
+            2.0933299538228312e-10,
+            2.5189471841713384e-08
+          ],
+          "encoding_sweep": [
+            {
+              "interior_centers": 33,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.028653778080542036
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.2,
+              "maximum_scaled_error": 0.0066914126173940325
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.25,
+              "maximum_scaled_error": 0.0013050556212272173
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.3,
+              "maximum_scaled_error": 0.0002247355223006231
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.00010721633516845112
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.2,
+              "maximum_scaled_error": 2.7637147659298478e-06
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.25,
+              "maximum_scaled_error": 5.543065902576435e-08
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.3,
+              "maximum_scaled_error": 9.779517936199984e-10
+            }
+          ],
+          "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+          "setup_seconds": 1.712469384074211e-05
+        },
+        "parameter_bounds": [
+          [
+            0.02
+          ],
+          [
+            1.0
+          ]
+        ],
+        "identifiability_checked": false,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 11160,
+        "unassembled_dense_jacobian_bytes": 68608,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 101,
+          "rmatvec_calls": 381
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 1,
+          "rmatvec_calls": 11
+        },
+        "residual_entries": 536
+      },
+      "elapsed_seconds": 0.04177904222160578
+    },
+    {
+      "degree": 8,
+      "coefficients": 45,
+      "tanh_count": 166,
+      "interior_samples": 270,
+      "estimated_basis_cache_bytes": 295200,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.0040803738164574,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "spatial_boundary",
+          "maximum_scaled_rms": 0.002970490326965079,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.0035722161783473365,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "observations",
+          "maximum_scaled_rms": 0.0009115128024891067,
+          "reuses_training_locations": true,
+          "points": 24
+        }
+      ],
+      "maximum_validation_rms": 0.0040803738164574,
+      "successive_field_difference": 0.14689776523205816,
+      "solver": {
+        "status": "stagnated",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 35,
+        "objective": 1.9104901190686032e-05,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 270,
+            "output_rows": 270,
+            "equations": 1,
+            "rms": 0.003986900524164006,
+            "pre_relation_rms": 0.003986900524164006,
+            "relation": "eq",
+            "active_entries": 270,
+            "scaled_rms": [
+              0.003986900524164006
+            ],
+            "maximum_scaled_rms": 0.003986900524164006,
+            "weighted_norm": 0.003986900524164006
+          },
+          {
+            "name": "spatial_boundary",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.0029814282516549212,
+            "pre_relation_rms": 0.0029814282516549212,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.0029814282516549212
+            ],
+            "maximum_scaled_rms": 0.0029814282516549212,
+            "weighted_norm": 0.0029814282516549217
+          },
+          {
+            "name": "initial",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.003548895121432185,
+            "pre_relation_rms": 0.003548895121432185,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.003548895121432185
+            ],
+            "maximum_scaled_rms": 0.003548895121432185,
+            "weighted_norm": 0.0035488951214321853
+          },
+          {
+            "name": "observations",
+            "input_rows": 24,
+            "output_rows": 24,
+            "equations": 1,
+            "rms": 0.0009115128024891067,
+            "pre_relation_rms": 0.0009115128024891067,
+            "relation": "eq",
+            "active_entries": 24,
+            "scaled_rms": [
+              0.0009115128024891067
+            ],
+            "maximum_scaled_rms": 0.0009115128024891067,
+            "weighted_norm": 0.0009115128024891067
+          }
+        ],
+        "residual_evaluations": 77,
+        "linearizations": 36,
+        "lsmr_iterations": 306,
+        "seconds": 0.06381479185074568,
+        "basis_setup_seconds": 0.0008459999226033688,
+        "basis_cache_bytes": 295200,
+        "unknowns": 46,
+        "feature_metrics": {
+          "backend": "quill",
+          "dimension": 2,
+          "degree": 8,
+          "coefficient_count": 45,
+          "tanh_count": 166,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "interior_centers_per_axis": 65,
+          "halo_per_side": 9,
+          "lam": 0.3,
+          "normalized_gamma": 9.6,
+          "physical_gamma": [
+            9.6,
+            19.2
+          ],
+          "normalized_derivative_checks": [
+            {
+              "order": 0,
+              "max_absolute_error": 7.525757794724086e-11,
+              "max_scaled_error": 7.525757794724086e-11,
+              "per_mode_absolute_error": [
+                0.0,
+                1.0857981180834031e-13,
+                2.324807013565078e-13,
+                1.3627987627273797e-12,
+                1.899813639738568e-12,
+                9.811818024729746e-12,
+                1.2513240443823292e-11,
+                6.165390420420636e-11,
+                7.525757794724086e-11
+              ]
+            },
+            {
+              "order": 1,
+              "max_absolute_error": 8.55382609188382e-09,
+              "max_scaled_error": 2.3760628033010606e-10,
+              "per_mode_absolute_error": [
+                0.0,
+                5.4821702732965605e-12,
+                2.3392399128852048e-11,
+                7.408118563034805e-11,
+                2.0933299538228312e-10,
+                5.560565341511392e-10,
+                1.4190675301506417e-09,
+                3.5206113579988596e-09,
+                8.55382609188382e-09
+              ]
+            },
+            {
+              "order": 2,
+              "max_absolute_error": 9.659921715865494e-07,
+              "max_scaled_error": 1.5333209072802371e-09,
+              "per_mode_absolute_error": [
+                0.0,
+                6.955558453225832e-10,
+                2.9338553808599954e-09,
+                9.118760857518282e-09,
+                2.5189478947140742e-08,
+                6.542678931964474e-08,
+                1.6384393575208378e-07,
+                4.0093635789162363e-07,
+                9.659921715865494e-07
+              ]
+            }
+          ],
+          "derivative_check_tolerance": 1e-08,
+          "encoding_value_error": 7.525757794724086e-11,
+          "encoding_derivative_errors": [
+            8.55382609188382e-09,
+            9.659921715865494e-07
+          ],
+          "encoding_sweep": [
+            {
+              "interior_centers": 33,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.4186220498030374
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.2,
+              "maximum_scaled_error": 0.03868387548988056
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.25,
+              "maximum_scaled_error": 0.00536034454816351
+            },
+            {
+              "interior_centers": 33,
+              "lam": 0.3,
+              "maximum_scaled_error": 0.0008252655283152466
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.0002759482752114511
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.2,
+              "maximum_scaled_error": 5.62044056709604e-06
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.25,
+              "maximum_scaled_error": 9.741108464194916e-08
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.3,
+              "maximum_scaled_error": 1.5333209072802371e-09
+            }
+          ],
+          "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+          "setup_seconds": 1.987488940358162e-05
+        },
+        "parameter_bounds": [
+          [
+            0.02
+          ],
+          [
+            1.0
+          ]
+        ],
+        "identifiability_checked": false,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 11510,
+        "unassembled_dense_jacobian_bytes": 202400,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 306,
+          "rmatvec_calls": 666
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 1,
+          "rmatvec_calls": 11
+        },
+        "residual_entries": 550
+      },
+      "elapsed_seconds": 0.10967841697856784
+    },
+    {
+      "degree": 12,
+      "coefficients": 91,
+      "tanh_count": 234,
+      "interior_samples": 546,
+      "estimated_basis_cache_bytes": 1080352,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 1.794125021441916e-05,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "spatial_boundary",
+          "maximum_scaled_rms": 4.347106677238816e-06,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 6.384195993308267e-06,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "observations",
+          "maximum_scaled_rms": 1.3800716289303426e-06,
+          "reuses_training_locations": true,
+          "points": 24
+        }
+      ],
+      "maximum_validation_rms": 1.794125021441916e-05,
+      "successive_field_difference": 0.0011884002697813165,
+      "solver": {
+        "status": "stagnated",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 12,
+        "objective": 1.441270167450408e-10,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 546,
+            "output_rows": 546,
+            "equations": 1,
+            "rms": 1.5077275112283559e-05,
+            "pre_relation_rms": 1.5077275112283559e-05,
+            "relation": "eq",
+            "active_entries": 546,
+            "scaled_rms": [
+              1.5077275112283559e-05
+            ],
+            "maximum_scaled_rms": 1.5077275112283559e-05,
+            "weighted_norm": 1.5077275112283559e-05
+          },
+          {
+            "name": "spatial_boundary",
+            "input_rows": 184,
+            "output_rows": 184,
+            "equations": 1,
+            "rms": 4.1853843123396e-06,
+            "pre_relation_rms": 4.1853843123396e-06,
+            "relation": "eq",
+            "active_entries": 184,
+            "scaled_rms": [
+              4.1853843123396e-06
+            ],
+            "maximum_scaled_rms": 4.1853843123396e-06,
+            "weighted_norm": 4.1853843123396e-06
+          },
+          {
+            "name": "initial",
+            "input_rows": 184,
+            "output_rows": 184,
+            "equations": 1,
+            "rms": 6.442652337014588e-06,
+            "pre_relation_rms": 6.442652337014588e-06,
+            "relation": "eq",
+            "active_entries": 184,
+            "scaled_rms": [
+              6.442652337014588e-06
+            ],
+            "maximum_scaled_rms": 6.442652337014588e-06,
+            "weighted_norm": 6.442652337014588e-06
+          },
+          {
+            "name": "observations",
+            "input_rows": 24,
+            "output_rows": 24,
+            "equations": 1,
+            "rms": 1.3800716289303426e-06,
+            "pre_relation_rms": 1.3800716289303426e-06,
+            "relation": "eq",
+            "active_entries": 24,
+            "scaled_rms": [
+              1.3800716289303426e-06
+            ],
+            "maximum_scaled_rms": 1.3800716289303426e-06,
+            "weighted_norm": 1.3800716289303426e-06
+          }
+        ],
+        "residual_evaluations": 25,
+        "linearizations": 13,
+        "lsmr_iterations": 298,
+        "seconds": 0.043609749991446733,
+        "basis_setup_seconds": 0.0019409996457397938,
+        "basis_cache_bytes": 1080352,
+        "unknowns": 92,
+        "feature_metrics": {
+          "backend": "quill",
+          "dimension": 2,
+          "degree": 12,
+          "coefficient_count": 91,
+          "tanh_count": 234,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "interior_centers_per_axis": 97,
+          "halo_per_side": 10,
+          "lam": 0.3,
+          "normalized_gamma": 14.4,
+          "physical_gamma": [
+            14.4,
+            28.8
+          ],
+          "normalized_derivative_checks": [
+            {
+              "order": 0,
+              "max_absolute_error": 1.4727830066618708e-11,
+              "max_scaled_error": 1.4727830066618708e-11,
+              "per_mode_absolute_error": [
+                0.0,
+                3.552713678800501e-15,
+                9.992007221626409e-15,
+                2.5757174171303632e-14,
+                3.6637359812630166e-14,
+                9.281464485866309e-14,
+                1.3422596367718143e-13,
+                4.940492459581947e-13,
+                6.728784196496918e-13,
+                2.709832358505082e-12,
+                3.2193137045055664e-12,
+                1.342470579146493e-11,
+                1.4727830066618708e-11
+              ]
+            },
+            {
+              "order": 1,
+              "max_absolute_error": 2.542293486840208e-09,
+              "max_scaled_error": 3.259350624154113e-11,
+              "per_mode_absolute_error": [
+                0.0,
+                7.063238882665246e-13,
+                2.133404564119701e-12,
+                4.269473663498502e-12,
+                7.085887432367599e-12,
+                1.120703529977618e-11,
+                1.6836310123835574e-11,
+                5.126210567141243e-11,
+                1.2735767995764036e-10,
+                2.8631319537453237e-10,
+                6.083169523662946e-10,
+                1.252999481948791e-09,
+                2.542293486840208e-09
+              ]
+            },
+            {
+              "order": 2,
+              "max_absolute_error": 3.9034057408571243e-07,
+              "max_scaled_error": 2.0461739442221213e-10,
+              "per_mode_absolute_error": [
+                0.0,
+                2.0461739442221213e-10,
+                5.960956173112208e-10,
+                1.2095462409433821e-09,
+                1.9885391111529316e-09,
+                3.995580755145056e-09,
+                8.264777306976612e-09,
+                1.595321919012349e-08,
+                2.9657712730113417e-08,
+                5.460447027871851e-08,
+                1.0197095434705261e-07,
+                1.961716407095082e-07,
+                3.9034057408571243e-07
+              ]
+            }
+          ],
+          "derivative_check_tolerance": 1e-08,
+          "encoding_value_error": 1.4727830066618708e-11,
+          "encoding_derivative_errors": [
+            2.542293486840208e-09,
+            3.9034057408571243e-07
+          ],
+          "encoding_sweep": [
+            {
+              "interior_centers": 49,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.35749209687716604
+            },
+            {
+              "interior_centers": 49,
+              "lam": 0.2,
+              "maximum_scaled_error": 0.015335528927097941
+            },
+            {
+              "interior_centers": 49,
+              "lam": 0.25,
+              "maximum_scaled_error": 0.0007279473614916825
+            },
+            {
+              "interior_centers": 49,
+              "lam": 0.3,
+              "maximum_scaled_error": 5.034113592382372e-05
+            },
+            {
+              "interior_centers": 97,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.0001888911423662506
+            },
+            {
+              "interior_centers": 97,
+              "lam": 0.2,
+              "maximum_scaled_error": 1.9101829184395042e-06
+            },
+            {
+              "interior_centers": 97,
+              "lam": 0.25,
+              "maximum_scaled_error": 1.682301950596007e-08
+            },
+            {
+              "interior_centers": 97,
+              "lam": 0.3,
+              "maximum_scaled_error": 2.0461739442221213e-10
+            }
+          ],
+          "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+          "setup_seconds": 3.2791867852211e-05
+        },
+        "parameter_bounds": [
+          [
+            0.02
+          ],
+          [
+            1.0
+          ]
+        ],
+        "identifiability_checked": false,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 20314,
+        "unassembled_dense_jacobian_bytes": 690368,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 298,
+          "rmatvec_calls": 428
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 3,
+          "rmatvec_calls": 13
+        },
+        "residual_entries": 938
+      },
+      "elapsed_seconds": 0.158697959035635
+    },
+    {
+      "degree": 16,
+      "coefficients": 153,
+      "tanh_count": 306,
+      "interior_samples": 918,
+      "estimated_basis_cache_bytes": 2864160,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 1.0415594957990798e-08,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "spatial_boundary",
+          "maximum_scaled_rms": 1.1580720174010314e-09,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 4.607009675027885e-09,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "observations",
+          "maximum_scaled_rms": 5.128992733812544e-10,
+          "reuses_training_locations": true,
+          "points": 24
+        }
+      ],
+      "maximum_validation_rms": 1.0415594957990798e-08,
+      "successive_field_difference": 1.7064239996321574e-06,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 1,
+        "objective": 5.0283014922529465e-17,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 918,
+            "output_rows": 918,
+            "equations": 1,
+            "rms": 8.821393018666472e-09,
+            "pre_relation_rms": 8.821393018666472e-09,
+            "relation": "eq",
+            "active_entries": 918,
+            "scaled_rms": [
+              8.821393018666472e-09
+            ],
+            "maximum_scaled_rms": 8.821393018666472e-09,
+            "weighted_norm": 8.821393018666472e-09
+          },
+          {
+            "name": "spatial_boundary",
+            "input_rows": 240,
+            "output_rows": 240,
+            "equations": 1,
+            "rms": 1.144543033310384e-09,
+            "pre_relation_rms": 1.144543033310384e-09,
+            "relation": "eq",
+            "active_entries": 240,
+            "scaled_rms": [
+              1.144543033310384e-09
+            ],
+            "maximum_scaled_rms": 1.144543033310384e-09,
+            "weighted_norm": 1.1445430333103838e-09
+          },
+          {
+            "name": "initial",
+            "input_rows": 240,
+            "output_rows": 240,
+            "equations": 1,
+            "rms": 4.601739957401656e-09,
+            "pre_relation_rms": 4.601739957401656e-09,
+            "relation": "eq",
+            "active_entries": 240,
+            "scaled_rms": [
+              4.601739957401656e-09
+            ],
+            "maximum_scaled_rms": 4.601739957401656e-09,
+            "weighted_norm": 4.601739957401656e-09
+          },
+          {
+            "name": "observations",
+            "input_rows": 24,
+            "output_rows": 24,
+            "equations": 1,
+            "rms": 5.128992733812544e-10,
+            "pre_relation_rms": 5.128992733812544e-10,
+            "relation": "eq",
+            "active_entries": 24,
+            "scaled_rms": [
+              5.128992733812544e-10
+            ],
+            "maximum_scaled_rms": 5.128992733812544e-10,
+            "weighted_norm": 5.128992733812544e-10
+          }
+        ],
+        "residual_evaluations": 3,
+        "linearizations": 2,
+        "lsmr_iterations": 288,
+        "seconds": 0.035287290811538696,
+        "basis_setup_seconds": 0.003985708113759756,
+        "basis_cache_bytes": 2864160,
+        "unknowns": 154,
+        "feature_metrics": {
+          "backend": "quill",
+          "dimension": 2,
+          "degree": 16,
+          "coefficient_count": 153,
+          "tanh_count": 306,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "interior_centers_per_axis": 129,
+          "halo_per_side": 12,
+          "lam": 0.25,
+          "normalized_gamma": 16.0,
+          "physical_gamma": [
+            16.0,
+            32.0
+          ],
+          "normalized_derivative_checks": [
+            {
+              "order": 0,
+              "max_absolute_error": 4.934330721795277e-12,
+              "max_scaled_error": 4.934330721795277e-12,
+              "per_mode_absolute_error": [
+                0.0,
+                7.771561172376096e-16,
+                2.7200464103316335e-15,
+                4.440892098500626e-15,
+                5.190292640122607e-15,
+                9.880984919163893e-15,
+                1.1129985821867194e-14,
+                1.9317880628477724e-14,
+                4.318767565791859e-14,
+                6.816769371198461e-14,
+                1.5770718064800349e-13,
+                3.931403813606238e-13,
+                6.858125178865748e-13,
+                8.255063299600351e-13,
+                1.5977219547380628e-12,
+                2.9483915309214126e-12,
+                4.934330721795277e-12
+              ]
+            },
+            {
+              "order": 1,
+              "max_absolute_error": 3.3162450563395396e-10,
+              "max_scaled_error": 2.438415482602598e-12,
+              "per_mode_absolute_error": [
+                0.0,
+                1.887379141862766e-15,
+                6.217248937900877e-15,
+                1.509903313490213e-14,
+                4.796163466380676e-14,
+                1.0480505352461478e-13,
+                2.3447910280083306e-13,
+                5.542233338928781e-13,
+                1.1795009413617663e-12,
+                2.4940050025179517e-12,
+                5.094591415399918e-12,
+                1.0302869668521453e-11,
+                2.091837814077735e-11,
+                4.212097337585874e-11,
+                8.380141025554622e-11,
+                1.6693491033947794e-10,
+                3.3162450563395396e-10
+              ]
+            },
+            {
+              "order": 2,
+              "max_absolute_error": 7.313064998015761e-08,
+              "max_scaled_error": 7.966301740757903e-12,
+              "per_mode_absolute_error": [
+                0.0,
+                4.638183338330212e-13,
+                1.8602897000619123e-12,
+                5.332623231879552e-12,
+                1.319477860306506e-11,
+                3.0027536013221834e-11,
+                6.480149750132114e-11,
+                1.3528733688872308e-10,
+                2.7614532882580534e-10,
+                5.592255547526293e-10,
+                1.1300471669528633e-09,
+                2.271008270327002e-09,
+                4.5656634029001e-09,
+                9.17361830943264e-09,
+                1.8386344891041517e-08,
+                3.673630999401212e-08,
+                7.313064998015761e-08
+              ]
+            }
+          ],
+          "derivative_check_tolerance": 1e-08,
+          "encoding_value_error": 4.934330721795277e-12,
+          "encoding_derivative_errors": [
+            3.3162450563395396e-10,
+            7.313064998015761e-08
+          ],
+          "encoding_sweep": [
+            {
+              "interior_centers": 65,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.06768496403985896
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.2,
+              "maximum_scaled_error": 0.0006394276134825405
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.25,
+              "maximum_scaled_error": 6.217249683294207e-06
+            },
+            {
+              "interior_centers": 65,
+              "lam": 0.3,
+              "maximum_scaled_error": 8.634992601620817e-08
+            },
+            {
+              "interior_centers": 129,
+              "lam": 0.15,
+              "maximum_scaled_error": 4.511999085121406e-06
+            },
+            {
+              "interior_centers": 129,
+              "lam": 0.2,
+              "maximum_scaled_error": 6.389095856489057e-09
+            },
+            {
+              "interior_centers": 129,
+              "lam": 0.25,
+              "maximum_scaled_error": 7.966301740757903e-12
+            },
+            {
+              "interior_centers": 129,
+              "lam": 0.3,
+              "maximum_scaled_error": 2.728140515979831e-10
+            }
+          ],
+          "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+          "setup_seconds": 4.475004971027374e-05
+        },
+        "parameter_bounds": [
+          [
+            0.02
+          ],
+          [
+            1.0
+          ]
+        ],
+        "identifiability_checked": false,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 31518,
+        "unassembled_dense_jacobian_bytes": 1751904,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 288,
+          "rmatvec_calls": 298
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 1422
+      },
+      "elapsed_seconds": 0.20129629224538803
+    },
+    {
+      "degree": 20,
+      "coefficients": 231,
+      "tanh_count": 374,
+      "interior_samples": 1386,
+      "estimated_basis_cache_bytes": 6261024,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 1.0415595782132643e-08,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "spatial_boundary",
+          "maximum_scaled_rms": 1.1580721102979498e-09,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 4.607009870826389e-09,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "observations",
+          "maximum_scaled_rms": 5.128992428118803e-10,
+          "reuses_training_locations": true,
+          "points": 24
+        }
+      ],
+      "maximum_validation_rms": 1.0415595782132643e-08,
+      "successive_field_difference": 1.6537301328633542e-15,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 0,
+        "objective": 7.799988400759033e-17,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 1386,
+            "output_rows": 1386,
+            "equations": 1,
+            "rms": 1.1523996847614189e-08,
+            "pre_relation_rms": 1.1523996847614189e-08,
+            "relation": "eq",
+            "active_entries": 1386,
+            "scaled_rms": [
+              1.1523996847614189e-08
+            ],
+            "maximum_scaled_rms": 1.1523996847614189e-08,
+            "weighted_norm": 1.152399684761419e-08
+          },
+          {
+            "name": "spatial_boundary",
+            "input_rows": 296,
+            "output_rows": 296,
+            "equations": 1,
+            "rms": 1.181321248048692e-09,
+            "pre_relation_rms": 1.181321248048692e-09,
+            "relation": "eq",
+            "active_entries": 296,
+            "scaled_rms": [
+              1.181321248048692e-09
+            ],
+            "maximum_scaled_rms": 1.181321248048692e-09,
+            "weighted_norm": 1.1813212480486923e-09
+          },
+          {
+            "name": "initial",
+            "input_rows": 296,
+            "output_rows": 296,
+            "equations": 1,
+            "rms": 4.640978253233966e-09,
+            "pre_relation_rms": 4.640978253233966e-09,
+            "relation": "eq",
+            "active_entries": 296,
+            "scaled_rms": [
+              4.640978253233966e-09
+            ],
+            "maximum_scaled_rms": 4.640978253233966e-09,
+            "weighted_norm": 4.640978253233966e-09
+          },
+          {
+            "name": "observations",
+            "input_rows": 24,
+            "output_rows": 24,
+            "equations": 1,
+            "rms": 5.128992428118803e-10,
+            "pre_relation_rms": 5.128992428118803e-10,
+            "relation": "eq",
+            "active_entries": 24,
+            "scaled_rms": [
+              5.128992428118803e-10
+            ],
+            "maximum_scaled_rms": 5.128992428118803e-10,
+            "weighted_norm": 5.128992428118804e-10
+          }
+        ],
+        "residual_evaluations": 1,
+        "linearizations": 1,
+        "lsmr_iterations": 0,
+        "seconds": 0.008295124862343073,
+        "basis_setup_seconds": 0.0075392089784145355,
+        "basis_cache_bytes": 6261024,
+        "unknowns": 232,
+        "feature_metrics": {
+          "backend": "quill",
+          "dimension": 2,
+          "degree": 20,
+          "coefficient_count": 231,
+          "tanh_count": 374,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "interior_centers_per_axis": 161,
+          "halo_per_side": 13,
+          "lam": 0.25,
+          "normalized_gamma": 20.0,
+          "physical_gamma": [
+            20.0,
+            40.0
+          ],
+          "normalized_derivative_checks": [
+            {
+              "order": 0,
+              "max_absolute_error": 2.362948725576075e-11,
+              "max_scaled_error": 2.362948725576075e-11,
+              "per_mode_absolute_error": [
+                0.0,
+                2.6645352591003757e-15,
+                2.0539125955565396e-15,
+                1.887379141862766e-15,
+                4.107825191113079e-15,
+                4.884981308350689e-15,
+                1.0852430065710905e-14,
+                1.9984014443252818e-14,
+                5.517808432387028e-14,
+                3.941291737419306e-14,
+                7.677192215282957e-14,
+                1.978417429882029e-13,
+                3.8392899970318695e-13,
+                6.595002322029586e-13,
+                7.175787741786621e-13,
+                2.1472823519275153e-12,
+                3.1311064851990977e-12,
+                7.013029046376573e-12,
+                1.4796053271481924e-11,
+                1.6873336061706823e-11,
+                2.362948725576075e-11
+              ]
+            },
+            {
+              "order": 1,
+              "max_absolute_error": 4.6838977141305804e-11,
+              "max_scaled_error": 2.230427482919324e-13,
+              "per_mode_absolute_error": [
+                0.0,
+                1.7763568394002505e-15,
+                4.884981308350689e-15,
+                1.3322676295501878e-14,
+                2.1316282072803006e-14,
+                2.3092638912203256e-14,
+                5.3290705182007514e-14,
+                5.684341886080802e-14,
+                7.460698725481052e-14,
+                1.2079226507921703e-13,
+                1.9895196601282805e-13,
+                2.8421709430404007e-13,
+                5.968558980384842e-13,
+                1.0373923942097463e-12,
+                1.7905676941154525e-12,
+                2.6716406864579767e-12,
+                4.604316927725449e-12,
+                7.73070496506989e-12,
+                1.4210854715202004e-11,
+                2.5778490453376435e-11,
+                4.6838977141305804e-11
+              ]
+            },
+            {
+              "order": 2,
+              "max_absolute_error": 2.573870006017387e-09,
+              "max_scaled_error": 5.808719100270626e-13,
+              "per_mode_absolute_error": [
+                0.0,
+                5.808719100270626e-13,
+                1.673328142715036e-12,
+                3.3661962106634746e-12,
+                5.6417093219351955e-12,
+                8.313350008393172e-12,
+                1.1823431123048067e-11,
+                1.5575096767861396e-11,
+                2.4215296434704214e-11,
+                3.4219738154206425e-11,
+                4.6838977141305804e-11,
+                6.411937647499144e-11,
+                8.86757334228605e-11,
+                1.291482476517558e-10,
+                1.8917489796876907e-10,
+                2.864908310584724e-10,
+                4.0745362639427185e-10,
+                6.311893230304122e-10,
+                1.000444171950221e-09,
+                1.5643308870494366e-09,
+                2.573870006017387e-09
+              ]
+            }
+          ],
+          "derivative_check_tolerance": 1e-08,
+          "encoding_value_error": 2.362948725576075e-11,
+          "encoding_derivative_errors": [
+            4.6838977141305804e-11,
+            2.573870006017387e-09
+          ],
+          "encoding_sweep": [
+            {
+              "interior_centers": 81,
+              "lam": 0.15,
+              "maximum_scaled_error": 0.31388438603632574
+            },
+            {
+              "interior_centers": 81,
+              "lam": 0.2,
+              "maximum_scaled_error": 0.0030372352965981567
+            },
+            {
+              "interior_centers": 81,
+              "lam": 0.25,
+              "maximum_scaled_error": 2.963119036683559e-05
+            },
+            {
+              "interior_centers": 81,
+              "lam": 0.3,
+              "maximum_scaled_error": 2.949742647501141e-07
+            },
+            {
+              "interior_centers": 161,
+              "lam": 0.15,
+              "maximum_scaled_error": 3.0902824437942374e-07
+            },
+            {
+              "interior_centers": 161,
+              "lam": 0.2,
+              "maximum_scaled_error": 1.0699487144225525e-10
+            },
+            {
+              "interior_centers": 161,
+              "lam": 0.25,
+              "maximum_scaled_error": 2.362948725576075e-11
+            },
+            {
+              "interior_centers": 161,
+              "lam": 0.3,
+              "maximum_scaled_error": 3.4098145140216026e-10
+            }
+          ],
+          "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+          "setup_seconds": 6.28340058028698e-05
+        },
+        "parameter_bounds": [
+          [
+            0.02
+          ],
+          [
+            1.0
+          ]
+        ],
+        "identifiability_checked": false,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 45122,
+        "unassembled_dense_jacobian_bytes": 3715712,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 2002
+      },
+      "elapsed_seconds": 0.2188848340883851
+    }
+  ],
+  "validation": {
+    "relative_l2": 2.4432476368065613e-09,
+    "component_relative_l2": [
+      2.4432476368065613e-09
+    ],
+    "independent_residual_rms": {
+      "PDE": 1.2121614296856607e-08,
+      "spatial_boundary": 1.1641341401367772e-09,
+      "initial": 4.627569529628917e-09
+    },
+    "measurement_fit_rms": {
+      "observations": 5.128992428118803e-10
+    },
+    "parameter_relative_error": 1.3411674548713393e-10
+  },
+  "degree_selected": 20,
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 0,
+    "objective": 7.799988400759033e-17,
+    "tolerance": 1e-07,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 1386,
+        "output_rows": 1386,
+        "equations": 1,
+        "rms": 1.1523996847614189e-08,
+        "pre_relation_rms": 1.1523996847614189e-08,
+        "relation": "eq",
+        "active_entries": 1386,
+        "scaled_rms": [
+          1.1523996847614189e-08
+        ],
+        "maximum_scaled_rms": 1.1523996847614189e-08,
+        "weighted_norm": 1.152399684761419e-08
+      },
+      {
+        "name": "spatial_boundary",
+        "input_rows": 296,
+        "output_rows": 296,
+        "equations": 1,
+        "rms": 1.181321248048692e-09,
+        "pre_relation_rms": 1.181321248048692e-09,
+        "relation": "eq",
+        "active_entries": 296,
+        "scaled_rms": [
+          1.181321248048692e-09
+        ],
+        "maximum_scaled_rms": 1.181321248048692e-09,
+        "weighted_norm": 1.1813212480486923e-09
+      },
+      {
+        "name": "initial",
+        "input_rows": 296,
+        "output_rows": 296,
+        "equations": 1,
+        "rms": 4.640978253233966e-09,
+        "pre_relation_rms": 4.640978253233966e-09,
+        "relation": "eq",
+        "active_entries": 296,
+        "scaled_rms": [
+          4.640978253233966e-09
+        ],
+        "maximum_scaled_rms": 4.640978253233966e-09,
+        "weighted_norm": 4.640978253233966e-09
+      },
+      {
+        "name": "observations",
+        "input_rows": 24,
+        "output_rows": 24,
+        "equations": 1,
+        "rms": 5.128992428118803e-10,
+        "pre_relation_rms": 5.128992428118803e-10,
+        "relation": "eq",
+        "active_entries": 24,
+        "scaled_rms": [
+          5.128992428118803e-10
+        ],
+        "maximum_scaled_rms": 5.128992428118803e-10,
+        "weighted_norm": 5.128992428118804e-10
+      }
+    ],
+    "residual_evaluations": 1,
+    "linearizations": 1,
+    "lsmr_iterations": 0,
+    "seconds": 0.008295124862343073,
+    "basis_setup_seconds": 0.0075392089784145355,
+    "basis_cache_bytes": 6261024,
+    "unknowns": 232,
+    "feature_metrics": {
+      "backend": "quill",
+      "dimension": 2,
+      "degree": 20,
+      "coefficient_count": 231,
+      "tanh_count": 374,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "interior_centers_per_axis": 161,
+      "halo_per_side": 13,
+      "lam": 0.25,
+      "normalized_gamma": 20.0,
+      "physical_gamma": [
+        20.0,
+        40.0
+      ],
+      "normalized_derivative_checks": [
+        {
+          "order": 0,
+          "max_absolute_error": 2.362948725576075e-11,
+          "max_scaled_error": 2.362948725576075e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            2.6645352591003757e-15,
+            2.0539125955565396e-15,
+            1.887379141862766e-15,
+            4.107825191113079e-15,
+            4.884981308350689e-15,
+            1.0852430065710905e-14,
+            1.9984014443252818e-14,
+            5.517808432387028e-14,
+            3.941291737419306e-14,
+            7.677192215282957e-14,
+            1.978417429882029e-13,
+            3.8392899970318695e-13,
+            6.595002322029586e-13,
+            7.175787741786621e-13,
+            2.1472823519275153e-12,
+            3.1311064851990977e-12,
+            7.013029046376573e-12,
+            1.4796053271481924e-11,
+            1.6873336061706823e-11,
+            2.362948725576075e-11
+          ]
+        },
+        {
+          "order": 1,
+          "max_absolute_error": 4.6838977141305804e-11,
+          "max_scaled_error": 2.230427482919324e-13,
+          "per_mode_absolute_error": [
+            0.0,
+            1.7763568394002505e-15,
+            4.884981308350689e-15,
+            1.3322676295501878e-14,
+            2.1316282072803006e-14,
+            2.3092638912203256e-14,
+            5.3290705182007514e-14,
+            5.684341886080802e-14,
+            7.460698725481052e-14,
+            1.2079226507921703e-13,
+            1.9895196601282805e-13,
+            2.8421709430404007e-13,
+            5.968558980384842e-13,
+            1.0373923942097463e-12,
+            1.7905676941154525e-12,
+            2.6716406864579767e-12,
+            4.604316927725449e-12,
+            7.73070496506989e-12,
+            1.4210854715202004e-11,
+            2.5778490453376435e-11,
+            4.6838977141305804e-11
+          ]
+        },
+        {
+          "order": 2,
+          "max_absolute_error": 2.573870006017387e-09,
+          "max_scaled_error": 5.808719100270626e-13,
+          "per_mode_absolute_error": [
+            0.0,
+            5.808719100270626e-13,
+            1.673328142715036e-12,
+            3.3661962106634746e-12,
+            5.6417093219351955e-12,
+            8.313350008393172e-12,
+            1.1823431123048067e-11,
+            1.5575096767861396e-11,
+            2.4215296434704214e-11,
+            3.4219738154206425e-11,
+            4.6838977141305804e-11,
+            6.411937647499144e-11,
+            8.86757334228605e-11,
+            1.291482476517558e-10,
+            1.8917489796876907e-10,
+            2.864908310584724e-10,
+            4.0745362639427185e-10,
+            6.311893230304122e-10,
+            1.000444171950221e-09,
+            1.5643308870494366e-09,
+            2.573870006017387e-09
+          ]
+        }
+      ],
+      "derivative_check_tolerance": 1e-08,
+      "encoding_value_error": 2.362948725576075e-11,
+      "encoding_derivative_errors": [
+        4.6838977141305804e-11,
+        2.573870006017387e-09
+      ],
+      "encoding_sweep": [
+        {
+          "interior_centers": 81,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.31388438603632574
+        },
+        {
+          "interior_centers": 81,
+          "lam": 0.2,
+          "maximum_scaled_error": 0.0030372352965981567
+        },
+        {
+          "interior_centers": 81,
+          "lam": 0.25,
+          "maximum_scaled_error": 2.963119036683559e-05
+        },
+        {
+          "interior_centers": 81,
+          "lam": 0.3,
+          "maximum_scaled_error": 2.949742647501141e-07
+        },
+        {
+          "interior_centers": 161,
+          "lam": 0.15,
+          "maximum_scaled_error": 3.0902824437942374e-07
+        },
+        {
+          "interior_centers": 161,
+          "lam": 0.2,
+          "maximum_scaled_error": 1.0699487144225525e-10
+        },
+        {
+          "interior_centers": 161,
+          "lam": 0.25,
+          "maximum_scaled_error": 2.362948725576075e-11
+        },
+        {
+          "interior_centers": 161,
+          "lam": 0.3,
+          "maximum_scaled_error": 3.4098145140216026e-10
+        }
+      ],
+      "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+      "setup_seconds": 6.28340058028698e-05
+    },
+    "parameter_bounds": [
+      [
+        0.02
+      ],
+      [
+        1.0
+      ]
+    ],
+    "identifiability_checked": false,
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 45122,
+    "unassembled_dense_jacobian_bytes": 3715712,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 2002
+  },
+  "features": {
+    "backend": "quill",
+    "dimension": 2,
+    "degree": 20,
+    "coefficient_count": 231,
+    "tanh_count": 374,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "interior_centers_per_axis": 161,
+    "halo_per_side": 13,
+    "lam": 0.25,
+    "normalized_gamma": 20.0,
+    "physical_gamma": [
+      20.0,
+      40.0
+    ],
+    "normalized_derivative_checks": [
+      {
+        "order": 0,
+        "max_absolute_error": 2.362948725576075e-11,
+        "max_scaled_error": 2.362948725576075e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          2.6645352591003757e-15,
+          2.0539125955565396e-15,
+          1.887379141862766e-15,
+          4.107825191113079e-15,
+          4.884981308350689e-15,
+          1.0852430065710905e-14,
+          1.9984014443252818e-14,
+          5.517808432387028e-14,
+          3.941291737419306e-14,
+          7.677192215282957e-14,
+          1.978417429882029e-13,
+          3.8392899970318695e-13,
+          6.595002322029586e-13,
+          7.175787741786621e-13,
+          2.1472823519275153e-12,
+          3.1311064851990977e-12,
+          7.013029046376573e-12,
+          1.4796053271481924e-11,
+          1.6873336061706823e-11,
+          2.362948725576075e-11
+        ]
+      },
+      {
+        "order": 1,
+        "max_absolute_error": 4.6838977141305804e-11,
+        "max_scaled_error": 2.230427482919324e-13,
+        "per_mode_absolute_error": [
+          0.0,
+          1.7763568394002505e-15,
+          4.884981308350689e-15,
+          1.3322676295501878e-14,
+          2.1316282072803006e-14,
+          2.3092638912203256e-14,
+          5.3290705182007514e-14,
+          5.684341886080802e-14,
+          7.460698725481052e-14,
+          1.2079226507921703e-13,
+          1.9895196601282805e-13,
+          2.8421709430404007e-13,
+          5.968558980384842e-13,
+          1.0373923942097463e-12,
+          1.7905676941154525e-12,
+          2.6716406864579767e-12,
+          4.604316927725449e-12,
+          7.73070496506989e-12,
+          1.4210854715202004e-11,
+          2.5778490453376435e-11,
+          4.6838977141305804e-11
+        ]
+      },
+      {
+        "order": 2,
+        "max_absolute_error": 2.573870006017387e-09,
+        "max_scaled_error": 5.808719100270626e-13,
+        "per_mode_absolute_error": [
+          0.0,
+          5.808719100270626e-13,
+          1.673328142715036e-12,
+          3.3661962106634746e-12,
+          5.6417093219351955e-12,
+          8.313350008393172e-12,
+          1.1823431123048067e-11,
+          1.5575096767861396e-11,
+          2.4215296434704214e-11,
+          3.4219738154206425e-11,
+          4.6838977141305804e-11,
+          6.411937647499144e-11,
+          8.86757334228605e-11,
+          1.291482476517558e-10,
+          1.8917489796876907e-10,
+          2.864908310584724e-10,
+          4.0745362639427185e-10,
+          6.311893230304122e-10,
+          1.000444171950221e-09,
+          1.5643308870494366e-09,
+          2.573870006017387e-09
+        ]
+      }
+    ],
+    "derivative_check_tolerance": 1e-08,
+    "encoding_value_error": 2.362948725576075e-11,
+    "encoding_derivative_errors": [
+      4.6838977141305804e-11,
+      2.573870006017387e-09
+    ],
+    "encoding_sweep": [
+      {
+        "interior_centers": 81,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.31388438603632574
+      },
+      {
+        "interior_centers": 81,
+        "lam": 0.2,
+        "maximum_scaled_error": 0.0030372352965981567
+      },
+      {
+        "interior_centers": 81,
+        "lam": 0.25,
+        "maximum_scaled_error": 2.963119036683559e-05
+      },
+      {
+        "interior_centers": 81,
+        "lam": 0.3,
+        "maximum_scaled_error": 2.949742647501141e-07
+      },
+      {
+        "interior_centers": 161,
+        "lam": 0.15,
+        "maximum_scaled_error": 3.0902824437942374e-07
+      },
+      {
+        "interior_centers": 161,
+        "lam": 0.2,
+        "maximum_scaled_error": 1.0699487144225525e-10
+      },
+      {
+        "interior_centers": 161,
+        "lam": 0.25,
+        "maximum_scaled_error": 2.362948725576075e-11
+      },
+      {
+        "interior_centers": 161,
+        "lam": 0.3,
+        "maximum_scaled_error": 3.4098145140216026e-10
+      }
+    ],
+    "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+    "setup_seconds": 6.28340058028698e-05
+  },
+  "manufactured_forcing": false,
+  "note": "24 noiseless measurements; joint coefficient/physical-parameter solve."
+}

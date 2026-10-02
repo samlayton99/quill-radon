@@ -1,0 +1,187 @@
+{
+  "method": "a = E b; b_t = A_K F(S E b); explicit QUILL E, neural derivatives, Fourier/Leray closure",
+  "interpretation": "Modified pseudospectral method in compressed coordinates; no external PDE solution is used by native dynamics",
+  "equation": "3D periodic incompressible Navier-Stokes",
+  "initial_condition": "(sin(x) cos(y) cos(z), -cos(x) sin(y) cos(z), 0)",
+  "domain": "[-pi,pi]^3",
+  "viscosity": 0.05,
+  "final_time": 0.05,
+  "validation_points": 304,
+  "references_created_after_native_runs": true,
+  "reference": {
+    "cutoff7": {
+      "seconds": 0.6551019996404648,
+      "dt": 0.001,
+      "steps": 50,
+      "rhs_calls": 200
+    },
+    "cutoff9": {
+      "seconds": 1.2026422922499478,
+      "dt": 0.001,
+      "steps": 50,
+      "rhs_calls": 200
+    },
+    "cutoff7_vs9_relative": 1.180981639112268e-12
+  },
+  "limitations": [
+    "Short smooth flow only; low spatial cutoff",
+    "No speed or high-dimensional advantage claimed",
+    "Finite tanh fields are only approximately periodic; Fourier closure uses their periodic samples",
+    "Dealiasing is exact for retained trigonometric products, approximate for QUILL fields with tiny non-Fourier tails"
+  ],
+  "rows": [
+    {
+      "cutoff": 2,
+      "grid": 12,
+      "build": {
+        "seconds": 0.30294695869088173,
+        "neurons": 10829,
+        "directions": 49,
+        "latent_scalar_columns": 125,
+        "n_interior": 193,
+        "lam": 0.2,
+        "cached_bytes": 5184000,
+        "worst_basis_value_error": 4.440892098500626e-15,
+        "worst_basis_directional_derivative_error": 5.4042482584975826e-15,
+        "worst_basis_laplacian_error": 5.920967186025347e-14
+      },
+      "native": {
+        "seconds": 0.029168541077524424,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "initial_relative_error": 1.4394430279230924e-15,
+      "direct_vs_cache_relative": 1.3740090827767279e-15,
+      "direct_gradient_vs_cache_relative": 4.3403304035274608e-16,
+      "direct_laplacian_vs_cache_relative": 6.819240700756189e-16,
+      "divergence_max": 2.914335439641036e-16,
+      "initial_energy": 0.12500000000000006,
+      "final_energy": 0.12313883450867401,
+      "newly_generated_mode_norm": 0.008685060824974626,
+      "velocity_change_relative": 0.014416714789603652,
+      "generated_vertical_velocity_rms": 0.0043425304124873115,
+      "same_cutoff_spectral": {
+        "seconds": 0.0644248747266829,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "native_time_refinement": {
+        "seconds": 0.056483957916498184,
+        "dt": 0.001,
+        "steps": 50,
+        "rhs_calls": 200
+      },
+      "native_vs_same_cutoff_spectral_relative": 1.4800756264499547e-15,
+      "native_vs_dt_half_relative": 4.945205794994425e-16,
+      "native_vs_cutoff9_relative": 0.00021791690700195796,
+      "spectral_same_cutoff_vs_cutoff9_relative": 0.00021791690700196525,
+      "native_evolution_cost_ratio": 0.4527527791287061
+    },
+    {
+      "cutoff": 3,
+      "grid": 12,
+      "build": {
+        "seconds": 0.89247858338058,
+        "neurons": 32045,
+        "directions": 145,
+        "latent_scalar_columns": 343,
+        "n_interior": 193,
+        "lam": 0.2,
+        "cached_bytes": 14224896,
+        "worst_basis_value_error": 1.7985612998927536e-14,
+        "worst_basis_directional_derivative_error": 2.3092638912203256e-14,
+        "worst_basis_laplacian_error": 1.1520589007924557e-13
+      },
+      "native": {
+        "seconds": 0.05766454106196761,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "initial_relative_error": 1.4666057011931799e-15,
+      "direct_vs_cache_relative": 1.3577061280164174e-15,
+      "direct_gradient_vs_cache_relative": 4.412589671278605e-16,
+      "direct_laplacian_vs_cache_relative": 8.791282482130258e-16,
+      "divergence_max": 1.078998002057574e-15,
+      "initial_energy": 0.12500000000000006,
+      "final_energy": 0.1231388344816062,
+      "newly_generated_mode_norm": 0.008685017790403574,
+      "velocity_change_relative": 0.014416662601755502,
+      "generated_vertical_velocity_rms": 0.004342356591510392,
+      "same_cutoff_spectral": {
+        "seconds": 0.06685962527990341,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "native_time_refinement": {
+        "seconds": 0.11459620809182525,
+        "dt": 0.001,
+        "steps": 50,
+        "rhs_calls": 200
+      },
+      "native_vs_same_cutoff_spectral_relative": 1.639545742624468e-15,
+      "native_vs_dt_half_relative": 1.9578496220942207e-15,
+      "native_vs_cutoff9_relative": 3.979022725660178e-06,
+      "spectral_same_cutoff_vs_cutoff9_relative": 3.979022725643171e-06,
+      "native_evolution_cost_ratio": 0.8624717955052666
+    },
+    {
+      "cutoff": 5,
+      "grid": 18,
+      "build": {
+        "seconds": 15.135862583760172,
+        "neurons": 167907,
+        "directions": 577,
+        "latent_scalar_columns": 1331,
+        "n_interior": 257,
+        "lam": 0.2,
+        "cached_bytes": 186297408,
+        "worst_basis_value_error": 4.057865155004947e-14,
+        "worst_basis_directional_derivative_error": 5.551115123125783e-14,
+        "worst_basis_laplacian_error": 5.400124791776761e-13
+      },
+      "native": {
+        "seconds": 0.7800385002046824,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "initial_relative_error": 1.5519788596208908e-15,
+      "direct_vs_cache_relative": 1.2648344736465092e-15,
+      "direct_gradient_vs_cache_relative": 7.528591967845112e-16,
+      "direct_laplacian_vs_cache_relative": 9.312793259301385e-16,
+      "divergence_max": 2.5396351688300456e-15,
+      "initial_energy": 0.12499999999999996,
+      "final_energy": 0.12313883448159933,
+      "newly_generated_mode_norm": 0.008685017781932123,
+      "velocity_change_relative": 0.014416662591485246,
+      "generated_vertical_velocity_rms": 0.004342356591259717,
+      "same_cutoff_spectral": {
+        "seconds": 0.1773656252771616,
+        "dt": 0.002,
+        "steps": 25,
+        "rhs_calls": 100
+      },
+      "fresh_cutoff9_reference": {
+        "seconds": 1.2253167917951941,
+        "dt": 0.001,
+        "steps": 50,
+        "rhs_calls": 200
+      },
+      "native_vs_same_cutoff_spectral_relative": 1.4665305261637961e-15,
+      "native_vs_cutoff9_relative": 1.9370086462384016e-09,
+      "spectral_same_cutoff_vs_cutoff9_relative": 1.937008635847203e-09,
+      "native_vs_dt_half_relative": null,
+      "time_refinement_note": "Not repeated for K=5; K=2/3 time refinement remains recorded",
+      "native_evolution_cost_ratio": 4.397912498466091,
+      "construction_plus_evolution_seconds": 15.915901083964854,
+      "exported_readout_relative_difference": 3.1989115850249218e-16,
+      "peak_process_rss_bytes_macos": 400162816,
+      "append_wall_seconds": 17.93468050006777
+    }
+  ],
+  "reference_protocol": "K2/K3 references were created after the coarse native batch; K5 was appended later and its fresh K9 comparison was created after K5 evolution. No comparison solution enters any native RHS."
+}

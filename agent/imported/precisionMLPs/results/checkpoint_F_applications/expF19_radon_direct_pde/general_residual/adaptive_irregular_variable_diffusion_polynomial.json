@@ -1,0 +1,582 @@
+{
+  "case": "irregular_variable_diffusion",
+  "backend": "polynomial",
+  "metrics": {
+    "seconds": 0.24882095819339156,
+    "tolerance": 1e-06,
+    "status": "sampled_checks_passed",
+    "validated": true,
+    "stages": 4,
+    "best_residual_stage": 2,
+    "reference_solution_used": false,
+    "validation_scope": "Fresh equation/constraint residuals and successive-field agreement; empirical, not continuum certification",
+    "equations_are_declarations": true,
+    "named_equation_dispatch": false,
+    "memory_budget_scope": "Cached basis jet estimate only; not whole-process RSS"
+  },
+  "history": [
+    {
+      "degree": 4,
+      "coefficients": 15,
+      "tanh_count": 0,
+      "interior_samples": 256,
+      "estimated_basis_cache_bytes": 199680,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.031745936045963846,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "Dirichlet",
+          "maximum_scaled_rms": 0.00997890517619077,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 0.031745936045963846,
+      "successive_field_difference": null,
+      "solver": {
+        "status": "iteration_limit",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 40,
+        "objective": 0.0005399374173667582,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 256,
+            "output_rows": 256,
+            "equations": 1,
+            "rms": 0.031321429735879654,
+            "pre_relation_rms": 0.031321429735879654,
+            "relation": "eq",
+            "active_entries": 256,
+            "scaled_rms": [
+              0.031321429735879654
+            ],
+            "maximum_scaled_rms": 0.031321429735879654,
+            "weighted_norm": 0.031321429735879654
+          },
+          {
+            "name": "Dirichlet",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.009941975358743875,
+            "pre_relation_rms": 0.009941975358743875,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.009941975358743875
+            ],
+            "maximum_scaled_rms": 0.009941975358743875,
+            "weighted_norm": 0.009941975358743875
+          }
+        ],
+        "residual_evaluations": 81,
+        "linearizations": 41,
+        "lsmr_iterations": 157,
+        "seconds": 0.06767012504860759,
+        "basis_setup_seconds": 0.0005032094195485115,
+        "basis_cache_bytes": 199680,
+        "unknowns": 15,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 4,
+          "coefficient_count": 15,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 2.0707957446575165e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 13696,
+        "unassembled_dense_jacobian_bytes": 46080,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 157,
+          "rmatvec_calls": 557
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 384
+      },
+      "elapsed_seconds": 0.08289591735228896
+    },
+    {
+      "degree": 8,
+      "coefficients": 45,
+      "tanh_count": 0,
+      "interior_samples": 270,
+      "estimated_basis_cache_bytes": 629280,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 7.303055833307977e-06,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "Dirichlet",
+          "maximum_scaled_rms": 3.38982820217659e-06,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 7.303055833307977e-06,
+      "successive_field_difference": 0.007320836895060973,
+      "solver": {
+        "status": "stagnated",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 5,
+        "objective": 2.8761890891424992e-11,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 270,
+            "output_rows": 270,
+            "equations": 1,
+            "rms": 6.8527817707362245e-06,
+            "pre_relation_rms": 6.8527817707362245e-06,
+            "relation": "eq",
+            "active_entries": 270,
+            "scaled_rms": [
+              6.8527817707362245e-06
+            ],
+            "maximum_scaled_rms": 6.8527817707362245e-06,
+            "weighted_norm": 6.852781770736225e-06
+          },
+          {
+            "name": "Dirichlet",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 3.2501021192441426e-06,
+            "pre_relation_rms": 3.2501021192441426e-06,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              3.2501021192441426e-06
+            ],
+            "maximum_scaled_rms": 3.2501021192441426e-06,
+            "weighted_norm": 3.250102119244143e-06
+          }
+        ],
+        "residual_evaluations": 14,
+        "linearizations": 6,
+        "lsmr_iterations": 353,
+        "seconds": 0.049888750072568655,
+        "basis_setup_seconds": 0.0009362497366964817,
+        "basis_cache_bytes": 629280,
+        "unknowns": 45,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 8,
+          "coefficient_count": 45,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 2.712523564696312e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 14382,
+        "unassembled_dense_jacobian_bytes": 143280,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 353,
+          "rmatvec_calls": 413
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 9,
+          "rmatvec_calls": 19
+        },
+        "residual_entries": 398
+      },
+      "elapsed_seconds": 0.14207887509837747
+    },
+    {
+      "degree": 12,
+      "coefficients": 91,
+      "tanh_count": 0,
+      "interior_samples": 546,
+      "estimated_basis_cache_bytes": 2518880,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 4.053294828067651e-08,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "Dirichlet",
+          "maximum_scaled_rms": 5.22154489451827e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 5.22154489451827e-08,
+      "successive_field_difference": 2.0703910780945625e-06,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 1,
+        "objective": 1.6554912261240568e-15,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 546,
+            "output_rows": 546,
+            "equations": 1,
+            "rms": 3.111419110717519e-08,
+            "pre_relation_rms": 3.111419110717519e-08,
+            "relation": "eq",
+            "active_entries": 546,
+            "scaled_rms": [
+              3.111419110717519e-08
+            ],
+            "maximum_scaled_rms": 3.111419110717519e-08,
+            "weighted_norm": 3.111419110717519e-08
+          },
+          {
+            "name": "Dirichlet",
+            "input_rows": 184,
+            "output_rows": 184,
+            "equations": 1,
+            "rms": 4.840340446698242e-08,
+            "pre_relation_rms": 4.840340446698242e-08,
+            "relation": "eq",
+            "active_entries": 184,
+            "scaled_rms": [
+              4.840340446698242e-08
+            ],
+            "maximum_scaled_rms": 4.840340446698242e-08,
+            "weighted_norm": 4.840340446698242e-08
+          }
+        ],
+        "residual_evaluations": 3,
+        "linearizations": 2,
+        "lsmr_iterations": 364,
+        "seconds": 0.07324045896530151,
+        "basis_setup_seconds": 0.0024464167654514313,
+        "basis_cache_bytes": 2518880,
+        "unknowns": 91,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 12,
+          "coefficient_count": 91,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 3.691716119647026e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 28410,
+        "unassembled_dense_jacobian_bytes": 531440,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 364,
+          "rmatvec_calls": 374
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 730
+      },
+      "elapsed_seconds": 0.22692720824852586
+    },
+    {
+      "degree": 16,
+      "coefficients": 153,
+      "tanh_count": 0,
+      "interior_samples": 918,
+      "estimated_basis_cache_bytes": 7035552,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 4.053294828067651e-08,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "Dirichlet",
+          "maximum_scaled_rms": 5.22154489451827e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 5.22154489451827e-08,
+      "successive_field_difference": 0.0,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 0,
+        "objective": 2.6357290272152994e-15,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 918,
+            "output_rows": 918,
+            "equations": 1,
+            "rms": 4.724177595962236e-08,
+            "pre_relation_rms": 4.724177595962236e-08,
+            "relation": "eq",
+            "active_entries": 918,
+            "scaled_rms": [
+              4.724177595962236e-08
+            ],
+            "maximum_scaled_rms": 4.724177595962236e-08,
+            "weighted_norm": 4.724177595962236e-08
+          },
+          {
+            "name": "Dirichlet",
+            "input_rows": 240,
+            "output_rows": 240,
+            "equations": 1,
+            "rms": 5.51332264484081e-08,
+            "pre_relation_rms": 5.51332264484081e-08,
+            "relation": "eq",
+            "active_entries": 240,
+            "scaled_rms": [
+              5.51332264484081e-08
+            ],
+            "maximum_scaled_rms": 5.51332264484081e-08,
+            "weighted_norm": 5.513322644840809e-08
+          }
+        ],
+        "residual_evaluations": 1,
+        "linearizations": 1,
+        "lsmr_iterations": 0,
+        "seconds": 0.0072206249460577965,
+        "basis_setup_seconds": 0.00592925027012825,
+        "basis_cache_bytes": 7035552,
+        "unknowns": 153,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 16,
+          "coefficient_count": 153,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 2,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 5.845818668603897e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 47142,
+        "unassembled_dense_jacobian_bytes": 1417392,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 1158
+      },
+      "elapsed_seconds": 0.2488149581477046
+    }
+  ],
+  "validation": {
+    "relative_l2": 2.953149714050676e-08,
+    "component_relative_l2": [
+      2.953149714050676e-08
+    ],
+    "independent_residual_rms": {
+      "PDE": 4.73620559364382e-08,
+      "Dirichlet": 5.0534737237743475e-08
+    },
+    "measurement_fit_rms": {},
+    "parameter_relative_error": null
+  },
+  "degree_selected": 16,
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 0,
+    "objective": 2.6357290272152994e-15,
+    "tolerance": 1e-07,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 918,
+        "output_rows": 918,
+        "equations": 1,
+        "rms": 4.724177595962236e-08,
+        "pre_relation_rms": 4.724177595962236e-08,
+        "relation": "eq",
+        "active_entries": 918,
+        "scaled_rms": [
+          4.724177595962236e-08
+        ],
+        "maximum_scaled_rms": 4.724177595962236e-08,
+        "weighted_norm": 4.724177595962236e-08
+      },
+      {
+        "name": "Dirichlet",
+        "input_rows": 240,
+        "output_rows": 240,
+        "equations": 1,
+        "rms": 5.51332264484081e-08,
+        "pre_relation_rms": 5.51332264484081e-08,
+        "relation": "eq",
+        "active_entries": 240,
+        "scaled_rms": [
+          5.51332264484081e-08
+        ],
+        "maximum_scaled_rms": 5.51332264484081e-08,
+        "weighted_norm": 5.513322644840809e-08
+      }
+    ],
+    "residual_evaluations": 1,
+    "linearizations": 1,
+    "lsmr_iterations": 0,
+    "seconds": 0.0072206249460577965,
+    "basis_setup_seconds": 0.00592925027012825,
+    "basis_cache_bytes": 7035552,
+    "unknowns": 153,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 2,
+      "degree": 16,
+      "coefficient_count": 153,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 5.845818668603897e-05
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "diagonal",
+    "preconditioner_builds": [],
+    "preconditioner_setup_seconds": 0,
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 47142,
+    "unassembled_dense_jacobian_bytes": 1417392,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 1158
+  },
+  "features": {
+    "backend": "polynomial",
+    "dimension": 2,
+    "degree": 16,
+    "coefficient_count": 153,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 5.845818668603897e-05
+  },
+  "manufactured_forcing": true,
+  "note": "Implicit perforated ellipse; variable anisotropic diffusion, cubic reaction."
+}

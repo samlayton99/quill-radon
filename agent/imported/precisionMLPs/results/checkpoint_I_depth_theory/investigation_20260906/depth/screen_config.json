@@ -1,0 +1,35 @@
+{
+  "steps": 1000,
+  "n_train": 2048,
+  "n_test": 4096,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "targets": [
+    "fast_waves",
+    "composition"
+  ],
+  "arms": [
+    "depth2",
+    "random3",
+    "random4",
+    "identity3",
+    "identity4",
+    "identity3_small",
+    "identity4_small"
+  ],
+  "lr": 0.02,
+  "beta": 0.01,
+  "name": "screen",
+  "torch": "2.4.1",
+  "d": 4,
+  "N1": 32,
+  "N2": 64,
+  "K": 2,
+  "M": 8,
+  "threads": 1,
+  "dtype": "float64",
+  "calibration": "depth2 only before identity insertion"
+}

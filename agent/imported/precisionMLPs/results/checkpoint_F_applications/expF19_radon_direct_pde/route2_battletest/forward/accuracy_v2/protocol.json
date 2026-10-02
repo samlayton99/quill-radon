@@ -1,0 +1,99 @@
+{
+  "cases": {
+    "allen_cahn_d00001": {
+      "difficulty": "published stiff case",
+      "diffusion": 0.0001,
+      "family": "allen_cahn"
+    },
+    "allen_cahn_d001": {
+      "difficulty": "easier diffusion",
+      "diffusion": 0.01,
+      "family": "allen_cahn"
+    },
+    "diffusion_c10": {
+      "contrast": 10.0,
+      "difficulty": "easier contrast",
+      "family": "diffusion"
+    },
+    "diffusion_c1000": {
+      "contrast": 1000.0,
+      "difficulty": "harder contrast",
+      "family": "diffusion"
+    },
+    "helmholtz_n2": {
+      "difficulty": "published",
+      "family": "helmholtz",
+      "n": 2
+    },
+    "helmholtz_n4": {
+      "difficulty": "harder frequency",
+      "family": "helmholtz",
+      "n": 4
+    }
+  },
+  "caveats": [
+    "Published Allen-Cahn IC has a periodic derivative compatibility defect at t=0.",
+    "Helmholtz exact targets are separable benchmark functions but the solver does not exploit their factors or active directions.",
+    "Manufactured diffusion labels enter boundary data and explicit forcing only.",
+    "No function-space capacity fit is performed in this campaign; residual stagnation alone does not prove capacity limitation."
+  ],
+  "comparison": "Only outer-iteration cap20->60 and time60->600s change; same degree ladder, centers, lambda, constraints, sampling, tolerances; every case restarts at zero, no V1 weights reused.",
+  "constraints": "All blocks weight=scale=1. PDE and prescribed BC/IC only; no interior observations.",
+  "core_sha256": "cbce10f4a2eb791739633b2a3341065311abbf8b6c772396702a3ee679f5faf3",
+  "degrees": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    40,
+    48
+  ],
+  "description": "Cold uniform accuracy extension of V1; all six cases, seed0, no case-specific changes",
+  "heldout": {
+    "field_count": 2048,
+    "field_seed": 884713,
+    "pde_count": 257,
+    "pde_seed": 663277,
+    "plot_derivatives": false,
+    "plotting_grid": 81
+  },
+  "initialization": "zero first resolution; only native previous-resolution coefficients thereafter",
+  "preset": "solve_route2_native defaults with max_iterations=60 uniformly across every case",
+  "reference_controls": {
+    "allen_cahn": "Fourier collocation + DOP853, evaluation only",
+    "atol": 2e-12,
+    "grids": [
+      512,
+      1024
+    ],
+    "rtol": 2e-11,
+    "validation": "same held-out points on both resolutions; disagreement reported, no claimed reference floor"
+  },
+  "reference_quarantine": "No reference callbacks accepted by declarations. Numerical Allen-Cahn reference is generated only in --evaluate after fit artifacts exist.",
+  "resource": "Single CPU thread per child. 2GiB named-array estimate, not hard process RSS cap; 600s soft solve budget per case.",
+  "seeds": [
+    0
+  ],
+  "solver_options": {
+    "batch_size": 64,
+    "centers": 257,
+    "check_points": 257,
+    "coordinates": "affine_disk",
+    "export_check_points": 257,
+    "lam": 0.2,
+    "max_iterations": 60,
+    "max_seconds": 600.0,
+    "maximum_working_array_mb": 2048,
+    "oversampling": 6,
+    "tolerance": 1e-08
+  },
+  "source_urls": {
+    "allen_cahn": "https://github.com/maziarraissi/PINNs/blob/master/docs/index.md",
+    "benchmark_context": "https://arxiv.org/abs/2306.08827",
+    "diffusion": "Explicitly manufactured nonseparable verification control; not claimed to reproduce a PINNacle instance.",
+    "helmholtz": "https://deepxde.readthedocs.io/en/latest/demos/pinn_forward/helmholtz.2d.dirichlet.html"
+  },
+  "version": 2
+}

@@ -1,0 +1,34 @@
+{
+  "case": "disk_stirring",
+  "viscosity": 0.01,
+  "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/lowviscosity_refined_disk_stirring_nu0.03_p48_n257.npz",
+  "source_sha256": "4bdc63fc87cadbe8d6c291a72350dfeac05e997d4ec24cbd9c0baef5ec95ecfd",
+  "workspace": {
+    "preconditioner_workspace_bytes": 339263488,
+    "ideal_correction_workspace_bytes": 634880,
+    "preconditioner_components": {
+      "basis": "ideal",
+      "block_width": 2048,
+      "directional_panel_bytes": 0,
+      "ideal_coordinate_panel_bytes": 19922944,
+      "local_physics_panel_bytes": 12582912,
+      "factor_bytes": 105431040,
+      "factorization_workspace_bytes": 201326592
+    },
+    "ideal_tensor_plan": null,
+    "block_budget_selection": {
+      "requested": 2048,
+      "selected": 2048,
+      "available_bytes": 1073741824,
+      "changed": false,
+      "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+    }
+  },
+  "selection": {
+    "requested": 2048,
+    "selected": 2048,
+    "available_bytes": 1073741824,
+    "changed": false,
+    "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+  }
+}

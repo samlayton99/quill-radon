@@ -1,0 +1,38 @@
+{
+  "source_bundle_2": {
+    "filename": "choosing_optimal_lambda_bundle (2).zip",
+    "sha256": "9b42a41c51c3ebce58c8713a7b7077eb64e7035055cf97171a4dbfc960b1219f"
+  },
+  "old_reference": {
+    "filename": "QIs_workshop.pdf",
+    "sha256": "6614d763db518526c265b2caf187c3fd56ed838993673d8d2f98d087b7674f72"
+  },
+  "new_reference": {
+    "filename": "theorem_for_sam.pdf",
+    "sha256": "c198b97918435c7868e41bc8d87cd2779476f5bec58e807b8e13d2c7a967054a"
+  },
+  "observed_data_unchanged": true,
+  "revision_date": "2026-09-14",
+  "iteration": 7,
+  "figure_targets": [
+    "mix_2_6_10",
+    "expsin"
+  ],
+  "figure_style": "expC08 viridis, log-log axes, full curves, equal halves",
+  "main_page_target_enforced": false,
+  "practical_rule": "first pair with exact central denominator; rough frequency input; amplitude and constant factors absorbed into effective tolerance",
+  "predictions_recomputed": true,
+  "revision_scope": "Replace Gaussian with GELU and select more varied targets; update appendix and standalone recipe; main section unchanged from iteration 6",
+  "figure_activations": [
+    "tanh",
+    "gelu"
+  ],
+  "figure_precision_bits": [
+    24,
+    32,
+    40,
+    48,
+    53
+  ],
+  "precision_selection": "p=16 omitted consistently because GELU refined roots exceed the measured lambda range"
+}

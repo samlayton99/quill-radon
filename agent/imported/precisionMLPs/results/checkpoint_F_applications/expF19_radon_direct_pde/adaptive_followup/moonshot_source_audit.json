@@ -1,0 +1,30 @@
+{
+  "source_url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+  "source_pdf_sha256": "0e779481c4da40bd28d1e642e1d8ca57447d129610df28dfa5a11e9af8ae228f",
+  "assumption": "Most likely intended recent forced blow-up result; exact user conversation not located among available recent threads, clarification requested.",
+  "paper_statements": [
+    {
+      "location": "Theorem1.1, p1",
+      "fact": "Constructs a smooth force compactly supported in spacetime, zero initial velocity, finite kinetic energy and unbounded velocity as t approaches1."
+    },
+    {
+      "location": "Section2.1 pp3-4",
+      "fact": "Radial and axial core scales are tau^(1/2), tau^(1/2-h), speed tau^(-1/2-h), energy tau^(1/2-3h), 0<h<1/100."
+    },
+    {
+      "location": "Section3.3 pp11-12",
+      "fact": "Oscillatory pulses cancel annular residual stress; core alone is not the full solution."
+    },
+    {
+      "location": "Definition3.3 p18",
+      "fact": "Parameter magnitudes are chosen by sufficiently-small hierarchy, not fixed numerical constants."
+    },
+    {
+      "location": "Proposition10.1 and Eq10.5 pp117-118",
+      "fact": "Localize corrected vector potential/velocity/pressure, then define force as their full momentum residual."
+    }
+  ],
+  "implementation_status": "Full corrected numerical profile/forcing evaluator not implemented. No claim of direct simulation of the published blow-up forcing.",
+  "representation_probe": "moonshot_geometry.py tests a distinct divergence-free Gaussian swirl with prescribed concentrating scales. It is not a PDE solve and lacks paper corrections.",
+  "galerkin_bound": "For exact fixed finite Fourier-Galerkin and integrable-in-time L2 forcing, energy cancellation bounds velocity L2; finite-dimensional norm equivalence bounds Linfinity. Fixed truncation cannot literally blow up with smooth bounded forcing. Native approximation must additionally control energy/divergence errors."
+}

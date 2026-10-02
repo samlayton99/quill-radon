@@ -1,0 +1,1409 @@
+{
+  "config": {
+    "case": "cavity",
+    "degree": 16,
+    "centers": 257,
+    "lam": 0.2,
+    "viscosity": 0.1,
+    "lid_speed": 1.0,
+    "seconds": 120.0,
+    "krylov": 400,
+    "max_iterations": 10,
+    "interior": 918,
+    "boundary": 260,
+    "linearization_basis": "ideal",
+    "inexact_newton": true,
+    "preconditioner_block_size": 640,
+    "tolerance": 1e-14,
+    "coordinate_basis": "disk"
+  },
+  "status": "iteration_limit",
+  "solver": {
+    "status": "iteration_limit",
+    "converged": false,
+    "execution": "streamed",
+    "batch_size": 64,
+    "optimization_converged": false,
+    "iterations": 10,
+    "objective": 5.142935398317974e-07,
+    "tolerance": 1e-14,
+    "blocks": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "input_rows": 918,
+        "output_rows": 918,
+        "equations": 3,
+        "rms": 0.0004110961731262597,
+        "pre_relation_rms": 0.0004110961731262597,
+        "relation": "eq",
+        "active_entries": 2754,
+        "scaled_rms": [
+          0.00045727519526932446,
+          0.00028795573934511226,
+          0.00046366052090595044
+        ],
+        "maximum_scaled_rms": 0.00046366052090595044,
+        "weighted_norm": 0.0007120394586518131
+      },
+      {
+        "name": "prescribed_wall_velocity",
+        "input_rows": 260,
+        "output_rows": 260,
+        "equations": 2,
+        "rms": 0.00022838276839254486,
+        "pre_relation_rms": 0.00022838276839254486,
+        "relation": "eq",
+        "active_entries": 520,
+        "scaled_rms": [
+          0.00022817901939655143,
+          0.00022858633577822139
+        ],
+        "maximum_scaled_rms": 0.00022858633577822139,
+        "weighted_norm": 0.0007222097264551537
+      },
+      {
+        "name": "pressure_gauge",
+        "input_rows": 1,
+        "output_rows": 1,
+        "equations": 1,
+        "rms": 2.67841304690819e-15,
+        "pre_relation_rms": 2.67841304690819e-15,
+        "relation": "eq",
+        "active_entries": 1,
+        "scaled_rms": [
+          2.67841304690819e-15
+        ],
+        "maximum_scaled_rms": 2.67841304690819e-15,
+        "weighted_norm": 2.67841304690819e-15
+      }
+    ],
+    "residual_evaluations": 21,
+    "linearizations": 11,
+    "lsmr_iterations": 44,
+    "seconds": 4.922237541060895,
+    "basis_setup_seconds": 6.624963134527206e-06,
+    "basis_cache_bytes": 0,
+    "unknowns": 459,
+    "feature_metrics": {
+      "backend": "actual_tanh_analytical_disk_modes",
+      "dimension": 2,
+      "profile_degree": 16,
+      "directions": 17,
+      "neurons": 4947,
+      "unknowns": 153,
+      "interior_centers": 257,
+      "halo_per_side": 17,
+      "geometry_map_bytes": 0,
+      "encoding_bank_bytes": 39576,
+      "jet_anchor_bytes": 4656,
+      "jet_panel_budget_bytes": 16777216,
+      "maximum_direction_batch": 4,
+      "maximum_point_batch": 64,
+      "direction_array_bytes": 544,
+      "redundant_profile_unknowns": 273,
+      "angular_table_bytes": 4624,
+      "mode_label_bytes": 3825,
+      "coordinate_scope": "Analytical disk angular coordinates; orthonormal for ideal U_n profiles, actual tanh encoding retains approximation error; no fitted conversion map"
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "block",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.07082658400759101,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 1,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06868908368051052,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 2,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06849266635254025,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 3,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.07171670906245708,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 4,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06860450003296137,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 5,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.0726784160360694,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 6,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06954791722819209,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 7,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06886766664683819,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 8,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.07113987486809492,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 9,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 117,
+        "factor_bytes": 421848,
+        "setup_seconds": 0.06803262513130903,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [],
+    "preconditioner_setup_seconds": 0.6985960430465639,
+    "settings": {
+      "max_iterations": 10,
+      "lsmr_tolerance": 1e-07,
+      "effective_lsmr_tolerance": 2.220446049250313e-16,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": 400,
+      "gradient_tolerance": 1e-11,
+      "step_tolerance": 1e-12,
+      "scaling_probes": 4,
+      "max_seconds": 120.0,
+      "max_residual_evaluations": 500,
+      "high_accuracy": true,
+      "linear_refinement_steps": 0,
+      "inexact_newton": true,
+      "linearization_basis": "ideal",
+      "iteration_callback_active": true
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "budget": {
+      "time_limit_seconds": 120.0,
+      "time_overshoot_seconds": 0.0,
+      "completed_direction_trials_after_time_budget": 0,
+      "residual_evaluation_limit": 500,
+      "residual_evaluation_limit_exceeded": false,
+      "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 346259,
+    "residual_vector_bytes": 26200,
+    "coefficient_vector_bytes": 3672,
+    "input_point_bytes": 18864,
+    "prepared_forward_active": true,
+    "prepared_adjoint_active": true,
+    "shared_multifield_active": true,
+    "supplied_aggregation_bytes": 0,
+    "unassembled_dense_jacobian_bytes": 12025800,
+    "storage_note": "No Q-by-coefficient feature cache; O(Q) local sensitivities and residual/Krylov vectors retained; bounded point/column panels; optional prepared neuron readouts/adjoints use O(neurons * fields) storage, counted in product_counts; supplied dense aggregation is counted separately. Byte metrics are array accounting, not process peak RSS.",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 10,
+      "column_gram_calls": 40,
+      "column_panel_bytes_max": 179712,
+      "selected_feature_panel_bytes_max": 299520,
+      "forward_batches": 441,
+      "adjoint_batches": 210,
+      "callback_rows_max": 64,
+      "callback_jet_bytes_max": 7680,
+      "feature_rows_max": 64,
+      "prepared_forward_calls": 21,
+      "prepared_adjoint_calls": 10,
+      "prepared_forward_bytes_max": 119160,
+      "prepared_adjoint_bytes_max": 118752,
+      "ideal_rmatvec_calls": 104,
+      "ideal_correction_rows_max": 64,
+      "ideal_correction_columns_max": 64,
+      "ideal_correction_panel_bytes_max": 163840,
+      "approximate_column_gram_calls": 40,
+      "ideal_matvec_calls": 54
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 3275
+  },
+  "features": {
+    "backend": "actual_tanh_analytical_disk_modes",
+    "dimension": 2,
+    "profile_degree": 16,
+    "directions": 17,
+    "neurons": 4947,
+    "unknowns": 153,
+    "interior_centers": 257,
+    "halo_per_side": 17,
+    "geometry_map_bytes": 0,
+    "encoding_bank_bytes": 39576,
+    "jet_anchor_bytes": 4656,
+    "jet_panel_budget_bytes": 16777216,
+    "maximum_direction_batch": 4,
+    "maximum_point_batch": 64,
+    "direction_array_bytes": 544,
+    "redundant_profile_unknowns": 273,
+    "angular_table_bytes": 4624,
+    "mode_label_bytes": 3825,
+    "coordinate_scope": "Analytical disk angular coordinates; orthonormal for ideal U_n profiles, actual tanh encoding retains approximation error; no fitted conversion map"
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 0.000591631368069046,
+      "maximum_scaled_block_rms": 0.018415737844819584,
+      "damping": 1e-06,
+      "scheduled_inner_tolerance": 0.013570459772911006,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 0.06884475005790591,
+      "scaled_projected_gradient_inf": 0.010170572515955977,
+      "scaled_gradient_threshold": 7.638020494310791e-18,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 1,
+          "iterations": 7,
+          "linearization_basis": "ideal",
+          "tolerance": 0.013570459772911006,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 1,
+      "lsmr_iterations": 7,
+      "estimated_condition": 1.674619034011623,
+      "linearized_residual_norm": 0.0017803949789057005,
+      "linearized_residual_relative": 0.05175779509836176,
+      "linearized_stationarity": {
+        "residual_norm": 0.0017803949789057005,
+        "normal_residual_norm": 0.0009034165942416922,
+        "operator_norm_estimate": 3.5709563219849483,
+        "normal_residual_threshold": 9.034853157961563e-17,
+        "normal_residual_relative": 0.14209773798878056,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 0.9482422049016382,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.4860141441895694,
+      "trial_objective": 1.8242203770733462e-06,
+      "relative_objective_decrease": 0.9969166266774745
+    },
+    {
+      "iteration": 1,
+      "objective": 1.8242203770733462e-06,
+      "maximum_scaled_block_rms": 0.0010193311422050477,
+      "damping": 3.333333333333333e-07,
+      "scheduled_inner_tolerance": 0.0031926965753184995,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 0.627107999753207,
+      "scaled_projected_gradient_inf": 0.00020091219247764773,
+      "scaled_gradient_threshold": 4.2412500191286405e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 14,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0031926965753184995,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 14,
+      "estimated_condition": 2.627744808837247,
+      "linearized_residual_norm": 0.0010164272164400773,
+      "linearized_residual_relative": 0.5321359945572236,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010164272164400773,
+        "normal_residual_norm": 1.5627637360716333e-05,
+        "operator_norm_estimate": 5.015713084488715,
+        "normal_residual_threshold": 7.24484620054815e-17,
+        "normal_residual_relative": 0.0030653802431057794,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 0.4678640054427764,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.1960254879444116,
+      "trial_objective": 5.163798778145833e-07,
+      "relative_objective_decrease": 0.7169311974011453
+    },
+    {
+      "iteration": 2,
+      "objective": 5.163798778145833e-07,
+      "maximum_scaled_block_rms": 0.0004641414586461892,
+      "damping": 1.111111111111111e-07,
+      "scheduled_inner_tolerance": 0.0021543942504708585,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 1.383506041020155,
+      "scaled_projected_gradient_inf": 4.030996913053174e-06,
+      "scaled_gradient_threshold": 2.2565235924169056e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 6,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021543942504708585,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 6,
+      "estimated_condition": 2.131491726590037,
+      "linearized_residual_norm": 0.0010145027628998189,
+      "linearized_residual_relative": 0.998282783040471,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010145027628998189,
+        "normal_residual_norm": 6.7128220112056865e-06,
+        "operator_norm_estimate": 3.1013368043860297,
+        "normal_residual_threshold": 4.4711821896222006e-17,
+        "normal_residual_relative": 0.0021335506871464497,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 0.0017172169595289777,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.015347762827959441,
+      "trial_objective": 5.146079375116998e-07,
+      "relative_objective_decrease": 0.0034314665985489203
+    },
+    {
+      "iteration": 3,
+      "objective": 5.146079375116998e-07,
+      "maximum_scaled_block_rms": 0.00046353272299816823,
+      "damping": 3.703703703703703e-08,
+      "scheduled_inner_tolerance": 0.002152981010130299,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 1.9114310001023114,
+      "scaled_projected_gradient_inf": 1.5338197483072429e-06,
+      "scaled_gradient_threshold": 2.2526486727278327e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 4,
+          "linearization_basis": "ideal",
+          "tolerance": 0.002152981010130299,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 4,
+      "estimated_condition": 2.2475008562013024,
+      "linearized_residual_norm": 0.0010143346991252674,
+      "linearized_residual_relative": 0.999834329497473,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010143346991252674,
+        "normal_residual_norm": 4.149815048699065e-06,
+        "operator_norm_estimate": 2.5126266081027575,
+        "normal_residual_threshold": 3.6218414643145305e-17,
+        "normal_residual_relative": 0.0016282440668115344,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 0.00016567050252702664,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.0030521791978323485,
+      "trial_objective": 5.144374429725894e-07,
+      "relative_objective_decrease": 0.0003313095789677251
+    },
+    {
+      "iteration": 4,
+      "objective": 5.144374429725894e-07,
+      "maximum_scaled_block_rms": 0.00046374383574005027,
+      "damping": 1.2345679012345676e-08,
+      "scheduled_inner_tolerance": 0.0021534712344028427,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 2.3892092499881983,
+      "scaled_projected_gradient_inf": 1.3058150553383206e-06,
+      "scaled_gradient_threshold": 2.25227547977301e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 3,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021534712344028427,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 3,
+      "estimated_condition": 3.149742572767332,
+      "linearized_residual_norm": 0.0010142677162395647,
+      "linearized_residual_relative": 0.9999339617342253,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010142677162395647,
+        "normal_residual_norm": 3.327586039113775e-06,
+        "operator_norm_estimate": 2.1760294731308893,
+        "normal_residual_threshold": 3.136444269362145e-17,
+        "normal_residual_relative": 0.001507689526515873,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 6.603826577467053e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.0009377392618790597,
+      "trial_objective": 5.143695003147306e-07,
+      "relative_objective_decrease": 0.00013207175874720503
+    },
+    {
+      "iteration": 5,
+      "objective": 5.143695003147306e-07,
+      "maximum_scaled_block_rms": 0.00046369463730274005,
+      "damping": 4.115226337448558e-09,
+      "scheduled_inner_tolerance": 0.0021533570008308886,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 2.8325169580057263,
+      "scaled_projected_gradient_inf": 8.39180045094976e-07,
+      "scaled_gradient_threshold": 2.2521267438699964e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 2,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021533570008308886,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 4.283010139744711,
+      "linearized_residual_norm": 0.0010142486507333766,
+      "linearized_residual_relative": 0.9999812024826201,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010142486507333766,
+        "normal_residual_norm": 2.9372532797019026e-06,
+        "operator_norm_estimate": 1.7408005464675584,
+        "normal_residual_threshold": 2.5090750532550684e-17,
+        "normal_residual_relative": 0.0016635962947956912,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 1.8797517379876005e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.0006422315324824903,
+      "trial_objective": 5.143501627618711e-07,
+      "relative_objective_decrease": 3.7594672404911765e-05
+    },
+    {
+      "iteration": 6,
+      "objective": 5.143501627618711e-07,
+      "maximum_scaled_block_rms": 0.00046365248008874334,
+      "damping": 1.3717421124828529e-09,
+      "scheduled_inner_tolerance": 0.0021532591114140054,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 3.2556485407985747,
+      "scaled_projected_gradient_inf": 8.547387397722152e-07,
+      "scaled_gradient_threshold": 2.252084409488531e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 2,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021532591114140054,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 5.428415373854719,
+      "linearized_residual_norm": 0.0010142255565757376,
+      "linearized_residual_relative": 0.9999772302756422,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010142255565757376,
+        "normal_residual_norm": 2.6597838648045007e-06,
+        "operator_norm_estimate": 1.8079505034923176,
+        "normal_residual_threshold": 2.6058012361799583e-17,
+        "normal_residual_relative": 0.0014505251418172598,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 2.2769724357774024e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.000364671466078344,
+      "trial_objective": 5.143267398097635e-07,
+      "relative_objective_decrease": 4.5538922320684396e-05
+    },
+    {
+      "iteration": 7,
+      "objective": 5.143267398097635e-07,
+      "maximum_scaled_block_rms": 0.0004636968010104553,
+      "damping": 4.5724737082761764e-10,
+      "scheduled_inner_tolerance": 0.0021533620248589307,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 3.673022207804024,
+      "scaled_projected_gradient_inf": 7.212757890926933e-07,
+      "scaled_gradient_threshold": 2.2520331301562314e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 2,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021533620248589307,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 5.0988025938632235,
+      "linearized_residual_norm": 0.0010142146036024617,
+      "linearized_residual_relative": 0.999989200649472,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010142146036024617,
+        "normal_residual_norm": 2.4209899706805474e-06,
+        "operator_norm_estimate": 1.7206214120804275,
+        "normal_residual_threshold": 2.4799069299818066e-17,
+        "normal_residual_relative": 0.0013873237065616336,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 1.0799350527945784e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.00028172703102464337,
+      "trial_objective": 5.14315631081439e-07,
+      "relative_objective_decrease": 2.15985821165453e-05
+    },
+    {
+      "iteration": 8,
+      "objective": 5.14315631081439e-07,
+      "maximum_scaled_block_rms": 0.00046365949807139224,
+      "damping": 1.5241579027587256e-10,
+      "scheduled_inner_tolerance": 0.002153275407539389,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 4.090455582831055,
+      "scaled_projected_gradient_inf": 7.163153188948718e-07,
+      "scaled_gradient_threshold": 2.252008809663663e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 2,
+          "linearization_basis": "ideal",
+          "tolerance": 0.002153275407539389,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 4.838066237795508,
+      "linearized_residual_norm": 0.0010142003376241498,
+      "linearized_residual_relative": 0.9999859339636461,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010142003376241498,
+        "normal_residual_norm": 2.2177339465918842e-06,
+        "operator_norm_estimate": 1.7639750925292497,
+        "normal_residual_threshold": 2.5423562056001797e-17,
+        "normal_residual_relative": 0.0012396333307884682,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 1.4066036353899136e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.00029516309846651395,
+      "trial_objective": 5.143011624192029e-07,
+      "relative_objective_decrease": 2.813187342883284e-05
+    },
+    {
+      "iteration": 9,
+      "objective": 5.143011624192029e-07,
+      "maximum_scaled_block_rms": 0.00046367711300725694,
+      "damping": 5.080526342529085e-11,
+      "scheduled_inner_tolerance": 0.0021533163098050806,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 4.5088179577142,
+      "scaled_projected_gradient_inf": 6.306802977975443e-07,
+      "scaled_gradient_threshold": 2.2519771328274824e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 2,
+          "iterations": 2,
+          "linearization_basis": "ideal",
+          "tolerance": 0.0021533163098050806,
+          "accurate_tolerance": false
+        }
+      ],
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 4.579550341445933,
+      "linearized_residual_norm": 0.0010141928217374308,
+      "linearized_residual_relative": 0.999992589346342,
+      "linearized_stationarity": {
+        "residual_norm": 0.0010141928217374308,
+        "normal_residual_norm": 2.034515378795087e-06,
+        "operator_norm_estimate": 1.6541411467966565,
+        "normal_residual_threshold": 2.3840386762993986e-17,
+        "normal_residual_relative": 0.0012127404958370827,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": true,
+        "inner_solve_accurate": false,
+        "actual_jacobian": false,
+        "relative_model_decrease": 7.410653657946575e-06,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.00020306997370519216,
+      "trial_objective": 5.142935398317974e-07,
+      "relative_objective_decrease": 1.482125253158898e-05
+    },
+    {
+      "iteration": 10,
+      "objective": 5.142935398317974e-07,
+      "maximum_scaled_block_rms": 0.00046366052090595044,
+      "damping": 1.6935087808430282e-11,
+      "scheduled_inner_tolerance": 0.002153277782604814,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 4.9216662077233195
+    }
+  ],
+  "ordinary_audit": {
+    "audit_points": 2048,
+    "momentum_rms": 0.00042072564429524297,
+    "momentum_max_abs": 0.006820624168414224,
+    "advective_rms": 0.11009872631155451,
+    "viscous_rms": 0.23948468269998277,
+    "pressure_gradient_rms": 0.2392914849873505,
+    "divergence_rms": 0.000704072350184318,
+    "divergence_max_abs": 0.010741375911396817,
+    "wall_velocity_rms": 0.0002301057178412132,
+    "wall_velocity_max_abs": 0.0007852617303339664,
+    "net_boundary_mass_flux": -3.3148690436884775e-06,
+    "maximum_wall_normal_speed": 0.0007852617303339664,
+    "maximum_cross_section_flux": 3.2884487568217075e-05,
+    "cross_section_fluxes": [
+      -1.3324595375783505e-05,
+      2.155536710442076e-05,
+      -9.414597838742082e-06,
+      9.09415824750587e-06,
+      1.0676584945965787e-05,
+      -8.81780331267055e-06,
+      3.560586402991201e-06,
+      -3.2884487568217075e-05,
+      1.713195800881868e-05,
+      2.9924039930323933e-05
+    ],
+    "velocity_rms": 0.13654038512780683,
+    "max_sampled_speed": 0.995138765329813,
+    "pressure_rms": 0.13345748959341172,
+    "pressure_gauge": -1.1191048088221578e-13,
+    "export_stable_max_abs": 3.433399398122816e-13,
+    "neural_vs_ideal_coordinate_jet_rms": {
+      "(0, 0)": 7.778790303275923e-14,
+      "(1, 0)": 6.566230080943722e-14,
+      "(0, 1)": 1.0215822235105328e-13,
+      "(2, 0)": 2.0307341321150515e-12,
+      "(0, 2)": 3.483164177213332e-12
+    },
+    "ideal_coordinate_momentum_rms": 0.0004207256442562343,
+    "neural_vs_ideal_momentum_rms": 4.870301304578914e-13,
+    "coordinate_diagnostic_note": "Same learned coordinates evaluated by actual MLP versus ideal analytical coordinate basis; not truth error.",
+    "left_right_asymmetry_relative_to_lid": 0.01955849915651781,
+    "symmetry_note": "Descriptive only: the finite-Re driven flow need not be reflection-symmetric.",
+    "ordinary_export": "Linear/Tanh/Linear, float64, ordinary Torch automatic differentiation",
+    "truth_error_available": false,
+    "requested_tolerance": 1e-14,
+    "near_corner_momentum_rms": 0.0018842087133989188,
+    "near_corner_momentum_max_abs": 0.005896187041045383,
+    "richer_resolution_comparison": {
+      "previous_degree": 8,
+      "degree": 16,
+      "strictly_richer": true,
+      "velocity_relative_l2": 0.04152919734500167,
+      "pressure_relative_l2": 0.06369376484601656
+    },
+    "sampled_residual_reaches_requested_tolerance": false,
+    "continuum_accuracy_certified": false
+  },
+  "setup_seconds": 0.0021811658516526222,
+  "solve_seconds": 4.922274500131607,
+  "total_seconds": 5.405137333087623,
+  "process_peak_rss_bytes": 406028288,
+  "reynolds": {
+    "length": 2.0,
+    "velocity_scale_upper_bound": 1.0,
+    "value_upper_bound": 20.0,
+    "convention": "diameter/side length 2 and peak prescribed boundary speed"
+  },
+  "source_policy": {
+    "interior_solution_labels": false,
+    "forcing": "identically zero",
+    "exterior_solve": false,
+    "analytical_reference": false,
+    "initialization": "previous native PDE iterate",
+    "resumed_archive": null,
+    "resumed_viscosity": null,
+    "boundary": "u=(1-x^2)^2, v=0 on lid; zero other walls",
+    "pressure_gauge": "p(0,0)=0"
+  },
+  "limitations": [
+    "No exact interior solution: residual and refinement agreement are evidence, not a proof.",
+    "Steady moderate-Re flow; no claim about turbulence or uniqueness at arbitrary Reynolds number.",
+    "C1-compatible lid does not remove all polygon-corner singularities."
+  ]
+}

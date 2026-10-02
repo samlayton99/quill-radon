@@ -1,0 +1,130 @@
+{
+  "method": "DeepXDE Adam then L-BFGS",
+  "deepxde_version": "1.15.0",
+  "torch_version": "2.4.1",
+  "seed": 1,
+  "width": 32,
+  "hidden_layers": 4,
+  "precision": "float64",
+  "threads": 1,
+  "train_points": 1024,
+  "hard_boundary": "sin(x)sin(y) output multiplier",
+  "adam_requested_steps": 15000,
+  "lbfgs_requested_steps": 5000,
+  "total_completed_steps": 20125,
+  "setup_seconds": 0.0038968329317867756,
+  "adam_seconds": 63.347199082840234,
+  "lbfgs_seconds": 31.80766374990344,
+  "total_seconds": 95.15984029090032,
+  "adam_relative_l2": 0.009064611921011856,
+  "relative_l2": 3.724767991827598e-05,
+  "heldout_relative_residual": 0.0009104381219799133,
+  "parameters": 3297,
+  "evaluate_2048_median_seconds": 0.001029999926686287,
+  "history": [
+    {
+      "stage": "adam",
+      "step": 1000,
+      "seconds": 4.693361124955118,
+      "relative_l2": 0.0037158691972646652
+    },
+    {
+      "stage": "adam",
+      "step": 2000,
+      "seconds": 9.054347207769752,
+      "relative_l2": 0.0031008218298461125
+    },
+    {
+      "stage": "adam",
+      "step": 3000,
+      "seconds": 13.442941290792078,
+      "relative_l2": 0.0029725951901496406
+    },
+    {
+      "stage": "adam",
+      "step": 4000,
+      "seconds": 18.487591290846467,
+      "relative_l2": 0.011896807643238621
+    },
+    {
+      "stage": "adam",
+      "step": 5000,
+      "seconds": 23.452041916083544,
+      "relative_l2": 0.003902158366610869
+    },
+    {
+      "stage": "adam",
+      "step": 6000,
+      "seconds": 27.798031500075012,
+      "relative_l2": 0.0029261446915486117
+    },
+    {
+      "stage": "adam",
+      "step": 7000,
+      "seconds": 32.14364412473515,
+      "relative_l2": 0.0015476378538463
+    },
+    {
+      "stage": "adam",
+      "step": 8000,
+      "seconds": 36.48834762489423,
+      "relative_l2": 0.0013882196246455928
+    },
+    {
+      "stage": "adam",
+      "step": 9000,
+      "seconds": 40.84613329079002,
+      "relative_l2": 0.0014017476525881502
+    },
+    {
+      "stage": "adam",
+      "step": 10000,
+      "seconds": 45.20750116603449,
+      "relative_l2": 0.009928358665830831
+    },
+    {
+      "stage": "adam",
+      "step": 11000,
+      "seconds": 49.56557049974799,
+      "relative_l2": 0.004709746542761657
+    },
+    {
+      "stage": "adam",
+      "step": 12000,
+      "seconds": 53.1154690827243,
+      "relative_l2": 0.00044337720949079836
+    },
+    {
+      "stage": "adam",
+      "step": 13000,
+      "seconds": 56.52137712482363,
+      "relative_l2": 0.0004626663107347475
+    },
+    {
+      "stage": "adam",
+      "step": 14000,
+      "seconds": 59.93368320772424,
+      "relative_l2": 0.00045718563033984925
+    },
+    {
+      "stage": "adam",
+      "step": 15000,
+      "seconds": 63.35082666575909,
+      "relative_l2": 0.009064611921011856
+    },
+    {
+      "stage": "lbfgs",
+      "step": 16000,
+      "seconds": 67.46650104084983,
+      "relative_l2": 5.348350930400621e-05
+    },
+    {
+      "stage": "lbfgs",
+      "step": 17000,
+      "seconds": 72.09957000007853,
+      "relative_l2": 3.741950195903358e-05
+    }
+  ],
+  "reference_policy": "K28 classical square solver used only for diagnostics; no solution labels in training",
+  "limits": "Two architecture settings and limited seeds, not an exhaustive best-PINN search. Wall times include diagnostic callbacks."
+}

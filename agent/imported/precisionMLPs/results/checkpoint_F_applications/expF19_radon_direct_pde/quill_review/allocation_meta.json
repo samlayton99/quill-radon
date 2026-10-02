@@ -1,0 +1,42 @@
+{
+  "seconds": 21.52692999970168,
+  "target_matrix": [
+    [
+      2.1741813720059033,
+      -1.393218448343118,
+      -0.07750483942018593
+    ],
+    [
+      -1.393218448343118,
+      5.172836759596841,
+      -0.9821586602657484
+    ],
+    [
+      -0.07750483942018593,
+      -0.9821586602657484,
+      3.152981868397254
+    ]
+  ],
+  "domain": "closed unit ball in R3",
+  "N": "interior centers",
+  "R": "ceil(sqrt(N)) per side",
+  "method": "Exact analytic Gaussian ridge profiles + current QUILL contour correction",
+  "scope": "Known-function construction; not an unknown PDE solve",
+  "floor_prediction": "empirical max rule, not an exact theorem; heldout grid excludes calibration axes",
+  "error_measure": "empirical Euclidean norm on uniform-radius points plus sphere points and coordinate poles; not volume-integrated L2",
+  "validation": "fresh larger point set with additional boundary checks; mixture weight of boundary points changes",
+  "selected_lambdas": {
+    "value": {
+      "33": 0.4,
+      "65": 0.3,
+      "129": 0.25,
+      "257": 0.25
+    },
+    "laplacian": {
+      "33": 0.35,
+      "65": 0.25,
+      "129": 0.25,
+      "257": 0.18
+    }
+  }
+}

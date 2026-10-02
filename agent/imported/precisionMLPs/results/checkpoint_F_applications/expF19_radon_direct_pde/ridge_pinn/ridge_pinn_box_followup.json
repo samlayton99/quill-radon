@@ -1,0 +1,1153 @@
+[
+  {
+    "degree": 20,
+    "features": {
+      "backend": "actual_tanh_ball_ridges",
+      "dimension": 2,
+      "degree": 20,
+      "coefficient_count": 231,
+      "directions": 21,
+      "interior_centers": 257,
+      "halo_per_side": 17,
+      "lam": 0.2,
+      "tanh_count": 6111,
+      "product_gates": false,
+      "polynomials_in_forward": false,
+      "construction_uses_target_data": false,
+      "readout_parameterization": "analytic ball-moment and angular map E @ a",
+      "map_construction_decimal_digits": 60,
+      "construction_seconds": 1.026839042082429
+    },
+    "known_basis_checks": [
+      {
+        "derivative": [
+          0,
+          0
+        ],
+        "maximum_absolute": 5.300526267904004e-09,
+        "maximum_scaled": 5.300526267903997e-09
+      },
+      {
+        "derivative": [
+          1,
+          0
+        ],
+        "maximum_absolute": 2.748271299424232e-08,
+        "maximum_scaled": 6.382392664462753e-09
+      },
+      {
+        "derivative": [
+          0,
+          1
+        ],
+        "maximum_absolute": 1.9350125057826517e-08,
+        "maximum_scaled": 6.601932842149576e-09
+      },
+      {
+        "derivative": [
+          2,
+          0
+        ],
+        "maximum_absolute": 1.50477444549324e-06,
+        "maximum_scaled": 3.619305945956175e-07
+      },
+      {
+        "derivative": [
+          1,
+          1
+        ],
+        "maximum_absolute": 6.21466335168558e-07,
+        "maximum_scaled": 6.21466335168558e-07
+      },
+      {
+        "derivative": [
+          0,
+          2
+        ],
+        "maximum_absolute": 1.307940692640841e-06,
+        "maximum_scaled": 2.2515622482193848e-07
+      }
+    ],
+    "preflight_seconds": 1.0522865420207381,
+    "gate": "Skip PDE if maximum per-mode scaled value/derivative error exceeds 1e-3",
+    "gate_passed": true,
+    "PDE_run": {
+      "case": "unforced Burgers IVP",
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 20,
+        "coefficient_count": 231,
+        "directions": 21,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 6111,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 60,
+        "construction_seconds": 1.026839042082429
+      },
+      "solver": {
+        "status": "line_search_failed",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 8,
+        "objective": 1.434054349171503e-11,
+        "tolerance": 1e-11,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 1848,
+            "output_rows": 1848,
+            "equations": 1,
+            "rms": 5.292840473849805e-06,
+            "pre_relation_rms": 5.292840473849805e-06,
+            "relation": "eq",
+            "active_entries": 1848,
+            "scaled_rms": [
+              5.292840473849805e-06
+            ],
+            "maximum_scaled_rms": 5.292840473849805e-06,
+            "weighted_norm": 5.292840473849805e-06
+          },
+          {
+            "name": "initial",
+            "input_rows": 100,
+            "output_rows": 100,
+            "equations": 1,
+            "rms": 7.632763517350913e-07,
+            "pre_relation_rms": 7.632763517350913e-07,
+            "relation": "eq",
+            "active_entries": 100,
+            "scaled_rms": [
+              7.632763517350913e-07
+            ],
+            "maximum_scaled_rms": 7.632763517350913e-07,
+            "weighted_norm": 7.632763517350913e-07
+          },
+          {
+            "name": "boundary",
+            "input_rows": 200,
+            "output_rows": 200,
+            "equations": 1,
+            "rms": 2.904064611701894e-07,
+            "pre_relation_rms": 2.904064611701894e-07,
+            "relation": "eq",
+            "active_entries": 200,
+            "scaled_rms": [
+              2.904064611701894e-07
+            ],
+            "maximum_scaled_rms": 2.904064611701894e-07,
+            "weighted_norm": 2.904064611701894e-07
+          }
+        ],
+        "residual_evaluations": 81,
+        "linearizations": 9,
+        "lsmr_iterations": 1757,
+        "seconds": 0.9810617081820965,
+        "basis_setup_seconds": 0.35957833426073194,
+        "basis_cache_bytes": 14214816,
+        "unknowns": 231,
+        "feature_metrics": {
+          "backend": "actual_tanh_ball_ridges",
+          "dimension": 2,
+          "degree": 20,
+          "coefficient_count": 231,
+          "directions": 21,
+          "interior_centers": 257,
+          "halo_per_side": 17,
+          "lam": 0.2,
+          "tanh_count": 6111,
+          "product_gates": false,
+          "polynomials_in_forward": false,
+          "construction_uses_target_data": false,
+          "readout_parameterization": "analytic ball-moment and angular map E @ a",
+          "map_construction_decimal_digits": 60,
+          "construction_seconds": 1.026839042082429
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "auto",
+        "preconditioner_builds": [
+          {
+            "iteration": 0,
+            "reason": "krylov_iteration_cost",
+            "kind": "parity_blocks",
+            "blocks": 4,
+            "maximum_block_size": 66,
+            "factor_bytes": 107448,
+            "setup_seconds": 0.005685749929398298,
+            "ridge_relative": 1e-10,
+            "setup_matvec_calls": 0,
+            "setup_rmatvec_calls": 0,
+            "setup_column_gram_calls": 4,
+            "column_row_chunk_size": 1024,
+            "construction": "local_column_panels",
+            "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+          }
+        ],
+        "active_preconditioner": "block",
+        "preconditioner_switches": [
+          {
+            "iteration": 0,
+            "reason": "krylov_iteration_cost"
+          }
+        ],
+        "preconditioner_setup_seconds": 0.005685749929398298,
+        "settings": {
+          "max_iterations": 12,
+          "lsmr_tolerance": 1e-07,
+          "effective_lsmr_tolerance": 9.999999999999999e-14,
+          "lsmr_condition_limit": 0.0,
+          "lsmr_max_iterations": 900,
+          "gradient_tolerance": 1e-11,
+          "step_tolerance": 1e-12,
+          "scaling_probes": 8,
+          "max_seconds": 30.0,
+          "max_residual_evaluations": 500,
+          "high_accuracy": true,
+          "linear_refinement_steps": 0,
+          "iteration_callback_active": false
+        },
+        "arithmetic": {
+          "dtype": "float64",
+          "machine_epsilon": 2.220446049250313e-16,
+          "requested_tolerance_below_machine_epsilon": false,
+          "tolerance_was_relaxed": false,
+          "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+        },
+        "budget": {
+          "time_limit_seconds": 30.0,
+          "time_overshoot_seconds": 0.0,
+          "completed_direction_trials_after_time_budget": 0,
+          "residual_evaluation_limit": 500,
+          "residual_evaluation_limit_exceeded": false,
+          "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+        },
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 63684,
+        "unassembled_dense_jacobian_bytes": 3969504,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 1769,
+          "rmatvec_calls": 1851,
+          "column_gram_calls": 4,
+          "column_panel_bytes_max": 540672
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 36,
+          "rmatvec_calls": 45
+        },
+        "residual_entries": 2148
+      },
+      "history": [
+        {
+          "iteration": 0,
+          "objective": 0.008937279694839607,
+          "maximum_scaled_block_rms": 0.13369577177188222,
+          "damping": 1e-10,
+          "elapsed_seconds": 0.3685053330846131,
+          "scaled_projected_gradient_inf": 0.03923344791194759,
+          "scaled_gradient_threshold": 1.336957717718822e-14,
+          "linear_solves": [
+            {
+              "preconditioner": "diagonal",
+              "stop": 2,
+              "iterations": 892
+            },
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 216
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 216,
+          "estimated_condition": 6.065844889166716,
+          "linearized_residual_norm": 4.9399440565852645e-05,
+          "linearized_residual_relative": 0.00036949142004386054,
+          "step_length": 1.0,
+          "step_norm": 0.1515149591174558,
+          "trial_objective": 0.00020634770856087304
+        },
+        {
+          "iteration": 1,
+          "objective": 0.00020634770856087304,
+          "maximum_scaled_block_rms": 0.02031486762636715,
+          "damping": 3.3333333333333335e-11,
+          "elapsed_seconds": 0.7171979160048068,
+          "scaled_projected_gradient_inf": 0.008857822192979712,
+          "scaled_gradient_threshold": 2.03149062789309e-15,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 218
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 218,
+          "estimated_condition": 6.302237800347045,
+          "linearized_residual_norm": 5.799503718354216e-06,
+          "linearized_residual_relative": 0.00028548021037975584,
+          "step_length": 1.0,
+          "step_norm": 0.005737101841671345,
+          "trial_objective": 2.1012420854865713e-10
+        },
+        {
+          "iteration": 2,
+          "objective": 2.1012420854865713e-10,
+          "maximum_scaled_block_rms": 2.0488046740973137e-05,
+          "damping": 1.1111111111111111e-11,
+          "elapsed_seconds": 0.8018920412287116,
+          "scaled_projected_gradient_inf": 8.052808725345113e-06,
+          "scaled_gradient_threshold": 2.0499961392581062e-18,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 206
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 206,
+          "estimated_condition": 6.423116928524018,
+          "linearized_residual_norm": 5.355472889478323e-06,
+          "linearized_residual_relative": 0.2612430719706852,
+          "step_length": 1.0,
+          "step_norm": 3.3919830149946076e-06,
+          "trial_objective": 1.4340543491760489e-11
+        },
+        {
+          "iteration": 3,
+          "objective": 1.4340543491760489e-11,
+          "maximum_scaled_block_rms": 5.292840470370652e-06,
+          "damping": 3.703703703703703e-12,
+          "elapsed_seconds": 0.8747139582410455,
+          "scaled_projected_gradient_inf": 1.641163830321442e-12,
+          "scaled_gradient_threshold": 5.355472619995454e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 153
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 153,
+          "estimated_condition": 4.918367252279168,
+          "linearized_residual_norm": 5.355472619986643e-06,
+          "linearized_residual_relative": 0.9999999999983546,
+          "step_length": 1.0,
+          "step_norm": 1.575905522489839e-11,
+          "trial_objective": 1.4340543491728798e-11
+        },
+        {
+          "iteration": 4,
+          "objective": 1.4340543491728798e-11,
+          "maximum_scaled_block_rms": 5.2928404738526786e-06,
+          "damping": 1.2345679012345677e-12,
+          "elapsed_seconds": 0.9293452501296997,
+          "scaled_projected_gradient_inf": 9.16594962626052e-18,
+          "scaled_gradient_threshold": 5.355472619989536e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 15
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 15,
+          "estimated_condition": 3.674211123356193,
+          "linearized_residual_norm": 5.355472619989537e-06,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 1.0129454535754806e-16,
+          "trial_objective": 1.4340543491723389e-11
+        },
+        {
+          "iteration": 5,
+          "objective": 1.4340543491723389e-11,
+          "maximum_scaled_block_rms": 5.292840473850965e-06,
+          "damping": 4.115226337448559e-13,
+          "elapsed_seconds": 0.937288333196193,
+          "scaled_projected_gradient_inf": 1.471984802304504e-17,
+          "scaled_gradient_threshold": 5.355472619988527e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 9
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 9,
+          "estimated_condition": 4.063800531381203,
+          "linearized_residual_norm": 5.355472619988526e-06,
+          "linearized_residual_relative": 0.9999999999999999,
+          "step_length": 0.5,
+          "step_norm": 5.325726903650715e-18,
+          "trial_objective": 1.4340543491715353e-11
+        },
+        {
+          "iteration": 6,
+          "objective": 1.4340543491715353e-11,
+          "maximum_scaled_block_rms": 5.292840473849928e-06,
+          "damping": 1.371742112482853e-13,
+          "elapsed_seconds": 0.9430545829236507,
+          "scaled_projected_gradient_inf": 1.394399475416405e-17,
+          "scaled_gradient_threshold": 5.355472619987026e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 8,
+          "estimated_condition": 3.9858717712109604,
+          "linearized_residual_norm": 5.355472619987027e-06,
+          "linearized_residual_relative": 1.0,
+          "step_length": 0.015625,
+          "step_norm": 1.5375229056076288e-19,
+          "trial_objective": 1.4340543491715164e-11
+        },
+        {
+          "iteration": 7,
+          "objective": 1.4340543491715164e-11,
+          "maximum_scaled_block_rms": 5.292840473849881e-06,
+          "damping": 4.572473708276176e-14,
+          "elapsed_seconds": 0.9492748328484595,
+          "scaled_projected_gradient_inf": 1.4188493026002486e-17,
+          "scaled_gradient_threshold": 5.355472619986991e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 8,
+          "estimated_condition": 3.962576937492929,
+          "linearized_residual_norm": 5.355472619986991e-06,
+          "linearized_residual_relative": 1.0,
+          "step_length": 0.001953125,
+          "step_norm": 1.9324674390484218e-20,
+          "trial_objective": 1.434054349171503e-11
+        },
+        {
+          "iteration": 8,
+          "objective": 1.434054349171503e-11,
+          "maximum_scaled_block_rms": 5.292840473849805e-06,
+          "damping": 1.5241579027587254e-14,
+          "elapsed_seconds": 0.9566795001737773,
+          "scaled_projected_gradient_inf": 1.4391362920569056e-17,
+          "scaled_gradient_threshold": 5.355472619986966e-19,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            },
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            },
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            },
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 8
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 8,
+          "estimated_condition": 3.812018054413498,
+          "linearized_residual_norm": 5.355472619986966e-06,
+          "linearized_residual_relative": 1.0
+        }
+      ],
+      "errors": {
+        "relative_l2": 3.0509935747443466e-06,
+        "maximum_absolute": 2.4806458292908336e-06,
+        "final_relative_l2": 0.000257459094405389,
+        "fresh_pde_rms": 5.8950142537248605e-06,
+        "ordinary_flat_mlp_relative_l2": 3.0509936115949177e-06,
+        "flat_stable_maximum_difference": 2.91849877598338e-14
+      },
+      "ordinary_torch_autograd_audit": {
+        "interior": {
+          "value_relative_l2": 2.768612017579073e-06,
+          "value_maximum_absolute": 1.0022230328421422e-06,
+          "PDE_absolute_rms": 6.252629990107745e-06
+        },
+        "spatial_boundary": {
+          "value_relative_l2": null,
+          "value_maximum_absolute": 2.2275740960693137e-06,
+          "PDE_absolute_rms": 3.663282061830797e-05
+        },
+        "initial": {
+          "value_relative_l2": 5.615312048740027e-06,
+          "value_maximum_absolute": 1.2630818324310678e-06,
+          "PDE_absolute_rms": 3.746679765457133e-05
+        }
+      },
+      "construction_solve_seconds": 0.9816953339613974,
+      "all_setup_solve_evaluation_seconds": 1.519834958948195,
+      "data_policy": {
+        "initial_coefficients": "zero",
+        "forcing": "zero",
+        "interior_solution_labels": false,
+        "boundary": "zero at x=\u00b1.5",
+        "initial": "explicit rational trigonometric function",
+        "Cole_Hopf": "heldout validation only"
+      },
+      "physical_domain": [
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "nu": 0.1,
+      "amplitude": 0.15,
+      "reference_formula": "2*nu*k*a(t)*sin(k*x)/(1+a(t)*cos(k*x)), a(t)=0.15*exp(-nu*k^2*t), nu=0.1, k=2*pi",
+      "metric_normalization": {
+        "relative_l2": "Euclidean error norm / reference norm on 2048 independent uniform space-time Sobol points",
+        "fresh_pde_rms": "absolute sqrt(mean(residual^2)), physical derivatives, no equation scaling",
+        "final_relative_l2": "relative Euclidean norm on 501 uniform x points at t=1",
+        "boundary_audit": "value absolute error is meaningful; relative boundary error divides a theoretical zero and is not interpreted"
+      },
+      "limitation": "Global space-time residual solve, not time marching or a closed-form neural PDE solution"
+    },
+    "all_preflight_solve_validation_seconds": 2.5778173338621855
+  },
+  {
+    "degree": 24,
+    "features": {
+      "backend": "actual_tanh_ball_ridges",
+      "dimension": 2,
+      "degree": 24,
+      "coefficient_count": 325,
+      "directions": 25,
+      "interior_centers": 257,
+      "halo_per_side": 17,
+      "lam": 0.2,
+      "tanh_count": 7275,
+      "product_gates": false,
+      "polynomials_in_forward": false,
+      "construction_uses_target_data": false,
+      "readout_parameterization": "analytic ball-moment and angular map E @ a",
+      "map_construction_decimal_digits": 72,
+      "construction_seconds": 2.404458499979228
+    },
+    "known_basis_checks": [
+      {
+        "derivative": [
+          0,
+          0
+        ],
+        "maximum_absolute": 1.970582114985131e-07,
+        "maximum_scaled": 1.970582114985131e-07
+      },
+      {
+        "derivative": [
+          1,
+          0
+        ],
+        "maximum_absolute": 1.7836541701399256e-06,
+        "maximum_scaled": 1.633659606448157e-07
+      },
+      {
+        "derivative": [
+          0,
+          1
+        ],
+        "maximum_absolute": 9.932267737156053e-07,
+        "maximum_scaled": 4.5563949505717847e-07
+      },
+      {
+        "derivative": [
+          2,
+          0
+        ],
+        "maximum_absolute": 8.858894580043852e-05,
+        "maximum_scaled": 8.672374117923362e-06
+      },
+      {
+        "derivative": [
+          1,
+          1
+        ],
+        "maximum_absolute": 2.1367700905325726e-05,
+        "maximum_scaled": 2.1367700905325726e-05
+      },
+      {
+        "derivative": [
+          0,
+          2
+        ],
+        "maximum_absolute": 7.600756362080574e-05,
+        "maximum_scaled": 5.651991253554538e-06
+      }
+    ],
+    "preflight_seconds": 2.428711290936917,
+    "gate": "Skip PDE if maximum per-mode scaled value/derivative error exceeds 1e-3",
+    "gate_passed": true,
+    "PDE_run": {
+      "case": "unforced Burgers IVP",
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 24,
+        "coefficient_count": 325,
+        "directions": 25,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 7275,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 72,
+        "construction_seconds": 2.404458499979228
+      },
+      "solver": {
+        "status": "iteration_limit",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 12,
+        "objective": 3.129241560899128e-14,
+        "tolerance": 1e-11,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 2600,
+            "output_rows": 2600,
+            "equations": 1,
+            "rms": 2.4814582749796856e-07,
+            "pre_relation_rms": 2.4814582749796856e-07,
+            "relation": "eq",
+            "active_entries": 2600,
+            "scaled_rms": [
+              2.4814582749796856e-07
+            ],
+            "maximum_scaled_rms": 2.4814582749796856e-07,
+            "weighted_norm": 2.4814582749796856e-07
+          },
+          {
+            "name": "initial",
+            "input_rows": 100,
+            "output_rows": 100,
+            "equations": 1,
+            "rms": 2.9222210857522867e-08,
+            "pre_relation_rms": 2.9222210857522867e-08,
+            "relation": "eq",
+            "active_entries": 100,
+            "scaled_rms": [
+              2.9222210857522867e-08
+            ],
+            "maximum_scaled_rms": 2.9222210857522867e-08,
+            "weighted_norm": 2.9222210857522867e-08
+          },
+          {
+            "name": "boundary",
+            "input_rows": 200,
+            "output_rows": 200,
+            "equations": 1,
+            "rms": 1.2431488484066059e-08,
+            "pre_relation_rms": 1.2431488484066059e-08,
+            "relation": "eq",
+            "active_entries": 200,
+            "scaled_rms": [
+              1.2431488484066059e-08
+            ],
+            "maximum_scaled_rms": 1.2431488484066059e-08,
+            "weighted_norm": 1.2431488484066059e-08
+          }
+        ],
+        "residual_evaluations": 45,
+        "linearizations": 13,
+        "lsmr_iterations": 2281,
+        "seconds": 2.771215833723545,
+        "basis_setup_seconds": 0.5768548748455942,
+        "basis_cache_bytes": 27820000,
+        "unknowns": 325,
+        "feature_metrics": {
+          "backend": "actual_tanh_ball_ridges",
+          "dimension": 2,
+          "degree": 24,
+          "coefficient_count": 325,
+          "directions": 25,
+          "interior_centers": 257,
+          "halo_per_side": 17,
+          "lam": 0.2,
+          "tanh_count": 7275,
+          "product_gates": false,
+          "polynomials_in_forward": false,
+          "construction_uses_target_data": false,
+          "readout_parameterization": "analytic ball-moment and angular map E @ a",
+          "map_construction_decimal_digits": 72,
+          "construction_seconds": 2.404458499979228
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "auto",
+        "preconditioner_builds": [
+          {
+            "iteration": 0,
+            "reason": "krylov_iteration_cost",
+            "kind": "parity_blocks",
+            "blocks": 4,
+            "maximum_block_size": 91,
+            "factor_bytes": 212264,
+            "setup_seconds": 0.009463000111281872,
+            "ridge_relative": 1e-10,
+            "setup_matvec_calls": 0,
+            "setup_rmatvec_calls": 0,
+            "setup_column_gram_calls": 4,
+            "column_row_chunk_size": 1024,
+            "construction": "local_column_panels",
+            "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+          }
+        ],
+        "active_preconditioner": "block",
+        "preconditioner_switches": [
+          {
+            "iteration": 0,
+            "reason": "krylov_iteration_cost"
+          }
+        ],
+        "preconditioner_setup_seconds": 0.009463000111281872,
+        "settings": {
+          "max_iterations": 12,
+          "lsmr_tolerance": 1e-07,
+          "effective_lsmr_tolerance": 9.999999999999999e-14,
+          "lsmr_condition_limit": 0.0,
+          "lsmr_max_iterations": 900,
+          "gradient_tolerance": 1e-11,
+          "step_tolerance": 1e-12,
+          "scaling_probes": 8,
+          "max_seconds": 30.0,
+          "max_residual_evaluations": 500,
+          "high_accuracy": true,
+          "linear_refinement_steps": 0,
+          "iteration_callback_active": false
+        },
+        "arithmetic": {
+          "dtype": "float64",
+          "machine_epsilon": 2.220446049250313e-16,
+          "requested_tolerance_below_machine_epsilon": false,
+          "tolerance_was_relaxed": false,
+          "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+        },
+        "budget": {
+          "time_limit_seconds": 30.0,
+          "time_overshoot_seconds": 0.0,
+          "completed_direction_trials_after_time_budget": 0,
+          "residual_evaluation_limit": 500,
+          "residual_evaluation_limit_exceeded": false,
+          "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+        },
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 88500,
+        "unassembled_dense_jacobian_bytes": 7540000,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 2293,
+          "rmatvec_calls": 2402,
+          "column_gram_calls": 4,
+          "column_panel_bytes_max": 745472
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 2900
+      },
+      "history": [
+        {
+          "iteration": 0,
+          "objective": 0.008937279694839607,
+          "maximum_scaled_block_rms": 0.13369577177188222,
+          "damping": 1e-10,
+          "elapsed_seconds": 0.5781020000576973,
+          "scaled_projected_gradient_inf": 0.0806122324086089,
+          "scaled_gradient_threshold": 1.336957717718822e-14,
+          "linear_solves": [
+            {
+              "preconditioner": "diagonal",
+              "stop": 7,
+              "iterations": 900
+            },
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 311
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 311,
+          "estimated_condition": 4.415332641872094,
+          "linearized_residual_norm": 8.580094083998787e-06,
+          "linearized_residual_relative": 6.41762560646909e-05,
+          "step_length": 1.0,
+          "step_norm": 0.15151558041052515,
+          "trial_objective": 0.00020428533686965323
+        },
+        {
+          "iteration": 1,
+          "objective": 0.00020428533686965323,
+          "maximum_scaled_block_rms": 0.02021312962712528,
+          "damping": 3.3333333333333335e-11,
+          "elapsed_seconds": 1.6897153337486088,
+          "scaled_projected_gradient_inf": 0.008687889057156211,
+          "scaled_gradient_threshold": 2.0213131220553293e-15,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 314
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 314,
+          "estimated_condition": 5.175552260026636,
+          "linearized_residual_norm": 5.886226126404365e-07,
+          "linearized_residual_relative": 2.912080301749132e-05,
+          "step_length": 1.0,
+          "step_norm": 0.005735829552137126,
+          "trial_objective": 1.9261569136405475e-10
+        },
+        {
+          "iteration": 2,
+          "objective": 1.9261569136405475e-10,
+          "maximum_scaled_block_rms": 1.962701815272919e-05,
+          "damping": 1.1111111111111111e-11,
+          "elapsed_seconds": 1.9888625419698656,
+          "scaled_projected_gradient_inf": 7.9743408724692e-06,
+          "scaled_gradient_threshold": 1.9627312162599073e-18,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 300
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 300,
+          "estimated_condition": 5.040740575499806,
+          "linearized_residual_norm": 2.5016941819880237e-07,
+          "linearized_residual_relative": 0.012745984581399484,
+          "step_length": 1.0,
+          "step_norm": 3.0600178912161252e-06,
+          "trial_objective": 3.1292415613121154e-14
+        },
+        {
+          "iteration": 3,
+          "objective": 3.1292415613121154e-14,
+          "maximum_scaled_block_rms": 2.481458303843592e-07,
+          "damping": 6.157635313714317e-14,
+          "elapsed_seconds": 2.2746247919276357,
+          "scaled_projected_gradient_inf": 1.41342096057595e-12,
+          "scaled_gradient_threshold": 2.5016960492082623e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 232
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 232,
+          "estimated_condition": 4.617013439356969,
+          "linearized_residual_norm": 2.501696049053497e-07,
+          "linearized_residual_relative": 0.9999999999381357,
+          "step_length": 1.0,
+          "step_norm": 3.8691679980237184e-13,
+          "trial_objective": 3.129241561046553e-14
+        },
+        {
+          "iteration": 4,
+          "objective": 3.129241561046553e-14,
+          "maximum_scaled_block_rms": 2.481458275039022e-07,
+          "damping": 2.0525451045714392e-14,
+          "elapsed_seconds": 2.4977512918412685,
+          "scaled_projected_gradient_inf": 7.329628158253332e-18,
+          "scaled_gradient_threshold": 2.5016960491021096e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 36
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 36,
+          "estimated_condition": 5.465645107595544,
+          "linearized_residual_norm": 2.50169604910211e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 3.0097742679829236e-17,
+          "trial_objective": 3.1292415610280453e-14
+        },
+        {
+          "iteration": 5,
+          "objective": 3.1292415610280453e-14,
+          "maximum_scaled_block_rms": 2.481458275031403e-07,
+          "damping": 6.8418170152381304e-15,
+          "elapsed_seconds": 2.5382803748361766,
+          "scaled_projected_gradient_inf": 1.4406428800545395e-17,
+          "scaled_gradient_threshold": 2.501696049094712e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 31
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 31,
+          "estimated_condition": 5.34438569030908,
+          "linearized_residual_norm": 2.501696049094712e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 1.490989561437391e-17,
+          "trial_objective": 3.129241560972179e-14
+        },
+        {
+          "iteration": 6,
+          "objective": 3.129241560972179e-14,
+          "maximum_scaled_block_rms": 2.4814582750108485e-07,
+          "damping": 2.2806056717460436e-15,
+          "elapsed_seconds": 2.574015916790813,
+          "scaled_projected_gradient_inf": 1.0351933920451081e-17,
+          "scaled_gradient_threshold": 2.5016960490723804e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 25
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 25,
+          "estimated_condition": 4.070914251947057,
+          "linearized_residual_norm": 2.5016960490723805e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 0.125,
+          "step_norm": 1.3698929798165297e-18,
+          "trial_objective": 3.129241560956317e-14
+        },
+        {
+          "iteration": 7,
+          "objective": 3.129241560956317e-14,
+          "maximum_scaled_block_rms": 2.481458275004207e-07,
+          "damping": 7.602018905820145e-16,
+          "elapsed_seconds": 2.6056533749215305,
+          "scaled_projected_gradient_inf": 1.1242111408799573e-17,
+          "scaled_gradient_threshold": 2.5016960490660396e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 27
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 27,
+          "estimated_condition": 6.799790920451688,
+          "linearized_residual_norm": 2.50169604906604e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 0.015625,
+          "step_norm": 1.7063768289200793e-19,
+          "trial_objective": 3.129241560955639e-14
+        },
+        {
+          "iteration": 8,
+          "objective": 3.129241560955639e-14,
+          "maximum_scaled_block_rms": 2.481458275003669e-07,
+          "damping": 2.5340063019400483e-16,
+          "elapsed_seconds": 2.6405944167636335,
+          "scaled_projected_gradient_inf": 1.1238962428068984e-17,
+          "scaled_gradient_threshold": 2.5016960490657688e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 30
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 30,
+          "estimated_condition": 5.0207356444634454,
+          "linearized_residual_norm": 2.501696049065769e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 1.3761784636463037e-17,
+          "trial_objective": 3.129241560949523e-14
+        },
+        {
+          "iteration": 9,
+          "objective": 3.129241560949523e-14,
+          "maximum_scaled_block_rms": 2.4814582749997963e-07,
+          "damping": 8.446687673133495e-17,
+          "elapsed_seconds": 2.6754050841555,
+          "scaled_projected_gradient_inf": 7.76851751098679e-18,
+          "scaled_gradient_threshold": 2.501696049063324e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 29
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 29,
+          "estimated_condition": 5.669679789077853,
+          "linearized_residual_norm": 2.501696049063324e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 1.407587426312364e-17,
+          "trial_objective": 3.1292415609108e-14
+        },
+        {
+          "iteration": 10,
+          "objective": 3.1292415609108e-14,
+          "maximum_scaled_block_rms": 2.481458274987881e-07,
+          "damping": 2.815562557711165e-17,
+          "elapsed_seconds": 2.7093430417589843,
+          "scaled_projected_gradient_inf": 1.238409408720987e-17,
+          "scaled_gradient_threshold": 2.501696049047845e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 23
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 23,
+          "estimated_condition": 4.306839451075183,
+          "linearized_residual_norm": 2.501696049047845e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 1.0,
+          "step_norm": 1.2309157232565456e-17,
+          "trial_objective": 3.129241560899282e-14
+        },
+        {
+          "iteration": 11,
+          "objective": 3.129241560899282e-14,
+          "maximum_scaled_block_rms": 2.481458274979747e-07,
+          "damping": 9.385208525703883e-18,
+          "elapsed_seconds": 2.737632167059928,
+          "scaled_projected_gradient_inf": 1.5501662491725156e-17,
+          "scaled_gradient_threshold": 2.5016960490432414e-20,
+          "linear_solves": [
+            {
+              "preconditioner": "block",
+              "stop": 2,
+              "iterations": 23
+            }
+          ],
+          "lsmr_stop": 2,
+          "lsmr_iterations": 23,
+          "estimated_condition": 4.347065601884226,
+          "linearized_residual_norm": 2.5016960490432415e-07,
+          "linearized_residual_relative": 1.0,
+          "step_length": 0.00048828125,
+          "step_norm": 3.673173013155656e-21,
+          "trial_objective": 3.129241560899128e-14
+        },
+        {
+          "iteration": 12,
+          "objective": 3.129241560899128e-14,
+          "maximum_scaled_block_rms": 2.4814582749796856e-07,
+          "damping": 3.1284028419012944e-18,
+          "elapsed_seconds": 2.7712132087908685
+        }
+      ],
+      "errors": {
+        "relative_l2": 1.051875103882425e-07,
+        "maximum_absolute": 5.0144309901134065e-08,
+        "final_relative_l2": 8.542811608049968e-06,
+        "fresh_pde_rms": 2.936015672863266e-07,
+        "ordinary_flat_mlp_relative_l2": 1.0518758322609163e-07,
+        "flat_stable_maximum_difference": 9.492406860545088e-14
+      },
+      "ordinary_torch_autograd_audit": {
+        "interior": {
+          "value_relative_l2": 9.427667966251559e-08,
+          "value_maximum_absolute": 2.994714169701762e-08,
+          "PDE_absolute_rms": 2.584174903892168e-07
+        },
+        "spatial_boundary": {
+          "value_relative_l2": null,
+          "value_maximum_absolute": 1.3151132094390635e-07,
+          "PDE_absolute_rms": 2.1875779443795085e-06
+        },
+        "initial": {
+          "value_relative_l2": 2.2082528273226386e-07,
+          "value_maximum_absolute": 5.778129785749542e-08,
+          "PDE_absolute_rms": 3.0111129279966082e-06
+        }
+      },
+      "construction_solve_seconds": 2.7717114160768688,
+      "all_setup_solve_evaluation_seconds": 3.318213750142604,
+      "data_policy": {
+        "initial_coefficients": "zero",
+        "forcing": "zero",
+        "interior_solution_labels": false,
+        "boundary": "zero at x=\u00b1.5",
+        "initial": "explicit rational trigonometric function",
+        "Cole_Hopf": "heldout validation only"
+      },
+      "physical_domain": [
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "nu": 0.1,
+      "amplitude": 0.15,
+      "reference_formula": "2*nu*k*a(t)*sin(k*x)/(1+a(t)*cos(k*x)), a(t)=0.15*exp(-nu*k^2*t), nu=0.1, k=2*pi",
+      "metric_normalization": {
+        "relative_l2": "Euclidean error norm / reference norm on 2048 independent uniform space-time Sobol points",
+        "fresh_pde_rms": "absolute sqrt(mean(residual^2)), physical derivatives, no equation scaling",
+        "final_relative_l2": "relative Euclidean norm on 501 uniform x points at t=1",
+        "boundary_audit": "value absolute error is meaningful; relative boundary error divides a theoretical zero and is not interpreted"
+      },
+      "limitation": "Global space-time residual solve, not time marching or a closed-form neural PDE solution"
+    },
+    "all_preflight_solve_validation_seconds": 5.752134290989488
+  }
+]

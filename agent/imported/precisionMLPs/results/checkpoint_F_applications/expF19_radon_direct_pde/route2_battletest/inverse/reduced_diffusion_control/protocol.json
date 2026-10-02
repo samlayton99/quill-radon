@@ -1,0 +1,32 @@
+{
+  "equation": "-nu*(u_xx+u_yy)=2*(2-x*x-y*y), zero boundary, square[-1,1]^2",
+  "initial_parameter": 1.1,
+  "inner_options": {
+    "centers": 129,
+    "check_points": 31,
+    "coordinates": "affine_disk",
+    "degrees": [
+      2,
+      4,
+      6
+    ],
+    "export_check_points": 33,
+    "max_iterations": 12,
+    "max_seconds": 15,
+    "tolerance": 2e-09
+  },
+  "measurement_true_parameter": 0.7,
+  "name": "native reduced diffusion inverse control",
+  "noise_standard_deviations": [
+    0.0,
+    0.002
+  ],
+  "seed": 892,
+  "sensors": 9,
+  "source_policy": "True parameter used only for sensor generator and audit. All native inner solves receive physics/zero boundaries only. No target coefficients/external solver.",
+  "status_scope": "Easy polynomial control validating constrained inverse behavior, not a hard-PDE or high-dimensional benchmark.",
+  "unknown_bounds": [
+    0.2,
+    2.0
+  ]
+}

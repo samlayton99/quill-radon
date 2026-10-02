@@ -1,0 +1,52 @@
+{
+  "kind": "diagonal",
+  "lsmr_istop": 7,
+  "lsmr_iterations": 800,
+  "estimated_residual_norm": 6.934904296125649e-05,
+  "algebraic_residual_norm": 6.934904296126604e-05,
+  "normal_residual_norm": 2.774424508366664e-07,
+  "setup_seconds": 0.09473991673439741,
+  "solve_seconds": 0.5557959997095168,
+  "work_counts": {
+    "matvec": 800,
+    "rmatvec": 801
+  },
+  "block_spectra": [
+    {
+      "size": 280,
+      "singular_min": 7.912742573121413e-07,
+      "singular_max": 10.602617794192813,
+      "condition": 13399422.129829632
+    },
+    {
+      "size": 280,
+      "singular_min": 0.0005862908000144849,
+      "singular_max": 14.15777045850941,
+      "condition": 24148.034487594938
+    },
+    {
+      "size": 1,
+      "singular_min": 1.0000000000000007,
+      "singular_max": 1.0000000000000007,
+      "condition": 1.0
+    }
+  ],
+  "preconditioned_condition": 123256509772.47284,
+  "preconditioned_singular_min": 1.4338082453446824e-10,
+  "preconditioned_singular_max": 17.672620000417897,
+  "factor_bytes": 1254408,
+  "ordinary_relative_l2": 4.376348664126507e-06,
+  "ideal_relative_l2": 4.376343835328271e-06,
+  "stable_neural_relative_l2": 4.376343836287607e-06,
+  "ordinary_vs_ideal_relative_l2": 1.6271019695672685e-11,
+  "ordinary_pde_rms": 0.0043389166731285025,
+  "ordinary_pde_max": 0.023060751998286833,
+  "ideal_pde_rms": 0.004338917938766044,
+  "boundary_rms": 1.5087834488714136e-05,
+  "readout_l1": 325630.3482664067,
+  "coordinate_norm": 1.173966171564847,
+  "fit_basis": "actual",
+  "field_points": 2048,
+  "pde_points": 257,
+  "reference_used_in_fit": false
+}

@@ -1,0 +1,37 @@
+{
+  "ordinary_velocity_relative_l2": 1.8867403595179633e-15,
+  "ordinary_pressure_relative_l2": 6.957028495471016e-14,
+  "ordinary_velocity_max_abs": 6.036837696399289e-16,
+  "ordinary_pressure_max_abs": 1.975503094442388e-14,
+  "ordinary_momentum_rms": 5.517770954954431e-16,
+  "ordinary_momentum_max_abs": 4.579669976578771e-15,
+  "ordinary_divergence_rms": 1.8468302643760083e-16,
+  "ordinary_divergence_max_abs": 1.6665510880082288e-15,
+  "ordinary_vs_grouped_max_abs": 6.245004513516506e-16,
+  "ordinary_readout_l1_per_field": [
+    0.9787835489787657,
+    0.9715423544655872,
+    0.9748472997421929,
+    0.35599243752028403
+  ],
+  "ordinary_parameter_bytes": 54121640,
+  "value_audit_points": 257,
+  "derivative_audit_points": 97,
+  "constraints": {
+    "velocity_boundary": {
+      "rms": 1.4934075414526148e-16,
+      "max_abs": 5.412337245047638e-16
+    },
+    "velocity_initial": {
+      "rms": 1.3204874610729696e-16,
+      "max_abs": 4.3021142204224816e-16
+    },
+    "pressure_gauge": {
+      "rms": 2.2516984494790898e-18,
+      "max_abs": 2.9544509200229996e-18
+    }
+  },
+  "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+  "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve",
+  "source_archive": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n129_native_fullgroups_iteration1_native.npz"
+}

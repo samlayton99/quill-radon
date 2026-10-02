@@ -1,0 +1,1878 @@
+[
+  {
+    "noise": 0.0,
+    "status": "data_stationary",
+    "parameters": [
+      0.6999999999803159
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "parameters": [
+          1.1
+        ],
+        "sensor_objective": 0.0681156592900552,
+        "normalized_sensor_rms": 0.12303175677672747,
+        "response_singular_values": [
+          0.6459173689437623
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 0.23840504590125805,
+        "gradient_threshold": 1e-08,
+        "accepted_step_scale": 0.5
+      },
+      {
+        "iteration": 1,
+        "parameters": [
+          0.7857145999749777
+        ],
+        "sensor_objective": 0.006130449387175326,
+        "normalized_sensor_rms": 0.03690964760112133,
+        "response_singular_values": [
+          1.2659982457733838
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 0.14018264734540017,
+        "gradient_threshold": 1e-08,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 2,
+        "parameters": [
+          0.6895044847632517
+        ],
+        "sensor_objective": 0.00011935639327622218,
+        "normalized_sensor_rms": 0.005150110964850329,
+        "response_singular_values": [
+          1.6439507920073837
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 0.025399586998774835,
+        "gradient_threshold": 1e-08,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 3,
+        "parameters": [
+          0.6998426081831465
+        ],
+        "sensor_objective": 2.6054082354262116e-08,
+        "normalized_sensor_rms": 7.60907095427879e-05,
+        "response_singular_values": [
+          1.5957402963869702
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 0.00036426303419429646,
+        "gradient_threshold": 1e-08,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 4,
+        "parameters": [
+          0.699999964202832
+        ],
+        "sensor_objective": 1.345670427003797e-15,
+        "normalized_sensor_rms": 1.7292711547571435e-08,
+        "response_singular_values": [
+          1.5950229485251952
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 8.27467569743699e-08,
+        "gradient_threshold": 1e-08,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 5,
+        "parameters": [
+          0.6999999999803159
+        ],
+        "sensor_objective": 1.8964972296551084e-21,
+        "normalized_sensor_rms": 2.0529097126085362e-11,
+        "response_singular_values": [
+          1.5950227854796946
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 2.0795615704383515e-13,
+        "gradient_threshold": 1e-08
+      }
+    ],
+    "metrics": {
+      "seconds": 4.944950042292476,
+      "forward_runs": [
+        {
+          "parameters": [
+            1.1
+          ],
+          "role": "initial",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.27772937528789043,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.363238585368699e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0771606580028582e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.201916545595495e-10,
+              "maximum_absolute": 1.1081908724008827e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0076997860577424e-10,
+              "maximum_absolute": 5.279596759777405e-10
+            }
+          ],
+          "sensor_objective": 0.0681156592900552
+        },
+        {
+          "parameters": [
+            1.1011000000000002
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2531705000437796,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.358225904640511e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0724114148825652e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.197008787372666e-10,
+              "maximum_absolute": 1.1072964767322446e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0030403519337377e-10,
+              "maximum_absolute": 5.267994929170072e-10
+            }
+          ],
+          "sensor_objective": 0.06835403411853352
+        },
+        {
+          "parameters": [
+            1.0989
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2536415411159396,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.368254295795994e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0819226991279574e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.206814331569764e-10,
+              "maximum_absolute": 1.1090715013040153e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0123687578993436e-10,
+              "maximum_absolute": 5.291207472168935e-10
+            }
+          ],
+          "sensor_objective": 0.0678772248611495
+        },
+        {
+          "parameters": [
+            0.47142919994995536
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2599920416250825,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.553855339206519e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 8.176400726767341e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 7.326763547713709e-10,
+              "maximum_absolute": 1.5858834245818798e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 7.974182813854028e-10,
+              "maximum_absolute": 1.9528787476019716e-09
+            }
+          ],
+          "sensor_objective": 0.12109351651421517
+        },
+        {
+          "parameters": [
+            0.7857145999749777
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.27411004062741995,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.819166886119434e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.0755936198716073e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.625644690708897e-10,
+              "maximum_absolute": 1.3943135535043893e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.966661176485089e-10,
+              "maximum_absolute": 1.0046052878465161e-09
+            }
+          ],
+          "sensor_objective": 0.006130449387175326
+        },
+        {
+          "parameters": [
+            0.7868145999749777
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.27057529194280505,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.814433958581481e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.0657696005225694e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.621022699474818e-10,
+              "maximum_absolute": 1.393284154715957e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.957034808555333e-10,
+              "maximum_absolute": 1.0022951357768761e-09
+            }
+          ],
+          "sensor_objective": 0.00627123491239143
+        },
+        {
+          "parameters": [
+            0.7846145999749777
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2639187080785632,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.823896508300419e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.085441821250731e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.630251132669571e-10,
+              "maximum_absolute": 1.3953438404712415e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.976309280633555e-10,
+              "maximum_absolute": 1.006921657165094e-09
+            }
+          ],
+          "sensor_objective": 0.0059908741054032
+        },
+        {
+          "parameters": [
+            0.6895044847632517
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.24796933308243752,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.198164004261276e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.038047725893149e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.994993475318799e-10,
+              "maximum_absolute": 1.4787406854566143e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.908995028679787e-10,
+              "maximum_absolute": 1.2299259388726114e-09
+            }
+          ],
+          "sensor_objective": 0.00011935639327622218
+        },
+        {
+          "parameters": [
+            0.6906044847632516
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25367266591638327,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.194324136811312e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.025806927933239e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.99126053037935e-10,
+              "maximum_absolute": 1.4778573920182225e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.897020019716109e-10,
+              "maximum_absolute": 1.2270722216101149e-09
+            }
+          ],
+          "sensor_objective": 9.534430646702503e-05
+        },
+        {
+          "parameters": [
+            0.6884044847632517
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25687783444300294,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.201993194415156e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.050319255254074e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.998718086530237e-10,
+              "maximum_absolute": 1.4796208702705371e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.921004212150213e-10,
+              "maximum_absolute": 1.2327863174732556e-09
+            }
+          ],
+          "sensor_objective": 0.0001461521035604125
+        },
+        {
+          "parameters": [
+            0.6998426081831465
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.26005887519568205,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.161508592494827e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.924205179939953e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.959367896675037e-10,
+              "maximum_absolute": 1.4703456230336087e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.797584385119338e-10,
+              "maximum_absolute": 1.203368515945158e-09
+            }
+          ],
+          "sensor_objective": 2.6054082354262116e-08
+        },
+        {
+          "parameters": [
+            0.7009426081831465
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25681179063394666,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.157543621222246e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.912248272051601e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.955505426565728e-10,
+              "maximum_absolute": 1.4694396810455146e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.785883905290816e-10,
+              "maximum_absolute": 1.200581412064139e-09
+            }
+          ],
+          "sensor_objective": 9.315579170666211e-07
+        },
+        {
+          "parameters": [
+            0.6987426081831465
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.24240741599351168,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.165469408466771e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.936191040952521e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.963213627571671e-10,
+              "maximum_absolute": 1.4712475682188142e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.809316369256061e-10,
+              "maximum_absolute": 1.2061662779672133e-09
+            }
+          ],
+          "sensor_objective": 1.6680887161464654e-06
+        },
+        {
+          "parameters": [
+            0.699999964202832
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2706525828689337,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.160945522308095e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.922492360008322e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.958808137830847e-10,
+              "maximum_absolute": 1.4702159489843325e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.795910288804365e-10,
+              "maximum_absolute": 1.2029719442807618e-09
+            }
+          ],
+          "sensor_objective": 1.345670427003797e-15
+        },
+        {
+          "parameters": [
+            0.7010999642028319
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.26101658400148153,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.156974887458804e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.910540146476997e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.954954748588124e-10,
+              "maximum_absolute": 1.4693117833530778e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.784214246845091e-10,
+              "maximum_absolute": 1.2001821758644837e-09
+            }
+          ],
+          "sensor_objective": 1.267971760148249e-06
+        },
+        {
+          "parameters": [
+            0.698899964202832
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2591136251576245,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.164901422584516e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.934473555881393e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.962668096766145e-10,
+              "maximum_absolute": 1.4711196705263774e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.807635875043124e-10,
+              "maximum_absolute": 1.2057661535891384e-09
+            }
+          ],
+          "sensor_objective": 1.2761329912919514e-06
+        },
+        {
+          "parameters": [
+            0.6999999999803159
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.26572291692718863,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.160947111960579e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.922491678653201e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.95880973089373e-10,
+              "maximum_absolute": 1.4702168371627522e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.795908606878934e-10,
+              "maximum_absolute": 1.2029706120131323e-09
+            }
+          ],
+          "sensor_objective": 1.8964972296551084e-21
+        },
+        {
+          "parameters": [
+            0.7010999999803159
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2596598328091204,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.156974087773086e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.910539162502515e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.954954116444562e-10,
+              "maximum_absolute": 1.4693117833530778e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.784212357019612e-10,
+              "maximum_absolute": 1.2001808435968542e-09
+            }
+          ],
+          "sensor_objective": 1.268054116280435e-06
+        },
+        {
+          "parameters": [
+            0.6988999999803159
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25218650000169873,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.164904516349432e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.934473557935568e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.962670214042023e-10,
+              "maximum_absolute": 1.4711192264371675e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.807635519779132e-10,
+              "maximum_absolute": 1.2057657094999286e-09
+            }
+          ],
+          "sensor_objective": 1.276049852283302e-06
+        }
+      ],
+      "forward_solves": 19,
+      "validated_forward": true,
+      "outer_converged": true,
+      "final_sensor_objective": 1.8964972296551084e-21,
+      "source_policy": "Only physics/IC/BC/gauges in native inner solve; observations only in outer objective; no external PDE solve, target readout fit, or oracle.",
+      "sensitivity": "Finite differences of fully validated ordinary neural forwards; not differentiation of an unresolved LS state.",
+      "uncertainty_scope": "Sampled local response rank and projected-gradient checks; no global identifiability, continuum error or posterior guarantee.",
+      "memory_scope": "Retains current/one trial neural states, bounded evaluation panels, and sensor-by-parameter response; parameter dimension capped at16."
+    },
+    "statistical_optimum_audit_only": 0.7,
+    "statistical_optimum_parameter_difference": 1.96840321819991e-11,
+    "true_parameter_error": 1.96840321819991e-11,
+    "ordinary_pde_rms": 7.0170966328189e-10,
+    "ordinary_pde_max": 1.7065673318938934e-09,
+    "conditional_field_relative_error": 2.741722608660891e-10,
+    "true_field_relative_error": 2.751520056014895e-10,
+    "degree": 6,
+    "neurons": 1071,
+    "process_peak_rss_bytes": 290013184
+  },
+  {
+    "noise": 0.002,
+    "status": "data_stationary",
+    "parameters": [
+      0.7000579912278774
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "parameters": [
+          1.1
+        ],
+        "sensor_objective": 17021.51105777177,
+        "normalized_sensor_rms": 61.50250411843547,
+        "response_singular_values": [
+          322.9586844718843
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 59587.684076341815,
+        "gradient_threshold": 0.000595883034654497,
+        "accepted_step_scale": 0.5
+      },
+      {
+        "iteration": 1,
+        "parameters": [
+          0.7857861954104126
+        ],
+        "sensor_objective": 1532.919441517724,
+        "normalized_sensor_rms": 18.45667263570865,
+        "response_singular_values": [
+          632.8837788602857
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 35038.74131548284,
+        "gradient_threshold": 0.00035042786168623555,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 2,
+        "parameters": [
+          0.6895600138103339
+        ],
+        "sensor_objective": 30.197204917736766,
+        "normalized_sensor_rms": 2.590461345343582,
+        "response_singular_values": [
+          821.8430165503338
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 6349.326122414151,
+        "gradient_threshold": 6.386857698942616e-05,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 3,
+        "parameters": [
+          0.6999005386276339
+        ],
+        "sensor_objective": 0.3603738849266035,
+        "normalized_sensor_rms": 0.28298955022976596,
+        "response_singular_values": [
+          797.7380746456776
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 91.07077473032115,
+        "gradient_threshold": 6.7725461683541925e-06,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 4,
+        "parameters": [
+          0.7000579554258938
+        ],
+        "sensor_objective": 0.35385748991184446,
+        "normalized_sensor_rms": 0.2804193248657939,
+        "response_singular_values": [
+          797.3793513031711
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 0.02069399664584637,
+        "gradient_threshold": 6.708017380630798e-06,
+        "accepted_step_scale": 1.0
+      },
+      {
+        "iteration": 5,
+        "parameters": [
+          0.7000579912278774
+        ],
+        "sensor_objective": 0.3538574895750793,
+        "normalized_sensor_rms": 0.28041932473235676,
+        "response_singular_values": [
+          797.3792697449269
+        ],
+        "local_response_rank": 1,
+        "scaled_projected_gradient_inf": 5.237130551449809e-08,
+        "gradient_threshold": 6.7080166913235645e-06
+      }
+    ],
+    "metrics": {
+      "seconds": 4.9033808331005275,
+      "forward_runs": [
+        {
+          "parameters": [
+            1.1
+          ],
+          "role": "initial",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2543562497012317,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.363238585368699e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0771606580028582e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.201916545595495e-10,
+              "maximum_absolute": 1.1081908724008827e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0076997860577424e-10,
+              "maximum_absolute": 5.279596759777405e-10
+            }
+          ],
+          "sensor_objective": 17021.51105777177
+        },
+        {
+          "parameters": [
+            1.1011000000000002
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.26263679191470146,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.358225904640511e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0724114148825652e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.197008787372666e-10,
+              "maximum_absolute": 1.1072964767322446e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0030403519337377e-10,
+              "maximum_absolute": 5.267994929170072e-10
+            }
+          ],
+          "sensor_objective": 17081.09120106978
+        },
+        {
+          "parameters": [
+            1.0989
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2529953750781715,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 5.368254295795994e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 2.0819226991279574e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 5.206814331569764e-10,
+              "maximum_absolute": 1.1090715013040153e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 2.0123687578993436e-10,
+              "maximum_absolute": 5.291207472168935e-10
+            }
+          ],
+          "sensor_objective": 16961.91604152172
+        },
+        {
+          "parameters": [
+            0.47157239082082525
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2649977090768516,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.553978515302822e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 8.173792261234687e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 7.326904180514204e-10,
+              "maximum_absolute": 1.5858723223516336e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 7.971637748434418e-10,
+              "maximum_absolute": 1.9522827798823528e-09
+            }
+          ],
+          "sensor_objective": 30227.791593091104
+        },
+        {
+          "parameters": [
+            0.7857861954104126
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.28096874989569187,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.818859235917581e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.074952417684226e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.625331248736938e-10,
+              "maximum_absolute": 1.3942424992308133e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.9660347144395383e-10,
+              "maximum_absolute": 1.0044565179612164e-09
+            }
+          ],
+          "sensor_objective": 1532.919441517724
+        },
+        {
+          "parameters": [
+            0.7868861954104126
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.23029525019228458,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.814125987747357e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.065131392454692e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.620715583691312e-10,
+              "maximum_absolute": 1.3932139886208006e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.956411839382055e-10,
+              "maximum_absolute": 1.0021454777131567e-09
+            }
+          ],
+          "sensor_objective": 1568.1088437083931
+        },
+        {
+          "parameters": [
+            0.7846861954104126
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2607886251062155,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 6.823591559824777e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.0848002852116924e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.629946272277094e-10,
+              "maximum_absolute": 1.395277227089764e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 3.975678130968749e-10,
+              "maximum_absolute": 1.0067697786553254e-09
+            }
+          ],
+          "sensor_objective": 1498.032482492051
+        },
+        {
+          "parameters": [
+            0.6895600138103339
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2567019173875451,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.197968102007829e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.037428686292191e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.994812067997423e-10,
+              "maximum_absolute": 1.4786953883572096e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.908391130082646e-10,
+              "maximum_absolute": 1.2297807217009904e-09
+            }
+          ],
+          "sensor_objective": 30.197204917736766
+        },
+        {
+          "parameters": [
+            0.6906600138103339
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2612681253813207,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.194125202778501e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.02518955435149e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.991070255020259e-10,
+              "maximum_absolute": 1.477811650829608e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.896412150585056e-10,
+              "maximum_absolute": 1.2269274485277037e-09
+            }
+          ],
+          "sensor_objective": 24.194643746294986
+        },
+        {
+          "parameters": [
+            0.688460013810334
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2687445408664644,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.201801224212568e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 5.049700639266384e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.998531191603546e-10,
+              "maximum_absolute": 1.4795773495279718e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.920399708083557e-10,
+              "maximum_absolute": 1.2326424325692642e-09
+            }
+          ],
+          "sensor_objective": 36.895450897218275
+        },
+        {
+          "parameters": [
+            0.6999005386276339
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2557748341932893,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.161303541052972e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.923572720130156e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.959161836102107e-10,
+              "maximum_absolute": 1.470297217309735e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.796968856999979e-10,
+              "maximum_absolute": 1.203223298773537e-09
+            }
+          ],
+          "sensor_objective": 0.3603738849266035
+        },
+        {
+          "parameters": [
+            0.7010005386276339
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2598956245929003,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.157331814120557e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.911618836484102e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.955294208784033e-10,
+              "maximum_absolute": 1.4693930516784803e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.78526901272469e-10,
+              "maximum_absolute": 1.2004326421788392e-09
+            }
+          ],
+          "sensor_objective": 0.5866398682740415
+        },
+        {
+          "parameters": [
+            0.6988005386276339
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25439004227519035,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.165258743306248e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.935558956813405e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.963010566753196e-10,
+              "maximum_absolute": 1.47120093885178e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.808696840090932e-10,
+              "maximum_absolute": 1.2060206167063825e-09
+            }
+          ],
+          "sensor_objective": 0.7707817723585413
+        },
+        {
+          "parameters": [
+            0.7000579554258938
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25918908324092627,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.160739205283737e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.921862719226364e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.95861675536539e-10,
+              "maximum_absolute": 1.4701706518849278e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.795294718891073e-10,
+              "maximum_absolute": 1.2028249507523014e-09
+            }
+          ],
+          "sensor_objective": 0.35385748991184446
+        },
+        {
+          "parameters": [
+            0.7011579554258938
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2623137501068413,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.156764694528397e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.909911016492224e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.954749176056504e-10,
+              "maximum_absolute": 1.4692642658076238e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.783596234621351e-10,
+              "maximum_absolute": 1.2000338500683938e-09
+            }
+          ],
+          "sensor_objective": 0.6707454749762478
+        },
+        {
+          "parameters": [
+            0.6989579554258938
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.25533995870500803,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.164697046239505e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.933841201477679e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.96246060079749e-10,
+              "maximum_absolute": 1.471073485248553e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.807017855982895e-10,
+              "maximum_absolute": 1.2056196041498879e-09
+            }
+          ],
+          "sensor_objective": 0.6727849695761728
+        },
+        {
+          "parameters": [
+            0.7000579912278774
+          ],
+          "role": "line_search",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.2587254997342825,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.160737013159338e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.921860554976009e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.95861688338972e-10,
+              "maximum_absolute": 1.470169763706508e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.795292543568526e-10,
+              "maximum_absolute": 1.202823618484672e-09
+            }
+          ],
+          "sensor_objective": 0.3538574895750793
+        },
+        {
+          "parameters": [
+            0.7011579912278774
+          ],
+          "role": "sensitivity_plus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.23875604197382927,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.156763887920439e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.909909823471103e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.9547481480071e-10,
+              "maximum_absolute": 1.4692629335399943e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.783595670555111e-10,
+              "maximum_absolute": 1.2000342941576037e-09
+            }
+          ],
+          "sensor_objective": 0.6707660712897909
+        },
+        {
+          "parameters": [
+            0.6989579912278774
+          ],
+          "role": "sensitivity_minus_0",
+          "status": "sampled_residual_checks_passed",
+          "validated": true,
+          "degree": 6,
+          "seconds": 0.258367917034775,
+          "inner_parameter_count": 0,
+          "warm_start_used": false,
+          "validation": [
+            {
+              "name": "diffusion",
+              "maximum_scaled_rms": 7.164692485772839e-10,
+              "points": 31,
+              "reuses_training_locations": false
+            },
+            {
+              "name": "zero_wall",
+              "maximum_scaled_rms": 4.933841995884937e-10,
+              "points": 64,
+              "reuses_training_locations": false
+            }
+          ],
+          "ordinary_validation": [
+            {
+              "name": "diffusion",
+              "points": 33,
+              "finite": true,
+              "maximum_scaled_rms": 6.962463473004088e-10,
+              "maximum_absolute": 1.4710739293377628e-09
+            },
+            {
+              "name": "zero_wall",
+              "points": 64,
+              "finite": true,
+              "maximum_scaled_rms": 4.807018224850871e-10,
+              "maximum_absolute": 1.2056204923283076e-09
+            }
+          ],
+          "sensor_objective": 0.6727641774899444
+        }
+      ],
+      "forward_solves": 19,
+      "validated_forward": true,
+      "outer_converged": true,
+      "final_sensor_objective": 0.3538574895750793,
+      "source_policy": "Only physics/IC/BC/gauges in native inner solve; observations only in outer objective; no external PDE solve, target readout fit, or oracle.",
+      "sensitivity": "Finite differences of fully validated ordinary neural forwards; not differentiation of an unresolved LS state.",
+      "uncertainty_scope": "Sampled local response rank and projected-gradient checks; no global identifiability, continuum error or posterior guarantee.",
+      "memory_scope": "Retains current/one trial neural states, bounded evaluation panels, and sensor-by-parameter response; parameter dimension capped at16."
+    },
+    "statistical_optimum_audit_only": 0.700057991247568,
+    "statistical_optimum_parameter_difference": 1.969058249784439e-11,
+    "true_parameter_error": 5.7991227877418616e-05,
+    "ordinary_pde_rms": 7.016883935279821e-10,
+    "ordinary_pde_max": 1.7065131530102917e-09,
+    "conditional_field_relative_error": 2.7416017366286225e-10,
+    "true_field_relative_error": 8.283775308488908e-05,
+    "degree": 6,
+    "neurons": 1071,
+    "process_peak_rss_bytes": 291635200
+  }
+]

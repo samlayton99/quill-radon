@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-01",
+  "status": "interrupted_by_user_request",
+  "reason": "User requested organizing existing results before any further experiments. Coordinator sent SIGINT to active recurrence campaign.",
+  "completed_cases": [
+    {
+      "case": "disk_counterrotating",
+      "viscosity": 0.1,
+      "status": "budget_exhausted"
+    },
+    {
+      "case": "disk_counterrotating",
+      "viscosity": 0.03,
+      "status": "budget_exhausted"
+    }
+  ],
+  "interrupted_case": {
+    "case": "disk_stirring",
+    "viscosity": 0.01,
+    "checkpoint": "recurrence_disk_stirring_nu0.01_p64_n513_latest.npz",
+    "final_solve_and_audit_completed": false
+  },
+  "unstarted_cases": [
+    {
+      "case": "disk_stirring",
+      "viscosity": 0.003
+    }
+  ],
+  "classification": "Administrative interruption, not converged and not a numerical-failure result. Completed earlier budget exits retain their original status.",
+  "no_new_numerical_evaluation": true
+}

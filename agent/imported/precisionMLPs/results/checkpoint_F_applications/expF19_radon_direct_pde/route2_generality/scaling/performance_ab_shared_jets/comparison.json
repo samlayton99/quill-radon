@@ -1,0 +1,35 @@
+{
+  "experiment": "Same cold 20D quadratic control, profile derivative reuse only",
+  "changes": "BallRidgeFeatures.evaluate_many plus optional residual engine hook; same directions, centers, samples, tolerance and zero initialization",
+  "caveat": "Single isolated process per measurement; background system load was not pinned, so timing is empirical not a rigorous throughput claim",
+  "before": {
+    "construction_seconds": 0.08067862503230572,
+    "solve_seconds": 10.640225084032863,
+    "feature_cache_seconds": 9.382908834144473,
+    "seconds": 11.008787584025413,
+    "peak_rss_bytes": 447627264,
+    "relative_l2": 6.915910006206645e-15,
+    "ordinary_mlp_pde_rms": 2.6224709570897707e-15,
+    "iterations": 4,
+    "status": "converged"
+  },
+  "after": {
+    "construction_seconds": 0.07872591726481915,
+    "solve_seconds": 2.3066381248645484,
+    "feature_cache_seconds": 1.2347427089698613,
+    "seconds": 2.6418311670422554,
+    "peak_rss_bytes": 444792832,
+    "relative_l2": 6.915910006206645e-15,
+    "ordinary_mlp_pde_rms": 2.6224709570897707e-15,
+    "iterations": 4,
+    "status": "converged"
+  },
+  "speedup": {
+    "solve_seconds": 4.612871420677521,
+    "feature_cache_seconds": 7.599080169481284,
+    "seconds": 4.167104893516206
+  },
+  "solved_coefficients_bitwise_equal": true,
+  "maximum_coefficient_difference": 0.0,
+  "original_scientific_summary_preserved": true
+}

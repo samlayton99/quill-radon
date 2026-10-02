@@ -1,0 +1,564 @@
+{
+  "config": {
+    "case": "cavity",
+    "degree": 24,
+    "centers": 257,
+    "lam": 0.2,
+    "viscosity": 0.1,
+    "lid_speed": 1.0,
+    "seconds": 300.0,
+    "krylov": 180,
+    "max_iterations": 2,
+    "interior": 1950,
+    "boundary": 260,
+    "linearization_basis": "ideal",
+    "inexact_newton": false,
+    "preconditioner_block_size": 1536,
+    "tolerance": 1e-14
+  },
+  "status": "iteration_limit",
+  "solver": {
+    "status": "iteration_limit",
+    "converged": false,
+    "execution": "streamed",
+    "batch_size": 64,
+    "optimization_converged": false,
+    "iterations": 2,
+    "objective": 2.931111565570637e-09,
+    "tolerance": 1e-14,
+    "blocks": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "input_rows": 1950,
+        "output_rows": 1950,
+        "equations": 3,
+        "rms": 3.231450226753605e-05,
+        "pre_relation_rms": 3.231450226753605e-05,
+        "relation": "eq",
+        "active_entries": 5850,
+        "scaled_rms": [
+          1.9482130735948713e-05,
+          2.1284736446029154e-05,
+          4.795923004809672e-05
+        ],
+        "maximum_scaled_rms": 4.795923004809672e-05,
+        "weighted_norm": 5.597035974867213e-05
+      },
+      {
+        "name": "prescribed_wall_velocity",
+        "input_rows": 260,
+        "output_rows": 260,
+        "equations": 2,
+        "rms": 1.6521325493863402e-05,
+        "pre_relation_rms": 1.6521325493863402e-05,
+        "relation": "eq",
+        "active_entries": 520,
+        "scaled_rms": [
+          1.5773287001906554e-05,
+          1.723693155128973e-05
+        ],
+        "maximum_scaled_rms": 1.723693155128973e-05,
+        "weighted_norm": 5.224501852561456e-05
+      },
+      {
+        "name": "pressure_gauge",
+        "input_rows": 1,
+        "output_rows": 1,
+        "equations": 1,
+        "rms": 6.07253691775611e-11,
+        "pre_relation_rms": 6.07253691775611e-11,
+        "relation": "eq",
+        "active_entries": 1,
+        "scaled_rms": [
+          6.07253691775611e-11
+        ],
+        "maximum_scaled_rms": 6.07253691775611e-11,
+        "weighted_norm": 6.07253691775611e-11
+      }
+    ],
+    "residual_evaluations": 5,
+    "linearizations": 3,
+    "lsmr_iterations": 360,
+    "seconds": 10.604049665853381,
+    "basis_setup_seconds": 7.834285497665405e-06,
+    "basis_cache_bytes": 0,
+    "unknowns": 975,
+    "feature_metrics": {
+      "backend": "actual_tanh_factored_box_profiles",
+      "dimension": 2,
+      "profile_degree": 24,
+      "directions": 25,
+      "neurons": 7275,
+      "unknowns": 325,
+      "interior_centers": 257,
+      "halo_per_side": 17,
+      "geometry_map_bytes": 0,
+      "encoding_bank_bytes": 58200,
+      "jet_anchor_bytes": 4656,
+      "jet_panel_budget_bytes": 16777216,
+      "maximum_direction_batch": 4,
+      "maximum_point_batch": 64,
+      "direction_array_bytes": 800,
+      "coefficient_count": 325,
+      "degree": 24,
+      "redundant_profile_unknowns": 601,
+      "coordinate_workspace_bytes": 65000,
+      "angular_panel_bytes": 41600,
+      "sparse_laplacian_bytes": 13248,
+      "coordinate_state_array_bytes": 34112,
+      "coordinate_python_lookup_entries": 325,
+      "coordinate_scalar_factor_count": 819,
+      "angular_weight_total_variation": 1.0,
+      "selected_column_profile_panel_bytes_per_column": 4808,
+      "selected_column_neuron_panel_bytes_per_column": 2328,
+      "mode_label_bytes": 7800,
+      "coordinate_scope": "Exact analytical ball-moment factorization; float64 polynomial cancellation limits high-degree precision",
+      "product_gates": false,
+      "polynomials_in_forward": false,
+      "construction_uses_target_data": false,
+      "construction_seconds": 0.06731379171833396
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "block",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 247,
+        "factor_bytes": 1902264,
+        "setup_seconds": 0.22717720922082663,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 1,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 247,
+        "factor_bytes": 1902264,
+        "setup_seconds": 0.22487124986946583,
+        "ridge_relative": 1e-12,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            true
+          ],
+          "inconsistent_axes": [],
+          "constraint_edges": 5,
+          "blocks_ignored": 1,
+          "equations_considered": 5,
+          "constant_terms": 10,
+          "varying_terms_ignored": 8,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          true
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 64,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [],
+    "preconditioner_setup_seconds": 0.45204845909029245,
+    "settings": {
+      "max_iterations": 2,
+      "lsmr_tolerance": 1e-07,
+      "effective_lsmr_tolerance": 2.220446049250313e-16,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": 180,
+      "gradient_tolerance": 1e-11,
+      "step_tolerance": 1e-12,
+      "scaling_probes": 4,
+      "max_seconds": 300.0,
+      "max_residual_evaluations": 500,
+      "high_accuracy": true,
+      "linear_refinement_steps": 0,
+      "inexact_newton": false,
+      "linearization_basis": "ideal",
+      "iteration_callback_active": true
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "budget": {
+      "time_limit_seconds": 300.0,
+      "time_overshoot_seconds": 0.0,
+      "completed_direction_trials_after_time_budget": 0,
+      "residual_evaluation_limit": 500,
+      "residual_evaluation_limit_exceeded": false,
+      "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 720875,
+    "residual_vector_bytes": 50968,
+    "coefficient_vector_bytes": 7800,
+    "input_point_bytes": 35376,
+    "prepared_forward_active": true,
+    "prepared_adjoint_active": true,
+    "shared_multifield_active": true,
+    "supplied_aggregation_bytes": 0,
+    "unassembled_dense_jacobian_bytes": 49693800,
+    "storage_note": "No Q-by-coefficient feature cache; O(Q) local sensitivities and residual/Krylov vectors retained; bounded point/column panels; optional prepared neuron readouts/adjoints use O(neurons * fields) storage, counted in product_counts; supplied dense aggregation is counted separately. Byte metrics are array accounting, not process peak RSS.",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 2,
+      "column_gram_calls": 8,
+      "column_panel_bytes_max": 379392,
+      "selected_feature_panel_bytes_max": 632320,
+      "forward_batches": 185,
+      "adjoint_batches": 74,
+      "callback_rows_max": 64,
+      "callback_jet_bytes_max": 7680,
+      "feature_rows_max": 64,
+      "prepared_forward_calls": 5,
+      "prepared_adjoint_calls": 2,
+      "prepared_forward_bytes_max": 175224,
+      "prepared_adjoint_bytes_max": 174624,
+      "ideal_tensor_workspace_plan": {
+        "enabled": true,
+        "rows": 64,
+        "tensor_bytes": 15000,
+        "workspace_bytes": 265600,
+        "fixed_bytes": 35200,
+        "bytes_per_row": 3600,
+        "workspace_budget_bytes": 16777216,
+        "tensor_budget_bytes": 4194304,
+        "reason": "bounded_sum_factorization"
+      },
+      "ideal_rmatvec_calls": 372,
+      "ideal_tensor_adjoint_batches": 13764,
+      "approximate_column_gram_calls": 8,
+      "ideal_matvec_calls": 362,
+      "ideal_tensor_forward_batches": 13394
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 6371
+  },
+  "features": {
+    "backend": "actual_tanh_factored_box_profiles",
+    "dimension": 2,
+    "profile_degree": 24,
+    "directions": 25,
+    "neurons": 7275,
+    "unknowns": 325,
+    "interior_centers": 257,
+    "halo_per_side": 17,
+    "geometry_map_bytes": 0,
+    "encoding_bank_bytes": 58200,
+    "jet_anchor_bytes": 4656,
+    "jet_panel_budget_bytes": 16777216,
+    "maximum_direction_batch": 4,
+    "maximum_point_batch": 64,
+    "direction_array_bytes": 800,
+    "coefficient_count": 325,
+    "degree": 24,
+    "redundant_profile_unknowns": 601,
+    "coordinate_workspace_bytes": 65000,
+    "angular_panel_bytes": 41600,
+    "sparse_laplacian_bytes": 13248,
+    "coordinate_state_array_bytes": 34112,
+    "coordinate_python_lookup_entries": 325,
+    "coordinate_scalar_factor_count": 819,
+    "angular_weight_total_variation": 1.0,
+    "selected_column_profile_panel_bytes_per_column": 4808,
+    "selected_column_neuron_panel_bytes_per_column": 2328,
+    "mode_label_bytes": 7800,
+    "coordinate_scope": "Exact analytical ball-moment factorization; float64 polynomial cancellation limits high-degree precision",
+    "product_gates": false,
+    "polynomials_in_forward": false,
+    "construction_uses_target_data": false,
+    "construction_seconds": 0.06731379171833396
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 6.387963910029603e-07,
+      "maximum_scaled_block_rms": 0.0006478133429678978,
+      "damping": 4.1966212732724316e-07,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 0.21641679061576724,
+      "scaled_projected_gradient_inf": 0.0004140841721453728,
+      "scaled_gradient_threshold": 2.5097846004650247e-19,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 7,
+          "iterations": 180,
+          "linearization_basis": "ideal",
+          "tolerance": 2.220446049250313e-16,
+          "accurate_tolerance": true
+        }
+      ],
+      "lsmr_stop": 7,
+      "lsmr_iterations": 180,
+      "estimated_condition": 2.2428903863110476,
+      "linearized_residual_norm": 7.656343941023463e-05,
+      "linearized_residual_relative": 0.06773688328630748,
+      "linearized_stationarity": {
+        "residual_norm": 7.656343941023463e-05,
+        "normal_residual_norm": 8.695247786500531e-10,
+        "operator_norm_estimate": 16.638144656795383,
+        "normal_residual_threshold": 1.8102832375593498e-17,
+        "normal_residual_relative": 6.825832579283867e-07,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": false,
+        "inner_solve_accurate": true,
+        "actual_jacobian": false,
+        "relative_model_decrease": 0.9322631167136926,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 0.0034573605794144357,
+      "trial_objective": 2.9313864561800846e-09,
+      "relative_objective_decrease": 0.9954110785573199
+    },
+    {
+      "iteration": 1,
+      "objective": 2.9313864561800846e-09,
+      "maximum_scaled_block_rms": 4.795875079877033e-05,
+      "damping": 2.3000417781785536e-09,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 5.479252707678825,
+      "scaled_projected_gradient_inf": 1.6649276024206474e-07,
+      "scaled_gradient_threshold": 1.7001677025277667e-20,
+      "linear_solves": [
+        {
+          "preconditioner": "block",
+          "stop": 7,
+          "iterations": 180,
+          "linearization_basis": "ideal",
+          "tolerance": 2.220446049250313e-16,
+          "accurate_tolerance": true
+        }
+      ],
+      "lsmr_stop": 7,
+      "lsmr_iterations": 180,
+      "estimated_condition": 5.221050467876823,
+      "linearized_residual_norm": 7.656515610089714e-05,
+      "linearized_residual_relative": 0.9999531112237089,
+      "linearized_stationarity": {
+        "residual_norm": 7.656515610089714e-05,
+        "normal_residual_norm": 4.2366437085808624e-12,
+        "operator_norm_estimate": 16.634720334352654,
+        "normal_residual_threshold": 1.809951241816746e-17,
+        "normal_residual_relative": 3.326406083861403e-09,
+        "orthogonal_to_working_precision": false,
+        "lsmr_completed": false,
+        "inner_solve_accurate": true,
+        "actual_jacobian": false,
+        "relative_model_decrease": 4.688877629110966e-05,
+        "negligible_model_decrease_threshold": 1.4901161193847656e-08
+      },
+      "step_length": 1.0,
+      "step_norm": 3.162298370568299e-07,
+      "trial_objective": 2.931111565570637e-09,
+      "relative_objective_decrease": 9.377494696007222e-05
+    },
+    {
+      "iteration": 2,
+      "objective": 2.931111565570637e-09,
+      "maximum_scaled_block_rms": 4.795923004809672e-05,
+      "damping": 7.666805927261846e-10,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 10.603238165844232
+    }
+  ],
+  "ordinary_audit": {
+    "audit_points": 4096,
+    "momentum_rms": 0.00012052597258619492,
+    "momentum_max_abs": 0.00524963834525724,
+    "advective_rms": 0.11011833283894233,
+    "viscous_rms": 0.2397764164670117,
+    "pressure_gradient_rms": 0.23961325367031558,
+    "divergence_rms": 0.00028942884087157495,
+    "divergence_max_abs": 0.014920564459696063,
+    "wall_velocity_rms": 1.6315074432650638e-05,
+    "wall_velocity_max_abs": 5.871453477969169e-05,
+    "net_boundary_mass_flux": 2.8987009697415096e-07,
+    "maximum_wall_normal_speed": 5.871453477969169e-05,
+    "maximum_cross_section_flux": 7.161148735988318e-06,
+    "cross_section_fluxes": [
+      7.161148735988318e-06,
+      -2.4401289300447597e-07,
+      6.642863917534097e-06,
+      -4.808567150439332e-07,
+      6.060042148582916e-06,
+      -3.232499330030793e-07,
+      5.88190919438965e-06,
+      -3.9944420960661906e-08,
+      2.560730665698629e-06,
+      1.5017819184082627e-06
+    ],
+    "velocity_rms": 0.13654909148860433,
+    "max_sampled_speed": 0.9954956347675874,
+    "pressure_rms": 0.13344332789873614,
+    "pressure_gauge": -3.1377567211166024e-11,
+    "export_stable_max_abs": 4.602634939843142e-11,
+    "neural_vs_ideal_coordinate_jet_rms": {
+      "(0, 0)": 3.881480312151853e-11,
+      "(1, 0)": 3.56067602065789e-10,
+      "(0, 1)": 3.249943054275477e-10,
+      "(2, 0)": 4.801698612596486e-09,
+      "(0, 2)": 4.459718781921244e-09
+    },
+    "coordinate_diagnostic_note": "Same learned coordinates evaluated by actual MLP versus ideal analytical coordinate basis; not truth error.",
+    "left_right_asymmetry_relative_to_lid": 0.019556166670460666,
+    "symmetry_note": "Descriptive only: the finite-Re driven flow need not be reflection-symmetric.",
+    "ordinary_export": "Linear/Tanh/Linear, float64, ordinary Torch automatic differentiation",
+    "truth_error_available": false,
+    "requested_tolerance": 1e-14,
+    "near_corner_momentum_rms": 0.0047417201977228264,
+    "near_corner_momentum_max_abs": 0.011446351988510975,
+    "richer_resolution_comparison": {
+      "previous_degree": 16,
+      "degree": 24,
+      "strictly_richer": true,
+      "velocity_relative_l2": 0.00061585188827912,
+      "pressure_relative_l2": 0.002135034355196237
+    },
+    "sampled_residual_reaches_requested_tolerance": false,
+    "continuum_accuracy_certified": false
+  },
+  "setup_seconds": 0.06787308445200324,
+  "solve_seconds": 10.604086249601096,
+  "total_seconds": 12.05962633434683,
+  "process_peak_rss_bytes": 371310592,
+  "reynolds": {
+    "length": 2.0,
+    "velocity_scale_upper_bound": 1.0,
+    "value_upper_bound": 20.0,
+    "convention": "diameter/side length 2 and peak prescribed boundary speed"
+  },
+  "source_policy": {
+    "interior_solution_labels": false,
+    "forcing": "identically zero",
+    "exterior_solve": false,
+    "analytical_reference": false,
+    "initialization": "previous native PDE iterate",
+    "resumed_archive": "results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/completed_largeblock_cavity_nu0.1_p16_n257.npz",
+    "resumed_viscosity": 0.1,
+    "boundary": "u=(1-x^2)^2, v=0 on lid; zero other walls",
+    "pressure_gauge": "p(0,0)=0"
+  },
+  "limitations": [
+    "No exact interior solution: residual and refinement agreement are evidence, not a proof.",
+    "Steady moderate-Re flow; no claim about turbulence or uniqueness at arbitrary Reynolds number.",
+    "C1-compatible lid does not remove all polygon-corner singularities."
+  ]
+}

@@ -1,0 +1,97 @@
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+oracle W=  256 N= 8 M=  32 units=  256 rank=  257 rel_v=2.82e-04 rel_p=8.00e-03 linf_v=5.3e-03 [0s]
+oracle W=  256 N=12 M=  21 units=  252 rank=  253 rel_v=2.08e-03 rel_p=2.82e-02 linf_v=5.9e-02 [0s]
+oracle W=  256 N=16 M=  16 units=  256 rank=  257 rel_v=8.15e-03 rel_p=5.97e-02 linf_v=1.9e-01 [0s]
+oracle W=  256 N=24 M=  10 units=  240 rank=  241 rel_v=2.10e-01 rel_p=4.22e-01 linf_v=1.1e+01 [0s]
+oracle W=  256 N=32 M=   8 units=  256 rank=  257 rel_v=9.28e-01 rel_p=2.75e+00 linf_v=1.3e+02 [0s]
+oracle W=  256 N=48 M=   5 units=  240 rank=  241 rel_v=1.16e+02 rel_p=1.61e+02 linf_v=2.4e+04 [0s]
+oracle W=  512 N= 8 M=  64 units=  512 rank=  513 rel_v=4.33e-07 rel_p=2.08e-05 linf_v=1.5e-05 [0s]
+oracle W=  512 N=12 M=  42 units=  504 rank=  505 rel_v=1.89e-05 rel_p=8.83e-04 linf_v=4.8e-04 [0s]
+oracle W=  512 N=16 M=  32 units=  512 rank=  513 rel_v=2.88e-04 rel_p=8.53e-03 linf_v=8.4e-03 [0s]
+oracle W=  512 N=24 M=  21 units=  504 rank=  505 rel_v=5.66e-03 rel_p=9.30e-02 linf_v=8.1e-01 [0s]
+oracle W=  512 N=32 M=  16 units=  512 rank=  513 rel_v=5.48e-02 rel_p=4.01e-01 linf_v=9.0e+00 [0s]
+oracle W=  512 N=48 M=  10 units=  480 rank=  480 rel_v=1.76e+02 rel_p=1.94e+02 linf_v=3.0e+04 [0s]
+oracle W= 1024 N= 8 M= 128 units= 1024 rank=  988 rel_v=2.26e-09 rel_p=8.09e-09 linf_v=1.9e-07 [1s]
+oracle W= 1024 N=12 M=  85 units= 1020 rank= 1021 rel_v=5.15e-08 rel_p=1.77e-06 linf_v=1.9e-06 [1s]
+oracle W= 1024 N=16 M=  64 units= 1024 rank= 1025 rel_v=5.41e-07 rel_p=3.07e-05 linf_v=3.7e-05 [1s]
+oracle W= 1024 N=24 M=  42 units= 1008 rank= 1008 rel_v=8.03e-05 rel_p=4.46e-03 linf_v=7.2e-03 [1s]
+oracle W= 1024 N=32 M=  32 units= 1024 rank= 1023 rel_v=1.01e-02 rel_p=2.70e-01 linf_v=1.4e+00 [1s]
+oracle W= 1024 N=48 M=  21 units= 1008 rank=  972 rel_v=6.51e-01 rel_p=9.31e+00 linf_v=1.2e+02 [1s]
+oracle W= 2048 N= 8 M= 256 units= 2048 rank= 1247 rel_v=1.64e-10 rel_p=9.04e-10 linf_v=1.1e-08 [4s]
+oracle W= 2048 N=12 M= 170 units= 2040 rank= 1757 rel_v=3.49e-11 rel_p=1.13e-10 linf_v=3.0e-09 [4s]
+oracle W= 2048 N=16 M= 128 units= 2048 rank= 1897 rel_v=2.75e-11 rel_p=3.88e-09 linf_v=3.3e-09 [4s]
+oracle W= 2048 N=24 M=  85 units= 2040 rank= 1954 rel_v=7.90e-08 rel_p=2.82e-06 linf_v=7.1e-06 [4s]
+oracle W= 2048 N=32 M=  64 units= 2048 rank= 1949 rel_v=5.72e-06 rel_p=1.44e-04 linf_v=1.1e-03 [4s]
+oracle W= 2048 N=48 M=  42 units= 2016 rank= 1873 rel_v=1.38e-03 rel_p=1.22e-01 linf_v=2.5e-01 [4s]
+oracle W= 4096 N= 8 M= 512 units= 4096 rank= 1324 rel_v=1.01e-10 rel_p=3.29e-10 linf_v=3.4e-09 [23s]
+oracle W= 4096 N=12 M= 341 units= 4092 rank= 2208 rel_v=9.15e-12 rel_p=3.81e-11 linf_v=2.0e-10 [22s]
+oracle W= 4096 N=16 M= 256 units= 4096 rank= 2925 rel_v=3.57e-12 rel_p=1.02e-11 linf_v=4.7e-10 [22s]
+oracle W= 4096 N=24 M= 170 units= 4080 rank= 3376 rel_v=1.14e-12 rel_p=5.88e-12 linf_v=1.3e-10 [23s]
+oracle W= 4096 N=32 M= 128 units= 4096 rank= 3530 rel_v=2.70e-11 rel_p=8.96e-09 linf_v=5.4e-09 [22s]
+oracle W= 4096 N=48 M=  85 units= 4080 rank= 3581 rel_v=4.43e-07 rel_p=2.20e-05 linf_v=5.7e-05 [23s]
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+dynamic W=256 N=8 M=32 units=256 rows=3145 cols=771 w_mult=1.0 warm=zero
+    GN  1 stacked 6.18e+01 -> 5.26e+01  pde_max 8.72e+00  alpha 1  rank 771  solve 0s  rel_l2_v 4.05e-01  rel_l2_p 2.64e+00
+    GN  2 stacked 5.70e+00 -> 1.02e+00  pde_max 1.11e+00  alpha 1  rank 771  solve 0s  rel_l2_v 3.96e-02  rel_l2_p 4.48e-01
+    GN  3 stacked 5.23e+00 -> 1.17e-01  pde_max 2.39e-02  alpha 1  rank 771  solve 0s  rel_l2_v 1.75e-03  rel_l2_p 5.65e-02
+    GN  4 stacked 1.19e-01 -> 7.88e-02  pde_max 1.27e-02  alpha 1  rank 771  solve 0s  rel_l2_v 1.72e-03  rel_l2_p 5.31e-02
+    GN  5 stacked 7.88e-02 -> 7.88e-02  pde_max 1.27e-02  alpha 0.00391  rank 771  solve 0s  rel_l2_v 1.72e-03  rel_l2_p 5.31e-02
+dynamic W=  256 N= 8 done: rel_v=1.82e-03 rel_p=6.57e-02 linf_v=1.6e-02 mom_rms=4.9e-03 div_max=6.3e-02 iters=5 [1s]
+dynamic W=512 N=8 M=64 units=512 rows=5897 cols=1539 w_mult=1.0 warm=yes
+    warm start fitted: rel_v 1.65e-03 rel_p 5.31e-02
+    GN  1 stacked 2.91e-01 -> 5.12e-04  pde_max 2.44e-04  alpha 1  rank 1539  solve 1s  rel_l2_v 5.20e-06  rel_l2_p 2.38e-04
+    GN  2 stacked 5.12e-04 -> 4.22e-04  pde_max 5.91e-05  alpha 1  rank 1539  solve 1s  rel_l2_v 4.94e-06  rel_l2_p 1.71e-04
+    GN  3 stacked 4.22e-04 -> 4.22e-04  pde_max 5.91e-05  alpha 0.00391  rank 1539  solve 1s  rel_l2_v 4.94e-06  rel_l2_p 1.71e-04
+dynamic W=  512 N= 8 done: rel_v=5.72e-06 rel_p=2.60e-04 linf_v=5.4e-05 mom_rms=3.3e-05 div_max=3.1e-04 iters=3 [4s]
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+tune W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=0.3 warm=yes
+    warm start fitted: rel_v 4.77e-06 rel_p 1.71e-04
+    GN  1 stacked 2.06e-03 -> 4.03e-06  pde_max 3.47e-07  alpha 1  rank 3045  solve 7s  rel_l2_v 1.28e-07  rel_l2_p 4.14e-06
+    GN  2 stacked 4.03e-06 -> 1.49e-06  pde_max 9.40e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 4.22e-08  rel_l2_p 1.50e-06
+    GN  3 stacked 1.49e-06 -> 8.46e-07  pde_max 5.55e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 2.02e-08  rel_l2_p 7.58e-07
+    GN  4 stacked 8.46e-07 -> 5.94e-07  pde_max 4.14e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 1.17e-08  rel_l2_p 4.83e-07
+    GN  5 stacked 5.94e-07 -> 4.88e-07  pde_max 3.33e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.79e-09  rel_l2_p 3.66e-07
+    GN  6 stacked 4.88e-07 -> 4.42e-07  pde_max 3.22e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.10e-09  rel_l2_p 3.14e-07
+    GN  7 stacked 4.42e-07 -> 4.21e-07  pde_max 3.28e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.10e-09  rel_l2_p 2.93e-07
+    GN  8 stacked 4.21e-07 -> 4.10e-07  pde_max 3.34e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.27e-09  rel_l2_p 2.84e-07
+    GN  9 stacked 4.10e-07 -> 4.04e-07  pde_max 3.38e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.40e-09  rel_l2_p 2.79e-07
+    GN 10 stacked 4.04e-07 -> 4.00e-07  pde_max 3.40e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.57e-09  rel_l2_p 2.78e-07
+    GN 11 stacked 4.00e-07 -> 3.98e-07  pde_max 3.42e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.68e-09  rel_l2_p 2.77e-07
+    GN 12 stacked 3.98e-07 -> 3.96e-07  pde_max 3.45e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.78e-09  rel_l2_p 2.78e-07
+    GN 13 stacked 3.96e-07 -> 3.95e-07  pde_max 3.45e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.88e-09  rel_l2_p 2.79e-07
+    GN 14 stacked 3.95e-07 -> 3.94e-07  pde_max 3.46e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 8.96e-09  rel_l2_p 2.79e-07
+    GN 15 stacked 3.94e-07 -> 3.94e-07  pde_max 3.47e-08  alpha 1  rank 3045  solve 7s  rel_l2_v 9.00e-09  rel_l2_p 2.81e-07
+tune W= 1024 N= 8 done: rel_v=1.51e-08 rel_p=5.52e-07 linf_v=7.6e-07 mom_rms=6.5e-08 div_max=6.3e-07 iters=15 [118s]
+tune W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=1.0 warm=yes
+    warm start fitted: rel_v 4.72e-06 rel_p 1.71e-04
+    GN  1 stacked 2.33e-03 -> 2.93e-06  pde_max 2.11e-07  alpha 1  rank 3021  solve 7s  rel_l2_v 3.09e-08  rel_l2_p 1.09e-06
+    GN  2 stacked 2.93e-06 -> 9.98e-07  pde_max 8.33e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.51e-08  rel_l2_p 4.96e-07
+    GN  3 stacked 9.98e-07 -> 9.17e-07  pde_max 6.95e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.39e-08  rel_l2_p 4.03e-07
+    GN  4 stacked 9.17e-07 -> 8.80e-07  pde_max 6.54e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.35e-08  rel_l2_p 3.81e-07
+    GN  5 stacked 8.80e-07 -> 8.43e-07  pde_max 6.39e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.29e-08  rel_l2_p 3.66e-07
+    GN  6 stacked 8.43e-07 -> 8.07e-07  pde_max 6.32e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.23e-08  rel_l2_p 3.52e-07
+    GN  7 stacked 8.07e-07 -> 7.75e-07  pde_max 6.22e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.17e-08  rel_l2_p 3.41e-07
+    GN  8 stacked 7.75e-07 -> 7.47e-07  pde_max 6.18e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.11e-08  rel_l2_p 3.33e-07
+    GN  9 stacked 7.47e-07 -> 7.24e-07  pde_max 6.15e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.06e-08  rel_l2_p 3.27e-07
+    GN 10 stacked 7.24e-07 -> 7.05e-07  pde_max 6.08e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 1.02e-08  rel_l2_p 3.25e-07
+    GN 11 stacked 7.05e-07 -> 6.91e-07  pde_max 6.05e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 9.83e-09  rel_l2_p 3.23e-07
+    GN 12 stacked 6.91e-07 -> 6.79e-07  pde_max 6.02e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 9.53e-09  rel_l2_p 3.23e-07
+    GN 13 stacked 6.79e-07 -> 6.70e-07  pde_max 6.03e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 9.26e-09  rel_l2_p 3.23e-07
+    GN 14 stacked 6.70e-07 -> 6.63e-07  pde_max 5.99e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 9.08e-09  rel_l2_p 3.25e-07
+    GN 15 stacked 6.63e-07 -> 6.58e-07  pde_max 5.97e-08  alpha 1  rank 3021  solve 7s  rel_l2_v 8.89e-09  rel_l2_p 3.27e-07
+tune W= 1024 N= 8 done: rel_v=1.37e-08 rel_p=4.52e-07 linf_v=6.7e-07 mom_rms=8.7e-08 div_max=1.9e-06 iters=15 [118s]
+tune W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 4.70e-06 rel_p 1.71e-04
+    GN  1 stacked 2.23e-03 -> 4.05e-06  pde_max 2.56e-07  alpha 1  rank 2977  solve 7s  rel_l2_v 3.62e-08  rel_l2_p 1.37e-06
+    GN  2 stacked 4.05e-06 -> 9.79e-07  pde_max 8.68e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 8.17e-09  rel_l2_p 3.37e-07
+    GN  3 stacked 9.79e-07 -> 8.16e-07  pde_max 7.22e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.29e-09  rel_l2_p 2.15e-07
+    GN  4 stacked 8.16e-07 -> 8.02e-07  pde_max 6.84e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.23e-09  rel_l2_p 2.21e-07
+    GN  5 stacked 8.02e-07 -> 7.99e-07  pde_max 6.85e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.31e-09  rel_l2_p 2.30e-07
+    GN  6 stacked 7.99e-07 -> 7.98e-07  pde_max 6.88e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.35e-09  rel_l2_p 2.32e-07
+    GN  7 stacked 7.98e-07 -> 7.97e-07  pde_max 6.88e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.36e-09  rel_l2_p 2.34e-07
+tune W= 1024 N= 8 done: rel_v=8.24e-09 rel_p=4.30e-07 linf_v=3.3e-07 mom_rms=6.0e-08 div_max=6.8e-07 iters=7 [60s]
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+dynamic W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 4.70e-06 rel_p 1.71e-04
+    GN  1 stacked 2.23e-03 -> 4.05e-06  pde_max 2.56e-07  alpha 1  rank 2977  solve 7s  rel_l2_v 3.62e-08  rel_l2_p 1.37e-06
+    GN  2 stacked 4.05e-06 -> 9.79e-07  pde_max 8.68e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 8.17e-09  rel_l2_p 3.37e-07

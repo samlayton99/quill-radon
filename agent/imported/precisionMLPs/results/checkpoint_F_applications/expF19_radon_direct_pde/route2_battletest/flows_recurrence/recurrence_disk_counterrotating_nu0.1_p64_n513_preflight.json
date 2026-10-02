@@ -1,0 +1,34 @@
+{
+  "case": "disk_counterrotating",
+  "viscosity": 0.1,
+  "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/flows/battle_v1_disk_counterrotating_nu0.1_p48_n513.npz",
+  "source_sha256": "5787e476d4112926089ac08903c3616005d19f2b702efbd678709d374819ddac",
+  "workspace": {
+    "preconditioner_workspace_bytes": 339263488,
+    "ideal_correction_workspace_bytes": 634880,
+    "preconditioner_components": {
+      "basis": "ideal",
+      "block_width": 2048,
+      "directional_panel_bytes": 0,
+      "ideal_coordinate_panel_bytes": 19922944,
+      "local_physics_panel_bytes": 12582912,
+      "factor_bytes": 105431040,
+      "factorization_workspace_bytes": 201326592
+    },
+    "ideal_tensor_plan": null,
+    "block_budget_selection": {
+      "requested": 2048,
+      "selected": 2048,
+      "available_bytes": 1073741824,
+      "changed": false,
+      "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+    }
+  },
+  "selection": {
+    "requested": 2048,
+    "selected": 2048,
+    "available_bytes": 1073741824,
+    "changed": false,
+    "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+  }
+}

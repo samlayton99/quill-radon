@@ -1,0 +1,136 @@
+even reference
+  even B=  128 M=  16 N=  8 [  0.1s] ridge4=2.9e-01 gauss_=6.9e-03 compos=1.2e-02 radial=4.0e-03
+  even B=  128 M=   8 N= 16 [  0.1s] ridge4=3.7e-01 gauss_=3.3e-02 compos=2.2e-02 radial=2.0e-02
+  even B=  128 M=   4 N= 32 [  0.1s] ridge4=7.8e-01 gauss_=4.9e-02 compos=6.6e-02 radial=2.4e-02
+  even B=  256 M=  32 N=  8 [  0.3s] ridge4=8.0e-02 gauss_=4.4e-04 compos=1.9e-03 radial=8.3e-04
+  even B=  256 M=  16 N= 16 [  0.3s] ridge4=2.9e-01 gauss_=6.9e-03 compos=1.2e-02 radial=4.0e-03
+  even B=  256 M=   8 N= 32 [  0.3s] ridge4=3.7e-01 gauss_=3.3e-02 compos=2.2e-02 radial=2.0e-02
+  even B=  512 M=  64 N=  8 [  0.8s] ridge4=5.5e-02 gauss_=3.1e-05 compos=1.4e-04 radial=2.7e-04
+  even B=  512 M=  32 N= 16 [  0.8s] ridge4=8.0e-02 gauss_=4.5e-04 compos=1.9e-03 radial=8.4e-04
+  even B=  512 M=  16 N= 32 [  0.8s] ridge4=2.9e-01 gauss_=7.0e-03 compos=1.2e-02 radial=4.0e-03
+  even B= 1024 M= 128 N=  8 [  2.5s] ridge4=1.3e-02 gauss_=5.0e-07 compos=7.2e-06 radial=2.6e-05
+  even B= 1024 M=  64 N= 16 [  2.5s] ridge4=5.6e-02 gauss_=3.1e-05 compos=1.5e-04 radial=2.7e-04
+  even B= 1024 M=  32 N= 32 [  2.4s] ridge4=8.1e-02 gauss_=4.5e-04 compos=1.9e-03 radial=8.5e-04
+  even B= 2048 M= 256 N=  8 [ 11.4s] ridge4=7.6e-04 gauss_=8.0e-09 compos=2.7e-07 radial=2.5e-06
+  even B= 2048 M= 128 N= 16 [ 13.7s] ridge4=1.4e-02 gauss_=5.1e-07 compos=7.4e-06 radial=2.7e-05
+  even B= 2048 M=  64 N= 32 [ 10.9s] ridge4=5.7e-02 gauss_=3.2e-05 compos=1.5e-04 radial=2.8e-04
+  even B= 4096 M= 512 N=  8 [ 54.9s] ridge4=3.6e-06 gauss_=4.5e-10 compos=2.9e-09 radial=3.7e-07
+  even B= 4096 M= 256 N= 16 [ 54.5s] ridge4=7.9e-04 gauss_=6.1e-09 compos=2.8e-07 radial=2.5e-06
+  even B= 4096 M= 128 N= 32 [ 50.1s] ridge4=1.4e-02 gauss_=5.3e-07 compos=7.7e-06 radial=2.8e-05
+grow: ridge4_bump
+  r 1 open_atom    units=   32 dirs=   1 atoms= 1 val=5.99e-01 [  8.1s]  open_bg=7.4e-01(+32) open_atom=6.0e-01(+32)
+  r 2 open_atom    units=   64 dirs=   2 atoms= 2 val=3.48e-01 [  6.1s]  open_bg=4.0e-01(+32) open_atom=3.5e-01(+32) refine_atoms=6.0e-01(+32)
+  r 3 open_atom    units=   96 dirs=   3 atoms= 3 val=2.56e-01 [  6.2s]  open_bg=2.8e-01(+32) open_atom=2.6e-01(+32) refine_atoms=3.6e-01(+64)
+  r 4 open_atom    units=  128 dirs=   4 atoms= 4 val=4.94e-03 [  6.3s]  open_bg=2.3e-01(+32) open_atom=4.9e-03(+32) refine_atoms=2.6e-01(+96)
+  r 5 open_atom    units=  160 dirs=   5 atoms= 5 val=3.17e-03 [  7.5s]  open_bg=3.8e-03(+32) open_atom=3.2e-03(+32) refine_atoms=5.0e-03(+128)
+  r 6 open_atom    units=  192 dirs=   6 atoms= 6 val=1.60e-03 [  8.3s]  open_bg=1.9e-03(+40) open_atom=1.6e-03(+32) refine_atoms=3.2e-03(+160)
+  r 7 open_atom    units=  224 dirs=   7 atoms= 7 val=8.66e-04 [  6.7s]  open_bg=1.2e-03(+48) open_atom=8.7e-04(+32) refine_atoms=1.6e-03(+192)
+  r 8 open_atom    units=  256 dirs=   8 atoms= 8 val=5.71e-04 [  7.3s]  open_bg=7.2e-04(+56) open_atom=5.7e-04(+32) refine_atoms=1.4e-03(+224)
+  r 9 open_atom    units=  288 dirs=   9 atoms= 9 val=2.94e-04 [  7.6s]  open_bg=4.5e-04(+64) open_atom=2.9e-04(+32) refine_atoms=5.8e-04(+256)
+  r10 open_atom    units=  320 dirs=  10 atoms=10 val=2.46e-04 [ 10.4s]  open_bg=2.4e-04(+72) open_atom=2.5e-04(+32) refine_atoms=3.0e-04(+288)
+  r11 open_atom    units=  352 dirs=  11 atoms=11 val=2.07e-04 [  7.8s]  open_bg=1.7e-04(+80) open_atom=2.1e-04(+32) refine_atoms=2.5e-04(+320)
+  r12 open_atom    units=  384 dirs=  12 atoms=12 val=1.56e-04 [  8.7s]  open_bg=1.3e-04(+88) open_atom=1.6e-04(+32) refine_atoms=2.1e-04(+352)
+  r13 open_atom    units=  416 dirs=  13 atoms=13 val=9.75e-05 [ 10.5s]  open_bg=1.1e-04(+96) open_atom=9.8e-05(+32) refine_atoms=1.6e-04(+384)
+  r14 open_bg      units=  520 dirs=  26 atoms=13 val=7.17e-05 [  9.9s]  open_bg=7.2e-05(+104) refine_atoms=9.8e-05(+416)
+  r15 open_atom    units=  552 dirs=  27 atoms=14 val=4.46e-05 [ 12.8s]  open_bg=4.4e-05(+128) open_atom=4.5e-05(+32) refine_bg=7.2e-05(+52) refine_atoms=7.2e-05(+416)
+  r16 open_atom    units=  584 dirs=  28 atoms=15 val=2.77e-05 [ 13.2s]  open_bg=2.3e-05(+136) open_atom=2.8e-05(+32) refine_bg=4.5e-05(+52) refine_atoms=4.6e-05(+448)
+  r17 open_atom    units=  616 dirs=  29 atoms=16 val=1.17e-05 [ 18.5s]  open_bg=1.6e-05(+144) open_atom=1.2e-05(+32) refine_bg=2.8e-05(+52) refine_atoms=2.8e-05(+480)
+  r18 open_bg      units=  768 dirs=  48 atoms=16 val=8.35e-06 [ 10.6s]  open_bg=8.3e-06(+152) refine_bg=1.2e-05(+52) refine_atoms=1.2e-05(+512)
+  r19 open_atom    units=  800 dirs=  49 atoms=17 val=2.77e-06 [ 19.7s]  open_bg=4.4e-06(+192) open_atom=2.8e-06(+32) refine_bg=8.4e-06(+128) refine_atoms=1.4e-05(+512)
+  r20 open_atom    units=  832 dirs=  50 atoms=18 val=1.84e-06 [ 23.8s]  open_bg=1.5e-06(+200) open_atom=1.8e-06(+32) refine_bg=2.8e-06(+128) refine_atoms=7.5e-06(+544)
+  r21 open_bg      units= 1040 dirs=  76 atoms=18 val=1.02e-06 [ 16.1s]  open_bg=1.0e-06(+208) refine_bg=1.9e-06(+128) refine_atoms=2.0e-06(+576)
+  r22 open_bg      units= 1296 dirs= 108 atoms=18 val=4.64e-07 [ 21.3s]  open_bg=4.6e-07(+256) refine_bg=1.0e-06(+232) refine_atoms=1.2e-06(+576)
+  r23 open_bg      units= 1616 dirs= 148 atoms=18 val=2.50e-07 [ 30.6s]  open_bg=2.5e-07(+320) refine_bg=4.8e-07(+360) refine_atoms=5.6e-07(+576)
+  r24 open_bg      units= 2016 dirs= 198 atoms=18 val=4.94e-08 [ 38.6s]  open_bg=4.9e-08(+400) refine_bg=2.5e-07(+520) refine_atoms=3.2e-07(+576)
+  r25 open_atom    units= 2048 dirs= 199 atoms=19 val=1.38e-09 [111.7s]  open_bg=2.3e-08(+504) open_atom=1.4e-09(+32) refine_bg=5.2e-08(+720) refine_atoms=5.9e-08(+576)
+  r26 open_bg      units= 2560 dirs= 263 atoms=19 val=5.70e-10 [ 57.4s]  open_bg=5.7e-10(+512) refine_bg=1.4e-09(+720) refine_atoms=1.4e-09(+608)
+  r27 open_bg      units= 3200 dirs= 343 atoms=19 val=7.90e-11 [ 94.8s]  open_bg=7.9e-11(+640) refine_bg=5.9e-10(+976) refine_atoms=5.8e-10(+608)
+  r28 open_bg      units= 4000 dirs= 443 atoms=19 val=2.10e-11 [147.9s]  open_bg=2.1e-11(+800) refine_bg=8.2e-11(+896) refine_atoms=8.7e-11(+608)
+  r29 open_atom    units= 4032 dirs= 444 atoms=20 val=1.85e-11 [540.1s]  open_bg=2.0e-11(+96) open_atom=1.8e-11(+32) refine_bg=2.4e-11(+96) refine_atoms=1.7e-11(+96)
+  r30 open_bg      units= 4096 dirs= 452 atoms=20 val=1.62e-11 [159.3s]  open_bg=1.6e-11(+64) refine_bg=2.1e-11(+64) refine_atoms=1.8e-11(+64)
+  final: units=4096 dirs=452 atoms=20 test=9.10e-12 [1428s]
+grow: gauss_bump
+  r 1 open_atom    units=   32 dirs=   1 atoms= 1 val=7.71e-02 [  6.5s]  open_bg=7.9e-02(+32) open_atom=7.7e-02(+32)
+  r 2 open_bg      units=   64 dirs=   5 atoms= 1 val=2.14e-02 [  5.4s]  open_bg=2.1e-02(+32) open_atom=7.1e-02(+32) refine_atoms=7.8e-02(+32)
+  r 3 open_bg      units=   96 dirs=   9 atoms= 1 val=1.67e-02 [  5.7s]  open_bg=1.7e-02(+32) open_atom=1.8e-02(+32) refine_bg=2.1e-02(+16) refine_atoms=2.2e-02(+32)
+  r 4 open_bg      units=  128 dirs=  13 atoms= 1 val=3.84e-03 [  6.0s]  open_bg=3.8e-03(+32) open_atom=6.9e-03(+32) refine_bg=1.7e-02(+32) refine_atoms=1.7e-02(+32)
+  r 5 open_bg      units=  160 dirs=  17 atoms= 1 val=3.20e-03 [  6.8s]  open_bg=3.2e-03(+32) open_atom=3.4e-03(+32) refine_bg=3.8e-03(+48) refine_atoms=4.0e-03(+32)
+  r 6 open_bg      units=  200 dirs=  22 atoms= 1 val=1.07e-03 [  7.8s]  open_bg=1.1e-03(+40) open_atom=2.5e-03(+32) refine_bg=3.2e-03(+64) refine_atoms=3.7e-03(+32)
+  r 7 open_atom    units=  232 dirs=  23 atoms= 2 val=5.43e-04 [  9.3s]  open_bg=4.4e-04(+48) open_atom=5.4e-04(+32) refine_bg=1.1e-03(+84) refine_atoms=1.1e-03(+32)
+  r 8 open_atom    units=  264 dirs=  24 atoms= 3 val=4.66e-04 [  6.8s]  open_bg=4.4e-04(+56) open_atom=4.7e-04(+32) refine_bg=5.4e-04(+84) refine_atoms=5.4e-04(+64)
+  r 9 open_bg      units=  328 dirs=  32 atoms= 3 val=4.11e-04 [  7.2s]  open_bg=4.1e-04(+64) refine_bg=4.7e-04(+84) refine_atoms=4.7e-04(+96)
+  r10 open_bg      units=  408 dirs=  42 atoms= 3 val=3.22e-04 [  8.1s]  open_bg=3.2e-04(+80) refine_bg=4.1e-04(+116) refine_atoms=4.1e-04(+96)
+  r11 open_atom    units=  440 dirs=  43 atoms= 4 val=1.84e-04 [ 10.2s]  open_bg=7.2e-05(+104) open_atom=1.8e-04(+32) refine_bg=3.2e-04(+156) refine_atoms=3.2e-04(+96)
+  r12 open_atom    units=  472 dirs=  44 atoms= 5 val=8.84e-05 [ 11.8s]  open_bg=7.0e-05(+112) open_atom=8.8e-05(+32) refine_bg=1.9e-04(+156) refine_atoms=2.1e-04(+128)
+  r13 open_bg      units=  592 dirs=  59 atoms= 5 val=5.66e-05 [  9.1s]  open_bg=5.7e-05(+120) refine_bg=8.9e-05(+156) refine_atoms=1.0e-04(+160)
+  r14 open_atom    units=  624 dirs=  60 atoms= 6 val=3.06e-05 [ 13.4s]  open_bg=2.7e-05(+144) open_atom=3.1e-05(+32) refine_bg=5.7e-05(+216) refine_atoms=8.4e-05(+160)
+  r15 open_atom    units=  656 dirs=  61 atoms= 7 val=1.54e-05 [ 16.9s]  open_bg=1.1e-05(+160) open_atom=1.5e-05(+32) refine_bg=3.1e-05(+216) refine_atoms=3.1e-05(+192)
+  r16 open_bg      units=  816 dirs=  81 atoms= 7 val=8.46e-06 [ 10.2s]  open_bg=8.5e-06(+160) refine_bg=1.6e-05(+216) refine_atoms=1.6e-05(+224)
+  r17 open_atom    units=  848 dirs=  82 atoms= 8 val=4.92e-06 [ 19.6s]  open_bg=2.9e-06(+208) open_atom=4.9e-06(+32) refine_bg=8.5e-06(+296) refine_atoms=8.5e-06(+224)
+  r18 open_atom    units=  880 dirs=  83 atoms= 9 val=2.95e-06 [ 21.6s]  open_bg=2.1e-06(+208) open_atom=2.9e-06(+32) refine_bg=5.0e-06(+296) refine_atoms=4.9e-06(+256)
+  r19 open_bg      units= 1104 dirs= 111 atoms= 9 val=1.95e-06 [ 17.2s]  open_bg=1.9e-06(+224) refine_bg=3.0e-06(+296) refine_atoms=3.0e-06(+288)
+  r20 open_bg      units= 1376 dirs= 145 atoms= 9 val=6.00e-07 [ 22.9s]  open_bg=6.0e-07(+272) refine_bg=2.0e-06(+408) refine_atoms=2.0e-06(+288)
+  r21 open_atom    units= 1408 dirs= 146 atoms=10 val=1.90e-07 [ 37.2s]  open_bg=5.9e-08(+344) open_atom=1.9e-07(+32) refine_bg=6.1e-07(+544) refine_atoms=6.1e-07(+288)
+  r22 open_bg      units= 1760 dirs= 190 atoms=10 val=6.40e-08 [ 31.7s]  open_bg=6.4e-08(+352) refine_bg=1.9e-07(+544) refine_atoms=1.9e-07(+320)
+  r23 open_bg      units= 2200 dirs= 245 atoms=10 val=8.58e-09 [ 48.0s]  open_bg=8.6e-09(+440) refine_bg=6.6e-08(+720) refine_atoms=6.4e-08(+320)
+  r24 open_bg      units= 2752 dirs= 314 atoms=10 val=1.15e-09 [ 73.2s]  open_bg=1.1e-09(+552) refine_bg=8.9e-09(+940) refine_atoms=8.7e-09(+320)
+  r25 open_bg      units= 3440 dirs= 400 atoms=10 val=2.66e-10 [113.5s]  open_bg=2.7e-10(+688) refine_bg=1.2e-09(+1216) refine_atoms=1.1e-09(+320)
+  r26 refine_bg    units= 4096 dirs= 400 atoms=10 val=1.43e-10 [152.8s]  open_bg=2.4e-10(+656) refine_bg=1.4e-10(+656) refine_atoms=2.7e-10(+320)
+  final: units=4096 dirs=400 atoms=10 test=7.46e-11 [679s]
+grow: composition
+  r 1 open_atom    units=   32 dirs=   1 atoms= 1 val=6.72e-02 [  6.3s]  open_bg=6.8e-02(+32) open_atom=6.7e-02(+32)
+  r 2 open_atom    units=   64 dirs=   2 atoms= 2 val=3.44e-02 [  7.3s]  open_bg=4.1e-02(+32) open_atom=3.4e-02(+32) refine_atoms=6.7e-02(+32)
+  r 3 open_bg      units=   96 dirs=   6 atoms= 2 val=2.09e-02 [  5.6s]  open_bg=2.1e-02(+32) open_atom=2.3e-02(+32) refine_atoms=3.5e-02(+64)
+  r 4 open_atom    units=  128 dirs=   7 atoms= 3 val=7.70e-03 [  6.8s]  open_bg=1.8e-02(+32) open_atom=7.7e-03(+32) refine_bg=2.1e-02(+16) refine_atoms=2.1e-02(+64)
+  r 5 open_atom    units=  160 dirs=   8 atoms= 4 val=6.04e-03 [  7.4s]  open_bg=7.1e-03(+32) open_atom=6.0e-03(+32) refine_bg=7.7e-03(+16) refine_atoms=7.8e-03(+96)
+  r 6 open_atom    units=  192 dirs=   9 atoms= 5 val=4.26e-03 [  8.8s]  open_bg=5.6e-03(+40) open_atom=4.3e-03(+32) refine_bg=6.0e-03(+16) refine_atoms=6.1e-03(+128)
+  r 7 open_atom    units=  224 dirs=  10 atoms= 6 val=3.20e-03 [ 12.6s]  open_bg=3.5e-03(+48) open_atom=3.2e-03(+32) refine_bg=4.3e-03(+16) refine_atoms=9.4e-03(+160)
+  r 8 open_atom    units=  256 dirs=  11 atoms= 7 val=2.05e-03 [  9.8s]  open_bg=2.9e-03(+56) open_atom=2.0e-03(+32) refine_bg=3.2e-03(+16) refine_atoms=3.2e-03(+192)
+  r 9 open_atom    units=  288 dirs=  12 atoms= 8 val=1.53e-03 [  9.2s]  open_bg=1.7e-03(+64) open_atom=1.5e-03(+32) refine_bg=2.0e-03(+16) refine_atoms=2.1e-03(+224)
+  r10 open_atom    units=  320 dirs=  13 atoms= 9 val=1.33e-03 [ 10.7s]  open_bg=1.3e-03(+72) open_atom=1.3e-03(+32) refine_bg=1.5e-03(+16) refine_atoms=1.5e-03(+256)
+  r11 open_atom    units=  352 dirs=  14 atoms=10 val=1.06e-03 [ 10.6s]  open_bg=1.1e-03(+80) open_atom=1.1e-03(+32) refine_bg=1.3e-03(+16) refine_atoms=1.3e-03(+288)
+  r12 open_atom    units=  384 dirs=  15 atoms=11 val=8.39e-04 [ 16.6s]  open_bg=9.0e-04(+88) open_atom=8.4e-04(+32) refine_bg=1.1e-03(+16) refine_atoms=1.1e-03(+320)
+  r13 open_atom    units=  416 dirs=  16 atoms=12 val=7.14e-04 [ 14.0s]  open_bg=6.8e-04(+96) open_atom=7.1e-04(+32) refine_bg=8.4e-04(+16) refine_atoms=8.5e-04(+352)
+  r14 open_atom    units=  448 dirs=  17 atoms=13 val=5.04e-04 [ 12.5s]  open_bg=4.9e-04(+104) open_atom=5.0e-04(+32) refine_bg=7.1e-04(+16) refine_atoms=7.2e-04(+384)
+  r15 open_atom    units=  480 dirs=  18 atoms=14 val=3.40e-04 [ 18.7s]  open_bg=3.8e-04(+112) open_atom=3.4e-04(+32) refine_bg=5.0e-04(+16) refine_atoms=5.8e-04(+416)
+  r16 open_atom    units=  512 dirs=  19 atoms=15 val=2.97e-04 [ 18.9s]  open_bg=2.6e-04(+120) open_atom=3.0e-04(+32) refine_bg=3.4e-04(+16) refine_atoms=3.4e-04(+448)
+  r17 open_atom    units=  544 dirs=  20 atoms=16 val=2.68e-04 [ 16.1s]  open_bg=2.1e-04(+128) open_atom=2.7e-04(+32) refine_bg=3.0e-04(+16) refine_atoms=3.0e-04(+480)
+  r18 open_bg      units=  680 dirs=  37 atoms=16 val=1.66e-04 [ 26.6s]  open_bg=1.7e-04(+136) open_atom=2.5e-04(+32) refine_bg=2.7e-04(+16) refine_atoms=2.7e-04(+512)
+  r19 open_atom    units=  712 dirs=  38 atoms=17 val=9.82e-05 [ 20.3s]  open_bg=9.3e-05(+168) open_atom=9.8e-05(+32) refine_bg=1.7e-04(+84) refine_atoms=2.0e-04(+512)
+  r20 open_bg      units=  888 dirs=  60 atoms=17 val=6.74e-05 [ 14.4s]  open_bg=6.7e-05(+176) refine_bg=9.8e-05(+84) refine_atoms=1.9e-04(+544)
+  r21 open_bg      units= 1112 dirs=  88 atoms=17 val=1.88e-05 [ 24.8s]  open_bg=1.9e-05(+224) refine_bg=6.8e-05(+172) refine_atoms=1.4e-04(+544)
+  r22 open_bg      units= 1392 dirs= 123 atoms=17 val=5.77e-06 [ 23.8s]  open_bg=5.8e-06(+280) refine_bg=1.9e-05(+284) refine_atoms=1.8e-05(+544)
+  r23 open_atom    units= 1424 dirs= 124 atoms=18 val=2.24e-06 [ 58.1s]  open_bg=1.2e-06(+352) open_atom=2.2e-06(+32) refine_bg=5.9e-06(+424) refine_atoms=1.2e-05(+544)
+  r24 open_bg      units= 1776 dirs= 168 atoms=18 val=1.08e-06 [ 39.5s]  open_bg=1.1e-06(+352) refine_bg=2.3e-06(+424) refine_atoms=3.0e-06(+576)
+  r25 open_atom    units= 1808 dirs= 169 atoms=19 val=4.80e-07 [100.9s]  open_bg=2.0e-07(+448) open_atom=4.8e-07(+32) refine_bg=1.1e-06(+600) refine_atoms=1.7e-06(+576)
+  r26 open_bg      units= 2256 dirs= 225 atoms=19 val=1.96e-07 [ 63.6s]  open_bg=2.0e-07(+448) refine_bg=5.0e-07(+600) refine_atoms=1.2e-06(+608)
+  r27 open_bg      units= 2816 dirs= 295 atoms=19 val=4.49e-08 [ 98.8s]  open_bg=4.5e-08(+560) refine_bg=2.1e-07(+824) refine_atoms=4.3e-07(+608)
+  r28 open_bg      units= 3520 dirs= 383 atoms=19 val=1.42e-08 [123.0s]  open_bg=1.4e-08(+704) refine_bg=4.7e-08(+1104) refine_atoms=6.0e-08(+608)
+  r29 open_bg      units= 4096 dirs= 455 atoms=19 val=3.31e-09 [163.1s]  open_bg=3.3e-09(+576) refine_bg=1.5e-08(+576) refine_atoms=2.0e-08(+576)
+  final: units=4096 dirs=455 atoms=19 test=1.62e-09 [949s]
+grow: radial_runge
+  r 1 open_bg      units=   32 dirs=   4 atoms= 0 val=2.56e-02 [  5.5s]  open_bg=2.6e-02(+32) open_atom=1.2e-01(+32)
+  r 2 open_atom    units=   64 dirs=   5 atoms= 1 val=2.09e-02 [  5.6s]  open_bg=2.2e-02(+32) open_atom=2.1e-02(+32) refine_bg=2.6e-02(+16)
+  r 3 open_bg      units=   96 dirs=   9 atoms= 1 val=1.41e-02 [  9.1s]  open_bg=1.4e-02(+32) open_atom=1.8e-02(+32) refine_bg=2.1e-02(+16) refine_atoms=2.1e-02(+32)
+  r 4 open_bg      units=  128 dirs=  13 atoms= 1 val=4.41e-03 [  8.2s]  open_bg=4.4e-03(+32) open_atom=1.0e-02(+32) refine_bg=1.4e-02(+32) refine_atoms=1.4e-02(+32)
+  r 5 open_bg      units=  160 dirs=  17 atoms= 1 val=3.69e-03 [  5.8s]  open_bg=3.7e-03(+32) refine_bg=4.4e-03(+48) refine_atoms=4.4e-03(+32)
+  r 6 open_atom    units=  192 dirs=  18 atoms= 2 val=2.60e-03 [  6.4s]  open_bg=2.4e-03(+40) open_atom=2.6e-03(+32) refine_bg=3.7e-03(+64) refine_atoms=3.7e-03(+32)
+  r 7 open_atom    units=  224 dirs=  19 atoms= 3 val=1.68e-03 [  7.0s]  open_bg=1.4e-03(+48) open_atom=1.7e-03(+32) refine_bg=2.6e-03(+64) refine_atoms=2.6e-03(+64)
+  r 8 open_bg      units=  280 dirs=  26 atoms= 3 val=1.16e-03 [  6.3s]  open_bg=1.2e-03(+56) refine_bg=1.7e-03(+64) refine_atoms=2.8e-03(+96)
+  r 9 open_atom    units=  312 dirs=  27 atoms= 4 val=8.01e-04 [ 13.1s]  open_bg=7.6e-04(+72) open_atom=8.0e-04(+32) refine_bg=1.2e-03(+92) refine_atoms=1.8e-03(+96)
+  r10 open_bg      units=  392 dirs=  37 atoms= 4 val=7.06e-04 [  8.1s]  open_bg=7.1e-04(+80) refine_bg=8.1e-04(+92) refine_atoms=4.9e-03(+128)
+  r11 open_bg      units=  488 dirs=  49 atoms= 4 val=5.72e-04 [  8.8s]  open_bg=5.7e-04(+96) refine_bg=7.1e-04(+132) refine_atoms=5.8e-03(+128)
+  r12 open_atom    units=  520 dirs=  50 atoms= 5 val=4.48e-04 [ 10.1s]  open_bg=3.5e-04(+120) open_atom=4.5e-04(+32) refine_bg=5.7e-04(+180) refine_atoms=7.6e-04(+128)
+  r13 open_bg      units=  648 dirs=  66 atoms= 5 val=3.02e-04 [ 13.5s]  open_bg=3.0e-04(+128) refine_bg=4.5e-04(+180) refine_atoms=8.1e-04(+160)
+  r14 open_bg      units=  808 dirs=  86 atoms= 5 val=1.42e-04 [ 13.2s]  open_bg=1.4e-04(+160) refine_bg=3.1e-04(+244) refine_atoms=1.1e-03(+160)
+  r15 open_atom    units=  840 dirs=  87 atoms= 6 val=9.80e-05 [ 16.2s]  open_bg=4.6e-05(+200) open_atom=9.8e-05(+32) refine_bg=1.4e-04(+324) refine_atoms=8.3e-04(+160)
+  r16 open_bg      units= 1048 dirs= 113 atoms= 6 val=4.52e-05 [ 17.4s]  open_bg=4.5e-05(+208) refine_bg=9.9e-05(+324) refine_atoms=1.0e-04(+192)
+  r17 open_bg      units= 1312 dirs= 146 atoms= 6 val=2.48e-05 [ 19.8s]  open_bg=2.5e-05(+264) refine_bg=4.6e-05(+428) refine_atoms=5.2e-05(+192)
+  r18 open_bg      units= 1640 dirs= 187 atoms= 6 val=9.47e-06 [ 32.8s]  open_bg=9.5e-06(+328) refine_bg=2.6e-05(+560) refine_atoms=2.7e-05(+192)
+  r19 open_bg      units= 2048 dirs= 238 atoms= 6 val=3.37e-06 [ 40.0s]  open_bg=3.4e-06(+408) refine_bg=9.8e-06(+724) refine_atoms=9.7e-06(+192)
+  r20 open_bg      units= 2560 dirs= 302 atoms= 6 val=1.51e-06 [ 70.9s]  open_bg=1.5e-06(+512) refine_bg=3.6e-06(+928) refine_atoms=3.8e-06(+192)
+  r21 open_bg      units= 3200 dirs= 382 atoms= 6 val=7.52e-07 [105.0s]  open_bg=7.5e-07(+640) refine_bg=1.6e-06(+1184) refine_atoms=3.5e-06(+192)
+  r22 open_bg      units= 4000 dirs= 482 atoms= 6 val=4.26e-07 [110.7s]  open_bg=4.3e-07(+800) refine_bg=7.0e-07(+896) refine_atoms=8.4e-07(+192)
+  r23 refine_bg    units= 4096 dirs= 482 atoms= 6 val=2.55e-07 [109.7s]  open_bg=4.1e-07(+96) refine_bg=2.5e-07(+96) refine_atoms=4.4e-07(+96)
+  final: units=4096 dirs=482 atoms=6 test=1.53e-07 [643s]
+saved /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_H_highdim/expH06_ridge_hierarchy/grow_d4_A.json

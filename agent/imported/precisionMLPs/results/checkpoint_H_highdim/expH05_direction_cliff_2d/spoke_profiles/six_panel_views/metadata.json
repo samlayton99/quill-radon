@@ -1,0 +1,31 @@
+{
+  "source": "results/checkpoint_H_highdim/expH05_direction_cliff_2d/spoke_profiles/endpoint_direction_check/solution_M32_N128.npz",
+  "directions": 32,
+  "centers_per_direction": 128,
+  "data_center": [
+    0.35,
+    -0.25
+  ],
+  "display_radius": 0.36,
+  "angle_rule": "endpoint directions (axes and diagonals included)",
+  "profile_normalization": "G_j(t) = M*(g_j(t)-g_j(0)) + f_hat(x0)",
+  "reconstruction": "f_hat(x0+u) = mean_j G_j(v_j dot u)",
+  "normalization_check_max_abs": 1.1102230246251565e-15,
+  "targets": {
+    "gauss_bump": {
+      "relative_l2": 4.2246669675554955e-14,
+      "fit_at_center": 0.5598983665653815,
+      "max_abs_center_error": 2.0650148258027912e-14
+    },
+    "fast_waves": {
+      "relative_l2": 1.231140007550922e-13,
+      "fit_at_center": 0.587785252292422,
+      "max_abs_center_error": 5.140332604014475e-14
+    },
+    "composition": {
+      "relative_l2": 3.857513657119109e-14,
+      "fit_at_center": 1.8776795927385195,
+      "max_abs_center_error": 5.795364188543317e-14
+    }
+  }
+}

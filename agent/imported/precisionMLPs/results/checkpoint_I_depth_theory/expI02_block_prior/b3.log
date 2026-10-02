@@ -1,0 +1,9 @@
+b3 logistic  err 0.1596  [11s]
+b3 small block   err 0.1362 (solved 0.1424)  35914p  [6s]
+b3 small mlp_tanh err 0.1256 (solved 0.1344)  36087p w=43  [1s]
+b3 small mlp_relu err 0.1309 (solved 0.1504)  36087p w=43  [1s]
+b3 large block   err 0.1264 (solved 0.1351)  88202p  [11s]
+b3 large mlp_tanh err 0.1204 (solved 0.1245)  88615p w=99  [2s]
+b3 large mlp_relu err 0.1185 (solved 0.1301)  88615p w=99  [2s]
+b3 done in 0.6 min -> /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/expI02_block_prior/b3.json
+wrote /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/expI02_block_prior/figures/fig5_fashion.png

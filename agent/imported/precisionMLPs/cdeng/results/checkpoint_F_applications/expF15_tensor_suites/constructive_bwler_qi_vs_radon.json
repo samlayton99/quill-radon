@@ -1,0 +1,27 @@
+{
+  "scope": "PDE-specific exact rank-2 separation followed by original analytic Toeplitz-cardinal QI factors; no least-squares fit and no 2-D oracle samples. Radon values are expF13 PDE solves.",
+  "accounting": "tensor_parameters counts four constructed factor readouts; Radon count is frozen ridge width",
+  "problems": {
+    "convection_c40": {
+      "core_intervals": 63,
+      "tensor_parameters": 1216,
+      "tensor_relative_l2": 2.799185076440384e-13,
+      "radon_width": 9216,
+      "radon_relative_l2": 6.2e-12
+    },
+    "convection_c80": {
+      "core_intervals": 95,
+      "tensor_parameters": 1344,
+      "tensor_relative_l2": 2.825250885037887e-12,
+      "radon_width": 9216,
+      "radon_relative_l2": 1.0e-9
+    },
+    "wave": {
+      "core_intervals": 63,
+      "tensor_parameters": 1216,
+      "tensor_relative_l2": 3.595852680048874e-14,
+      "radon_width": 9216,
+      "radon_relative_l2": 1.6e-13
+    }
+  }
+}

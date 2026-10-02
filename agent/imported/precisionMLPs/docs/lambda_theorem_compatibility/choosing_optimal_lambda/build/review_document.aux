@@ -1,0 +1,51 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1}Choosing optimal lambda}{1}{subsection.0.1}\protected@file@percent }
+\newlabel{sec:choosing-lambda}{{1}{1}{Choosing optimal lambda}{subsection.0.1}{}}
+\newlabel{eq:compact-replica}{{1}{1}{Choosing optimal lambda}{equation.0.1}{}}
+\newlabel{eq:lambda-basic-rule}{{2}{1}{Choosing optimal lambda}{equation.0.2}{}}
+\newlabel{eq:lambda-refined-rule}{{3}{1}{Choosing optimal lambda}{equation.0.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Basic (green, dashed) and refined (red, solid) bandwidth choices. The top row uses $\qopname  \relax o{sin}(2\pi x)+\genfrac  {}{}{}112\qopname  \relax o{sin}(6\pi x)+\genfrac  {}{}{}114\qopname  \relax o{sin}(10\pi x)$; the bottom uses $\qopname  \relax o{exp}(\qopname  \relax o{sin}(3\pi x))$. The left four panels vary $N\in \{32,64,128,256,512\}$ at $\varepsilon =2^{-52}$; the right four vary $p\in \{24,32,40,48,53\}$ at $N=128$, with effective tolerance $e_{\mathrm  {tol}}=2^{1-p}$. At $p=16$, the refined GELU choices exceed the measured $\lambda $ range, so that precision is omitted from both activations. The refined choices solve the displayed first-pair equation using a rough frequency scale and no amplitude input. Curves use expC08's viridis colors, logarithmic axes, and original measured least-squares errors. Rule markers sit on the corresponding observed curves at the predicted bandwidths, so their vertical coordinates are measured, not predicted. Lines connect choices across settings; the width-independent basic choice is shown as a vertical line. Each network has $N+65$ activation neurons plus bias. Reduced precisions emulate rounding while solver internals remain fp64. The GELU panels use the general spectral score; the finite-contour theorem applies to tanh.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:lambda-grid}{{1}{2}{Basic (green, dashed) and refined (red, solid) bandwidth choices. The top row uses $\sin (2\pi x)+\tfrac 12\sin (6\pi x)+\tfrac 14\sin (10\pi x)$; the bottom uses $\exp (\sin (3\pi x))$. The left four panels vary $N\in \{32,64,128,256,512\}$ at $\varepsilon =2^{-52}$; the right four vary $p\in \{24,32,40,48,53\}$ at $N=128$, with effective tolerance $e_{\mathrm {tol}}=2^{1-p}$. At $p=16$, the refined GELU choices exceed the measured $\lambda $ range, so that precision is omitted from both activations. The refined choices solve the displayed first-pair equation using a rough frequency scale and no amplitude input. Curves use expC08's viridis colors, logarithmic axes, and original measured least-squares errors. Rule markers sit on the corresponding observed curves at the predicted bandwidths, so their vertical coordinates are measured, not predicted. Lines connect choices across settings; the width-independent basic choice is shown as a vertical line. Each network has $N+65$ activation neurons plus bias. Reduced precisions emulate rounding while solver internals remain fp64. The GELU panels use the general spectral score; the finite-contour theorem applies to tanh}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Proof and interpretation of the lambda rule}{3}{appendix.A}\protected@file@percent }
+\newlabel{app:lambda}{{A}{3}{Proof and interpretation of the lambda rule}{appendix.A}{}}
+\newlabel{eq:lambda-tanh-transform}{{A.1}{3}{Proof and interpretation of the lambda rule}{equation.appendix.1}{}}
+\newlabel{eq:lambda-local-density}{{A.2}{3}{Proof and interpretation of the lambda rule}{equation.appendix.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lemma A.1 (The repeated spectrum and exact central amplitude).}{3}{section*.1}\protected@file@percent }
+\newlabel{eq:lambda-periodic-factor}{{A.3}{3}{Lemma A.1 (The repeated spectrum and exact central amplitude)}{equation.appendix.3}{}}
+\newlabel{eq:lambda-exact-deconvolution}{{A.4}{3}{Lemma A.1 (The repeated spectrum and exact central amplitude)}{equation.appendix.4}{}}
+\newlabel{eq:lambda-output-multiplier}{{A.5}{3}{Lemma A.1 (The repeated spectrum and exact central amplitude)}{equation.appendix.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lemma A.2 (The spectrum bounds the actual pole term).}{3}{section*.2}\protected@file@percent }
+\newlabel{eq:lambda-exact-alias-sum}{{A.6}{3}{Lemma A.2 (The spectrum bounds the actual pole term)}{equation.appendix.6}{}}
+\newlabel{eq:lambda-pole-spectrum-bound}{{A.7}{4}{Lemma A.2 (The spectrum bounds the actual pole term)}{equation.appendix.7}{}}
+\newlabel{eq:lambda-residue-spectrum-identity}{{A.8}{4}{Lemma A.2 (The spectrum bounds the actual pole term)}{equation.appendix.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lemma A.3 (The first pair controls the remaining replicas).}{4}{section*.3}\protected@file@percent }
+\newlabel{eq:lambda-tail-ratio}{{A.9}{4}{Lemma A.3 (The first pair controls the remaining replicas)}{equation.appendix.9}{}}
+\newlabel{eq:lambda-compact-bound-appendix}{{A.10}{4}{Lemma A.3 (The first pair controls the remaining replicas)}{equation.appendix.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{The local analytic class and a precision-based rule.}{5}{section*.4}\protected@file@percent }
+\newlabel{eq:lambda-local-class-budget}{{A.11}{5}{The local analytic class and a precision-based rule}{equation.appendix.11}{}}
+\newlabel{eq:lambda-basic-appendix}{{A.12}{5}{The local analytic class and a precision-based rule}{equation.appendix.12}{}}
+\newlabel{eq:lambda-zero-angle-limit}{{A.13}{5}{The local analytic class and a precision-based rule}{equation.appendix.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why a small frequency prefactor can leave a useful bandwidth default.}{5}{section*.5}\protected@file@percent }
+\newlabel{eq:lambda-log-sensitivity}{{A.14}{6}{Why a small frequency prefactor can leave a useful bandwidth default}{equation.appendix.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{A recipe using ordinary numerical inputs.}{6}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The frequency refinement and its limits.}{7}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why choose the largest admissible bandwidth?}{8}{section*.8}\protected@file@percent }
+\newlabel{eq:lambda-budget-envelopes}{{A.15}{8}{Why choose the largest admissible bandwidth?}{equation.appendix.15}{}}
+\gdef \@abspage@last{8}

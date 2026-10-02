@@ -1,0 +1,90 @@
+{
+  "scope": "d-1 tensor rank versus dense 1-D Radon at matched coefficients; oracle representation ceiling",
+  "systems": {
+    "Lorenz": {
+      "d": 3,
+      "tensor_rank": 2,
+      "budget": 1400,
+      "tensor_relative_l2": 0.10196455679023043,
+      "radon": {
+        "relative_l2": 3.295468280486494e-14,
+        "width": 462,
+        "features_with_poly": 466,
+        "parameters": 1398,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "rcond": 1e-13,
+        "n_train": 2001
+      },
+      "reference_nfev": 5702
+    },
+    "Rossler": {
+      "d": 3,
+      "tensor_rank": 2,
+      "budget": 1400,
+      "tensor_relative_l2": 0.3163426848592473,
+      "radon": {
+        "relative_l2": 7.412866981294116e-12,
+        "width": 462,
+        "features_with_poly": 466,
+        "parameters": 1398,
+        "lambda": 0.3,
+        "collar": 1.0,
+        "rcond": 1e-13,
+        "n_train": 2001
+      },
+      "reference_nfev": 8660
+    },
+    "Thomas": {
+      "d": 3,
+      "tensor_rank": 2,
+      "budget": 1400,
+      "tensor_relative_l2": 0.20087432349842854,
+      "radon": {
+        "relative_l2": 1.311459104641352e-13,
+        "width": 462,
+        "features_with_poly": 466,
+        "parameters": 1398,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "rcond": 1e-13,
+        "n_train": 2001
+      },
+      "reference_nfev": 4736
+    },
+    "Halvorsen": {
+      "d": 3,
+      "tensor_rank": 2,
+      "budget": 1400,
+      "tensor_relative_l2": 0.5524872873564645,
+      "radon": {
+        "relative_l2": 5.1301724001728626e-14,
+        "width": 462,
+        "features_with_poly": 466,
+        "parameters": 1398,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "rcond": 1e-13,
+        "n_train": 2001
+      },
+      "reference_nfev": 5735
+    },
+    "Lorenz96": {
+      "d": 4,
+      "tensor_rank": 3,
+      "budget": 2103,
+      "tensor_relative_l2": 0.35383270653851745,
+      "radon": {
+        "relative_l2": 3.773388079025308e-14,
+        "width": 521,
+        "features_with_poly": 525,
+        "parameters": 2100,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "rcond": 1e-13,
+        "n_train": 2100
+      },
+      "reference_nfev": 4982
+    }
+  }
+}

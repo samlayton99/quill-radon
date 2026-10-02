@@ -1,0 +1,150 @@
+{
+  "status": "interrupted_by_user_organization_request",
+  "interrupted_utc": "2026-10-02T06:01:29.293831+00:00",
+  "process_exit_code": 130,
+  "completed_forward_solves": 12,
+  "reason": "User explicitly requested organization only and stopping any running or queued experiments. Interrupted current forward; no new fit or numerical audit performed.",
+  "final_inverse_convergence_assessed": false,
+  "inverse_estimate_resolved": false,
+  "last_completed_forward": {
+    "index": 11,
+    "parameters": [
+      0.030033881769285765
+    ],
+    "role": "sensitivity_minus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 92.42395133292302,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 2.839155269494319e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 9.903345241857963e-12,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.0408340855860843e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.052457760364642e-09,
+        "maximum_absolute": 5.290801874391349e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 9.90300557628644e-12,
+        "maximum_absolute": 2.3628043965828738e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 7.632783294297951e-17,
+        "maximum_absolute": 7.632783294297951e-17
+      }
+    ],
+    "sensor_objective": 0.6646385277839459
+  },
+  "best_completed_feasible_candidate": {
+    "index": 9,
+    "checkpoint": "forward_009_native.npz",
+    "parameters": [
+      0.030083881769285767
+    ],
+    "role": "line_search",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 107.72670991672203,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 2.818163805680726e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 9.839578307435983e-12,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.214306433183765e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.0371530095152793e-09,
+        "maximum_absolute": 5.253365981117142e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 9.839790412982327e-12,
+        "maximum_absolute": 2.344394123277027e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 2.636779683484747e-16,
+        "maximum_absolute": 2.636779683484747e-16
+      }
+    ],
+    "sensor_objective": 0.6633394955564691
+  },
+  "scope": "Best saved feasible sensor candidate among completed forwards, not a claimed final or independently audited inverse solution. Outer line-search acceptance history was not separately checkpointed.",
+  "completed_noiseless_case": "noise_0/metrics.json remains unchanged; data_stationary after15 validated native forwards"
+}

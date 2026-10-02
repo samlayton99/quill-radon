@@ -1,0 +1,38 @@
+{
+  "run_id": "G014_bounded_native_diffusion_c1000",
+  "case": "diffusion_c1000",
+  "options": {
+    "degrees": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40
+    ],
+    "centers": 257,
+    "lam": 0.2,
+    "coordinates": "affine_disk",
+    "tolerance": 1e-13,
+    "oversampling": 6,
+    "check_points": 257,
+    "export_check_points": 257,
+    "maximum_working_array_mb": 1024,
+    "max_seconds": 180.0,
+    "max_iterations": 6,
+    "batch_size": 64,
+    "solver_options": {
+      "lsmr_max_iterations": 80,
+      "refine_on_ideal_stall": true
+    }
+  },
+  "normalization": "fixed zero-jet PDE scaling",
+  "source_policy": "PDE/BC only, cold zero then native continuation. No dense diagnostic coefficients or interior labels.",
+  "source_hashes": {
+    "experiments/expF19_radon_direct_pde/route2_gap_native.py": "478b542d0189e829331c250fd1625d79b1508694e2d7a4ac16faaa679ef93dd1",
+    "experiments/expF19_radon_direct_pde/solver/route2.py": "904a862261491cc6f156e072aec86913a3c8e9d3121da453ddb6e2f01946ba32",
+    "experiments/expF19_radon_direct_pde/solver/general_residual.py": "71a27edfa747a92e1d0b7651e76a5791330b8800bfa80d9b43209677a9a9bc68",
+    "experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603"
+  }
+}

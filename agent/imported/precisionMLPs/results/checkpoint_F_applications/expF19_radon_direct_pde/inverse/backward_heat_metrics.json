@@ -1,0 +1,17 @@
+{
+  "protocol": "Periodic 1D backward heat: 128 noisy final-time values, known diffusivity and final time. FFT inversion with discrepancy cutoff 1.1*sigma*sqrt(n), using the specified noise standard deviation, not realized noise or true initial field; explicit tanh readout, no fitting.",
+  "nu": 0.1,
+  "time": 1.0,
+  "observations": 128,
+  "noise_standard_deviation": 0.0006456099639870086,
+  "discrepancy_threshold": 0.008034667230247972,
+  "noise_relative_rms": 0.000851344321068134,
+  "cutoff": 6,
+  "raw_initial_relative_error": 2.725515936714572e+173,
+  "regularized_initial_relative_error": 0.0016236820887118592,
+  "neural_initial_relative_error": 0.0016240105253732568,
+  "neural_conversion_relative_error": 4.196750828668807e-16,
+  "neurons": 516,
+  "noise_amplification_at_k6": 36.59823444367801,
+  "noise_amplification_at_k20": 2.3538526683702e+17
+}

@@ -1,0 +1,65 @@
+{
+  "scope": "Single-thread ideal-coordinate component benchmark; panels already reuse univariate tables. No full-solve speed claim.",
+  "cases": [
+    {
+      "dimension": 4,
+      "degree": 12,
+      "fields": 4,
+      "points": 128,
+      "coordinates": 1820,
+      "plan": {
+        "enabled": true,
+        "rows": 100,
+        "tensor_bytes": 913952,
+        "workspace_bytes": 16768544,
+        "fixed_bytes": 1886144,
+        "bytes_per_row": 148824,
+        "workspace_budget_bytes": 16777216,
+        "tensor_budget_bytes": 4194304,
+        "reason": "bounded_sum_factorization"
+      },
+      "panel_forward_seconds": 0.010683916974812746,
+      "panel_forward_peak_traced_bytes": 1383852,
+      "tensor_forward_seconds": 0.002443833276629448,
+      "tensor_forward_peak_traced_bytes": 9037244,
+      "panel_adjoint_seconds": 0.010354625061154366,
+      "panel_adjoint_peak_traced_bytes": 1393140,
+      "tensor_adjoint_seconds": 0.005373749881982803,
+      "tensor_adjoint_peak_traced_bytes": 15769348,
+      "forward_speedup": 4.371786355879432,
+      "adjoint_speedup": 1.926890028110821,
+      "forward_relative_difference": 4.833424158232339e-16,
+      "adjoint_relative_difference": 5.240417175454474e-16
+    },
+    {
+      "dimension": 4,
+      "degree": 16,
+      "fields": 4,
+      "points": 128,
+      "coordinates": 4845,
+      "plan": {
+        "enabled": true,
+        "rows": 34,
+        "tensor_bytes": 2672672,
+        "workspace_bytes": 16621648,
+        "fixed_bytes": 5500384,
+        "bytes_per_row": 327096,
+        "workspace_budget_bytes": 16777216,
+        "tensor_budget_bytes": 4194304,
+        "reason": "bounded_sum_factorization"
+      },
+      "panel_forward_seconds": 0.0283203748986125,
+      "panel_forward_peak_traced_bytes": 1413932,
+      "tensor_forward_seconds": 0.00701116630807519,
+      "tensor_forward_peak_traced_bytes": 10920012,
+      "panel_adjoint_seconds": 0.026661832816898823,
+      "panel_adjoint_peak_traced_bytes": 1534996,
+      "tensor_adjoint_seconds": 0.0163843329064548,
+      "tensor_adjoint_peak_traced_bytes": 13979164,
+      "forward_speedup": 4.039324365475997,
+      "adjoint_speedup": 1.6272760672724782,
+      "forward_relative_difference": 6.262040926636698e-16,
+      "adjoint_relative_difference": 4.324148559842811e-16
+    }
+  ]
+}

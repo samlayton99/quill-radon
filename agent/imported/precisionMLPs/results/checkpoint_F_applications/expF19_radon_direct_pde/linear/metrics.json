@@ -1,0 +1,792 @@
+{
+  "protocol": "Only PDE operator and supplied analytic initial condition enter encoding. No interior labels, least squares, or training. Exact solutions verify only.",
+  "one_dimensional_ivps": [
+    {
+      "problem": "advection",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": false,
+      "directions": 1,
+      "neurons": 227,
+      "rel_l2": 0.6971345134994344,
+      "max_abs": 0.721115760411762,
+      "ic_rel_l2": 0.7095668225577496,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.004316499922424555
+    },
+    {
+      "problem": "advection",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": true,
+      "directions": 1,
+      "neurons": 227,
+      "rel_l2": 7.248377588005234e-06,
+      "max_abs": 9.321352289148876e-06,
+      "ic_rel_l2": 7.226450731684107e-06,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.0034501668997108936
+    },
+    {
+      "problem": "advection",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": false,
+      "directions": 1,
+      "neurons": 239,
+      "rel_l2": 0.5144485507835884,
+      "max_abs": 0.5387744216217949,
+      "ic_rel_l2": 0.5251002152748064,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.004352209158241749
+    },
+    {
+      "problem": "advection",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": true,
+      "directions": 1,
+      "neurons": 239,
+      "rel_l2": 1.907023603613221e-12,
+      "max_abs": 2.735034421164073e-12,
+      "ic_rel_l2": 1.891649567099831e-12,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.0035810000263154507
+    },
+    {
+      "problem": "advection",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": false,
+      "directions": 1,
+      "neurons": 261,
+      "rel_l2": 0.29370054645902166,
+      "max_abs": 0.3179231532703707,
+      "ic_rel_l2": 0.29896642634484694,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.004728749860078096
+    },
+    {
+      "problem": "advection",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": true,
+      "directions": 1,
+      "neurons": 261,
+      "rel_l2": 1.1932982789462037e-15,
+      "max_abs": 1.7763568394002505e-15,
+      "ic_rel_l2": 1.1739536897513974e-15,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.003955333027988672
+    },
+    {
+      "problem": "advection",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": false,
+      "directions": 1,
+      "neurons": 302,
+      "rel_l2": 0.12984541821317802,
+      "max_abs": 0.14673798961061546,
+      "ic_rel_l2": 0.13162549677569493,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.005524457897990942
+    },
+    {
+      "problem": "advection",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": true,
+      "directions": 1,
+      "neurons": 302,
+      "rel_l2": 1.6334932381623858e-16,
+      "max_abs": 3.3306690738754696e-16,
+      "ic_rel_l2": 1.3494009257234142e-16,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.004576333332806826
+    },
+    {
+      "problem": "advection",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": false,
+      "directions": 1,
+      "neurons": 351,
+      "rel_l2": 0.06209134485361958,
+      "max_abs": 0.07194972133489685,
+      "ic_rel_l2": 0.06280929382523646,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.006260750349611044
+    },
+    {
+      "problem": "advection",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": true,
+      "directions": 1,
+      "neurons": 351,
+      "rel_l2": 1.0247968185309835e-16,
+      "max_abs": 2.220446049250313e-16,
+      "ic_rel_l2": 1.0589432364139731e-16,
+      "pde_rms": 0.0,
+      "pde_scaled_rms": 0.0,
+      "architecture": "fixed two-input tanh MLP, one direction",
+      "seconds": 0.0053411670960485935
+    },
+    {
+      "problem": "airy",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 583,
+      "rel_l2": 0.08882009613504419,
+      "max_abs": 0.13235416852816972,
+      "ic_rel_l2": 0.08882009613504423,
+      "pde_rms": 1.3770948340325392e-11,
+      "pde_scaled_rms": 3.259262240086896e-12,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.014189042150974274
+    },
+    {
+      "problem": "airy",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 583,
+      "rel_l2": 1.931453418915108e-16,
+      "max_abs": 6.661338147750939e-16,
+      "ic_rel_l2": 1.4991501261750583e-16,
+      "pde_rms": 1.511331066290819e-11,
+      "pde_scaled_rms": 3.2592614393113717e-12,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.0133671248331666
+    },
+    {
+      "problem": "airy",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 671,
+      "rel_l2": 0.04090125251082744,
+      "max_abs": 0.06094849593047669,
+      "ic_rel_l2": 0.04090125251082746,
+      "pde_rms": 2.609096237349981e-11,
+      "pde_scaled_rms": 5.86659845483993e-12,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.017234125174582005
+    },
+    {
+      "problem": "airy",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 671,
+      "rel_l2": 2.100549167629925e-16,
+      "max_abs": 5.551115123125783e-16,
+      "ic_rel_l2": 1.2532402522208554e-16,
+      "pde_rms": 2.7203643016798746e-11,
+      "pde_scaled_rms": 5.866602405722207e-12,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.015524874906986952
+    },
+    {
+      "problem": "airy",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 831,
+      "rel_l2": 0.016261885477933627,
+      "max_abs": 0.024232447664318757,
+      "ic_rel_l2": 0.016261885477933613,
+      "pde_rms": 6.130232423080149e-11,
+      "pde_scaled_rms": 1.3438692955072069e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.021466999780386686
+    },
+    {
+      "problem": "airy",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 831,
+      "rel_l2": 1.478651484481278e-16,
+      "max_abs": 4.440892098500626e-16,
+      "ic_rel_l2": 1.2062869730826799e-16,
+      "pde_rms": 6.231569255728965e-11,
+      "pde_scaled_rms": 1.3438692444430613e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.019307666923850775
+    },
+    {
+      "problem": "airy",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 1118,
+      "rel_l2": 0.0058973071800026,
+      "max_abs": 0.008787799409468278,
+      "ic_rel_l2": 0.005897307180002555,
+      "pde_rms": 1.6108070691816023e-10,
+      "pde_scaled_rms": 3.4943939561034633e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.029649083968251944
+    },
+    {
+      "problem": "airy",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 1118,
+      "rel_l2": 1.7293761872585747e-16,
+      "max_abs": 4.440892098500626e-16,
+      "ic_rel_l2": 1.6669305268700778e-16,
+      "pde_rms": 1.6203709167713268e-10,
+      "pde_scaled_rms": 3.494411359766332e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.027289958205074072
+    },
+    {
+      "problem": "airy",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 1474,
+      "rel_l2": 0.002627053759467764,
+      "max_abs": 0.003914671691916505,
+      "ic_rel_l2": 0.002627053759467766,
+      "pde_rms": 3.5168313155063475e-10,
+      "pde_scaled_rms": 7.604200212860466e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.04109058389440179
+    },
+    {
+      "problem": "airy",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 1474,
+      "rel_l2": 1.3675685057774346e-16,
+      "max_abs": 4.440892098500626e-16,
+      "ic_rel_l2": 1.2238186726621726e-16,
+      "pde_rms": 3.5260990881670376e-10,
+      "pde_scaled_rms": 7.604209987861365e-11,
+      "architecture": "fixed two-input tanh MLP, two directions",
+      "seconds": 0.036012917291373014
+    },
+    {
+      "problem": "heat",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 438,
+      "rel_l2": 0.5718461019560043,
+      "max_abs": 0.7928186463025902,
+      "ic_rel_l2": 0.6158532062980148,
+      "pde_rms": 2.0764775179388824e-13,
+      "pde_scaled_rms": 7.74636252939636e-13,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.007034665904939175
+    },
+    {
+      "problem": "heat",
+      "h": 0.12,
+      "gamma": 2.0833333333333335,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 438,
+      "rel_l2": 1.9595536911793595e-14,
+      "max_abs": 4.4297898682543746e-14,
+      "ic_rel_l2": 3.663171508001254e-14,
+      "pde_rms": 2.4255830623820137e-12,
+      "pde_scaled_rms": 3.1662800611756452e-12,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.0069158342666924
+    },
+    {
+      "problem": "heat",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 454,
+      "rel_l2": 0.34616234162591,
+      "max_abs": 0.5328540210152029,
+      "ic_rel_l2": 0.40249459636875395,
+      "pde_rms": 7.741077522651053e-14,
+      "pde_scaled_rms": 1.8280252852328646e-13,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.007136208936572075
+    },
+    {
+      "problem": "heat",
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 454,
+      "rel_l2": 9.29446951447704e-16,
+      "max_abs": 2.220446049250313e-15,
+      "ic_rel_l2": 1.61536751626297e-15,
+      "pde_rms": 2.5811741702717816e-13,
+      "pde_scaled_rms": 3.3693838139384143e-13,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.007121458183974028
+    },
+    {
+      "problem": "heat",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 482,
+      "rel_l2": 0.16788579517696564,
+      "max_abs": 0.28234443961297684,
+      "ic_rel_l2": 0.2123267245263593,
+      "pde_rms": 4.981973292935944e-14,
+      "pde_scaled_rms": 8.673397253523116e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.007674167398363352
+    },
+    {
+      "problem": "heat",
+      "h": 0.05,
+      "gamma": 5.0,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 482,
+      "rel_l2": 2.595904469895492e-16,
+      "max_abs": 4.440892098500626e-16,
+      "ic_rel_l2": 2.872296003227626e-16,
+      "pde_rms": 7.583073352617457e-14,
+      "pde_scaled_rms": 9.898706142533063e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.007621916010975838
+    },
+    {
+      "problem": "heat",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 538,
+      "rel_l2": 0.0681551011150268,
+      "max_abs": 0.1201052315464215,
+      "ic_rel_l2": 0.09088570627149391,
+      "pde_rms": 4.914361578020421e-14,
+      "pde_scaled_rms": 7.218850521589658e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.008554208092391491
+    },
+    {
+      "problem": "heat",
+      "h": 0.03,
+      "gamma": 8.333333333333334,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 538,
+      "rel_l2": 1.5971498822126161e-16,
+      "max_abs": 3.3306690738754696e-16,
+      "ic_rel_l2": 1.8705679911518672e-16,
+      "pde_rms": 5.5123609204605695e-14,
+      "pde_scaled_rms": 7.195663072992419e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.008444291073828936
+    },
+    {
+      "problem": "heat",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": false,
+      "directions": 2,
+      "neurons": 602,
+      "rel_l2": 0.0316625457479451,
+      "max_abs": 0.05668530032448493,
+      "ic_rel_l2": 0.043056222786110245,
+      "pde_rms": 6.242063914755938e-14,
+      "pde_scaled_rms": 8.609062087147089e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.00952691724523902
+    },
+    {
+      "problem": "heat",
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": true,
+      "directions": 2,
+      "neurons": 602,
+      "rel_l2": 1.7466821423596616e-16,
+      "max_abs": 4.440892098500626e-16,
+      "ic_rel_l2": 1.6470542862271789e-16,
+      "pde_rms": 6.52786125527292e-14,
+      "pde_scaled_rms": 8.521265363056207e-14,
+      "architecture": "spatial tanh network with explicit exponential time readouts",
+      "seconds": 0.009486041963100433
+    }
+  ],
+  "heat3d": [
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 4,
+      "directions": 16,
+      "centers": 251,
+      "neurons": 4016,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": true,
+      "max_rel_l2": 0.04310903131649575,
+      "ic_rel_l2": 0.04310903131649575,
+      "max_scaled_pde_residual": 7.0209188592723e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 0.04310903131649575,
+          "pde_rms": 4.009034854229078e-14,
+          "pde_scaled_rms": 7.0209188592723e-14,
+          "time_derivative_rel": 0.1426052321838826
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 0.021291868187749304,
+          "pde_rms": 1.449335084281025e-14,
+          "pde_scaled_rms": 4.892721534174239e-14,
+          "time_derivative_rel": 0.06114745540608555
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 0.009947145926549448,
+          "pde_rms": 2.780166302892639e-15,
+          "pde_scaled_rms": 3.215575915385215e-14,
+          "time_derivative_rel": 0.019088424641587772
+        }
+      ],
+      "seconds": 0.013379083015024662
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 8,
+      "directions": 64,
+      "centers": 251,
+      "neurons": 16064,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": true,
+      "max_rel_l2": 0.0004237697594791002,
+      "ic_rel_l2": 0.0004237697594791002,
+      "max_scaled_pde_residual": 4.0616860207608045e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 0.0004237697594791002,
+          "pde_rms": 2.319274891300027e-14,
+          "pde_scaled_rms": 4.0616860207608045e-14,
+          "time_derivative_rel": 0.002306069544604146
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 0.00011838898487619841,
+          "pde_rms": 7.899701046965837e-15,
+          "pde_scaled_rms": 2.6668116880094878e-14,
+          "time_derivative_rel": 0.000491564861566631
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 3.5208655590600096e-05,
+          "pde_rms": 1.4838051844503026e-15,
+          "pde_scaled_rms": 1.7161880601451058e-14,
+          "time_derivative_rel": 7.931333535646377e-05
+        }
+      ],
+      "seconds": 0.04808329092338681
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 12,
+      "directions": 144,
+      "centers": 251,
+      "neurons": 36144,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": true,
+      "max_rel_l2": 3.837444610935457e-06,
+      "ic_rel_l2": 3.837444610935457e-06,
+      "max_scaled_pde_residual": 2.568475242519023e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 3.837444610935457e-06,
+          "pde_rms": 1.4666323562312916e-14,
+          "pde_scaled_rms": 2.568475242519023e-14,
+          "time_derivative_rel": 2.7051524112430003e-05
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 6.776564699474069e-07,
+          "pde_rms": 5.131519923323822e-15,
+          "pde_scaled_rms": 1.732318378558092e-14,
+          "time_derivative_rel": 3.0885814624450017e-06
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 1.6240079355904626e-07,
+          "pde_rms": 1.0174112754781515e-15,
+          "pde_scaled_rms": 1.1767508979822467e-14,
+          "time_derivative_rel": 3.726285555428392e-07
+        }
+      ],
+      "seconds": 0.10537308361381292
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 20,
+      "directions": 400,
+      "centers": 251,
+      "neurons": 100400,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": true,
+      "max_rel_l2": 2.295534738894867e-10,
+      "ic_rel_l2": 2.295534738894867e-10,
+      "max_scaled_pde_residual": 1.4682197041058408e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 2.295534738894867e-10,
+          "pde_rms": 8.383723107200675e-15,
+          "pde_scaled_rms": 1.4682197041058408e-14,
+          "time_derivative_rel": 2.226933916147343e-09
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 1.778095798684332e-11,
+          "pde_rms": 3.0582385444262674e-15,
+          "pde_scaled_rms": 1.0324120174306595e-14,
+          "time_derivative_rel": 1.1566173111863488e-10
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 1.907044794074071e-12,
+          "pde_rms": 6.927630808015818e-16,
+          "pde_scaled_rms": 8.012586424689327e-15,
+          "time_derivative_rel": 5.35067531566826e-12
+        }
+      ],
+      "seconds": 0.2873382503166795
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 32,
+      "directions": 1024,
+      "centers": 251,
+      "neurons": 257024,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": false,
+      "max_rel_l2": 0.2948043696454257,
+      "ic_rel_l2": 0.2948043696454257,
+      "max_scaled_pde_residual": 0.6244594283174202,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 0.2948043696454257,
+          "pde_rms": 0.35657435491798023,
+          "pde_scaled_rms": 0.6244594283174202,
+          "time_derivative_rel": 0.6373408857218005
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 0.1871028965405182,
+          "pde_rms": 0.1216981898208266,
+          "pde_scaled_rms": 0.4108334645757654,
+          "time_derivative_rel": 0.39978781819091863
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 0.08140179522013156,
+          "pde_rms": 0.017236931416677006,
+          "pde_scaled_rms": 0.19936455405903006,
+          "time_derivative_rel": 0.16928306534711482
+        }
+      ],
+      "seconds": 0.700327584054321
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 32,
+      "directions": 1024,
+      "centers": 251,
+      "neurons": 257024,
+      "h": 0.04,
+      "gamma": 6.25,
+      "corrected": true,
+      "max_rel_l2": 2.302271973999549e-15,
+      "ic_rel_l2": 2.302271973999549e-15,
+      "max_scaled_pde_residual": 1.201860122841701e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 2.302271973999549e-15,
+          "pde_rms": 6.862775683580289e-15,
+          "pde_scaled_rms": 1.201860122841701e-14,
+          "time_derivative_rel": 3.220567208394111e-15
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 1.9701837553592572e-15,
+          "pde_rms": 2.2194600441205206e-15,
+          "pde_scaled_rms": 7.492539213245311e-15,
+          "time_derivative_rel": 2.722594880236351e-15
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 1.549060364018859e-15,
+          "pde_rms": 4.006043720662784e-16,
+          "pde_scaled_rms": 4.633441420659098e-15,
+          "time_derivative_rel": 2.026372875412233e-15
+        }
+      ],
+      "seconds": 0.7400979166850448
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 32,
+      "directions": 1024,
+      "centers": 65,
+      "neurons": 66560,
+      "h": 0.16,
+      "gamma": 1.5625,
+      "corrected": true,
+      "max_rel_l2": 9.027512521438631e-08,
+      "ic_rel_l2": 9.027512521438631e-08,
+      "max_scaled_pde_residual": 2.1411210388406307e-06,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 9.027512521438631e-08,
+          "pde_rms": 1.222607616451638e-06,
+          "pde_scaled_rms": 2.1411210388406307e-06,
+          "time_derivative_rel": 2.3198602720634236e-06
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 6.816333200157806e-11,
+          "pde_rms": 3.4673273570922087e-10,
+          "pde_scaled_rms": 1.1705138038862975e-09,
+          "time_derivative_rel": 1.083521894599792e-09
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 6.063791107631492e-14,
+          "pde_rms": 2.2133266622246043e-13,
+          "pde_scaled_rms": 2.559961934839775e-12,
+          "time_derivative_rel": 2.9047147978644054e-13
+        }
+      ],
+      "seconds": 0.19336129212751985
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 32,
+      "directions": 1024,
+      "centers": 127,
+      "neurons": 130048,
+      "h": 0.08,
+      "gamma": 3.125,
+      "corrected": true,
+      "max_rel_l2": 3.840713759949013e-15,
+      "ic_rel_l2": 3.840713759949013e-15,
+      "max_scaled_pde_residual": 9.871027937652617e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 3.840713759949013e-15,
+          "pde_rms": 5.636483748399278e-14,
+          "pde_scaled_rms": 9.871027937652617e-14,
+          "time_derivative_rel": 2.7761104045765077e-14
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 1.3262568729190989e-15,
+          "pde_rms": 8.805195458442842e-15,
+          "pde_scaled_rms": 2.972491999909599e-14,
+          "time_derivative_rel": 4.632532956811938e-15
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 1.406775541184091e-15,
+          "pde_rms": 7.456153746403844e-16,
+          "pde_scaled_rms": 8.623882817153656e-15,
+          "time_derivative_rel": 1.4558589265187532e-15
+        }
+      ],
+      "seconds": 0.3731023748405278
+    },
+    {
+      "problem": "3D anisotropic heat",
+      "nz": 32,
+      "directions": 1024,
+      "centers": 501,
+      "neurons": 513024,
+      "h": 0.02,
+      "gamma": 12.5,
+      "corrected": true,
+      "max_rel_l2": 2.961036383317259e-14,
+      "ic_rel_l2": 2.961036383317259e-14,
+      "max_scaled_pde_residual": 5.1748847948191654e-14,
+      "times": [
+        {
+          "time": 0.0,
+          "rel_l2": 2.961036383317259e-14,
+          "pde_rms": 2.95492569062398e-14,
+          "pde_scaled_rms": 5.1748847948191654e-14,
+          "time_derivative_rel": 4.802000448034786e-14
+        },
+        {
+          "time": 0.25,
+          "rel_l2": 2.3158776424551363e-14,
+          "pde_rms": 1.273528102170726e-14,
+          "pde_scaled_rms": 4.2992255120614825e-14,
+          "time_derivative_rel": 3.775464066425413e-14
+        },
+        {
+          "time": 1.0,
+          "rel_l2": 1.5662510670081547e-14,
+          "pde_rms": 2.7621857950025725e-15,
+          "pde_scaled_rms": 3.194779429916869e-14,
+          "time_derivative_rel": 2.412391360577165e-14
+        }
+      ],
+      "seconds": 1.4725328339263797
+    }
+  ],
+  "heat3d_network_dt_finite_difference_relative_error": 1.1597402417974863e-10,
+  "elapsed_seconds": 5.721492374781519
+}

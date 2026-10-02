@@ -1,0 +1,24 @@
+{
+  "run_id": "N001_ns3_smooth",
+  "checks": {
+    "corners": {
+      "points": 8,
+      "momentum_rms": 4.0593251669544515e-15,
+      "momentum_max": 7.28583859910259e-15,
+      "divergence_rms": 4.1987402923250704e-16,
+      "divergence_max": 1.0845167401045551e-15
+    },
+    "near_edges": {
+      "points": 116,
+      "momentum_rms": 2.2186862104693005e-15,
+      "momentum_max": 7.206041319207657e-15,
+      "divergence_rms": 1.9877812732042416e-16,
+      "divergence_max": 1.114740949248837e-15
+    }
+  },
+  "scope": "Postfit saved-state audits only; no continuum certificate or known cavity field.",
+  "ordinary_vs_ideal_max": 4.773959005888173e-15,
+  "ideal_velocity_relative_l2": 1.0484556222459912e-15,
+  "ideal_pressure_relative_l2": 1.8130420518166197e-15,
+  "seconds": 1.7606524168513715
+}

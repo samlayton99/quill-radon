@@ -1,0 +1,215 @@
+{
+  "sources": [
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p8_n129_native_audit.json",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p12_n129_native_ideal.json",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n257_native_staged.json",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n129_native_fullgroups_iteration2_native_extended_audit.json"
+  ],
+  "labels": [
+    "p = 8",
+    "p = 12",
+    "p = 16\nfirst correction",
+    "p = 16\nfinal"
+  ],
+  "audits": [
+    {
+      "ordinary_velocity_relative_l2": 4.894369170589103e-07,
+      "ordinary_pressure_relative_l2": 1.7402924943675515e-05,
+      "ordinary_velocity_max_abs": 1.7585836406541766e-07,
+      "ordinary_pressure_max_abs": 3.5463042929017446e-06,
+      "ordinary_momentum_rms": 1.3284604931045985e-07,
+      "ordinary_momentum_max_abs": 1.0263344703276278e-06,
+      "ordinary_divergence_rms": 1.4227404845852184e-08,
+      "ordinary_divergence_max_abs": 6.186285009623356e-08,
+      "ordinary_vs_grouped_max_abs": 2.5396351688300456e-15,
+      "ordinary_readout_l1_per_field": [
+        1.4296487868124867,
+        1.4066511327351559,
+        1.3956108124045092,
+        0.6053202357982341
+      ],
+      "ordinary_parameter_bytes": 8030696,
+      "value_audit_points": 257,
+      "derivative_audit_points": 97,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 4.2203851831693664e-08,
+          "max_abs": 1.6477994750629943e-07
+        },
+        "velocity_initial": {
+          "rms": 4.3482007346256644e-08,
+          "max_abs": 1.6206220736225685e-07
+        },
+        "pressure_gauge": {
+          "rms": 2.61945596869973e-17,
+          "max_abs": 3.1968361342108624e-17
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "ordinary_velocity_relative_l2": 1.9021913463458927e-11,
+      "ordinary_pressure_relative_l2": 1.4598165750455758e-09,
+      "ordinary_velocity_max_abs": 8.05816524618308e-12,
+      "ordinary_pressure_max_abs": 4.704679926886834e-10,
+      "ordinary_momentum_rms": 5.738519995655565e-12,
+      "ordinary_momentum_max_abs": 4.669094277875985e-11,
+      "ordinary_divergence_rms": 4.583486526149458e-12,
+      "ordinary_divergence_max_abs": 4.40436759266696e-11,
+      "ordinary_vs_grouped_max_abs": 8.257283745649602e-15,
+      "ordinary_readout_l1_per_field": [
+        1.4325882893492357,
+        1.42930963972793,
+        1.4316958641433923,
+        0.4971122404442175
+      ],
+      "ordinary_parameter_bytes": 24202184,
+      "value_audit_points": 257,
+      "derivative_audit_points": 97,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 2.0875934154141132e-12,
+          "max_abs": 8.93047441552497e-12
+        },
+        "velocity_initial": {
+          "rms": 1.8355514097500245e-12,
+          "max_abs": 7.914877087067396e-12
+        },
+        "pressure_gauge": {
+          "rms": 4.933735954755709e-16,
+          "max_abs": 7.711107177533384e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "ordinary_velocity_relative_l2": 6.282528976313648e-13,
+      "ordinary_pressure_relative_l2": 4.0362344231490985e-11,
+      "ordinary_velocity_max_abs": 5.552919235540799e-13,
+      "ordinary_pressure_max_abs": 1.0765962774050841e-11,
+      "ordinary_momentum_rms": 3.6786283144753176e-13,
+      "ordinary_momentum_max_abs": 3.420472238779837e-12,
+      "ordinary_divergence_rms": 3.5221663256107623e-13,
+      "ordinary_divergence_max_abs": 2.880548342519543e-12,
+      "ordinary_vs_grouped_max_abs": 8.881784197001252e-16,
+      "ordinary_readout_l1_per_field": [
+        1.0358875924616748,
+        1.0278919484204658,
+        1.030368849553474,
+        0.37606756528319585
+      ],
+      "ordinary_parameter_bytes": 102937208,
+      "value_audit_points": 257,
+      "derivative_audit_points": 97,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 4.065581840163123e-14,
+          "max_abs": 1.615513278707681e-13
+        },
+        "velocity_initial": {
+          "rms": 2.3874731590574318e-14,
+          "max_abs": 1.2270739979669543e-13
+        },
+        "pressure_gauge": {
+          "rms": 2.2565147469786037e-17,
+          "max_abs": 3.5019730171281793e-17
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "ordinary_velocity_relative_l2": 1.8446057181671687e-15,
+      "ordinary_pressure_relative_l2": 6.368455921120097e-14,
+      "ordinary_velocity_max_abs": 7.494005416219807e-16,
+      "ordinary_pressure_max_abs": 2.8026192477881295e-14,
+      "ordinary_momentum_rms": 9.597254201424692e-16,
+      "ordinary_momentum_max_abs": 4.0217829067046296e-14,
+      "ordinary_divergence_rms": 1.173945485443998e-16,
+      "ordinary_divergence_max_abs": 1.5152829355538505e-15,
+      "ordinary_vs_grouped_max_abs": 9.43689570931383e-16,
+      "ordinary_readout_l1_per_field": [
+        0.9787836810503838,
+        0.9715423482346865,
+        0.9748472472349115,
+        0.35599464537948416
+      ],
+      "ordinary_parameter_bytes": 54121640,
+      "value_audit_points": 2048,
+      "derivative_audit_points": 1024,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.5905148970986403e-16,
+          "max_abs": 5.273559366969494e-16
+        },
+        "velocity_initial": {
+          "rms": 1.5228294249262516e-16,
+          "max_abs": 8.049116928532385e-16
+        },
+        "pressure_gauge": {
+          "rms": 4.28058774623008e-18,
+          "max_abs": 5.5294310796760726e-18
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve",
+      "all_corners": {
+        "points": 16,
+        "maximum_field_error": 1.318042897047178e-13,
+        "momentum_rms": 6.800612665773051e-14,
+        "momentum_max_abs": 1.4629963906998e-13,
+        "divergence_rms": 1.6309992992911836e-14
+      },
+      "larger_constraint_audit": {
+        "velocity_boundary": {
+          "points": 1024,
+          "rms": 1.496456755989823e-16,
+          "maximum_absolute": 1.7069679003611782e-15
+        },
+        "velocity_initial": {
+          "points": 1024,
+          "rms": 1.3585356435971595e-16,
+          "maximum_absolute": 9.992007221626409e-16
+        },
+        "pressure_gauge": {
+          "points": 128,
+          "rms": 5.2650960248954705e-18,
+          "maximum_absolute": 9.974659986866641e-18
+        }
+      },
+      "source_archive": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n129_native_fullgroups_iteration2_native.npz",
+      "seconds": 157.30209937505424,
+      "process_peak_rss_bytes": 537608192,
+      "policy": "No solve, no coefficient update; saved native network only. Finite sampled checks, not a continuum certificate."
+    }
+  ],
+  "notes": [
+    "Smooth manufactured flow on [\u22121, 1]\u00b3 \u00d7 [0, 0.25]; forcing, boundary and initial values only.",
+    "Final: 751,689 tanh neurons; 19,380 solved coordinates; no external PDE trajectory.",
+    "Final audit: 2,048 values, 1,024 derivative points, plus walls, initial surface and all 16 corners.",
+    "Corner max field error = 1.32 \u00d7 10\u207b\u00b9\u00b3. Sequential continuation; this does not establish uniform 10\u207b\u00b9\u2074 accuracy."
+  ],
+  "interpretation": "Sequential native PDE checkpoints; not a controlled scaling-law fit",
+  "geometry_sequence": [
+    {
+      "centers": 129,
+      "lam": 0.2
+    },
+    {
+      "centers": 129,
+      "lam": 0.2
+    },
+    {
+      "centers": 257,
+      "lam": 0.2
+    },
+    {
+      "centers": 129,
+      "lam": 0.25
+    }
+  ],
+  "final_native_archive": "transient_trig_p16_n129_native_fullgroups.npz",
+  "final_equals_frozen_iteration2_bitwise": true
+}

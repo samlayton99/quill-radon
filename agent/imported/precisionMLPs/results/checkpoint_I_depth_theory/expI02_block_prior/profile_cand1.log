@@ -1,0 +1,3 @@
+cand_gauss_trained6k: gauss_bump d=3 M=8 N1=128 K=8 N2=128 steps=6000 lr=0.02 head=trained
+  step  6000  test 5.93e-02  (head solved 6.78e-02)  [257s]
+cand_gauss_trained6k: final test rel L2 5.93e-02; 99 frames at 250 ms -> /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/expI02_block_prior/figures/profiles_cand_gauss_trained6k.gif

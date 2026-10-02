@@ -1,0 +1,154 @@
+{
+  "scope": "Support candidates from PDE coefficients only; no reference use",
+  "source": "ns4d_sparse_axis14_polynomial_stage0_p14_live.npz",
+  "rows": [
+    {
+      "jet_discard_budget": null,
+      "growth_total_layers": 1,
+      "degree": 15,
+      "features": 2848,
+      "unknowns": 11392,
+      "interior_points": 17088,
+      "cache_gb": 3.379391232,
+      "selection": {
+        "retained_after_closure": 1795,
+        "discarded_coefficient_bound": 0.0,
+        "derivative_weighted": true
+      }
+    },
+    {
+      "jet_discard_budget": null,
+      "growth_total_layers": 2,
+      "degree": 16,
+      "features": 3900,
+      "unknowns": 15600,
+      "interior_points": 23400,
+      "cache_gb": 6.2710128,
+      "selection": {
+        "retained_after_closure": 1795,
+        "discarded_coefficient_bound": 0.0,
+        "derivative_weighted": true
+      }
+    },
+    {
+      "jet_discard_budget": 1e-08,
+      "growth_total_layers": 1,
+      "degree": 13,
+      "features": 1236,
+      "unknowns": 4944,
+      "interior_points": 7416,
+      "cache_gb": 0.665432736,
+      "selection": {
+        "discarded_coefficient_bound": 8.538965964371682e-09,
+        "derivative_weighted": true,
+        "selected_before_closure": 274,
+        "retained_after_closure": 596
+      }
+    },
+    {
+      "jet_discard_budget": 1e-08,
+      "growth_total_layers": 2,
+      "degree": 14,
+      "features": 1938,
+      "unknowns": 7752,
+      "interior_points": 11628,
+      "cache_gb": 1.592322816,
+      "selection": {
+        "discarded_coefficient_bound": 8.538965964371682e-09,
+        "derivative_weighted": true,
+        "selected_before_closure": 274,
+        "retained_after_closure": 596
+      }
+    },
+    {
+      "jet_discard_budget": 1e-10,
+      "growth_total_layers": 1,
+      "degree": 15,
+      "features": 2600,
+      "unknowns": 10400,
+      "interior_points": 15600,
+      "cache_gb": 2.837328,
+      "selection": {
+        "discarded_coefficient_bound": 2.3711623912009117e-11,
+        "derivative_weighted": true,
+        "selected_before_closure": 1044,
+        "retained_after_closure": 1601
+      }
+    },
+    {
+      "jet_discard_budget": 1e-10,
+      "growth_total_layers": 2,
+      "degree": 16,
+      "features": 3615,
+      "unknowns": 14460,
+      "interior_points": 21690,
+      "cache_gb": 5.41688952,
+      "selection": {
+        "discarded_coefficient_bound": 2.3711623912009117e-11,
+        "derivative_weighted": true,
+        "selected_before_closure": 1044,
+        "retained_after_closure": 1601
+      }
+    },
+    {
+      "jet_discard_budget": 1e-12,
+      "growth_total_layers": 1,
+      "degree": 15,
+      "features": 2842,
+      "unknowns": 11368,
+      "interior_points": 17052,
+      "cache_gb": 3.36572376,
+      "selection": {
+        "discarded_coefficient_bound": 8.55902281071779e-14,
+        "derivative_weighted": true,
+        "selected_before_closure": 1718,
+        "retained_after_closure": 1789
+      }
+    },
+    {
+      "jet_discard_budget": 1e-12,
+      "growth_total_layers": 2,
+      "degree": 16,
+      "features": 3894,
+      "unknowns": 15576,
+      "interior_points": 23364,
+      "cache_gb": 6.252393312,
+      "selection": {
+        "discarded_coefficient_bound": 8.55902281071779e-14,
+        "derivative_weighted": true,
+        "selected_before_closure": 1718,
+        "retained_after_closure": 1789
+      }
+    },
+    {
+      "jet_discard_budget": 1e-14,
+      "growth_total_layers": 1,
+      "degree": 15,
+      "features": 2848,
+      "unknowns": 11392,
+      "interior_points": 17088,
+      "cache_gb": 3.379391232,
+      "selection": {
+        "discarded_coefficient_bound": 0.0,
+        "derivative_weighted": true,
+        "selected_before_closure": 1790,
+        "retained_after_closure": 1795
+      }
+    },
+    {
+      "jet_discard_budget": 1e-14,
+      "growth_total_layers": 2,
+      "degree": 16,
+      "features": 3900,
+      "unknowns": 15600,
+      "interior_points": 23400,
+      "cache_gb": 6.2710128,
+      "selection": {
+        "discarded_coefficient_bound": 0.0,
+        "derivative_weighted": true,
+        "selected_before_closure": 1790,
+        "retained_after_closure": 1795
+      }
+    }
+  ]
+}

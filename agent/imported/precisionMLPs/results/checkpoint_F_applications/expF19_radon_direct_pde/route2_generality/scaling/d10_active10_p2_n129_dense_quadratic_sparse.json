@@ -1,0 +1,185 @@
+{
+  "dimension": 10,
+  "active_dimension": 10,
+  "degree": 2,
+  "family": "dense_quadratic",
+  "centers": 129,
+  "lam": 0.2,
+  "coordinates": 66,
+  "angular_rule": "signed_sparse_degree4",
+  "directions": 100,
+  "neurons": 15300,
+  "scope": "Cold nonlinear PDE, not known-function encoding",
+  "prior": "none beyond total-degree space",
+  "initial_coefficients": "all zero",
+  "interior_solution_labels_used": false,
+  "boundary": "Dirichlet on all active faces; homogeneous Neumann on inactive faces",
+  "boundary_sampling": "independent_faces",
+  "source": "Manufactured from reference; exact interior values used only for validation",
+  "architecture": [
+    "Linear",
+    "Tanh",
+    "Linear"
+  ],
+  "hardware": {
+    "machine": "arm64",
+    "host": "Mac mini Apple M4, 10 cores, 16 GB",
+    "threads": 1
+  },
+  "construction_seconds": 0.006089500151574612,
+  "solve_seconds": 0.5217186249792576,
+  "feature_cache_seconds": 0.32791558280587196,
+  "cached_feature_jet_bytes": 1603008,
+  "profile_map_bytes": 158400,
+  "dense_model_bytes": 1468808,
+  "inference_1009_seconds": 0.0457960837520659,
+  "ordinary_ad_seconds": 0.004989000037312508,
+  "ordinary_ad_points": 19,
+  "peak_rss_bytes": 312786944,
+  "interior_points": 264,
+  "boundary_points": 132,
+  "status": "converged",
+  "iterations": 5,
+  "relative_l2": 1.5374955847164182e-15,
+  "maximum_error": 2.6645352591003757e-15,
+  "ordinary_mlp_pde_rms": 9.24657373099482e-16,
+  "seconds": 0.5870598340407014,
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 5,
+    "objective": 6.803785239898907e-32,
+    "tolerance": 3e-14,
+    "blocks": [
+      {
+        "name": "physics",
+        "input_rows": 264,
+        "output_rows": 264,
+        "equations": 1,
+        "rms": 2.9146358091795445e-16,
+        "pre_relation_rms": 2.9146358091795445e-16,
+        "relation": "eq",
+        "active_entries": 264,
+        "scaled_rms": [
+          2.9146358091795445e-16
+        ],
+        "maximum_scaled_rms": 2.9146358091795445e-16,
+        "weighted_norm": 2.9146358091795445e-16
+      },
+      {
+        "name": "Dirichlet_active_faces",
+        "input_rows": 132,
+        "output_rows": 132,
+        "equations": 1,
+        "rms": 2.2610768628346354e-16,
+        "pre_relation_rms": 2.2610768628346354e-16,
+        "relation": "eq",
+        "active_entries": 132,
+        "scaled_rms": [
+          2.2610768628346354e-16
+        ],
+        "maximum_scaled_rms": 2.2610768628346354e-16,
+        "weighted_norm": 2.2610768628346354e-16
+      }
+    ],
+    "residual_evaluations": 11,
+    "linearizations": 6,
+    "lsmr_iterations": 290,
+    "seconds": 0.5216898340731859,
+    "basis_setup_seconds": 0.32791558280587196,
+    "basis_cache_bytes": 1603008,
+    "unknowns": 66,
+    "feature_metrics": {
+      "backend": "actual_tanh_ball_ridges_sparse_rule",
+      "dimension": 10,
+      "degree": 2,
+      "coefficient_count": 66,
+      "directions": 100,
+      "interior_centers": 129,
+      "halo_per_side": 12,
+      "lam": 0.2,
+      "tanh_count": 15300,
+      "product_gates": false,
+      "polynomials_in_forward": false,
+      "construction_uses_target_data": false,
+      "angular_weights_total_variation": 1.9999999999999996,
+      "angular_exactness": "Globally even polynomials through degree 4",
+      "construction_seconds": 0.006072459276765585
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "block",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 56,
+        "maximum_block_size": 11,
+        "factor_bytes": 1408,
+        "setup_seconds": 0.0037450408563017845,
+        "ridge_relative": 1e-10,
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 56,
+        "column_row_chunk_size": 1024,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [],
+    "preconditioner_setup_seconds": 0.0037450408563017845,
+    "settings": {
+      "max_iterations": 12,
+      "lsmr_tolerance": 1e-07,
+      "effective_lsmr_tolerance": 3e-16,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": 600,
+      "gradient_tolerance": 1e-11,
+      "step_tolerance": 1e-12,
+      "scaling_probes": 8,
+      "max_seconds": 60,
+      "max_residual_evaluations": 500,
+      "high_accuracy": true,
+      "linear_refinement_steps": 2,
+      "iteration_callback_active": false
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "budget": {
+      "time_limit_seconds": 60,
+      "time_overshoot_seconds": 0.0,
+      "completed_direction_trials_after_time_budget": 0,
+      "residual_evaluation_limit": 500,
+      "residual_evaluation_limit_exceeded": false,
+      "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 24684,
+    "unassembled_dense_jacobian_bytes": 209088,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 307,
+      "rmatvec_calls": 347,
+      "column_gram_calls": 56,
+      "column_panel_bytes_max": 23232
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 396
+  }
+}

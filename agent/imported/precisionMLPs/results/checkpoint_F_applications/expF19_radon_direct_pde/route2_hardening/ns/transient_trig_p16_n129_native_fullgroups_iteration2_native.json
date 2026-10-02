@@ -1,0 +1,58 @@
+{
+  "config": {
+    "family": "trigonometric",
+    "viscosity": 0.2,
+    "frequency": 0.7,
+    "transient": true,
+    "centers": 129,
+    "lam": 0.25,
+    "degrees": [
+      16
+    ]
+  },
+  "kind": "accepted_native_checkpoint",
+  "iteration": 2,
+  "provenance": "Unchanged accepted native PDE coefficients at iteration2, before configured budget termination; no fit, target initialization, or external PDE trajectory.",
+  "parent_run": "transient_trig_p16_n129_native_fullgroups",
+  "progress": [
+    {
+      "coordinate_count": 4845,
+      "iteration": 0,
+      "objective": 5.0221325731412856e-27,
+      "maximum_scaled_block_rms": 4.7567035223191334e-14,
+      "damping": 1e-30,
+      "scheduled_inner_tolerance": 1e-08,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 157.0695492089726,
+      "total_run_elapsed_seconds": 157.25055741658434,
+      "process_peak_rss_bytes": 387203072
+    },
+    {
+      "coordinate_count": 4845,
+      "iteration": 1,
+      "objective": 6.310892493640502e-32,
+      "maximum_scaled_block_rms": 1.502301459624631e-16,
+      "damping": 1e-14,
+      "scheduled_inner_tolerance": 1e-08,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 834.3124581249431,
+      "total_run_elapsed_seconds": 834.4939174167812,
+      "process_peak_rss_bytes": 1059536896
+    },
+    {
+      "coordinate_count": 4845,
+      "iteration": 2,
+      "objective": 5.85168984111171e-32,
+      "maximum_scaled_block_rms": 1.463579477237222e-16,
+      "damping": 1e-14,
+      "scheduled_inner_tolerance": 1e-08,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 1767.729217584245,
+      "total_run_elapsed_seconds": 1767.9111736668274,
+      "process_peak_rss_bytes": 1081344000
+    }
+  ]
+}

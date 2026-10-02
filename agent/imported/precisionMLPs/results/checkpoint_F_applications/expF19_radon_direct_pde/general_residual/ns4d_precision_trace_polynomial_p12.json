@@ -1,0 +1,367 @@
+{
+  "backend": "polynomial",
+  "degree": 12,
+  "stem": "ns4d_precision_trace_polynomial_p12",
+  "warmstart": "results/checkpoint_F_applications/expF19_radon_direct_pde/general_residual/ns4d_precision_pilot_polynomial_p10.npz",
+  "warmstart_scope": "Previously PDE-solved p10 coefficients only; no reference coefficients",
+  "engine_sha256": "af1819b5c6a17064c142d1b4788248c5c8ed93101f07f18a122c515ffdf2c835",
+  "options": {
+    "max_iterations": 30,
+    "tolerance": 1e-14,
+    "damping": 1e-12,
+    "lsmr_tolerance": 1e-12,
+    "lsmr_max_iterations": 1500,
+    "gradient_tolerance": 1e-15,
+    "step_tolerance": 1e-16,
+    "max_seconds": 3600.0,
+    "max_residual_evaluations": 3000,
+    "preconditioner": "block",
+    "preconditioner_block_size": 512,
+    "high_accuracy": true,
+    "linear_refinement_steps": 0,
+    "iteration_callback": "atomic solved-coefficient checkpoint"
+  },
+  "features": {
+    "backend": "polynomial",
+    "dimension": 4,
+    "degree": 12,
+    "coefficient_count": 1820,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "evaluation": "standard",
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 0.0007088747806847095
+  },
+  "unknown_coefficients": 7280,
+  "interior_points": 10920,
+  "trace_oversampling": 2,
+  "block_point_counts": {
+    "momentum_and_divergence": 10920,
+    "spatial_velocity": 5460,
+    "initial_velocity": 1248,
+    "pressure_gauge": 156
+  },
+  "estimated_basis_cache_bytes": 1371901440,
+  "process_peak_rss_bytes": null,
+  "memory_scope": "Interrupted process did not save peak RSS; basis cache is exact array-size accounting",
+  "setup_seconds": null,
+  "solve_seconds": 350.2757816314697,
+  "solve_seconds_scope": "Approximate total runtime from log birth/modification timestamps; includes discarded final Krylov work",
+  "accepted_checkpoint_seconds": 291.1410110825673,
+  "validation_seconds": 2.1032037497498095,
+  "status": "interrupted_after_plateau",
+  "solver": {
+    "status": "interrupted_after_plateau",
+    "blocks": [
+      {
+        "name": "momentum_and_divergence",
+        "maximum_scaled_rms": 8.57149989917868e-14,
+        "reuses_training_locations": true,
+        "points": 10920
+      },
+      {
+        "name": "spatial_velocity",
+        "maximum_scaled_rms": 1.0012636384012038e-14,
+        "reuses_training_locations": true,
+        "points": 5460
+      },
+      {
+        "name": "initial_velocity",
+        "maximum_scaled_rms": 4.6153211713983924e-15,
+        "reuses_training_locations": true,
+        "points": 1248
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 5.041027063358352e-23,
+        "reuses_training_locations": true,
+        "points": 156
+      }
+    ],
+    "converged": false,
+    "lsmr_iterations": null,
+    "iteration_count": 3,
+    "note": "Core solve was interrupted after a measured plateau; lost in-flight Krylov iteration count is not reconstructed"
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 3.822078757353001e-21,
+      "maximum_scaled_block_rms": 5.620385997255232e-11,
+      "damping": 0.0,
+      "elapsed_seconds": 1.4498140416108072
+    },
+    {
+      "iteration": 1,
+      "objective": 8.776318298736599e-27,
+      "maximum_scaled_block_rms": 8.578694780083447e-14,
+      "damping": 0.0,
+      "elapsed_seconds": 103.63029558258131
+    },
+    {
+      "iteration": 2,
+      "objective": 8.5455575925873e-27,
+      "maximum_scaled_block_rms": 8.57114018680698e-14,
+      "damping": 0.0,
+      "elapsed_seconds": 197.22966649988666
+    },
+    {
+      "iteration": 3,
+      "objective": 8.545053407994185e-27,
+      "maximum_scaled_block_rms": 8.57149989917868e-14,
+      "damping": 0.0,
+      "elapsed_seconds": 291.1410110825673
+    }
+  ],
+  "validation": {
+    "velocity_relative_l2": 1.1860659458746917e-14,
+    "pressure_relative_l2": 4.218002840984405e-13,
+    "final_velocity_relative_l2": 3.575754665484351e-14,
+    "final_pressure_relative_l2": 2.324716579282647e-12,
+    "velocity_max_error": 5.5148594024778674e-14,
+    "pressure_max_error": 8.04051270009154e-13,
+    "velocity_gradient_relative_l2": 2.4664495863307163e-13,
+    "velocity_time_derivative_relative_l2": 1.9604218673112533e-12,
+    "physical_residual_component_rms": [
+      1.270355162399981e-13,
+      6.614656617456457e-14,
+      1.1994082906292405e-13,
+      1.8608888083051785e-14
+    ],
+    "physical_residual_component_max": [
+      1.7661540632762929e-12,
+      6.690203946391193e-13,
+      1.4167833572997779e-12,
+      2.465506501511758e-13
+    ],
+    "fresh_block_checks": [
+      {
+        "name": "momentum_and_divergence",
+        "maximum_scaled_rms": 1.2542505025775317e-13,
+        "reuses_training_locations": false,
+        "points": 1201
+      },
+      {
+        "name": "spatial_velocity",
+        "maximum_scaled_rms": 1.122328871474731e-14,
+        "reuses_training_locations": false,
+        "points": 306
+      },
+      {
+        "name": "initial_velocity",
+        "maximum_scaled_rms": 5.3582010389425075e-15,
+        "reuses_training_locations": false,
+        "points": 408
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 5.06059783975555e-23,
+        "reuses_training_locations": false,
+        "points": 51
+      }
+    ]
+  },
+  "error_by_time": [
+    {
+      "time": 0.0,
+      "velocity_relative_l2": 9.080392377603134e-15,
+      "pressure_relative_l2": 8.915332787179479e-13,
+      "velocity_absolute_rms": 4.7769351740496e-15,
+      "pressure_absolute_rms": 1.045849659135731e-13,
+      "velocity_linf": 5.007105841059456e-14,
+      "pressure_linf": 6.330738884507969e-13
+    },
+    {
+      "time": 0.05,
+      "velocity_relative_l2": 1.0358410012726851e-14,
+      "pressure_relative_l2": 3.43394343800264e-13,
+      "velocity_absolute_rms": 5.4220854465896176e-15,
+      "pressure_absolute_rms": 3.988245582773627e-14,
+      "velocity_linf": 3.452793606584237e-14,
+      "pressure_linf": 2.4817647936714593e-13
+    },
+    {
+      "time": 0.1,
+      "velocity_relative_l2": 1.0839271776709697e-14,
+      "pressure_relative_l2": 2.0799279325601326e-13,
+      "velocity_absolute_rms": 5.645493257349609e-15,
+      "pressure_absolute_rms": 2.391630580985111e-14,
+      "velocity_linf": 2.919886554764162e-14,
+      "pressure_linf": 1.6893431098452538e-13
+    },
+    {
+      "time": 0.15000000000000002,
+      "velocity_relative_l2": 1.0304817914014211e-14,
+      "pressure_relative_l2": 1.7270812562575818e-13,
+      "velocity_absolute_rms": 5.340361265105568e-15,
+      "pressure_absolute_rms": 1.966145423176634e-14,
+      "velocity_linf": 3.197442310920451e-14,
+      "pressure_linf": 1.1540768340978502e-13
+    },
+    {
+      "time": 0.2,
+      "velocity_relative_l2": 9.751506072587459e-15,
+      "pressure_relative_l2": 1.6348151794415833e-13,
+      "velocity_absolute_rms": 5.0284083412069685e-15,
+      "pressure_absolute_rms": 1.8425894596923576e-14,
+      "velocity_linf": 2.55351295663786e-14,
+      "pressure_linf": 9.636735853746359e-14
+    },
+    {
+      "time": 0.25,
+      "velocity_relative_l2": 9.594707994791953e-15,
+      "pressure_relative_l2": 1.8586866460863762e-13,
+      "velocity_absolute_rms": 4.9228786691055495e-15,
+      "pressure_absolute_rms": 2.0740687827013495e-14,
+      "velocity_linf": 2.6201263381153694e-14,
+      "pressure_linf": 1.131577470614431e-13
+    },
+    {
+      "time": 0.30000000000000004,
+      "velocity_relative_l2": 9.695821932113207e-15,
+      "pressure_relative_l2": 2.2235640041622888e-13,
+      "velocity_absolute_rms": 4.949946769485412e-15,
+      "pressure_absolute_rms": 2.4565390162060662e-14,
+      "velocity_linf": 2.7200464103316335e-14,
+      "pressure_linf": 1.692465612102012e-13
+    },
+    {
+      "time": 0.35000000000000003,
+      "velocity_relative_l2": 1.0409524723535079e-14,
+      "pressure_relative_l2": 2.447118509131425e-13,
+      "velocity_absolute_rms": 5.287803724120872e-15,
+      "pressure_absolute_rms": 2.6766161151954268e-14,
+      "velocity_linf": 2.6256774532384952e-14,
+      "pressure_linf": 1.920893999418638e-13
+    },
+    {
+      "time": 0.4,
+      "velocity_relative_l2": 1.1100462524732121e-14,
+      "pressure_relative_l2": 2.5895900618383476e-13,
+      "velocity_absolute_rms": 5.6106609845804555e-15,
+      "pressure_absolute_rms": 2.8042657089677548e-14,
+      "velocity_linf": 2.6874336089832696e-14,
+      "pressure_linf": 1.8412181501670233e-13
+    },
+    {
+      "time": 0.45,
+      "velocity_relative_l2": 1.1428642182402428e-14,
+      "pressure_relative_l2": 2.611607450309402e-13,
+      "velocity_absolute_rms": 5.747726787702119e-15,
+      "pressure_absolute_rms": 2.7999681792714476e-14,
+      "velocity_linf": 2.6093710525643132e-14,
+      "pressure_linf": 1.8274270985330077e-13
+    },
+    {
+      "time": 0.5,
+      "velocity_relative_l2": 1.1406724985562724e-14,
+      "pressure_relative_l2": 2.4162168345145845e-13,
+      "velocity_absolute_rms": 5.708092194554039e-15,
+      "pressure_absolute_rms": 2.5647093667654566e-14,
+      "velocity_linf": 2.3425705819590803e-14,
+      "pressure_linf": 1.7275070263167436e-13
+    },
+    {
+      "time": 0.55,
+      "velocity_relative_l2": 1.0869228758865226e-14,
+      "pressure_relative_l2": 2.109926503109296e-13,
+      "velocity_absolute_rms": 5.4119934827303675e-15,
+      "pressure_absolute_rms": 2.2173111180654597e-14,
+      "velocity_linf": 2.531308496145357e-14,
+      "pressure_linf": 1.55500612386561e-13
+    },
+    {
+      "time": 0.6000000000000001,
+      "velocity_relative_l2": 9.84869904747732e-15,
+      "pressure_relative_l2": 1.872866191050896e-13,
+      "velocity_absolute_rms": 4.879394473541365e-15,
+      "pressure_absolute_rms": 1.948601857782108e-14,
+      "velocity_linf": 2.353672812205332e-14,
+      "pressure_linf": 1.3609946503123638e-13
+    },
+    {
+      "time": 0.65,
+      "velocity_relative_l2": 9.015868329186629e-15,
+      "pressure_relative_l2": 1.8095949612934076e-13,
+      "velocity_absolute_rms": 4.4445024649925775e-15,
+      "pressure_absolute_rms": 1.864038147429671e-14,
+      "velocity_linf": 2.2926105458509483e-14,
+      "pressure_linf": 1.1705914015891494e-13
+    },
+    {
+      "time": 0.7000000000000001,
+      "velocity_relative_l2": 8.788815597899292e-15,
+      "pressure_relative_l2": 2.1209987748400506e-13,
+      "velocity_absolute_rms": 4.31096474219723e-15,
+      "pressure_absolute_rms": 2.163071575820745e-14,
+      "velocity_linf": 2.353672812205332e-14,
+      "pressure_linf": 1.4288570326925765e-13
+    },
+    {
+      "time": 0.75,
+      "velocity_relative_l2": 9.51178721727307e-15,
+      "pressure_relative_l2": 2.6791571555129427e-13,
+      "velocity_absolute_rms": 4.64231678169376e-15,
+      "pressure_absolute_rms": 2.7051149054780884e-14,
+      "velocity_linf": 2.298161660974074e-14,
+      "pressure_linf": 1.7916224059888464e-13
+    },
+    {
+      "time": 0.8,
+      "velocity_relative_l2": 1.0789189319140048e-14,
+      "pressure_relative_l2": 3.0423221363742784e-13,
+      "velocity_absolute_rms": 5.239501722314325e-15,
+      "pressure_absolute_rms": 3.041233604140694e-14,
+      "velocity_linf": 2.4424906541753444e-14,
+      "pressure_linf": 1.9434454046063365e-13
+    },
+    {
+      "time": 0.8500000000000001,
+      "velocity_relative_l2": 1.2026165909260717e-14,
+      "pressure_relative_l2": 3.324608519012104e-13,
+      "velocity_absolute_rms": 5.8110805068628316e-15,
+      "pressure_absolute_rms": 3.290350414267982e-14,
+      "velocity_linf": 3.597122599785507e-14,
+      "pressure_linf": 2.2325197246431117e-13
+    },
+    {
+      "time": 0.9,
+      "velocity_relative_l2": 1.3720533175699245e-14,
+      "pressure_relative_l2": 3.7825803344778453e-13,
+      "velocity_absolute_rms": 6.596737717182165e-15,
+      "pressure_absolute_rms": 3.7063536304976134e-14,
+      "velocity_linf": 4.9182879990894435e-14,
+      "pressure_linf": 2.6044964795968184e-13
+    },
+    {
+      "time": 0.9500000000000001,
+      "velocity_relative_l2": 1.7307051030518395e-14,
+      "pressure_relative_l2": 5.989071157882094e-13,
+      "velocity_absolute_rms": 8.279609051656068e-15,
+      "pressure_absolute_rms": 5.809987817872666e-14,
+      "velocity_linf": 6.582581701941592e-14,
+      "pressure_linf": 3.3920088959860095e-13
+    },
+    {
+      "time": 1.0,
+      "velocity_relative_l2": 3.617461628401178e-14,
+      "pressure_relative_l2": 2.321038882430471e-12,
+      "velocity_absolute_rms": 1.7219447678383984e-14,
+      "pressure_absolute_rms": 2.2292317492832106e-13,
+      "velocity_linf": 1.7042270372691348e-13,
+      "pressure_linf": 1.0501877145685512e-12
+    }
+  ],
+  "reference_checks": {
+    "maximum_pde_residual": 1.3877787807814457e-16,
+    "maximum_beltrami_defect": 1.1102230246251565e-16,
+    "maximum_laplacian_defect": 1.1102230246251565e-16
+  }
+}

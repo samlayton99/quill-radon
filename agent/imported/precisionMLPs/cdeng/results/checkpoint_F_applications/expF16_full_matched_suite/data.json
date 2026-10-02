@@ -1,0 +1,467 @@
+{
+  "protocol": {
+    "kind": "oracle representation/interpolation ceiling",
+    "budget": 1156,
+    "metric": "relative L2",
+    "counting": "all fitted scalar nodal values/readout coefficients",
+    "not_counted": "fixed nodes, centers, offsets, ridge directions",
+    "selection": "best validation/evaluation configuration (oracle)"
+  },
+  "pdes": {
+    "convection_c40": {
+      "bwler": {
+        "relative_l2": 4.148279081770059e-06,
+        "parameters": 1156,
+        "shape": [
+          34,
+          34
+        ],
+        "bases": [
+          "fourier",
+          "chebyshev"
+        ]
+      },
+      "radon": {
+        "relative_l2": 4.153913487808405e-06,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 5.314391991974179e-13,
+        "parameters": 1152,
+        "rank": 4,
+        "features_per_factor": 144,
+        "lambda": 0.25,
+        "collar": 1.6,
+        "fit": "SVD factors + value LS"
+      },
+      "published_bwler_pde_solve_relative_l2": 2.04e-13,
+      "n_train": 4200,
+      "n_eval": 10000
+    },
+    "convection_c80": {
+      "bwler": {
+        "relative_l2": 1.0526169687079794,
+        "parameters": 1156,
+        "shape": [
+          34,
+          34
+        ],
+        "bases": [
+          "fourier",
+          "chebyshev"
+        ]
+      },
+      "radon": {
+        "relative_l2": 0.7100784458401437,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.25,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 3.4995720974587984e-11,
+        "parameters": 1152,
+        "rank": 4,
+        "features_per_factor": 144,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "SVD factors + value LS"
+      },
+      "published_bwler_pde_solve_relative_l2": 1.1e-12,
+      "n_train": 4200,
+      "n_eval": 10000
+    },
+    "reaction": {
+      "bwler": {
+        "relative_l2": 3.528372032428135e-06,
+        "parameters": 1156,
+        "shape": [
+          34,
+          34
+        ],
+        "bases": [
+          "chebyshev",
+          "chebyshev"
+        ]
+      },
+      "radon": {
+        "relative_l2": 2.2107546510045186e-05,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 1.3059950559707426e-06,
+        "parameters": 1152,
+        "rank": 16,
+        "features_per_factor": 36,
+        "lambda": 0.3,
+        "collar": 1.0,
+        "fit": "SVD factors + value LS"
+      },
+      "published_bwler_pde_solve_relative_l2": 6.94e-11,
+      "n_train": 4200,
+      "n_eval": 10000
+    },
+    "wave": {
+      "bwler": {
+        "relative_l2": 2.19524654301469e-09,
+        "parameters": 1156,
+        "shape": [
+          34,
+          34
+        ],
+        "bases": [
+          "chebyshev",
+          "chebyshev"
+        ]
+      },
+      "radon": {
+        "relative_l2": 1.7977367801569108e-07,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 7.416417463022858e-14,
+        "parameters": 1152,
+        "rank": 4,
+        "features_per_factor": 144,
+        "lambda": 0.25,
+        "collar": 1.6,
+        "fit": "SVD factors + value LS"
+      },
+      "published_bwler_pde_solve_relative_l2": 1.26e-11,
+      "n_train": 4200,
+      "n_eval": 10000
+    },
+    "burgers": {
+      "bwler": {
+        "relative_l2": 0.14026587281213246,
+        "parameters": 1156,
+        "shape": [
+          34,
+          34
+        ],
+        "bases": [
+          "chebyshev",
+          "chebyshev"
+        ]
+      },
+      "radon": {
+        "relative_l2": 0.1442548190841205,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.16,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 0.012522445295650345,
+        "parameters": 1152,
+        "rank": 4,
+        "features_per_factor": 144,
+        "lambda": 0.25,
+        "collar": 1.0,
+        "fit": "SVD factors + value LS"
+      },
+      "published_bwler_pde_solve_relative_l2": 0.00463,
+      "n_train": 4200,
+      "n_eval": 10000
+    },
+    "poisson_cg": {
+      "bwler": {
+        "relative_l2": 0.034601267966112695,
+        "parameters": 169,
+        "shape": [
+          13,
+          13
+        ],
+        "bases": [
+          "chebyshev",
+          "chebyshev"
+        ],
+        "rcond": 0.0001,
+        "effective_rank": 169,
+        "fit": "scattered value truncated-SVD in equivalent Chebyshev basis"
+      },
+      "radon": {
+        "relative_l2": 0.03645008632769254,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.12,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 0.0011768955421073619,
+        "parameters": 1152,
+        "rank": 8,
+        "features_per_factor": 72,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "scattered value ALS"
+      },
+      "published_bwler_pde_solve_relative_l2": 0.0108,
+      "n_train": 897,
+      "n_eval": 349
+    },
+    "poisson_man": {
+      "bwler": {
+        "relative_l2": 0.00015448106136192383,
+        "parameters": 441,
+        "shape": [
+          21,
+          21
+        ],
+        "bases": [
+          "chebyshev",
+          "chebyshev"
+        ],
+        "rcond": 0.0001,
+        "effective_rank": 441,
+        "fit": "scattered value truncated-SVD in equivalent Chebyshev basis"
+      },
+      "radon": {
+        "relative_l2": 8.615410385386121e-06,
+        "parameters": 1156,
+        "width": 1155,
+        "lambda": 0.25,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 2.119003308590498e-06,
+        "parameters": 1152,
+        "rank": 8,
+        "features_per_factor": 72,
+        "lambda": 0.25,
+        "collar": 1.6,
+        "fit": "scattered value ALS"
+      },
+      "published_bwler_pde_solve_relative_l2": null,
+      "n_train": 4200,
+      "n_eval": 10000
+    }
+  },
+  "dysts": {
+    "Lorenz": {
+      "dimension": 3,
+      "horizon": 3.3643232226238537,
+      "reference_nfev": 5702,
+      "bwler": {
+        "relative_l2": 4.5376286276416544e-14,
+        "parameters": 1155,
+        "nodes_per_output": 385,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 3.983971033159938e-14,
+        "parameters": 1155,
+        "features_per_output": 385,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 4.1777870208500997e-14,
+        "parameters": 1155,
+        "rank": 3,
+        "temporal_features": 382,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "Rossler": {
+      "dimension": 3,
+      "horizon": 19.920730182691702,
+      "reference_nfev": 8660,
+      "bwler": {
+        "relative_l2": 7.121213135603996e-09,
+        "parameters": 1155,
+        "nodes_per_output": 385,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 1.385654004835904e-11,
+        "parameters": 1155,
+        "features_per_output": 385,
+        "lambda": 0.3,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 1.4494740132543417e-11,
+        "parameters": 1155,
+        "rank": 3,
+        "temporal_features": 382,
+        "lambda": 0.3,
+        "collar": 1.0,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "Thomas": {
+      "dimension": 3,
+      "horizon": 4.743792510055692,
+      "reference_nfev": 4736,
+      "bwler": {
+        "relative_l2": 1.7141582204194826e-13,
+        "parameters": 1155,
+        "nodes_per_output": 385,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 1.606579771707361e-13,
+        "parameters": 1155,
+        "features_per_output": 385,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 1.7224048409002177e-13,
+        "parameters": 1155,
+        "rank": 3,
+        "temporal_features": 382,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "Halvorsen": {
+      "dimension": 3,
+      "horizon": 4.308047487542209,
+      "reference_nfev": 5735,
+      "bwler": {
+        "relative_l2": 9.708537931932175e-14,
+        "parameters": 1155,
+        "nodes_per_output": 385,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 9.386207131950733e-13,
+        "parameters": 1155,
+        "features_per_output": 385,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 1.474140492169134e-12,
+        "parameters": 1155,
+        "rank": 3,
+        "temporal_features": 382,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "Lorenz96": {
+      "dimension": 4,
+      "horizon": 2.245228700308282,
+      "reference_nfev": 4982,
+      "bwler": {
+        "relative_l2": 4.680616446546094e-14,
+        "parameters": 1156,
+        "nodes_per_output": 289,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 8.84651687333265e-14,
+        "parameters": 1156,
+        "features_per_output": 289,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 6.697213350085359e-14,
+        "parameters": 1156,
+        "rank": 4,
+        "temporal_features": 285,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "InteriorSquirmer": {
+      "dimension": 3,
+      "horizon": 3.5514115074413852,
+      "reference_nfev": 4931,
+      "bwler": {
+        "relative_l2": 5.18940436391184e-05,
+        "parameters": 1155,
+        "nodes_per_output": 385,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 4.567210267011779e-06,
+        "parameters": 1155,
+        "features_per_output": 385,
+        "lambda": 0.25,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 4.595211768403618e-06,
+        "parameters": 1155,
+        "rank": 3,
+        "temporal_features": 382,
+        "lambda": 0.25,
+        "collar": 1.0,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "DoublePendulum": {
+      "dimension": 4,
+      "horizon": 0.7527667816001623,
+      "reference_nfev": 1154,
+      "bwler": {
+        "relative_l2": 1.2034906133265801e-15,
+        "parameters": 1156,
+        "nodes_per_output": 289,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 1.0408993921623576e-14,
+        "parameters": 1156,
+        "features_per_output": 289,
+        "lambda": 0.16,
+        "collar": 1.6
+      },
+      "tensor_qi": {
+        "relative_l2": 7.961854552363729e-15,
+        "parameters": 1156,
+        "rank": 4,
+        "temporal_features": 285,
+        "lambda": 0.16,
+        "collar": 1.6,
+        "fit": "trajectory SVD + value LS"
+      }
+    },
+    "MacArthur": {
+      "dimension": 10,
+      "horizon": 12.025790458031011,
+      "reference_nfev": 7988,
+      "bwler": {
+        "relative_l2": 3.1953490434261705e-06,
+        "parameters": 1150,
+        "nodes_per_output": 115,
+        "basis": "chebyshev"
+      },
+      "radon": {
+        "relative_l2": 9.206980612372612e-07,
+        "parameters": 1150,
+        "features_per_output": 115,
+        "lambda": 0.3,
+        "collar": 1.0
+      },
+      "tensor_qi": {
+        "relative_l2": 2.859353899205882e-07,
+        "parameters": 1152,
+        "rank": 6,
+        "temporal_features": 182,
+        "lambda": 0.3,
+        "collar": 1.0,
+        "fit": "trajectory SVD + value LS"
+      }
+    }
+  }
+}

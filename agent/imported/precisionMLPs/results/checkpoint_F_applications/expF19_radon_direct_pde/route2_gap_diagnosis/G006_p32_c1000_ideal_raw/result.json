@@ -1,0 +1,52 @@
+{
+  "run_id": "G006_p32_c1000_ideal_raw",
+  "status": "complete",
+  "case": "diffusion_c1000",
+  "degree": 32,
+  "neurons": 9603,
+  "coordinates": 561,
+  "rows": 5222,
+  "basis": "ideal",
+  "weighting": "raw",
+  "rank": 561,
+  "singular_max": 106597.85073022639,
+  "singular_min": 3.5529488689961177e-07,
+  "condition": 300026413721.92194,
+  "algebraic_residual_norm": 6.110723619882038e-12,
+  "normal_residual_norm": 1.8742617141086713e-07,
+  "dense_matrix_bytes": 23436336,
+  "assembly_seconds": 0.1568238753825426,
+  "solve_seconds": 0.05362258292734623,
+  "column_scaled": false,
+  "rcond": 1e-14,
+  "blocks": [
+    {
+      "name": "PDE",
+      "start": 0,
+      "stop": 3366,
+      "factor": 0.017236256333167305
+    },
+    {
+      "name": "Dirichlet",
+      "start": 3366,
+      "stop": 5222,
+      "factor": 0.023211917272131483
+    }
+  ],
+  "ordinary_relative_l2": 7.753648338187887e-13,
+  "ideal_relative_l2": 7.75370497462689e-13,
+  "stable_neural_relative_l2": 7.754505481566048e-13,
+  "ordinary_vs_ideal_relative_l2": 2.726994296517272e-16,
+  "ordinary_pde_rms": 8.035108156422425e-12,
+  "ordinary_pde_max": 8.774581061743447e-11,
+  "ideal_pde_rms": 8.036545528771374e-12,
+  "boundary_rms": 1.2704417702493289e-12,
+  "readout_l1": 3.7313937064142744,
+  "coordinate_norm": 1.1739032881744855,
+  "fit_basis": "ideal",
+  "field_points": 2048,
+  "pde_points": 257,
+  "reference_used_in_fit": false,
+  "seconds": 0.509785792324692,
+  "process_peak_rss_bytes": 441139200
+}

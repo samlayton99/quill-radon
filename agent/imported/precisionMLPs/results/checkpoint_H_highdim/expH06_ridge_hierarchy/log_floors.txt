@@ -1,0 +1,34 @@
+e_M(M) at N=48
+  e_M      M=   4 N= 48 units=   192 rank=  192/  193 [   0.2s] fast_=3.9e-01 radia=2.2e-02 compo=6.8e-02 gauss=4.3e-02 produ=2.6e-01 spati=1.9e-01
+  e_M      M=   8 N= 48 units=   384 rank=  378/  385 [   0.5s] fast_=9.6e-02 radia=3.4e-03 compo=6.8e-03 gauss=4.8e-03 produ=6.8e-02 spati=1.7e-01
+  e_M      M=  12 N= 48 units=   576 rank=  560/  577 [   0.9s] fast_=4.9e-02 radia=1.8e-03 compo=3.2e-03 gauss=1.2e-03 produ=3.7e-02 spati=1.3e-01
+  e_M      M=  16 N= 48 units=   768 rank=  739/  769 [   1.4s] fast_=3.2e-02 radia=1.2e-03 compo=5.9e-04 gauss=2.6e-04 produ=1.8e-02 spati=9.6e-02
+  e_M      M=  24 N= 48 units=  1152 rank= 1088/ 1153 [   2.7s] fast_=7.2e-03 radia=3.0e-04 compo=2.6e-04 gauss=2.4e-05 produ=6.8e-03 spati=4.5e-02
+  e_M      M=  32 N= 48 units=  1536 rank= 1428/ 1537 [   4.6s] fast_=5.7e-04 radia=3.4e-05 compo=2.9e-05 gauss=9.9e-07 produ=3.5e-04 spati=1.3e-02
+  e_M      M=  48 N= 48 units=  2304 rank= 2085/ 2305 [  10.4s] fast_=6.9e-05 radia=1.0e-05 compo=1.4e-06 gauss=4.0e-08 produ=2.7e-05 spati=5.1e-03
+  e_M      M=  64 N= 48 units=  3072 rank= 2716/ 3073 [  19.1s] fast_=3.3e-06 radia=1.3e-06 compo=1.1e-07 gauss=1.3e-09 produ=1.9e-06 spati=9.9e-04
+  e_M      M=  96 N= 48 units=  4608 rank= 3911/ 4609 [  48.8s] fast_=3.3e-08 radia=8.9e-08 compo=4.0e-09 gauss=5.1e-12 produ=1.0e-08 spati=1.0e-04
+  e_M      M= 128 N= 48 units=  6144 rank= 5032/ 6145 [  96.8s] fast_=5.5e-10 radia=1.1e-08 compo=4.0e-11 gauss=4.8e-14 produ=1.5e-10 spati=1.0e-05
+  e_M      M= 160 N= 48 units=  7680 rank= 6089/ 7681 [ 181.0s] fast_=1.1e-11 radia=1.8e-09 compo=2.9e-12 gauss=2.0e-14 produ=1.1e-12 spati=1.2e-06
+e_N(N) at M=128
+  e_N      M= 128 N=  4 units=   512 rank=  382/  513 [   1.0s] fast_=2.9e-04 radia=6.8e-05 compo=5.7e-07 gauss=2.3e-08 produ=1.8e-06 spati=3.1e-02
+  e_N      M= 128 N=  6 units=   768 rank=  641/  769 [   1.9s] fast_=3.7e-06 radia=5.2e-06 compo=4.6e-09 gauss=2.1e-09 produ=1.8e-07 spati=4.1e-03
+  e_N      M= 128 N=  8 units=  1024 rank=  879/ 1025 [   3.3s] fast_=2.7e-07 radia=3.8e-07 compo=5.8e-10 gauss=5.1e-10 produ=3.0e-08 spati=1.8e-04
+  e_N      M= 128 N= 12 units=  1536 rank= 1323/ 1537 [  11.6s] fast_=2.1e-08 radia=1.0e-08 compo=2.0e-10 gauss=1.9e-10 produ=3.2e-09 spati=1.0e-05
+  e_N      M= 128 N= 16 units=  2048 rank= 1770/ 2049 [  13.3s] fast_=1.4e-08 radia=1.0e-08 compo=3.0e-10 gauss=2.0e-10 produ=2.9e-09 spati=1.0e-05
+  e_N      M= 128 N= 24 units=  3072 rank= 2621/ 3073 [  33.0s] fast_=9.4e-10 radia=1.0e-08 compo=4.3e-11 gauss=2.4e-11 produ=1.9e-10 spati=1.0e-05
+  e_N      M= 128 N= 32 units=  4096 rank= 3457/ 4097 [  54.3s] fast_=5.4e-10 radia=1.0e-08 compo=4.0e-11 gauss=4.2e-12 produ=1.5e-10 spati=1.0e-05
+  e_N      M= 128 N= 64 units=  8192 rank= 6568/ 8193 [ 255.2s] fast_=5.7e-10 radia=1.1e-08 compo=4.2e-11 gauss=6.9e-14 produ=1.5e-10 spati=1.1e-05
+exact cells for the max-of-two-floors test
+  exact    M=  32 N= 16 units=   512 rank=  513/  513 [   1.9s] fast_=5.6e-04 radia=3.3e-05 compo=2.8e-05 gauss=9.7e-07 produ=3.5e-04 spati=1.3e-02
+  exact    M=  64 N= 16 units=  1024 rank=  994/ 1025 [   3.1s] fast_=3.2e-06 radia=1.2e-06 compo=1.0e-07 gauss=1.4e-09 produ=1.9e-06 spati=9.6e-04
+  exact    M=  32 N= 32 units=  1024 rank= 1010/ 1025 [   3.2s] fast_=5.7e-04 radia=3.4e-05 compo=2.8e-05 gauss=9.8e-07 produ=3.5e-04 spati=1.3e-02
+  exact    M=  64 N= 32 units=  2048 rank= 1906/ 2049 [  11.9s] fast_=3.3e-06 radia=1.2e-06 compo=1.0e-07 gauss=1.2e-09 produ=1.9e-06 spati=9.7e-04
+  exact    M=  16 N= 64 units=  1024 rank=  932/ 1025 [   3.0s] fast_=3.2e-02 radia=1.2e-03 compo=5.9e-04 gauss=2.6e-04 produ=1.8e-02 spati=9.6e-02
+  exact    M=  96 N= 24 units=  2304 rank= 2074/ 2305 [  20.4s] fast_=3.2e-08 radia=8.7e-08 compo=3.9e-09 gauss=4.5e-11 produ=9.7e-09 spati=1.0e-04
+  exact    M=  24 N= 48 units=  1152 rank= 1088/ 1153 [   3.6s] fast_=7.2e-03 radia=3.0e-04 compo=2.6e-04 gauss=2.4e-05 produ=6.8e-03 spati=4.5e-02
+  exact    M=  48 N=  8 units=   384 rank=  385/  385 [   0.6s] fast_=6.9e-05 radia=1.0e-05 compo=1.4e-06 gauss=7.3e-08 produ=2.6e-05 spati=6.7e-03
+Fibonacci (expH01) directions at the same cells, for reference
+  fib      M=  64 N= 32 units=  2048 rank= 1908/ 2049 [  12.0s] fast_=1.2e-05 radia=2.0e-06 compo=1.4e-07 gauss=1.1e-09 produ=3.4e-06 spati=2.2e-03
+  fib      M= 128 N= 32 units=  4096 rank= 3457/ 4097 [  51.0s] fast_=5.2e-10 radia=9.8e-09 compo=8.1e-11 gauss=4.6e-12 produ=9.3e-11 spati=1.2e-05
+saved /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_H_highdim/expH06_ridge_hierarchy/floors_d3.json

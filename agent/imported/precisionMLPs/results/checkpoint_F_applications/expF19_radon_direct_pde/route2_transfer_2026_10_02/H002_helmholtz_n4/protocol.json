@@ -1,0 +1,62 @@
+{
+  "run_id": "H002_helmholtz_n4",
+  "case_name": "helmholtz_n4",
+  "case": {
+    "family": "helmholtz",
+    "difficulty": "harder frequency",
+    "n": 4
+  },
+  "options": {
+    "coordinates": "box",
+    "centers": 257,
+    "lam": 0.2,
+    "degrees": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      36,
+      40
+    ],
+    "tolerance": 1e-13,
+    "oversampling": 6,
+    "check_points": 257,
+    "export_check_points": 257,
+    "maximum_working_array_mb": 1024,
+    "maximum_neurons": 2000000,
+    "max_seconds": 480.0,
+    "max_iterations": 8,
+    "batch_size": 64,
+    "solver_options": {
+      "inexact_newton": false,
+      "refine_on_ideal_stall": true,
+      "lsmr_max_iterations": 4000,
+      "damping": 1e-30
+    }
+  },
+  "seed": 0,
+  "normalization": "fixed zero-jet PDE scaling, all prescribed conditions unchanged",
+  "initialization": "cold zero, then only native coefficient continuation between resolutions",
+  "source_policy": "PDE forcing, BC and IC only. No interior reference values, no external PDE solve or dense fit feeds the method.",
+  "audit": {
+    "field_count": 2048,
+    "field_seed": 884713,
+    "pde_count": 257,
+    "pde_seed": 663277,
+    "constraints_count": 257,
+    "constraints_seed": 987513
+  },
+  "source_sha256": {
+    "experiments/expF19_radon_direct_pde/route2_transfer_hard2d.py": "1d2f88a1098688bce88499be6fb5fc77714dbb118b31959de30abbb888cf6779",
+    "experiments/expF19_radon_direct_pde/route2_battletest_forward.py": "f5049c0f28d0d993d17c9bb0204b253652051db52004264acbd69417dfec7ddb",
+    "experiments/expF19_radon_direct_pde/route2_box_profiles.py": "b4ea82fe0992668395c34e2a004b3a7b0c2f28ed584b3e3147eeb7c2ad69ecf3",
+    "experiments/expF19_radon_direct_pde/route2_directional_operator.py": "952187ace614a8b3fd0c7f86f8f0e3f168a8c1b8a357493d8fc490deeb9d53e2",
+    "experiments/expF19_radon_direct_pde/solver/route2.py": "904a862261491cc6f156e072aec86913a3c8e9d3121da453ddb6e2f01946ba32",
+    "experiments/expF19_radon_direct_pde/solver/general_residual.py": "71a27edfa747a92e1d0b7651e76a5791330b8800bfa80d9b43209677a9a9bc68",
+    "experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603",
+    "experiments/expF19_radon_direct_pde/solver/residual_scaling.py": "b72ad6e0908b096f2a0695caecd230945772ce3fdad7ad64fa3a70f77154e298"
+  },
+  "compatibility_caveat": null
+}

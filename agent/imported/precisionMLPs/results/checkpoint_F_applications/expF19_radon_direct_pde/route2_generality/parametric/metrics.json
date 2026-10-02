@@ -1,0 +1,259 @@
+{
+  "problem": "-mu*u_xx+u=1; zero endpoint values; mu is input, not an inferred scalar",
+  "data_policy": "No solution labels; source1 and zero boundary only; exact cosh formula used after solve for validation",
+  "status": "sampled_residual_checks_passed",
+  "driver": {
+    "seconds": 1.4354944583028555,
+    "coordinates": "box",
+    "reference_solution_used": false,
+    "architecture": "Linear/Tanh/Linear",
+    "validated": true,
+    "validation_scope": "Fresh sampled equation and condition residuals, ordinary-network AD, and successive-field agreement; no continuum or identifiability guarantee",
+    "rejected_resolutions": [],
+    "resource_scope": "Named-array estimate, not whole-process memory cap"
+  },
+  "history": [
+    {
+      "degree": 6,
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 6,
+        "coefficient_count": 28,
+        "directions": 7,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 2037,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 15,
+        "construction_seconds": 0.0030869580805301666
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 6,
+        "directions": 7,
+        "angular_rule": "tensor",
+        "readout_coordinates": 28,
+        "neurons": 2037,
+        "ordinary_network_bytes": 65192,
+        "profile_map_bytes": 10976
+      },
+      "estimated_jet_cache_bytes": 132608,
+      "validation": [
+        {
+          "name": "equation",
+          "maximum_scaled_rms": 0.0016101616655017444,
+          "reuses_training_locations": false,
+          "points": 257
+        },
+        {
+          "name": "boundary",
+          "maximum_scaled_rms": 0.0001846885570811733,
+          "reuses_training_locations": false,
+          "points": 80
+        }
+      ],
+      "normalized_validation_score": 1610161.6655017443,
+      "ordinary_export_validation": null,
+      "successive_field_difference": null,
+      "initialization": "zero",
+      "solver_status": "line_search_failed",
+      "seconds": 0.05507108336314559
+    },
+    {
+      "degree": 10,
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 10,
+        "coefficient_count": 66,
+        "directions": 11,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 3201,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 50,
+        "construction_seconds": 0.06956562492996454
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 10,
+        "directions": 11,
+        "angular_rule": "tensor",
+        "readout_coordinates": 66,
+        "neurons": 3201,
+        "ordinary_network_bytes": 102440,
+        "profile_map_bytes": 63888
+      },
+      "estimated_jet_cache_bytes": 469920,
+      "validation": [
+        {
+          "name": "equation",
+          "maximum_scaled_rms": 5.322470105127357e-06,
+          "reuses_training_locations": false,
+          "points": 257
+        },
+        {
+          "name": "boundary",
+          "maximum_scaled_rms": 1.834233800976909e-07,
+          "reuses_training_locations": false,
+          "points": 80
+        }
+      ],
+      "normalized_validation_score": 5322.470105127357,
+      "ordinary_export_validation": null,
+      "successive_field_difference": 0.00025202325032972915,
+      "initialization": "previous actual neural PDE solution",
+      "solver_status": "line_search_failed",
+      "seconds": 0.19877029210329056
+    },
+    {
+      "degree": 14,
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 14,
+        "coefficient_count": 120,
+        "directions": 15,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 4365,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 50,
+        "construction_seconds": 0.22780787479132414
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 14,
+        "directions": 15,
+        "angular_rule": "tensor",
+        "readout_coordinates": 120,
+        "neurons": 4365,
+        "ordinary_network_bytes": 139688,
+        "profile_map_bytes": 216000
+      },
+      "estimated_jet_cache_bytes": 1555200,
+      "validation": [
+        {
+          "name": "equation",
+          "maximum_scaled_rms": 1.2163945370271367e-08,
+          "reuses_training_locations": false,
+          "points": 257
+        },
+        {
+          "name": "boundary",
+          "maximum_scaled_rms": 1.5943462834718388e-10,
+          "reuses_training_locations": false,
+          "points": 80
+        }
+      ],
+      "normalized_validation_score": 12.163945370271366,
+      "ordinary_export_validation": null,
+      "successive_field_difference": 2.591863028890164e-07,
+      "initialization": "previous actual neural PDE solution",
+      "solver_status": "line_search_failed",
+      "seconds": 0.5702725001610816
+    },
+    {
+      "degree": 18,
+      "features": {
+        "backend": "actual_tanh_ball_ridges",
+        "dimension": 2,
+        "degree": 18,
+        "coefficient_count": 190,
+        "directions": 19,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "lam": 0.2,
+        "tanh_count": 5529,
+        "product_gates": false,
+        "polynomials_in_forward": false,
+        "construction_uses_target_data": false,
+        "readout_parameterization": "analytic ball-moment and angular map E @ a",
+        "map_construction_decimal_digits": 54,
+        "construction_seconds": 0.6424974999390543
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 18,
+        "directions": 19,
+        "angular_rule": "tensor",
+        "readout_coordinates": 190,
+        "neurons": 5529,
+        "ordinary_network_bytes": 176936,
+        "profile_map_bytes": 548720
+      },
+      "estimated_jet_cache_bytes": 3897280,
+      "validation": [
+        {
+          "name": "equation",
+          "maximum_scaled_rms": 1.852415955954243e-11,
+          "reuses_training_locations": false,
+          "points": 257
+        },
+        {
+          "name": "boundary",
+          "maximum_scaled_rms": 3.0920874059815867e-13,
+          "reuses_training_locations": false,
+          "points": 80
+        }
+      ],
+      "normalized_validation_score": 0.018524159559542428,
+      "ordinary_export_validation": [
+        {
+          "name": "equation",
+          "points": 41,
+          "finite": true,
+          "maximum_scaled_rms": 6.931683432356889e-12,
+          "maximum_absolute": 2.4613089344427408e-11
+        },
+        {
+          "name": "boundary",
+          "points": 80,
+          "finite": true,
+          "maximum_scaled_rms": 3.131258904649011e-13,
+          "maximum_absolute": 1.0942358130705543e-12
+        }
+      ],
+      "successive_field_difference": 1.9522602461905655e-10,
+      "initialization": "previous actual neural PDE solution",
+      "solver_status": "converged",
+      "seconds": 1.4354877499863505
+    }
+  ],
+  "features": {
+    "backend": "actual_tanh_ball_ridges",
+    "dimension": 2,
+    "degree": 18,
+    "coefficient_count": 190,
+    "directions": 19,
+    "interior_centers": 257,
+    "halo_per_side": 17,
+    "lam": 0.2,
+    "tanh_count": 5529,
+    "product_gates": false,
+    "polynomials_in_forward": false,
+    "construction_uses_target_data": false,
+    "readout_parameterization": "analytic ball-moment and angular map E @ a",
+    "map_construction_decimal_digits": 54,
+    "construction_seconds": 0.6424974999390543
+  },
+  "ordinary_relative_l2": 1.7731448124865648e-12,
+  "ordinary_maximum_error": 4.8185899714781044e-12,
+  "parameter_sensitivity_relative_l2": 4.826666149911884e-10,
+  "inference_1009_points_seconds": 0.019043625332415104,
+  "total_seconds": 1.4722477495670319,
+  "scope": "One network represents this smooth two-input parameter family on [1,2]; not an arbitrary function-to-function neural operator, no extrapolation claim"
+}

@@ -1,0 +1,2049 @@
+{
+  "equation": "3D periodic incompressible Navier-Stokes",
+  "initial": "standard interacting Taylor-Green vortex",
+  "final_time": 1.0,
+  "dt": 0.005,
+  "method": "Actual shared QUILL 1D bank values/derivatives, tensor products, real-data FFT/Leray closure, RK4",
+  "architecture_change": "Product gates and shared banks replace prior flat ridge construction; this is a neural reparameterization of a spectral method",
+  "no_oracle": "All native evolution uses prescribed IC, viscosity and optional forcing only. Classical trajectories are generated afterward for verification.",
+  "timing_scope": "One CPU thread, setup+forward measured separately from verification/diagnostics. Fourier baseline uses FFT synthesis; both use equivalent real tensor state.",
+  "limitations": "Fixed mode cutoff, prescribed periodic cube, smooth positive-viscosity flows. Sampled residual/time refinement do not prove continuum accuracy, regularity, or blowup.",
+  "rows": [
+    {
+      "viscosity": 0.05,
+      "cutoff": 3,
+      "grid": 12,
+      "build": {
+        "seconds": 0.001456208061426878,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 343,
+        "velocity_coefficients": 1029,
+        "basis_cache_bytes": 2016,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 2.220446049250313e-15,
+        "basis_first_error": 6.217248937900877e-15,
+        "basis_second_error": 6.084022174945858e-14
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.00675,
+        "evolution_seconds": 0.3388259173370898,
+        "diagnostic_seconds": 0.0027344170957803726,
+        "time_verification_seconds": 0.6589630004018545,
+        "time_refinement_relative": 6.084263372095366e-13,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 1.001983375288546,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 17,
+          "points": 4913,
+          "strong_residual_rms": 0.02186433630913062,
+          "strong_residual_relative": 0.10125526779081122,
+          "strong_residual_scale": 0.2159328278534737,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 1.9984014443252818e-15,
+          "energy": 0.09187379945017274,
+          "dissipation": 0.02954027144615903,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.02954027144615899,
+          "instantaneous_energy_balance": 3.8163916471489756e-17,
+          "energy_balance_relative": 1.2919284286553844e-15
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.0018274160102009773,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12500000000000003,
+          "dissipation": 0.03750000000000003,
+          "forcing_power": 0.0,
+          "cfl": 0.015000000000000046
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12313883448160919,
+          "dissipation": 0.03695108181332675,
+          "forcing_power": 0.0,
+          "cfl": 0.014885946033472701
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12130446487904549,
+          "dissipation": 0.03642778661376891,
+          "forcing_power": 0.0,
+          "cfl": 0.014768970089934382
+        },
+        {
+          "time": 0.15,
+          "energy": 0.11949566496507533,
+          "dissipation": 0.035927948537390834,
+          "forcing_power": 0.0,
+          "cfl": 0.014649335801796727
+        },
+        {
+          "time": 0.2,
+          "energy": 0.11771131234328278,
+          "dissipation": 0.03544957650810417,
+          "forcing_power": 0.0,
+          "cfl": 0.014527288150202907
+        },
+        {
+          "time": 0.25,
+          "energy": 0.11595038023847978,
+          "dissipation": 0.03499083356213153,
+          "forcing_power": 0.0,
+          "cfl": 0.01440305547026903
+        },
+        {
+          "time": 0.3,
+          "energy": 0.11421193024576591,
+          "dissipation": 0.03455001913012431,
+          "forcing_power": 0.0,
+          "cfl": 0.014276851245590163
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.1124951058975231,
+          "dissipation": 0.03412555398941767,
+          "forcing_power": 0.0,
+          "cfl": 0.014148875703993759
+        },
+        {
+          "time": 0.4,
+          "energy": 0.11079912692206388,
+          "dissipation": 0.033715967597761264,
+          "forcing_power": 0.0,
+          "cfl": 0.014019317227413099
+        },
+        {
+          "time": 0.45,
+          "energy": 0.10912328408198188,
+          "dissipation": 0.03331988752500089,
+          "forcing_power": 0.0,
+          "cfl": 0.01388835358933388
+        },
+        {
+          "time": 0.5,
+          "energy": 0.10746693449418844,
+          "dissipation": 0.032936030709434336,
+          "forcing_power": 0.0,
+          "cfl": 0.01375615303356973
+        },
+        {
+          "time": 0.55,
+          "energy": 0.10582949734694586,
+          "dissipation": 0.03256319627982765,
+          "forcing_power": 0.0,
+          "cfl": 0.013622875208179867
+        },
+        {
+          "time": 0.6,
+          "energy": 0.10421044994173308,
+          "dissipation": 0.03220025970134594,
+          "forcing_power": 0.0,
+          "cfl": 0.013488671968187186
+        },
+        {
+          "time": 0.65,
+          "energy": 0.10260932399939285,
+          "dissipation": 0.03184616802301591,
+          "forcing_power": 0.0,
+          "cfl": 0.013353688060420378
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.10102570218061328,
+          "dissipation": 0.03149993602499775,
+          "forcing_power": 0.0,
+          "cfl": 0.013218061703320984
+        },
+        {
+          "time": 0.75,
+          "energy": 0.09945921478035562,
+          "dissipation": 0.031160643085207457,
+          "forcing_power": 0.0,
+          "cfl": 0.013081925073955
+        },
+        {
+          "time": 0.8,
+          "energy": 0.09790953656432634,
+          "dissipation": 0.030827430606113888,
+          "forcing_power": 0.0,
+          "cfl": 0.012945404713776424
+        },
+        {
+          "time": 0.85,
+          "energy": 0.09637638372303038,
+          "dissipation": 0.03049949986335969,
+          "forcing_power": 0.0,
+          "cfl": 0.012808621863932865
+        },
+        {
+          "time": 0.9,
+          "energy": 0.09485951092535362,
+          "dissipation": 0.03017611015783513,
+          "forcing_power": 0.0,
+          "cfl": 0.012671692740102424
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.09335870845906642,
+          "dissipation": 0.029856577171677362,
+          "forcing_power": 0.0,
+          "cfl": 0.012534728756027744
+        },
+        {
+          "time": 1.0,
+          "energy": 0.09187379945017284,
+          "dissipation": 0.029540271446159058,
+          "forcing_power": 0.0,
+          "cfl": 0.012397836704083709
+        }
+      ],
+      "gradient_finite_difference_relative": 1.2056816806053027e-10,
+      "laplacian_finite_difference_relative": 1.675385826427011e-06,
+      "generated_vertical_velocity_rms": 0.06057446261589215,
+      "initial_energy": 0.12500000000000003,
+      "final_energy": 0.09187379945017274,
+      "maximum_recorded_energy_increase": -0.0014849090088935868,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.00675,
+        "evolution_seconds": 0.6215684586204588,
+        "diagnostic_seconds": 0.002479082904756069,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 0.6241506249643862,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 17,
+          "points": 4913,
+          "strong_residual_rms": 0.021864336309130587,
+          "strong_residual_relative": 0.10125526779081098,
+          "strong_residual_scale": 0.2159328278534739,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 3.608224830031759e-16,
+          "energy": 0.09187379945017285,
+          "dissipation": 0.029540271446159033,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.029540271446159026,
+          "instantaneous_energy_balance": 6.938893903907228e-18,
+          "energy_balance_relative": 2.348960779373426e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 9.9916011095047e-05,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 343,
+        "velocity_coefficients": 1029,
+        "basis_cache_bytes": 2016,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.0012562498450279236,
+      "native_vs_same_cutoff_relative": 1.3763459389206146e-15,
+      "native_vs_K13_relative": 0.01601448763398349,
+      "classical_vs_K13_relative": 0.01601448763398338,
+      "reference_K11_vs_K13": 2.379763045775971e-06,
+      "forward_cost_ratio": 0.5473692072565098
+    },
+    {
+      "viscosity": 0.05,
+      "cutoff": 5,
+      "grid": 18,
+      "build": {
+        "seconds": 0.0013883342035114765,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 1331,
+        "velocity_coefficients": 3993,
+        "basis_cache_bytes": 4752,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 2.4424906541753444e-15,
+        "basis_first_error": 9.769962616701378e-15,
+        "basis_second_error": 1.1723955140041653e-13
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.01875,
+        "evolution_seconds": 0.7633754168637097,
+        "diagnostic_seconds": 0.005347333382815123,
+        "time_verification_seconds": 1.5017141671851277,
+        "time_refinement_relative": 1.95553368691805e-12,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 2.2718291669152677,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 25,
+          "points": 15625,
+          "strong_residual_rms": 0.0034836066209869587,
+          "strong_residual_relative": 0.01622477349711085,
+          "strong_residual_scale": 0.2147091065158651,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 1.970645868709653e-15,
+          "energy": 0.09187229785445798,
+          "dissipation": 0.02954791202696401,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.029547912026963982,
+          "instantaneous_energy_balance": 2.7755575615628914e-17,
+          "energy_balance_relative": 9.39341351439672e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.005016374867409468,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12499999999999985,
+          "dissipation": 0.03749999999999997,
+          "forcing_power": 0.0,
+          "cfl": 0.024620193825305225
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12313883448160229,
+          "dissipation": 0.03695108181425113,
+          "forcing_power": 0.0,
+          "cfl": 0.024484323802015175
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12130446487826152,
+          "dissipation": 0.03642778666725221,
+          "forcing_power": 0.0,
+          "cfl": 0.024339333220732964
+        },
+        {
+          "time": 0.15,
+          "energy": 0.11949566495281577,
+          "dissipation": 0.03592794908778908,
+          "forcing_power": 0.0,
+          "cfl": 0.024185620561762905
+        },
+        {
+          "time": 0.2,
+          "energy": 0.11771131225923498,
+          "dissipation": 0.035449579300427574,
+          "forcing_power": 0.0,
+          "cfl": 0.0240236971958714
+        },
+        {
+          "time": 0.25,
+          "energy": 0.11595037987184272,
+          "dissipation": 0.03499084317392466,
+          "forcing_power": 0.0,
+          "cfl": 0.023854160529350174
+        },
+        {
+          "time": 0.3,
+          "energy": 0.11421192904436737,
+          "dissipation": 0.03455004501050466,
+          "forcing_power": 0.0,
+          "cfl": 0.023677669278203594
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.11249510266659742,
+          "dissipation": 0.03412561279382297,
+          "forcing_power": 0.0,
+          "cfl": 0.023494921172297987
+        },
+        {
+          "time": 0.4,
+          "energy": 0.11079911940404917,
+          "dissipation": 0.03371608557046992,
+          "forcing_power": 0.0,
+          "cfl": 0.023306633269481774
+        },
+        {
+          "time": 0.45,
+          "energy": 0.10912326842112523,
+          "dissipation": 0.03332010268554014,
+          "forcing_power": 0.0,
+          "cfl": 0.023113524954669656
+        },
+        {
+          "time": 0.5,
+          "energy": 0.10746690460125914,
+          "dissipation": 0.032936394629988326,
+          "forcing_power": 0.0,
+          "cfl": 0.02291630361030242
+        },
+        {
+          "time": 0.55,
+          "energy": 0.10582944418886335,
+          "dissipation": 0.032563775288121315,
+          "forcing_power": 0.0,
+          "cfl": 0.022715652872354674
+        },
+        {
+          "time": 0.6,
+          "energy": 0.10421036078782674,
+          "dissipation": 0.03220113539894342,
+          "forcing_power": 0.0,
+          "cfl": 0.022512223329510722
+        },
+        {
+          "time": 0.65,
+          "energy": 0.10260918166007996,
+          "dissipation": 0.03184743706612493,
+          "forcing_power": 0.0,
+          "cfl": 0.022306625481171145
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.10102548427555663,
+          "dissipation": 0.0315017091688661,
+          "forcing_power": 0.0,
+          "cfl": 0.02209942474119371
+        },
+        {
+          "time": 0.75,
+          "energy": 0.0994588930718894,
+          "dissipation": 0.031163043540561198,
+          "forcing_power": 0.0,
+          "cfl": 0.021891138257122696
+        },
+        {
+          "time": 0.8,
+          "energy": 0.09790907638851556,
+          "dissipation": 0.030830591794557147,
+          "forcing_power": 0.0,
+          "cfl": 0.021693852022819846
+        },
+        {
+          "time": 0.85,
+          "energy": 0.09637574354562914,
+          "dissipation": 0.030503562687038056,
+          "forcing_power": 0.0,
+          "cfl": 0.021497546840351173
+        },
+        {
+          "time": 0.9,
+          "energy": 0.09485864204367074,
+          "dissipation": 0.03018121991667565,
+          "forcing_power": 0.0,
+          "cfl": 0.02130200894011702
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.09335755486383814,
+          "dissipation": 0.029862880269615005,
+          "forcing_power": 0.0,
+          "cfl": 0.021107355990773635
+        },
+        {
+          "time": 1.0,
+          "energy": 0.091872297854458,
+          "dissipation": 0.02954791202696402,
+          "forcing_power": 0.0,
+          "cfl": 0.02091367112912537
+        }
+      ],
+      "gradient_finite_difference_relative": 1.269151282391466e-10,
+      "laplacian_finite_difference_relative": 2.142189181508674e-06,
+      "generated_vertical_velocity_rms": 0.060871287125608416,
+      "initial_energy": 0.12499999999999985,
+      "final_energy": 0.09187229785445798,
+      "maximum_recorded_energy_increase": -0.0014852570093801393,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.01875,
+        "evolution_seconds": 1.5951772914268076,
+        "diagnostic_seconds": 0.005544125102460384,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 1.600810875184834,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 25,
+          "points": 15625,
+          "strong_residual_rms": 0.00348360662098694,
+          "strong_residual_relative": 0.016224773497110746,
+          "strong_residual_scale": 0.2147091065158653,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 8.049116928532385e-16,
+          "energy": 0.09187229785445805,
+          "dissipation": 0.029547912026964013,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.029547912026963996,
+          "instantaneous_energy_balance": 1.734723475976807e-17,
+          "energy_balance_relative": 5.87088344649795e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 8.5500068962574e-05,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 1331,
+        "velocity_coefficients": 3993,
+        "basis_cache_bytes": 4752,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.004360999912023544,
+      "native_vs_same_cutoff_relative": 1.3732924686166983e-15,
+      "native_vs_K13_relative": 0.0013759420162081672,
+      "classical_vs_K13_relative": 0.0013759420162081232,
+      "reference_K11_vs_K13": 2.379763045775971e-06,
+      "forward_cost_ratio": 0.4793967208062026
+    },
+    {
+      "viscosity": 0.05,
+      "cutoff": 7,
+      "grid": 24,
+      "build": {
+        "seconds": 0.0015110420063138008,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 3375,
+        "velocity_coefficients": 10125,
+        "basis_cache_bytes": 8640,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 3.5318969970887792e-15,
+        "basis_first_error": 1.9984014443252818e-14,
+        "basis_second_error": 2.220446049250313e-13
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.03675,
+        "evolution_seconds": 1.436290833633393,
+        "diagnostic_seconds": 0.010780000127851963,
+        "time_verification_seconds": 2.857680458109826,
+        "time_refinement_relative": 1.9230589982165343e-12,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 4.306265666615218,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 33,
+          "points": 35937,
+          "strong_residual_rms": 0.0005781743656021676,
+          "strong_residual_relative": 0.0026932032761613203,
+          "strong_residual_scale": 0.2146790666415094,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 2.7755575615628914e-15,
+          "energy": 0.09187228436237281,
+          "dissipation": 0.02954801164626535,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.02954801164626532,
+          "instantaneous_energy_balance": 2.7755575615628914e-17,
+          "energy_balance_relative": 9.393381845081617e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.010508290957659483,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12499999999999993,
+          "dissipation": 0.037500000000000006,
+          "forcing_power": 0.0,
+          "cfl": 0.03500000000000008
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12313883448160236,
+          "dissipation": 0.03695108181425116,
+          "forcing_power": 0.0,
+          "cfl": 0.034734565453203636
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12130446487826155,
+          "dissipation": 0.03642778666725254,
+          "forcing_power": 0.0,
+          "cfl": 0.034463456028395706
+        },
+        {
+          "time": 0.15,
+          "energy": 0.11949566495281562,
+          "dissipation": 0.03592794908780364,
+          "forcing_power": 0.0,
+          "cfl": 0.0341868897381387
+        },
+        {
+          "time": 0.2,
+          "energy": 0.1177113122592308,
+          "dissipation": 0.03544957930064499,
+          "forcing_power": 0.0,
+          "cfl": 0.03390501134568761
+        },
+        {
+          "time": 0.25,
+          "energy": 0.11595037987180118,
+          "dissipation": 0.03499084317562578,
+          "forcing_power": 0.0,
+          "cfl": 0.0336198721613857
+        },
+        {
+          "time": 0.3,
+          "energy": 0.11421192904410357,
+          "dissipation": 0.034550045019333425,
+          "forcing_power": 0.0,
+          "cfl": 0.03333329112938991
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.1124951026653737,
+          "dissipation": 0.03412561282831405,
+          "forcing_power": 0.0,
+          "cfl": 0.03304471313770308
+        },
+        {
+          "time": 0.4,
+          "energy": 0.11079911939953305,
+          "dissipation": 0.033716085679851376,
+          "forcing_power": 0.0,
+          "cfl": 0.03275452348524317
+        },
+        {
+          "time": 0.45,
+          "energy": 0.10912326840713407,
+          "dissipation": 0.03332010298118347,
+          "forcing_power": 0.0,
+          "cfl": 0.03246301227196261
+        },
+        {
+          "time": 0.5,
+          "energy": 0.10746690456351313,
+          "dissipation": 0.03293639533408203,
+          "forcing_power": 0.0,
+          "cfl": 0.03217039360864605
+        },
+        {
+          "time": 0.55,
+          "energy": 0.10582944409783579,
+          "dissipation": 0.032563776801134973,
+          "forcing_power": 0.0,
+          "cfl": 0.031876822939891206
+        },
+        {
+          "time": 0.6,
+          "energy": 0.1042103605877737,
+          "dissipation": 0.03220113838449536,
+          "forcing_power": 0.0,
+          "cfl": 0.03158241228743853
+        },
+        {
+          "time": 0.65,
+          "energy": 0.10260918125348348,
+          "dissipation": 0.03184744254848336,
+          "forcing_power": 0.0,
+          "cfl": 0.03128724334651911
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.10102548350253725,
+          "dissipation": 0.031501718635125645,
+          "forcing_power": 0.0,
+          "cfl": 0.03099137846708462
+        },
+        {
+          "time": 0.75,
+          "energy": 0.099458891684605,
+          "dissipation": 0.031163059037129598,
+          "forcing_power": 0.0,
+          "cfl": 0.030694869625895512
+        },
+        {
+          "time": 0.8,
+          "energy": 0.0979090740211188,
+          "dissipation": 0.030830616006395074,
+          "forcing_power": 0.0,
+          "cfl": 0.030397765546894766
+        },
+        {
+          "time": 0.85,
+          "energy": 0.09637573968093192,
+          "dissipation": 0.03050359898832952,
+          "forcing_power": 0.0,
+          "cfl": 0.030100117159202838
+        },
+        {
+          "time": 0.9,
+          "energy": 0.09485863597819649,
+          "dissipation": 0.030181272383246804,
+          "forcing_power": 0.0,
+          "cfl": 0.02980198159786494
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.09335754567335934,
+          "dissipation": 0.02986295364623345,
+          "forcing_power": 0.0,
+          "cfl": 0.02951306354521729
+        },
+        {
+          "time": 1.0,
+          "energy": 0.09187228436237287,
+          "dissipation": 0.029548011646265374,
+          "forcing_power": 0.0,
+          "cfl": 0.02923599725092935
+        }
+      ],
+      "gradient_finite_difference_relative": 1.2720975241379902e-10,
+      "laplacian_finite_difference_relative": 1.991816959199468e-06,
+      "generated_vertical_velocity_rms": 0.06085461130208011,
+      "initial_energy": 0.12499999999999993,
+      "final_energy": 0.09187228436237281,
+      "maximum_recorded_energy_increase": -0.0014852613109864743,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.05,
+        "viscous_stability_number": 0.03675,
+        "evolution_seconds": 3.0460269576869905,
+        "diagnostic_seconds": 0.011743791867047548,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 3.0579030415974557,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 33,
+          "points": 35937,
+          "strong_residual_rms": 0.0005781743656021666,
+          "strong_residual_relative": 0.0026932032761613142,
+          "strong_residual_scale": 0.21467906664150954,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 6.661338147750939e-16,
+          "energy": 0.09187228436237288,
+          "dissipation": 0.02954801164626535,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.029548011646265353,
+          "instantaneous_energy_balance": -3.469446951953614e-18,
+          "energy_balance_relative": 1.1741727306352021e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 0.00012804195284843445,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 3375,
+        "velocity_coefficients": 10125,
+        "basis_cache_bytes": 8640,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.01016433397307992,
+      "native_vs_same_cutoff_relative": 1.3812432253318929e-15,
+      "native_vs_K13_relative": 0.00015473714091650175,
+      "classical_vs_K13_relative": 0.00015473714091645158,
+      "reference_K11_vs_K13": 2.379763045775971e-06,
+      "forward_cost_ratio": 0.47200548751120835
+    },
+    {
+      "viscosity": 0.01,
+      "cutoff": 3,
+      "grid": 12,
+      "build": {
+        "seconds": 0.001385584007948637,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 343,
+        "velocity_coefficients": 1029,
+        "basis_cache_bytes": 2016,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 2.220446049250313e-15,
+        "basis_first_error": 6.217248937900877e-15,
+        "basis_second_error": 6.084022174945858e-14
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.00135,
+        "evolution_seconds": 0.3362681660801172,
+        "diagnostic_seconds": 0.002678709104657173,
+        "time_verification_seconds": 0.6600154158659279,
+        "time_refinement_relative": 4.995635013072823e-13,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 1.0003506252542138,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 17,
+          "points": 4913,
+          "strong_residual_rms": 0.038545660477448944,
+          "strong_residual_relative": 0.14060920529034415,
+          "strong_residual_scale": 0.2741332645885876,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 2.248201624865942e-15,
+          "energy": 0.11748215991627843,
+          "dissipation": 0.007760594432168031,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.007760594432168023,
+          "instantaneous_energy_balance": 8.673617379884035e-18,
+          "energy_balance_relative": 1.1176485842284814e-15
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.001922875177115202,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12500000000000003,
+          "dissipation": 0.007500000000000006,
+          "forcing_power": 0.0,
+          "cfl": 0.015000000000000046
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12462552957690785,
+          "dissipation": 0.0074794716395612275,
+          "forcing_power": 0.0,
+          "cfl": 0.01497551026194565
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12425198808105498,
+          "dissipation": 0.0074628288951188015,
+          "forcing_power": 0.0,
+          "cfl": 0.014947108749069037
+        },
+        {
+          "time": 0.15,
+          "energy": 0.12387918325707188,
+          "dissipation": 0.007449992255609215,
+          "forcing_power": 0.0,
+          "cfl": 0.01491489168160871
+        },
+        {
+          "time": 0.2,
+          "energy": 0.1235069266072926,
+          "dissipation": 0.00744089075891948,
+          "forcing_power": 0.0,
+          "cfl": 0.014878948465629462
+        },
+        {
+          "time": 0.25,
+          "energy": 0.12313503298990636,
+          "dissipation": 0.007435460951738097,
+          "forcing_power": 0.0,
+          "cfl": 0.014839362094610798
+        },
+        {
+          "time": 0.3,
+          "energy": 0.12276332027136856,
+          "dissipation": 0.007433645762842424,
+          "forcing_power": 0.0,
+          "cfl": 0.014796209585161127
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.12239160903687196,
+          "dissipation": 0.007435393310936483,
+          "forcing_power": 0.0,
+          "cfl": 0.014749562440214666
+        },
+        {
+          "time": 0.4,
+          "energy": 0.12201972236161963,
+          "dissipation": 0.007440655668260787,
+          "forcing_power": 0.0,
+          "cfl": 0.014699487133101109
+        },
+        {
+          "time": 0.45,
+          "energy": 0.12164748564458533,
+          "dissipation": 0.0074493876009751195,
+          "forcing_power": 0.0,
+          "cfl": 0.014646045605999476
+        },
+        {
+          "time": 0.5,
+          "energy": 0.12127472650540667,
+          "dissipation": 0.007461545306784925,
+          "forcing_power": 0.0,
+          "cfl": 0.01458929577649109
+        },
+        {
+          "time": 0.55,
+          "energy": 0.12090127474405506,
+          "dissipation": 0.00747708516946448,
+          "forcing_power": 0.0,
+          "cfl": 0.014529292046205896
+        },
+        {
+          "time": 0.6,
+          "energy": 0.12052696236196717,
+          "dissipation": 0.007495962548851644,
+          "forcing_power": 0.0,
+          "cfl": 0.014466085805902142
+        },
+        {
+          "time": 0.65,
+          "energy": 0.12015162364242708,
+          "dissipation": 0.007518130623579149,
+          "forcing_power": 0.0,
+          "cfl": 0.014399725931723858
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.11977509528716232,
+          "dissipation": 0.007543539302297633,
+          "forcing_power": 0.0,
+          "cfl": 0.014330259267833049
+        },
+        {
+          "time": 0.75,
+          "energy": 0.11939721660536896,
+          "dissipation": 0.007572134217469,
+          "forcing_power": 0.0,
+          "cfl": 0.01425773109110457
+        },
+        {
+          "time": 0.8,
+          "energy": 0.11901782975072354,
+          "dissipation": 0.007603855814000057,
+          "forcing_power": 0.0,
+          "cfl": 0.01418218555409089
+        },
+        {
+          "time": 0.85,
+          "energy": 0.11863678000137205,
+          "dissipation": 0.007638638543079654,
+          "forcing_power": 0.0,
+          "cfl": 0.014103666103001304
+        },
+        {
+          "time": 0.9,
+          "energy": 0.11825391607741853,
+          "dissipation": 0.007676410169612633,
+          "forcing_power": 0.0,
+          "cfl": 0.014022215867985797
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.11786909049006378,
+          "dissipation": 0.007717091199643857,
+          "forcing_power": 0.0,
+          "cfl": 0.013937878023558229
+        },
+        {
+          "time": 1.0,
+          "energy": 0.11748215991627857,
+          "dissipation": 0.00776059443216804,
+          "forcing_power": 0.0,
+          "cfl": 0.013850696117528502
+        }
+      ],
+      "gradient_finite_difference_relative": 1.3929764717924747e-10,
+      "laplacian_finite_difference_relative": 1.7832481227275335e-06,
+      "generated_vertical_velocity_rms": 0.07994192847154362,
+      "initial_energy": 0.12500000000000003,
+      "final_energy": 0.11748215991627843,
+      "maximum_recorded_energy_increase": -0.0003717112344965995,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.00135,
+        "evolution_seconds": 0.7804299173876643,
+        "diagnostic_seconds": 0.0029723751358687878,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 0.7835559588856995,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 17,
+          "points": 4913,
+          "strong_residual_rms": 0.03854566047744891,
+          "strong_residual_relative": 0.1406092052903439,
+          "strong_residual_scale": 0.27413326458858783,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 5.30825383648903e-16,
+          "energy": 0.1174821599162786,
+          "dissipation": 0.007760594432168033,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.0077605944321680305,
+          "instantaneous_energy_balance": 2.6020852139652106e-18,
+          "energy_balance_relative": 3.352945752685443e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 0.000148833729326725,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 343,
+        "velocity_coefficients": 1029,
+        "basis_cache_bytes": 2016,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.001535000279545784,
+      "native_vs_same_cutoff_relative": 1.4225858984926756e-15,
+      "native_vs_K13_relative": 0.026897902831473804,
+      "classical_vs_K13_relative": 0.026897902831473683,
+      "reference_K11_vs_K13": 2.9098931945539174e-05,
+      "forward_cost_ratio": 0.432568462317083
+    },
+    {
+      "viscosity": 0.01,
+      "cutoff": 5,
+      "grid": 18,
+      "build": {
+        "seconds": 0.0013612499460577965,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 1331,
+        "velocity_coefficients": 3993,
+        "basis_cache_bytes": 4752,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 2.4424906541753444e-15,
+        "basis_first_error": 9.769962616701378e-15,
+        "basis_second_error": 1.1723955140041653e-13
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.0037500000000000003,
+        "evolution_seconds": 0.7641978329047561,
+        "diagnostic_seconds": 0.00518900016322732,
+        "time_verification_seconds": 1.5112461247481406,
+        "time_refinement_relative": 3.877201539972128e-12,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 2.2819980829954147,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 25,
+          "points": 15625,
+          "strong_residual_rms": 0.008912073834126132,
+          "strong_residual_relative": 0.03287163030992159,
+          "strong_residual_scale": 0.27111748794023816,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 2.3314683517128287e-15,
+          "energy": 0.11748096187619467,
+          "dissipation": 0.007768292632878337,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.007768292632878323,
+          "instantaneous_energy_balance": 1.3877787807814457e-17,
+          "energy_balance_relative": 1.7864656319817866e-15
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.0048474580980837345,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12499999999999985,
+          "dissipation": 0.007499999999999994,
+          "forcing_power": 0.0,
+          "cfl": 0.024620193825305225
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12462552957690627,
+          "dissipation": 0.007479471639761559,
+          "forcing_power": 0.0,
+          "cfl": 0.02463203026931778
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12425198808087436,
+          "dissipation": 0.007462828907678464,
+          "forcing_power": 0.0,
+          "cfl": 0.02463431937854169
+        },
+        {
+          "time": 0.15,
+          "energy": 0.12387918325404602,
+          "dissipation": 0.007449992395680241,
+          "forcing_power": 0.0,
+          "cfl": 0.024626865708842524
+        },
+        {
+          "time": 0.2,
+          "energy": 0.12350692658504654,
+          "dissipation": 0.007440891529105715,
+          "forcing_power": 0.0,
+          "cfl": 0.024609610918783262
+        },
+        {
+          "time": 0.25,
+          "energy": 0.12313503288583744,
+          "dissipation": 0.007435463825480622,
+          "forcing_power": 0.0,
+          "cfl": 0.024582630050170678
+        },
+        {
+          "time": 0.3,
+          "energy": 0.12276331990567695,
+          "dissipation": 0.007433654151371305,
+          "forcing_power": 0.0,
+          "cfl": 0.024546125484199682
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.12239160798229472,
+          "dissipation": 0.0074354139768684855,
+          "forcing_power": 0.0,
+          "cfl": 0.024500418789363387
+        },
+        {
+          "time": 0.4,
+          "energy": 0.12201971973042001,
+          "dissipation": 0.007440700626718793,
+          "forcing_power": 0.0,
+          "cfl": 0.024445940714168925
+        },
+        {
+          "time": 0.45,
+          "energy": 0.12164747976787407,
+          "dissipation": 0.007449476526252353,
+          "forcing_power": 0.0,
+          "cfl": 0.024383219606670958
+        },
+        {
+          "time": 0.5,
+          "energy": 0.12127471447955283,
+          "dissipation": 0.0074617084392795,
+          "forcing_power": 0.0,
+          "cfl": 0.024312868563538176
+        },
+        {
+          "time": 0.55,
+          "energy": 0.12090125181979072,
+          "dissipation": 0.007477366694304179,
+          "forcing_power": 0.0,
+          "cfl": 0.024235571623707503
+        },
+        {
+          "time": 0.6,
+          "energy": 0.12052692115379017,
+          "dissipation": 0.007496424394972002,
+          "forcing_power": 0.0,
+          "cfl": 0.024152069325820924
+        },
+        {
+          "time": 0.65,
+          "energy": 0.12015155313900654,
+          "dissipation": 0.00751885661083895,
+          "forcing_power": 0.0,
+          "cfl": 0.0240802412963809
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.11977497964755145,
+          "dissipation": 0.0075446395454446934,
+          "forcing_power": 0.0,
+          "cfl": 0.024009898683840816
+        },
+        {
+          "time": 0.75,
+          "energy": 0.1193970337307927,
+          "dissipation": 0.007573749680346379,
+          "forcing_power": 0.0,
+          "cfl": 0.02393920608339163
+        },
+        {
+          "time": 0.8,
+          "energy": 0.11901754962733765,
+          "dissipation": 0.0076061628961661175,
+          "forcing_power": 0.0,
+          "cfl": 0.02386870891865589
+        },
+        {
+          "time": 0.85,
+          "energy": 0.11863636281546114,
+          "dissipation": 0.007641853574690516,
+          "forcing_power": 0.0,
+          "cfl": 0.023798874179967875
+        },
+        {
+          "time": 0.9,
+          "energy": 0.11825331011075528,
+          "dissipation": 0.007680793689422505,
+          "forcing_power": 0.0,
+          "cfl": 0.02373008677421858
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.11786822980932131,
+          "dissipation": 0.007722951895460563,
+          "forcing_power": 0.0,
+          "cfl": 0.023662647418899927
+        },
+        {
+          "time": 1.0,
+          "energy": 0.11748096187619472,
+          "dissipation": 0.007768292632878338,
+          "forcing_power": 0.0,
+          "cfl": 0.023596772054152518
+        }
+      ],
+      "gradient_finite_difference_relative": 1.5248069739340628e-10,
+      "laplacian_finite_difference_relative": 1.721217042026993e-06,
+      "generated_vertical_velocity_rms": 0.08063857145421262,
+      "initial_energy": 0.12499999999999985,
+      "final_energy": 0.11748096187619467,
+      "maximum_recorded_energy_increase": -0.0003717119233822286,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.0037500000000000003,
+        "evolution_seconds": 1.7161099999211729,
+        "diagnostic_seconds": 0.005453832913190126,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 1.7217048765160143,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 25,
+          "points": 15625,
+          "strong_residual_rms": 0.008912073834126108,
+          "strong_residual_relative": 0.03287163030992145,
+          "strong_residual_scale": 0.27111748794023854,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 7.771561172376096e-16,
+          "energy": 0.1174809618761948,
+          "dissipation": 0.007768292632878339,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.007768292632878336,
+          "instantaneous_energy_balance": 2.6020852139652106e-18,
+          "energy_balance_relative": 3.3496230599658494e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 0.00013791723176836967,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 1331,
+        "velocity_coefficients": 3993,
+        "basis_cache_bytes": 4752,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.004334125202149153,
+      "native_vs_same_cutoff_relative": 1.5204886933328466e-15,
+      "native_vs_K13_relative": 0.003520246993562517,
+      "classical_vs_K13_relative": 0.0035202469935624696,
+      "reference_K11_vs_K13": 2.9098931945539174e-05,
+      "forward_cost_ratio": 0.4460655568461162
+    },
+    {
+      "viscosity": 0.01,
+      "cutoff": 7,
+      "grid": 24,
+      "build": {
+        "seconds": 0.0015277080237865448,
+        "architecture": "quill_product",
+        "architecture_note": "Three shared 1D QUILL banks, explicit products, tensor readout; not a flat ridge tanh network",
+        "hidden_tanh_neurons": 867,
+        "unique_encoder_parameter_banks": 1,
+        "scalar_modes": 3375,
+        "velocity_coefficients": 10125,
+        "basis_cache_bytes": 8640,
+        "n_centers": 257,
+        "lam": 0.2,
+        "basis_value_error": 3.5318969970887792e-15,
+        "basis_first_error": 1.9984014443252818e-14,
+        "basis_second_error": 2.220446049250313e-13
+      },
+      "native": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.007350000000000001,
+        "evolution_seconds": 1.4277297500520945,
+        "diagnostic_seconds": 0.010083791799843311,
+        "time_verification_seconds": 2.8304895837791264,
+        "time_refinement_relative": 4.120901352842843e-12,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 4.269834791775793,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 33,
+          "points": 35937,
+          "strong_residual_rms": 0.002278301677805504,
+          "strong_residual_relative": 0.008408171722222189,
+          "strong_residual_scale": 0.2709627910885927,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 3.0531133177191805e-15,
+          "energy": 0.11748093483469825,
+          "dissipation": 0.00776855034040487,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.007768550340404864,
+          "instantaneous_energy_balance": 6.071532165918825e-18,
+          "energy_balance_relative": 7.815527865398884e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "native_offgrid_inference_seconds": 0.010761083103716373,
+      "history": [
+        {
+          "time": 0.0,
+          "energy": 0.12499999999999993,
+          "dissipation": 0.0075000000000000015,
+          "forcing_power": 0.0,
+          "cfl": 0.03500000000000008
+        },
+        {
+          "time": 0.05,
+          "energy": 0.12462552957690633,
+          "dissipation": 0.007479471639761564,
+          "forcing_power": 0.0,
+          "cfl": 0.03494356998577498
+        },
+        {
+          "time": 0.1,
+          "energy": 0.12425198808087441,
+          "dissipation": 0.007462828907678548,
+          "forcing_power": 0.0,
+          "cfl": 0.034879269826002555
+        },
+        {
+          "time": 0.15,
+          "energy": 0.12387918325404604,
+          "dissipation": 0.007449992395684553,
+          "forcing_power": 0.0,
+          "cfl": 0.03480699530588038
+        },
+        {
+          "time": 0.2,
+          "energy": 0.12350692658504529,
+          "dissipation": 0.0074408915291790615,
+          "forcing_power": 0.0,
+          "cfl": 0.034726533266072016
+        },
+        {
+          "time": 0.25,
+          "energy": 0.12313503288582243,
+          "dissipation": 0.007435463826134355,
+          "forcing_power": 0.0,
+          "cfl": 0.03464024502435953
+        },
+        {
+          "time": 0.3,
+          "energy": 0.12276331990556918,
+          "dissipation": 0.007433654155235632,
+          "forcing_power": 0.0,
+          "cfl": 0.034549666397476364
+        },
+        {
+          "time": 0.35000000000000003,
+          "energy": 0.12239160798173175,
+          "dissipation": 0.007435413994058952,
+          "forcing_power": 0.0,
+          "cfl": 0.034454212320960825
+        },
+        {
+          "time": 0.4,
+          "energy": 0.1220197197280837,
+          "dissipation": 0.007440700688779655,
+          "forcing_power": 0.0,
+          "cfl": 0.034354200427752835
+        },
+        {
+          "time": 0.45,
+          "energy": 0.12164747975973826,
+          "dissipation": 0.007449476717150252,
+          "forcing_power": 0.0,
+          "cfl": 0.03424982577991671
+        },
+        {
+          "time": 0.5,
+          "energy": 0.12127471445489467,
+          "dissipation": 0.0074617089564886305,
+          "forcing_power": 0.0,
+          "cfl": 0.03414116851427938
+        },
+        {
+          "time": 0.55,
+          "energy": 0.12090125175302688,
+          "dissipation": 0.007477367958171896,
+          "forcing_power": 0.0,
+          "cfl": 0.03402820384813756
+        },
+        {
+          "time": 0.6,
+          "energy": 0.120526920989163,
+          "dissipation": 0.0074964272296461935,
+          "forcing_power": 0.0,
+          "cfl": 0.033910813876105526
+        },
+        {
+          "time": 0.65,
+          "energy": 0.12015155276386816,
+          "dissipation": 0.007518862524265907,
+          "forcing_power": 0.0,
+          "cfl": 0.03378880057701614
+        },
+        {
+          "time": 0.7000000000000001,
+          "energy": 0.11977497884854861,
+          "dissipation": 0.007544651138428568,
+          "forcing_power": 0.0,
+          "cfl": 0.033661899467555406
+        },
+        {
+          "time": 0.75,
+          "energy": 0.1193970321257451,
+          "dissipation": 0.007573771214575246,
+          "forcing_power": 0.0,
+          "cfl": 0.03352979338293215
+        },
+        {
+          "time": 0.8,
+          "energy": 0.11901754656417438,
+          "dissipation": 0.007606201047820627,
+          "forcing_power": 0.0,
+          "cfl": 0.03339212592917112
+        },
+        {
+          "time": 0.85,
+          "energy": 0.11863635722840614,
+          "dissipation": 0.007641918393428854,
+          "forcing_power": 0.0,
+          "cfl": 0.033259332011190065
+        },
+        {
+          "time": 0.9,
+          "energy": 0.11825330032320569,
+          "dissipation": 0.00768089977223407,
+          "forcing_power": 0.0,
+          "cfl": 0.03314984228695053
+        },
+        {
+          "time": 0.9500000000000001,
+          "energy": 0.11786821327270981,
+          "dissipation": 0.007723119771568554,
+          "forcing_power": 0.0,
+          "cfl": 0.033041889237804004
+        },
+        {
+          "time": 1.0,
+          "energy": 0.11748093483469829,
+          "dissipation": 0.007768550340404874,
+          "forcing_power": 0.0,
+          "cfl": 0.03298592622623122
+        }
+      ],
+      "gradient_finite_difference_relative": 1.523763945433827e-10,
+      "laplacian_finite_difference_relative": 2.0749182802747763e-06,
+      "generated_vertical_velocity_rms": 0.08061005917068015,
+      "initial_energy": 0.12499999999999993,
+      "final_energy": 0.11748093483469825,
+      "maximum_recorded_energy_increase": -0.0003717119238374339,
+      "classical": {
+        "status": "underresolved",
+        "reached_final_time": true,
+        "steps": 200,
+        "requested_steps": 200,
+        "dt": 0.005,
+        "viscosity": 0.01,
+        "viscous_stability_number": 0.007350000000000001,
+        "evolution_seconds": 3.0675387079827487,
+        "diagnostic_seconds": 0.01177879236638546,
+        "time_verification_seconds": 0.0,
+        "time_refinement_relative": null,
+        "diagnostic_failures": [
+          "spatial_residual"
+        ],
+        "total_seconds": 3.079446665942669,
+        "residual_tolerance": 0.001,
+        "diagnostics": {
+          "grid": 33,
+          "points": 35937,
+          "strong_residual_rms": 0.0022783016778054953,
+          "strong_residual_relative": 0.008408171722222147,
+          "strong_residual_scale": 0.27096279108859306,
+          "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+          "divergence_max": 1.0547118733938987e-15,
+          "energy": 0.11748093483469838,
+          "dissipation": 0.007768550340404874,
+          "forcing_power": 0.0,
+          "energy_derivative": -0.0077685503404048735,
+          "instantaneous_energy_balance": 8.673617379884035e-19,
+          "energy_balance_relative": 1.1165039807712684e-16
+        },
+        "time_tolerance": 1e-06,
+        "divergence_tolerance": 1e-08,
+        "energy_tolerance": 1e-08,
+        "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+      },
+      "classical_build": {
+        "seconds": 0.00012445775792002678,
+        "architecture": "fft",
+        "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+        "hidden_tanh_neurons": 0,
+        "unique_encoder_parameter_banks": 0,
+        "scalar_modes": 3375,
+        "velocity_coefficients": 10125,
+        "basis_cache_bytes": 8640,
+        "n_centers": 0,
+        "lam": null
+      },
+      "classical_offgrid_inference_seconds": 0.010969334281980991,
+      "native_vs_same_cutoff_relative": 1.5794750572594358e-15,
+      "native_vs_K13_relative": 0.0006335567745978937,
+      "classical_vs_K13_relative": 0.0006335567745978277,
+      "reference_K11_vs_K13": 2.9098931945539174e-05,
+      "forward_cost_ratio": 0.46591081903569925
+    }
+  ],
+  "references": [
+    {
+      "viscosity": 0.05,
+      "K9_vs_K11": 1.914748053940194e-05,
+      "K11_vs_K13": 2.379763045775971e-06,
+      "rows": [
+        {
+          "cutoff": 9,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.05,
+            "viscous_stability_number": 0.030375,
+            "evolution_seconds": 11.720793541055173,
+            "diagnostic_seconds": 0.034147416707128286,
+            "time_verification_seconds": 0.0,
+            "time_refinement_relative": null,
+            "diagnostic_failures": [],
+            "total_seconds": 11.755093249958009,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 41,
+              "points": 68921,
+              "strong_residual_rms": 9.753835490184528e-05,
+              "strong_residual_relative": 0.00045434664470548036,
+              "strong_residual_scale": 0.21467827712268517,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 8.881784197001252e-16,
+              "energy": 0.0918722842086058,
+              "dissipation": 0.029548013106771926,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.029548013106771923,
+              "instantaneous_energy_balance": 3.469446951953614e-18,
+              "energy_balance_relative": 1.174172672597899e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00014799972996115685,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 6859,
+            "velocity_coefficients": 20577,
+            "basis_cache_bytes": 13680,
+            "n_centers": 0,
+            "lam": null
+          }
+        },
+        {
+          "cutoff": 11,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.05,
+            "viscous_stability_number": 0.045375,
+            "evolution_seconds": 21.28723775036633,
+            "diagnostic_seconds": 0.03600125014781952,
+            "time_verification_seconds": 35.4257982079871,
+            "time_refinement_relative": 1.1984084167868225e-13,
+            "diagnostic_failures": [],
+            "total_seconds": 56.74930458329618,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 49,
+              "points": 117649,
+              "strong_residual_rms": 1.6162640305007836e-05,
+              "strong_residual_relative": 7.528773833624812e-05,
+              "strong_residual_scale": 0.21467825521365344,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 9.43689570931383e-16,
+              "energy": 0.09187228420655268,
+              "dissipation": 0.029548013130248074,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.029548013130248064,
+              "instantaneous_energy_balance": 1.0408340855860843e-17,
+              "energy_balance_relative": 3.5225180149950263e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00026354193687438965,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 12167,
+            "velocity_coefficients": 36501,
+            "basis_cache_bytes": 19872,
+            "n_centers": 0,
+            "lam": null
+          }
+        },
+        {
+          "cutoff": 13,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.05,
+            "viscous_stability_number": 0.063375,
+            "evolution_seconds": 27.695952707901597,
+            "diagnostic_seconds": 0.06271012499928474,
+            "time_verification_seconds": 0.0,
+            "time_refinement_relative": null,
+            "diagnostic_failures": [],
+            "total_seconds": 27.758966125082225,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 57,
+              "points": 185193,
+              "strong_residual_rms": 2.62116868765935e-06,
+              "strong_residual_relative": 1.2209754044643326e-05,
+              "strong_residual_scale": 0.21467825462129692,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 1.0269562977782698e-15,
+              "energy": 0.09187228420652338,
+              "dissipation": 0.029548013130634737,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.029548013130634744,
+              "instantaneous_energy_balance": -6.938893903907228e-18,
+              "energy_balance_relative": 2.3483453432992876e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00029962509870529175,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 19683,
+            "velocity_coefficients": 59049,
+            "basis_cache_bytes": 27216,
+            "n_centers": 0,
+            "lam": null
+          }
+        }
+      ]
+    },
+    {
+      "viscosity": 0.01,
+      "K9_vs_K11": 0.0001362330835765737,
+      "K11_vs_K13": 2.9098931945539174e-05,
+      "rows": [
+        {
+          "cutoff": 9,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.01,
+            "viscous_stability_number": 0.0060750000000000005,
+            "evolution_seconds": 11.198670874815434,
+            "diagnostic_seconds": 0.027841333765536547,
+            "time_verification_seconds": 0.0,
+            "time_refinement_relative": null,
+            "diagnostic_failures": [],
+            "total_seconds": 11.226679916027933,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 41,
+              "points": 68921,
+              "strong_residual_rms": 0.0006247401163142507,
+              "strong_residual_relative": 0.002305711885643168,
+              "strong_residual_scale": 0.2709532445073823,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 1.2212453270876722e-15,
+              "energy": 0.11748093395335947,
+              "dissipation": 0.0077685613620681665,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.007768561362068167,
+              "instantaneous_energy_balance": -8.673617379884035e-19,
+              "energy_balance_relative": 1.1165023967288227e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00016333302482962608,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 6859,
+            "velocity_coefficients": 20577,
+            "basis_cache_bytes": 13680,
+            "n_centers": 0,
+            "lam": null
+          }
+        },
+        {
+          "cutoff": 11,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.01,
+            "viscous_stability_number": 0.009075000000000001,
+            "evolution_seconds": 18.031958166975528,
+            "diagnostic_seconds": 0.035824999678879976,
+            "time_verification_seconds": 42.22011249978095,
+            "time_refinement_relative": 2.550455849220036e-13,
+            "diagnostic_failures": [],
+            "total_seconds": 60.288128457497805,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 49,
+              "points": 117649,
+              "strong_residual_rms": 0.00017580880910999464,
+              "strong_residual_relative": 0.0006488546080994154,
+              "strong_residual_scale": 0.2709525476361536,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 1.1657341758564144e-15,
+              "energy": 0.11748093391526623,
+              "dissipation": 0.007768561949315953,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.0077685619493159525,
+              "instantaneous_energy_balance": 8.673617379884035e-19,
+              "energy_balance_relative": 1.1165023123292176e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00022895773872733116,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 12167,
+            "velocity_coefficients": 36501,
+            "basis_cache_bytes": 19872,
+            "n_centers": 0,
+            "lam": null
+          }
+        },
+        {
+          "cutoff": 13,
+          "metrics": {
+            "status": "completed_unverified",
+            "reached_final_time": true,
+            "steps": 400,
+            "requested_steps": 400,
+            "dt": 0.0025,
+            "viscosity": 0.01,
+            "viscous_stability_number": 0.012675,
+            "evolution_seconds": 35.472046999726444,
+            "diagnostic_seconds": 0.07926958380267024,
+            "time_verification_seconds": 0.0,
+            "time_refinement_relative": null,
+            "diagnostic_failures": [],
+            "total_seconds": 35.551697332877666,
+            "residual_tolerance": null,
+            "diagnostics": {
+              "grid": 57,
+              "points": 185193,
+              "strong_residual_rms": 5.022862879124491e-05,
+              "strong_residual_relative": 0.000185377990656002,
+              "strong_residual_scale": 0.2709524934081955,
+              "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+              "divergence_max": 1.27675647831893e-15,
+              "energy": 0.11748093391335018,
+              "dissipation": 0.0077685619842960945,
+              "forcing_power": 0.0,
+              "energy_derivative": -0.007768561984296094,
+              "instantaneous_energy_balance": 8.673617379884035e-19,
+              "energy_balance_relative": 1.116502307301851e-16
+            },
+            "time_tolerance": 1e-06,
+            "divergence_tolerance": 1e-08,
+            "energy_tolerance": 1e-08,
+            "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+          },
+          "build": {
+            "seconds": 0.00037445826455950737,
+            "architecture": "fft",
+            "architecture_note": "Conventional FFT pseudospectral comparison in equivalent real tensor coordinates",
+            "hidden_tanh_neurons": 0,
+            "unique_encoder_parameter_banks": 0,
+            "scalar_modes": 19683,
+            "velocity_coefficients": 59049,
+            "basis_cache_bytes": 27216,
+            "n_centers": 0,
+            "lam": null
+          }
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "manufactured_forced": {
+      "status": "converged_sampled",
+      "reached_final_time": true,
+      "steps": 100,
+      "requested_steps": 100,
+      "dt": 0.005,
+      "viscosity": 0.05,
+      "viscous_stability_number": 0.00675,
+      "evolution_seconds": 0.1869392921216786,
+      "diagnostic_seconds": 0.002856583334505558,
+      "time_verification_seconds": 0.3719397080130875,
+      "time_refinement_relative": 3.2194165821095884e-12,
+      "diagnostic_failures": [],
+      "total_seconds": 0.5631975419819355,
+      "residual_tolerance": 0.001,
+      "diagnostics": {
+        "grid": 17,
+        "points": 4913,
+        "strong_residual_rms": 2.317362681451343e-13,
+        "strong_residual_relative": 1.8856607381587957e-13,
+        "strong_residual_scale": 1.2289393497761807,
+        "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+        "divergence_max": 1.2217877700063031e-26,
+        "energy": 1.0236834979960023,
+        "dissipation": 0.10236834979960024,
+        "forcing_power": 0.4811075789326348,
+        "energy_derivative": 0.3787392291330346,
+        "instantaneous_energy_balance": 5.551115123125783e-17,
+        "energy_balance_relative": 1.1538199284744703e-16
+      },
+      "time_tolerance": 1e-06,
+      "divergence_tolerance": 1e-08,
+      "energy_tolerance": 1e-08,
+      "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity",
+      "known_exact_relative_error": 3.444015340637574e-12
+    },
+    "excessive_dt": {
+      "status": "stability_guard",
+      "reached_final_time": false,
+      "steps": 0,
+      "requested_steps": 2,
+      "dt": 0.5,
+      "viscosity": 0.05,
+      "viscous_stability_number": 3.6750000000000007,
+      "evolution_seconds": 0.002222833689302206,
+      "diagnostic_seconds": 0.010218374896794558,
+      "time_verification_seconds": 0.0,
+      "time_refinement_relative": null,
+      "diagnostic_failures": [],
+      "total_seconds": 0.013969124760478735,
+      "residual_tolerance": 0.001,
+      "diagnostics": {
+        "grid": 33,
+        "points": 35937,
+        "strong_residual_rms": 5.916378015604982e-16,
+        "strong_residual_relative": 1.9322809684869748e-15,
+        "strong_residual_scale": 0.30618621784789696,
+        "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+        "divergence_max": 2.586321223653352e-15,
+        "energy": 0.12499999999999985,
+        "dissipation": 0.03749999999999998,
+        "forcing_power": 0.0,
+        "energy_derivative": -0.03749999999999992,
+        "instantaneous_energy_balance": 5.551115123125783e-17,
+        "energy_balance_relative": 1.4802973661668762e-15
+      },
+      "time_tolerance": 1e-06,
+      "divergence_tolerance": 1e-08,
+      "energy_tolerance": 1e-08,
+      "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+    },
+    "unresolved_forcing": {
+      "status": "underresolved",
+      "reached_final_time": true,
+      "steps": 20,
+      "requested_steps": 20,
+      "dt": 0.005,
+      "viscosity": 0.05,
+      "viscous_stability_number": 0.00675,
+      "evolution_seconds": 0.2098244996741414,
+      "diagnostic_seconds": 0.0047908746637403965,
+      "time_verification_seconds": 0.0,
+      "time_refinement_relative": null,
+      "diagnostic_failures": [
+        "spatial_residual"
+      ],
+      "total_seconds": 0.21606508316472173,
+      "residual_tolerance": 0.001,
+      "diagnostics": {
+        "grid": 17,
+        "points": 4913,
+        "strong_residual_rms": 0.7071067811865469,
+        "strong_residual_relative": 0.9999999999999999,
+        "strong_residual_scale": 0.707106781186547,
+        "residual_scope": "Independent shifted grid; full-grid pressure projection, sampled physical residual, no certified error bound",
+        "divergence_max": 0.0,
+        "energy": 3.515841492230779e-33,
+        "dissipation": 1.5951120179162566e-33,
+        "forcing_power": -2.866103634886029e-32,
+        "energy_derivative": 7.010695027690159e-32,
+        "instantaneous_energy_balance": 1.0036309864367814e-31,
+        "energy_balance_relative": 1.0036309864367814e-17
+      },
+      "time_tolerance": 1e-06,
+      "divergence_tolerance": 1e-08,
+      "energy_tolerance": 1e-08,
+      "convergence_scope": "Successful integration, optional dt/2 comparison, final sampled physical residual, divergence and energy balance; finite diagnostics do not certify continuum accuracy or global 3D regularity"
+    }
+  },
+  "wall_seconds_before_plots": 230.4816204160452,
+  "peak_process_rss_bytes_macos": 345473024
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Separate fresh process, nonlinear PDE construction + solve + fresh field/boundary/AD audits + TorchScript serialization + grid inference; no precision sweep",
+  "peak_rss_bytes": 758448128,
+  "elapsed_seconds": 0.3295161253772676,
+  "setup_and_solve_seconds": 0.09724404057487845,
+  "parameter_bytes": 3366776,
+  "basis_cache_bytes": 106440,
+  "status": "converged",
+  "ordinary_forward_relative_l2": 6.847140591356439e-16
+}

@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "degree": 12,
+      "coordinates": 91,
+      "sample_count": 4096,
+      "disk": {
+        "largest": 0.5947981264935165,
+        "smallest": 0.5310744009890758,
+        "condition": 1.1199902036056744
+      },
+      "inscribed_square": {
+        "largest": 0.7075579855709967,
+        "smallest": 0.00018076721723182292,
+        "condition": 3914.1941575811106
+      }
+    },
+    {
+      "degree": 20,
+      "coordinates": 231,
+      "sample_count": 4096,
+      "disk": {
+        "largest": 0.7049840063930146,
+        "smallest": 0.40412184537500945,
+        "condition": 1.7444837849307966
+      },
+      "inscribed_square": {
+        "largest": 0.7116130988441617,
+        "smallest": 2.2376077187101126e-07,
+        "condition": 3180240.6333062565
+      }
+    },
+    {
+      "degree": 28,
+      "coordinates": 435,
+      "sample_count": 4096,
+      "disk": {
+        "largest": 0.9082984313852408,
+        "smallest": 0.22833886440892825,
+        "condition": 3.977852976261563
+      },
+      "inscribed_square": {
+        "largest": 0.723084464195622,
+        "smallest": 2.336502778147513e-10,
+        "condition": 3094729742.923382
+      }
+    }
+  ],
+  "target_used": false,
+  "PDE_solution_used": false,
+  "method": "Singular values of known basis evaluation only; no PDE solve",
+  "scope": "A sampled function-space coordinate condition number, not the nonlinear PDE Jacobian condition"
+}

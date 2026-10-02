@@ -1,0 +1,436 @@
+{
+  "case": "steady_navier_stokes",
+  "degree": 12,
+  "backend": "quill",
+  "fields": 3,
+  "coefficients": 273,
+  "interior_points": 455,
+  "setup_seconds": 0.0005715000443160534,
+  "solve_seconds": 0.49327945755794644,
+  "features": {
+    "backend": "quill",
+    "dimension": 2,
+    "degree": 12,
+    "coefficient_count": 91,
+    "tanh_count": 234,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "interior_centers_per_axis": 97,
+    "halo_per_side": 10,
+    "lam": 0.3,
+    "normalized_gamma": 14.4,
+    "physical_gamma": [
+      28.8,
+      28.8
+    ],
+    "normalized_derivative_checks": [
+      {
+        "order": 0,
+        "max_absolute_error": 1.4727830066618708e-11,
+        "max_scaled_error": 1.4727830066618708e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          3.552713678800501e-15,
+          9.992007221626409e-15,
+          2.5757174171303632e-14,
+          3.6637359812630166e-14,
+          9.281464485866309e-14,
+          1.3422596367718143e-13,
+          4.940492459581947e-13,
+          6.728784196496918e-13,
+          2.709832358505082e-12,
+          3.2193137045055664e-12,
+          1.342470579146493e-11,
+          1.4727830066618708e-11
+        ]
+      },
+      {
+        "order": 1,
+        "max_absolute_error": 2.542293486840208e-09,
+        "max_scaled_error": 3.259350624154113e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          7.063238882665246e-13,
+          2.133404564119701e-12,
+          4.269473663498502e-12,
+          7.085887432367599e-12,
+          1.120703529977618e-11,
+          1.6836310123835574e-11,
+          5.126210567141243e-11,
+          1.2735767995764036e-10,
+          2.8631319537453237e-10,
+          6.083169523662946e-10,
+          1.252999481948791e-09,
+          2.542293486840208e-09
+        ]
+      },
+      {
+        "order": 2,
+        "max_absolute_error": 3.9034057408571243e-07,
+        "max_scaled_error": 2.0461739442221213e-10,
+        "per_mode_absolute_error": [
+          0.0,
+          2.0461739442221213e-10,
+          5.960956173112208e-10,
+          1.2095462409433821e-09,
+          1.9885391111529316e-09,
+          3.995580755145056e-09,
+          8.264777306976612e-09,
+          1.595321919012349e-08,
+          2.9657712730113417e-08,
+          5.460447027871851e-08,
+          1.0197095434705261e-07,
+          1.961716407095082e-07,
+          3.9034057408571243e-07
+        ]
+      }
+    ],
+    "derivative_check_tolerance": 1e-08,
+    "encoding_value_error": 1.4727830066618708e-11,
+    "encoding_derivative_errors": [
+      2.542293486840208e-09,
+      3.9034057408571243e-07
+    ],
+    "encoding_sweep": [
+      {
+        "interior_centers": 49,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.35749209687716604
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.2,
+        "maximum_scaled_error": 0.015335528927097941
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.25,
+        "maximum_scaled_error": 0.0007279473614916825
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.3,
+        "maximum_scaled_error": 5.034113592382372e-05
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.0001888911423662506
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.2,
+        "maximum_scaled_error": 1.9101829184395042e-06
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.25,
+        "maximum_scaled_error": 1.682301950596007e-08
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.3,
+        "maximum_scaled_error": 2.0461739442221213e-10
+      }
+    ],
+    "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+    "setup_seconds": 2.9957853257656097e-05
+  },
+  "solver": {
+    "status": "stationary",
+    "converged": false,
+    "optimization_converged": true,
+    "iterations": 4,
+    "objective": 6.065264931160193e-11,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 455,
+        "output_rows": 455,
+        "equations": 3,
+        "rms": 5.651122550046486e-06,
+        "scaled_rms": [
+          9.245205290202566e-06,
+          2.9376896809980395e-06,
+          1.3044986420459785e-06
+        ],
+        "maximum_scaled_rms": 9.245205290202566e-06,
+        "weighted_norm": 9.788031376478711e-06
+      },
+      {
+        "name": "Dirichlet_0",
+        "input_rows": 168,
+        "output_rows": 168,
+        "equations": 1,
+        "rms": 4.062047102779524e-06,
+        "scaled_rms": [
+          4.062047102779524e-06
+        ],
+        "maximum_scaled_rms": 4.062047102779524e-06,
+        "weighted_norm": 4.062047102779524e-06
+      },
+      {
+        "name": "Dirichlet_1",
+        "input_rows": 168,
+        "output_rows": 168,
+        "equations": 1,
+        "rms": 2.9999189540839158e-06,
+        "scaled_rms": [
+          2.9999189540839158e-06
+        ],
+        "maximum_scaled_rms": 2.9999189540839158e-06,
+        "weighted_norm": 2.999918954083916e-06
+      },
+      {
+        "name": "pressure_gauge",
+        "input_rows": 1,
+        "output_rows": 1,
+        "equations": 1,
+        "rms": 8.236575162812004e-13,
+        "scaled_rms": [
+          8.236575162812004e-13
+        ],
+        "maximum_scaled_rms": 8.236575162812004e-13,
+        "weighted_norm": 8.236575162812004e-13
+      }
+    ],
+    "residual_evaluations": 9,
+    "linearizations": 5,
+    "lsmr_iterations": 2421,
+    "seconds": 0.4932700418867171,
+    "basis_setup_seconds": 0.0029775421135127544,
+    "basis_cache_bytes": 1779232,
+    "unknowns": 273,
+    "feature_metrics": {
+      "backend": "quill",
+      "dimension": 2,
+      "degree": 12,
+      "coefficient_count": 91,
+      "tanh_count": 234,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "interior_centers_per_axis": 97,
+      "halo_per_side": 10,
+      "lam": 0.3,
+      "normalized_gamma": 14.4,
+      "physical_gamma": [
+        28.8,
+        28.8
+      ],
+      "normalized_derivative_checks": [
+        {
+          "order": 0,
+          "max_absolute_error": 1.4727830066618708e-11,
+          "max_scaled_error": 1.4727830066618708e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            3.552713678800501e-15,
+            9.992007221626409e-15,
+            2.5757174171303632e-14,
+            3.6637359812630166e-14,
+            9.281464485866309e-14,
+            1.3422596367718143e-13,
+            4.940492459581947e-13,
+            6.728784196496918e-13,
+            2.709832358505082e-12,
+            3.2193137045055664e-12,
+            1.342470579146493e-11,
+            1.4727830066618708e-11
+          ]
+        },
+        {
+          "order": 1,
+          "max_absolute_error": 2.542293486840208e-09,
+          "max_scaled_error": 3.259350624154113e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            7.063238882665246e-13,
+            2.133404564119701e-12,
+            4.269473663498502e-12,
+            7.085887432367599e-12,
+            1.120703529977618e-11,
+            1.6836310123835574e-11,
+            5.126210567141243e-11,
+            1.2735767995764036e-10,
+            2.8631319537453237e-10,
+            6.083169523662946e-10,
+            1.252999481948791e-09,
+            2.542293486840208e-09
+          ]
+        },
+        {
+          "order": 2,
+          "max_absolute_error": 3.9034057408571243e-07,
+          "max_scaled_error": 2.0461739442221213e-10,
+          "per_mode_absolute_error": [
+            0.0,
+            2.0461739442221213e-10,
+            5.960956173112208e-10,
+            1.2095462409433821e-09,
+            1.9885391111529316e-09,
+            3.995580755145056e-09,
+            8.264777306976612e-09,
+            1.595321919012349e-08,
+            2.9657712730113417e-08,
+            5.460447027871851e-08,
+            1.0197095434705261e-07,
+            1.961716407095082e-07,
+            3.9034057408571243e-07
+          ]
+        }
+      ],
+      "derivative_check_tolerance": 1e-08,
+      "encoding_value_error": 1.4727830066618708e-11,
+      "encoding_derivative_errors": [
+        2.542293486840208e-09,
+        3.9034057408571243e-07
+      ],
+      "encoding_sweep": [
+        {
+          "interior_centers": 49,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.35749209687716604
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.2,
+          "maximum_scaled_error": 0.015335528927097941
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.25,
+          "maximum_scaled_error": 0.0007279473614916825
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.3,
+          "maximum_scaled_error": 5.034113592382372e-05
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.0001888911423662506
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.2,
+          "maximum_scaled_error": 1.9101829184395042e-06
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.25,
+          "maximum_scaled_error": 1.682301950596007e-08
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.3,
+          "maximum_scaled_error": 2.0461739442221213e-10
+        }
+      ],
+      "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+      "setup_seconds": 2.9957853257656097e-05
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 171888,
+    "dense_jacobian_bytes_avoided": 3717168,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 9
+    },
+    "residual_entries": 1702
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 0.8679959595328797,
+      "maximum_scaled_block_rms": 1.313424279286898,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.003973166923969984,
+      "scaled_projected_gradient_inf": 1.3091979873929764,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 665,
+      "estimated_condition": 18.27934733820755,
+      "step_length": 1.0,
+      "step_norm": 1.5312883822882186,
+      "trial_objective": 0.6674223752106061
+    },
+    {
+      "iteration": 1,
+      "objective": 0.6674223752106061,
+      "maximum_scaled_block_rms": 1.1000114082993997,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.13701512478291988,
+      "scaled_projected_gradient_inf": 0.8233173767572292,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 645,
+      "estimated_condition": 16.745610363144245,
+      "step_length": 1.0,
+      "step_norm": 0.45784140806773765,
+      "trial_objective": 0.00043547521132836166
+    },
+    {
+      "iteration": 2,
+      "objective": 0.00043547521132836166,
+      "maximum_scaled_block_rms": 0.025587459175167453,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.26655720779672265,
+      "scaled_projected_gradient_inf": 0.018627015276689984,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 716,
+      "estimated_condition": 25.212946198247877,
+      "step_length": 1.0,
+      "step_norm": 0.013187655687800219,
+      "trial_objective": 6.971982584003465e-11
+    },
+    {
+      "iteration": 3,
+      "objective": 6.971982584003465e-11,
+      "maximum_scaled_block_rms": 1.0064097725555643e-05,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.4117645416408777,
+      "scaled_projected_gradient_inf": 2.30999925830448e-06,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 395,
+      "estimated_condition": 8.185597320650373,
+      "step_length": 1.0,
+      "step_norm": 2.8032327095192164e-06,
+      "trial_objective": 6.065264931160193e-11
+    },
+    {
+      "iteration": 4,
+      "objective": 6.065264931160193e-11,
+      "maximum_scaled_block_rms": 9.245205290202566e-06,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.4924167497083545,
+      "scaled_projected_gradient_inf": 9.819326972142614e-12
+    }
+  ],
+  "validation": {
+    "relative_l2": 5.161003179875536e-06,
+    "component_relative_l2": [
+      1.7696569698926042e-06,
+      1.5675058473172486e-05,
+      1.3716353574367774e-05
+    ],
+    "independent_residual_rms": {
+      "PDE": 6.635639395040852e-06,
+      "Dirichlet_0": 4.084895399904133e-06,
+      "Dirichlet_1": 3.075466699004572e-06,
+      "pressure_gauge": 8.236575162812004e-13
+    },
+    "parameter_relative_error": null
+  },
+  "manufactured_forcing": false,
+  "note": "Unforced coupled velocity-pressure residual; no Fourier pressure projector or NS-specific solve."
+}

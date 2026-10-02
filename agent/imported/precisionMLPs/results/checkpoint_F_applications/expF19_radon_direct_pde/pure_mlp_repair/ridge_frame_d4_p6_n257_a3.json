@@ -1,0 +1,133 @@
+{
+  "dimension": 4,
+  "degree": 6,
+  "interior_centers": 257,
+  "halo_per_side": 17,
+  "lam": 0.2,
+  "directions": 64,
+  "neurons": 18624,
+  "architecture": [
+    "Linear",
+    "Tanh",
+    "Linear"
+  ],
+  "angular_degree": 3,
+  "angular_only_max_error": 0.8172228329713991,
+  "derivative_checks": [
+    {
+      "order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_absolute": 0.817222832971459,
+      "max_scaled": 0.817222832971459,
+      "rms": 0.14959083615657032
+    },
+    {
+      "order": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "max_absolute": 4.000059391653624,
+      "max_scaled": 1.8257689668075714,
+      "rms": 1.2773325327481244
+    },
+    {
+      "order": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "max_absolute": 2.6457139860611267,
+      "max_scaled": 0.6037988461969127,
+      "rms": 0.9158497917183366
+    },
+    {
+      "order": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "max_absolute": 7.163966318162283,
+      "max_scaled": 1.089962764906867,
+      "rms": 2.2922016455041954
+    },
+    {
+      "order": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "max_absolute": 4.863146717263465,
+      "max_scaled": 0.5549281578130006,
+      "rms": 1.6893952411326818
+    },
+    {
+      "order": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "max_absolute": 10.57817892976113,
+      "max_scaled": 3.3657842049239997,
+      "rms": 3.469234763414101
+    },
+    {
+      "order": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "max_absolute": 4.63488367092086,
+      "max_scaled": 0.36868392836870517,
+      "rms": 1.774094098108564
+    },
+    {
+      "order": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "max_absolute": 39.42050060368639,
+      "max_scaled": 1.3936540617464903,
+      "rms": 12.77832362042433
+    },
+    {
+      "order": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "max_absolute": 19.00271737318355,
+      "max_scaled": 0.3778949477621733,
+      "rms": 6.870349266924478
+    },
+    {
+      "order": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "max_absolute": 9.349788093838395,
+      "max_scaled": 1.48746628765611,
+      "rms": 3.082981000893919
+    }
+  ],
+  "seconds": 0.01969583285972476,
+  "scope": "Known-function analytic reconstruction, no fitting; NOT a PDE solve",
+  "forward_contains_polynomials": false,
+  "forward_contains_product_gates": false,
+  "export": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/pure_mlp_repair/ridge_frame_d4_p6_n257_a3.pt"
+}

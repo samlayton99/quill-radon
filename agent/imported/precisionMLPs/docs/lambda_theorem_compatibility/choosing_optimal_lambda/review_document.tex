@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,graphicx,microtype,pdflscape}
+\usepackage[margin=0.82in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\begin{document}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\input{choosing_optimal_lambda.tex}
+\clearpage
+\input{choosing_optimal_lambda_figures.tex}
+\clearpage
+\appendix
+\setcounter{equation}{0}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\renewcommand{\theHequation}{appendix.\arabic{equation}}
+\setlength{\parskip}{4pt}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{4pt}
+\input{choosing_optimal_lambda_appendix.tex}
+\end{document}

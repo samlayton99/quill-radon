@@ -1,0 +1,46 @@
+{
+ "d": 3,
+ "r": 0.3,
+ "rcond": 1e-14,
+ "n_train": 24576,
+ "rows": [
+  {
+   "target": "off_packet2",
+   "budget": 2048,
+   "even": 0.0001832197086259196,
+   "even_M": 128,
+   "even_N": 16,
+   "base": "192x8",
+   "atoms": 0.0001767682545980953,
+   "n_atoms": 16,
+   "spikes": 0.00019383725828697092,
+   "n_spikes": 16,
+   "waterfill": 0.00018524242635433485,
+   "wf": {
+    "N_min": 6,
+    "N_max": 31,
+    "N_med": 15.0
+   },
+   "seconds": 389.1
+  },
+  {
+   "target": "off_packet2",
+   "budget": 4096,
+   "even": 2.892919415039662e-07,
+   "even_M": 256,
+   "even_N": 16,
+   "base": "192x16",
+   "atoms": 3.7992832042917993e-07,
+   "n_atoms": 32,
+   "spikes": 7.200299664377403e-07,
+   "n_spikes": 32,
+   "waterfill": 3.1159838120674717e-06,
+   "wf": {
+    "N_min": 6,
+    "N_max": 32,
+    "N_med": 15.0
+   },
+   "seconds": 3510.9
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "nu": 0.15,
+  "t": 0.8,
+  "initial_condition": "sin(x)",
+  "modes": 49,
+  "rows": [
+    {
+      "h": 0.16,
+      "gamma": 1.5625,
+      "centers": 79,
+      "neurons": 79,
+      "directions": 1,
+      "velocity_rel_l2": 12909.345293530067,
+      "physical_residual_rms": 1542534593.7452188,
+      "derivative_rel_l2": 70415.96740063619,
+      "second_derivative_rel_l2": 146175.72282347622
+    },
+    {
+      "h": 0.08,
+      "gamma": 3.125,
+      "centers": 155,
+      "neurons": 155,
+      "directions": 1,
+      "velocity_rel_l2": 1.173478682396782e-10,
+      "physical_residual_rms": 2.7721826270106377e-09,
+      "derivative_rel_l2": 1.0065204596658812e-09,
+      "second_derivative_rel_l2": 1.247931007915341e-08
+    },
+    {
+      "h": 0.04,
+      "gamma": 6.25,
+      "centers": 309,
+      "neurons": 309,
+      "directions": 1,
+      "velocity_rel_l2": 5.834448272628124e-15,
+      "physical_residual_rms": 2.2469568392271252e-13,
+      "derivative_rel_l2": 4.7126952841797476e-14,
+      "second_derivative_rel_l2": 1.1416890328957229e-12
+    },
+    {
+      "h": 0.02,
+      "gamma": 12.5,
+      "centers": 617,
+      "neurons": 617,
+      "directions": 1,
+      "velocity_rel_l2": 6.048120414468717e-15,
+      "physical_residual_rms": 2.258405858801246e-13,
+      "derivative_rel_l2": 4.718212113464882e-14,
+      "second_derivative_rel_l2": 1.1475620289112274e-12
+    }
+  ],
+  "cole_hopf_vs_independent_rk_rel_l2": 6.378804866165571e-15,
+  "cole_hopf_physical_residual_rms": 2.1990222157212904e-16
+}

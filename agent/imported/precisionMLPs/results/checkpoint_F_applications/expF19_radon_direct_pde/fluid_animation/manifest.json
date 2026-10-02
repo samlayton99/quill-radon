@@ -1,0 +1,65 @@
+{
+  "scope": "New unforced native QUILL Navier-Stokes mixed-vortex run, T=4, with passive sheets/tracers. Interactive player and video.",
+  "files": {
+    "time_check.npz": {
+      "bytes": 469227,
+      "sha256": "3111db35de43276dc74586f63f4d3dfd18b9b16d8610bf4c30aceb06b2485cad"
+    },
+    "trajectory.npz": {
+      "bytes": 29351520,
+      "sha256": "4d1e90889ddc277d8f99283362c2fc2612922b6b6162837eb835bd19ba8a187b"
+    },
+    "render_metrics.json": {
+      "bytes": 18947,
+      "sha256": "cea6e6a106fc804ec14f30e4b72e7d8defe608c6186aebfcd0a4438efb9421e3"
+    },
+    "reference_metrics.json": {
+      "bytes": 10906,
+      "sha256": "2b950908185ef501f1cbbd4088e852a3080c660c61ac0b958c932722a4d6ab8a"
+    },
+    "poster.png": {
+      "bytes": 262798,
+      "sha256": "e76a6a6b8d92c61349c7b132eb74897d82259327c46b0269327fd91f8fd98c4c"
+    },
+    "reference.npz": {
+      "bytes": 1010188,
+      "sha256": "06bd8419b3a8f159af325ee69770a885d20bac58fca3baae51bfb59e7dcf13b8"
+    },
+    "time_check_metrics.json": {
+      "bytes": 10794,
+      "sha256": "91640cb8b73bd354982a4de8f3904f486a7aa04f4cc6272c654de2fd81adbfc8"
+    },
+    "trajectory_metrics.json": {
+      "bytes": 11005,
+      "sha256": "3eb33376c95ae75a61c31f4189ee9968435d96cc99944bd621c57f3cad3b800e"
+    },
+    "preview.gif": {
+      "bytes": 7217830,
+      "sha256": "5b725b5399de52f3c0eead46ab3466fa8b44f8517f3ef1d0611f692bf38eb864"
+    },
+    "validation.json": {
+      "bytes": 1215,
+      "sha256": "9decb7df6085505c87da0b314f152b69f0dcf757f41f41e777dfa2f3538f180a"
+    },
+    "preview.mp4.sb-9e8052a1-Symy1I": {
+      "bytes": 3701545,
+      "sha256": "18287ad503038bba0601584e10e99bb17705909c2b84a7d90e3b4ecc8815b19f"
+    },
+    "preview.mp4": {
+      "bytes": 3703939,
+      "sha256": "50513bd91ee1edf687c8b237cd330291d6cb1f75977aa2d7c3c82c29900ee391"
+    },
+    "browser_checks.json": {
+      "bytes": 377,
+      "sha256": "bd2d452f462edf715ccf613849674652a9ecf44876db939e373ed1e55495dc9b"
+    }
+  },
+  "source": {
+    "fluid_animation_view.html": "a479400470765d082d802854e4e753a053d87dc430880e6ee926b4b6430c9b3d",
+    "fluid_animation_preview.py": "5a418313e7a5536224272be704e1064441df6af5f2017af573ec4b8fe32f7a56",
+    "fluid_animation_package.py": "2d8103b2962f999f041aa45ee4e5cb612be8365ec304aca13a21e247548a9438",
+    "fluid_animation_sim.py": "39c026385a4f57a5c232e40383e2db3a9250695f102905f1e984a348d80c0ce4"
+  },
+  "inline_fragment": "/Users/sam/.codex/visualizations/2026/10/01/01a0f571-40a6-7e13-a1a8-7b582519ec45/quill-fluid-3d.html",
+  "checks": "Numerical spatial/time comparisons in validation.json; desktop/phone runtime checks in browser_checks.json; encoded video validation in render_metrics.json."
+}

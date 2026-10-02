@@ -1,0 +1,184 @@
+<div id="quill-fluid-3d">
+  <h3>Interacting vortices</h3>
+  <div class="viz-row text-small">
+    <span>3D Navier–Stokes · constructed QUILL dynamics</span>
+    <span class="tabular-nums" id="qf-time">t = 0.00 / 4.00</span>
+  </div>
+  <div class="qf-stage">
+    <canvas id="qf-canvas" role="img" aria-label="Three-dimensional fluid motion with two deforming material sheets and passive particle trails. Drag to rotate; scroll to zoom."></canvas>
+  </div>
+  <div class="viz-controls">
+    <button type="button" class="btn btn-primary" id="qf-play">Pause</button>
+    <label class="form-label">View
+      <select class="form-select" id="qf-view">
+        <option value="both">Sheets + tracers</option>
+        <option value="tracers">Tracer trails</option>
+        <option value="sheets">Dye sheets</option>
+      </select>
+    </label>
+    <label class="form-label">Playback
+      <select class="form-select" id="qf-speed">
+        <option value="0.5">0.5×</option>
+        <option value="1" selected>1×</option>
+        <option value="2">2×</option>
+      </select>
+    </label>
+  </div>
+  <label class="form-label" for="qf-scrub">Simulation time</label>
+  <input type="range" class="form-range" id="qf-scrub" min="0" max="120" step="0.01" value="0" aria-label="Simulation time">
+  <div class="viz-row text-small qf-bottom">
+    <span>Drag to rotate · Scroll to zoom</span>
+    <span class="qf-speed-key">Tracer speed <span id="qf-colorbar" aria-hidden="true"></span><span class="tabular-nums" id="qf-speed-range"></span></span>
+  </div>
+  <div class="text-small">Periodic cube · two passive dye sheets · viscosity 0.075</div>
+  <div class="qf-colors" aria-hidden="true">
+    <span style="color:var(--foreground)" id="qf-fg"></span>
+    <span style="color:var(--border)" id="qf-border"></span>
+    <span style="color:var(--viz-series-1)" id="qf-c1"></span>
+    <span style="color:var(--viz-series-2)" id="qf-c2"></span>
+    <span style="color:var(--viz-series-3)" id="qf-c3"></span>
+  </div>
+  <script type="application/json" id="qf-data">__QUILL_DATA__</script>
+</div>
+<style>
+  #quill-fluid-3d .qf-stage { width:100%; height:560px; position:relative; }
+  #quill-fluid-3d canvas { display:block; width:100%; height:100%; touch-action:none; }
+  #quill-fluid-3d .qf-colors { display:none; }
+  #quill-fluid-3d .qf-bottom { justify-content:space-between; }
+  #quill-fluid-3d .qf-speed-key { display:inline-flex; align-items:center; gap:8px; }
+  #quill-fluid-3d #qf-colorbar { display:inline-block; width:72px; height:7px; }
+  @media(max-width:600px) { #quill-fluid-3d .qf-stage { height:440px; } }
+  @media(max-width:380px) { #quill-fluid-3d .qf-stage { height:350px; } }
+</style>
+<script>
+(() => {
+  const root=document.getElementById('quill-fluid-3d');
+  const canvas=root.querySelector('#qf-canvas'), ctx=canvas.getContext('2d');
+  const data=JSON.parse(root.querySelector('#qf-data').textContent);
+  const decode=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const encodedPositions=new Int16Array(decode(data.positions).buffer);
+  const encodedSpeeds=decode(data.speeds);
+  const count=data.points, frames=data.frames, side=17, sheetPoints=side*side;
+  const pi=Math.PI, twopi=2*pi, positionScale=pi/32760;
+  const p=new Float64Array(count*3), screen=new Float64Array(count*4), speeds=new Float64Array(count);
+  const scrub=root.querySelector('#qf-scrub'), play=root.querySelector('#qf-play');
+  const speedControl=root.querySelector('#qf-speed'), viewControl=root.querySelector('#qf-view');
+  const timeLabel=root.querySelector('#qf-time');
+  let width=1,height=1,yaw=-.65,pitch=.52,zoom=1,cursor=0,playback=1,view='both';
+  let playing=!window.matchMedia('(prefers-reduced-motion: reduce)').matches,dirty=true,drag=null,last=performance.now();
+  let colors,seriesRGB;
+  const colorCanvas=document.createElement('canvas');colorCanvas.width=colorCanvas.height=1;
+  const colorContext=colorCanvas.getContext('2d',{willReadFrequently:true});
+  const color=id=>getComputedStyle(root.querySelector(id)).color;
+  const rgb=c=>{colorContext.clearRect(0,0,1,1);colorContext.fillStyle=c;colorContext.fillRect(0,0,1,1);return Array.from(colorContext.getImageData(0,0,1,1).data).slice(0,3);};
+  function theme(){
+    colors={fg:color('#qf-fg'),border:color('#qf-border'),one:color('#qf-c1'),two:color('#qf-c2'),three:color('#qf-c3')};
+    seriesRGB=[rgb(colors.one),rgb(colors.two)];
+    root.querySelector('#qf-colorbar').style.background=`linear-gradient(90deg,${colors.one},${colors.two})`;
+    dirty=true;
+  }
+  const speedColor=s=>{const a=Math.min(1,Math.max(0,s/data.maxSpeed));return 'rgb('+seriesRGB[0].map((v,j)=>Math.round(v+(seriesRGB[1][j]-v)*a)).join(',')+')';};
+  root.querySelector('#qf-speed-range').textContent='0–'+data.maxSpeed.toFixed(1);
+  scrub.max=frames-1;
+  const wrap=v=>((v+pi)%twopi+twopi)%twopi-pi;
+  function position(frame,index,axis){return encodedPositions[(frame*count+index)*3+axis]*positionScale;}
+  function project(x,y,z){
+    const xx=Math.cos(yaw)*x-Math.sin(yaw)*y;
+    const yy=Math.sin(yaw)*x+Math.cos(yaw)*y;
+    const sy=Math.cos(pitch)*z-Math.sin(pitch)*yy;
+    const depth=Math.sin(pitch)*z+Math.cos(pitch)*yy;
+    const perspective=14/(14-depth),scale=Math.min(width,height)*.083*zoom;
+    return [width/2+xx*perspective*scale,height/2-sy*perspective*scale,depth,perspective];
+  }
+  function segment(a,b,stroke,alpha,lineWidth=1){
+    ctx.globalAlpha=alpha;ctx.strokeStyle=stroke;ctx.lineWidth=lineWidth;
+    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();
+  }
+  const corners=[];
+  for(let x of [-pi,pi])for(let y of [-pi,pi])for(let z of [-pi,pi])corners.push([x,y,z]);
+  const edges=[];
+  for(let i=0;i<8;i++)for(let j=i+1;j<8;j++)if(corners[i].filter((v,k)=>v!==corners[j][k]).length===1)edges.push([i,j]);
+  function fillPoints(){
+    const a=Math.floor(cursor),b=Math.min(frames-1,a+1),f=cursor-a;
+    for(let i=0;i<count;i++){
+      for(let d=0;d<3;d++){const v=position(a,i,d),delta=wrap(position(b,i,d)-v);p[i*3+d]=wrap(v+f*delta);}
+      const s=project(p[i*3],p[i*3+1],p[i*3+2]);screen.set(s,i*4);
+      speeds[i]=(encodedSpeeds[a*count+i]*(1-f)+encodedSpeeds[b*count+i]*f)*data.maxSpeed/255;
+    }
+  }
+  function point(i){return [screen[i*4],screen[i*4+1],screen[i*4+2],screen[i*4+3]];}
+  function crosses(a,b){return [0,1,2].some(d=>Math.abs(p[a*3+d]-p[b*3+d])>pi);}
+  function draw(){
+    ctx.clearRect(0,0,width,height);fillPoints();
+    const corners2=corners.map(c=>project(...c));
+    for(const [a,b] of edges)segment(corners2[a],corners2[b],colors.border,.75);
+    for(let t of [-pi/2,0,pi/2]){
+      segment(project(t,-pi,-pi),project(t,pi,-pi),colors.border,.28);
+      segment(project(-pi,t,-pi),project(pi,t,-pi),colors.border,.28);
+    }
+    if(view!=='tracers'){
+      const triangles=[];
+      for(let sheet=0;sheet<2;sheet++)for(let y=0;y<side-1;y++)for(let z=0;z<side-1;z++){
+        const a=sheet*sheetPoints+y*side+z,b=a+side,c=b+1,d=a+1;
+        for(const ids of [[a,b,c],[a,c,d]]){
+          if(crosses(ids[0],ids[1])||crosses(ids[1],ids[2])||crosses(ids[0],ids[2]))continue;
+          triangles.push({ids,sheet,depth:ids.reduce((s,i)=>s+screen[i*4+2],0)/3});
+        }
+      }
+      triangles.sort((a,b)=>a.depth-b.depth);
+      for(const tri of triangles){
+        ctx.fillStyle=tri.sheet===0?colors.one:colors.three;
+        ctx.globalAlpha=.12+.055*(tri.depth+5.5)/11;
+        ctx.beginPath();tri.ids.forEach((i,j)=>{if(j===0)ctx.moveTo(screen[i*4],screen[i*4+1]);else ctx.lineTo(screen[i*4],screen[i*4+1]);});ctx.closePath();ctx.fill();
+      }
+      for(let sheet=0;sheet<2;sheet++)for(let row=0;row<side;row+=2)for(let col=0;col<side-1;col++){
+        for(const [a,b] of [[sheet*sheetPoints+row*side+col,sheet*sheetPoints+row*side+col+1],[sheet*sheetPoints+col*side+row,sheet*sheetPoints+(col+1)*side+row]]){
+          if(!crosses(a,b))segment(point(a),point(b),sheet===0?colors.one:colors.three,.32,.65);
+        }
+      }
+    }
+    if(view!=='sheets'){
+      const end=Math.floor(cursor),start=Math.max(0,end-24);
+      for(let i=2*sheetPoints;i<count;i++){
+        for(let f=start;f<end;f++){
+          const a=[0,1,2].map(d=>position(f,i,d)),b=[0,1,2].map(d=>position(f+1,i,d));
+          if(a.some((v,d)=>Math.abs(v-b[d])>pi))continue;
+          const aa=project(...a),bb=project(...b),fade=(f-start+1)/(end-start+1);
+          segment(aa,bb,speedColor(encodedSpeeds[(f+1)*count+i]*data.maxSpeed/255),(.15+.6*fade)*(.75+.025*bb[2]),1.7*bb[3]);
+        }
+        const v=point(i),c=speedColor(speeds[i]);
+        if(end>0){const a=[0,1,2].map(d=>position(end,i,d)),b=[p[i*3],p[i*3+1],p[i*3+2]];if(!a.some((v,d)=>Math.abs(v-b[d])>pi))segment(project(...a),v,c,.85,1.7*v[3]);}
+        ctx.fillStyle=c;ctx.globalAlpha=.12;ctx.beginPath();ctx.arc(v[0],v[1],5*v[3],0,twopi);ctx.fill();
+        ctx.globalAlpha=.93;ctx.beginPath();ctx.arc(v[0],v[1],1.9*v[3],0,twopi);ctx.fill();
+      }
+    }
+    for(const [a,b] of edges)if(corners2[a][2]+corners2[b][2]>0)segment(corners2[a],corners2[b],colors.border,.8);
+    const font=getComputedStyle(root);
+    ctx.globalAlpha=1;ctx.fillStyle=colors.fg;ctx.font=font.fontSize+' '+font.fontFamily;ctx.textAlign='center';
+    [['x',[pi+.35,-pi,-pi]],['y',[-pi,pi+.35,-pi]],['z',[-pi,-pi,pi+.35]]].forEach(([label,c])=>{const s=project(...c);ctx.fillText(label,s[0],s[1]);});
+    timeLabel.textContent='t = '+(cursor/(frames-1)*data.finalTime).toFixed(2)+' / '+data.finalTime.toFixed(2);
+    scrub.value=cursor;
+    root.dataset.frame=cursor.toFixed(3);
+    dirty=false;
+  }
+  function updatePlay(){play.textContent=playing?'Pause':cursor>=frames-1?'Replay':'Play';play.setAttribute('aria-label',play.textContent+' fluid animation');}
+  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{simulation:'quill-interacting-fluid',time:cursor/(frames-1)*data.finalTime,view},privateContent:{cursor,yaw,pitch,zoom,playback,view}}).catch(()=>{});}
+  function restore(state){const s=state?.privateContent;if(!s)return;for(const key of ['cursor','yaw','pitch','zoom','playback'])if(s[key]!==undefined&&!Number.isFinite(s[key]))return;cursor=Math.max(0,Math.min(frames-1,s.cursor??cursor));yaw=s.yaw??yaw;pitch=Math.max(-1.35,Math.min(1.35,s.pitch??pitch));zoom=Math.max(.65,Math.min(1.65,s.zoom??zoom));playback=[.5,1,2].includes(s.playback)?s.playback:1;view=['both','tracers','sheets'].includes(s.view)?s.view:'both';speedControl.value=playback;viewControl.value=view;dirty=true;}
+  restore(window.openai?.widgetState);
+  window.addEventListener('openai:set_globals',e=>restore(e.detail?.globals?.widgetState));
+  play.addEventListener('click',()=>{if(cursor>=frames-1)cursor=0;playing=!playing;last=performance.now();updatePlay();dirty=true;save();});
+  scrub.addEventListener('input',()=>{cursor=Number(scrub.value);playing=false;updatePlay();dirty=true;});scrub.addEventListener('change',save);
+  speedControl.addEventListener('change',()=>{playback=Number(speedControl.value);save();});
+  viewControl.addEventListener('change',()=>{view=viewControl.value;dirty=true;save();});
+  canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,yaw,pitch};canvas.setPointerCapture(e.pointerId);});
+  canvas.addEventListener('pointermove',e=>{if(!drag)return;yaw=drag.yaw+(e.clientX-drag.x)*.009;pitch=Math.max(-1.35,Math.min(1.35,drag.pitch+(e.clientY-drag.y)*.008));dirty=true;});
+  canvas.addEventListener('pointerup',()=>{drag=null;save();});canvas.addEventListener('pointercancel',()=>{drag=null;});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.65,Math.min(1.65,zoom*Math.exp(-e.deltaY*.001)));dirty=true;},{passive:false});
+  new ResizeObserver(()=>{const bounds=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);width=bounds.width;height=bounds.height;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);dirty=true;}).observe(canvas);
+  new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',theme);
+  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>{if(e.matches){playing=false;updatePlay();}});
+  function tick(now){const elapsed=Math.min(.1,(now-last)/1000);last=now;if(playing&&!drag){cursor=Math.min(frames-1,cursor+elapsed*(frames-1)/16*playback);dirty=true;if(cursor>=frames-1){playing=false;updatePlay();}}if(dirty&&width>1)draw();requestAnimationFrame(tick);}
+  theme();updatePlay();requestAnimationFrame(tick);
+})();
+</script>

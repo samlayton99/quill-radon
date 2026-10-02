@@ -1,0 +1,164 @@
+[
+ {
+  "rel_l2": 7.071563537592013e-05,
+  "linf": 8.39307461107941e-05,
+  "dof": 33409,
+  "t_solve": 68.78537487983704,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3751,
+  "final_loss": 5.8576140278416076e-08,
+  "device_adam": "mps",
+  "key": "ode1d_o1",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 3.707626560014896e-05,
+  "linf": 5.48744921157196e-05,
+  "dof": 33409,
+  "t_solve": 135.70497584342957,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3415,
+  "final_loss": 4.5816180126192285e-06,
+  "device_adam": "mps",
+  "key": "ode1d_o2",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 5.781044587351064e-07,
+  "linf": 8.281253588426907e-07,
+  "dof": 33409,
+  "t_solve": 410.0526268482208,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3751,
+  "final_loss": 5.257529852758513e-07,
+  "device_adam": "mps",
+  "key": "ode1d_o3",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 1.9789349122569108e-05,
+  "linf": 9.232642673007163e-05,
+  "dof": 33537,
+  "t_solve": 82.67557215690613,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3634,
+  "final_loss": 1.150649761277753e-06,
+  "device_adam": "mps",
+  "key": "pde2d_steady_o1",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 0.36624157382317646,
+  "linf": 0.9795380707685915,
+  "dof": 33537,
+  "t_solve": 300.7019031047821,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3143,
+  "final_loss": 0.10788836843312839,
+  "device_adam": "mps",
+  "key": "pde2d_steady_o2",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 0.0005032434261826432,
+  "linf": 0.0012240265787926419,
+  "dof": 33537,
+  "t_solve": 420.06306314468384,
+  "t_assemble": 0.0,
+  "adam_steps": 4651,
+  "lbfgs_evals": 1230,
+  "final_loss": 0.0001278170464009714,
+  "device_adam": "mps",
+  "key": "pde2d_steady_o3",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 0.0006793120769122066,
+  "linf": 0.001166307360882622,
+  "dof": 33537,
+  "t_solve": 107.71442103385925,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3502,
+  "final_loss": 3.3907723416854006e-06,
+  "device_adam": "mps",
+  "key": "pde2d_time_o1",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 0.0001484974053121051,
+  "linf": 0.0002555421009458603,
+  "dof": 33537,
+  "t_solve": 191.69940376281738,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3312,
+  "final_loss": 6.819294933961159e-07,
+  "device_adam": "mps",
+  "key": "pde2d_time_o2",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ },
+ {
+  "rel_l2": 0.00014391962650821055,
+  "linf": 0.00020478922645128517,
+  "dof": 33537,
+  "t_solve": 378.83318400382996,
+  "t_assemble": 0.0,
+  "adam_steps": 5000,
+  "lbfgs_evals": 3647,
+  "final_loss": 2.061162171955098e-06,
+  "device_adam": "mps",
+  "key": "pde2d_time_o3",
+  "seed": 0,
+  "variant": "lit_3x128",
+  "probe": {
+   "cpu": 7.460652112960815,
+   "mps": 3.3145158290863037
+  }
+ }
+]

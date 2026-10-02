@@ -1,0 +1,182 @@
+[
+  {
+    "case": "disk_counterrotating",
+    "viscosity": 0.1,
+    "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/flows/battle_v1_disk_counterrotating_nu0.1_p48_n513.npz",
+    "source_sha256": "5787e476d4112926089ac08903c3616005d19f2b702efbd678709d374819ddac",
+    "workspace": {
+      "preconditioner_workspace_bytes": 339263488,
+      "ideal_correction_workspace_bytes": 634880,
+      "preconditioner_components": {
+        "basis": "ideal",
+        "block_width": 2048,
+        "directional_panel_bytes": 0,
+        "ideal_coordinate_panel_bytes": 19922944,
+        "local_physics_panel_bytes": 12582912,
+        "factor_bytes": 105431040,
+        "factorization_workspace_bytes": 201326592
+      },
+      "ideal_tensor_plan": null,
+      "block_budget_selection": {
+        "requested": 2048,
+        "selected": 2048,
+        "available_bytes": 1073741824,
+        "changed": false,
+        "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+      }
+    },
+    "selection": {
+      "requested": 2048,
+      "selected": 2048,
+      "available_bytes": 1073741824,
+      "changed": false,
+      "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+    },
+    "status": "budget_exhausted",
+    "audit": {
+      "audit_points": 4096,
+      "momentum_rms": 3.204627148947364e-11,
+      "momentum_max_abs": 1.1559282420137151e-09,
+      "advective_rms": 0.7006139825415675,
+      "viscous_rms": 1.8780622654371708,
+      "pressure_gradient_rms": 1.9089593150600321,
+      "divergence_rms": 3.845684204834698e-11,
+      "divergence_max_abs": 1.7536387897365557e-09,
+      "wall_velocity_rms": 8.67657673257841e-14,
+      "wall_velocity_max_abs": 3.3240077357277187e-13,
+      "net_boundary_mass_flux": 3.213563194970266e-13,
+      "maximum_wall_normal_speed": 4.11448652926083e-13,
+      "maximum_cross_section_flux": 5.807075604885234e-13,
+      "cross_section_fluxes": [
+        -1.8022492813450988e-13,
+        -1.4111578388025653e-13,
+        9.60195871381117e-14,
+        -2.0275354474779544e-13,
+        -9.66632915204435e-14,
+        -4.066284391450112e-13,
+        -3.071601268689675e-13,
+        -5.807075604885234e-13,
+        6.788042079385742e-14,
+        2.7215817761331446e-13
+      ],
+      "velocity_rms": 0.22250189884344748,
+      "max_sampled_speed": 1.6428550473391796,
+      "pressure_rms": 0.3554097312622539,
+      "pressure_gauge": -3.469446951953614e-15,
+      "export_stable_max_abs": 3.114175584073564e-14,
+      "neural_vs_ideal_coordinate_jet_rms": {
+        "(0, 0)": 8.815510716151224e-15,
+        "(1, 0)": 1.0073903298557783e-14,
+        "(0, 1)": 9.942061081629259e-15,
+        "(2, 0)": 2.748103939235252e-13,
+        "(0, 2)": 2.589860372312788e-13
+      },
+      "ideal_coordinate_momentum_rms": 3.2046418700011166e-11,
+      "neural_vs_ideal_momentum_rms": 4.113705781648852e-14,
+      "coordinate_diagnostic_note": "Same learned coordinates evaluated by actual MLP versus ideal analytical coordinate basis; not truth error.",
+      "left_right_asymmetry_relative_to_lid": 0.3829867601631968,
+      "symmetry_note": "Descriptive only: the finite-Re driven flow need not be reflection-symmetric.",
+      "ordinary_export": "Linear/Tanh/Linear, float64, ordinary Torch automatic differentiation",
+      "truth_error_available": false,
+      "requested_tolerance": 1e-14,
+      "richer_resolution_comparison": {
+        "previous_degree": 48,
+        "degree": 64,
+        "strictly_richer": true,
+        "velocity_relative_l2": 2.559552960022731e-08,
+        "pressure_relative_l2": 1.8010465317388686e-07
+      },
+      "sampled_residual_reaches_requested_tolerance": false,
+      "continuum_accuracy_certified": false
+    },
+    "solve_seconds": 879.1151933325455,
+    "source": "native previous physical solve"
+  },
+  {
+    "case": "disk_counterrotating",
+    "viscosity": 0.03,
+    "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/flows_recurrence/recurrence_disk_counterrotating_nu0.1_p64_n513.npz",
+    "source_sha256": "0ad0fc87ce73904f7733124d7974eb260100b405dec13f7de7a4cd19711cc631",
+    "workspace": {
+      "preconditioner_workspace_bytes": 339263488,
+      "ideal_correction_workspace_bytes": 634880,
+      "preconditioner_components": {
+        "basis": "ideal",
+        "block_width": 2048,
+        "directional_panel_bytes": 0,
+        "ideal_coordinate_panel_bytes": 19922944,
+        "local_physics_panel_bytes": 12582912,
+        "factor_bytes": 105431040,
+        "factorization_workspace_bytes": 201326592
+      },
+      "ideal_tensor_plan": null,
+      "block_budget_selection": {
+        "requested": 2048,
+        "selected": 2048,
+        "available_bytes": 1073741824,
+        "changed": false,
+        "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+      }
+    },
+    "selection": {
+      "requested": 2048,
+      "selected": 2048,
+      "available_bytes": 1073741824,
+      "changed": false,
+      "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+    },
+    "status": "budget_exhausted",
+    "audit": {
+      "audit_points": 4096,
+      "momentum_rms": 0.007784055869638343,
+      "momentum_max_abs": 0.5064459622968833,
+      "advective_rms": 0.6992281718152976,
+      "viscous_rms": 0.7049056935570029,
+      "pressure_gradient_rms": 0.7963855519125689,
+      "divergence_rms": 0.008367543534011913,
+      "divergence_max_abs": 0.34135114116195586,
+      "wall_velocity_rms": 3.1765799739121537e-05,
+      "wall_velocity_max_abs": 0.00018115092134296518,
+      "net_boundary_mass_flux": 6.527182681998999e-05,
+      "maximum_wall_normal_speed": 0.00022504220432695288,
+      "maximum_cross_section_flux": 0.00010126934323788887,
+      "cross_section_fluxes": [
+        -6.210514328805228e-05,
+        -8.461272615144748e-05,
+        6.427702720420858e-05,
+        0.00010126934323788887,
+        3.592253227180527e-05,
+        3.4857416228838026e-05,
+        2.0884100258413874e-05,
+        -3.658986734792688e-05,
+        6.154813631803005e-05,
+        2.7463291328352885e-06
+      ],
+      "velocity_rms": 0.22657474350621234,
+      "max_sampled_speed": 1.6420080259037055,
+      "pressure_rms": 0.1352243332940208,
+      "pressure_gauge": -1.6158446669578552e-07,
+      "export_stable_max_abs": 6.19479178549584e-07,
+      "neural_vs_ideal_coordinate_jet_rms": {
+        "(0, 0)": 1.616601704688416e-07,
+        "(1, 0)": 2.0581875448020845e-07,
+        "(0, 1)": 2.041566442171744e-07,
+        "(2, 0)": 1.5918486370973714e-05,
+        "(0, 2)": 1.5716275719337383e-05
+      },
+      "ideal_coordinate_momentum_rms": 0.00778406118884957,
+      "neural_vs_ideal_momentum_rms": 1.862993441104762e-07,
+      "coordinate_diagnostic_note": "Same learned coordinates evaluated by actual MLP versus ideal analytical coordinate basis; not truth error.",
+      "left_right_asymmetry_relative_to_lid": 0.39113096435302264,
+      "symmetry_note": "Descriptive only: the finite-Re driven flow need not be reflection-symmetric.",
+      "ordinary_export": "Linear/Tanh/Linear, float64, ordinary Torch automatic differentiation",
+      "truth_error_available": false,
+      "requested_tolerance": 1e-14,
+      "richer_resolution_comparison": null,
+      "sampled_residual_reaches_requested_tolerance": false,
+      "continuum_accuracy_certified": false
+    },
+    "solve_seconds": 609.6340226670727,
+    "source": "native previous physical solve"
+  }
+]

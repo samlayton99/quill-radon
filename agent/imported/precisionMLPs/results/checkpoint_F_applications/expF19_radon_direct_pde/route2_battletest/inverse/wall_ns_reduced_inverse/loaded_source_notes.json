@@ -1,0 +1,4 @@
+{
+  "logging_note": "The frozen loaded solver labels norm(residual)/sqrt(32) as normalized_sensor_rms in outer history. Actual normalized sensor RMS is sqrt(2*sensor_objective). This reporting-only extra normalization was fixed for future solver processes; objective, derivatives, acceptance, gradients and stopping are unchanged. Preserve raw history and use the objective to reconstruct the correct RMS.",
+  "memory_note": "The frozen baseline evaluates its finer 31,863-neuron reference on all2,049 audit points in one forward after fitting, allocating about522 MB per full activation array. Recorded whole-process RSS includes this avoidable reference-audit workspace. Subsequent script versions batch reference/field audits in64-row panels and log pre-audit peak separately. The frozen solver, source policy and results are unchanged."
+}

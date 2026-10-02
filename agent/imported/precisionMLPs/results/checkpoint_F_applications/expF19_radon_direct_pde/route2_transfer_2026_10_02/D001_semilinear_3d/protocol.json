@@ -1,0 +1,104 @@
+{
+  "run_id": "D001_semilinear_3d",
+  "dimension": 3,
+  "equation": "-Delta u + u^3 = g",
+  "domain": [
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "B": [
+    [
+      0.0207015115293407,
+      -0.002080734182735712,
+      -0.004949962483002227
+    ],
+    [
+      -0.002080734182735712,
+      0.02273178189568194,
+      0.00480085143325183
+    ],
+    [
+      -0.004949962483002227,
+      0.00480085143325183,
+      0.02944434869057662
+    ]
+  ],
+  "B_rule": "diag(linspace(.018,.034,d)) + .005*cos(i*j), i,j=1,...,d",
+  "B_eigenvalues": [
+    0.018466330657381298,
+    0.020323980862908878,
+    0.034087330595309065
+  ],
+  "B_rank": 3,
+  "full_dense_coupling": true,
+  "target_audit": "exp(x^T B x)",
+  "options": {
+    "degrees": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "centers": 257,
+    "lam": 0.2,
+    "coordinates": "box",
+    "angular_rule": "tensor",
+    "tolerance": 1e-13,
+    "oversampling": 6,
+    "batch_size": 64,
+    "check_points": 257,
+    "export_check_points": 257,
+    "max_iterations": 8,
+    "max_seconds": 600.0,
+    "maximum_working_array_mb": 1024,
+    "maximum_neurons": 2000000,
+    "solver_options": {
+      "lsmr_max_iterations": 4000,
+      "inexact_newton": false,
+      "refine_on_ideal_stall": true,
+      "damping": 1e-06,
+      "preconditioner": "block",
+      "preconditioner_basis": "ideal",
+      "linearization_basis": "ideal",
+      "preconditioner_refresh": 1,
+      "preconditioner_field_parity": "auto",
+      "preconditioner_block_size": 1024,
+      "linear_refinement_steps": 0
+    }
+  },
+  "halo_rule": "ceil(sqrt(N)) per side = 17 for N=257",
+  "normalization": "fixed zero-jet PDE differential sensitivities and domain length scales; independent raw audit",
+  "source_policy": "PDE forcing and Dirichlet values only; zero cold start then native continuation; no interior labels or reference coefficients",
+  "interpretation": "Smooth full-rank nonlinear dimension control; not a hard real-world high-dimensional PDE claim",
+  "resource_scope": "Single thread; 600s soft solve budget; 1024MiB named arrays, not process RSS; 2million neurons; shared host wall time",
+  "heldout": {
+    "values": 512,
+    "derivatives": 97,
+    "boundary": 257,
+    "corners": 8,
+    "seed": 573927
+  },
+  "source_hashes": {
+    "experiments/expF19_radon_direct_pde/route2_transfer_highdim.py": "4046394caf089784a657bc89c8127fc0d1261d1310ec4fb893f8b5a992fe0ee5",
+    "experiments/expF19_radon_direct_pde/solver/route2.py": "904a862261491cc6f156e072aec86913a3c8e9d3121da453ddb6e2f01946ba32",
+    "experiments/expF19_radon_direct_pde/solver/general_residual.py": "71a27edfa747a92e1d0b7651e76a5791330b8800bfa80d9b43209677a9a9bc68",
+    "experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603",
+    "experiments/expF19_radon_direct_pde/solver/residual_scaling.py": "b72ad6e0908b096f2a0695caecd230945772ce3fdad7ad64fa3a70f77154e298",
+    "experiments/expF19_radon_direct_pde/solver/general_domains.py": "004321d8d6c9a08fd8e2532b9f274dfc9980342ddb95346efcabe859fe17d213",
+    "experiments/expF19_radon_direct_pde/route2_box_profiles.py": "b4ea82fe0992668395c34e2a004b3a7b0c2f28ed584b3e3147eeb7c2ad69ecf3",
+    "experiments/expF19_radon_direct_pde/route2_box_tensor.py": "128854b2b57499791f27f6da2a3f720dca959c902bb22ce4c4b4fea93a2950ad",
+    "experiments/expF19_radon_direct_pde/route2_directional_operator.py": "952187ace614a8b3fd0c7f86f8f0e3f168a8c1b8a357493d8fc490deeb9d53e2",
+    "experiments/expF19_radon_direct_pde/quill_boundary.py": "5c1594c8dc25812d7f1e4f343f4971b82cca05a1e79fee5a1ebc5030c1ac60b0"
+  }
+}

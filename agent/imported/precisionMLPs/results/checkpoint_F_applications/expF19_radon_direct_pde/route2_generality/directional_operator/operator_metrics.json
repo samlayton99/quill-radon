@@ -1,0 +1,173 @@
+{
+  "scope": "operator correctness, cost and storage only; no PDE solve",
+  "seed": 919,
+  "precision": "float64",
+  "threads": 1,
+  "derivatives": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "asymptotic": {
+    "L": "N+2*ceil(sqrt(N)); N counts interior centers",
+    "direct_parameter_count": "1+M*p",
+    "neurons": "M*L",
+    "one_jet_forward_or_adjoint": "O(M*L*p + Q*M*(L+d))",
+    "streamed_storage_beyond_inputs_outputs": "O(L*p + M*d + block_size*L)",
+    "outputs_for_J_jets": "O(J*Q)",
+    "dense_coordinate_cache": "O(J*Q*P)",
+    "removed_full_coordinate_map": "O(M*(p+1)*P)",
+    "caveat": "Constant profiles share one bias; higher-degree angular redundancies remain. No conditioning, convergence or dimension-free approximation guarantee is established."
+  },
+  "memory_note": "tracemalloc measures Python/NumPy-tracked peak allocation, not whole-process RSS; persistent_ndarray_bytes counts stored array payloads; inputs/outputs reported separately by formulas.",
+  "direction_scaling": [
+    {
+      "directions": 8,
+      "profile_degree": 8,
+      "interior_centers": 129,
+      "halo_per_side": 12,
+      "centers_including_halo": 153,
+      "neurons": 1224,
+      "direct_unknowns": 65,
+      "points": 2048,
+      "setup_seconds": 0.001287291757762432,
+      "forward": {
+        "median_seconds": 0.05586550012230873,
+        "minimum_seconds": 0.05555274989455938,
+        "repetitions": 5
+      },
+      "adjoint": {
+        "median_seconds": 0.05697270901873708,
+        "minimum_seconds": 0.05579845840111375,
+        "repetitions": 5
+      },
+      "persistent_ndarray_bytes": 36496,
+      "forward_peak_traced_allocation_bytes": 1937136,
+      "adjoint_peak_traced_allocation_bytes": 1888192,
+      "single_streamed_panel_bytes": 156672
+    },
+    {
+      "directions": 16,
+      "profile_degree": 8,
+      "interior_centers": 129,
+      "halo_per_side": 12,
+      "centers_including_halo": 153,
+      "neurons": 2448,
+      "direct_unknowns": 129,
+      "points": 2048,
+      "setup_seconds": 0.0012173331342637539,
+      "forward": {
+        "median_seconds": 0.11086404230445623,
+        "minimum_seconds": 0.11074599996209145,
+        "repetitions": 5
+      },
+      "adjoint": {
+        "median_seconds": 0.11221949988976121,
+        "minimum_seconds": 0.11193029209971428,
+        "repetitions": 5
+      },
+      "persistent_ndarray_bytes": 36752,
+      "forward_peak_traced_allocation_bytes": 1937136,
+      "adjoint_peak_traced_allocation_bytes": 1888704,
+      "single_streamed_panel_bytes": 156672
+    },
+    {
+      "directions": 32,
+      "profile_degree": 8,
+      "interior_centers": 129,
+      "halo_per_side": 12,
+      "centers_including_halo": 153,
+      "neurons": 4896,
+      "direct_unknowns": 257,
+      "points": 2048,
+      "setup_seconds": 0.001145457848906517,
+      "forward": {
+        "median_seconds": 0.2251119576394558,
+        "minimum_seconds": 0.2229871666058898,
+        "repetitions": 5
+      },
+      "adjoint": {
+        "median_seconds": 0.22421745816245675,
+        "minimum_seconds": 0.22259487491101027,
+        "repetitions": 5
+      },
+      "persistent_ndarray_bytes": 37264,
+      "forward_peak_traced_allocation_bytes": 1937136,
+      "adjoint_peak_traced_allocation_bytes": 1889728,
+      "single_streamed_panel_bytes": 156672
+    },
+    {
+      "directions": 64,
+      "profile_degree": 8,
+      "interior_centers": 129,
+      "halo_per_side": 12,
+      "centers_including_halo": 153,
+      "neurons": 9792,
+      "direct_unknowns": 513,
+      "points": 2048,
+      "setup_seconds": 0.00121020944789052,
+      "forward": {
+        "median_seconds": 0.45194479217752814,
+        "minimum_seconds": 0.44657337479293346,
+        "repetitions": 5
+      },
+      "adjoint": {
+        "median_seconds": 0.4522275412455201,
+        "minimum_seconds": 0.4465761249884963,
+        "repetitions": 5
+      },
+      "persistent_ndarray_bytes": 38288,
+      "forward_peak_traced_allocation_bytes": 1937136,
+      "adjoint_peak_traced_allocation_bytes": 1891776,
+      "single_streamed_panel_bytes": 156672
+    }
+  ],
+  "dense_cache_comparison": {
+    "directions": 9,
+    "degree": 8,
+    "neurons": 1377,
+    "direct_unknowns": 73,
+    "dense_coordinate_unknowns": 45,
+    "dense_feature_setup_seconds": 0.003062250092625618,
+    "dense_three_jet_cache_setup_seconds": 0.06251416727900505,
+    "dense_three_jet_cache_bytes": 2211840,
+    "direct_persistent_ndarray_bytes": 36528,
+    "direct_peak_traced_allocation_bytes": 1937184,
+    "dense_cached_forward": {
+      "median_seconds": 1.712515950202942e-05,
+      "minimum_seconds": 1.6499776393175125e-05,
+      "repetitions": 5
+    },
+    "dense_cached_adjoint": {
+      "median_seconds": 1.4499761164188385e-05,
+      "minimum_seconds": 1.4332588762044907e-05,
+      "repetitions": 5
+    },
+    "direct_forward": {
+      "median_seconds": 0.06458033295348287,
+      "minimum_seconds": 0.06327345781028271,
+      "repetitions": 5
+    },
+    "direct_adjoint": {
+      "median_seconds": 0.06379920896142721,
+      "minimum_seconds": 0.0636670421808958,
+      "repetitions": 5
+    },
+    "same_function_maximum_absolute_jet_discrepancy": {
+      "(0, 0)": 4.718447854656915e-16,
+      "(1, 0)": 1.7763568394002505e-15,
+      "(2, 0)": 2.4868995751603507e-14
+    },
+    "pulled_back_adjoint_maximum_absolute_discrepancy": 5.002220859751105e-12,
+    "interpretation": "Same actual tanh geometry and corresponding coefficients; unequal parameter spaces. The dense cache is reused and is faster per matvec; streaming trades computation for memory. There is no nonlinear solve or matched solver performance comparison."
+  }
+}

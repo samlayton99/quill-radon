@@ -1,0 +1,39 @@
+{
+  "scope": "Degree6 linearization at truncated PDE-solved coefficients; matrices used only for diagnosis, not solving",
+  "rows": [
+    {
+      "trace_oversampling": 0,
+      "unknowns": 840,
+      "gram_condition": 1657.867593083461,
+      "field_l2_residual_stability": 12.3337957103973,
+      "preconditioners": [
+        {
+          "block_size": 64,
+          "condition": 139.20280337601343
+        },
+        {
+          "block_size": 512,
+          "condition": 134.6741544653304
+        }
+      ],
+      "seconds": 0.8266923748888075
+    },
+    {
+      "trace_oversampling": 2,
+      "unknowns": 840,
+      "gram_condition": 1347.611249800884,
+      "field_l2_residual_stability": 9.79311296518315,
+      "preconditioners": [
+        {
+          "block_size": 64,
+          "condition": 107.39520571577701
+        },
+        {
+          "block_size": 512,
+          "condition": 103.86407294333765
+        }
+      ],
+      "seconds": 0.8252606666646898
+    }
+  ]
+}

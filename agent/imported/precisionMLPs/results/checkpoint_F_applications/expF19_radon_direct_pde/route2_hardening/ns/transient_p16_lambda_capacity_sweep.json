@@ -1,0 +1,143 @@
+{
+  "provenance": "Bounded known-target analytic capacity sweep; NOT a PDE solution and never a native warm start. Same audit points as preceding capacity sweep.",
+  "rows": [
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 129,
+      "lam": 0.15,
+      "neurons": 751689,
+      "seconds": 4.6415983331389725,
+      "ordinary_velocity_relative_l2": 2.6612189153365502e-11,
+      "ordinary_pressure_relative_l2": 5.670073943206099e-12,
+      "ordinary_momentum_rms": 1.1238146121080649e-11,
+      "ordinary_momentum_max_abs": 3.572390994133201e-11,
+      "ordinary_divergence_rms": 6.830243961592948e-13,
+      "ordinary_parameter_bytes": 54121640,
+      "ordinary_readout_l1_per_field": [
+        3.8268814086468605,
+        3.766523323150388,
+        3.7838268294198896,
+        1.2449124470463357
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    },
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 751689,
+      "seconds": 4.66378254070878,
+      "ordinary_velocity_relative_l2": 2.644031806420873e-14,
+      "ordinary_pressure_relative_l2": 4.64905982385846e-15,
+      "ordinary_momentum_rms": 1.3912709617370003e-14,
+      "ordinary_momentum_max_abs": 3.968353423644544e-14,
+      "ordinary_divergence_rms": 5.815440456430302e-16,
+      "ordinary_parameter_bytes": 54121640,
+      "ordinary_readout_l1_per_field": [
+        1.4303237474239414,
+        1.4141353397728549,
+        1.4197507704239376,
+        0.49697891016853435
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    },
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 129,
+      "lam": 0.25,
+      "neurons": 751689,
+      "seconds": 4.542175166774541,
+      "ordinary_velocity_relative_l2": 2.1683435358623853e-15,
+      "ordinary_pressure_relative_l2": 2.5651334537364654e-15,
+      "ordinary_momentum_rms": 3.4310457077979705e-15,
+      "ordinary_momentum_max_abs": 8.507083926190262e-15,
+      "ordinary_divergence_rms": 3.422797072886739e-17,
+      "ordinary_parameter_bytes": 54121640,
+      "ordinary_readout_l1_per_field": [
+        0.9787835477691187,
+        0.9715423638146884,
+        0.974847303706085,
+        0.35599362399277423
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    },
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 193,
+      "lam": 0.15,
+      "neurons": 1085773,
+      "seconds": 6.366543082986027,
+      "ordinary_velocity_relative_l2": 2.103417349977851e-14,
+      "ordinary_pressure_relative_l2": 2.715109490072397e-15,
+      "ordinary_momentum_rms": 1.2578961194301235e-14,
+      "ordinary_momentum_max_abs": 3.550632010629329e-14,
+      "ordinary_divergence_rms": 4.0816372662699887e-16,
+      "ordinary_parameter_bytes": 78175688,
+      "ordinary_readout_l1_per_field": [
+        2.9680193951523286,
+        2.9204103701399227,
+        2.930316180185251,
+        0.9866891910780198
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    },
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 193,
+      "lam": 0.2,
+      "neurons": 1085773,
+      "seconds": 6.30567462509498,
+      "ordinary_velocity_relative_l2": 2.3440424185088187e-15,
+      "ordinary_pressure_relative_l2": 2.4361085106281872e-15,
+      "ordinary_momentum_rms": 3.3809620070135237e-15,
+      "ordinary_momentum_max_abs": 8.180955912706622e-15,
+      "ordinary_divergence_rms": 3.3017196719966945e-17,
+      "ordinary_parameter_bytes": 78175688,
+      "ordinary_readout_l1_per_field": [
+        1.1347036495012834,
+        1.1244751574562666,
+        1.1275269265704821,
+        0.4062861028416178
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    },
+    {
+      "kind": "known_target_capacity_not_pde_solve",
+      "degree": 16,
+      "centers": 193,
+      "lam": 0.25,
+      "neurons": 1085773,
+      "seconds": 6.2386290417052805,
+      "ordinary_velocity_relative_l2": 2.2739246087069407e-15,
+      "ordinary_pressure_relative_l2": 2.0492968715783937e-15,
+      "ordinary_momentum_rms": 3.3736380665382753e-15,
+      "ordinary_momentum_max_abs": 8.243405957841787e-15,
+      "ordinary_divergence_rms": 2.617847960596603e-17,
+      "ordinary_parameter_bytes": 78175688,
+      "ordinary_readout_l1_per_field": [
+        0.8230120987886074,
+        0.8189555402059083,
+        0.8211720048221165,
+        0.30744470586285766
+      ],
+      "value_points": 81,
+      "derivative_points": 33,
+      "corner_points": 16
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "scope": "Preliminary named-array accounting before supplied points and actual fused jet workspace; not whole-process RSS",
+  "base": 462092416,
+  "local_estimate": 18771200,
+  "rows": [
+    {
+      "block_width": 640,
+      "named_mib_before_point_arrays_and_jet_workspace": 580.6800537109375,
+      "workspace": {
+        "preconditioner_workspace_bytes": 127538688,
+        "ideal_correction_workspace_bytes": 484864,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 640,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 3409408,
+          "local_physics_panel_bytes": 5242880,
+          "factor_bytes": 99225600,
+          "factorization_workspace_bytes": 19660800
+        }
+      }
+    },
+    {
+      "block_width": 1024,
+      "named_mib_before_point_arrays_and_jet_workspace": 671.5823974609375,
+      "workspace": {
+        "preconditioner_workspace_bytes": 222856704,
+        "ideal_correction_workspace_bytes": 484864,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1024,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 5375488,
+          "local_physics_panel_bytes": 8388608,
+          "factor_bytes": 158760960,
+          "factorization_workspace_bytes": 50331648
+        }
+      }
+    },
+    {
+      "block_width": 1536,
+      "named_mib_before_point_arrays_and_jet_workspace": 813.7855224609375,
+      "workspace": {
+        "preconditioner_workspace_bytes": 371967488,
+        "ideal_correction_workspace_bytes": 484864,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1536,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 7996928,
+          "local_physics_panel_bytes": 12582912,
+          "factor_bytes": 238141440,
+          "factorization_workspace_bytes": 113246208
+        }
+      }
+    },
+    {
+      "block_width": 1792,
+      "named_mib_before_point_arrays_and_jet_workspace": 893.8870849609375,
+      "workspace": {
+        "preconditioner_workspace_bytes": 455960064,
+        "ideal_correction_workspace_bytes": 484864,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1792,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 9307648,
+          "local_physics_panel_bytes": 14680064,
+          "factor_bytes": 277831680,
+          "factorization_workspace_bytes": 154140672
+        }
+      }
+    },
+    {
+      "block_width": 2048,
+      "named_mib_before_point_arrays_and_jet_workspace": 979.9886474609375,
+      "workspace": {
+        "preconditioner_workspace_bytes": 546244096,
+        "ideal_correction_workspace_bytes": 484864,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 2048,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 10618368,
+          "local_physics_panel_bytes": 16777216,
+          "factor_bytes": 317521920,
+          "factorization_workspace_bytes": 201326592
+        }
+      }
+    }
+  ]
+}

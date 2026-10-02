@@ -1,0 +1,346 @@
+{
+  "scope": "13 common-policy tests plus smooth four-input 3D Navier\u2013Stokes",
+  "error_definition": "Independent empirical relative L2, combined across fields except transient NS shown separately",
+  "timing_scope": "Local observations including construction/continuation; caches and machine activity differ. Not a speed benchmark.",
+  "geometry": "Total-degree Legendre products explicitly represented using QUILL tanh banks; product gates included",
+  "rows": [
+    {
+      "case": "nonlinear_diffusion",
+      "label": "Nonlinear diffusion",
+      "relative_l2": 1.3954889273048597e-10,
+      "polynomial_relative_l2": 1.4001712789271563e-10,
+      "seconds": 0.22243224969133735,
+      "degree": 16,
+      "unknowns": 153,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 1.3954889273048597e-10,
+        "component_relative_l2": [
+          1.3954889273048597e-10
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.6189921988835666e-09,
+          "Dirichlet": 3.2683583868000235e-10
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": ""
+    },
+    {
+      "case": "irregular_variable_diffusion",
+      "label": "Irregular domain + variable diffusion",
+      "relative_l2": 9.125338778039783e-11,
+      "polynomial_relative_l2": 9.100558217671311e-11,
+      "seconds": 0.23890683287754655,
+      "degree": 16,
+      "unknowns": 153,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 9.125338778039783e-11,
+        "component_relative_l2": [
+          9.125338778039783e-11
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.6446284077106634e-10,
+          "Dirichlet": 1.467642433453287e-10
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Implicit perforated ellipse; variable anisotropic diffusion, cubic reaction."
+    },
+    {
+      "case": "biharmonic_plate",
+      "label": "Fourth-order plate equation",
+      "relative_l2": 1.0201274224468872e-13,
+      "polynomial_relative_l2": 9.529674624322079e-14,
+      "seconds": 0.36004737485200167,
+      "degree": 12,
+      "unknowns": 91,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 1.0201274224468872e-13,
+        "component_relative_l2": [
+          1.0201274224468872e-13
+        ],
+        "independent_residual_rms": {
+          "PDE": 2.010867825247779e-11,
+          "clamped_value": 5.1305239431079457e-14,
+          "clamped_normal_derivative": 2.3756519476393148e-14
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Fourth-order equation and clamped constraints."
+    },
+    {
+      "case": "burgers_ivp",
+      "label": "Unforced viscous Burgers IVP",
+      "relative_l2": 1.3787509445864675e-08,
+      "polynomial_relative_l2": 1.3787624297007214e-08,
+      "seconds": 8.470576332882047,
+      "degree": 32,
+      "unknowns": 561,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "validation": {
+        "relative_l2": 1.3787509445864675e-08,
+        "component_relative_l2": [
+          1.3787509445864675e-08
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.271130792715984e-07,
+          "spatial_boundary": 4.1881127956991724e-09,
+          "initial": 8.38193469239678e-09
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Unforced nonlinear IVP; Cole-Hopf expression only validates and supplies IC."
+    },
+    {
+      "case": "wave_ivp",
+      "label": "Wave IVP",
+      "relative_l2": 4.496741299625054e-09,
+      "polynomial_relative_l2": 4.49655115685338e-09,
+      "seconds": 0.5117799169383943,
+      "degree": 20,
+      "unknowns": 231,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "validation": {
+        "relative_l2": 4.496741299625054e-09,
+        "component_relative_l2": [
+          4.496741299625054e-09
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.4793101405087107e-10,
+          "spatial_boundary": 5.276312622775579e-09,
+          "initial": 2.464595745618484e-09,
+          "initial_time_derivative": 3.709291779713113e-09
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Second-order time derivative; no final-time solution labels."
+    },
+    {
+      "case": "steady_navier_stokes",
+      "label": "Steady 2D Navier\u2013Stokes",
+      "relative_l2": 1.703971628504287e-08,
+      "polynomial_relative_l2": 1.703963488741554e-08,
+      "seconds": 1.8299740827642381,
+      "degree": 20,
+      "unknowns": 693,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "validation": {
+        "relative_l2": 1.703971628504287e-08,
+        "component_relative_l2": [
+          3.970089444651625e-09,
+          2.683826440171821e-08,
+          4.8328169638658765e-08
+        ],
+        "independent_residual_rms": {
+          "PDE": 5.798341496871379e-09,
+          "Dirichlet_0": 5.2335768217645635e-09,
+          "Dirichlet_1": 4.1159989981748375e-09,
+          "pressure_gauge": 1.0950248851017472e-12
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Unforced coupled velocity-pressure residual; no Fourier pressure projector or NS-specific solve."
+    },
+    {
+      "case": "three_dimensional_ellipsoid",
+      "label": "3D ellipsoidal domain",
+      "relative_l2": 1.656608789195013e-11,
+      "polynomial_relative_l2": 1.3067837483687774e-11,
+      "seconds": 2.376678208820522,
+      "degree": 12,
+      "unknowns": 455,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 1.656608789195013e-11,
+        "component_relative_l2": [
+          1.656608789195013e-11
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.9554477878097142e-10,
+          "Dirichlet": 8.617209650883398e-12
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": ""
+    },
+    {
+      "case": "inverse_diffusivity",
+      "label": "Inverse diffusivity, 24 observations",
+      "relative_l2": 2.4432476368065613e-09,
+      "polynomial_relative_l2": 2.4432582873020716e-09,
+      "seconds": 0.2238841252401471,
+      "degree": 20,
+      "unknowns": 232,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "validation": {
+        "relative_l2": 2.4432476368065613e-09,
+        "component_relative_l2": [
+          2.4432476368065613e-09
+        ],
+        "independent_residual_rms": {
+          "PDE": 1.2121614296856607e-08,
+          "spatial_boundary": 1.1641341401367772e-09,
+          "initial": 4.627569529628917e-09
+        },
+        "measurement_fit_rms": {
+          "observations": 5.128992428118803e-10
+        },
+        "parameter_relative_error": 1.3411674548713393e-10
+      },
+      "note": "24 noiseless measurements; joint coefficient/physical-parameter solve."
+    },
+    {
+      "case": "quasilinear_gradient_diffusion",
+      "label": "Gradient-dependent diffusion",
+      "relative_l2": 3.091502862393393e-12,
+      "polynomial_relative_l2": 3.093843566580279e-12,
+      "seconds": 0.46274962509050965,
+      "degree": 16,
+      "unknowns": 153,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 3.091502862393393e-12,
+        "component_relative_l2": [
+          3.091502862393393e-12
+        ],
+        "independent_residual_rms": {
+          "PDE": 5.0809066793055923e-11,
+          "Dirichlet": 1.7893917979781708e-12
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Gradient-dependent elliptic operator; default common solver unchanged."
+    },
+    {
+      "case": "mixed_robin",
+      "label": "Mixed Dirichlet / Robin boundaries",
+      "relative_l2": 6.047784625565307e-11,
+      "polynomial_relative_l2": 6.050726002888396e-11,
+      "seconds": 0.08170887501910329,
+      "degree": 12,
+      "unknowns": 91,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 6.047784625565307e-11,
+        "component_relative_l2": [
+          6.047784625565307e-11
+        ],
+        "independent_residual_rms": {
+          "PDE": 2.1523354598750966e-10,
+          "left_dirichlet": 2.645023505211515e-10,
+          "robin": 1.1534601576704316e-10
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": ""
+    },
+    {
+      "case": "coupled_reaction_diffusion",
+      "label": "Coupled reaction\u2013diffusion",
+      "relative_l2": 3.337746512564585e-10,
+      "polynomial_relative_l2": 3.346811779401931e-10,
+      "seconds": 0.27470862539485097,
+      "degree": 16,
+      "unknowns": 306,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 3.337746512564585e-10,
+        "component_relative_l2": [
+          4.824736950918928e-10,
+          1.0695798810443926e-10
+        ],
+        "independent_residual_rms": {
+          "PDE": 5.359811678389173e-09,
+          "Dirichlet": 7.323605106936801e-10
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": ""
+    },
+    {
+      "case": "convection_boundary_layer",
+      "label": "Thin convection\u2013diffusion layer",
+      "relative_l2": 1.1964354275269857e-08,
+      "polynomial_relative_l2": 1.1964641638266416e-08,
+      "seconds": 0.7728721657767892,
+      "degree": 44,
+      "unknowns": 45,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "validation": {
+        "relative_l2": 1.1964354275269857e-08,
+        "component_relative_l2": [
+          1.1964354275269857e-08
+        ],
+        "independent_residual_rms": {
+          "PDE": 4.555189163134234e-07,
+          "Dirichlet": 4.038650851338291e-15
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Unforced convection-diffusion; epsilon=.01, no residual reweighting."
+    },
+    {
+      "case": "high_contrast_diffusion",
+      "label": "Diffusion contrast \u2248 1,000",
+      "relative_l2": 5.766027226923905e-08,
+      "polynomial_relative_l2": 6.542637507476028e-08,
+      "seconds": 2.299195082858205,
+      "degree": 16,
+      "unknowns": 153,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": true,
+      "validation": {
+        "relative_l2": 5.766027226923905e-08,
+        "component_relative_l2": [
+          5.766027226923905e-08
+        ],
+        "independent_residual_rms": {
+          "PDE": 5.303771991012355e-08,
+          "Dirichlet": 7.504952577984239e-08
+        },
+        "measurement_fit_rms": {},
+        "parameter_relative_error": null
+      },
+      "note": "Diffusion varies smoothly from about1 to1000; defaults unchanged."
+    },
+    {
+      "case": "transient_navier_stokes_3d",
+      "label": "Transient 3D Navier\u2013Stokes (4 inputs)",
+      "relative_l2": 3.840969117896497e-08,
+      "pressure_relative_l2": 3.2094102501575323e-06,
+      "final_pressure_relative_l2": 2.769181940882559e-05,
+      "seconds": 137.38573983311653,
+      "degree": 10,
+      "unknowns": 4004,
+      "status": "sampled_checks_passed",
+      "manufactured_forcing": false,
+      "note": "Smooth low-frequency solution on a compact cube; exact Dirichlet traces supplied as problem data. This does not test turbulence, large domains, or high Reynolds number."
+    }
+  ]
+}

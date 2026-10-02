@@ -1,0 +1,284 @@
+{
+  "description": "Opt-in ideal disk correction implementation benchmark; no PDE solve or accuracy claim.",
+  "ordinary_mlp_and_actual_residual": "Unchanged inherited implementation; bitwise regression-tested.",
+  "rows": 128,
+  "fields": 3,
+  "repeats": 11,
+  "selected_column_panel": 64,
+  "derivatives": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "seed": 7821,
+  "numpy": "2.5.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "asymptotics": "Prepared radial/power construction O(rows*p^2); old separate Jacobi evaluations O(rows*p^3). Both full jet sweeps have O(rows*p^2) output arithmetic.",
+  "memory_scope": "One prepared batch plus <=64-column scratch; 16 MiB internal workspace cap, caller output panels separate. No full-dataset feature cache.",
+  "results": [
+    {
+      "degree": 16,
+      "coordinates": 153,
+      "seconds": {
+        "scipy_forward": 0.0019054170697927475,
+        "scipy_adjoint": 0.001905625220388174,
+        "recurrence_forward": 0.0013410421088337898,
+        "recurrence_adjoint": 0.00133966701105237
+      },
+      "forward_speedup": 1.4208480533469265,
+      "adjoint_speedup": 1.4224618540776173,
+      "prepared_retained_bytes": 290128,
+      "workspace_plan": {
+        "enabled": true,
+        "rows": 128,
+        "highest_derivative": 2,
+        "maximum_rows": 1010,
+        "workspace_limit_bytes": 16777216,
+        "construction_workspace_bound": 2129352,
+        "retained_workspace_bound": 294344,
+        "selected_internal_column_cap": 64,
+        "output_panels_included": false,
+        "note": "One row batch only; selected output panels belong to caller and are counted separately."
+      },
+      "measured_full_forward_tracemalloc_peak_bytes": 2350764,
+      "jet_agreement": {
+        "(0, 0)": {
+          "relative_l2": 3.2372346424341315e-16,
+          "maximum_absolute_difference": 1.021405182655144e-14,
+          "maximum_difference_over_reference_max": 1.7516993126568417e-15
+        },
+        "(1, 0)": {
+          "relative_l2": 2.2629118248930123e-16,
+          "maximum_absolute_difference": 4.547473508864641e-13,
+          "maximum_difference_over_reference_max": 5.545179496838797e-16
+        },
+        "(0, 1)": {
+          "relative_l2": 2.0377453831604885e-16,
+          "maximum_absolute_difference": 3.410605131648481e-13,
+          "maximum_difference_over_reference_max": 4.1762417287065824e-16
+        },
+        "(2, 0)": {
+          "relative_l2": 2.200433627223246e-16,
+          "maximum_absolute_difference": 2.9103830456733704e-11,
+          "maximum_difference_over_reference_max": 5.07674138168763e-16
+        },
+        "(1, 1)": {
+          "relative_l2": 1.9411998487080444e-16,
+          "maximum_absolute_difference": 2.1827872842550278e-11,
+          "maximum_difference_over_reference_max": 7.637583695431744e-16
+        },
+        "(0, 2)": {
+          "relative_l2": 1.5181283905931522e-16,
+          "maximum_absolute_difference": 1.4551915228366852e-11,
+          "maximum_difference_over_reference_max": 2.550675125355529e-16
+        }
+      },
+      "forward_relative_l2": 2.9420231539307377e-16,
+      "adjoint_relative_l2": 3.034762281408782e-16,
+      "adjoint_identity_relative_difference": 1.593294490287807e-15,
+      "complete_row_forward_relative_l2": 3.4078404841526763e-16,
+      "complete_row_adjoint_relative_l2": 3.034762281408782e-16,
+      "complete_row_seconds": {
+        "forward": 0.0011016246862709522,
+        "adjoint": 0.0011232499964535236
+      },
+      "complete_row_workspace_plan": {
+        "enabled": true,
+        "rows": 128,
+        "requested_rows": 128,
+        "workspace_bytes": 7545464,
+        "workspace_limit_bytes": 16777216,
+        "coefficient_state_bytes": 3672,
+        "implementation": "bounded_full_disk_jet_row_panels",
+        "complete_dataset_feature_cache": false,
+        "note": "All complete row-batch jets, recurrence tables, temporaries, and coefficient state counted."
+      },
+      "complete_row_forward_speedup": 1.7296426755310537,
+      "complete_row_adjoint_speedup": 1.69652813390151,
+      "complete_row_tracemalloc_peak_bytes": 4237201
+    },
+    {
+      "degree": 32,
+      "coordinates": 561,
+      "seconds": {
+        "scipy_forward": 0.00880733272060752,
+        "scipy_adjoint": 0.007617082912474871,
+        "recurrence_forward": 0.003951459191739559,
+        "recurrence_adjoint": 0.0039312089793384075
+      },
+      "forward_speedup": 2.2288811027124003,
+      "adjoint_speedup": 1.9375929777604364,
+      "prepared_retained_bytes": 965264,
+      "workspace_plan": {
+        "enabled": true,
+        "rows": 128,
+        "highest_derivative": 2,
+        "maximum_rows": 767,
+        "workspace_limit_bytes": 16777216,
+        "construction_workspace_bound": 2808456,
+        "retained_workspace_bound": 973448,
+        "selected_internal_column_cap": 64,
+        "output_panels_included": false,
+        "note": "One row batch only; selected output panels belong to caller and are counted separately."
+      },
+      "measured_full_forward_tracemalloc_peak_bytes": 3025451,
+      "jet_agreement": {
+        "(0, 0)": {
+          "relative_l2": 7.0888920014122495e-16,
+          "maximum_absolute_difference": 3.4638958368304884e-14,
+          "maximum_difference_over_reference_max": 4.263770465595604e-15
+        },
+        "(1, 0)": {
+          "relative_l2": 5.509021745851121e-16,
+          "maximum_absolute_difference": 1.000444171950221e-11,
+          "maximum_difference_over_reference_max": 2.2941937185201763e-15
+        },
+        "(0, 1)": {
+          "relative_l2": 4.0486935300006112e-16,
+          "maximum_absolute_difference": 6.252776074688882e-12,
+          "maximum_difference_over_reference_max": 1.439906296120147e-15
+        },
+        "(2, 0)": {
+          "relative_l2": 5.084047888979904e-16,
+          "maximum_absolute_difference": 2.3283064365386963e-09,
+          "maximum_difference_over_reference_max": 1.981101434385274e-15
+        },
+        "(1, 1)": {
+          "relative_l2": 4.3976288087010854e-16,
+          "maximum_absolute_difference": 9.313225746154785e-10,
+          "maximum_difference_over_reference_max": 1.5727100024751289e-15
+        },
+        "(0, 2)": {
+          "relative_l2": 2.8431023972561336e-16,
+          "maximum_absolute_difference": 6.984919309616089e-10,
+          "maximum_difference_over_reference_max": 5.973068872711525e-16
+        }
+      },
+      "forward_relative_l2": 5.138185279045245e-16,
+      "adjoint_relative_l2": 4.913173500726598e-16,
+      "adjoint_identity_relative_difference": 9.581878854201273e-16,
+      "complete_row_forward_relative_l2": 6.514502975382184e-16,
+      "complete_row_adjoint_relative_l2": 4.913173500726598e-16,
+      "complete_row_seconds": {
+        "forward": 0.003665708936750889,
+        "adjoint": 0.005360000301152468
+      },
+      "complete_row_workspace_plan": {
+        "enabled": true,
+        "rows": 128,
+        "requested_rows": 128,
+        "workspace_bytes": 14969784,
+        "workspace_limit_bytes": 16777216,
+        "coefficient_state_bytes": 13464,
+        "implementation": "bounded_full_disk_jet_row_panels",
+        "complete_dataset_feature_cache": false,
+        "note": "All complete row-batch jets, recurrence tables, temporaries, and coefficient state counted."
+      },
+      "complete_row_forward_speedup": 2.4026273969296437,
+      "complete_row_adjoint_speedup": 1.4210974784529586,
+      "complete_row_tracemalloc_peak_bytes": 12314414
+    },
+    {
+      "degree": 64,
+      "coordinates": 2145,
+      "seconds": {
+        "scipy_forward": 0.049711375031620264,
+        "scipy_adjoint": 0.04978241678327322,
+        "recurrence_forward": 0.018962999805808067,
+        "recurrence_adjoint": 0.01940200012177229
+      },
+      "forward_speedup": 2.6214931994248323,
+      "adjoint_speedup": 2.5658394222670386,
+      "prepared_retained_bytes": 3501328,
+      "workspace_plan": {
+        "enabled": true,
+        "rows": 128,
+        "highest_derivative": 2,
+        "maximum_rows": 402,
+        "workspace_limit_bytes": 16777216,
+        "construction_workspace_bound": 5352456,
+        "retained_workspace_bound": 3517448,
+        "selected_internal_column_cap": 64,
+        "output_panels_included": false,
+        "note": "One row batch only; selected output panels belong to caller and are counted separately."
+      },
+      "measured_full_forward_tracemalloc_peak_bytes": 5561308,
+      "jet_agreement": {
+        "(0, 0)": {
+          "relative_l2": 1.751423398369087e-15,
+          "maximum_absolute_difference": 1.8829382497642655e-13,
+          "maximum_difference_over_reference_max": 1.6514497458333028e-14
+        },
+        "(1, 0)": {
+          "relative_l2": 1.484694716222024e-15,
+          "maximum_absolute_difference": 2.6557245291769505e-10,
+          "maximum_difference_over_reference_max": 1.1146709291532169e-14
+        },
+        "(0, 1)": {
+          "relative_l2": 9.320096947475893e-16,
+          "maximum_absolute_difference": 1.6370904631912708e-10,
+          "maximum_difference_over_reference_max": 6.900244997765019e-15
+        },
+        "(2, 0)": {
+          "relative_l2": 1.2866664076725934e-15,
+          "maximum_absolute_difference": 1.30385160446167e-07,
+          "maximum_difference_over_reference_max": 5.2021449714156334e-15
+        },
+        "(1, 1)": {
+          "relative_l2": 1.0517820489898275e-15,
+          "maximum_absolute_difference": 5.960464477539063e-08,
+          "maximum_difference_over_reference_max": 4.706380389796816e-15
+        },
+        "(0, 2)": {
+          "relative_l2": 6.057243443854997e-16,
+          "maximum_absolute_difference": 4.377216100692749e-08,
+          "maximum_difference_over_reference_max": 1.7552544550079825e-15
+        }
+      },
+      "forward_relative_l2": 1.0715456247035765e-15,
+      "adjoint_relative_l2": 9.44264923986706e-16,
+      "adjoint_identity_relative_difference": 3.573742378971518e-16,
+      "complete_row_forward_relative_l2": 1.3577404167327022e-15,
+      "complete_row_adjoint_relative_l2": 1.0200644006536048e-15,
+      "complete_row_seconds": {
+        "forward": 0.019872874952852726,
+        "adjoint": 0.01982695795595646
+      },
+      "complete_row_workspace_plan": {
+        "enabled": true,
+        "rows": 78,
+        "requested_rows": 128,
+        "workspace_bytes": 16702712,
+        "workspace_limit_bytes": 16777216,
+        "coefficient_state_bytes": 51480,
+        "implementation": "bounded_full_disk_jet_row_panels",
+        "complete_dataset_feature_cache": false,
+        "note": "All complete row-batch jets, recurrence tables, temporaries, and coefficient state counted."
+      },
+      "complete_row_forward_speedup": 2.501468718016779,
+      "complete_row_adjoint_speedup": 2.5108449260779047,
+      "complete_row_tracemalloc_peak_bytes": 15174364
+    }
+  ]
+}

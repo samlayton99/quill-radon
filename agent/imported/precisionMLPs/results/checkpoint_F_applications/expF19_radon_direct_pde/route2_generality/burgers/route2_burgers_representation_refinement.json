@@ -1,0 +1,27 @@
+{
+  "scope": "Re-encoding of already PDE-solved coordinates only; not a new PDE solve",
+  "coefficients_source": "route2_burgers_global_p36_n257_l0.2_s1",
+  "reference_use": "heldout validation only",
+  "rows": [
+    {
+      "N": 257,
+      "relative_l2": 1.6764442577935214e-11,
+      "raw_torch": {
+        "relative_l2": 2.0218161522574177e-11,
+        "maximum_absolute": 7.945560875910473e-12,
+        "absolute_pde_rms": 8.234180879268751e-11,
+        "absolute_pde_maximum": 7.06154247272564e-10
+      }
+    },
+    {
+      "N": 513,
+      "relative_l2": 1.5089491678034203e-11,
+      "raw_torch": {
+        "relative_l2": 1.4808554676773745e-11,
+        "maximum_absolute": 7.424033610092806e-12,
+        "absolute_pde_rms": 8.231109657618374e-11,
+        "absolute_pde_maximum": 7.060627416934084e-10
+      }
+    }
+  ]
+}

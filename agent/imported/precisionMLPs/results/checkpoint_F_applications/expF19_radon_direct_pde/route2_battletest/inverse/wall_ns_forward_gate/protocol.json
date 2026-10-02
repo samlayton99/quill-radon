@@ -1,0 +1,30 @@
+{
+  "boundary": "speed(theta)=1+.25*cos(2theta)+.15*sin(3theta); velocity=speed*(-y,x)",
+  "gate": "Only sampled_residual_checks_passed allows future inverse scoring; all other outcomes remain unresolved, not parameter estimates.",
+  "initialization": "zero readouts followed only by native degree continuation",
+  "problem": "Steady incompressible 2D Navier-Stokes in unit disk; zero force; prescribed tangential stirring; p(0)=0.",
+  "settings": {
+    "batch_size": 128,
+    "centers": 257,
+    "check_points": 1025,
+    "coordinates": "disk",
+    "degrees": [
+      8,
+      16,
+      24,
+      32,
+      40
+    ],
+    "export_check_points": 1025,
+    "lam": 0.2,
+    "max_iterations": 20,
+    "max_seconds": 1200.0,
+    "maximum_working_array_mb": 512,
+    "tolerance": 1e-08
+  },
+  "solver": "solve_route2_native",
+  "source_policy": "No reference field/checkpoint/sensors generated or loaded. Trial parameter is fixed in callback closures; no free parameters in the forward solve.",
+  "timing": "Concurrent research processes may run; wall-clock times are not isolated performance comparisons.",
+  "trial_viscosity": 0.05,
+  "version": 1
+}

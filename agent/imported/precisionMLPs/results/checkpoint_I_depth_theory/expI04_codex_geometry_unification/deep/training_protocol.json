@@ -1,0 +1,22 @@
+{
+  "architecture": "1 -> 48 tanh -> 48 tanh -> 1 linear, all biases, Xavier normal weights and zero biases",
+  "dtype": "float64",
+  "hardware": "Mac CPU, torch/BLAS one thread",
+  "train": "513 endpoint-inclusive evenly spaced inputs in [-1,1]",
+  "validation": "1024 midpoint inputs in [-1,1]",
+  "test": "4096 uniform random inputs, independent generator seed 123456",
+  "target": "sin(2*pi*x) + 0.4*exp(-80*(x-0.35)^2)",
+  "training": [
+    {"optimizer":"Adam", "iterations":10000, "learning_rate":0.002, "cosine_end_lr":0.0001},
+    {"optimizer":"L-BFGS", "iterations_max":3000, "loss_scale":1, "seeds":[0], "reason":"Retained pilot before scaling objective; seed1 skipped this ineffective stage."},
+    {"optimizer":"L-BFGS", "iterations_max":6000, "loss_scale":1000000},
+    {"optimizer":"L-BFGS", "iterations_max":30000, "loss_scale":1000000},
+    {"optimizer":"L-BFGS", "iterations_max":10000, "loss_scale":1000000000000}
+  ],
+  "lbfgs": {"history_size":100,"line_search":"strong_wolfe","tolerance_grad":1e-14,"tolerance_change":1e-16,"restart_history_between_stages":true},
+  "loss_scaling_reason": "A positive scalar leaves MSE minimizers unchanged and prevents the optimizer's absolute curvature thresholds prematurely suppressing updates.",
+  "head_refit": "scipy.linalg.lstsq, gelsd, cutoff in [1e-10,1e-12,1e-14,1e-15] selected using validation only",
+  "model_selection": "All train/checkpoint choices used train/validation, never test. Geometric variants include exploratory post-training choices, transparently reported. This is a controlled mechanistic experiment, not a pre-registered benchmark.",
+  "reproduce": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python experiments/expI04_codex_geometry_unification/deep.py --seed 0 1 --reproduce-final",
+  "analysis_only": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python experiments/expI04_codex_geometry_unification/deep.py --seed 0 1"
+}

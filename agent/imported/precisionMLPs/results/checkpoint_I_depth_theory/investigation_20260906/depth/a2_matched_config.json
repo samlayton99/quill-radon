@@ -1,0 +1,28 @@
+{
+  "steps": 2000,
+  "n_train": 12288,
+  "n_test": 10000,
+  "seeds": [
+    0
+  ],
+  "targets": [
+    "fast_waves"
+  ],
+  "arms": [
+    "depth2",
+    "identity3_small",
+    "identity4_small"
+  ],
+  "lr": 0.02,
+  "beta": 0.01,
+  "name": "a2_matched",
+  "torch": "2.4.1",
+  "d": 4,
+  "N1": 32,
+  "N2": 64,
+  "K": 2,
+  "M": 8,
+  "threads": 1,
+  "dtype": "float64",
+  "calibration": "depth2 only before identity insertion"
+}

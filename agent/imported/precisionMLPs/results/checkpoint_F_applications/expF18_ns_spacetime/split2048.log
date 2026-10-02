@@ -1,0 +1,21 @@
+13:53:30 split W=2048 N=8 M=256 units=2048 rows=23177 cols=6147 w_mult=3.0 warm=yes
+13:54:46     warm start fitted: rel_v 4.98e-09 rel_p 2.35e-07
+    GN  1 stacked 5.27e-06 -> 1.29e-07  pde_max 1.14e-08  alpha 1  rank 3834  solve 72s  rel_l2_v 3.40e-10  rel_l2_p 1.24e-08
+    GN  2 stacked 1.29e-07 -> 1.04e-07  pde_max 1.02e-08  alpha 1  rank 3834  solve 71s  rel_l2_v 2.98e-10  rel_l2_p 9.27e-09
+    GN  3 stacked 1.04e-07 -> 1.03e-07  pde_max 1.01e-08  alpha 1  rank 3834  solve 99s  rel_l2_v 2.95e-10  rel_l2_p 9.21e-09
+14:23:03 split W=2048 N=8 M=256 units=2048 rows=23177 cols=6147 w_mult=3.0 warm=yes
+14:23:39     warm start fitted: rel_v 4.98e-09 rel_p 2.35e-07
+    GN  1 stacked 5.27e-06 -> 1.11e-07  pde_max 1.05e-08  alpha 1  rank 3834  solve 36s  rel_l2_v 3.08e-10  rel_l2_p 8.74e-09
+    GN  2 stacked 1.11e-07 -> 1.04e-07  pde_max 1.02e-08  alpha 1  rank 3834  solve 36s  rel_l2_v 2.97e-10  rel_l2_p 9.27e-09
+    GN  3 stacked 1.04e-07 -> 1.03e-07  pde_max 1.01e-08  alpha 1  rank 3834  solve 37s  rel_l2_v 2.95e-10  rel_l2_p 9.19e-09
+    GN  4 stacked 1.03e-07 -> 1.03e-07  pde_max 9.95e-09  alpha 1  rank 3834  solve 37s  rel_l2_v 2.93e-10  rel_l2_p 9.26e-09
+    GN  5 stacked 1.03e-07 -> 1.02e-07  pde_max 9.86e-09  alpha 1  rank 3835  solve 37s  rel_l2_v 2.91e-10  rel_l2_p 9.01e-09
+    GN  6 stacked 1.02e-07 -> 1.02e-07  pde_max 9.75e-09  alpha 1  rank 3834  solve 37s  rel_l2_v 2.90e-10  rel_l2_p 9.04e-09
+14:27:24 split W= 2048 N= 8 done: rel_v=3.94e-10 rel_p=1.65e-08 linf_v=7.7e-09 mom_rms=5.2e-09 div_max=8.0e-08 iters=6 [261s]
+14:27:25 split W=2048 N=12 M=170 units=2040 rows=23083 cols=6123 w_mult=3.0 warm=yes
+14:28:03     warm start fitted: rel_v 5.27e-09 rel_p 2.34e-07
+    GN  1 stacked 4.28e-06 -> 1.46e-08  pde_max 1.16e-09  alpha 1  rank 5294  solve 51s  rel_l2_v 8.49e-11  rel_l2_p 1.07e-08
+    GN  2 stacked 1.46e-08 -> 1.41e-08  pde_max 1.12e-09  alpha 1  rank 5294  solve 44s  rel_l2_v 7.62e-11  rel_l2_p 8.96e-09
+    GN  3 stacked 1.41e-08 -> 1.41e-08  pde_max 1.12e-09  alpha 1  rank 5294  solve 44s  rel_l2_v 7.58e-11  rel_l2_p 8.80e-09
+    GN  4 stacked 1.41e-08 -> 1.41e-08  pde_max 1.12e-09  alpha 1  rank 5294  solve 38s  rel_l2_v 7.54e-11  rel_l2_p 8.74e-09
+14:31:03 split W= 2048 N=12 done: rel_v=1.16e-10 rel_p=1.58e-08 linf_v=4.0e-09 mom_rms=1.3e-09 div_max=8.0e-09 iters=4 [219s]

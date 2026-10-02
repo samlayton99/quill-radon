@@ -1,0 +1,313 @@
+{
+  "source": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n257_native_staged_latest_native.npz",
+  "provenance": "Same saved native PDE coefficients, no fitting, no analytical target coefficients or interior target values; geometry assessed with prescribed PDE/BC/IC/gauge and encoding error only",
+  "rows": [
+    {
+      "centers": 257,
+      "lam": 0.2,
+      "degree": 16,
+      "neurons": 1429683,
+      "ordinary_parameter_bytes": 102937208,
+      "seconds": 8.428710833191872,
+      "blocks": [
+        {
+          "name": "momentum_and_incompressibility",
+          "points": 33,
+          "actual_rms_per_equation": [
+            4.081617191100086e-12,
+            3.831579429838891e-12,
+            4.538673357603015e-12,
+            1.7721728045781803e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.6399118174525995e-11,
+            1.1624881612881666e-11,
+            1.4771711631667017e-11,
+            6.62101995786307e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            8.350294498629247e-17,
+            1.0803167894381406e-16,
+            8.277519477963219e-17,
+            1.4671585531451075e-17
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 5.273559366969494e-16,
+            "(1, 0, 0, 0)": 1.942890293094024e-16,
+            "(0, 1, 0, 0)": 2.7755575615628914e-16,
+            "(0, 0, 1, 0)": 3.469446951953614e-16,
+            "(2, 0, 0, 0)": 1.1796119636642288e-16,
+            "(0, 2, 0, 0)": 2.914335439641036e-16,
+            "(0, 0, 2, 0)": 1.249000902703301e-16,
+            "(0, 0, 0, 1)": 2.498001805406602e-16
+          }
+        },
+        {
+          "name": "velocity_boundary",
+          "points": 48,
+          "actual_rms_per_equation": [
+            2.1196753702878706e-12,
+            1.1360044759783226e-12,
+            1.5993404274624882e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.0093117314147193e-11,
+            3.1504798769788067e-12,
+            3.3671121446587904e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            2.1603507528860593e-16,
+            2.0524304131741416e-16,
+            1.4466022759533342e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 7.494005416219807e-16
+          }
+        },
+        {
+          "name": "velocity_initial",
+          "points": 64,
+          "actual_rms_per_equation": [
+            1.6985849055671184e-12,
+            1.578331897793989e-12,
+            2.089298715374319e-12
+          ],
+          "actual_max_abs_per_equation": [
+            4.3651748882211905e-12,
+            3.492123257231583e-12,
+            5.485972787155902e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.939928866030721e-16,
+            1.4005981852747426e-16,
+            1.6611330931932922e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 5.551115123125783e-16
+          }
+        },
+        {
+          "name": "pressure_gauge",
+          "points": 4,
+          "actual_rms_per_equation": [
+            4.6002361601261e-16
+          ],
+          "actual_max_abs_per_equation": [
+            6.555628435933603e-16
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.8970354729255524e-17
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 1.457167719820518e-16
+          }
+        }
+      ]
+    },
+    {
+      "centers": 129,
+      "lam": 0.25,
+      "degree": 16,
+      "neurons": 751689,
+      "ordinary_parameter_bytes": 54121640,
+      "seconds": 4.799576499965042,
+      "blocks": [
+        {
+          "name": "momentum_and_incompressibility",
+          "points": 33,
+          "actual_rms_per_equation": [
+            4.081624210785029e-12,
+            3.8315779943702146e-12,
+            4.538669444113522e-12,
+            1.7721735234525033e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.639939573028215e-11,
+            1.1624846918412146e-11,
+            1.477175326503044e-11,
+            6.621004522035271e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.4392978831470297e-16,
+            1.402758488980715e-16,
+            1.4745891654818307e-16,
+            1.4274387442509867e-17
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 4.718447854656915e-16,
+            "(1, 0, 0, 0)": 2.220446049250313e-16,
+            "(0, 1, 0, 0)": 1.942890293094024e-16,
+            "(0, 0, 1, 0)": 2.220446049250313e-16,
+            "(2, 0, 0, 0)": 4.527628272299467e-16,
+            "(0, 2, 0, 0)": 6.106226635438361e-16,
+            "(0, 0, 2, 0)": 1.0408340855860843e-15,
+            "(0, 0, 0, 1)": 2.7755575615628914e-16
+          }
+        },
+        {
+          "name": "velocity_boundary",
+          "points": 48,
+          "actual_rms_per_equation": [
+            2.11968305032196e-12,
+            1.1360219796005196e-12,
+            1.5993711887154138e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.0093141600275857e-11,
+            3.1506325326446927e-12,
+            3.3667513221757872e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.8328191071687522e-16,
+            1.4352527325572966e-16,
+            1.138102682081187e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 7.216449660063518e-16
+          }
+        },
+        {
+          "name": "velocity_initial",
+          "points": 64,
+          "actual_rms_per_equation": [
+            1.6985687061719283e-12,
+            1.5783226439797545e-12,
+            2.089309092878061e-12
+          ],
+          "actual_max_abs_per_equation": [
+            4.365341421674884e-12,
+            3.4923036684730846e-12,
+            5.4861393206095954e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.427031763582021e-16,
+            1.0148643437201166e-16,
+            1.2684830944250614e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 4.996003610813204e-16
+          }
+        },
+        {
+          "name": "pressure_gauge",
+          "points": 4,
+          "actual_rms_per_equation": [
+            4.687300584981954e-16
+          ],
+          "actual_max_abs_per_equation": [
+            6.682344564842846e-16
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            9.080024438002453e-18
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 7.632783294297951e-17
+          }
+        }
+      ]
+    },
+    {
+      "centers": 193,
+      "lam": 0.2,
+      "degree": 16,
+      "neurons": 1085773,
+      "ordinary_parameter_bytes": 78175688,
+      "seconds": 6.64479170832783,
+      "blocks": [
+        {
+          "name": "momentum_and_incompressibility",
+          "points": 33,
+          "actual_rms_per_equation": [
+            4.0816078992855846e-12,
+            3.831571320410277e-12,
+            4.538659826772127e-12,
+            1.7721721458575368e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.6399229196828458e-11,
+            1.1624621404360269e-11,
+            1.477155897600113e-11,
+            6.6210168231162e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.136620012347107e-16,
+            9.064731841920665e-17,
+            1.0476107391266057e-16,
+            1.7183338201589944e-17
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 7.771561172376096e-16,
+            "(1, 0, 0, 0)": 2.498001805406602e-16,
+            "(0, 1, 0, 0)": 2.7755575615628914e-16,
+            "(0, 0, 1, 0)": 1.942890293094024e-16,
+            "(2, 0, 0, 0)": 9.71445146547012e-17,
+            "(0, 2, 0, 0)": 2.0122792321330962e-16,
+            "(0, 0, 2, 0)": 1.1102230246251565e-16,
+            "(0, 0, 0, 1)": 2.914335439641036e-16
+          }
+        },
+        {
+          "name": "velocity_boundary",
+          "points": 48,
+          "actual_rms_per_equation": [
+            2.11969494560109e-12,
+            1.1359914672550174e-12,
+            1.599316935864583e-12
+          ],
+          "actual_max_abs_per_equation": [
+            1.0093099966912433e-11,
+            3.1509517217642724e-12,
+            3.366903977841673e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.7587465893216574e-16,
+            1.5374241670251082e-16,
+            1.9154506275514215e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 5.828670879282072e-16
+          }
+        },
+        {
+          "name": "velocity_initial",
+          "points": 64,
+          "actual_rms_per_equation": [
+            1.6985357461389765e-12,
+            1.5783277259183802e-12,
+            2.0892877345614508e-12
+          ],
+          "actual_max_abs_per_equation": [
+            4.365147132645575e-12,
+            3.4922481573218533e-12,
+            5.485736864763169e-12
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.8236449947008789e-16,
+            1.4146763325043612e-16,
+            1.5885809629703135e-16
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 5.551115123125783e-16
+          }
+        },
+        {
+          "name": "pressure_gauge",
+          "points": 4,
+          "actual_rms_per_equation": [
+            4.85251468807953e-16
+          ],
+          "actual_max_abs_per_equation": [
+            6.888681790793993e-16
+          ],
+          "actual_vs_same_coordinate_ideal_rms_per_equation": [
+            1.4598582046979855e-17
+          ],
+          "jet_encoding_max_abs": {
+            "(0, 0, 0, 0)": 1.8041124150158794e-16
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Preliminary target-free check of initial native p16 state; high-degree correction is still in flight. Repeat on accepted corrected state before final claims."
+}

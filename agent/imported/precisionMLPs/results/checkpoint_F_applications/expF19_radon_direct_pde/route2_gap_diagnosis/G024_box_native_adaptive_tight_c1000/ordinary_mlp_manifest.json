@@ -1,0 +1,26 @@
+{
+  "architecture": [
+    "Linear(2,10767,bias=True)",
+    "Tanh",
+    "Linear(10767,1,bias=True)"
+  ],
+  "dtype": "float64",
+  "source": "Saved native final coefficients and declared constructor only",
+  "parameters": {
+    "0.weight": [
+      10767,
+      2
+    ],
+    "0.bias": [
+      10767
+    ],
+    "2.weight": [
+      1,
+      10767
+    ],
+    "2.bias": [
+      1
+    ]
+  },
+  "sha256": "a123f071d100861d4626b003e250aa39396134e24f6c6b7e03c4f2a8208fcd6c"
+}

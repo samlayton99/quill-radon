@@ -1,0 +1,77 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/sam/.cache/fontconfig
+	/Users/sam/.fontconfig
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/sam/.cache/fontconfig
+	/Users/sam/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+fast_waves|0|depth2: initial=0.457, final=0.482, 9.3s
+fast_waves|0|random3: initial=0.53, final=0.482, 10.3s
+fast_waves|0|random4: initial=17.8, final=0.482, 12.2s
+fast_waves|0|identity3: initial=0.457, final=0.496, 11.3s
+fast_waves|0|identity4: initial=0.457, final=0.483, 12.6s
+fast_waves|0|identity3_small: initial=0.457, final=0.382, 11.4s
+fast_waves|0|identity4_small: initial=0.457, final=0.458, 13.9s
+fast_waves|1|depth2: initial=0.475, final=0.438, 11.0s
+fast_waves|1|random3: initial=0.47, final=0.483, 11.8s
+fast_waves|1|random4: initial=0.489, final=0.484, 13.4s
+fast_waves|1|identity3: initial=0.475, final=3.57e+06, 11.9s
+fast_waves|1|identity4: initial=0.475, final=2.87e+04, 13.4s
+fast_waves|1|identity3_small: initial=0.475, final=0.419, 13.4s
+fast_waves|1|identity4_small: initial=0.475, final=0.432, 16.1s
+fast_waves|2|depth2: initial=7.98, final=0.0359, 11.8s
+fast_waves|2|random3: initial=0.505, final=0.487, 12.5s
+fast_waves|2|random4: initial=0.509, final=0.492, 12.3s
+Traceback (most recent call last):
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI03_investigation/depth/run.py", line 237, in <module>
+    main()
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI03_investigation/depth/run.py", line 222, in main
+    checks = identity_checks(base, model, data) if arm.startswith("identity") else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI03_investigation/depth/run.py", line 107, in identity_checks
+    assert abs(analytical-finite_difference) < 1e-5 * max(1, abs(analytical))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+fast_waves|2|identity3: initial=7.98, final=0.246, 14.8s
+fast_waves|2|identity4: initial=7.98, final=0.526, 14.5s
+fast_waves|2|identity3_small: initial=7.98, final=2.24, 13.4s
+fast_waves|2|identity4_small: initial=7.98, final=1.25e+03, 13.7s
+composition|0|depth2: initial=0.192, final=0.00756, 10.5s
+composition|0|random3: initial=0.204, final=0.207, 11.1s
+composition|0|random4: initial=7.19, final=0.207, 12.7s
+composition|0|identity3: initial=0.192, final=0.062, 14.0s
+composition|0|identity4: initial=0.192, final=0.493, 15.8s
+composition|0|identity3_small: initial=0.192, final=0.0842, 14.5s
+composition|0|identity4_small: initial=0.192, final=0.188, 15.6s
+composition|1|depth2: initial=0.194, final=0.0261, 12.1s
+composition|1|random3: initial=0.199, final=0.211, 13.1s
+composition|1|random4: initial=0.202, final=0.212, 14.9s
+composition|1|identity3: initial=0.194, final=0.00684, 14.4s
+composition|1|identity4: initial=0.194, final=0.261, 15.4s
+composition|1|identity3_small: initial=0.194, final=0.00432, 14.4s
+composition|1|identity4_small: initial=0.194, final=0.00432, 16.4s
+composition|2|depth2: initial=1.7, final=0.0037, 12.4s
+composition|2|random3: initial=0.194, final=0.0692, 16.0s
+composition|2|random4: initial=0.205, final=0.21, 18.9s
+composition|2|identity3: initial=1.7, final=0.051, 17.1s
+composition|2|identity4: initial=1.7, final=2.86, 15.9s
+composition|2|identity3_small: initial=1.7, final=0.166, 14.1s
+composition|2|identity4_small: initial=1.7, final=0.21, 15.5s
+fast_waves depth2 median 0.4379273719046259 range 0.0358662942810493 0.48238653340311666
+fast_waves random3 median 0.483394515806169 range 0.4823923724736633 0.48749688817242626
+fast_waves random4 median 0.4840676905795891 range 0.4823923724736633 0.4918471088449578
+fast_waves identity3 median 0.4958764959454829 range 0.2460707848660899 3570113.747072719
+fast_waves identity4 median 0.5257788796668899 range 0.4827069596363877 28725.126426698553
+fast_waves identity3_small median 0.41922033189344493 range 0.38226048892335623 2.2379750625445514
+fast_waves identity4_small median 0.45843120494490835 range 0.4324387510061925 1251.8287864894407
+composition depth2 median 0.007559338300925057 range 0.0037020903500983213 0.026062836791371044
+composition random3 median 0.20726798045129244 range 0.06924678007018123 0.21137061506087462
+composition random4 median 0.20999466972074346 range 0.20726893117608722 0.21181259881077888
+composition identity3 median 0.05096470798564477 range 0.006838926965381 0.061971381818845823
+composition identity4 median 0.49304315523152303 range 0.2610509019825183 2.8644187468328264
+composition identity3_small median 0.08415411526304563 range 0.0043248250909150385 0.16573681220842304
+composition identity4_small median 0.1880298770557922 range 0.004315232271624038 0.20999281751008855

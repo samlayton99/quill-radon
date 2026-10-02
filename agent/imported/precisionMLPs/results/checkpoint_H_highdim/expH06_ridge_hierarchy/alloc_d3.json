@@ -1,0 +1,122 @@
+{
+ "d": 3,
+ "r": 0.3,
+ "rcond": 1e-14,
+ "n_train": 24576,
+ "rows": [
+  {
+   "target": "spatial_packet",
+   "budget": 2048,
+   "even": 1.1478026409112003e-05,
+   "even_M": 128,
+   "even_N": 16,
+   "base": "192x8",
+   "atoms": 3.508630439162704e-06,
+   "n_atoms": 16,
+   "spikes": 1.227126602664715e-05,
+   "n_spikes": 16,
+   "waterfill": 1.250369825474945e-05,
+   "wf": {
+    "N_min": 6,
+    "N_max": 49,
+    "N_med": 13.0
+   },
+   "seconds": 328.7
+  },
+  {
+   "target": "spatial_packet",
+   "budget": 4096,
+   "even": 5.466494023023263e-09,
+   "even_M": 256,
+   "even_N": 16,
+   "base": "192x16",
+   "atoms": 1.957746566431051e-09,
+   "n_atoms": 32,
+   "spikes": 8.011381468074548e-09,
+   "n_spikes": 32,
+   "waterfill": 3.966348766201216e-07,
+   "wf": {
+    "N_min": 6,
+    "N_max": 38,
+    "N_med": 14.0
+   },
+   "seconds": 3540.3
+  },
+  {
+   "target": "fast_waves",
+   "budget": 2048,
+   "even": 1.7900149583911954e-09,
+   "even_M": 128,
+   "even_N": 16,
+   "base": "96x16",
+   "atoms": 4.969827262411523e-10,
+   "n_atoms": 16,
+   "spikes": 1.4736810909454409e-09,
+   "n_spikes": 16,
+   "waterfill": 5.825968784923596e-10,
+   "wf": {
+    "N_min": 6,
+    "N_max": 44,
+    "N_med": 13.0
+   },
+   "seconds": 430.0
+  },
+  {
+   "target": "fast_waves",
+   "budget": 4096,
+   "even": 3.574846084028754e-10,
+   "even_M": 170,
+   "even_N": 24,
+   "base": "128x24",
+   "atoms": 1.1737440403724106e-11,
+   "n_atoms": 32,
+   "spikes": 1.0071391783792743e-11,
+   "n_spikes": 32,
+   "waterfill": 5.124730272451014e-11,
+   "wf": {
+    "N_min": 6,
+    "N_max": 63,
+    "N_med": 22.0
+   },
+   "seconds": 3591.3
+  },
+  {
+   "target": "off_packet",
+   "budget": 2048,
+   "even": 0.012319111214312417,
+   "even_M": 128,
+   "even_N": 16,
+   "base": "96x16",
+   "atoms": 0.010045308462002928,
+   "n_atoms": 16,
+   "spikes": 0.012422401600393361,
+   "n_spikes": 16,
+   "waterfill": 0.013000083278492097,
+   "wf": {
+    "N_min": 6,
+    "N_max": 36,
+    "N_med": 15.0
+   },
+   "seconds": 323.2
+  },
+  {
+   "target": "off_packet",
+   "budget": 4096,
+   "even": 0.00101600689443809,
+   "even_M": 256,
+   "even_N": 16,
+   "base": "192x16",
+   "atoms": 0.0009043804309903422,
+   "n_atoms": 32,
+   "spikes": 0.0011076739730656495,
+   "n_spikes": 32,
+   "waterfill": 0.0026538361550824687,
+   "wf": {
+    "N_min": 6,
+    "N_max": 42,
+    "N_med": 15.0
+   },
+   "seconds": 3370.4
+  }
+ ]
+}

@@ -1,0 +1,870 @@
+{
+  "name": "allen_cahn_d001",
+  "seed": 0,
+  "case": {
+    "family": "allen_cahn",
+    "difficulty": "easier diffusion",
+    "diffusion": 0.01
+  },
+  "protocol_sha256": "3435600f49f6633ee56a57191fab7ccce20a4ca3e091a9e995660911a084e9b8",
+  "reference_used_in_fit": false,
+  "status": "time_budget",
+  "solver_status": "budget_exhausted",
+  "neurons": 7275,
+  "degree": 24,
+  "coordinates": 325,
+  "metrics": {
+    "seconds": 60.82535020913929,
+    "coordinates": "affine_disk",
+    "execution": "streamed",
+    "batch_size": 64,
+    "export_check_points": 257,
+    "initial_solution_supplied": false,
+    "initialization_provenance": "zero followed by native continuation",
+    "reference_solution_used": false,
+    "architecture": "Linear/Tanh/Linear",
+    "validated": false,
+    "validation_scope": "Fresh sampled equation and condition residuals, ordinary-network AD, and successive-field agreement; no continuum or identifiability guarantee",
+    "rejected_resolutions": [],
+    "resource_scope": "Named-array estimate, not whole-process memory cap; streamed callback equation count is estimated from fields/scale before evaluation and actual local-array bytes are reported afterward; supplied points/aggregation are counted, callback internal workspace and external captured data are not capped"
+  },
+  "history": [
+    {
+      "degree": 4,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 4,
+        "directions": 5,
+        "neurons": 1455,
+        "unknowns": 15,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 11640,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 160,
+        "redundant_profile_unknowns": 21,
+        "angular_table_bytes": 400,
+        "mode_label_bytes": 375,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 4,
+        "directions": 5,
+        "angular_rule": "tensor",
+        "readout_coordinates": 15,
+        "neurons": 1455,
+        "ordinary_network_bytes": 46568,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 881312,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 11640,
+        "angular_table_bytes": 400,
+        "mode_label_bytes": 375,
+        "prepared_state_bytes": 11680,
+        "scalar_basis_panel_bytes": 148992,
+        "coordinate_vector_bytes": 120,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 39936,
+      "estimated_named_arrays_bytes": 4377047,
+      "supplied_points_and_aggregation_bytes": 53896,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 78456,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 78456,
+        "ideal_correction_workspace_bytes": 132608,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 7,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 60928,
+          "local_physics_panel_bytes": 14336,
+          "factor_bytes": 840,
+          "factorization_workspace_bytes": 2352
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 2143317665,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 11904,
+        "input_point_bytes": 10240,
+        "supplied_aggregation_bytes": 7176,
+        "residual_vector_bytes": 5120,
+        "coefficient_vector_bytes": 120,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 60,
+          "column_panel_bytes_max": 3584,
+          "selected_feature_panel_bytes_max": 10752,
+          "forward_batches": 574,
+          "adjoint_batches": 280,
+          "callback_rows_max": 64,
+          "callback_jet_bytes_max": 1536,
+          "feature_rows_max": 64,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 11680,
+          "prepared_adjoint_bytes_max": 11640,
+          "ideal_rmatvec_calls": 223,
+          "ideal_correction_rows_max": 64,
+          "ideal_correction_columns_max": 15,
+          "ideal_correction_panel_bytes_max": 23040,
+          "approximate_column_gram_calls": 60,
+          "ideal_matvec_calls": 43
+        }
+      },
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.08629628675891211,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.3526753877497633,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_value",
+          "maximum_scaled_rms": 0.0008681705129396409,
+          "points": 256,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_dx",
+          "maximum_scaled_rms": 0.03379830232086108,
+          "points": 256,
+          "reuses_training_locations": false
+        }
+      ],
+      "normalized_validation_score": 35267538.77497633,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 35267538.77497633,
+      "successive_field_difference": null,
+      "initialization": "zero",
+      "comparison_uses_richer_resolution": false,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 23,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 1.276510416995734,
+        "preconditioner_setup_seconds": 0.09229720290750265
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 1.295023042242974
+    },
+    {
+      "degree": 8,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 8,
+        "directions": 9,
+        "neurons": 2619,
+        "unknowns": 45,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 20952,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 288,
+        "redundant_profile_unknowns": 73,
+        "angular_table_bytes": 1296,
+        "mode_label_bytes": 1125,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 8,
+        "directions": 9,
+        "angular_rule": "tensor",
+        "readout_coordinates": 45,
+        "neurons": 2619,
+        "ordinary_network_bytes": 83816,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1123104,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 20952,
+        "angular_table_bytes": 1296,
+        "mode_label_bytes": 1125,
+        "prepared_state_bytes": 21024,
+        "scalar_basis_panel_bytes": 148992,
+        "coordinate_vector_bytes": 360,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 40720,
+      "estimated_named_arrays_bytes": 5239741,
+      "supplied_points_and_aggregation_bytes": 54120,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 267696,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 267696,
+        "ideal_correction_workspace_bytes": 393728,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 22,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 191488,
+          "local_physics_panel_bytes": 45056,
+          "factor_bytes": 7920,
+          "factorization_workspace_bytes": 23232
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 2142905331,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 12254,
+        "input_point_bytes": 10464,
+        "supplied_aggregation_bytes": 7176,
+        "residual_vector_bytes": 5232,
+        "coefficient_vector_bytes": 360,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 60,
+          "column_panel_bytes_max": 11264,
+          "selected_feature_panel_bytes_max": 33792,
+          "forward_batches": 1230,
+          "adjoint_batches": 300,
+          "callback_rows_max": 64,
+          "callback_jet_bytes_max": 1536,
+          "feature_rows_max": 64,
+          "prepared_forward_calls": 82,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 21024,
+          "prepared_adjoint_bytes_max": 20952,
+          "ideal_rmatvec_calls": 238,
+          "ideal_correction_rows_max": 64,
+          "ideal_correction_columns_max": 45,
+          "ideal_correction_panel_bytes_max": 69120,
+          "approximate_column_gram_calls": 60,
+          "ideal_matvec_calls": 58
+        }
+      },
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.13501936165089218,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.1560632198264594,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_value",
+          "maximum_scaled_rms": 0.004831348377194027,
+          "points": 256,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_dx",
+          "maximum_scaled_rms": 0.032781631546466176,
+          "points": 256,
+          "reuses_training_locations": false
+        }
+      ],
+      "normalized_validation_score": 15606321.98264594,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 15606321.98264594,
+      "successive_field_difference": 0.7355488999361018,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 38,
+        "iterations": 20,
+        "residual_evaluations": 82,
+        "seconds": 3.367571583017707,
+        "preconditioner_setup_seconds": 0.12468529073521495
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 4.695322709158063
+    },
+    {
+      "degree": 12,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 12,
+        "directions": 13,
+        "neurons": 3783,
+        "unknowns": 91,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 30264,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 416,
+        "redundant_profile_unknowns": 157,
+        "angular_table_bytes": 2704,
+        "mode_label_bytes": 2275,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 12,
+        "directions": 13,
+        "angular_rule": "tensor",
+        "readout_coordinates": 91,
+        "neurons": 3783,
+        "ordinary_network_bytes": 121064,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1364896,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 30264,
+        "angular_table_bytes": 2704,
+        "mode_label_bytes": 2275,
+        "prepared_state_bytes": 30368,
+        "scalar_basis_panel_bytes": 148992,
+        "coordinate_vector_bytes": 728,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 67376,
+      "estimated_named_arrays_bytes": 6200483,
+      "supplied_points_and_aggregation_bytes": 64360,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 613800,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 613800,
+        "ideal_correction_workspace_bytes": 559104,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 45,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 391680,
+          "local_physics_panel_bytes": 92160,
+          "factor_bytes": 32760,
+          "factorization_workspace_bytes": 97200
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 2142456069,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 21562,
+        "input_point_bytes": 17568,
+        "supplied_aggregation_bytes": 10312,
+        "residual_vector_bytes": 8784,
+        "coefficient_vector_bytes": 728,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 60,
+          "column_panel_bytes_max": 23040,
+          "selected_feature_panel_bytes_max": 69120,
+          "forward_batches": 1008,
+          "adjoint_batches": 480,
+          "callback_rows_max": 64,
+          "callback_jet_bytes_max": 1536,
+          "feature_rows_max": 64,
+          "prepared_forward_calls": 42,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 30368,
+          "prepared_adjoint_bytes_max": 30264,
+          "ideal_rmatvec_calls": 235,
+          "ideal_correction_rows_max": 64,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 98304,
+          "approximate_column_gram_calls": 60,
+          "ideal_matvec_calls": 55
+        }
+      },
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.09055691660368452,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.0826359449872639,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_value",
+          "maximum_scaled_rms": 0.004252253085366584,
+          "points": 256,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_dx",
+          "maximum_scaled_rms": 0.011243249411900703,
+          "points": 256,
+          "reuses_training_locations": false
+        }
+      ],
+      "normalized_validation_score": 9055691.660368452,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 9055691.660368452,
+      "successive_field_difference": 0.11217083511352495,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 35,
+        "iterations": 20,
+        "residual_evaluations": 42,
+        "seconds": 6.08196841692552,
+        "preconditioner_setup_seconds": 0.3415200007148087
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 10.823287250008434
+    },
+    {
+      "degree": 16,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 16,
+        "directions": 17,
+        "neurons": 4947,
+        "unknowns": 153,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 39576,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 544,
+        "redundant_profile_unknowns": 273,
+        "angular_table_bytes": 4624,
+        "mode_label_bytes": 3825,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 16,
+        "directions": 17,
+        "angular_rule": "tensor",
+        "readout_coordinates": 153,
+        "neurons": 4947,
+        "ordinary_network_bytes": 158312,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1606688,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 39576,
+        "angular_table_bytes": 4624,
+        "mode_label_bytes": 3825,
+        "prepared_state_bytes": 39712,
+        "scalar_basis_panel_bytes": 148992,
+        "coordinate_vector_bytes": 1224,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 99408,
+      "estimated_named_arrays_bytes": 7231321,
+      "supplied_points_and_aggregation_bytes": 76136,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 1187424,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 1187424,
+        "ideal_correction_workspace_bytes": 559104,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 76,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 661504,
+          "local_physics_panel_bytes": 155648,
+          "factor_bytes": 93024,
+          "factorization_workspace_bytes": 277248
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 2141998855,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 33270,
+        "input_point_bytes": 26208,
+        "supplied_aggregation_bytes": 13448,
+        "residual_vector_bytes": 13104,
+        "coefficient_vector_bytes": 1224,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 60,
+          "column_panel_bytes_max": 38912,
+          "selected_feature_panel_bytes_max": 116736,
+          "forward_batches": 1470,
+          "adjoint_batches": 700,
+          "callback_rows_max": 64,
+          "callback_jet_bytes_max": 1536,
+          "feature_rows_max": 64,
+          "prepared_forward_calls": 42,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 39712,
+          "prepared_adjoint_bytes_max": 39576,
+          "ideal_rmatvec_calls": 234,
+          "ideal_correction_rows_max": 64,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 98304,
+          "approximate_column_gram_calls": 60,
+          "ideal_matvec_calls": 54
+        }
+      },
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.07029801213927361,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.054973937852914635,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_value",
+          "maximum_scaled_rms": 0.002859241745069923,
+          "points": 256,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_dx",
+          "maximum_scaled_rms": 0.0022729146872574714,
+          "points": 256,
+          "reuses_training_locations": false
+        }
+      ],
+      "normalized_validation_score": 7029801.213927361,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 7029801.213927361,
+      "successive_field_difference": 0.09842629475653242,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 34,
+        "iterations": 20,
+        "residual_evaluations": 42,
+        "seconds": 12.928573291748762,
+        "preconditioner_setup_seconds": 0.787105000577867
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 23.81122204195708
+    },
+    {
+      "degree": 24,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 24,
+        "directions": 25,
+        "neurons": 7275,
+        "unknowns": 325,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 58200,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 800,
+        "redundant_profile_unknowns": 601,
+        "angular_table_bytes": 10000,
+        "mode_label_bytes": 8125,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 24,
+        "directions": 25,
+        "angular_rule": "tensor",
+        "readout_coordinates": 325,
+        "neurons": 7275,
+        "ordinary_network_bytes": 232808,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 2090272,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 58200,
+        "angular_table_bytes": 10000,
+        "mode_label_bytes": 8125,
+        "prepared_state_bytes": 58400,
+        "scalar_basis_panel_bytes": 148992,
+        "coordinate_vector_bytes": 2600,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 179600,
+      "estimated_named_arrays_bytes": 10404917,
+      "supplied_points_and_aggregation_bytes": 104296,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 3422736,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 3422736,
+        "ideal_correction_workspace_bytes": 559104,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 162,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 1410048,
+          "local_physics_panel_bytes": 331776,
+          "factor_bytes": 421200,
+          "factorization_workspace_bytes": 1259712
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 2141060571,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 63886,
+        "input_point_bytes": 48096,
+        "supplied_aggregation_bytes": 19720,
+        "residual_vector_bytes": 24048,
+        "coefficient_vector_bytes": 2600,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 14,
+          "column_gram_calls": 42,
+          "column_panel_bytes_max": 82944,
+          "selected_feature_panel_bytes_max": 248832,
+          "forward_batches": 2419,
+          "adjoint_batches": 826,
+          "callback_rows_max": 64,
+          "callback_jet_bytes_max": 1536,
+          "feature_rows_max": 64,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 14,
+          "prepared_forward_bytes_max": 58400,
+          "prepared_adjoint_bytes_max": 58200,
+          "ideal_rmatvec_calls": 184,
+          "ideal_correction_rows_max": 64,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 98304,
+          "approximate_column_gram_calls": 42,
+          "ideal_matvec_calls": 59
+        }
+      },
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 0.045798596703975895,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.03423789611821732,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_value",
+          "maximum_scaled_rms": 0.0008313588307897428,
+          "points": 256,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "periodic_dx",
+          "maximum_scaled_rms": 0.0018436771840027032,
+          "points": 256,
+          "reuses_training_locations": false
+        }
+      ],
+      "normalized_validation_score": 4579859.670397589,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 4579859.670397589,
+      "successive_field_difference": 0.15296002377438994,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "budget_exhausted",
+      "solver_work": {
+        "lsmr_iterations": 46,
+        "iterations": 13,
+        "residual_evaluations": 41,
+        "seconds": 36.92848429083824,
+        "preconditioner_setup_seconds": 2.196900331415236
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 60.82531312527135
+    }
+  ],
+  "raw_pde_rms": 0.03249782945743298,
+  "raw_pde_max": 0.16497772472197292,
+  "ordinary_readout_l1": 18913923.609211534,
+  "heldout_reference_evaluated": true,
+  "source_files_sha256": {
+    "experiments/expF19_radon_direct_pde/solver/route2.py": "cbce10f4a2eb791739633b2a3341065311abbf8b6c772396702a3ee679f5faf3",
+    "experiments/expF19_radon_direct_pde/solver/general_residual.py": "dca8b9ee45bd89b3615b811d278051aebbe1fe6bbf13ae1110d2ac354ad2c92c",
+    "experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603"
+  },
+  "all_fit_export_seconds": 61.042825375217944,
+  "process_peak_rss_bytes": 311836672,
+  "heldout_relative_l2": 0.8866088411881843,
+  "heldout_max_absolute": 1.8955020908551736,
+  "ordinary_heldout_constraints": [
+    {
+      "name": "PDE",
+      "points": 257,
+      "raw_rms": 0.03027266918200181,
+      "raw_max": 0.11952891802234605
+    },
+    {
+      "name": "initial",
+      "points": 128,
+      "raw_rms": 0.03415992386822003,
+      "raw_max": 0.06780351100837712
+    },
+    {
+      "name": "periodic_value",
+      "points": 256,
+      "raw_rms": 0.0008497348720221995,
+      "raw_max": 0.004447093931958079
+    },
+    {
+      "name": "periodic_dx",
+      "points": 256,
+      "raw_rms": 0.0016555260386938086,
+      "raw_max": 0.006964962767673971
+    }
+  ],
+  "reference_resolution_difference_relative_l2": 2.293379186152951e-06,
+  "reference_scope": "independent numerical evaluator; difference is empirical reference uncertainty, not a proof",
+  "reference_not_used_to_fit": true
+}

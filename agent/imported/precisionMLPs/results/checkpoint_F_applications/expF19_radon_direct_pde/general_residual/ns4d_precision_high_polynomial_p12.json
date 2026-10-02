@@ -1,0 +1,593 @@
+{
+  "backend": "polynomial",
+  "degree": 12,
+  "stem": "ns4d_precision_high_polynomial_p12",
+  "warmstart": "results/checkpoint_F_applications/expF19_radon_direct_pde/general_residual/ns4d_precision_pilot_polynomial_p10.npz",
+  "warmstart_scope": "Previously solved coefficients mapped by polynomial multiindex; no oracle initialization",
+  "engine_sha256": "96a13c8373812f62a5b792d7e6a7960880aeab25ac8ebdf62d796142aba232f5",
+  "options": {
+    "max_iterations": 20,
+    "tolerance": 1e-14,
+    "damping": 1e-12,
+    "lsmr_tolerance": 1e-12,
+    "lsmr_max_iterations": 5000,
+    "gradient_tolerance": 1e-15,
+    "step_tolerance": 1e-16,
+    "max_seconds": 1200.0,
+    "max_residual_evaluations": 3000,
+    "preconditioner": "auto",
+    "high_accuracy": true,
+    "iteration_callback": "atomic solved-coefficient checkpoint"
+  },
+  "features": {
+    "backend": "polynomial",
+    "dimension": 4,
+    "degree": 12,
+    "coefficient_count": 1820,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "evaluation": "standard",
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 0.0011063329875469208
+  },
+  "unknown_coefficients": 7280,
+  "interior_points": 10920,
+  "estimated_basis_cache_bytes": 1306032000,
+  "process_peak_rss_bytes": 2001305600,
+  "memory_scope": "Peak RSS is cumulative for this runner process, cache bytes are named derivative arrays",
+  "setup_seconds": 0.00455900002270937,
+  "solve_seconds": 1202.069816833362,
+  "validation_seconds": 0.3499668329022825,
+  "status": "budget_exhausted",
+  "solver": {
+    "status": "budget_exhausted",
+    "converged": false,
+    "optimization_converged": false,
+    "iterations": 0,
+    "objective": 3.795987039325263e-21,
+    "tolerance": 1e-14,
+    "blocks": [
+      {
+        "name": "momentum_and_divergence",
+        "input_rows": 10920,
+        "output_rows": 10920,
+        "equations": 4,
+        "rms": 4.221097268627721e-11,
+        "pre_relation_rms": 4.221097268627721e-11,
+        "relation": "eq",
+        "active_entries": 43680,
+        "scaled_rms": [
+          5.198687191137703e-11,
+          3.419112261781379e-11,
+          5.620385997255232e-11,
+          9.824625574339519e-12
+        ],
+        "maximum_scaled_rms": 5.620385997255232e-11,
+        "weighted_norm": 8.44219453725544e-11
+      },
+      {
+        "name": "spatial_velocity",
+        "input_rows": 936,
+        "output_rows": 936,
+        "equations": 3,
+        "rms": 1.1971204424618592e-11,
+        "pre_relation_rms": 1.1971204424618592e-11,
+        "relation": "eq",
+        "active_entries": 2808,
+        "scaled_rms": [
+          1.1937144282972854e-11,
+          1.0286680991520031e-11,
+          1.3476571770083522e-11
+        ],
+        "maximum_scaled_rms": 1.3476571770083522e-11,
+        "weighted_norm": 2.073473429123275e-11
+      },
+      {
+        "name": "initial_velocity",
+        "input_rows": 1248,
+        "output_rows": 1248,
+        "equations": 3,
+        "rms": 3.414674803254507e-12,
+        "pre_relation_rms": 3.414674803254507e-12,
+        "relation": "eq",
+        "active_entries": 3744,
+        "scaled_rms": [
+          3.4734767823633542e-12,
+          2.623406532140891e-12,
+          4.0040865681759225e-12
+        ],
+        "maximum_scaled_rms": 4.0040865681759225e-12,
+        "weighted_norm": 5.914390250562067e-12
+      },
+      {
+        "name": "pressure_gauge",
+        "input_rows": 156,
+        "output_rows": 156,
+        "equations": 1,
+        "rms": 8.033428640442767e-23,
+        "pre_relation_rms": 8.033428640442767e-23,
+        "relation": "eq",
+        "active_entries": 156,
+        "scaled_rms": [
+          8.033428640442767e-23
+        ],
+        "maximum_scaled_rms": 8.033428640442767e-23,
+        "weighted_norm": 8.033428640442766e-23
+      }
+    ],
+    "residual_evaluations": 1,
+    "linearizations": 1,
+    "lsmr_iterations": 20000,
+    "seconds": 1202.0697462079115,
+    "basis_setup_seconds": 1.3932725419290364,
+    "basis_cache_bytes": 1306032000,
+    "unknowns": 7280,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 4,
+      "degree": 12,
+      "coefficient_count": 1820,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "evaluation": "standard",
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 0.0011063329875469208
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "auto",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "krylov_iteration_cost",
+        "kind": "parity_blocks",
+        "blocks": 119,
+        "maximum_block_size": 64,
+        "factor_bytes": 3649536,
+        "setup_seconds": 8.418746625073254,
+        "ridge_relative": 1e-10,
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 119,
+        "column_row_chunk_size": 1024,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [
+      {
+        "iteration": 0,
+        "reason": "krylov_iteration_cost"
+      }
+    ],
+    "preconditioner_setup_seconds": 8.418746625073254,
+    "settings": {
+      "max_iterations": 20,
+      "lsmr_tolerance": 1e-12,
+      "effective_lsmr_tolerance": 2.220446049250313e-16,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": 5000,
+      "gradient_tolerance": 1e-15,
+      "step_tolerance": 1e-16,
+      "scaling_probes": 8,
+      "max_seconds": 1200.0,
+      "max_residual_evaluations": 3000,
+      "high_accuracy": true,
+      "linear_refinement_steps": 2,
+      "iteration_callback_active": true
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 11447124,
+    "unassembled_dense_jacobian_bytes": 2934597120,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 20004,
+      "rmatvec_calls": 20013,
+      "column_gram_calls": 119,
+      "column_panel_bytes_max": 2097152
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 20004,
+      "rmatvec_calls": 20013
+    },
+    "residual_entries": 50388
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 3.795987039325263e-21,
+      "maximum_scaled_block_rms": 5.620385997255232e-11,
+      "damping": 0.0,
+      "elapsed_seconds": 1.446672541089356,
+      "scaled_projected_gradient_inf": 4.102588680352252e-11,
+      "scaled_gradient_threshold": 1.934717606024635e-26,
+      "linear_solves": [
+        {
+          "preconditioner": "diagonal",
+          "stop": 7,
+          "iterations": 5000
+        },
+        {
+          "preconditioner": "block",
+          "stop": 7,
+          "iterations": 5000
+        }
+      ],
+      "linear_defect_corrections": [
+        {
+          "iteration": 0,
+          "stop": 7,
+          "iterations": 5000,
+          "defect_before": 1.3074036234392039e-13,
+          "defect_after": 1.296119791862417e-13,
+          "accepted": true
+        },
+        {
+          "iteration": 1,
+          "stop": 7,
+          "iterations": 5000,
+          "defect_before": 1.296119791862417e-13,
+          "defect_after": 1.2961193569970678e-13,
+          "accepted": true
+        }
+      ],
+      "linear_augmented_defect_norm": 1.2961193569970678e-13,
+      "lsmr_stop": 7,
+      "lsmr_iterations": 5000,
+      "estimated_condition": 37.11604155301941,
+      "linearized_residual_norm": 1.2961193569970678e-13,
+      "linearized_residual_relative": 0.001487536525557596
+    }
+  ],
+  "validation": {
+    "velocity_relative_l2": 1.4996570963574738e-11,
+    "pressure_relative_l2": 5.777417523191951e-10,
+    "final_velocity_relative_l2": 6.519051458198937e-11,
+    "final_pressure_relative_l2": 4.175006147346747e-09,
+    "velocity_max_error": 1.1264731508697778e-10,
+    "pressure_max_error": 1.3171274661216703e-09,
+    "velocity_gradient_relative_l2": 2.5103123961144747e-10,
+    "velocity_time_derivative_relative_l2": 3.3573117266629643e-09,
+    "physical_residual_component_rms": [
+      5.2901441393614655e-11,
+      3.3368740210722994e-11,
+      5.458831213194537e-11,
+      9.645929211725535e-12
+    ],
+    "physical_residual_component_max": [
+      7.736439770061887e-10,
+      4.108146670067647e-10,
+      7.3731459826476e-10,
+      1.1162657984770356e-10
+    ],
+    "fresh_block_checks": [
+      {
+        "name": "momentum_and_divergence",
+        "maximum_scaled_rms": 5.727400640447028e-11,
+        "reuses_training_locations": false,
+        "points": 1201
+      },
+      {
+        "name": "spatial_velocity",
+        "maximum_scaled_rms": 1.3376313727320105e-11,
+        "reuses_training_locations": false,
+        "points": 306
+      },
+      {
+        "name": "initial_velocity",
+        "maximum_scaled_rms": 3.7875358526732586e-12,
+        "reuses_training_locations": false,
+        "points": 408
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 7.910171901919669e-23,
+        "reuses_training_locations": false,
+        "points": 51
+      }
+    ]
+  },
+  "error_by_time": [
+    {
+      "time": 0.0,
+      "velocity_relative_l2": 6.46998259853949e-12,
+      "pressure_relative_l2": 4.567935304734838e-10,
+      "velocity_absolute_rms": 3.4036731195321184e-12,
+      "pressure_absolute_rms": 5.358603762139997e-11,
+      "velocity_linf": 3.067446296967091e-11,
+      "pressure_linf": 3.7500721972172357e-10
+    },
+    {
+      "time": 0.05,
+      "velocity_relative_l2": 9.640504052037858e-12,
+      "pressure_relative_l2": 2.771629006249909e-10,
+      "velocity_absolute_rms": 5.046299253854523e-12,
+      "pressure_absolute_rms": 3.219021320774288e-11,
+      "velocity_linf": 3.180653657119947e-11,
+      "pressure_linf": 2.0918225485111464e-10
+    },
+    {
+      "time": 0.1,
+      "velocity_relative_l2": 1.053292683826589e-11,
+      "pressure_relative_l2": 2.4246664279021454e-10,
+      "velocity_absolute_rms": 5.4859374938227825e-12,
+      "pressure_absolute_rms": 2.788032357698552e-11,
+      "velocity_linf": 4.0815281709960516e-11,
+      "pressure_linf": 1.97135807677995e-10
+    },
+    {
+      "time": 0.15000000000000002,
+      "velocity_relative_l2": 1.0922190299212143e-11,
+      "pressure_relative_l2": 2.1580903394359556e-10,
+      "velocity_absolute_rms": 5.660307876444821e-12,
+      "pressure_absolute_rms": 2.456815177809377e-11,
+      "velocity_linf": 3.935907849639264e-11,
+      "pressure_linf": 1.5899334626645611e-10
+    },
+    {
+      "time": 0.2,
+      "velocity_relative_l2": 1.0847762680668433e-11,
+      "pressure_relative_l2": 1.9489097028785822e-10,
+      "velocity_absolute_rms": 5.593698034013873e-12,
+      "pressure_absolute_rms": 2.19660333570114e-11,
+      "velocity_linf": 3.615893695574357e-11,
+      "pressure_linf": 1.7176182698364073e-10
+    },
+    {
+      "time": 0.25,
+      "velocity_relative_l2": 1.0364517489050674e-11,
+      "pressure_relative_l2": 1.8881683025647282e-10,
+      "velocity_absolute_rms": 5.317854601736145e-12,
+      "pressure_absolute_rms": 2.1069667343237086e-11,
+      "velocity_linf": 3.519091962278509e-11,
+      "pressure_linf": 1.8763934850341002e-10
+    },
+    {
+      "time": 0.30000000000000004,
+      "velocity_relative_l2": 9.984992873592447e-12,
+      "pressure_relative_l2": 1.903347245890399e-10,
+      "velocity_absolute_rms": 5.097575384947439e-12,
+      "pressure_absolute_rms": 2.1027713896095568e-11,
+      "velocity_linf": 3.101774392888501e-11,
+      "pressure_linf": 1.8463219841891032e-10
+    },
+    {
+      "time": 0.35000000000000003,
+      "velocity_relative_l2": 9.807345020167922e-12,
+      "pressure_relative_l2": 1.976033635575495e-10,
+      "velocity_absolute_rms": 4.981910019785302e-12,
+      "pressure_absolute_rms": 2.1613515869433195e-11,
+      "velocity_linf": 3.206096499397404e-11,
+      "pressure_linf": 1.7338919189313629e-10
+    },
+    {
+      "time": 0.4,
+      "velocity_relative_l2": 9.714938590068253e-12,
+      "pressure_relative_l2": 2.0787151572217653e-10,
+      "velocity_absolute_rms": 4.910356374200397e-12,
+      "pressure_absolute_rms": 2.251039544834489e-11,
+      "velocity_linf": 3.4615643684787756e-11,
+      "pressure_linf": 1.685553641106452e-10
+    },
+    {
+      "time": 0.45,
+      "velocity_relative_l2": 9.780176738284723e-12,
+      "pressure_relative_l2": 2.0987101594469622e-10,
+      "velocity_absolute_rms": 4.918675633546126e-12,
+      "pressure_absolute_rms": 2.250078457721133e-11,
+      "velocity_linf": 3.642480761456568e-11,
+      "pressure_linf": 1.6580879724781283e-10
+    },
+    {
+      "time": 0.5,
+      "velocity_relative_l2": 9.976712054789268e-12,
+      "pressure_relative_l2": 2.0332761401713824e-10,
+      "velocity_absolute_rms": 4.992492786433776e-12,
+      "pressure_absolute_rms": 2.158234429719922e-11,
+      "velocity_linf": 3.796912784181927e-11,
+      "pressure_linf": 1.571685559476066e-10
+    },
+    {
+      "time": 0.55,
+      "velocity_relative_l2": 1.0145954143280268e-11,
+      "pressure_relative_l2": 2.0279143574594738e-10,
+      "velocity_absolute_rms": 5.051861444606003e-12,
+      "pressure_absolute_rms": 2.1311249679328478e-11,
+      "velocity_linf": 4.320743762775692e-11,
+      "pressure_linf": 1.6909157407596354e-10
+    },
+    {
+      "time": 0.6000000000000001,
+      "velocity_relative_l2": 1.0379063498463525e-11,
+      "pressure_relative_l2": 2.2095555226073622e-10,
+      "velocity_absolute_rms": 5.142155814773306e-12,
+      "pressure_absolute_rms": 2.2989063590333227e-11,
+      "velocity_linf": 5.130973423916885e-11,
+      "pressure_linf": 1.8583753980117024e-10
+    },
+    {
+      "time": 0.65,
+      "velocity_relative_l2": 1.0994132366010005e-11,
+      "pressure_relative_l2": 2.533069418178173e-10,
+      "velocity_absolute_rms": 5.419716284343117e-12,
+      "pressure_absolute_rms": 2.6092789417344173e-11,
+      "velocity_linf": 5.795441904155041e-11,
+      "pressure_linf": 1.983644082326208e-10
+    },
+    {
+      "time": 0.7000000000000001,
+      "velocity_relative_l2": 1.2160573905897665e-11,
+      "pressure_relative_l2": 2.774808203339527e-10,
+      "velocity_absolute_rms": 5.96483163962831e-12,
+      "pressure_absolute_rms": 2.8298501744540587e-11,
+      "velocity_linf": 6.350525660892004e-11,
+      "pressure_linf": 1.9964205288935943e-10
+    },
+    {
+      "time": 0.75,
+      "velocity_relative_l2": 1.3690312930396601e-11,
+      "pressure_relative_l2": 2.670213736085436e-10,
+      "velocity_absolute_rms": 6.681685366973516e-12,
+      "pressure_absolute_rms": 2.6960848352750366e-11,
+      "velocity_linf": 6.816824882349692e-11,
+      "pressure_linf": 1.9546001969739102e-10
+    },
+    {
+      "time": 0.8,
+      "velocity_relative_l2": 1.4920551153878345e-11,
+      "pressure_relative_l2": 2.657681675681589e-10,
+      "velocity_absolute_rms": 7.245794948647319e-12,
+      "pressure_absolute_rms": 2.6567307664612937e-11,
+      "velocity_linf": 7.141559565937428e-11,
+      "pressure_linf": 1.8358482789526676e-10
+    },
+    {
+      "time": 0.8500000000000001,
+      "velocity_relative_l2": 1.5925230801146026e-11,
+      "pressure_relative_l2": 4.532343205440992e-10,
+      "velocity_absolute_rms": 7.695120703812084e-12,
+      "pressure_absolute_rms": 4.4856401162260115e-11,
+      "velocity_linf": 7.10725367447651e-11,
+      "pressure_linf": 2.1659728871581407e-10
+    },
+    {
+      "time": 0.9,
+      "velocity_relative_l2": 2.0704182989895318e-11,
+      "pressure_relative_l2": 6.729216024246623e-10,
+      "velocity_absolute_rms": 9.954428379997943e-12,
+      "pressure_absolute_rms": 6.593608604828765e-11,
+      "velocity_linf": 8.761591452355333e-11,
+      "pressure_linf": 2.9407378095147596e-10
+    },
+    {
+      "time": 0.9500000000000001,
+      "velocity_relative_l2": 2.9006490564255285e-11,
+      "pressure_relative_l2": 6.269514873506772e-10,
+      "velocity_absolute_rms": 1.38765640321447e-11,
+      "pressure_absolute_rms": 6.082045792878345e-11,
+      "velocity_linf": 1.2506606861251157e-10,
+      "pressure_linf": 2.986375868818669e-10
+    },
+    {
+      "time": 1.0,
+      "velocity_relative_l2": 6.741516219110859e-11,
+      "pressure_relative_l2": 4.185364088913991e-09,
+      "velocity_absolute_rms": 3.2090232802072043e-11,
+      "pressure_absolute_rms": 4.0198148251384843e-10,
+      "velocity_linf": 2.2079693628995756e-10,
+      "pressure_linf": 1.7465518475923147e-09
+    }
+  ],
+  "coefficient_norm_by_total_degree": {
+    "0": [
+      0.2737402326785046,
+      0.6387272095832961,
+      0.4562337211311685,
+      1.3742650475964938e-12
+    ],
+    "1": [
+      0.325104459181496,
+      0.23419862969173513,
+      0.14106305718022816,
+      0.1842742430374186
+    ],
+    "2": [
+      0.028457455357353754,
+      0.0557495747186092,
+      0.03956659227714019,
+      0.018415151056046426
+    ],
+    "3": [
+      0.005604288361443399,
+      0.004770613063089172,
+      0.003051106356010378,
+      0.016046579228646878
+    ],
+    "4": [
+      0.00032173635323597604,
+      0.00044041642468299375,
+      0.00030532287335445913,
+      0.0016024631078050142
+    ],
+    "5": [
+      2.381990303341466e-05,
+      2.52539449252544e-05,
+      1.6950402090561458e-05,
+      0.00029341606944283577
+    ],
+    "6": [
+      1.179991517719485e-06,
+      1.3041061611909163e-06,
+      8.811221954324066e-07,
+      2.8852169041986237e-05
+    ],
+    "7": [
+      4.739852575844672e-08,
+      5.821549802235264e-08,
+      3.9896067635828756e-08,
+      2.399166828595466e-06
+    ],
+    "8": [
+      2.0268669997995757e-09,
+      2.04798047878368e-09,
+      1.363324084363621e-09,
+      2.2052320157651888e-07
+    ],
+    "9": [
+      7.090487485821364e-11,
+      8.230106259939156e-11,
+      6.661305773124495e-11,
+      1.1741379739669375e-08
+    ],
+    "10": [
+      5.4508275463253106e-11,
+      4.6548675128907156e-11,
+      5.999971507344532e-11,
+      9.386869028015557e-10
+    ],
+    "11": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "12": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "reference_checks": {
+    "maximum_pde_residual": 1.3877787807814457e-16,
+    "maximum_beltrami_defect": 1.1102230246251565e-16,
+    "maximum_laplacian_defect": 1.1102230246251565e-16
+  }
+}

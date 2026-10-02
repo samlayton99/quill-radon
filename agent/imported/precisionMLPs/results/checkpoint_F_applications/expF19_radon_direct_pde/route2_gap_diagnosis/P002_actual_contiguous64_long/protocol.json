@@ -1,0 +1,17 @@
+{
+  "run_id": "P002_actual_contiguous64_long",
+  "basis": "actual",
+  "block_size": 64,
+  "iterations": 10000,
+  "started": "2026-10-02 07:21:15 UTC",
+  "threads": 1,
+  "dtype": "float64",
+  "source_sha256": "9ce77ff7c19599ba0a2eb3ebed50d587c912ea1ad9362087f57c3057ec4f3a56",
+  "reference_used_in_fit": false,
+  "scope": "Dense diagnostic only, not production scaling",
+  "weighting": "fixed zero-jet PDE normalization",
+  "grouping": "production default disk contiguous coefficient-order blocks",
+  "lsmr_tolerance": 1e-14,
+  "gram_ridge": 1e-10,
+  "qr_relative_rank_guard": 1e-13
+}

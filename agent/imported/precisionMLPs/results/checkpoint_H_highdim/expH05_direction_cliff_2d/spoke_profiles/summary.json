@@ -1,0 +1,103 @@
+{
+  "configurations": [
+    {
+      "M": 32,
+      "N": 64,
+      "width": 2048,
+      "rank": 1508,
+      "rel_l2": {
+        "gauss_bump": 7.471434806169222e-14,
+        "radial_runge": 7.398216902299614e-15,
+        "fast_waves": 5.673552583660448e-13,
+        "composition": 1.4584769138000343e-13,
+        "spatial_packet": 3.0018156816766584e-13
+      },
+      "grouped_max_difference": 4.884981308350689e-15
+    },
+    {
+      "M": 32,
+      "N": 128,
+      "width": 4096,
+      "rank": 3122,
+      "rel_l2": {
+        "gauss_bump": 2.029958397461518e-14,
+        "radial_runge": 1.3713307613641625e-14,
+        "fast_waves": 1.2535243111623328e-13,
+        "composition": 1.3432674518972044e-14,
+        "spatial_packet": 1.9361755007131087e-14
+      },
+      "grouped_max_difference": 7.327471962526033e-15
+    },
+    {
+      "M": 16,
+      "N": 128,
+      "width": 2048,
+      "rank": 1688,
+      "rel_l2": {
+        "gauss_bump": 4.652883897547051e-14,
+        "radial_runge": 8.254417245493473e-11,
+        "fast_waves": 2.855049351503577e-14,
+        "composition": 5.936256420893678e-10,
+        "spatial_packet": 1.609305023432615e-10
+      },
+      "grouped_max_difference": 3.375077994860476e-14
+    }
+  ],
+  "derivative_law": [
+    {
+      "target": "gauss_bump",
+      "interior_abs_t": 0.3,
+      "correlation": 0.9999865843687561,
+      "relative_discrepancy": 0.010400240351630886
+    },
+    {
+      "target": "radial_runge",
+      "interior_abs_t": 0.3,
+      "correlation": 0.9998988605775997,
+      "relative_discrepancy": 0.02730938409012119
+    },
+    {
+      "target": "fast_waves",
+      "interior_abs_t": 0.3,
+      "correlation": 0.9998155049964156,
+      "relative_discrepancy": 0.09246060031276677
+    },
+    {
+      "target": "composition",
+      "interior_abs_t": 0.3,
+      "correlation": 0.9999431483100087,
+      "relative_discrepancy": 0.017723239766324863
+    },
+    {
+      "target": "spatial_packet",
+      "interior_abs_t": 0.3,
+      "correlation": 0.9987423311442293,
+      "relative_discrepancy": 0.33876439873531367
+    }
+  ],
+  "width_changes": [
+    {
+      "target": "gauss_bump",
+      "relative_centered_profile_change": 0.05990181994219197
+    },
+    {
+      "target": "radial_runge",
+      "relative_centered_profile_change": 0.0010482773524578888
+    },
+    {
+      "target": "fast_waves",
+      "relative_centered_profile_change": 0.03006282819018126
+    },
+    {
+      "target": "composition",
+      "relative_centered_profile_change": 0.15916923662069513
+    },
+    {
+      "target": "spatial_packet",
+      "relative_centered_profile_change": 0.024844730692030914
+    }
+  ],
+  "derivative_finite_difference_relative_error": 5.885800544848268e-09,
+  "canonical_gaussian_max_error": 1.1102230246251565e-16,
+  "gaussian_canonical_centered_profile_relative_difference": 0.03638207917492527
+}

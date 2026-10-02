@@ -1,0 +1,38 @@
+{
+  "arithmetic": "Actual ordinary float64 Linear/Tanh/Linear residual, acceptance and audit unchanged.",
+  "budgets": "1GiB for estimated preconditioner/correction work only, not process RSS cap; soft time budget; retain all exits and overshoots.",
+  "cases": [
+    {
+      "case": "disk_counterrotating",
+      "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/flows/battle_v1_disk_counterrotating_nu0.1_p48_n513.npz",
+      "viscosity": 0.1
+    },
+    {
+      "case": "disk_counterrotating",
+      "resume": "previous native case",
+      "viscosity": 0.03
+    },
+    {
+      "case": "disk_stirring",
+      "resume": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/lowviscosity_refined_disk_stirring_nu0.03_p48_n257.npz",
+      "viscosity": 0.01
+    },
+    {
+      "case": "disk_stirring",
+      "resume": "previous native case",
+      "viscosity": 0.003
+    }
+  ],
+  "centers": 513,
+  "changes": "Separate continuation study: larger memory-bounded parity preconditioner, opt-in bounded Jacobi recurrence, uniform p64/150K/600s settings. No isolated end-to-end speed claim.",
+  "degree": 64,
+  "krylov": 150,
+  "lam": 0.2,
+  "max_iterations": 12,
+  "preconditioner_workspace_allowance_bytes": 1073741824,
+  "requested_block_size": 2048,
+  "seconds": 600.0,
+  "source_policy": "Only prescribed wall motion and zero-force PDE; native coefficient continuation; no interior truth, sensors, external trajectories or exact-solution coefficients.",
+  "tolerance": 1e-14,
+  "version": 1
+}

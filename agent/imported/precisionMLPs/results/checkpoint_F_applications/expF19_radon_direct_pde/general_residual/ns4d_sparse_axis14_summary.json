@@ -1,0 +1,57 @@
+[
+  {
+    "stem": "ns4d_sparse_axis14_polynomial_stage0_p14",
+    "degree": 14,
+    "unknown_coefficients": 7180,
+    "solve_seconds": 582.8692511250265,
+    "status": "iteration_limit",
+    "validation": {
+      "velocity_relative_l2": 2.4606457563458257e-15,
+      "pressure_relative_l2": 9.13493749477389e-14,
+      "final_velocity_relative_l2": 7.087894597824979e-15,
+      "final_pressure_relative_l2": 3.928360218758501e-13,
+      "velocity_max_error": 8.271161533457416e-15,
+      "pressure_max_error": 1.6542323066914832e-13,
+      "velocity_gradient_relative_l2": 5.4219418748712674e-14,
+      "velocity_time_derivative_relative_l2": 3.3759977691774577e-13,
+      "physical_residual_component_rms": [
+        2.0399210264748053e-14,
+        1.4195891879382122e-14,
+        1.4577768522935608e-14,
+        8.614889798982545e-15
+      ],
+      "physical_residual_component_max": [
+        2.676634955345314e-13,
+        1.3916645613676337e-13,
+        1.1093903573566877e-13,
+        9.05984029174169e-14
+      ],
+      "fresh_block_checks": [
+        {
+          "name": "momentum_and_divergence",
+          "maximum_scaled_rms": 1.7590952056371315e-14,
+          "reuses_training_locations": false,
+          "points": 1201
+        },
+        {
+          "name": "spatial_velocity",
+          "maximum_scaled_rms": 2.1222483778444983e-15,
+          "reuses_training_locations": false,
+          "points": 306
+        },
+        {
+          "name": "initial_velocity",
+          "maximum_scaled_rms": 1.1088521562642435e-15,
+          "reuses_training_locations": false,
+          "points": 408
+        },
+        {
+          "name": "pressure_gauge",
+          "maximum_scaled_rms": 1.4603872385195868e-24,
+          "reuses_training_locations": false,
+          "points": 51
+        }
+      ]
+    }
+  }
+]

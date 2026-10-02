@@ -1,0 +1,37 @@
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+tune W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=10.0 warm=yes
+    warm start fitted: rel_v 4.62e-06 rel_p 1.71e-04
+    GN  1 stacked 2.16e-03 -> 3.93e-06  pde_max 3.51e-07  alpha 1  rank 2913  solve 7s  rel_l2_v 1.90e-08  rel_l2_p 4.87e-07
+    GN  2 stacked 3.93e-06 -> 1.71e-06  pde_max 1.08e-07  alpha 1  rank 2913  solve 7s  rel_l2_v 8.49e-09  rel_l2_p 2.72e-07
+    GN  3 stacked 1.71e-06 -> 1.58e-06  pde_max 1.07e-07  alpha 1  rank 2913  solve 7s  rel_l2_v 7.89e-09  rel_l2_p 2.52e-07
+    GN  4 stacked 1.58e-06 -> 1.50e-06  pde_max 1.05e-07  alpha 1  rank 2913  solve 7s  rel_l2_v 7.67e-09  rel_l2_p 2.26e-07
+    GN  5 stacked 1.50e-06 -> 1.45e-06  pde_max 1.02e-07  alpha 1  rank 2913  solve 7s  rel_l2_v 7.60e-09  rel_l2_p 2.05e-07
+    GN  6 stacked 1.45e-06 -> 1.41e-06  pde_max 9.95e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.55e-09  rel_l2_p 1.93e-07
+    GN  7 stacked 1.41e-06 -> 1.38e-06  pde_max 9.70e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.55e-09  rel_l2_p 1.87e-07
+    GN  8 stacked 1.38e-06 -> 1.36e-06  pde_max 9.61e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.59e-09  rel_l2_p 1.81e-07
+    GN  9 stacked 1.36e-06 -> 1.34e-06  pde_max 9.56e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.60e-09  rel_l2_p 1.77e-07
+    GN 10 stacked 1.34e-06 -> 1.33e-06  pde_max 9.53e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.62e-09  rel_l2_p 1.75e-07
+    GN 11 stacked 1.33e-06 -> 1.33e-06  pde_max 9.53e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.65e-09  rel_l2_p 1.74e-07
+    GN 12 stacked 1.33e-06 -> 1.32e-06  pde_max 9.53e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.68e-09  rel_l2_p 1.73e-07
+    GN 13 stacked 1.32e-06 -> 1.32e-06  pde_max 9.49e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.71e-09  rel_l2_p 1.73e-07
+    GN 14 stacked 1.32e-06 -> 1.31e-06  pde_max 9.52e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.71e-09  rel_l2_p 1.73e-07
+    GN 15 stacked 1.31e-06 -> 1.31e-06  pde_max 9.47e-08  alpha 1  rank 2913  solve 7s  rel_l2_v 7.75e-09  rel_l2_p 1.73e-07
+tune W= 1024 N= 8 done: rel_v=1.18e-08 rel_p=2.59e-07 linf_v=6.3e-07 mom_rms=1.0e-07 div_max=6.1e-07 iters=15 [118s]
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+dynamic W=1024 N=8 M=128 units=1024 rows=11657 cols=3075 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 4.70e-06 rel_p 1.71e-04
+    GN  1 stacked 2.23e-03 -> 4.05e-06  pde_max 2.56e-07  alpha 1  rank 2977  solve 7s  rel_l2_v 3.62e-08  rel_l2_p 1.37e-06
+    GN  2 stacked 4.05e-06 -> 9.79e-07  pde_max 8.68e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 8.17e-09  rel_l2_p 3.37e-07
+    GN  3 stacked 9.79e-07 -> 8.16e-07  pde_max 7.22e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.29e-09  rel_l2_p 2.15e-07
+    GN  4 stacked 8.16e-07 -> 8.02e-07  pde_max 6.84e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.23e-09  rel_l2_p 2.21e-07
+    GN  5 stacked 8.02e-07 -> 7.99e-07  pde_max 6.85e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.31e-09  rel_l2_p 2.30e-07
+    GN  6 stacked 7.99e-07 -> 7.98e-07  pde_max 6.88e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.35e-09  rel_l2_p 2.32e-07
+    GN  7 stacked 7.98e-07 -> 7.97e-07  pde_max 6.88e-08  alpha 1  rank 2977  solve 7s  rel_l2_v 5.36e-09  rel_l2_p 2.34e-07
+dynamic W= 1024 N= 8 done: rel_v=8.24e-09 rel_p=4.30e-07 linf_v=3.3e-07 mom_rms=6.0e-08 div_max=6.8e-07 iters=7 [60s]
+dynamic W=2048 N=16 M=128 units=2048 rows=23177 cols=6147 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 5.48e-09 rel_p 2.34e-07
+    GN  1 stacked 3.75e-06 -> 2.08e-07  pde_max 3.81e-08  alpha 1  rank 5678  solve 49s  rel_l2_v 1.60e-09  rel_l2_p 6.48e-08
+    GN  2 stacked 2.08e-07 -> 2.08e-07  pde_max 3.81e-08  alpha 0.5  rank 5678  solve 49s  rel_l2_v 1.60e-09  rel_l2_p 6.51e-08
+dynamic W= 2048 N=16 done: rel_v=2.27e-09 rel_p=9.88e-08 linf_v=5.2e-08 mom_rms=3.2e-08 div_max=5.3e-07 iters=2 [152s]
+dynamic W=4096 N=24 M=170 units=4080 rows=46037 cols=12243 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 1.77e-09 rel_p 6.45e-08

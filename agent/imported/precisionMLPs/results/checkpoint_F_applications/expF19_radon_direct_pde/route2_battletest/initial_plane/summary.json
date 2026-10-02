@@ -1,0 +1,80 @@
+[
+  {
+    "case": "allen_cahn_d001",
+    "heldout_relative_l2": 0.5061280361627275,
+    "positive_fraction": 0.3662109375,
+    "readout_l1": 412173027154.93,
+    "audit_points": 2048,
+    "reference_resolution_difference": 2.293379186152951e-06,
+    "final_stage": {
+      "degree": 40,
+      "neurons": 24153,
+      "coordinates": 820,
+      "status": "budget_exhausted",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.08387911769520727,
+          "raw_max": 0.48559604621516644
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.731145848265298e-06,
+          "raw_max": 1.4759555668916735e-05
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.001085356691857814,
+          "raw_max": 0.0036307573318481445
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.06415282533247765,
+          "raw_max": 0.6429462838412705
+        }
+      ],
+      "solver_seconds": 151.2187349582091,
+      "lsmr_iterations": 9,
+      "elapsed_seconds": 609.4502335409634
+    }
+  },
+  {
+    "case": "allen_cahn_d00001",
+    "heldout_relative_l2": 0.6367643066215447,
+    "positive_fraction": 0.3154296875,
+    "readout_l1": 379910085164.9359,
+    "audit_points": 2048,
+    "reference_resolution_difference": 9.284646234155533e-06,
+    "final_stage": {
+      "degree": 40,
+      "neurons": 24153,
+      "coordinates": 820,
+      "status": "budget_exhausted",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.1022011492308317,
+          "raw_max": 0.6611926735431883
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.745463045446003e-06,
+          "raw_max": 1.4574229171726572e-05
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.0012135611491617898,
+          "raw_max": 0.005005836486816406
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.064240992924907,
+          "raw_max": 0.6432121389430846
+        }
+      ],
+      "solver_seconds": 131.10431937500834,
+      "lsmr_iterations": 6,
+      "elapsed_seconds": 607.7018619580194
+    }
+  }
+]

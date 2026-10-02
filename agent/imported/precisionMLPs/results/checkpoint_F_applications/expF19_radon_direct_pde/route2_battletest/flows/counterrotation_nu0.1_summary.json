@@ -1,0 +1,62 @@
+{
+  "case": "counterrotation_nu0.1",
+  "seconds": 4084.261064166669,
+  "final_archive": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/flows/battle_v1_disk_counterrotating_nu0.1_p64_n513.npz",
+  "final_status": "budget_exhausted",
+  "audit": {
+    "audit_points": 4096,
+    "momentum_rms": 2.4595951017807238e-08,
+    "momentum_max_abs": 1.3063906147969817e-06,
+    "advective_rms": 0.7006139828574097,
+    "viscous_rms": 1.878062354911072,
+    "pressure_gradient_rms": 1.9089594189405956,
+    "divergence_rms": 3.770328612817548e-07,
+    "divergence_max_abs": 1.6705195243327253e-05,
+    "wall_velocity_rms": 7.502333803375286e-10,
+    "wall_velocity_max_abs": 1.971091043856399e-09,
+    "net_boundary_mass_flux": 3.802877897025432e-09,
+    "maximum_wall_normal_speed": 2.095066620189101e-09,
+    "maximum_cross_section_flux": 7.1467081287743435e-09,
+    "cross_section_fluxes": [
+      -2.992334978214791e-10,
+      -3.2196999008837204e-09,
+      2.405609464463409e-09,
+      -8.073437461912549e-10,
+      1.6062702337660533e-09,
+      -4.011824116266277e-09,
+      7.747969594059561e-10,
+      -7.1467081287743435e-09,
+      3.5873562074380895e-09,
+      -2.1054604718891015e-09
+    ],
+    "velocity_rms": 0.22250189882966784,
+    "max_sampled_speed": 1.6428550484237117,
+    "pressure_rms": 0.35540973168693973,
+    "pressure_gauge": -2.3248958314070478e-11,
+    "export_stable_max_abs": 7.209816077491382e-11,
+    "neural_vs_ideal_coordinate_jet_rms": {
+      "(0, 0)": 1.417479034134761e-11,
+      "(1, 0)": 4.560401168944751e-11,
+      "(0, 1)": 3.477709292432939e-11,
+      "(2, 0)": 4.053518850971619e-09,
+      "(0, 2)": 2.7037020612224255e-09
+    },
+    "ideal_coordinate_momentum_rms": 2.4595374539023842e-08,
+    "neural_vs_ideal_momentum_rms": 2.3604801103086686e-11,
+    "coordinate_diagnostic_note": "Same learned coordinates evaluated by actual MLP versus ideal analytical coordinate basis; not truth error.",
+    "left_right_asymmetry_relative_to_lid": 0.3829867601548973,
+    "symmetry_note": "Descriptive only: the finite-Re driven flow need not be reflection-symmetric.",
+    "ordinary_export": "Linear/Tanh/Linear, float64, ordinary Torch automatic differentiation",
+    "truth_error_available": false,
+    "requested_tolerance": 1e-14,
+    "richer_resolution_comparison": {
+      "previous_degree": 48,
+      "degree": 64,
+      "strictly_richer": true,
+      "velocity_relative_l2": 2.2949064529519345e-08,
+      "pressure_relative_l2": 1.5681102881331255e-07
+    },
+    "sampled_residual_reaches_requested_tolerance": false,
+    "continuum_accuracy_certified": false
+  }
+}

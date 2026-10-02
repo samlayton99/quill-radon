@@ -1,0 +1,302 @@
+{
+  "scope": "Fresh tensor ideal correction, combined physics, same native coordinate dimension; named arrays not process RSS",
+  "rows": [
+    {
+      "centers": 257,
+      "lam": 0.2,
+      "block_size": 1792,
+      "named_array_estimate_bytes": 962262160,
+      "named_array_estimate_mib": 917.6847076416016,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 455960064,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1792,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 9307648,
+          "local_physics_panel_bytes": 14680064,
+          "factor_bytes": 277831680,
+          "factorization_workspace_bytes": 154140672
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 102937208
+    },
+    {
+      "centers": 257,
+      "lam": 0.2,
+      "block_size": 2805,
+      "named_array_estimate_bytes": 1356327264,
+      "named_array_estimate_mib": 1293.4944763183594,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 850025168,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 2805,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 14494208,
+          "local_physics_panel_bytes": 22978560,
+          "factor_bytes": 434887200,
+          "factorization_workspace_bytes": 377665200
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 102937208
+    },
+    {
+      "centers": 257,
+      "lam": 0.2,
+      "block_size": 3072,
+      "named_array_estimate_bytes": 1476596880,
+      "named_array_estimate_mib": 1408.1925201416016,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 970294784,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 3072,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 15861248,
+          "local_physics_panel_bytes": 25165824,
+          "factor_bytes": 476282880,
+          "factorization_workspace_bytes": 452984832
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 102937208
+    },
+    {
+      "centers": 129,
+      "lam": 0.25,
+      "block_size": 1792,
+      "named_array_estimate_bytes": 738501056,
+      "named_array_estimate_mib": 704.2894897460938,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 455960064,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1792,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 9307648,
+          "local_physics_panel_bytes": 14680064,
+          "factor_bytes": 277831680,
+          "factorization_workspace_bytes": 154140672
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 54121640
+    },
+    {
+      "centers": 129,
+      "lam": 0.25,
+      "block_size": 2805,
+      "named_array_estimate_bytes": 1132566160,
+      "named_array_estimate_mib": 1080.0992584228516,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 850025168,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 2805,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 14494208,
+          "local_physics_panel_bytes": 22978560,
+          "factor_bytes": 434887200,
+          "factorization_workspace_bytes": 377665200
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 54121640
+    },
+    {
+      "centers": 129,
+      "lam": 0.25,
+      "block_size": 3072,
+      "named_array_estimate_bytes": 1252835776,
+      "named_array_estimate_mib": 1194.7973022460938,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 970294784,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 3072,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 15861248,
+          "local_physics_panel_bytes": 25165824,
+          "factor_bytes": 476282880,
+          "factorization_workspace_bytes": 452984832
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 54121640
+    },
+    {
+      "centers": 193,
+      "lam": 0.2,
+      "block_size": 1792,
+      "named_array_estimate_bytes": 848708000,
+      "named_array_estimate_mib": 809.3910217285156,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 455960064,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 1792,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 9307648,
+          "local_physics_panel_bytes": 14680064,
+          "factor_bytes": 277831680,
+          "factorization_workspace_bytes": 154140672
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 78175688
+    },
+    {
+      "centers": 193,
+      "lam": 0.2,
+      "block_size": 2805,
+      "named_array_estimate_bytes": 1242773104,
+      "named_array_estimate_mib": 1185.2007904052734,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 850025168,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 2805,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 14494208,
+          "local_physics_panel_bytes": 22978560,
+          "factor_bytes": 434887200,
+          "factorization_workspace_bytes": 377665200
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 78175688
+    },
+    {
+      "centers": 193,
+      "lam": 0.2,
+      "block_size": 3072,
+      "named_array_estimate_bytes": 1363042720,
+      "named_array_estimate_mib": 1299.8988342285156,
+      "actual_full_parity_group_factor_bytes": 378900000,
+      "workspace": {
+        "preconditioner_workspace_bytes": 970294784,
+        "ideal_correction_workspace_bytes": 16626000,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 3072,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 15861248,
+          "local_physics_panel_bytes": 25165824,
+          "factor_bytes": 476282880,
+          "factorization_workspace_bytes": 452984832
+        },
+        "ideal_tensor_plan": {
+          "enabled": true,
+          "rows": 34,
+          "tensor_bytes": 2672672,
+          "workspace_bytes": 16621648,
+          "fixed_bytes": 5500384,
+          "bytes_per_row": 327096,
+          "workspace_budget_bytes": 16777216,
+          "tensor_budget_bytes": 4194304,
+          "reason": "bounded_sum_factorization"
+        }
+      },
+      "model_bytes": 78175688
+    }
+  ]
+}

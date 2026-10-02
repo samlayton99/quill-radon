@@ -1,0 +1,19 @@
+{
+  "target": "sin(x+y)/sqrt(1+x^2)",
+  "scope": "constructive tensor Toeplitz-QI versus oracle-tuned value-lstsq Radon",
+  "tensor_qi": {
+    "relative_l2": 2.4099289941854335e-15,
+    "max_abs": 2.6645352591003757e-15,
+    "factor_readout_parameters": 1156,
+    "shared_per_axis_tanh_width": 288,
+    "rank": 2,
+    "core_intervals": 47
+  },
+  "radon": {
+    "relative_l2": 7.553662319520557e-14,
+    "max_abs": 2.0441426329398382e-12,
+    "lambda": 0.16,
+    "ridge_width": 1155,
+    "readout_parameters": 1156
+  }
+}

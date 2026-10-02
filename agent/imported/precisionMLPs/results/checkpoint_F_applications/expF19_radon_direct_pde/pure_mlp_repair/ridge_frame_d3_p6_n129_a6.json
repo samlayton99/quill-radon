@@ -1,0 +1,103 @@
+{
+  "dimension": 3,
+  "degree": 6,
+  "interior_centers": 129,
+  "halo_per_side": 12,
+  "lam": 0.2,
+  "directions": 49,
+  "neurons": 7497,
+  "architecture": [
+    "Linear",
+    "Tanh",
+    "Linear"
+  ],
+  "angular_degree": 6,
+  "angular_only_max_error": 7.28583859910259e-16,
+  "derivative_checks": [
+    {
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "max_absolute": 6.907807659217724e-13,
+      "max_scaled": 6.907807659217724e-13,
+      "rms": 6.688760428364073e-13
+    },
+    {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "max_absolute": 2.62279087337447e-12,
+      "max_scaled": 7.269322107648046e-13,
+      "rms": 8.286642848798085e-13
+    },
+    {
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "max_absolute": 3.708144902248023e-12,
+      "max_scaled": 5.138743616564611e-13,
+      "rms": 1.1683322527687022e-12
+    },
+    {
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "max_absolute": 4.6345149939952535e-12,
+      "max_scaled": 4.2816709287399823e-13,
+      "rms": 1.4597501205737844e-12
+    },
+    {
+      "order": [
+        2,
+        0,
+        0
+      ],
+      "max_absolute": 1.8713741667397699e-10,
+      "max_scaled": 2.328821185276158e-11,
+      "rms": 5.916488860417189e-11
+    },
+    {
+      "order": [
+        0,
+        2,
+        0
+      ],
+      "max_absolute": 3.722817609741469e-10,
+      "max_scaled": 1.1582099230306791e-11,
+      "rms": 1.1769882572459993e-10
+    },
+    {
+      "order": [
+        0,
+        0,
+        2
+      ],
+      "max_absolute": 5.851319428984425e-10,
+      "max_scaled": 8.090713284521673e-12,
+      "rms": 1.85006097485711e-10
+    },
+    {
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "max_absolute": 2.6269475483786664e-10,
+      "max_scaled": 1.6345451412133924e-11,
+      "rms": 8.305417590426628e-11
+    }
+  ],
+  "seconds": 0.009499416686594486,
+  "scope": "Known-function analytic reconstruction, no fitting; NOT a PDE solve",
+  "forward_contains_polynomials": false,
+  "forward_contains_product_gates": false,
+  "export": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/pure_mlp_repair/ridge_frame_d3_p6_n129_a6.pt"
+}

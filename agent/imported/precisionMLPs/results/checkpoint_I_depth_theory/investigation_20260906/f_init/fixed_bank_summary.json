@@ -1,0 +1,86 @@
+[
+  {
+    "task": "airfoil",
+    "model": "Dense, default",
+    "params": 1749,
+    "test_mse_mean": 0.16095669729843054,
+    "test_mse_std": 0.004761857882382278
+  },
+  {
+    "task": "airfoil",
+    "model": "Dense, QI both",
+    "params": 1749,
+    "test_mse_mean": 0.12951749261613266,
+    "test_mse_std": 0.01446349336654808
+  },
+  {
+    "task": "airfoil",
+    "model": "Block, sampled bank",
+    "params": 1749,
+    "test_mse_mean": 0.08909503367202416,
+    "test_mse_std": 0.013479276076234257
+  },
+  {
+    "task": "airfoil",
+    "model": "Block, uniform bank",
+    "params": 1749,
+    "test_mse_mean": 0.08960176739800034,
+    "test_mse_std": 0.009568036072177185
+  },
+  {
+    "task": "parkinsons",
+    "model": "Dense, default",
+    "params": 1905,
+    "test_mse_mean": 0.41505558587078,
+    "test_mse_std": 0.011245187216111004
+  },
+  {
+    "task": "parkinsons",
+    "model": "Dense, QI both",
+    "params": 1905,
+    "test_mse_mean": 0.3703379453474722,
+    "test_mse_std": 0.014795814357616241
+  },
+  {
+    "task": "parkinsons",
+    "model": "Block, sampled bank",
+    "params": 1917,
+    "test_mse_mean": 0.3554770814792813,
+    "test_mse_std": 0.0013479720948251493
+  },
+  {
+    "task": "parkinsons",
+    "model": "Block, uniform bank",
+    "params": 1917,
+    "test_mse_mean": 0.3275359634672632,
+    "test_mse_std": 0.010435239412438065
+  },
+  {
+    "task": "bike_sharing",
+    "model": "Dense, default",
+    "params": 1837,
+    "test_mse_mean": 0.09189327048941942,
+    "test_mse_std": 0.0009649123313623498
+  },
+  {
+    "task": "bike_sharing",
+    "model": "Dense, QI both",
+    "params": 1837,
+    "test_mse_mean": 0.08334812600913706,
+    "test_mse_std": 0.006776012245211209
+  },
+  {
+    "task": "bike_sharing",
+    "model": "Block, sampled bank",
+    "params": 1833,
+    "test_mse_mean": 0.08142128672737588,
+    "test_mse_std": 0.003560785560885106
+  },
+  {
+    "task": "bike_sharing",
+    "model": "Block, uniform bank",
+    "params": 1833,
+    "test_mse_mean": 0.08044212417769002,
+    "test_mse_std": 0.0023619729805263896
+  }
+]

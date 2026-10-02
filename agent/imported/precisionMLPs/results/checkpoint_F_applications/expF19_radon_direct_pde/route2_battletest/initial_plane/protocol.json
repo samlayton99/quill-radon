@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "cases": [
+    "allen_cahn_d001",
+    "allen_cahn_d00001"
+  ],
+  "seed": 0,
+  "degrees": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    40,
+    48
+  ],
+  "centers": 257,
+  "lam": 0.2,
+  "max_seconds": 600,
+  "max_iterations": 20,
+  "tolerance": 1e-08,
+  "batch_size": 64,
+  "oversampling": 6,
+  "inner_cap": 1000,
+  "preconditioner_block_cap": 512,
+  "source_policy": "Only prescribed IC x^2*cos(pi*x) is analytically encoded; zero/native PDE corrections. No interior truth or external trajectory.",
+  "architecture": "One ordinary Linear/Tanh/Linear model; paired correction neurons plus fixed IC neurons.",
+  "constraint": "Correction F_q(x,t)-F_q(x,0) is symbolically zero at initial time; ordinary floating-sum and IC encoding errors audited.",
+  "note": "Same equations as forward campaign, separate geometry/control protocol, not a runtime-isolated ablation.",
+  "compatibility": "Published periodic IC has mismatched endpoint first derivatives at t=0. No uniform corner derivative precision claim.",
+  "limits": "Soft budgets around Krylov work; all degrees/statuses retained. Sampled residuals are not continuum certificates.",
+  "implementation_sha256": "a499eacadc2b162f99702860845dc7557fc1b975de70df980575ef245655e315"
+}

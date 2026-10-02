@@ -1,0 +1,37 @@
+{
+  "spatial_relative_differences": [
+    3.62765095594014e-16,
+    1.611284885602004e-06,
+    3.7084140395229096e-06,
+    1.601680196186357e-06,
+    4.647427249712878e-07
+  ],
+  "time_relative_differences": [
+    0.0,
+    5.98936592872459e-10,
+    3.906591128065341e-10,
+    2.2774904788667078e-10,
+    1.5984707330231911e-10
+  ],
+  "check_times": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "spatial_reference_cutoff": 17,
+  "production_cutoff": 13,
+  "production_dt": 0.008333333333333333,
+  "time_check_dt": 0.004166666666666667,
+  "maximum_sampled_physical_residual": 0.00011438981882076441,
+  "maximum_sampled_divergence": 3.802513859341161e-15,
+  "maximum_relative_energy_defect": 5.10968021792443e-16,
+  "particle_velocity_interpolation_max": 2.3078365957500433e-05,
+  "position_quantization_max_absolute": 4.817930593015163e-05,
+  "frames": 121,
+  "particles": 738,
+  "fragment_bytes": 846165,
+  "trajectory_sha256": "4d1e90889ddc277d8f99283362c2fc2612922b6b6162837eb835bd19ba8a187b",
+  "interpretation": "Native QUILL PDE dynamics, with passive material sheets/tracers. Numerical time integration; no neural training/readout fit. Visualization interpolation and quantization do not affect PDE dynamics."
+}

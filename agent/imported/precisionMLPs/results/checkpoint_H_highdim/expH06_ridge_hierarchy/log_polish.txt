@@ -1,0 +1,5 @@
+  polish M=128 N=32 radial_runge   before=1.01e-08 after=1.11e-10 train 1.2e-08->1.5e-10 moved max 6.28 deg [778s]
+  polish M=128 N=32 fast_waves     before=5.93e-10 after=1.14e-10 train 7.7e-10->1.4e-10 moved max 5.92 deg [1034s]
+  polish M=128 N=32 gauss_bump     before=4.80e-12 after=4.70e-12 train 5.9e-12->5.8e-12 moved max 12.13 deg [160s]
+  polish M=128 N=32 composition    before=1.13e-10 after=4.65e-12 train 1.4e-10->5.3e-12 moved max 10.48 deg [320s]
+saved /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_H_highdim/expH06_ridge_hierarchy/polish_d3.json

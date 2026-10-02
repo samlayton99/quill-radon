@@ -1,0 +1,30 @@
+{
+  "task": "unsupervised manifold compression then frozen ridge bank",
+  "dtype": "float64",
+  "device": "cpu",
+  "seed": 1,
+  "steps": 6000,
+  "train": 4096,
+  "validation": 1024,
+  "test": 4096,
+  "encoder": "PCA residual 24-64-64-3",
+  "decoder": "3-64-64-24 residual",
+  "targets": [
+    "product_wave",
+    "composition",
+    "gaussian"
+  ],
+  "bandwidths": [
+    0.15,
+    0.25,
+    0.4
+  ],
+  "rconds": [
+    1e-08,
+    1e-10,
+    1e-12,
+    1e-14
+  ],
+  "lbfgs_blocks": 40,
+  "lbfgs_max_iterations_per_block": 100
+}

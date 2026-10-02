@@ -1,0 +1,223 @@
+{
+  "config": {
+    "run_id": "P005_ideal_native_parity_long",
+    "basis": "ideal",
+    "grouping": "auto",
+    "block_size": 1024,
+    "iterations": 4000,
+    "started": "2026-10-02 07:23:57 UTC",
+    "threads": 1,
+    "dtype": "float64",
+    "source_sha256": "2322b1e8af9f1e24d50a7191eed3d54f45a2d938136d02a535f81152a94e7715",
+    "reference_used_in_fit": false,
+    "scope": "Dense diagnostic only, not production scaling",
+    "weighting": "fixed zero-jet PDE normalization",
+    "lsmr_tolerance": 1e-14,
+    "gram_ridge": 1e-10,
+    "qr_relative_rank_guard": 1e-13,
+    "parity_metadata": {
+      "shifts": [
+        [
+          0,
+          0
+        ]
+      ],
+      "axis_mask": [
+        true,
+        true
+      ],
+      "inconsistent_axes": [],
+      "constraint_edges": 0,
+      "blocks_ignored": 0,
+      "equations_considered": 2,
+      "constant_terms": 1,
+      "varying_terms_ignored": 4,
+      "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+    }
+  },
+  "status": "complete",
+  "variants": [
+    {
+      "kind": "diagonal",
+      "lsmr_istop": 7,
+      "lsmr_iterations": 4000,
+      "estimated_residual_norm": 6.891358107263144e-06,
+      "algebraic_residual_norm": 6.891358107285374e-06,
+      "normal_residual_norm": 5.3727534298469425e-09,
+      "setup_seconds": 0.10021337494254112,
+      "solve_seconds": 3.0520085422322154,
+      "work_counts": {
+        "matvec": 4000,
+        "rmatvec": 4001
+      },
+      "block_spectra": [
+        {
+          "size": 153,
+          "singular_min": 1.6654549632404223e-10,
+          "singular_max": 8.562091726168523,
+          "condition": 51409926507.46638
+        },
+        {
+          "size": 136,
+          "singular_min": 5.069252251822524e-10,
+          "singular_max": 10.029961839224127,
+          "condition": 19785880325.087593
+        },
+        {
+          "size": 136,
+          "singular_min": 5.057800119881803e-10,
+          "singular_max": 10.030526182511565,
+          "condition": 19831796324.02312
+        },
+        {
+          "size": 136,
+          "singular_min": 1.0329004578179974e-09,
+          "singular_max": 8.294964883744294,
+          "condition": 8030749547.02548
+        }
+      ],
+      "preconditioned_condition": 123256526020.83833,
+      "preconditioned_singular_min": 1.433808056330748e-10,
+      "preconditioned_singular_max": 17.672620000401846,
+      "factor_bytes": 631176,
+      "ordinary_relative_l2": 3.811307393778074e-07,
+      "ideal_relative_l2": 3.8112677874060255e-07,
+      "stable_neural_relative_l2": 3.811267777604447e-07,
+      "ordinary_vs_ideal_relative_l2": 4.973082019982236e-11,
+      "ordinary_pde_rms": 0.00031753351418131287,
+      "ordinary_pde_max": 0.0019743480223866072,
+      "ideal_pde_rms": 0.00031753372298883644,
+      "boundary_rms": 2.1687078261679797e-06,
+      "readout_l1": 449062.9862043334,
+      "coordinate_norm": 1.1739445533986146,
+      "fit_basis": "ideal",
+      "field_points": 2048,
+      "pde_points": 257,
+      "reference_used_in_fit": false
+    },
+    {
+      "kind": "gram_ridge",
+      "lsmr_istop": 7,
+      "lsmr_iterations": 4000,
+      "estimated_residual_norm": 6.731825634318946e-09,
+      "algebraic_residual_norm": 6.731824295254977e-09,
+      "normal_residual_norm": 1.03948492235688e-11,
+      "setup_seconds": 0.10495300032198429,
+      "solve_seconds": 3.056911875028163,
+      "work_counts": {
+        "matvec": 4000,
+        "rmatvec": 4001
+      },
+      "block_spectra": [
+        {
+          "size": 153,
+          "singular_min": 1.6654549632404223e-10,
+          "singular_max": 8.562091726168523,
+          "condition": 51409926507.46638
+        },
+        {
+          "size": 136,
+          "singular_min": 5.069252251822524e-10,
+          "singular_max": 10.029961839224127,
+          "condition": 19785880325.087593
+        },
+        {
+          "size": 136,
+          "singular_min": 5.057800119881803e-10,
+          "singular_max": 10.030526182511565,
+          "condition": 19831796324.02312
+        },
+        {
+          "size": 136,
+          "singular_min": 1.0329004578179974e-09,
+          "singular_max": 8.294964883744294,
+          "condition": 8030749547.02548
+        }
+      ],
+      "preconditioned_condition": 139465.12734450714,
+      "preconditioned_singular_min": 1.4338249032997444e-05,
+      "preconditioned_singular_max": 1.999685727284245,
+      "factor_bytes": 631176,
+      "ordinary_relative_l2": 6.27189073253734e-11,
+      "ideal_relative_l2": 6.169174391319121e-11,
+      "stable_neural_relative_l2": 6.169194536496406e-11,
+      "ordinary_vs_ideal_relative_l2": 8.135876991357612e-12,
+      "ordinary_pde_rms": 4.4200968010350973e-07,
+      "ordinary_pde_max": 2.209254695628715e-06,
+      "ideal_pde_rms": 4.414442832917548e-07,
+      "boundary_rms": 3.583443054884645e-10,
+      "readout_l1": 56312.560022684935,
+      "coordinate_norm": 1.1867275950319855,
+      "fit_basis": "ideal",
+      "field_points": 2048,
+      "pde_points": 257,
+      "reference_used_in_fit": false
+    },
+    {
+      "kind": "qr",
+      "lsmr_istop": 2,
+      "lsmr_iterations": 2175,
+      "estimated_residual_norm": 3.3910683216458627e-09,
+      "algebraic_residual_norm": 1.731843766734397e-08,
+      "normal_residual_norm": 8.891035770250344e-08,
+      "setup_seconds": 0.14521312480792403,
+      "solve_seconds": 1.6599595840089023,
+      "work_counts": {
+        "matvec": 2175,
+        "rmatvec": 2176
+      },
+      "block_spectra": [
+        {
+          "size": 153,
+          "singular_min": 1.6654549632404223e-10,
+          "singular_max": 8.562091726168523,
+          "condition": 51409926507.46638
+        },
+        {
+          "size": 136,
+          "singular_min": 5.069252251822524e-10,
+          "singular_max": 10.029961839224127,
+          "condition": 19785880325.087593
+        },
+        {
+          "size": 136,
+          "singular_min": 5.057800119881803e-10,
+          "singular_max": 10.030526182511565,
+          "condition": 19831796324.02312
+        },
+        {
+          "size": 136,
+          "singular_min": 1.0329004578179974e-09,
+          "singular_max": 8.294964883744294,
+          "condition": 8030749547.02548
+        }
+      ],
+      "preconditioned_condition": 1418.6890855205993,
+      "preconditioned_singular_min": 0.00140954420861173,
+      "preconditioned_singular_max": 1.9997049843162322,
+      "factor_bytes": 631176,
+      "ordinary_relative_l2": 4.6493486999929017e-10,
+      "ideal_relative_l2": 4.649384540391745e-10,
+      "stable_neural_relative_l2": 4.649384278713692e-10,
+      "ordinary_vs_ideal_relative_l2": 2.1742855937134924e-13,
+      "ordinary_pde_rms": 4.2598312643653285e-07,
+      "ordinary_pde_max": 2.0863538310322838e-06,
+      "ideal_pde_rms": 4.260388535484417e-07,
+      "boundary_rms": 3.3607464159148847e-10,
+      "readout_l1": 2831.9956497792564,
+      "coordinate_norm": 1.174861146109099,
+      "fit_basis": "ideal",
+      "field_points": 2048,
+      "pde_points": 257,
+      "reference_used_in_fit": false
+    }
+  ],
+  "unpreconditioned_column_scaled_condition": 123256526020.83833,
+  "shape": [
+    5222,
+    561
+  ],
+  "matrix_bytes": 23436336,
+  "seconds": 9.81746641593054,
+  "process_peak_rss_bytes": 450789376
+}

@@ -1,0 +1,71 @@
+{
+  "bounds": [
+    0.005,
+    0.2
+  ],
+  "case_noise": [
+    0.0,
+    0.001
+  ],
+  "initial_viscosity": 0.05,
+  "inner": {
+    "batch_size": 128,
+    "centers": 257,
+    "check_points": 1025,
+    "coordinates": "disk",
+    "degrees": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48
+    ],
+    "export_check_points": 1025,
+    "lam": 0.2,
+    "max_iterations": 20,
+    "max_seconds": 1200.0,
+    "maximum_working_array_mb": 512,
+    "tolerance": 1e-08
+  },
+  "limitations": [
+    "Same-method synthetic reference, not experimental or independent-discretization inverse validation; finer degree/N and separate samples reduce but do not eliminate inverse-crime concerns.",
+    "Sampled physical and richer-resolution checks are not continuum existence/uniqueness certificates.",
+    "Local scalar finite differences do not prove global parameter identifiability.",
+    "Concurrent runs mean wall-clock measurements are not isolated speed comparisons."
+  ],
+  "outer": {
+    "data_tolerance": 1e-08,
+    "difference_step": 0.001,
+    "gradient_tolerance": 1e-09,
+    "max_forward_solves": 36,
+    "max_iterations": 8,
+    "max_seconds": 3600.0,
+    "parameter_scale": [
+      0.05
+    ],
+    "step_tolerance": 1e-08,
+    "truncate_warm_starts": true
+  },
+  "reference": {
+    "centers": 513,
+    "degree": 56,
+    "path": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/lowviscosity_resolution_check_disk_stirring_nu0.03_p56_n513_ordinary_mlp.pt",
+    "purpose": "Observation generator and held-out audit only",
+    "sha256": "36597ccf648b447074628f9d4df58908723e22601174978d14807a387e69a932",
+    "viscosity": 0.03
+  },
+  "sensors": {
+    "fields": [
+      "u",
+      "v"
+    ],
+    "noise_seed": 812739,
+    "points": 16,
+    "scalar_values": 32,
+    "seed": 431819
+  },
+  "source_policy": "Only32 sensor values/locations and known noise scale enter inverse. No reference coefficients, whole field, true viscosity or external PDE trajectory enters initialization, inner physics or parameter selection. Every case starts zero, followed by native continuation and algebraic truncation of current validated native coordinates.",
+  "task": "Reduced native inverse viscosity in zero-force wall-driven disk Navier-Stokes",
+  "version": 1
+}

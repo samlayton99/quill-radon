@@ -1,0 +1,30 @@
+{
+  "kind": "archived independent Fourier/DOP853 evaluator, opened after saved fit",
+  "path": "results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/forward/accuracy_v2/allen_cahn_d001_evaluation_reference.npz",
+  "sha256": "26c09df7e0af7a837bda27999c54c4fc1465eb0181fc867814bd1b0a30da0053",
+  "metadata": {
+    "coarse": {
+      "grid": 512,
+      "seconds": 0.7282055420801044,
+      "nfev": 15518,
+      "accepted_steps": 1021,
+      "rtol": 2e-11,
+      "atol": 2e-12,
+      "scope": "Evaluation-only Fourier collocation/DOP853 reference, never supplied to native model"
+    },
+    "fine": {
+      "grid": 1024,
+      "seconds": 3.2250862498767674,
+      "nfev": 60965,
+      "accepted_steps": 4054,
+      "rtol": 2e-11,
+      "atol": 2e-12,
+      "scope": "Evaluation-only Fourier collocation/DOP853 reference, never supplied to native model"
+    },
+    "fit_artifacts_existed_before_reference": true
+  },
+  "queries_exactly_match": true,
+  "reference_resolution_difference_relative_l2": 2.293379186152951e-06,
+  "reference_used_in_fit": false,
+  "caveat": "Reference disagreement is empirical uncertainty, not a certified bound. No machine-floor claim from this reference."
+}

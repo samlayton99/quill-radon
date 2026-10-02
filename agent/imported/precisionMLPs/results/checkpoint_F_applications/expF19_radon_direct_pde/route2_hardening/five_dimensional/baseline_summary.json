@@ -1,0 +1,117 @@
+{
+  "status": "manual_resource_interruption",
+  "protocol_sha256": "86c35eed4e6d1c597a7836a82a250c019aeb4f1b2442171cb22c0ef43b3bcfed",
+  "core_source_hashes_at_startup": "not recorded for original baseline",
+  "termination": {
+    "status": "manual_resource_interruption",
+    "elapsed_seconds": 929.0508816242218,
+    "planned_external_ceiling_seconds": 900,
+    "signal": "SIGINT",
+    "process_id": 20594,
+    "original_frozen_budget": "900s soft between indivisible numerical calls",
+    "amendment": "Assistant imposed an external resource ceiling after the actual-J LSMR call ceased to honor a practical bounded run; this is not the frozen solver returning time_budget.",
+    "last_saved_iteration": {
+      "iteration": 4,
+      "objective": 8.721026706778832e-13,
+      "maximum_scaled_block_rms": 1.2304702514517075e-06,
+      "damping": 5.6154670253906555e-14,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "actual",
+      "elapsed_seconds": 356.03473312500864,
+      "linearization_fallbacks": [
+        "previous_ideal_step_negligible"
+      ],
+      "tight_actual_model_check": "previous_accepted_inexact_step_negligible",
+      "degree": 6,
+      "saved_initialization": "zero then native previous-stage coefficients only"
+    },
+    "accepted_p6_checkpoint_audited": true,
+    "p6_stage_completed": false,
+    "p8_attempted": false,
+    "physical_footprint_peak_reported_mb": 216.0,
+    "physical_footprint_source": "macOS sample at ~808s; not peak RSS",
+    "sampled_rss_kib": 142160,
+    "scope": "Baseline retained; new control uses a separate directory and cold initialization."
+  },
+  "stages": [
+    {
+      "degree": 4,
+      "completed": true,
+      "scope": "Driver advanced to degree 6",
+      "ordinary_audit": {
+        "field_relative_l2": 3.315557059332499e-05,
+        "field_max_absolute": 0.00018655905995990096,
+        "pde_rms": 8.882627534149481e-05,
+        "pde_max": 0.00024857466192829136,
+        "boundary_rms": 4.641745915711697e-05,
+        "boundary_max": 0.00019532275696310109,
+        "corner_rms": 0.00038553238500671423,
+        "corner_max": 0.0009414001676921746,
+        "ordinary_minus_stable_rms": 2.39369859446566e-15,
+        "readout_l1": 1.4533009663015486,
+        "model_parameter_bytes": 5355008,
+        "architecture": [
+          "Linear",
+          "Tanh",
+          "Linear"
+        ],
+        "interior_truth_used_only_after_solver_returned": true,
+        "degree": 4,
+        "directions": 625,
+        "neurons": 95625
+      }
+    },
+    {
+      "degree": 6,
+      "completed": false,
+      "scope": "Last accepted native state; actual-Jacobian check interrupted before returning",
+      "ordinary_audit": {
+        "field_relative_l2": 3.4166083597610045e-07,
+        "field_max_absolute": 2.5469946869360882e-06,
+        "pde_rms": 1.3144802325631373e-06,
+        "pde_max": 4.521991349371035e-06,
+        "boundary_rms": 4.7593295372921333e-07,
+        "boundary_max": 2.5135745778115393e-06,
+        "corner_rms": 8.135213696463744e-06,
+        "corner_max": 2.4262392966267754e-05,
+        "ordinary_minus_stable_rms": 5.613028738594783e-15,
+        "readout_l1": 1.4808318299630077,
+        "model_parameter_bytes": 20571776,
+        "architecture": [
+          "Linear",
+          "Tanh",
+          "Linear"
+        ],
+        "interior_truth_used_only_after_solver_returned": true,
+        "degree": 6,
+        "directions": 2401,
+        "neurons": 367353,
+        "coefficient_sha256": "ba23c4effd5ec23dd4659856af0283e0c585b682ee6cd7fae1bfe1705ceb033c",
+        "source_iteration_record": {
+          "iteration": 4,
+          "objective": 8.721026706778832e-13,
+          "maximum_scaled_block_rms": 1.2304702514517075e-06,
+          "damping": 5.6154670253906555e-14,
+          "scheduled_inner_tolerance": 2.220446049250313e-16,
+          "tight_inner_switch_rms": 1.4901161193847656e-08,
+          "linearization_basis": "actual",
+          "elapsed_seconds": 356.03473312500864,
+          "linearization_fallbacks": [
+            "previous_ideal_step_negligible"
+          ],
+          "tight_actual_model_check": "previous_accepted_inexact_step_negligible",
+          "degree": 6,
+          "saved_initialization": "zero then native previous-stage coefficients only"
+        },
+        "stage_completed": false,
+        "scope": "Audit of last accepted saved native state; the next actual-Jacobian correction has not completed."
+      }
+    },
+    {
+      "degree": 8,
+      "attempted": false
+    }
+  ],
+  "reference_used_to_fit": false
+}

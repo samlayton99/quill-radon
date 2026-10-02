@@ -1,0 +1,55 @@
+{
+  "ordinary_velocity_relative_l2": 7.933563008592008e-15,
+  "ordinary_pressure_relative_l2": 1.5567013346245123e-14,
+  "ordinary_velocity_max_abs": 4.0245584642661925e-15,
+  "ordinary_pressure_max_abs": 2.275957200481571e-15,
+  "ordinary_momentum_rms": 8.944865201819118e-16,
+  "ordinary_momentum_max_abs": 1.1948775302528247e-14,
+  "ordinary_divergence_rms": 1.0342313289582684e-16,
+  "ordinary_divergence_max_abs": 1.2302796501781353e-15,
+  "ordinary_vs_grouped_max_abs": 4.08006961549745e-15,
+  "ordinary_readout_l1_per_field": [
+    0.5860115234707365,
+    0.5876874452086418,
+    0.5889567897292217,
+    0.24547669830392305
+  ],
+  "ordinary_parameter_bytes": 5382368,
+  "value_audit_points": 2048,
+  "derivative_audit_points": 1024,
+  "constraints": {
+    "velocity_boundary": {
+      "rms": 7.550775842984067e-16,
+      "max_abs": 3.0253577421035516e-15
+    },
+    "pressure_gauge": {
+      "rms": 2.7972416050126014e-17,
+      "max_abs": 2.7972416050126014e-17
+    }
+  },
+  "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+  "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve",
+  "all_corners": {
+    "points": 8,
+    "maximum_field_error": 2.5604518505417673e-15,
+    "momentum_rms": 3.4490058484002003e-15,
+    "momentum_max_abs": 5.97091820431217e-15,
+    "divergence_rms": 9.968643003393938e-16
+  },
+  "larger_constraint_audit": {
+    "velocity_boundary": {
+      "points": 1024,
+      "rms": 7.875547628745841e-16,
+      "maximum_absolute": 5.717648576819556e-15
+    },
+    "pressure_gauge": {
+      "points": 1,
+      "rms": 2.7972416050126014e-17,
+      "maximum_absolute": 2.7972416050126014e-17
+    }
+  },
+  "source_archive": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/trig_p16_n257_native_ideal_correction.npz",
+  "seconds": 8.854498374741524,
+  "process_peak_rss_bytes": 429654016,
+  "policy": "No solve, no coefficient update; saved native network only. Finite sampled checks, not a continuum certificate."
+}

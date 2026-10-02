@@ -1,0 +1,9 @@
+problem verified: NS residual (FD) mom 9.0e-10 div 3.1e-11; curl of advection 2.32 (non-gradient)
+dynamic W=4096 N=24 M=170 units=4080 rows=46037 cols=12243 w_mult=3.0 warm=yes
+    warm start fitted: rel_v 1.77e-09 rel_p 6.45e-08
+    GN  1 stacked 1.48e-06 -> 3.79e-10  pde_max 7.02e-11  alpha 1  rank 10113  solve 290s  rel_l2_v 4.81e-12  rel_l2_p 3.65e-10
+    GN  2 stacked 3.79e-10 -> 2.79e-10  pde_max 6.81e-11  alpha 1  rank 10113  solve 291s  rel_l2_v 5.23e-12  rel_l2_p 5.08e-10
+    GN  3 stacked 2.79e-10 -> 2.79e-10  pde_max 6.81e-11  alpha 1  rank 10113  solve 291s  rel_l2_v 5.26e-12  rel_l2_p 5.10e-10
+dynamic W= 4096 N=24 done: rel_v=1.07e-11 rel_p=8.61e-10 linf_v=1.1e-09 mom_rms=3.4e-10 div_max=6.3e-10 iters=3 [1172s]
+plots written
+gif -> /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF18_ns_spacetime/figures/ns2d.gif

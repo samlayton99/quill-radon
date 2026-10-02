@@ -1,0 +1,129 @@
+{
+  "experiment": "expF19_radon_direct_pde",
+  "date": "2026-09-30",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "numpy": "2.5.1",
+  "scipy": "1.18.0",
+  "torch": "2.4.1",
+  "requested_threads": 1,
+  "precision": "float64",
+  "scope": "No-training Radon/ridge neural encoding of linear PDE propagators, numerical nonlinear evolution, dimensional scaling, low-dimensional physical inverse problems.",
+  "code_sha256": {
+    "inverse.py": "6182523414777fb89180475230fa6ca6f317a32ae46c9bf0c4c8d1e802ca01fa",
+    "linear.py": "f3b89170ede2701f437509f4d2400dec91ad398b953488f7069c2810f5a6a821",
+    "linear_numerical.py": "fbc66897912ae8cb88f1f6eb90e58577d4b4748164c44f6be0e2cb2615fd33d9",
+    "linear_verify.py": "36e4fe6c92f408685e7389615b3a4df723d31fa42ecdcf5ea7f07029fca067e2",
+    "linear_wave.py": "6393e9d2bee2bf791c72dc8963c64a4944c890831b7daf42e14cb782db771fd4",
+    "nonlinear_pde.py": "e6c2371dbc7ec0ded9f7331eb761315804ccdbf34437ed7fb091158bf364eee8",
+    "nonlinear_postprocess.py": "4dd229d45552c0c4a5b03b1b465b70902a11ac987654827128899c063f912c9a",
+    "nonlinear_validation.py": "202225fef916590a46a27605c85dd44522ac5f0d5de4f729a2c6d453efdde5d0",
+    "scaling.py": "384565f3cc706193c208d2820a3501a05b7d1bab636c4bbe210bce6ccb7706b3",
+    "scaling_adapted.py": "36e1b585a50b062f8b7df84ce3864d96332e82478131cf527e35b4ec735ea633",
+    "scaling_controls.py": "a89bcf36ab2c429ee12159ee13946e04f62e63e1bc182d3827a138f135ced9f7",
+    "scaling_structured.py": "1e2e662ff87bef8f9081320adda2f977c69e9df9c41c1f3ae1de5bb9e3d91338"
+  },
+  "reproduction_prefix": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python",
+  "scripts": [
+    "linear.py",
+    "linear_numerical.py",
+    "linear_wave.py",
+    "linear_verify.py",
+    "nonlinear_pde.py",
+    "nonlinear_validation.py",
+    "scaling.py --mode all",
+    "scaling_structured.py",
+    "scaling_adapted.py",
+    "scaling_controls.py",
+    "inverse.py"
+  ],
+  "claims_requirements": [
+    "No forward interior labels used to fit weights",
+    "Exact or independent refined references only for verification",
+    "State analytic propagation vs numerical evolution vs optimization separately",
+    "Heat and NS snapshots use time-varying readouts; wave is fixed four-input network",
+    "Whole-space or periodic domains; arbitrary walls and turbulent accuracy not established",
+    "Six-parameter inverse least squares disclosed separately from explicit readout construction"
+  ],
+  "validation_note": "All scripts parsed; all result JSON parsed with NaN/Infinity rejected; physical/autograd/refinement checks are recorded in the component result directories.",
+  "quill_followup": {
+    "date": "2026-09-30",
+    "scripts": [
+      "quill_boundary.py",
+      "quill_sweep.py",
+      "quill_ns_sweep.py --stage all"
+    ],
+    "code_sha256": {
+      "quill_boundary.py": "5c1594c8dc25812d7f1e4f343f4971b82cca05a1e79fee5a1ebc5030c1ac60b0",
+      "quill_ns_sweep.py": "75057372ebe097cee47c77a0f5fa5d237eb3cde5e4554a6288c69edba654f951",
+      "quill_sweep.py": "31be50bfca0d5bec057736bb2b3513d0665e14aca6c0aee9320ff7f5034fecb8"
+    },
+    "outputs": "quill_review/",
+    "interior_convention": "N interior centers, n_cells=N-1, R=ceil(sqrt(N)) per side; total M*(N+2R)",
+    "scalar_boundary_diagnostic_convention": "quill_boundary standalone follows paper N interval cells; see boundary_method.md",
+    "no_least_squares": true,
+    "ns_scope": "Encoding and direction pruning of saved Fourier states. No new fluid evolution, no native neural PDE solver.",
+    "validation": [
+      "independent 60-digit boundary implementation",
+      "contour quadrature refinement",
+      "value/gradient/Laplacian and boundaries",
+      "independent allocation-floor predictions",
+      "denser heldout Gaussian points",
+      "same-point saved-NS baseline comparisons"
+    ],
+    "qualifications": [
+      "empirical sampled relative norms, not certified continuous L2",
+      "best tested settings, not global optimum",
+      "64^3 balanced NS comparison is a triangle-inequality upper bound, not new direct measurement"
+    ]
+  },
+  "native_dynamics_followup": {
+    "scripts": {
+      "native_ns_refine.py": "0c67f9b9855e5284c54e27050deb5765be5c5b76305c58f0e395999532b34c4f",
+      "native_taylor.py": "b6408f9353fc78fb4a0ec33b711b62f87f577cd4c94b2bcf5e7d69d5467c8a71",
+      "native_tanh.py": "7581f41ae8875525ce16b6d58845c8dc68e58c37ca7c62ef2283eedcbaa28609",
+      "native_ns_pilot.py": "0dbf66be82c3d2682042f8bd8fd14df73cd64046e1d844e86f54ba4168da38ce",
+      "native_burgers.py": "e0470120ef867a5a79f2ff42ea11810f3cf19794d37c9c993d74a968ed0a48c4"
+    },
+    "method": "theta_dot=E A F(S theta); explicit real-data analysis and QUILL encoding; cubic local-map control; direct finite time Taylor construction",
+    "reference_policy": "No external solution enters dynamics or Taylor construction; references run only afterward for validation",
+    "outcome": "Burgers and short smooth interacting 3D Navier-Stokes evolve without training or a readout linear solve. Native Fourier-bridged method is modified spectral evolution, not a demonstrated classical-solver speedup.",
+    "taylor_scope": "T=.05, degree12; finite K5 projected ODE, no production time marching. Local analytic convergence, not universal full-PDE closed form.",
+    "limitations": [
+      "spatial quadrature and spectral intermediates retained",
+      "dense O(PQ) inference/operator storage or cached reduced fields",
+      "short smooth periodic tests only",
+      "cost comparisons are single-run diagnostics not tuned benchmarks"
+    ]
+  },
+  "pinn_capability_followup": {
+    "scripts": {
+      "native_inverse.py": "7684aa7b18273ebd2055f54602f5cccbc2f68135fba280b08e7a41b6ea441622",
+      "native_elliptic.py": "eabfd090fa09afe624089988b2469ba3b399998a94ebe4466e92d35c8e25a7ac"
+    },
+    "outputs": "capabilities/",
+    "scope": "Nonlinear Burgers sparse-data three-physical-parameter inversion; nonlinear square-Dirichlet steady PDE using actual QUILL ridge fields and preconditioned residual updates.",
+    "no_neural_readout_fit": true,
+    "inverse_solve": "Explicitly disclosed 24x3 physical-parameter least-squares Jacobian; tangent RK4 sensitivities verified.",
+    "reference_policy": "Forward elliptic reference computed after native solves; inverse accepts only sparse synthetic measurements from separate refined classical dynamics, withheld fields excluded from inference.",
+    "limitations": [
+      "structured spectral bridge remains",
+      "no generic nonlinear closed form",
+      "low-dimensional identifiable inverse only",
+      "no new matched Adam/L-BFGS head-to-head",
+      "single-run timings, include cache construction",
+      "elliptic reference shares sine discretization family",
+      "uncertainty and arbitrary geometry not implemented"
+    ],
+    "validation": [
+      "tangent finite-difference comparison",
+      "actual-neural vs compressed RHS equivalence",
+      "noise repeats and identifiability negative control",
+      "elliptic spatial refinement and off-grid physical residual",
+      "independent audit of ridge derivatives and quadrature",
+      "iteration local spectral-radius diagnosis",
+      "native construction+solve guarded against FFT or global linear algebra solves"
+    ]
+  }
+}

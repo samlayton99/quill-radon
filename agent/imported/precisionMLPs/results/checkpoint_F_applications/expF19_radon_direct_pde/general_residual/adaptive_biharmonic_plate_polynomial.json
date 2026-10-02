@@ -1,0 +1,560 @@
+{
+  "case": "biharmonic_plate",
+  "backend": "polynomial",
+  "metrics": {
+    "seconds": 0.1621565418317914,
+    "tolerance": 1e-06,
+    "status": "sampled_checks_passed",
+    "validated": true,
+    "stages": 3,
+    "best_residual_stage": 1,
+    "reference_solution_used": false,
+    "validation_scope": "Fresh equation/constraint residuals and successive-field agreement; empirical, not continuum certification",
+    "equations_are_declarations": true,
+    "named_equation_dispatch": false,
+    "memory_budget_scope": "Cached basis jet estimate only; not whole-process RSS"
+  },
+  "history": [
+    {
+      "degree": 4,
+      "coefficients": 15,
+      "tanh_count": 0,
+      "interior_samples": 256,
+      "estimated_basis_cache_bytes": 138240,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 28.22368631302008,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "clamped_value",
+          "maximum_scaled_rms": 0.15403862129946921,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "clamped_normal_derivative",
+          "maximum_scaled_rms": 0.06906804235348293,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 28.22368631302008,
+      "successive_field_difference": null,
+      "solver": {
+        "status": "iteration_limit",
+        "converged": false,
+        "optimization_converged": false,
+        "iterations": 40,
+        "objective": 387.7006678334078,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 256,
+            "output_rows": 256,
+            "equations": 1,
+            "rms": 27.84552112758248,
+            "pre_relation_rms": 27.84552112758248,
+            "relation": "eq",
+            "active_entries": 256,
+            "scaled_rms": [
+              27.84552112758248
+            ],
+            "maximum_scaled_rms": 27.84552112758248,
+            "weighted_norm": 27.845521127582483
+          },
+          {
+            "name": "clamped_value",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.1537069536270915,
+            "pre_relation_rms": 0.1537069536270915,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.1537069536270915
+            ],
+            "maximum_scaled_rms": 0.1537069536270915,
+            "weighted_norm": 0.1537069536270915
+          },
+          {
+            "name": "clamped_normal_derivative",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 0.0682859618081707,
+            "pre_relation_rms": 0.0682859618081707,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              0.0682859618081707
+            ],
+            "maximum_scaled_rms": 0.0682859618081707,
+            "weighted_norm": 0.0682859618081707
+          }
+        ],
+        "residual_evaluations": 81,
+        "linearizations": 41,
+        "lsmr_iterations": 100,
+        "seconds": 0.06226641731336713,
+        "basis_setup_seconds": 0.00042291590943932533,
+        "basis_cache_bytes": 138240,
+        "unknowns": 15,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 4,
+          "coefficient_count": 15,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 4,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 1.800013706088066e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 9728,
+        "unassembled_dense_jacobian_bytes": 61440,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 100,
+          "rmatvec_calls": 500
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 512
+      },
+      "elapsed_seconds": 0.07181354193016887
+    },
+    {
+      "degree": 8,
+      "coefficients": 45,
+      "tanh_count": 0,
+      "interior_samples": 270,
+      "estimated_basis_cache_bytes": 429840,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 2.0332593954843708e-10,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "clamped_value",
+          "maximum_scaled_rms": 4.363116699217646e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "clamped_normal_derivative",
+          "maximum_scaled_rms": 7.996348732838765e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 7.996348732838765e-08,
+      "successive_field_difference": 0.11545484294401567,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 4,
+        "objective": 4.060852809468816e-15,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 270,
+            "output_rows": 270,
+            "equations": 1,
+            "rms": 2.0085227235255001e-10,
+            "pre_relation_rms": 2.0085227235255001e-10,
+            "relation": "eq",
+            "active_entries": 270,
+            "scaled_rms": [
+              2.0085227235255001e-10
+            ],
+            "maximum_scaled_rms": 2.0085227235255001e-10,
+            "weighted_norm": 2.0085227235255001e-10
+          },
+          {
+            "name": "clamped_value",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 4.393255909754692e-08,
+            "pre_relation_rms": 4.393255909754692e-08,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              4.393255909754692e-08
+            ],
+            "maximum_scaled_rms": 4.393255909754692e-08,
+            "weighted_norm": 4.393255909754692e-08
+          },
+          {
+            "name": "clamped_normal_derivative",
+            "input_rows": 128,
+            "output_rows": 128,
+            "equations": 1,
+            "rms": 7.86866921940608e-08,
+            "pre_relation_rms": 7.86866921940608e-08,
+            "relation": "eq",
+            "active_entries": 128,
+            "scaled_rms": [
+              7.86866921940608e-08
+            ],
+            "maximum_scaled_rms": 7.86866921940608e-08,
+            "weighted_norm": 7.868669219406081e-08
+          }
+        ],
+        "residual_evaluations": 9,
+        "linearizations": 5,
+        "lsmr_iterations": 664,
+        "seconds": 0.0737295406870544,
+        "basis_setup_seconds": 0.0007659588009119034,
+        "basis_cache_bytes": 429840,
+        "unknowns": 45,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 8,
+          "coefficient_count": 45,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 4,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 2.4250242859125137e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 10078,
+        "unassembled_dense_jacobian_bytes": 189360,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 664,
+          "rmatvec_calls": 704
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 526
+      },
+      "elapsed_seconds": 0.15161975007504225
+    },
+    {
+      "degree": 12,
+      "coefficients": 91,
+      "tanh_count": 0,
+      "interior_samples": 546,
+      "estimated_basis_cache_bytes": 1594320,
+      "validation": [
+        {
+          "name": "PDE",
+          "maximum_scaled_rms": 2.0332593954843708e-10,
+          "reuses_training_locations": false,
+          "points": 1009
+        },
+        {
+          "name": "clamped_value",
+          "maximum_scaled_rms": 4.363116699217646e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        },
+        {
+          "name": "clamped_normal_derivative",
+          "maximum_scaled_rms": 7.996348732838765e-08,
+          "reuses_training_locations": false,
+          "points": 248
+        }
+      ],
+      "maximum_validation_rms": 7.996348732838765e-08,
+      "successive_field_difference": 0.0,
+      "solver": {
+        "status": "converged",
+        "converged": true,
+        "optimization_converged": true,
+        "iterations": 0,
+        "objective": 4.014697742086772e-15,
+        "tolerance": 1e-07,
+        "blocks": [
+          {
+            "name": "PDE",
+            "input_rows": 546,
+            "output_rows": 546,
+            "equations": 1,
+            "rms": 2.0272843982602436e-10,
+            "pre_relation_rms": 2.0272843982602436e-10,
+            "relation": "eq",
+            "active_entries": 546,
+            "scaled_rms": [
+              2.0272843982602436e-10
+            ],
+            "maximum_scaled_rms": 2.0272843982602436e-10,
+            "weighted_norm": 2.0272843982602433e-10
+          },
+          {
+            "name": "clamped_value",
+            "input_rows": 184,
+            "output_rows": 184,
+            "equations": 1,
+            "rms": 4.415309624972866e-08,
+            "pre_relation_rms": 4.415309624972866e-08,
+            "relation": "eq",
+            "active_entries": 184,
+            "scaled_rms": [
+              4.415309624972866e-08
+            ],
+            "maximum_scaled_rms": 4.415309624972866e-08,
+            "weighted_norm": 4.415309624972867e-08
+          },
+          {
+            "name": "clamped_normal_derivative",
+            "input_rows": 184,
+            "output_rows": 184,
+            "equations": 1,
+            "rms": 7.79734472555589e-08,
+            "pre_relation_rms": 7.79734472555589e-08,
+            "relation": "eq",
+            "active_entries": 184,
+            "scaled_rms": [
+              7.79734472555589e-08
+            ],
+            "maximum_scaled_rms": 7.79734472555589e-08,
+            "weighted_norm": 7.79734472555589e-08
+          }
+        ],
+        "residual_evaluations": 1,
+        "linearizations": 1,
+        "lsmr_iterations": 0,
+        "seconds": 0.002595083322376013,
+        "basis_setup_seconds": 0.0017392081208527088,
+        "basis_cache_bytes": 1594320,
+        "unknowns": 91,
+        "feature_metrics": {
+          "backend": "polynomial",
+          "dimension": 2,
+          "degree": 12,
+          "coefficient_count": 91,
+          "tanh_count": 0,
+          "basis": "total-degree Legendre products",
+          "max_derivative_calibrated": 4,
+          "product_gates": true,
+          "construction_uses_target_data": false,
+          "encoding_value_error": 0.0,
+          "encoding_derivative_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setup_seconds": 3.854092210531235e-05
+        },
+        "parameter_bounds": [
+          [],
+          []
+        ],
+        "identifiability_checked": false,
+        "preconditioner": "diagonal",
+        "preconditioner_builds": [],
+        "preconditioner_setup_seconds": 0,
+        "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+        "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+        "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+        "local_derivative_bytes": 18434,
+        "unassembled_dense_jacobian_bytes": 665392,
+        "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "last_linearization_product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 0
+        },
+        "residual_entries": 914
+      },
+      "elapsed_seconds": 0.16215320769697428
+    }
+  ],
+  "validation": {
+    "relative_l2": 5.884114201159924e-08,
+    "component_relative_l2": [
+      5.884114201159924e-08
+    ],
+    "independent_residual_rms": {
+      "PDE": 2.028111205511007e-10,
+      "clamped_value": 4.384676771445265e-08,
+      "clamped_normal_derivative": 8.116755488697153e-08
+    },
+    "measurement_fit_rms": {},
+    "parameter_relative_error": null
+  },
+  "degree_selected": 12,
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 0,
+    "objective": 4.014697742086772e-15,
+    "tolerance": 1e-07,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 546,
+        "output_rows": 546,
+        "equations": 1,
+        "rms": 2.0272843982602436e-10,
+        "pre_relation_rms": 2.0272843982602436e-10,
+        "relation": "eq",
+        "active_entries": 546,
+        "scaled_rms": [
+          2.0272843982602436e-10
+        ],
+        "maximum_scaled_rms": 2.0272843982602436e-10,
+        "weighted_norm": 2.0272843982602433e-10
+      },
+      {
+        "name": "clamped_value",
+        "input_rows": 184,
+        "output_rows": 184,
+        "equations": 1,
+        "rms": 4.415309624972866e-08,
+        "pre_relation_rms": 4.415309624972866e-08,
+        "relation": "eq",
+        "active_entries": 184,
+        "scaled_rms": [
+          4.415309624972866e-08
+        ],
+        "maximum_scaled_rms": 4.415309624972866e-08,
+        "weighted_norm": 4.415309624972867e-08
+      },
+      {
+        "name": "clamped_normal_derivative",
+        "input_rows": 184,
+        "output_rows": 184,
+        "equations": 1,
+        "rms": 7.79734472555589e-08,
+        "pre_relation_rms": 7.79734472555589e-08,
+        "relation": "eq",
+        "active_entries": 184,
+        "scaled_rms": [
+          7.79734472555589e-08
+        ],
+        "maximum_scaled_rms": 7.79734472555589e-08,
+        "weighted_norm": 7.79734472555589e-08
+      }
+    ],
+    "residual_evaluations": 1,
+    "linearizations": 1,
+    "lsmr_iterations": 0,
+    "seconds": 0.002595083322376013,
+    "basis_setup_seconds": 0.0017392081208527088,
+    "basis_cache_bytes": 1594320,
+    "unknowns": 91,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 2,
+      "degree": 12,
+      "coefficient_count": 91,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 4,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 3.854092210531235e-05
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "diagonal",
+    "preconditioner_builds": [],
+    "preconditioner_setup_seconds": 0,
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 18434,
+    "unassembled_dense_jacobian_bytes": 665392,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 914
+  },
+  "features": {
+    "backend": "polynomial",
+    "dimension": 2,
+    "degree": 12,
+    "coefficient_count": 91,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 4,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 3.854092210531235e-05
+  },
+  "manufactured_forcing": true,
+  "note": "Fourth-order equation and clamped constraints."
+}

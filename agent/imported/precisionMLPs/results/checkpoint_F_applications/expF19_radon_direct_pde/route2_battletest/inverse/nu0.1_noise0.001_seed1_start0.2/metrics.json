@@ -1,0 +1,1702 @@
+{
+  "case": {
+    "viscosity": 0.1,
+    "noise": 0.001,
+    "seed": 1,
+    "initial": 0.2
+  },
+  "protocol_sha256": "6da6e6a4bd0cd96dde25a4d3160f8b6c2bcf61d2bfb301b15cd64219074f0c84",
+  "settings": {
+    "coordinates": "affine_disk",
+    "degrees": [
+      6,
+      10,
+      14,
+      18,
+      22,
+      26,
+      32
+    ],
+    "centers": 257,
+    "lam": 0.2,
+    "tolerance": 1e-08,
+    "max_seconds": 60.0,
+    "maximum_working_array_mb": 512,
+    "check_points": 257,
+    "export_check_points": 257,
+    "max_iterations": 20,
+    "batch_size": 128
+  },
+  "source_policy": {
+    "reference": "Positive Cole-Hopf heat integral, measurement/evaluation only",
+    "external_pde_solver": false,
+    "target_readout_fit": false,
+    "oracle_initialization": false,
+    "interior_labels": "Only declared 32 sensor values",
+    "parameter_truth": "Generator and post-solve evaluator only",
+    "primary_sources": [
+      "https://maziarraissi.github.io/PINNs/",
+      "https://github.com/pdebench/PDEBench"
+    ],
+    "benchmark_scope": "Standard nonlinear Burgers/parameter-identification task; not the published PDEBench dataset or a head-to-head baseline"
+  },
+  "status": "time_budget",
+  "solver_status": "budget_exhausted",
+  "fitted_viscosity": 0.10094159985625407,
+  "viscosity_absolute_error": 0.0009415998562540689,
+  "viscosity_relative_error": 0.00941599856254069,
+  "heldout_relative_l2": 0.0033371293454077257,
+  "heldout_maximum_error": 0.003759808320791036,
+  "ordinary_pde_rms": 0.015685514403636306,
+  "ordinary_pde_max": 0.20990260395324187,
+  "train_sensor_noisy_rms": 0.0017988423591353978,
+  "train_sensor_clean_rms": 0.0014567117061349201,
+  "oracle_quadrature_max_difference": 2.55351295663786e-15,
+  "audit_local_parameter_sigma": 9.612144402745269e-05,
+  "audit_local_sensitivity_norm": 10.403505795381058,
+  "identifiability_scope": "Oracle tangent local sensitivity only; assumes correct model and exact physics/IC; not fitted uncertainty or global uniqueness.",
+  "degree": 26,
+  "neurons": 7857,
+  "driver": {
+    "seconds": 60.123314917087555,
+    "coordinates": "affine_disk",
+    "execution": "streamed",
+    "batch_size": 128,
+    "export_check_points": 257,
+    "initial_solution_supplied": false,
+    "initialization_provenance": "zero followed by native continuation",
+    "reference_solution_used": false,
+    "architecture": "Linear/Tanh/Linear",
+    "validated": false,
+    "validation_scope": "Fresh sampled equation and condition residuals, ordinary-network AD, and successive-field agreement; no continuum or identifiability guarantee",
+    "rejected_resolutions": [],
+    "resource_scope": "Named-array estimate, not whole-process memory cap; streamed callback equation count is estimated from fields/scale before evaluation and actual local-array bytes are reported afterward; supplied points/aggregation are counted, callback internal workspace and external captured data are not capped"
+  },
+  "history": [
+    {
+      "degree": 6,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 6,
+        "directions": 7,
+        "neurons": 2037,
+        "unknowns": 28,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 16296,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 224,
+        "redundant_profile_unknowns": 43,
+        "angular_table_bytes": 784,
+        "mode_label_bytes": 700,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 6,
+        "directions": 7,
+        "angular_rule": "tensor",
+        "readout_coordinates": 28,
+        "neurons": 2037,
+        "ordinary_network_bytes": 65192,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1002208,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 16296,
+        "angular_table_bytes": 784,
+        "mode_label_bytes": 700,
+        "prepared_state_bytes": 16352,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 224,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 29184,
+      "estimated_named_arrays_bytes": 5328788,
+      "supplied_points_and_aggregation_bytes": 23664,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 328048,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 328048,
+        "ideal_correction_workspace_bytes": 521216,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 14,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 258048,
+          "local_physics_panel_bytes": 57344,
+          "factor_bytes": 3248,
+          "factorization_workspace_bytes": 9408
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 532391388,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 14304,
+        "input_point_bytes": 7680,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 3840,
+        "coefficient_vector_bytes": 232,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 80,
+          "column_panel_bytes_max": 14336,
+          "selected_feature_panel_bytes_max": 57344,
+          "forward_batches": 205,
+          "adjoint_batches": 100,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 16352,
+          "prepared_adjoint_bytes_max": 16296,
+          "ideal_rmatvec_calls": 222,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 28,
+          "ideal_correction_panel_bytes_max": 114688,
+          "approximate_column_gram_calls": 80,
+          "ideal_matvec_calls": 42
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.2321758464763811,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.1549517604835917,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.05649544692275793,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.17456204230435995,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 23217584.64763811,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 23217584.64763811,
+      "successive_field_difference": null,
+      "initialization": "zero",
+      "comparison_uses_richer_resolution": false,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 22,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 0.9214749168604612,
+        "preconditioner_setup_seconds": 0.0340957110747695
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 0.93695875024423
+    },
+    {
+      "degree": 10,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 10,
+        "directions": 11,
+        "neurons": 3201,
+        "unknowns": 66,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 25608,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 352,
+        "redundant_profile_unknowns": 111,
+        "angular_table_bytes": 1936,
+        "mode_label_bytes": 1650,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 10,
+        "directions": 11,
+        "angular_rule": "tensor",
+        "readout_coordinates": 66,
+        "neurons": 3201,
+        "ordinary_network_bytes": 102440,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1244000,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 25608,
+        "angular_table_bytes": 1936,
+        "mode_label_bytes": 1650,
+        "prepared_state_bytes": 25696,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 528,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 40992,
+      "estimated_named_arrays_bytes": 6904146,
+      "supplied_points_and_aggregation_bytes": 26480,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 813384,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 813384,
+        "ideal_correction_workspace_bytes": 1184768,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 33,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 608256,
+          "local_physics_panel_bytes": 135168,
+          "factor_bytes": 17688,
+          "factorization_workspace_bytes": 52272
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 531964918,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 20656,
+        "input_point_bytes": 10496,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 5248,
+        "coefficient_vector_bytes": 536,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 80,
+          "column_panel_bytes_max": 33792,
+          "selected_feature_panel_bytes_max": 135168,
+          "forward_batches": 328,
+          "adjoint_batches": 160,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 25696,
+          "prepared_adjoint_bytes_max": 25608,
+          "ideal_rmatvec_calls": 229,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 262144,
+          "approximate_column_gram_calls": 80,
+          "ideal_matvec_calls": 49
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.12531446967662438,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.049440416689342216,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.021342334108176635,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.09509135247385202,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 12531446.967662437,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 12531446.967662437,
+      "successive_field_difference": 0.08521306689901717,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 29,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 2.2341619576327503,
+        "preconditioner_setup_seconds": 0.07595004001632333
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 3.195779542438686
+    },
+    {
+      "degree": 14,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 14,
+        "directions": 15,
+        "neurons": 4365,
+        "unknowns": 120,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 34920,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 480,
+        "redundant_profile_unknowns": 211,
+        "angular_table_bytes": 3600,
+        "mode_label_bytes": 3000,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 14,
+        "directions": 15,
+        "angular_rule": "tensor",
+        "readout_coordinates": 120,
+        "neurons": 4365,
+        "ordinary_network_bytes": 139688,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1485792,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 34920,
+        "angular_table_bytes": 3600,
+        "mode_label_bytes": 3000,
+        "prepared_state_bytes": 35040,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 960,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 68352,
+      "estimated_named_arrays_bytes": 8120096,
+      "supplied_points_and_aggregation_bytes": 33008,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 1582560,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 1582560,
+        "ideal_correction_workspace_bytes": 1184768,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 60,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 1105920,
+          "local_physics_panel_bytes": 245760,
+          "factor_bytes": 58080,
+          "factorization_workspace_bytes": 172800
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 531518144,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 35368,
+        "input_point_bytes": 17024,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 8512,
+        "coefficient_vector_bytes": 968,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 80,
+          "column_panel_bytes_max": 61440,
+          "selected_feature_panel_bytes_max": 245760,
+          "forward_batches": 410,
+          "adjoint_batches": 200,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 35040,
+          "prepared_adjoint_bytes_max": 34920,
+          "ideal_rmatvec_calls": 233,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 262144,
+          "approximate_column_gram_calls": 80,
+          "ideal_matvec_calls": 53
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.08018498154106159,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.014393527833626898,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.008630998715934032,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.04484823890905244,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 8018498.154106159,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 8018498.154106159,
+      "successive_field_difference": 0.04834676966314307,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 33,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 5.187224542256445,
+        "preconditioner_setup_seconds": 0.17220608331263065
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 8.416236584074795
+    },
+    {
+      "degree": 18,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 18,
+        "directions": 19,
+        "neurons": 5529,
+        "unknowns": 190,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 44232,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 608,
+        "redundant_profile_unknowns": 343,
+        "angular_table_bytes": 5776,
+        "mode_label_bytes": 4750,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 18,
+        "directions": 19,
+        "angular_rule": "tensor",
+        "readout_coordinates": 190,
+        "neurons": 5529,
+        "ordinary_network_bytes": 176936,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1727584,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 44232,
+        "angular_table_bytes": 5776,
+        "mode_label_bytes": 4750,
+        "prepared_state_bytes": 44384,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 1520,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 102624,
+      "estimated_named_arrays_bytes": 9712318,
+      "supplied_points_and_aggregation_bytes": 41072,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 2718520,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 2718520,
+        "ideal_correction_workspace_bytes": 1184768,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 95,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 1751040,
+          "local_physics_panel_bytes": 389120,
+          "factor_bytes": 145160,
+          "factorization_workspace_bytes": 433200
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 531061882,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 54016,
+        "input_point_bytes": 25088,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 12544,
+        "coefficient_vector_bytes": 1528,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 80,
+          "column_panel_bytes_max": 97280,
+          "selected_feature_panel_bytes_max": 389120,
+          "forward_batches": 615,
+          "adjoint_batches": 300,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 44384,
+          "prepared_adjoint_bytes_max": 44232,
+          "ideal_rmatvec_calls": 237,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 262144,
+          "approximate_column_gram_calls": 80,
+          "ideal_matvec_calls": 57
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.039635786276005426,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.006483682367624308,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.0025835785435181498,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.018401671350846818,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 3963578.6276005427,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 3963578.6276005427,
+      "successive_field_difference": 0.025120769719666963,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 37,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 10.988684416748583,
+        "preconditioner_setup_seconds": 0.3786870427429676
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 19.44651837507263
+    },
+    {
+      "degree": 22,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 22,
+        "directions": 23,
+        "neurons": 6693,
+        "unknowns": 276,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 53544,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 736,
+        "redundant_profile_unknowns": 507,
+        "angular_table_bytes": 8464,
+        "mode_label_bytes": 6900,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 22,
+        "directions": 23,
+        "angular_rule": "tensor",
+        "readout_coordinates": 276,
+        "neurons": 6693,
+        "ordinary_network_bytes": 214184,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 1969376,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 53544,
+        "angular_table_bytes": 8464,
+        "mode_label_bytes": 6900,
+        "prepared_state_bytes": 53728,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 2208,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 143808,
+      "estimated_named_arrays_bytes": 11788332,
+      "supplied_points_and_aggregation_bytes": 50672,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 4328784,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 4328784,
+        "ideal_correction_workspace_bytes": 1184768,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 138,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 2543616,
+          "local_physics_panel_bytes": 565248,
+          "factor_bytes": 305808,
+          "factorization_workspace_bytes": 914112
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 530596132,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 76600,
+        "input_point_bytes": 34688,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 17344,
+        "coefficient_vector_bytes": 2216,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 20,
+          "column_gram_calls": 80,
+          "column_panel_bytes_max": 141312,
+          "selected_feature_panel_bytes_max": 565248,
+          "forward_batches": 779,
+          "adjoint_batches": 380,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 41,
+          "prepared_adjoint_calls": 20,
+          "prepared_forward_bytes_max": 53728,
+          "prepared_adjoint_bytes_max": 53544,
+          "ideal_rmatvec_calls": 248,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 262144,
+          "approximate_column_gram_calls": 80,
+          "ideal_matvec_calls": 68
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.027415769389634824,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.0019632505801690245,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.0009401207586546219,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.00569202051343984,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 2741576.938963482,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 2741576.938963482,
+      "successive_field_difference": 0.012196956723777038,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "iteration_limit",
+      "solver_work": {
+        "lsmr_iterations": 48,
+        "iterations": 20,
+        "residual_evaluations": 41,
+        "seconds": 21.89368233270943,
+        "preconditioner_setup_seconds": 0.7982417070306838
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 41.39102433435619
+    },
+    {
+      "degree": 26,
+      "features": {
+        "backend": "actual_tanh_affine_disk_modes",
+        "dimension": 2,
+        "profile_degree": 26,
+        "directions": 27,
+        "neurons": 7857,
+        "unknowns": 378,
+        "interior_centers": 257,
+        "halo_per_side": 17,
+        "geometry_map_bytes": 0,
+        "encoding_bank_bytes": 62856,
+        "jet_anchor_bytes": 4656,
+        "jet_panel_budget_bytes": 16777216,
+        "maximum_direction_batch": 4,
+        "maximum_point_batch": 64,
+        "direction_array_bytes": 864,
+        "redundant_profile_unknowns": 703,
+        "angular_table_bytes": 11664,
+        "mode_label_bytes": 9450,
+        "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+        "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+        "chart_bounds": [
+          [
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "reference_box_halfwidth": 0.7071067811865475,
+        "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+      },
+      "cost": {
+        "dimension": 2,
+        "degree": 26,
+        "directions": 27,
+        "angular_rule": "tensor",
+        "readout_coordinates": 378,
+        "neurons": 7857,
+        "ordinary_network_bytes": 251432,
+        "encoder_quadrature_order": 104,
+        "encoder_peak_array_estimate_bytes": 2211168,
+        "profile_map_bytes": 0,
+        "map_workspace_bytes": 0,
+        "encoding_bank_bytes": 62856,
+        "angular_table_bytes": 11664,
+        "mode_label_bytes": 9450,
+        "prepared_state_bytes": 63072,
+        "scalar_basis_panel_bytes": 297984,
+        "coordinate_vector_bytes": 3024,
+        "coordinate_workspace_bytes": 0,
+        "angular_panel_bytes": 0,
+        "coordinate_transform_state_bytes": 0,
+        "execution": "streamed"
+      },
+      "estimated_jet_cache_bytes": 0,
+      "estimated_local_vector_bytes": 191904,
+      "estimated_named_arrays_bytes": 14480234,
+      "supplied_points_and_aggregation_bytes": 61808,
+      "estimated_feature_workspace_bytes": 2831360,
+      "estimated_preconditioner_workspace_bytes": 6545448,
+      "estimated_solver_workspace": {
+        "preconditioner_workspace_bytes": 6545448,
+        "ideal_correction_workspace_bytes": 1184768,
+        "preconditioner_components": {
+          "basis": "ideal",
+          "block_width": 189,
+          "directional_panel_bytes": 0,
+          "ideal_coordinate_panel_bytes": 3483648,
+          "local_physics_panel_bytes": 774144,
+          "factor_bytes": 573048,
+          "factorization_workspace_bytes": 1714608
+        },
+        "ideal_tensor_plan": null,
+        "block_budget_selection": {
+          "requested": 1024,
+          "selected": 1024,
+          "available_bytes": 530120894,
+          "changed": false,
+          "scope": "Named arrays only; smaller blocks can require more Krylov iterations"
+        }
+      },
+      "actual_solver_array_metrics": {
+        "basis_cache_bytes": 0,
+        "local_derivative_bytes": 103120,
+        "input_point_bytes": 45824,
+        "supplied_aggregation_bytes": 0,
+        "residual_vector_bytes": 22912,
+        "coefficient_vector_bytes": 3032,
+        "product_counts": {
+          "matvec_calls": 0,
+          "rmatvec_calls": 9,
+          "column_gram_calls": 36,
+          "column_panel_bytes_max": 193536,
+          "selected_feature_panel_bytes_max": 774144,
+          "forward_batches": 432,
+          "adjoint_batches": 216,
+          "callback_rows_max": 128,
+          "callback_jet_bytes_max": 5120,
+          "feature_rows_max": 128,
+          "prepared_forward_calls": 18,
+          "prepared_adjoint_calls": 9,
+          "prepared_forward_bytes_max": 63072,
+          "prepared_adjoint_bytes_max": 62856,
+          "ideal_rmatvec_calls": 124,
+          "ideal_correction_rows_max": 128,
+          "ideal_correction_columns_max": 64,
+          "ideal_correction_panel_bytes_max": 262144,
+          "approximate_column_gram_calls": 36,
+          "ideal_matvec_calls": 43
+        }
+      },
+      "validation": [
+        {
+          "name": "burgers",
+          "maximum_scaled_rms": 0.014076658285250423,
+          "points": 257,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "initial",
+          "maximum_scaled_rms": 0.0006257602023688372,
+          "points": 64,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "walls",
+          "maximum_scaled_rms": 0.0003500205074557502,
+          "points": 128,
+          "reuses_training_locations": false
+        },
+        {
+          "name": "sensors",
+          "maximum_scaled_rms": 0.001798842531532664,
+          "points": 32,
+          "reuses_training_locations": true
+        }
+      ],
+      "normalized_validation_score": 1407665.8285250422,
+      "ordinary_export_validation": null,
+      "normalized_deployable_score": 1407665.8285250422,
+      "successive_field_difference": 0.003985870934421162,
+      "initialization": "previous actual neural PDE solution",
+      "comparison_uses_richer_resolution": true,
+      "solver_status": "budget_exhausted",
+      "solver_work": {
+        "lsmr_iterations": 34,
+        "iterations": 9,
+        "residual_evaluations": 18,
+        "seconds": 18.67337316600606,
+        "preconditioner_setup_seconds": 0.7099392935633659
+      },
+      "refinement_reason": "heldout_residual_above_tolerance",
+      "seconds": 60.12327862530947
+    }
+  ],
+  "solver": {
+    "status": "budget_exhausted",
+    "converged": false,
+    "execution": "streamed",
+    "batch_size": 128,
+    "optimization_converged": false,
+    "iterations": 9,
+    "objective": 2.9268926608132127e-05,
+    "tolerance": 1e-08,
+    "blocks": [
+      {
+        "name": "burgers",
+        "input_rows": 2268,
+        "output_rows": 2268,
+        "equations": 1,
+        "rms": 0.007404477797327257,
+        "pre_relation_rms": 0.007404477797327257,
+        "relation": "eq",
+        "active_entries": 2268,
+        "scaled_rms": [
+          0.007404477797327257
+        ],
+        "maximum_scaled_rms": 0.007404477797327257,
+        "weighted_norm": 0.007404477797327257
+      },
+      {
+        "name": "initial",
+        "input_rows": 188,
+        "output_rows": 188,
+        "equations": 1,
+        "rms": 0.0006058878325743641,
+        "pre_relation_rms": 0.0006058878325743641,
+        "relation": "eq",
+        "active_entries": 188,
+        "scaled_rms": [
+          0.0006058878325743641
+        ],
+        "maximum_scaled_rms": 0.0006058878325743641,
+        "weighted_norm": 0.0006058878325743641
+      },
+      {
+        "name": "walls",
+        "input_rows": 376,
+        "output_rows": 376,
+        "equations": 1,
+        "rms": 0.0003295864776343995,
+        "pre_relation_rms": 0.0003295864776343995,
+        "relation": "eq",
+        "active_entries": 376,
+        "scaled_rms": [
+          0.0003295864776343995
+        ],
+        "maximum_scaled_rms": 0.0003295864776343995,
+        "weighted_norm": 0.0003295864776343995
+      },
+      {
+        "name": "sensors",
+        "input_rows": 32,
+        "output_rows": 32,
+        "equations": 1,
+        "rms": 0.001798842531532664,
+        "pre_relation_rms": 0.001798842531532664,
+        "relation": "eq",
+        "active_entries": 32,
+        "scaled_rms": [
+          0.001798842531532664
+        ],
+        "maximum_scaled_rms": 0.001798842531532664,
+        "weighted_norm": 0.001798842531532664
+      }
+    ],
+    "residual_evaluations": 18,
+    "linearizations": 9,
+    "lsmr_iterations": 34,
+    "seconds": 18.67337316600606,
+    "basis_setup_seconds": 3.1660310924053192e-06,
+    "basis_cache_bytes": 0,
+    "unknowns": 379,
+    "feature_metrics": {
+      "backend": "actual_tanh_affine_disk_modes",
+      "dimension": 2,
+      "profile_degree": 26,
+      "directions": 27,
+      "neurons": 7857,
+      "unknowns": 378,
+      "interior_centers": 257,
+      "halo_per_side": 17,
+      "geometry_map_bytes": 0,
+      "encoding_bank_bytes": 62856,
+      "jet_anchor_bytes": 4656,
+      "jet_panel_budget_bytes": 16777216,
+      "maximum_direction_batch": 4,
+      "maximum_point_batch": 64,
+      "direction_array_bytes": 864,
+      "redundant_profile_unknowns": 703,
+      "angular_table_bytes": 11664,
+      "mode_label_bytes": 9450,
+      "coordinate_scope": "Stable disk angular coordinates on an affine enclosing ellipse; no monomial conversion and no fitted map",
+      "coordinate_chart": "z_i=(x_i-midpoint_i)/(sqrt(2)*halfwidth_i)",
+      "chart_bounds": [
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "reference_box_halfwidth": 0.7071067811865475,
+      "orthogonality_scope": "Ideal normalized enclosing disk area, not the restricted physical box"
+    },
+    "parameter_bounds": [
+      [
+        0.001
+      ],
+      [
+        0.5
+      ]
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "block",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07989429170265794,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 1,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07895491691306233,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 2,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07843783404678106,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 3,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07919220812618732,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 4,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07859854120761156,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 5,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07912012515589595,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 6,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07858320930972695,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 7,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07875375030562282,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      },
+      {
+        "iteration": 8,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 4,
+        "maximum_block_size": 189,
+        "factor_bytes": 551160,
+        "setup_seconds": 0.07840441679582,
+        "ridge_relative": 1e-10,
+        "basis": "ideal",
+        "linearization_basis": "ideal",
+        "field_parity": {
+          "mode": "auto",
+          "metadata_available": true,
+          "shifts": [
+            [
+              0,
+              0
+            ]
+          ],
+          "axis_mask": [
+            true,
+            false
+          ],
+          "inconsistent_axes": [
+            1
+          ],
+          "constraint_edges": 1,
+          "blocks_ignored": 0,
+          "equations_considered": 4,
+          "constant_terms": 5,
+          "varying_terms_ignored": 2,
+          "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+        },
+        "field_parity_shifts": [
+          [
+            0,
+            0
+          ]
+        ],
+        "parity_axis_mask": [
+          true,
+          false
+        ],
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 4,
+        "column_row_chunk_size": 128,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly",
+        "local_sensitivity_basis": "actual_neural"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [],
+    "preconditioner_setup_seconds": 0.7099392935633659,
+    "settings": {
+      "max_iterations": 20,
+      "lsmr_tolerance": 1e-07,
+      "effective_lsmr_tolerance": 1e-10,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": 1000,
+      "gradient_tolerance": 1e-11,
+      "step_tolerance": 1e-12,
+      "scaling_probes": 8,
+      "max_seconds": 18.60621833289042,
+      "max_residual_evaluations": 500,
+      "high_accuracy": true,
+      "linear_refinement_steps": 0,
+      "inexact_newton": true,
+      "linearization_basis": "ideal",
+      "iteration_callback_active": false
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "budget": {
+      "time_limit_seconds": 18.60621833289042,
+      "time_overshoot_seconds": 0.0671548331156373,
+      "completed_direction_trials_after_time_budget": 0,
+      "residual_evaluation_limit": 500,
+      "residual_evaluation_limit_exceeded": false,
+      "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 103120,
+    "residual_vector_bytes": 22912,
+    "coefficient_vector_bytes": 3032,
+    "input_point_bytes": 45824,
+    "prepared_forward_active": true,
+    "prepared_adjoint_active": true,
+    "shared_multifield_active": false,
+    "supplied_aggregation_bytes": 0,
+    "unassembled_dense_jacobian_bytes": 8683648,
+    "storage_note": "No Q-by-coefficient feature cache; O(Q) local sensitivities and residual/Krylov vectors retained; bounded point/column panels; optional prepared neuron readouts/adjoints use O(neurons * fields) storage, counted in product_counts; supplied dense aggregation is counted separately. Byte metrics are array accounting, not process peak RSS.",
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 9,
+      "column_gram_calls": 36,
+      "column_panel_bytes_max": 193536,
+      "selected_feature_panel_bytes_max": 774144,
+      "forward_batches": 432,
+      "adjoint_batches": 216,
+      "callback_rows_max": 128,
+      "callback_jet_bytes_max": 5120,
+      "feature_rows_max": 128,
+      "prepared_forward_calls": 18,
+      "prepared_adjoint_calls": 9,
+      "prepared_forward_bytes_max": 63072,
+      "prepared_adjoint_bytes_max": 62856,
+      "ideal_rmatvec_calls": 124,
+      "ideal_correction_rows_max": 128,
+      "ideal_correction_columns_max": 64,
+      "ideal_correction_panel_bytes_max": 262144,
+      "approximate_column_gram_calls": 36,
+      "ideal_matvec_calls": 43
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 1
+    },
+    "residual_entries": 2864
+  },
+  "solve_seconds": 60.12930479226634,
+  "total_seconds": 60.22106625000015,
+  "process_peak_rss_bytes": 349405184
+}

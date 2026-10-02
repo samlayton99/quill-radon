@@ -1,0 +1,15 @@
+{
+  "steps": 1000,
+  "base_lr": 0.001,
+  "insert_lr": 0.0003,
+  "name": "continuation",
+  "source": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/investigation_20260906/depth/a2_matched_fast_waves_0_depth2.pt",
+  "n_train": 12288,
+  "n_test": 10000,
+  "target": "fast_waves",
+  "seed": 0,
+  "d": 4,
+  "head_rcond": 1e-14,
+  "beta": 0.01,
+  "calibration": "none after restoring the trained base"
+}

@@ -1,0 +1,42 @@
+{
+  "gate": "Only sampled_residual_checks_passed permits using a forward in reduced inverse. All other statuses block inverse scoring.",
+  "purpose": "Blind physical feasibility at initial inverse guess and specified harder parameter; not an inverse estimate.",
+  "settings": {
+    "batch_size": 128,
+    "centers": 257,
+    "check_points": 257,
+    "coordinates": "affine_disk",
+    "degrees": [
+      6,
+      10,
+      14,
+      18,
+      22,
+      26,
+      32,
+      40,
+      48,
+      64
+    ],
+    "export_check_points": 257,
+    "lam": 0.2,
+    "max_iterations": 60,
+    "max_seconds": 600.0,
+    "maximum_working_array_mb": 512,
+    "tolerance": 1e-08
+  },
+  "source_policy": "Zero readouts; only PDE, known IC and walls. No sensors or oracle/reference coefficients enter fitting. Cole-Hopf quadrature occurs after solve for audit only.",
+  "source_sha256": {
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/route2_battletest_inverse.py": "3dce23064433c05ae2e3e84ff0bb9c3f455407d13cb416b8a18742f04cbef1e3",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/route2_battletest_inverse_burgers_gate.py": "81fef1a1c055388e9c2d96da7a49ced7c3181401d99cf47b637eacc71098a34b",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/solver/general_residual.py": "dca8b9ee45bd89b3615b811d278051aebbe1fe6bbf13ae1110d2ac354ad2c92c",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/solver/route2.py": "cbce10f4a2eb791739633b2a3341065311abbf8b6c772396702a3ee679f5faf3",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/solver/route2_inverse.py": "c77d706222fd42dbd1a4ab038f86b1bc3c58b095ce4e39e71274e3c93f72e49d",
+    "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603"
+  },
+  "trial_viscosities": [
+    0.04,
+    0.02
+  ],
+  "version": 1
+}

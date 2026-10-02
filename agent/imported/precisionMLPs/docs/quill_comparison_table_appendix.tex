@@ -1,0 +1,177 @@
+% Requires: \usepackage{amsmath,amssymb,booktabs,makecell}
+% Citation entries: quill_comparison_references.bib
+% Insert the table in the main text and the section in the appendix.
+% The QUILLS row invokes the paper's main theorem and its numerical conditions.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Bounds for a fixed univariate analytic class at error $\varepsilon$.
+Width is the maximum hidden-layer width; precision covers construction and
+evaluation. All bounds are sufficient, not necessary.}
+\label{tab:mlp-comparison}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+Construction & Width & \makecell{Largest weight\\or bias}
+& \makecell{Working precision\\(bits)}
+& \makecell{Hidden layers\\/ activation} \\
+\midrule
+Classical staircase$^{\ddagger}$
+& $O(\varepsilon^{-1})$
+& $O(\varepsilon^{-1})^{\dagger}$
+& $O(\log(1/\varepsilon))^{\dagger}$
+& $1$ / tanh \\
+Mhaskar~\cite{mhaskar1996}
+& $O(\log(1/\varepsilon))$
+& \makecell{$\exp\!\big[O(\log^2(1/\varepsilon)$\\
+            $\cdot\log\log(1/\varepsilon))\big]^{\dagger}$}
+& \makecell{$O(\log^2(1/\varepsilon)$\\
+            $\cdot\log\log(1/\varepsilon))^{\dagger}$}
+& $1$ / tanh \\
+De Ryck et al.~\cite{deryck2021}
+& $O(\log(1/\varepsilon))$
+& \makecell{$\exp\!\big[O(\log^2(1/\varepsilon)$\\
+            $\cdot\log\log(1/\varepsilon))\big]^{\dagger}$}
+& \makecell{$O(\log^2(1/\varepsilon)$\\
+            $\cdot\log\log(1/\varepsilon))^{\dagger}$}
+& $\le 2$ / tanh \\
+ChebNet~\cite{tang2019chebnet}
+& $O(\log(1/\varepsilon))$
+& $O(1)^{\dagger}$
+& \makecell{$O(\log(1/\varepsilon)$\\
+            $+\log\log(1/\varepsilon))^{\dagger}$}
+& \makecell{$O(\log\log(1/\varepsilon))$\\/ ReQU} \\
+\textbf{QUILLS}
+& $O(\log(1/\varepsilon))$
+& $O(\log(1/\varepsilon))$
+& \makecell{$O(\log(1/\varepsilon)$\\
+            $+\log\log(1/\varepsilon))$}
+& $1$ / tanh \\
+\bottomrule
+\end{tabular*}
+\vspace{3pt}
+\begin{minipage}{\linewidth}
+\scriptsize
+$^{\dagger}$Derived for the implementations in
+Appendix~\ref{app:comparison-bounds}; not lower bounds.
+$^{\ddagger}$Staircase specified there; Jones~\cite{jones1990}
+is the historical reference, not the source of these rates.
+\end{minipage}
+\end{table}
+
+\section{Derivation of the comparison bounds}
+\label{app:comparison-bounds}
+
+\paragraph{Scope and arithmetic.}
+Fix a uniformly bounded analytic class on a fixed complex neighborhood of
+$[-1,1]$. Constants may depend on this class, but not on $\varepsilon$.
+We compare normalized $L^2$ error; the uniform bounds used below imply these
+$L^2$ bounds. Assume function samples accurate to unit roundoff $u$, accurately
+rounded elementary functions, and sufficient exponent range. With $b$
+significand bits, $u\asymp 2^{-b}$. If parameter construction and evaluation
+together amplify roundoff by at most $A$, then
+\begin{equation}
+  b \ge \log_2(1/\varepsilon)+\log_2 A+O(1)
+  \label{eq:comparison-bits}
+\end{equation}
+suffices after allocating fixed fractions of the error tolerance to
+approximation and arithmetic. This is a sufficient bound, not a necessary
+precision requirement. Analyticity gives degree-$n$ Chebyshev approximants
+with error $C\rho^{-n}$, for fixed $\rho>1$; hence
+$n=O(\log(1/\varepsilon))$.
+
+\paragraph{Classical staircase.}
+Set $x_j=-1+2j/N$ and $S(t)=(1+\tanh t)/2$. The network
+\begin{equation}
+ q_N(x)=f(-1)+\sum_{j=1}^{N}
+ [f(x_j)-f(x_{j-1})]S\!\left(N(x-x_j)\right)
+\end{equation}
+has $N$ neurons. Its coefficient increments are $O(N^{-1})$; the staircase
+error and the sum of the exponentially decaying smoothing errors are both
+$O(N^{-1})$. Thus $N=O(\varepsilon^{-1})$ suffices. Slopes and biases are
+$O(N)$, while total absolute readout weight is bounded. A conservative bound
+for construction and evaluation error is $CuN$, so
+$b=O(\log(1/\varepsilon))$ suffices.
+
+\paragraph{Mhaskar: an explicit tanh specialization.}
+Use the divided-difference approach of~\cite{mhaskar1996}. For $p\ge1$,
+approximate $x^p$ by
+\begin{equation}
+ H_{p,h}(x)=
+ \frac{\sum_{r=0}^{p}(-1)^{p-r}\binom{p}{r}
+ \tanh\!\left(b_0+(r-p/2)hx\right)}
+ {h^p\tanh^{(p)}(b_0)},
+ \qquad b_0=\tfrac12\log 2.
+\end{equation}
+The derivative denominator is nonzero: for $p\ge1$,
+$\tanh^{(p)}(b_0)=2^{p+2}A_p(-2)/3^{p+1}$, where
+$A_1(z)=1$ and
+$A_{p+1}(z)=(1+pz)A_p(z)+z(1-z)A'_p(z)$.
+These integer polynomials have constant term $1$, so $A_p(-2)$ is odd and
+$|\tanh^{(p)}(b_0)|^{-1}\le\exp(Cp)$.
+Taylor's theorem for centered differences gives
+\[
+ \|H_{p,h}-x^p\|_\infty
+ \le \frac{ph^2\|\tanh^{(p+2)}\|_\infty}
+ {24|\tanh^{(p)}(b_0)|}.
+\]
+Cauchy's derivative bound and conversion of the degree-$n$ Chebyshev
+approximant to monomials bound the combined error by
+$h^2\exp(Cn\log(n+2))$. Choose a dyadic $h$ with
+$\log(1/h)=O(\log(1/\varepsilon)+n\log(n+2))$.
+All differences share the $2n+1$ slopes $hj/2$, $-n\le j\le n$.
+Their combined absolute readout weight is at most $\exp(Cn)(2/h)^n$, giving
+\[
+ \log B_{\max}
+ =O\!\left(\log^2(1/\varepsilon)\log\log(1/\varepsilon)\right).
+\]
+Stable Chebyshev coefficient computation, monomial conversion, exact integer
+derivative numerators, and rounded readout formation incur at most
+$u\exp(Cn\log(n+2))(2/h)^n$ error; network evaluation has the same
+asymptotic logarithmic amplification. Equation~\eqref{eq:comparison-bits}
+therefore gives the stated sufficient bit count.
+
+\paragraph{De Ryck--Lanthaler--Mishra.}
+In one dimension, Corollary~5.5 of~\cite{deryck2021} gives widths
+$3\lceil s/2\rceil+N-1$ and $6N$, with error at most
+$C[3/(2RN)]^s$. Here $R$ is a fixed analyticity radius and $N$ is a partition
+size. Fix $N$ so that $3/(2RN)<1$ and take
+$s=O(\log(1/\varepsilon))$. The explicit weight estimates in the proof of
+Theorem~5.1 give $\log B_{\max}=O(s^2\log(s+2))$.
+For construction from samples, first compute a Chebyshev approximant; it is
+uniformly bounded on a fixed smaller analytic neighborhood. Its local Taylor
+coefficients therefore use degree-independent analyticity constants.
+Polynomial basis conversion, the explicit finite-difference scales, and
+nonzero activation-derivative denominators give construction amplification
+at most $\exp(Cs^2\log(s+2))$.
+Two-layer tanh evaluation has error at most
+$Cu\,\mathrm{poly}(s)B_{\max}^3$, yielding the stated bit count.
+The general construction uses two hidden layers; stronger analyticity
+assumptions permit one.
+
+\paragraph{ChebNet.}
+The recursive construction in~\cite{tang2019chebnet} represents a degree-$n$
+Chebyshev polynomial with $O(n)$ neurons and nonzero parameters and
+$O(\log n)$ hidden layers. At each recursive split, a coefficient is doubled
+only when its index decreases by at least half. An original coefficient
+$c_j$ is therefore amplified by at most $2\max(1,j)$ along any branch.
+Since $|c_j|\le C\rho^{-j}$, every intermediate polynomial has coefficient
+sum at most $2\sum_j\max(1,j)|c_j|=O(1)$.
+The affine/ReQU realization consequently has bounded parameters and
+intermediates. Constant fan-in and logarithmic depth give total construction
+and evaluation amplification $\mathrm{poly}(n)$, so
+$b=\log_2(1/\varepsilon)+O(\log n)$ suffices.
+
+\paragraph{QUILLS.}
+This row invokes the main QUILLS approximation and numerical-recovery
+theorem, including its bandwidth, aliasing, sampling, and implementation
+conditions. It supplies $W=O(\log(1/\varepsilon))$ and controlled readouts.
+With grid spacing $h\asymp W^{-1}$, bounded bandwidth $\lambda$, and bounded
+center locations, slopes $\gamma=\lambda/h$ and biases are $O(W)$.
+The construction-and-evaluation allowance $u\,\mathrm{poly}(W)$ gives
+$b=\log_2(1/\varepsilon)+O(\log W)$ via
+\eqref{eq:comparison-bits}. The numerical-recovery bound and control of
+bandwidth-dependent constants are hypotheses from that theorem; they do not
+follow from the width estimate alone.

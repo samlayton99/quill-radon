@@ -1,0 +1,50 @@
+% Iteration 6: Sam's requested argument sequence; no page-count constraint.
+\subsection{Choosing optimal lambda}\label{sec:choosing-lambda}
+
+Starting with our error bound, \(\|f-q^*\|_\infty\lesssim\lambda^{-1}[e^{-cW\min\{\delta,\lambda\}}+W^{-1}e^{-\pi^2/\lambda}]\), we see the balance controlled by \(\lambda\). With the other parameters fixed, increasing \(\lambda\) reduces the resolution and boundary bounds, suggesting that it should be pushed as large as possible. The aliasing term works in the opposite direction: increasing \(\lambda\) makes its bound worse.
+
+We therefore set an aliasing budget \(e_{\mathrm{tol}}\) and choose \(\lambda^*=\max\{\lambda:E_{\mathrm{alias}}(\lambda)\le e_{\mathrm{tol}}\}\) over admissible values, pushing \(\lambda\) as high as possible within that budget. This uses the predictable Fourier decay of the aliasing term to select \(\lambda\) without optimizing every error contribution at once. In practice, amplitude and fixed constants are absorbed into \(e_{\mathrm{tol}}\), with machine epsilon as a starting value.
+
+Following this strategy, the general rule needs only the activation and tolerance and gives a starting value across widths and target functions. When a rough target frequency is available, the more specific rule also accounts for width.
+
+To see what \(\lambda\) controls, consider \(\tanh(\gamma(x-c))\). Its derivative is a bump of width about \(1/\gamma\), so at center spacing \(h=2/N\) it spans about \(1/(\gamma h)=1/\lambda\) grid spacings. Increasing \(\lambda\) narrows these bumps and can leave dips between neighbors; decreasing \(\lambda\) increases their overlap and smooths those dips.
+
+The unwanted wiggles between centers appear as extra Fourier components. Equal spacing ties the desired response to repetitions every \(2\pi/h\), whose amplitudes relative to the desired component are determined by the kernel's Fourier transform.
+
+We formalize the previous intuition with the following theorem:
+
+\noindent\textbf{Theorem (Alias bound).}
+Under the representation theorem's assumptions, the boundary-corrected tanh construction has, for a unit-amplitude Fourier mode of angular frequency \(\omega\) and \(\theta=h|\omega|<\pi\),
+\begin{equation}
+E_{\mathrm{alias}}\le \mathcal R_{K,r}(\lambda,\theta):=
+\frac{2\left[
+\left(\frac{\theta}{2\pi-\theta}\right)^r \widehat K\!\left(\frac{2\pi-\theta}{\lambda}\right)
++\left(\frac{\theta}{2\pi+\theta}\right)^r \widehat K\!\left(\frac{2\pi+\theta}{\lambda}\right)
+\right]}{(1-\rho_K)\widehat K(\theta/\lambda)},
+\label{eq:compact-replica}
+\end{equation}
+where \(r=1\), \(K=\tanh'\), and \(\rho_K=\widehat K((4\pi-\theta)/\lambda)/\widehat K((2\pi-\theta)/\lambda)<1\).
+
+For an activation \(\psi\), \(\widehat K\) is the Fourier transform of its localized derivative \(K=\psi^{(r)}\). The numerator measures the first alias pair relative to the desired response in the denominator, while \(1/(1-\rho_K)\) bounds the remaining pairs; the proof is in Appendix~\ref{app:lambda}.
+
+\textbf{General rule.} At fixed target frequencies, larger widths make \(\theta\) small; retaining the rapid Fourier decay and absorbing slower prefactors into the tolerance gives the practical estimate
+\begin{equation}
+E_{\mathrm{alias}}^{\mathrm{basic}}(\lambda):=
+\frac{\widehat K(2\pi/\lambda)}{\widehat K(0)}.
+\label{eq:lambda-basic-rule}
+\end{equation}
+For fp64 tanh, taking \(e_{\mathrm{tol}}=2^{-52}\) gives \(\lambda\approx0.25\) as a practical default across admissible widths and analytic targets (Appendix~\ref{app:lambda}).
+
+\textbf{More specific rule.} Retain the target-frequency shifts by choosing a rough angular frequency scale \(\bar\omega\), such as \(2\pi\) divided by a typical wavelength, and setting \(\bar\theta=h\bar\omega<\pi\). Solve
+\begin{equation}
+\frac{
+\left(\frac{\bar\theta}{2\pi-\bar\theta}\right)^r
+\widehat K\!\left(\frac{2\pi-\bar\theta}{\lambda}\right)
++
+\left(\frac{\bar\theta}{2\pi+\bar\theta}\right)^r
+\widehat K\!\left(\frac{2\pi+\bar\theta}{\lambda}\right)}
+{\widehat K(\bar\theta/\lambda)}
+=e_{\mathrm{tol}}
+\label{eq:lambda-refined-rule}
+\end{equation}
+for \(\lambda\) by bisection, then set \(\gamma=\lambda/h\).

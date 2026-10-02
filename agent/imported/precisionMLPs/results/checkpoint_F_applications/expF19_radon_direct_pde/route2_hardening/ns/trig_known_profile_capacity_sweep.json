@@ -1,0 +1,365 @@
+{
+  "scope": "Representation-only diagnostic using analytical spherical-Bessel Legendre-series coefficients; no PDE solved, never used to initialize a native solve",
+  "rows": [
+    {
+      "degree": 4,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 3825,
+      "ordinary_velocity_relative_l2": 0.0015868951186226723,
+      "ordinary_pressure_relative_l2": 0.0008717430147496267,
+      "ordinary_velocity_max_abs": 0.000738243359926144,
+      "ordinary_pressure_max_abs": 0.00028227705840022654,
+      "ordinary_momentum_rms": 0.0010948847500307942,
+      "ordinary_momentum_max_abs": 0.004196967833866146,
+      "ordinary_divergence_rms": 3.8247560597330384e-17,
+      "ordinary_divergence_max_abs": 8.568788206870148e-17,
+      "ordinary_vs_grouped_max_abs": 6.661338147750939e-16,
+      "ordinary_readout_l1_per_field": [
+        0.9281021813717859,
+        0.9019007234000591,
+        0.867268801751502,
+        0.31895972040172865
+      ],
+      "ordinary_parameter_bytes": 244832,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 0.00023403810201656216,
+          "max_abs": 0.0007356022405164697
+        },
+        "pressure_gauge": {
+          "rms": 3.0878077872387166e-16,
+          "max_abs": 3.0878077872387166e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 4,
+      "centers": 257,
+      "lam": 0.2,
+      "neurons": 7275,
+      "ordinary_velocity_relative_l2": 0.001586895118622534,
+      "ordinary_pressure_relative_l2": 0.0008717430147497775,
+      "ordinary_velocity_max_abs": 0.0007382433599220084,
+      "ordinary_pressure_max_abs": 0.00028227705840047634,
+      "ordinary_momentum_rms": 0.0010948847500308232,
+      "ordinary_momentum_max_abs": 0.004196967833866225,
+      "ordinary_divergence_rms": 4.197066085880149e-17,
+      "ordinary_divergence_max_abs": 8.74991484945566e-17,
+      "ordinary_vs_grouped_max_abs": 9.298117831235686e-16,
+      "ordinary_readout_l1_per_field": [
+        0.6839234113721189,
+        0.6719299892926418,
+        0.644200622229029,
+        0.25583910325867787
+      ],
+      "ordinary_parameter_bytes": 465632,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 0.00023403810201661187,
+          "max_abs": 0.0007356022405181628
+        },
+        "pressure_gauge": {
+          "rms": 1.3010426069826053e-17,
+          "max_abs": 1.3010426069826053e-17
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 8,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 12393,
+      "ordinary_velocity_relative_l2": 1.1548197739525831e-07,
+      "ordinary_pressure_relative_l2": 1.993055412129077e-08,
+      "ordinary_velocity_max_abs": 6.142386770047192e-08,
+      "ordinary_pressure_max_abs": 1.9014981950116194e-09,
+      "ordinary_momentum_rms": 2.661595983798522e-07,
+      "ordinary_momentum_max_abs": 2.1118809396016014e-06,
+      "ordinary_divergence_rms": 4.4646893023576105e-17,
+      "ordinary_divergence_max_abs": 9.603752823564863e-17,
+      "ordinary_vs_grouped_max_abs": 9.43689570931383e-16,
+      "ordinary_readout_l1_per_field": [
+        0.7631197144574672,
+        0.74383533718502,
+        0.7555253703729039,
+        0.30082669676545754
+      ],
+      "ordinary_parameter_bytes": 793184,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.965713660817782e-08,
+          "max_abs": 8.639202389582046e-08
+        },
+        "pressure_gauge": {
+          "rms": 2.3787395664331967e-16,
+          "max_abs": 2.3787395664331967e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 8,
+      "centers": 257,
+      "lam": 0.2,
+      "neurons": 23571,
+      "ordinary_velocity_relative_l2": 1.1548197672606226e-07,
+      "ordinary_pressure_relative_l2": 1.9930554342684052e-08,
+      "ordinary_velocity_max_abs": 6.142386542451472e-08,
+      "ordinary_pressure_max_abs": 1.9014986807341927e-09,
+      "ordinary_momentum_rms": 2.661595984006456e-07,
+      "ordinary_momentum_max_abs": 2.1118809396779292e-06,
+      "ordinary_divergence_rms": 4.6662256278628715e-17,
+      "ordinary_divergence_max_abs": 9.642365277747769e-17,
+      "ordinary_vs_grouped_max_abs": 1.5959455978986625e-15,
+      "ordinary_readout_l1_per_field": [
+        0.5894303249973902,
+        0.5786135652603452,
+        0.5853992488222042,
+        0.2455206867364204
+      ],
+      "ordinary_parameter_bytes": 1508576,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.965713670946195e-08,
+          "max_abs": 8.639202336846452e-08
+        },
+        "pressure_gauge": {
+          "rms": 8.944667923005412e-19,
+          "max_abs": 8.944667923005412e-19
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 12,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 25857,
+      "ordinary_velocity_relative_l2": 1.330282372463483e-12,
+      "ordinary_pressure_relative_l2": 1.6265459467773056e-13,
+      "ordinary_velocity_max_abs": 3.5185049318542383e-13,
+      "ordinary_pressure_max_abs": 3.673450432728487e-14,
+      "ordinary_momentum_rms": 8.741796813016272e-12,
+      "ordinary_momentum_max_abs": 4.199589287434691e-11,
+      "ordinary_divergence_rms": 5.633182565548902e-17,
+      "ordinary_divergence_max_abs": 1.294844831838411e-16,
+      "ordinary_vs_grouped_max_abs": 1.6653345369377348e-15,
+      "ordinary_readout_l1_per_field": [
+        0.7578721950909403,
+        0.7618562862372954,
+        0.7616349270453456,
+        0.30096146471275265
+      ],
+      "ordinary_parameter_bytes": 1654880,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 2.3677432184719325e-13,
+          "max_abs": 1.166136631702841e-12
+        },
+        "pressure_gauge": {
+          "rms": 2.7777259659078624e-16,
+          "max_abs": 2.7777259659078624e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 12,
+      "centers": 257,
+      "lam": 0.2,
+      "neurons": 49179,
+      "ordinary_velocity_relative_l2": 1.3303913717988984e-12,
+      "ordinary_pressure_relative_l2": 1.6127269991215782e-13,
+      "ordinary_velocity_max_abs": 3.519060043366551e-13,
+      "ordinary_pressure_max_abs": 3.627653732962699e-14,
+      "ordinary_momentum_rms": 8.741762152883582e-12,
+      "ordinary_momentum_max_abs": 4.1996045530012793e-11,
+      "ordinary_divergence_rms": 5.934380541331064e-17,
+      "ordinary_divergence_max_abs": 1.3044063957731136e-16,
+      "ordinary_vs_grouped_max_abs": 2.4980018054066022e-15,
+      "ordinary_readout_l1_per_field": [
+        0.5858085477874784,
+        0.5892157169758129,
+        0.5902201964960604,
+        0.2454215476435762
+      ],
+      "ordinary_parameter_bytes": 3147488,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 2.3682864160377816e-13,
+          "max_abs": 1.1657064202807987e-12
+        },
+        "pressure_gauge": {
+          "rms": 2.1277467635028025e-18,
+          "max_abs": 2.1277467635028025e-18
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 14,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 34425,
+      "ordinary_velocity_relative_l2": 1.8575182055460283e-14,
+      "ordinary_pressure_relative_l2": 8.908064007725504e-15,
+      "ordinary_velocity_max_abs": 3.011479954295737e-15,
+      "ordinary_pressure_max_abs": 9.43689570931383e-16,
+      "ordinary_momentum_rms": 2.513611920807274e-14,
+      "ordinary_momentum_max_abs": 1.6396953239627976e-13,
+      "ordinary_divergence_rms": 5.288886546002418e-17,
+      "ordinary_divergence_max_abs": 1.5622808839725744e-16,
+      "ordinary_vs_grouped_max_abs": 2.3037127760972e-15,
+      "ordinary_readout_l1_per_field": [
+        0.7575196681668825,
+        0.7567814384671535,
+        0.7625279748898695,
+        0.30169788952042614
+      ],
+      "ordinary_parameter_bytes": 2203232,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.5063074898346363e-15,
+          "max_abs": 3.3306690738754696e-15
+        },
+        "pressure_gauge": {
+          "rms": 2.9148775407272787e-16,
+          "max_abs": 2.9148775407272787e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 14,
+      "centers": 257,
+      "lam": 0.2,
+      "neurons": 65475,
+      "ordinary_velocity_relative_l2": 1.1571909060281728e-14,
+      "ordinary_pressure_relative_l2": 7.772799180864071e-15,
+      "ordinary_velocity_max_abs": 3.1086244689504383e-15,
+      "ordinary_pressure_max_abs": 1.2490009027033011e-15,
+      "ordinary_momentum_rms": 2.5199418949945336e-14,
+      "ordinary_momentum_max_abs": 1.6402157410055906e-13,
+      "ordinary_divergence_rms": 5.944003667263165e-17,
+      "ordinary_divergence_max_abs": 1.5315674970331072e-16,
+      "ordinary_vs_grouped_max_abs": 2.9976021664879227e-15,
+      "ordinary_readout_l1_per_field": [
+        0.5861950579159027,
+        0.5875981132292567,
+        0.5897665479404753,
+        0.2461263811691884
+      ],
+      "ordinary_parameter_bytes": 4190432,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.04848165218252e-15,
+          "max_abs": 2.831068712794149e-15
+        },
+        "pressure_gauge": {
+          "rms": 1.4203048459560108e-17,
+          "max_abs": 1.4203048459560108e-17
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 16,
+      "centers": 129,
+      "lam": 0.2,
+      "neurons": 44217,
+      "ordinary_velocity_relative_l2": 2.061128495128485e-14,
+      "ordinary_pressure_relative_l2": 1.0090914573500792e-14,
+      "ordinary_velocity_max_abs": 3.635980405647388e-15,
+      "ordinary_pressure_max_abs": 8.881784197001252e-16,
+      "ordinary_momentum_rms": 4.4075006166568306e-16,
+      "ordinary_momentum_max_abs": 1.304512053934559e-15,
+      "ordinary_divergence_rms": 8.059694412950072e-17,
+      "ordinary_divergence_max_abs": 2.1612087665094103e-16,
+      "ordinary_vs_grouped_max_abs": 2.942091015256665e-15,
+      "ordinary_readout_l1_per_field": [
+        0.7576700668815948,
+        0.756497276747364,
+        0.7615864369107925,
+        0.30096851592431634
+      ],
+      "ordinary_parameter_bytes": 2829920,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 1.5081036312622361e-15,
+          "max_abs": 3.969047313034935e-15
+        },
+        "pressure_gauge": {
+          "rms": 2.92693928989618e-16,
+          "max_abs": 2.92693928989618e-16
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    },
+    {
+      "degree": 16,
+      "centers": 257,
+      "lam": 0.2,
+      "neurons": 84099,
+      "ordinary_velocity_relative_l2": 9.574541876715125e-15,
+      "ordinary_pressure_relative_l2": 7.440041975659914e-15,
+      "ordinary_velocity_max_abs": 3.913536161803677e-15,
+      "ordinary_pressure_max_abs": 9.783840404509192e-16,
+      "ordinary_momentum_rms": 7.5404625222461e-16,
+      "ordinary_momentum_max_abs": 1.8041124150158794e-15,
+      "ordinary_divergence_rms": 6.008988901569739e-17,
+      "ordinary_divergence_max_abs": 1.5684117388846268e-16,
+      "ordinary_vs_grouped_max_abs": 3.524958103184872e-15,
+      "ordinary_readout_l1_per_field": [
+        0.586011523293524,
+        0.5876874452900714,
+        0.5889567896091361,
+        0.2454766978896326
+      ],
+      "ordinary_parameter_bytes": 5382368,
+      "value_audit_points": 129,
+      "derivative_audit_points": 41,
+      "constraints": {
+        "velocity_boundary": {
+          "rms": 8.064817711336886e-16,
+          "max_abs": 3.3306690738754696e-15
+        },
+        "pressure_gauge": {
+          "rms": 1.3227266504323154e-17,
+          "max_abs": 1.3227266504323154e-17
+        }
+      },
+      "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+      "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+    }
+  ]
+}

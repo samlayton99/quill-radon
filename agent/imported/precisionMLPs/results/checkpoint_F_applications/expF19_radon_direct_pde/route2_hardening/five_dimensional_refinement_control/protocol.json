@@ -1,0 +1,98 @@
+{
+  "B": [
+    [
+      0.0207015115293407,
+      -0.002080734182735712,
+      -0.004949962483002227,
+      -0.0032682181043180597,
+      0.0014183109273161313
+    ],
+    [
+      -0.002080734182735712,
+      0.018731781895681938,
+      0.00480085143325183,
+      -0.0007275001690430677,
+      -0.004195357645382263
+    ],
+    [
+      -0.004949962483002227,
+      0.00480085143325183,
+      0.021444348690576615,
+      0.004219269793662461,
+      -0.0037984395642941065
+    ],
+    [
+      -0.0032682181043180597,
+      -0.0007275001690430677,
+      0.004219269793662461,
+      0.025211702598383075,
+      0.0020404103090669603
+    ],
+    [
+      0.0014183109273161313,
+      -0.004195357645382263,
+      -0.0037984395642941065,
+      0.0020404103090669603,
+      0.03895601405931737
+    ]
+  ],
+  "angular_rule": "tensor",
+  "batch_size": 64,
+  "centers": 129,
+  "check_points": 129,
+  "control_scope": "Same cold-start five-dimensional protocol except explicit unproven ideal-stall refinement exit; not an accuracy or stationarity certificate.",
+  "degrees": [
+    4,
+    6,
+    8
+  ],
+  "dimension": 5,
+  "domain": [
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "equation": "-Delta u + u^3 = forcing",
+  "exact_validation_family": "exp(x^T B x)",
+  "export_check_points": 65,
+  "heldout": {
+    "boundary": 257,
+    "corners": 32,
+    "derivatives": 97,
+    "seed": 573927,
+    "values": 257
+  },
+  "interpretation": "Easy smooth full-five-input scaling control, not a difficult real-world five-dimensional PDE or general dimensional limit.",
+  "lam": 0.25,
+  "max_iterations": 8,
+  "max_seconds": 900,
+  "maximum_neurons": 2000000,
+  "maximum_working_array_mb": 2048,
+  "oversampling": 6,
+  "parameter_policy": "No learned PDE parameters and no discovered active axes or symmetry reduction.",
+  "resource_scope": "Single CPU thread; 2GiB named-array estimate, not process RSS cap; 900s soft solve budget. Concurrent research jobs may affect wall times.",
+  "solver_options": {
+    "lsmr_max_iterations": 150,
+    "refine_on_ideal_stall": true
+  },
+  "source_policy": "Prescribed forcing and boundary values only; zero first-stage readout, native continuation only; no interior labels or known-function readout construction.",
+  "tolerance": 1e-14,
+  "version": 2
+}

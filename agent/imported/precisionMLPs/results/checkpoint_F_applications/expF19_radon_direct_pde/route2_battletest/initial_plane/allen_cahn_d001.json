@@ -1,0 +1,256 @@
+{
+  "protocol": {
+    "version": 1,
+    "cases": [
+      "allen_cahn_d001",
+      "allen_cahn_d00001"
+    ],
+    "seed": 0,
+    "degrees": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48
+    ],
+    "centers": 257,
+    "lam": 0.2,
+    "max_seconds": 600,
+    "max_iterations": 20,
+    "tolerance": 1e-08,
+    "batch_size": 64,
+    "oversampling": 6,
+    "inner_cap": 1000,
+    "preconditioner_block_cap": 512,
+    "source_policy": "Only prescribed IC x^2*cos(pi*x) is analytically encoded; zero/native PDE corrections. No interior truth or external trajectory.",
+    "architecture": "One ordinary Linear/Tanh/Linear model; paired correction neurons plus fixed IC neurons.",
+    "constraint": "Correction F_q(x,t)-F_q(x,0) is symbolically zero at initial time; ordinary floating-sum and IC encoding errors audited.",
+    "note": "Same equations as forward campaign, separate geometry/control protocol, not a runtime-isolated ablation.",
+    "compatibility": "Published periodic IC has mismatched endpoint first derivatives at t=0. No uniform corner derivative precision claim.",
+    "limits": "Soft budgets around Krylov work; all degrees/statuses retained. Sampled residuals are not continuum certificates.",
+    "implementation_sha256": "a499eacadc2b162f99702860845dc7557fc1b975de70df980575ef245655e315"
+  },
+  "history": [
+    {
+      "degree": 4,
+      "neurons": 3201,
+      "coordinates": 10,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 1.0400144732523897,
+          "raw_max": 3.863763476101167
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.650420214886728e-16,
+          "raw_max": 1.5543122344752192e-15
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.03406602510458849,
+          "raw_max": 0.07775464519163755
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 1.3547202903362123,
+          "raw_max": 3.962525354759687
+        }
+      ],
+      "solver_seconds": 2.421972250100225,
+      "lsmr_iterations": 24,
+      "elapsed_seconds": 2.442560624796897
+    },
+    {
+      "degree": 8,
+      "neurons": 5529,
+      "coordinates": 36,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.46321994973897584,
+          "raw_max": 2.3686086620481595
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.4680763834621805e-15,
+          "raw_max": 1.199040866595169e-14
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.019280553983070218,
+          "raw_max": 0.03907703076625957
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.6312593831932284,
+          "raw_max": 3.821369543476928
+        }
+      ],
+      "solver_seconds": 4.41512225009501,
+      "lsmr_iterations": 43,
+      "elapsed_seconds": 6.885817875154316
+    },
+    {
+      "degree": 12,
+      "neurons": 7857,
+      "coordinates": 78,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.28894021172616047,
+          "raw_max": 0.8499886704263159
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.6170853422678514e-14,
+          "raw_max": 1.196195920094567e-13
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.006655296932465277,
+          "raw_max": 0.01591067467127516
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.43988101527820594,
+          "raw_max": 3.630059171015909
+        }
+      ],
+      "solver_seconds": 12.168653124943376,
+      "lsmr_iterations": 42,
+      "elapsed_seconds": 19.095576874911785
+    },
+    {
+      "degree": 16,
+      "neurons": 10185,
+      "coordinates": 136,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.21473816046161998,
+          "raw_max": 0.8390130508962594
+        },
+        {
+          "name": "initial",
+          "raw_rms": 6.888058134275499e-13,
+          "raw_max": 2.3946677973896158e-12
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.03602755894849273,
+          "raw_max": 0.15892789791200812
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.3239419570015319,
+          "raw_max": 3.2960294590602133
+        }
+      ],
+      "solver_seconds": 25.40289954189211,
+      "lsmr_iterations": 42,
+      "elapsed_seconds": 44.546682707965374
+    },
+    {
+      "degree": 24,
+      "neurons": 14841,
+      "coordinates": 300,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.11691431644736237,
+          "raw_max": 0.6302194857340822
+        },
+        {
+          "name": "initial",
+          "raw_rms": 2.3426990796769093e-10,
+          "raw_max": 6.058889299564302e-10
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.0017448345888764602,
+          "raw_max": 0.005141764064319432
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.24047319359329586,
+          "raw_max": 2.644763651752358
+        }
+      ],
+      "solver_seconds": 101.90218387497589,
+      "lsmr_iterations": 40,
+      "elapsed_seconds": 146.52441791584715
+    },
+    {
+      "degree": 32,
+      "neurons": 19497,
+      "coordinates": 528,
+      "status": "iteration_limit",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.08691078833864455,
+          "raw_max": 0.4162644219535764
+        },
+        {
+          "name": "initial",
+          "raw_rms": 3.3455882737689074e-08,
+          "raw_max": 7.184246511582337e-08
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.0007101119557623451,
+          "raw_max": 0.001987302675843239
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.15985072433627517,
+          "raw_max": 1.7255570522630057
+        }
+      ],
+      "solver_seconds": 311.4309014589526,
+      "lsmr_iterations": 40,
+      "elapsed_seconds": 458.05733120813966
+    },
+    {
+      "degree": 40,
+      "neurons": 24153,
+      "coordinates": 820,
+      "status": "budget_exhausted",
+      "ordinary_checks": [
+        {
+          "name": "PDE",
+          "raw_rms": 0.08387911769520727,
+          "raw_max": 0.48559604621516644
+        },
+        {
+          "name": "initial",
+          "raw_rms": 5.731145848265298e-06,
+          "raw_max": 1.4759555668916735e-05
+        },
+        {
+          "name": "periodic_value",
+          "raw_rms": 0.001085356691857814,
+          "raw_max": 0.0036307573318481445
+        },
+        {
+          "name": "periodic_dx",
+          "raw_rms": 0.06415282533247765,
+          "raw_max": 0.6429462838412705
+        }
+      ],
+      "solver_seconds": 151.2187349582091,
+      "lsmr_iterations": 9,
+      "elapsed_seconds": 609.4502335409634
+    }
+  ],
+  "peak_rss_bytes": 471121920
+}

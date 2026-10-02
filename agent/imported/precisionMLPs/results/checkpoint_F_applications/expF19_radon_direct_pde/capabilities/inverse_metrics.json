@@ -1,0 +1,646 @@
+{
+  "protocol": "Three-physical-parameter inverse problem. Actual QUILL state compressed by exact reassociation. Observations alone enter residual; no neural readout fit.",
+  "parameters": [
+    "nu",
+    "alpha",
+    "beta"
+  ],
+  "truth": [
+    0.05,
+    1.0,
+    0.2
+  ],
+  "initial_guess": [
+    0.09,
+    0.8,
+    0.05
+  ],
+  "bounds": [
+    [
+      0.005,
+      0.4,
+      -0.5
+    ],
+    [
+      0.2,
+      1.6,
+      0.7
+    ]
+  ],
+  "equation": "u_t+u u_x=nu u_xx, periodic [-pi,pi]",
+  "initial_condition_family": "alpha sin(x)+beta cos(2x)",
+  "sensors": {
+    "x": [
+      -2.850995333132737,
+      -2.065597169735289,
+      -1.2801990063378406,
+      -0.4948008429403923,
+      0.290597320457056,
+      1.0759954838545038,
+      1.861393647251952,
+      2.6467918106494004
+    ],
+    "times": [
+      0.15,
+      0.3,
+      0.5
+    ],
+    "clean_values": [
+      [
+        -0.1487258629446618,
+        -1.0905612057657121,
+        -1.020056655282219,
+        -0.30912686786674837,
+        0.4012488178237326,
+        0.7475707034834339,
+        0.7951797438586485,
+        0.6249753311987987
+      ],
+      [
+        -0.194182953895343,
+        -1.1520117188404626,
+        -0.9156614861061974,
+        -0.2686738792203647,
+        0.3579721617542113,
+        0.7193397134156805,
+        0.796434924025757,
+        0.6626044612505526
+      ],
+      [
+        -0.30361859180681605,
+        -1.152701710726575,
+        -0.7954553781022653,
+        -0.22923959385899795,
+        0.31176431745308403,
+        0.6761050371879698,
+        0.7930170298830417,
+        0.7057905834110039
+      ]
+    ],
+    "count": 24
+  },
+  "measurements": "Synthetic data from independent dealiased Fourier RK4, N384 dt1e-4. No future reference field enters fitting.",
+  "reference_refinement_at_t07_relative_l2": 1.2559966623824492e-15,
+  "tangent_validation": {
+    "tangent_relative_errors": [
+      1.0132638449264318e-10,
+      2.0202564558410793e-11,
+      4.456043065785983e-11
+    ],
+    "compressed_vs_full_neural_rhs_relative_error": 3.453264233398234e-16
+  },
+  "rows": [
+    {
+      "parameters": [
+        0.04999989721568999,
+        0.9999999770067568,
+        0.19999998471760547
+      ],
+      "fit_seconds": 0.1479481658898294,
+      "forward_tangent_solves": 8,
+      "rhs_calls": 8000,
+      "optimizer_nfev": 8,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 1.882379950827211e-08,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.6166955878137306,
+        3.3680563035179025,
+        0.5113741636809679
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.0,
+      "noise_seed": 0,
+      "noise_standard_deviation": 0.0,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -2.0556862002918397e-06,
+        -2.2993243198321522e-08,
+        -7.641197272145739e-08
+      ],
+      "withheld_space_relative_l2": 4.7072246165430695e-08,
+      "future_time_relative_l2": 6.624238508974832e-06
+    },
+    {
+      "parameters": [
+        0.04939341090799803,
+        0.99994622228474,
+        0.19983257491999554
+      ],
+      "fit_seconds": 0.14749145787209272,
+      "forward_tangent_solves": 8,
+      "rhs_calls": 8000,
+      "optimizer_nfev": 8,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.0005912109372788223,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.618582304489115,
+        3.3700207837265768,
+        0.5110974352722275
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.001,
+      "noise_seed": 0,
+      "noise_standard_deviation": 0.0007033322226620379,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.012131781840039463,
+        -5.3777715260050485e-05,
+        -0.0008371254000223705
+      ],
+      "withheld_space_relative_l2": 0.0002307549625947302,
+      "future_time_relative_l2": 0.000707799767315222
+    },
+    {
+      "parameters": [
+        0.048884398442226015,
+        0.9997433942486995,
+        0.19972854095718268
+      ],
+      "fit_seconds": 0.1659802501089871,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.00041999532527087696,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.620049845189341,
+        3.3718394481008045,
+        0.5108806143293234
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.001,
+      "noise_seed": 1,
+      "noise_standard_deviation": 0.0007033322226620379,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.02231203115547975,
+        -0.00025660575130048713,
+        -0.0013572952140866734
+      ],
+      "withheld_space_relative_l2": 0.0003380033232988033,
+      "future_time_relative_l2": 0.0011987473544339067
+    },
+    {
+      "parameters": [
+        0.05029219972652793,
+        1.0003316880728763,
+        0.2002190610839481
+      ],
+      "fit_seconds": 0.1660420410335064,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.0005517913215504859,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.6160080778326287,
+        3.3671170474258285,
+        0.511569018266914
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.001,
+      "noise_seed": 2,
+      "noise_standard_deviation": 0.0007033322226620379,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        0.0058439945305585606,
+        0.00033168807287631275,
+        0.0010953054197404555
+      ],
+      "withheld_space_relative_l2": 0.00027320701498231403,
+      "future_time_relative_l2": 0.0001657981769128477
+    },
+    {
+      "parameters": [
+        0.05119332909550494,
+        1.0000459140330706,
+        0.20033714034741873
+      ],
+      "fit_seconds": 0.20131745794788003,
+      "forward_tangent_solves": 11,
+      "rhs_calls": 11000,
+      "optimizer_nfev": 11,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`xtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.0007888541781863032,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.613005162360997,
+        3.364210597595229,
+        0.511921190207614
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.001,
+      "noise_seed": 3,
+      "noise_standard_deviation": 0.0007033322226620379,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        0.023866581910098744,
+        4.591403307063757e-05,
+        0.0016857017370935923
+      ],
+      "withheld_space_relative_l2": 0.0004966477099775057,
+      "future_time_relative_l2": 0.0014310580545492783
+    },
+    {
+      "parameters": [
+        0.04993907787453291,
+        0.999905916654318,
+        0.19964884474282182
+      ],
+      "fit_seconds": 0.25900154188275337,
+      "forward_tangent_solves": 14,
+      "rhs_calls": 14000,
+      "optimizer_nfev": 14,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`xtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.0007010910820453888,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.6168905632223565,
+        3.3677433800812127,
+        0.5112032888362411
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.001,
+      "noise_seed": 4,
+      "noise_standard_deviation": 0.0007033322226620379,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.0012184425093418605,
+        -9.408334568195009e-05,
+        -0.0017557762858909365
+      ],
+      "withheld_space_relative_l2": 0.00032757092024262566,
+      "future_time_relative_l2": 0.0002830298538440084
+    },
+    {
+      "parameters": [
+        0.04395455608479477,
+        0.9994707766321471,
+        0.19833812748958032
+      ],
+      "fit_seconds": 0.16635479219257832,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.005912313660771051,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.636669235094355,
+        3.38703577161764,
+        0.5086181196015803
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.01,
+      "noise_seed": 0,
+      "noise_standard_deviation": 0.0070333222266203786,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.12090887830410471,
+        -0.0005292233678528824,
+        -0.008309362552098437
+      ],
+      "withheld_space_relative_l2": 0.0023153667061785468,
+      "future_time_relative_l2": 0.00717364410458074
+    },
+    {
+      "parameters": [
+        0.038778946687949345,
+        0.997426944457708,
+        0.19727719308882538
+      ],
+      "fit_seconds": 0.16524316696450114,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`ftol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.004199603721891732,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.654680496717576,
+        3.4039094448615583,
+        0.5065053042158643
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.01,
+      "noise_seed": 1,
+      "noise_standard_deviation": 0.0070333222266203786,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.22442106624101316,
+        -0.0025730555422920354,
+        -0.01361403455587315
+      ],
+      "withheld_space_relative_l2": 0.003440066662203321,
+      "future_time_relative_l2": 0.012464281244015822
+    },
+    {
+      "parameters": [
+        0.05291260837852208,
+        1.003316270936603,
+        0.202191926669334
+      ],
+      "fit_seconds": 0.1650372501462698,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`ftol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.005517991389692847,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.6099937438703082,
+        3.3586288974229728,
+        0.5133208328865586
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.01,
+      "noise_seed": 2,
+      "noise_standard_deviation": 0.0070333222266203786,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        0.058252167570441576,
+        0.0033162709366030274,
+        0.01095963334666994
+      ],
+      "withheld_space_relative_l2": 0.0027311755152404434,
+      "future_time_relative_l2": 0.0016454472801883144
+    },
+    {
+      "parameters": [
+        0.06179066015714172,
+        1.0004202876642325,
+        0.20338975535035206
+      ],
+      "fit_seconds": 0.14732908410951495,
+      "forward_tangent_solves": 8,
+      "rhs_calls": 8000,
+      "optimizer_nfev": 8,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`ftol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.00788896321167339,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.5840104893725577,
+        3.3282228022331286,
+        0.5167513798832372
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.01,
+      "noise_seed": 3,
+      "noise_standard_deviation": 0.0070333222266203786,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        0.23581320314283435,
+        0.0004202876642325215,
+        0.016948776751760236
+      ],
+      "withheld_space_relative_l2": 0.004892260862388044,
+      "future_time_relative_l2": 0.013765401383929931
+    },
+    {
+      "parameters": [
+        0.0488563093210552,
+        0.9989020420707633,
+        0.19637758834472877
+      ],
+      "fit_seconds": 0.16535083390772343,
+      "forward_tangent_solves": 9,
+      "rhs_calls": 9000,
+      "optimizer_nfev": 9,
+      "optimizer_njev": 9,
+      "optimizer_success": true,
+      "optimizer_status": "`ftol` termination condition is satisfied.",
+      "sensor_residual_rms": 0.007011257432146782,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.62021096553033,
+        3.3668239587772653,
+        0.5095501243040254
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 32,
+      "neurons": 559,
+      "noise_fraction": 0.01,
+      "noise_seed": 4,
+      "noise_standard_deviation": 0.0070333222266203786,
+      "setup_seconds": 0.004044082947075367,
+      "parameter_relative_errors": [
+        -0.02287381357889612,
+        -0.0010979579292367259,
+        -0.01811205827635623
+      ],
+      "withheld_space_relative_l2": 0.0032427422712987338,
+      "future_time_relative_l2": 0.002563491983601003
+    },
+    {
+      "parameters": [
+        0.050000000000571795,
+        1.0000000000001381,
+        0.20000000000011817
+      ],
+      "fit_seconds": 0.5207851249724627,
+      "forward_tangent_solves": 8,
+      "rhs_calls": 16000,
+      "optimizer_nfev": 8,
+      "optimizer_njev": 8,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 7.665889712510355e-14,
+      "physical_jacobian_shape": [
+        24,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        3.6166965262955326,
+        3.3680581757784975,
+        0.5113781910421734
+      ],
+      "physical_jacobian_rank": 3,
+      "k": 64,
+      "neurons": 1091,
+      "noise_fraction": 0.0,
+      "noise_seed": 0,
+      "noise_standard_deviation": 0.0,
+      "setup_seconds": 0.010693499818444252,
+      "parameter_relative_errors": [
+        1.1435852265151425e-11,
+        1.3811174426336947e-13,
+        5.907774269786614e-13
+      ],
+      "withheld_space_relative_l2": 2.8102753769559435e-13,
+      "future_time_relative_l2": 1.969100835632165e-10
+    }
+  ],
+  "initial_condition_only_controls": [
+    {
+      "parameters": [
+        0.02,
+        1.0000000000000024,
+        0.20000000003405666
+      ],
+      "fit_seconds": 0.0029548751190304756,
+      "forward_tangent_solves": 40,
+      "rhs_calls": 0,
+      "optimizer_nfev": 40,
+      "optimizer_njev": 18,
+      "optimizer_success": false,
+      "optimizer_status": "The maximum number of function evaluations is exceeded.",
+      "sensor_residual_rms": 2.4082087488094537e-11,
+      "physical_jacobian_shape": [
+        8,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        1.9999999999999967,
+        1.9999999999999951,
+        0.0
+      ],
+      "physical_jacobian_rank": 2,
+      "initial_viscosity": 0.02,
+      "future_time_relative_l2": 0.045582086020201584
+    },
+    {
+      "parameters": [
+        0.09,
+        1.0000000000000024,
+        0.19999999999651652
+      ],
+      "fit_seconds": 0.002951500006020069,
+      "forward_tangent_solves": 40,
+      "rhs_calls": 0,
+      "optimizer_nfev": 40,
+      "optimizer_njev": 17,
+      "optimizer_success": true,
+      "optimizer_status": "`gtol` termination condition is satisfied.",
+      "sensor_residual_rms": 2.462781075396202e-12,
+      "physical_jacobian_shape": [
+        8,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        1.9999999999999967,
+        1.9999999999999951,
+        0.0
+      ],
+      "physical_jacobian_rank": 2,
+      "initial_viscosity": 0.09,
+      "future_time_relative_l2": 0.048972026722416115
+    },
+    {
+      "parameters": [
+        0.17,
+        0.9999999999950235,
+        0.19999999999225068
+      ],
+      "fit_seconds": 0.004809707868844271,
+      "forward_tangent_solves": 38,
+      "rhs_calls": 0,
+      "optimizer_nfev": 38,
+      "optimizer_njev": 38,
+      "optimizer_success": true,
+      "optimizer_status": "`xtol` termination condition is satisfied.",
+      "sensor_residual_rms": 6.5128144631805985e-12,
+      "physical_jacobian_shape": [
+        8,
+        3
+      ],
+      "physical_jacobian_singular_values": [
+        1.9999999999999967,
+        1.9999999999999951,
+        0.0
+      ],
+      "physical_jacobian_rank": 2,
+      "initial_viscosity": 0.17,
+      "future_time_relative_l2": 0.12636466104018998
+    }
+  ],
+  "reduced_state_count": 65,
+  "tangent_state_shape": [
+    65,
+    4
+  ],
+  "jacobian_shape": [
+    24,
+    3
+  ],
+  "native_dt": 0.002,
+  "threads": 1,
+  "source_sha256": "7684aa7b18273ebd2055f54602f5cccbc2f68135fba280b08e7a41b6ea441622",
+  "elapsed_seconds": 5.429711500182748
+}

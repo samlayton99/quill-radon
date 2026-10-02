@@ -1,0 +1,86 @@
+{
+  "matvec_seconds": 1.8471552920527756,
+  "rmatvec_seconds": 1.8195846253074706,
+  "scaling_seconds": 7.2631040420383215,
+  "preconditioner_seconds": 0.33026874996721745,
+  "preconditioner": {
+    "kind": "parity_blocks",
+    "blocks": 8,
+    "maximum_block_size": 252,
+    "factor_bytes": 3350816,
+    "setup_seconds": 0.3302440419793129,
+    "ridge_relative": 1e-10,
+    "basis": "ideal",
+    "field_parity": {
+      "mode": "auto",
+      "metadata_available": true,
+      "shifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "axis_mask": [
+        true,
+        true,
+        true
+      ],
+      "inconsistent_axes": [],
+      "constraint_edges": 11,
+      "blocks_ignored": 1,
+      "equations_considered": 7,
+      "constant_terms": 18,
+      "varying_terms_ignored": 18,
+      "interpretation": "Sampled constant local-sensitivity XOR constraints; varying terms ignored; conflicting coordinate bits disabled; not a proven symmetry"
+    },
+    "field_parity_shifts": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "parity_axis_mask": [
+      true,
+      true,
+      true
+    ],
+    "setup_matvec_calls": 0,
+    "setup_rmatvec_calls": 0,
+    "setup_column_gram_calls": 8,
+    "column_row_chunk_size": 64,
+    "construction": "local_column_panels",
+    "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+  }
+}

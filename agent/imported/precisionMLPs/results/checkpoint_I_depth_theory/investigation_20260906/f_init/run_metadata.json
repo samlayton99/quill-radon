@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-06",
+  "repository_head": "ed774d48c5628c2b47531cde80b902d9479b39a8",
+  "torch_version": "2.4.1",
+  "dtype": "float64",
+  "cpu_threads": 1,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "batch": 128,
+  "updates": 5000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "validation_fraction": 0.2,
+  "max_train": 4096,
+  "validation_cadence": 100,
+  "canonical_channels": [
+    12,
+    12
+  ],
+  "canonical_centers": [
+    11,
+    11
+  ],
+  "lambda_value": 0.25,
+  "bank_centers": "midpoints on [-1,1]",
+  "calibration": "once: divide each row by training quantile(abs(projection),0.999)",
+  "readout": "ordinary uniformly random Linear initialization; train with Adam",
+  "data": {
+    "airfoil": {
+      "path": "data/cache_all20/airfoil.pt",
+      "sha256": "c1d41b54e7e69c4ba2eee22dc6506ca16ca98c263cc8e34e6ff0d7e78057c75e",
+      "bytes": 37904
+    },
+    "parkinsons": {
+      "path": "data/cache_all20/parkinsons.pt",
+      "sha256": "98e793d2c42c15e00839e8fea7b246aac8b90b76b202e3b9541122958334bece",
+      "bytes": 471912
+    },
+    "bike_sharing": {
+      "path": "data/cache_all20/bike_sharing.pt",
+      "sha256": "19dfeb06422a35b422e76ec2da7cbfdcaf44d298653e3f8996a73db186346242",
+      "bytes": 905720
+    }
+  }
+}

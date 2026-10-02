@@ -1,0 +1,450 @@
+{
+  "case": "inverse_diffusivity",
+  "degree": 12,
+  "backend": "quill",
+  "fields": 1,
+  "coefficients": 91,
+  "interior_points": 455,
+  "setup_seconds": 0.0005478332750499249,
+  "solve_seconds": 0.05549341673031449,
+  "features": {
+    "backend": "quill",
+    "dimension": 2,
+    "degree": 12,
+    "coefficient_count": 91,
+    "tanh_count": 234,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "interior_centers_per_axis": 97,
+    "halo_per_side": 10,
+    "lam": 0.3,
+    "normalized_gamma": 14.4,
+    "physical_gamma": [
+      14.4,
+      28.8
+    ],
+    "normalized_derivative_checks": [
+      {
+        "order": 0,
+        "max_absolute_error": 1.4727830066618708e-11,
+        "max_scaled_error": 1.4727830066618708e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          3.552713678800501e-15,
+          9.992007221626409e-15,
+          2.5757174171303632e-14,
+          3.6637359812630166e-14,
+          9.281464485866309e-14,
+          1.3422596367718143e-13,
+          4.940492459581947e-13,
+          6.728784196496918e-13,
+          2.709832358505082e-12,
+          3.2193137045055664e-12,
+          1.342470579146493e-11,
+          1.4727830066618708e-11
+        ]
+      },
+      {
+        "order": 1,
+        "max_absolute_error": 2.542293486840208e-09,
+        "max_scaled_error": 3.259350624154113e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          7.063238882665246e-13,
+          2.133404564119701e-12,
+          4.269473663498502e-12,
+          7.085887432367599e-12,
+          1.120703529977618e-11,
+          1.6836310123835574e-11,
+          5.126210567141243e-11,
+          1.2735767995764036e-10,
+          2.8631319537453237e-10,
+          6.083169523662946e-10,
+          1.252999481948791e-09,
+          2.542293486840208e-09
+        ]
+      },
+      {
+        "order": 2,
+        "max_absolute_error": 3.9034057408571243e-07,
+        "max_scaled_error": 2.0461739442221213e-10,
+        "per_mode_absolute_error": [
+          0.0,
+          2.0461739442221213e-10,
+          5.960956173112208e-10,
+          1.2095462409433821e-09,
+          1.9885391111529316e-09,
+          3.995580755145056e-09,
+          8.264777306976612e-09,
+          1.595321919012349e-08,
+          2.9657712730113417e-08,
+          5.460447027871851e-08,
+          1.0197095434705261e-07,
+          1.961716407095082e-07,
+          3.9034057408571243e-07
+        ]
+      }
+    ],
+    "derivative_check_tolerance": 1e-08,
+    "encoding_value_error": 1.4727830066618708e-11,
+    "encoding_derivative_errors": [
+      2.542293486840208e-09,
+      3.9034057408571243e-07
+    ],
+    "encoding_sweep": [
+      {
+        "interior_centers": 49,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.35749209687716604
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.2,
+        "maximum_scaled_error": 0.015335528927097941
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.25,
+        "maximum_scaled_error": 0.0007279473614916825
+      },
+      {
+        "interior_centers": 49,
+        "lam": 0.3,
+        "maximum_scaled_error": 5.034113592382372e-05
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.0001888911423662506
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.2,
+        "maximum_scaled_error": 1.9101829184395042e-06
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.25,
+        "maximum_scaled_error": 1.682301950596007e-08
+      },
+      {
+        "interior_centers": 97,
+        "lam": 0.3,
+        "maximum_scaled_error": 2.0461739442221213e-10
+      }
+    ],
+    "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+    "setup_seconds": 2.954108640551567e-05
+  },
+  "solver": {
+    "status": "stationary",
+    "converged": false,
+    "optimization_converged": true,
+    "iterations": 5,
+    "objective": 1.3428331040939152e-10,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 455,
+        "output_rows": 455,
+        "equations": 1,
+        "rms": 1.4488574191930914e-05,
+        "scaled_rms": [
+          1.4488574191930914e-05
+        ],
+        "maximum_scaled_rms": 1.4488574191930914e-05,
+        "weighted_norm": 1.4488574191930914e-05
+      },
+      {
+        "name": "spatial_boundary",
+        "input_rows": 168,
+        "output_rows": 168,
+        "equations": 1,
+        "rms": 4.448491957599576e-06,
+        "scaled_rms": [
+          4.448491957599576e-06
+        ],
+        "maximum_scaled_rms": 4.448491957599576e-06,
+        "weighted_norm": 4.448491957599576e-06
+      },
+      {
+        "name": "initial",
+        "input_rows": 168,
+        "output_rows": 168,
+        "equations": 1,
+        "rms": 6.079974917869059e-06,
+        "scaled_rms": [
+          6.079974917869059e-06
+        ],
+        "maximum_scaled_rms": 6.079974917869059e-06,
+        "weighted_norm": 6.079974917869059e-06
+      },
+      {
+        "name": "observations",
+        "input_rows": 24,
+        "output_rows": 24,
+        "equations": 1,
+        "rms": 1.3757408931014555e-06,
+        "scaled_rms": [
+          1.3757408931014555e-06
+        ],
+        "maximum_scaled_rms": 1.3757408931014555e-06,
+        "weighted_norm": 1.3757408931014555e-06
+      }
+    ],
+    "residual_evaluations": 11,
+    "linearizations": 6,
+    "lsmr_iterations": 591,
+    "seconds": 0.05548304179683328,
+    "basis_setup_seconds": 0.0016307500191032887,
+    "basis_cache_bytes": 924560,
+    "unknowns": 92,
+    "feature_metrics": {
+      "backend": "quill",
+      "dimension": 2,
+      "degree": 12,
+      "coefficient_count": 91,
+      "tanh_count": 234,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "interior_centers_per_axis": 97,
+      "halo_per_side": 10,
+      "lam": 0.3,
+      "normalized_gamma": 14.4,
+      "physical_gamma": [
+        14.4,
+        28.8
+      ],
+      "normalized_derivative_checks": [
+        {
+          "order": 0,
+          "max_absolute_error": 1.4727830066618708e-11,
+          "max_scaled_error": 1.4727830066618708e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            3.552713678800501e-15,
+            9.992007221626409e-15,
+            2.5757174171303632e-14,
+            3.6637359812630166e-14,
+            9.281464485866309e-14,
+            1.3422596367718143e-13,
+            4.940492459581947e-13,
+            6.728784196496918e-13,
+            2.709832358505082e-12,
+            3.2193137045055664e-12,
+            1.342470579146493e-11,
+            1.4727830066618708e-11
+          ]
+        },
+        {
+          "order": 1,
+          "max_absolute_error": 2.542293486840208e-09,
+          "max_scaled_error": 3.259350624154113e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            7.063238882665246e-13,
+            2.133404564119701e-12,
+            4.269473663498502e-12,
+            7.085887432367599e-12,
+            1.120703529977618e-11,
+            1.6836310123835574e-11,
+            5.126210567141243e-11,
+            1.2735767995764036e-10,
+            2.8631319537453237e-10,
+            6.083169523662946e-10,
+            1.252999481948791e-09,
+            2.542293486840208e-09
+          ]
+        },
+        {
+          "order": 2,
+          "max_absolute_error": 3.9034057408571243e-07,
+          "max_scaled_error": 2.0461739442221213e-10,
+          "per_mode_absolute_error": [
+            0.0,
+            2.0461739442221213e-10,
+            5.960956173112208e-10,
+            1.2095462409433821e-09,
+            1.9885391111529316e-09,
+            3.995580755145056e-09,
+            8.264777306976612e-09,
+            1.595321919012349e-08,
+            2.9657712730113417e-08,
+            5.460447027871851e-08,
+            1.0197095434705261e-07,
+            1.961716407095082e-07,
+            3.9034057408571243e-07
+          ]
+        }
+      ],
+      "derivative_check_tolerance": 1e-08,
+      "encoding_value_error": 1.4727830066618708e-11,
+      "encoding_derivative_errors": [
+        2.542293486840208e-09,
+        3.9034057408571243e-07
+      ],
+      "encoding_sweep": [
+        {
+          "interior_centers": 49,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.35749209687716604
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.2,
+          "maximum_scaled_error": 0.015335528927097941
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.25,
+          "maximum_scaled_error": 0.0007279473614916825
+        },
+        {
+          "interior_centers": 49,
+          "lam": 0.3,
+          "maximum_scaled_error": 5.034113592382372e-05
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.0001888911423662506
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.2,
+          "maximum_scaled_error": 1.9101829184395042e-06
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.25,
+          "maximum_scaled_error": 1.682301950596007e-08
+        },
+        {
+          "interior_centers": 97,
+          "lam": 0.3,
+          "maximum_scaled_error": 2.0461739442221213e-10
+        }
+      ],
+      "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+      "setup_seconds": 2.954108640551567e-05
+    },
+    "parameter_bounds": [
+      [
+        0.02
+      ],
+      [
+        1.0
+      ]
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 16680,
+    "dense_jacobian_bytes_avoided": 599840,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 9
+    },
+    "residual_entries": 815
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 0.3273483122232886,
+      "maximum_scaled_block_rms": 0.7047960879547108,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.002114499919116497,
+      "scaled_projected_gradient_inf": 0.23792474105628642,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 96,
+      "estimated_condition": 5.48063812019995,
+      "step_length": 1.0,
+      "step_norm": 0.9818470199773361,
+      "trial_objective": 0.006883799112385769
+    },
+    {
+      "iteration": 1,
+      "objective": 0.006883799112385769,
+      "maximum_scaled_block_rms": 0.09645709714000744,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.01094237482175231,
+      "scaled_projected_gradient_inf": 0.027947221451429197,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 110,
+      "estimated_condition": 6.204457659593517,
+      "step_length": 1.0,
+      "step_norm": 0.29661319925001084,
+      "trial_objective": 0.004071372509294846
+    },
+    {
+      "iteration": 2,
+      "objective": 0.004071372509294846,
+      "maximum_scaled_block_rms": 0.08940328358452111,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.02082604169845581,
+      "scaled_projected_gradient_inf": 0.03250979595097702,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 142,
+      "estimated_condition": 13.916642424228382,
+      "step_length": 1.0,
+      "step_norm": 0.0537117613824872,
+      "trial_objective": 5.730431436336189e-06
+    },
+    {
+      "iteration": 3,
+      "objective": 5.730431436336189e-06,
+      "maximum_scaled_block_rms": 0.0033714274638545023,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.03335474990308285,
+      "scaled_projected_gradient_inf": 0.0019799199166684353,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 145,
+      "estimated_condition": 9.927505298979872,
+      "step_length": 1.0,
+      "step_norm": 0.0013685039276718285,
+      "trial_objective": 1.4363872072582174e-10
+    },
+    {
+      "iteration": 4,
+      "objective": 1.4363872072582174e-10,
+      "maximum_scaled_block_rms": 1.5204092364855697e-05,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.04608374973759055,
+      "scaled_projected_gradient_inf": 3.3930912957437577e-06,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 98,
+      "estimated_condition": 8.281124721602998,
+      "step_length": 1.0,
+      "step_norm": 1.147545959036782e-06,
+      "trial_objective": 1.3428331040939152e-10
+    },
+    {
+      "iteration": 5,
+      "objective": 1.3428331040939152e-10,
+      "maximum_scaled_block_rms": 1.4488574191930914e-05,
+      "damping": 4.115226337448558e-09,
+      "elapsed_seconds": 0.055058874655514956,
+      "scaled_projected_gradient_inf": 8.379686084400559e-12
+    }
+  ],
+  "validation": {
+    "relative_l2": 4.705428096282293e-06,
+    "component_relative_l2": [
+      4.705428096282293e-06
+    ],
+    "independent_residual_rms": {
+      "PDE": 2.0321604102464725e-05,
+      "spatial_boundary": 4.6467471382974225e-06,
+      "initial": 6.054943560525964e-06,
+      "observations": 1.3757408931014555e-06
+    },
+    "parameter_relative_error": 1.9188242092460506e-06
+  },
+  "manufactured_forcing": false,
+  "note": "24 noiseless measurements; joint coefficient/physical-parameter solve."
+}

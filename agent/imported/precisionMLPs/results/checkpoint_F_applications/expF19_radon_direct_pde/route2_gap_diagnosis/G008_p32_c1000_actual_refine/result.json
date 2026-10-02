@@ -1,0 +1,81 @@
+{
+  "run_id": "G008_p32_c1000_actual_refine",
+  "status": "complete",
+  "case": "diffusion_c1000",
+  "degree": 32,
+  "neurons": 9603,
+  "coordinates": 561,
+  "rows": 5222,
+  "basis": "actual",
+  "weighting": "raw",
+  "rank": 561,
+  "singular_max": 106597.8507301855,
+  "singular_min": 3.552949276566955e-07,
+  "condition": 300026379304.7614,
+  "algebraic_residual_norm": 3.792763312866145e-12,
+  "normal_residual_norm": 2.4125141024141064e-10,
+  "dense_matrix_bytes": 23436336,
+  "assembly_seconds": 1.823233749717474,
+  "solve_seconds": 0.05359433265402913,
+  "column_scaled": false,
+  "rcond": 1e-14,
+  "blocks": [
+    {
+      "name": "PDE",
+      "start": 0,
+      "stop": 3366,
+      "factor": 0.017236256333167305
+    },
+    {
+      "name": "Dirichlet",
+      "start": 3366,
+      "stop": 5222,
+      "factor": 0.023211917272131483
+    }
+  ],
+  "assembly_rhs_discrepancy": 0.0,
+  "assembly_operator_discrepancy": 1.3120349070055514e-13,
+  "refinements": [
+    {
+      "iteration": 0,
+      "before_norm": 6.065609071041156e-12,
+      "after_norm": 3.792559522110985e-12,
+      "step_norm": 1.2689944715829708e-08,
+      "rank": 561,
+      "accepted": true
+    },
+    {
+      "iteration": 1,
+      "before_norm": 3.792559522110985e-12,
+      "after_norm": 3.7919838416900155e-12,
+      "step_norm": 4.4918799116178165e-10,
+      "rank": 561,
+      "accepted": true
+    },
+    {
+      "iteration": 2,
+      "before_norm": 3.7919838416900155e-12,
+      "after_norm": 3.792987022089454e-12,
+      "step_norm": 5.93475966731892e-10,
+      "rank": 561,
+      "accepted": false
+    }
+  ],
+  "final_native_objective_residual_norm": 3.7919838416900155e-12,
+  "ordinary_relative_l2": 7.902294115638021e-13,
+  "ideal_relative_l2": 7.901975474215687e-13,
+  "stable_neural_relative_l2": 7.902082433703527e-13,
+  "ordinary_vs_ideal_relative_l2": 2.6980280636256533e-16,
+  "ordinary_pde_rms": 5.091812521599479e-12,
+  "ordinary_pde_max": 5.305356154394758e-11,
+  "ideal_pde_rms": 5.125433046787456e-12,
+  "boundary_rms": 9.971960622979534e-13,
+  "readout_l1": 3.7331254216570313,
+  "coordinate_norm": 1.1739032872446675,
+  "fit_basis": "actual",
+  "field_points": 2048,
+  "pde_points": 257,
+  "reference_used_in_fit": false,
+  "seconds": 6.767160082701594,
+  "process_peak_rss_bytes": 442597376
+}

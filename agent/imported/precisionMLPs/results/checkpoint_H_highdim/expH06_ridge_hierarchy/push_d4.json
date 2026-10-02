@@ -1,0 +1,76 @@
+{
+ "d": 4,
+ "r": 0.3,
+ "targets": [
+  "fast_waves",
+  "radial_runge",
+  "composition",
+  "gauss_bump",
+  "product_sines",
+  "spatial_packet"
+ ],
+ "n_train": 32768,
+ "rcond": 1e-14,
+ "cells": [
+  {
+   "M": 768,
+   "N": 12,
+   "units": 9216,
+   "rank": 7616,
+   "rel_l2": {
+    "fast_waves": 8.641399290945123e-09,
+    "radial_runge": 1.0620415597585708e-08,
+    "composition": 1.0739637874710788e-10,
+    "gauss_bump": 3.498084684094885e-11,
+    "product_sines": 1.1818698024528671e-09,
+    "spatial_packet": 1.277731692850037e-05
+   },
+   "seconds": 205.8
+  },
+  {
+   "M": 1024,
+   "N": 12,
+   "units": 12288,
+   "rank": 9376,
+   "rel_l2": {
+    "fast_waves": 7.912342792341618e-09,
+    "radial_runge": 2.082226389971398e-09,
+    "composition": 4.450165531950804e-11,
+    "gauss_bump": 3.754125990122636e-11,
+    "product_sines": 1.060175423804428e-09,
+    "spatial_packet": 1.4898886392550654e-06
+   },
+   "seconds": 442.4
+  },
+  {
+   "M": 1024,
+   "N": 8,
+   "units": 8192,
+   "rank": 5829,
+   "rel_l2": {
+    "fast_waves": 1.0863966284900678e-07,
+    "radial_runge": 8.662149005524609e-08,
+    "composition": 1.283454864388363e-10,
+    "gauss_bump": 9.602649123209262e-11,
+    "product_sines": 4.8758391759718625e-09,
+    "spatial_packet": 0.00015281795796143815
+   },
+   "seconds": 161.9
+  },
+  {
+   "M": 1536,
+   "N": 8,
+   "units": 12288,
+   "rank": 6453,
+   "rel_l2": {
+    "fast_waves": 5.5623158225606615e-08,
+    "radial_runge": 5.667444788475991e-08,
+    "composition": 6.012761963671641e-11,
+    "gauss_bump": 5.1854049264217745e-11,
+    "product_sines": 2.6855492711461195e-09,
+    "spatial_packet": 6.674326984890614e-05
+   },
+   "seconds": 445.0
+  }
+ ]
+}

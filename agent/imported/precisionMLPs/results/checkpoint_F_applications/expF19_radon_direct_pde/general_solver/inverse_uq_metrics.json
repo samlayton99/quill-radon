@@ -1,0 +1,1736 @@
+{
+  "method": "Local Gaussian covariance from known-noise weighted physical Jacobian; nonlinear forward tangents",
+  "truth": [
+    0.05,
+    1.0,
+    0.2
+  ],
+  "summary": [
+    {
+      "noise_fraction": 0.001,
+      "repeats": 30,
+      "coverage95_counts": [
+        29,
+        29,
+        27
+      ],
+      "median_sd": [
+        0.0012873280287258719,
+        0.0004331839102912995,
+        0.00035877685707873534
+      ],
+      "median_reduced_chi_squared": 0.9595959046065783,
+      "median_fit_seconds": 0.16405366663821042
+    },
+    {
+      "noise_fraction": 0.01,
+      "repeats": 30,
+      "coverage95_counts": [
+        29,
+        29,
+        27
+      ],
+      "median_sd": [
+        0.012885774874030476,
+        0.004337441997249914,
+        0.003583911755154351
+      ],
+      "median_reduced_chi_squared": 0.9599522298626235,
+      "median_fit_seconds": 0.14615360414609313
+    }
+  ],
+  "rows": [
+    {
+      "noise_fraction": 0.001,
+      "seed": 0,
+      "parameters": [
+        0.05025796723864819,
+        0.9998865539743843,
+        0.1997052491472254
+      ],
+      "standard_deviation": [
+        0.001287311603809381,
+        0.0004333358038831138,
+        0.0003584363802399174
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0534993944909314,
+      "seconds": 0.14754666713997722,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 1,
+      "parameters": [
+        0.05233702912721481,
+        1.0007262395751224,
+        0.2003444452247718
+      ],
+      "standard_deviation": [
+        0.0012845054592063028,
+        0.0004332741291763396,
+        0.00035884437326420945
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9327150747979074,
+      "seconds": 0.14629541710019112,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 2,
+      "parameters": [
+        0.04802769919482582,
+        0.9991629998439309,
+        0.19915278575821213
+      ],
+      "standard_deviation": [
+        0.0012901260413748419,
+        0.00043334488708001714,
+        0.0003581363860707583
+      ],
+      "covered95": [
+        true,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 1.1939897870399048,
+      "seconds": 0.1822834168560803,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 3,
+      "parameters": [
+        0.04973251770758579,
+        1.000070911760275,
+        0.19992375023890227
+      ],
+      "standard_deviation": [
+        0.0012874844112157327,
+        0.00043318031137688204,
+        0.00035873806769350775
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.3124343745892229,
+      "seconds": 0.14568120939657092,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 4,
+      "parameters": [
+        0.050088207639208224,
+        1.0000110399028588,
+        0.20002988989752069
+      ],
+      "standard_deviation": [
+        0.0012870252225484627,
+        0.0004330954223325529,
+        0.00035885755556278867
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.8433711821495591,
+      "seconds": 0.16411795793101192,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 5,
+      "parameters": [
+        0.04786992373545431,
+        0.9993254320166083,
+        0.199316178950339
+      ],
+      "standard_deviation": [
+        0.0012900350284502462,
+        0.0004332531029591608,
+        0.0003583317197389767
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.2235982267583723,
+      "seconds": 0.18274245783686638,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 6,
+      "parameters": [
+        0.049606119221997404,
+        1.0000765056372907,
+        0.20002762708534066
+      ],
+      "standard_deviation": [
+        0.0012874582182093273,
+        0.0004330831192218457,
+        0.0003588904336689202
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.5759036712641923,
+      "seconds": 0.16457866691052914,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 7,
+      "parameters": [
+        0.05002526073872,
+        0.9999306482932382,
+        0.20037354775942465
+      ],
+      "standard_deviation": [
+        0.0012866206112435,
+        0.00043276442350039006,
+        0.0003593470644882331
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.250231685742079,
+      "seconds": 0.14634362468495965,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 8,
+      "parameters": [
+        0.047126362054440506,
+        0.9994091446409776,
+        0.1992000768450352
+      ],
+      "standard_deviation": [
+        0.0012908583293248707,
+        0.00043332072514405803,
+        0.00035823813717255086
+      ],
+      "covered95": [
+        false,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 2.3471231572978724,
+      "seconds": 0.1644304171204567,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 9,
+      "parameters": [
+        0.04910601830356632,
+        0.9995640720176209,
+        0.199887250858507
+      ],
+      "standard_deviation": [
+        0.001288129651859081,
+        0.00043296032528144704,
+        0.00035889659255015823
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.5480040715711838,
+      "seconds": 0.16426749993115664,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 10,
+      "parameters": [
+        0.048277555541853936,
+        0.9996461290827827,
+        0.1996223049903216
+      ],
+      "standard_deviation": [
+        0.0012892306170260923,
+        0.0004331495249163873,
+        0.00035861172194769835
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9577415440170223,
+      "seconds": 0.1640851660631597,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 11,
+      "parameters": [
+        0.051145525829524106,
+        1.0006764046087904,
+        0.20010092637625657
+      ],
+      "standard_deviation": [
+        0.001285914873471721,
+        0.00043337315033393,
+        0.00035865742618387277
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9957497622083477,
+      "seconds": 0.14540999988093972,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 12,
+      "parameters": [
+        0.05012312999079055,
+        1.0000287041641192,
+        0.1995489666097934
+      ],
+      "standard_deviation": [
+        0.001287626368695027,
+        0.0004335119712537049,
+        0.0003582017786002408
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0666814539743137,
+      "seconds": 0.14546104101464152,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 13,
+      "parameters": [
+        0.05204159198154421,
+        1.0010069264606973,
+        0.199994489912084
+      ],
+      "standard_deviation": [
+        0.0012851888934224175,
+        0.0004336478419950284,
+        0.000358330296112028
+      ],
+      "covered95": [
+        true,
+        false,
+        true
+      ],
+      "reduced_chi_squared": 1.2134785081933492,
+      "seconds": 0.1453225421719253,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 14,
+      "parameters": [
+        0.05033707170963711,
+        1.0002624963890787,
+        0.20009151524492938
+      ],
+      "standard_deviation": [
+        0.0012866991776723062,
+        0.0004331605158547766,
+        0.00035884479810821925
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7739696722443588,
+      "seconds": 0.16422529192641377,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 15,
+      "parameters": [
+        0.050354632231615355,
+        1.0002219356730628,
+        0.20021629338908967
+      ],
+      "standard_deviation": [
+        0.0012865198312170029,
+        0.00043304019239701335,
+        0.000359021287605549
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.8209120482951506,
+      "seconds": 0.1461925827898085,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 16,
+      "parameters": [
+        0.05007025761623533,
+        0.9998058897791325,
+        0.19982636548432178
+      ],
+      "standard_deviation": [
+        0.0012873286210459936,
+        0.00043318750920571695,
+        0.0003586416631743933
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.6749236966070518,
+      "seconds": 0.1641865000128746,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 17,
+      "parameters": [
+        0.04937269259652483,
+        0.9999462385138449,
+        0.20002630139904856
+      ],
+      "standard_deviation": [
+        0.0012876779741931093,
+        0.00043301344254003147,
+        0.00035895018105693433
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9158721828516418,
+      "seconds": 0.16408870834857225,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 18,
+      "parameters": [
+        0.05082571919280675,
+        1.0001527233625986,
+        0.20003563755927017
+      ],
+      "standard_deviation": [
+        0.0012863384849591138,
+        0.00043320325460077076,
+        0.0003587464005594658
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9737268071683907,
+      "seconds": 0.18280975008383393,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 19,
+      "parameters": [
+        0.04846777352215388,
+        0.9995910852306855,
+        0.1997056518211899
+      ],
+      "standard_deviation": [
+        0.001288948506712023,
+        0.0004330721519647976,
+        0.00035871737151197536
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.6927166219172685,
+      "seconds": 0.18261379189789295,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 20,
+      "parameters": [
+        0.0515342816374187,
+        1.0003300892611946,
+        0.200391213655432
+      ],
+      "standard_deviation": [
+        0.001285213311269876,
+        0.0004330265126950599,
+        0.00035909829568032665
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.8499875687587619,
+      "seconds": 0.146118416916579,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 21,
+      "parameters": [
+        0.051004525713754245,
+        1.0003171066556684,
+        0.2002671474541884
+      ],
+      "standard_deviation": [
+        0.0012858575869611705,
+        0.00043308530718686985,
+        0.00035899279093963256
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.2502281253486545,
+      "seconds": 0.20057349978014827,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 22,
+      "parameters": [
+        0.04827227201232656,
+        0.9994104297064932,
+        0.19972326648923913
+      ],
+      "standard_deviation": [
+        0.0012891077132278427,
+        0.0004329675586123459,
+        0.0003588126484900335
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0350950644536066,
+      "seconds": 0.19967954233288765,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 23,
+      "parameters": [
+        0.04871759466299984,
+        0.9998325837109961,
+        0.19967696409527552
+      ],
+      "standard_deviation": [
+        0.0012887495010973711,
+        0.0004332141130302106,
+        0.00035858441482732875
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9614502651961343,
+      "seconds": 0.16379212494939566,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 24,
+      "parameters": [
+        0.05220777154601941,
+        1.0007533401576956,
+        0.20039456719454754
+      ],
+      "standard_deviation": [
+        0.0012845569722914525,
+        0.00043323409018357573,
+        0.00035891738810867746
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7244450180129163,
+      "seconds": 0.14575100038200617,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 25,
+      "parameters": [
+        0.05104093376310075,
+        1.0005937658939155,
+        0.20018756377745678
+      ],
+      "standard_deviation": [
+        0.0012859055637684882,
+        0.0004332613316993195,
+        0.0003588073135980048
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.3616534366479938,
+      "seconds": 0.16384345898404717,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 26,
+      "parameters": [
+        0.04761591874543356,
+        0.9994356976626377,
+        0.1991376827864711
+      ],
+      "standard_deviation": [
+        0.0012905017670351423,
+        0.00043342983073458435,
+        0.00035808877081619245
+      ],
+      "covered95": [
+        true,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 1.1401850937861473,
+      "seconds": 0.16402216721326113,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 27,
+      "parameters": [
+        0.050168405773945574,
+        1.0003398324264454,
+        0.19972571256807795
+      ],
+      "standard_deviation": [
+        0.00128732743640575,
+        0.000433486459314935,
+        0.0003583500969894621
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9329868288371846,
+      "seconds": 0.14585483307018876,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 28,
+      "parameters": [
+        0.05207164523567607,
+        1.0007576212112987,
+        0.20059884949584508
+      ],
+      "standard_deviation": [
+        0.001284416700303372,
+        0.0004330565178279429,
+        0.00035920308303437934
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9360647731750502,
+      "seconds": 0.14623108319938183,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.001,
+      "seed": 29,
+      "parameters": [
+        0.04812360336337139,
+        0.9998335407982833,
+        0.19981897491440648
+      ],
+      "standard_deviation": [
+        0.001289086608658114,
+        0.00043303811861789503,
+        0.00035884454207285214
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7806877519827873,
+      "seconds": 0.16432174993678927,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 0,
+      "parameters": [
+        0.05261539219368013,
+        0.9988774697948413,
+        0.19704547612805848
+      ],
+      "standard_deviation": [
+        0.01288390487788984,
+        0.004352286782485827,
+        0.0035488794701887534
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0533203707138017,
+      "seconds": 0.145499334204942,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 1,
+      "parameters": [
+        0.07349429425225756,
+        1.0073834923742553,
+        0.20342175392627
+      ],
+      "standard_deviation": [
+        0.012601613912504287,
+        0.004339434820929027,
+        0.003594888709957984
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9295605584442429,
+      "seconds": 0.12704091658815742,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 2,
+      "parameters": [
+        0.030358799544898056,
+        0.9916905611330856,
+        0.19165800895602553
+      ],
+      "standard_deviation": [
+        0.013168435740142806,
+        0.004351850512609724,
+        0.003520385045554448
+      ],
+      "covered95": [
+        true,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 1.1952342210733917,
+      "seconds": 0.16343616601079702,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 3,
+      "parameters": [
+        0.04732373825175401,
+        1.000709524033838,
+        0.1992313907041781
+      ],
+      "standard_deviation": [
+        0.012905620534914534,
+        0.004338273521138274,
+        0.0035789969588660743
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.3123676232665236,
+      "seconds": 0.1455142912454903,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 4,
+      "parameters": [
+        0.05088911405175957,
+        1.0001138014935749,
+        0.20029623782244949
+      ],
+      "standard_deviation": [
+        0.012859392778318778,
+        0.004329733024828823,
+        0.0035909909547362693
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.8433760539009522,
+      "seconds": 0.18222054233774543,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 5,
+      "parameters": [
+        0.02895649446434001,
+        0.9933831954952163,
+        0.19326744594812245
+      ],
+      "standard_deviation": [
+        0.013152988654202235,
+        0.0043398453363738924,
+        0.003541328781655188
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.2254552969485832,
+      "seconds": 0.1643912079744041,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 6,
+      "parameters": [
+        0.04599169501097519,
+        1.0007438289243884,
+        0.2002605980947633
+      ],
+      "standard_deviation": [
+        0.012903107152959642,
+        0.004327975200658613,
+        0.003594545977660544
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.5758333825441474,
+      "seconds": 0.1642140420153737,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 7,
+      "parameters": [
+        0.05040743038078906,
+        0.9993531568094515,
+        0.2037644281945648
+      ],
+      "standard_deviation": [
+        0.012811471528006413,
+        0.004295281541013476,
+        0.0036391605042469834
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.250467547282436,
+      "seconds": 0.14596774987876415,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 8,
+      "parameters": [
+        0.02138319772177166,
+        0.9942156483879596,
+        0.1920239180652861
+      ],
+      "standard_deviation": [
+        0.013230460133691781,
+        0.004340056819485521,
+        0.0035342088183834973
+      ],
+      "covered95": [
+        false,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 2.3467639272549565,
+      "seconds": 0.18242095783352852,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 9,
+      "parameters": [
+        0.040936588098386656,
+        0.995620269866101,
+        0.19884201380222769
+      ],
+      "standard_deviation": [
+        0.012965021778666666,
+        0.004312986911931139,
+        0.0035955792122524537
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.547647683402492,
+      "seconds": 0.16378208296373487,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 10,
+      "parameters": [
+        0.033102437149904226,
+        0.9966042243360463,
+        0.19627290267848002
+      ],
+      "standard_deviation": [
+        0.013071340321075566,
+        0.004330375482264051,
+        0.0035688006751856123
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9593716513205728,
+      "seconds": 0.1817222503013909,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 11,
+      "parameters": [
+        0.061323873344133514,
+        1.006759196950066,
+        0.2009567452461628
+      ],
+      "standard_deviation": [
+        0.012741406547535285,
+        0.0043529743037653435,
+        0.0035720147685139843
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9959988399273143,
+      "seconds": 0.1276439167559147,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 12,
+      "parameters": [
+        0.050822068779996635,
+        1.0001713840239643,
+        0.19539984961001566
+      ],
+      "standard_deviation": [
+        0.01291548892690323,
+        0.004368721567336002,
+        0.0035241685647549475
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0673760633431282,
+      "seconds": 0.14589479193091393,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 13,
+      "parameters": [
+        0.06978442310980583,
+        1.0099758832978996,
+        0.19970945123633815
+      ],
+      "standard_deviation": [
+        0.012657246063625378,
+        0.004370422273965297,
+        0.0035421004863601946
+      ],
+      "covered95": [
+        true,
+        false,
+        true
+      ],
+      "reduced_chi_squared": 1.2183514349616706,
+      "seconds": 0.12779383268207312,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 14,
+      "parameters": [
+        0.05326658034068337,
+        1.0025954628041878,
+        0.20090201591983645
+      ],
+      "standard_deviation": [
+        0.01282742953187994,
+        0.004335828547539448,
+        0.0035898496518299706
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7740991186349988,
+      "seconds": 0.14606970828026533,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 15,
+      "parameters": [
+        0.05355617032364225,
+        1.0022242850375482,
+        0.20217648114954137
+      ],
+      "standard_deviation": [
+        0.012808783647754065,
+        0.004324125862079458,
+        0.0036074589009714403
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.820816886176919,
+      "seconds": 0.14603370800614357,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 16,
+      "parameters": [
+        0.050848057504825,
+        0.9981030945454914,
+        0.1982881818347798
+      ],
+      "standard_deviation": [
+        0.01288764487017111,
+        0.004338756753710706,
+        0.003569532329243858
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.6747938950467506,
+      "seconds": 0.1635010838508606,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 17,
+      "parameters": [
+        0.04398772753583961,
+        0.9995449579759369,
+        0.20029322935508923
+      ],
+      "standard_deviation": [
+        0.012919333485241297,
+        0.00432022726090901,
+        0.0036007982384982113
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9166523054772704,
+      "seconds": 0.16418820805847645,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 18,
+      "parameters": [
+        0.05839682713434852,
+        1.0015765901078189,
+        0.20036939269113
+      ],
+      "standard_deviation": [
+        0.012787096670570559,
+        0.004338791062761397,
+        0.003580831366951521
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.973215525059941,
+      "seconds": 0.14548225002363324,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 19,
+      "parameters": [
+        0.0344827453467823,
+        0.9958825958477303,
+        0.19704001500392013
+      ],
+      "standard_deviation": [
+        0.013045855333553114,
+        0.00432139628236993,
+        0.0035794385397778894
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.6921389916406497,
+      "seconds": 0.1636630417779088,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 20,
+      "parameters": [
+        0.06520817540832319,
+        1.0032726178821598,
+        0.20393564912134649
+      ],
+      "standard_deviation": [
+        0.012681237452218197,
+        0.004320864753964049,
+        0.0036169829694965854
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.8498989105153553,
+      "seconds": 0.12765454081818461,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 21,
+      "parameters": [
+        0.05966232461875712,
+        1.0030549862079337,
+        0.20262457350431076
+      ],
+      "standard_deviation": [
+        0.012746965585638132,
+        0.004327447671352872,
+        0.003605224155178376
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.2511908748641838,
+      "seconds": 0.14553362457081676,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 22,
+      "parameters": [
+        0.03207855989571525,
+        0.9939513169104891,
+        0.19712506602999105
+      ],
+      "standard_deviation": [
+        0.013055978293125376,
+        0.004305814290714667,
+        0.003589548658809275
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.0318161059554938,
+      "seconds": 0.1818802091293037,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 23,
+      "parameters": [
+        0.03660999786891242,
+        0.9981496632642031,
+        0.1967140227390316
+      ],
+      "standard_deviation": [
+        0.013037506341040572,
+        0.004338823210399781,
+        0.003565328635888986
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9605328084046741,
+      "seconds": 0.18152195820584893,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 24,
+      "parameters": [
+        0.07157099435343278,
+        1.0074446516573203,
+        0.20386562598575164
+      ],
+      "standard_deviation": [
+        0.012614835998257608,
+        0.0043366104733615525,
+        0.0036011912584416
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7270344565470688,
+      "seconds": 0.12725616712123156,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 25,
+      "parameters": [
+        0.060631680657080515,
+        1.006030477069012,
+        0.2019029267310627
+      ],
+      "standard_deviation": [
+        0.012740525480956647,
+        0.00434363544831902,
+        0.0035869921433571805
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 1.3606069748914928,
+      "seconds": 0.14623750001192093,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 26,
+      "parameters": [
+        0.026295807644748127,
+        0.9944345337508068,
+        0.19150973249584602
+      ],
+      "standard_deviation": [
+        0.013206615553215202,
+        0.004359080648048846,
+        0.003516676102902559
+      ],
+      "covered95": [
+        true,
+        true,
+        false
+      ],
+      "reduced_chi_squared": 1.1408502290193885,
+      "seconds": 0.1642240840010345,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 27,
+      "parameters": [
+        0.05179158875912849,
+        1.0034319008894619,
+        0.19726969358189012
+      ],
+      "standard_deviation": [
+        0.012880108191420468,
+        0.004366511089460484,
+        0.0035395947685532775
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9330058407751597,
+      "seconds": 0.14594062510877848,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 28,
+      "parameters": [
+        0.07011584946309625,
+        1.0074266816778648,
+        0.2059983978124155
+      ],
+      "standard_deviation": [
+        0.012606291868219481,
+        0.004321765742584728,
+        0.0036287388134473453
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.9378737260383251,
+      "seconds": 0.14599529094994068,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "noise_fraction": 0.01,
+      "seed": 29,
+      "parameters": [
+        0.03182232286455354,
+        0.9985466397422277,
+        0.1982496661055165
+      ],
+      "standard_deviation": [
+        0.013045294993520388,
+        0.004314776988801886,
+        0.003593548195449586
+      ],
+      "covered95": [
+        true,
+        true,
+        true
+      ],
+      "reduced_chi_squared": 0.7851495231860687,
+      "seconds": 0.16394462483003736,
+      "success": true,
+      "rank": 3,
+      "active_mask": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "mismatch": {
+    "unmodeled_sensor_offset": 0.02,
+    "assumed_noise_fraction": 0.001,
+    "parameters": [
+      0.04075652677147007,
+      0.9971727303706931,
+      0.1986775960314233
+    ],
+    "reduced_chi_squared": 921.4483250446572,
+    "observation_consistency": "inconsistent_with_assumed_noise"
+  },
+  "scope": "Conditional uncertainty for 3 physical parameters; 30 realizations per noise level, with the same random draws rescaled between levels. Not a full Bayesian posterior or arbitrary model discrepancy treatment."
+}

@@ -1,0 +1,22 @@
+cand_gauss_varpro: gauss_bump d=3 M=8 N1=128 K=8 N2=128 steps=3000 lr=0.02 head=varpro
+** On entry to DLASCL, parameter number  4 had an illegal value
+** On entry to DLASCL, parameter number  4 had an illegal value
+Traceback (most recent call last):
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 167, in <module>
+    c1 = net.layers[0].bank.c.cpu().numpy(); c2 = net.layers[-1].bank.c.cpu().numpy()
+^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 155, in main
+    torch.set_num_threads(a.threads)
+                     ^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/profile_gif.py", line 70, in train_with_snapshots
+    take(0)
+            
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/qi2.py", line 252, in forward_pres
+    self._solve_from(H.detach().reshape(H.shape[0], -1), *solve)
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/qi2.py", line 263, in _solve_from
+    W = torch.linalg.lstsq(A, Y.reshape(len(Y), -1), rcond=rcond, driver="gelsd").solution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._C._LinAlgError: torch.linalg.lstsq: The least squares solution could not be computed because the input matrix does not have full rank (error code: 15).

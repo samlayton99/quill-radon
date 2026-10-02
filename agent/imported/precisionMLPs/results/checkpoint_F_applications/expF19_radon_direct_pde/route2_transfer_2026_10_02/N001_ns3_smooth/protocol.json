@@ -1,0 +1,54 @@
+{
+  "run_id": "N001_ns3_smooth",
+  "case": {
+    "family": "trigonometric",
+    "frequency": 0.7,
+    "viscosity": 0.2,
+    "transient": false
+  },
+  "options": {
+    "coordinates": "box",
+    "angular_rule": "tensor",
+    "centers": 257,
+    "lam": 0.2,
+    "degrees": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20
+    ],
+    "tolerance": 1e-13,
+    "oversampling": 6,
+    "batch_size": 64,
+    "check_points": 257,
+    "export_check_points": 129,
+    "maximum_working_array_mb": 1024,
+    "maximum_neurons": 2000000,
+    "max_seconds": 600.0,
+    "max_iterations": 8,
+    "solver_options": {
+      "inexact_newton": false,
+      "lsmr_max_iterations": 4000,
+      "refine_on_ideal_stall": true,
+      "damping": 1e-06
+    }
+  },
+  "started": "2026-10-02 08:07:52 UTC",
+  "dimension": 3,
+  "declaration": "PDE/BC/IC/gauge only; cold zero and native continuation",
+  "normalization": "fixed zero-jet differential sensitivity on joint momentum/divergence",
+  "no_symmetry_or_sparse_directions": true,
+  "known_interior_target_used_only_after_fit": true,
+  "architecture": "ordinary Linear/Tanh/Linear on original inputs",
+  "source_hashes": {
+    "experiments/expF19_radon_direct_pde/route2_transfer_ns.py": "06cd14ccae40bead7bcefd194b9a9b75dafa385ea03c8fb9cfcc3e7afb757a3c",
+    "experiments/expF19_radon_direct_pde/route2_hardening_ns.py": "ba78ef66be59294455dfd1a55532fd0926cedea3f80b248984339d428849ecbd",
+    "experiments/expF19_radon_direct_pde/solver/route2.py": "904a862261491cc6f156e072aec86913a3c8e9d3121da453ddb6e2f01946ba32",
+    "experiments/expF19_radon_direct_pde/solver/general_residual.py": "71a27edfa747a92e1d0b7651e76a5791330b8800bfa80d9b43209677a9a9bc68",
+    "experiments/expF19_radon_direct_pde/solver/streamed_residual.py": "afa9f033c06bb91d55fcdd22b8f1b19b059d989ee7762bd27cabbc4a769ac603",
+    "experiments/expF19_radon_direct_pde/solver/residual_scaling.py": "b72ad6e0908b096f2a0695caecd230945772ce3fdad7ad64fa3a70f77154e298"
+  }
+}

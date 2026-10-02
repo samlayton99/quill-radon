@@ -1,0 +1,77 @@
+{
+  "dimension": 2,
+  "degree": 6,
+  "interior_centers": 129,
+  "halo_per_side": 12,
+  "lam": 0.2,
+  "directions": 7,
+  "neurons": 1071,
+  "architecture": [
+    "Linear",
+    "Tanh",
+    "Linear"
+  ],
+  "angular_degree": 6,
+  "angular_only_max_error": 1.4432899320127035e-15,
+  "derivative_checks": [
+    {
+      "order": [
+        0,
+        0
+      ],
+      "max_absolute": 1.0611372891489168e-12,
+      "max_scaled": 1.0611372891489168e-12,
+      "rms": 1.005923841444573e-12
+    },
+    {
+      "order": [
+        1,
+        0
+      ],
+      "max_absolute": 1.6360246490876307e-12,
+      "max_scaled": 2.2864139551407405e-13,
+      "rms": 5.010176769563381e-13
+    },
+    {
+      "order": [
+        0,
+        1
+      ],
+      "max_absolute": 2.517097641430155e-12,
+      "max_scaled": 1.7588754475756947e-13,
+      "rms": 7.75463872994721e-13
+    },
+    {
+      "order": [
+        2,
+        0
+      ],
+      "max_absolute": 1.6121148860293033e-10,
+      "max_scaled": 5.597621132046196e-12,
+      "rms": 5.0940491910365055e-11
+    },
+    {
+      "order": [
+        0,
+        2
+      ],
+      "max_absolute": 3.4934544146381086e-10,
+      "max_scaled": 3.0325125127066936e-12,
+      "rms": 1.1039127683108978e-10
+    },
+    {
+      "order": [
+        1,
+        1
+      ],
+      "max_absolute": 2.1888268975089886e-10,
+      "max_scaled": 3.800046697064219e-12,
+      "rms": 6.915889630971434e-11
+    }
+  ],
+  "seconds": 0.0025992081500589848,
+  "scope": "Known-function analytic reconstruction, no fitting; NOT a PDE solve",
+  "forward_contains_polynomials": false,
+  "forward_contains_product_gates": false,
+  "export": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/pure_mlp_repair/ridge_frame_d2_p6_n129_a6.pt"
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "G010_p40_c1000_actual_raw",
+  "case": "diffusion_c1000",
+  "degree": 40,
+  "centers": 257,
+  "lam": 0.2,
+  "basis": "actual",
+  "weighting": "raw",
+  "rcond": 1e-14,
+  "column_scale": false,
+  "refinements": 2,
+  "started": "2026-10-02 07:15:01 UTC",
+  "architecture": "Linear/Tanh/Linear",
+  "purpose": "Dense small diagnostic only, not scalable production solve",
+  "truth_policy": "Prescribed PDE forcing and BC only; interior truth used after solving",
+  "dtype": "float64",
+  "threads": 1,
+  "source_hashes": {
+    "experiments/expF19_radon_direct_pde/route2_gap_diagnosis.py": "8e8138c5412e8bb4dcd6468c6059071bd03e5d1e89e3dc5fb63b53d279d42652",
+    "experiments/expF19_radon_direct_pde/route2_battletest_forward.py": "f5049c0f28d0d993d17c9bb0204b253652051db52004264acbd69417dfec7ddb",
+    "experiments/expF19_radon_direct_pde/route2_disk_profiles.py": "2355304d10da08f08506cbcef76d4b1ad9347a17bfa0331397abbf2221a60a14",
+    "experiments/expF19_radon_direct_pde/route2_directional_operator.py": "952187ace614a8b3fd0c7f86f8f0e3f168a8c1b8a357493d8fc490deeb9d53e2"
+  }
+}

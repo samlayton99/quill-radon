@@ -1,0 +1,252 @@
+{
+  "scope": "Oracle representation ceilings at matched trainable coefficients; not ODE solves.",
+  "radon": {
+    "geometry": "1-D uniform-offset tanh ridges plus degree-3 polynomial",
+    "lambda_grid": [
+      0.12,
+      0.16,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "collar_grid": [
+      1.0,
+      1.3,
+      1.6
+    ],
+    "rcond_grid": [
+      1e-13,
+      1e-15
+    ]
+  },
+  "systems": {
+    "InteriorSquirmer": {
+      "d": 3,
+      "reference_nfev": 4931,
+      "cells": [
+        {
+          "tensor_rank": 1,
+          "budget": 700,
+          "tensor_relative_l2": 0.30932218946863155,
+          "radon": {
+            "relative_l2": 8.009761626873089e-05,
+            "width": 229,
+            "features_with_poly": 233,
+            "parameters": 699,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 2,
+          "budget": 1400,
+          "tensor_relative_l2": 0.12991398730993076,
+          "radon": {
+            "relative_l2": 1.2348185668411133e-06,
+            "width": 462,
+            "features_with_poly": 466,
+            "parameters": 1398,
+            "lambda": 0.25,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        }
+      ]
+    },
+    "DoublePendulum": {
+      "d": 4,
+      "reference_nfev": 1154,
+      "cells": [
+        {
+          "tensor_rank": 1,
+          "budget": 701,
+          "tensor_relative_l2": 0.010935853699032234,
+          "radon": {
+            "relative_l2": 1.6902613194172745e-15,
+            "width": 171,
+            "features_with_poly": 175,
+            "parameters": 700,
+            "lambda": 0.12,
+            "collar": 1.6,
+            "rcond": 1e-15,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 2,
+          "budget": 1402,
+          "tensor_relative_l2": 0.003837134267306947,
+          "radon": {
+            "relative_l2": 4.716494949614388e-15,
+            "width": 346,
+            "features_with_poly": 350,
+            "parameters": 1400,
+            "lambda": 0.2,
+            "collar": 1.3,
+            "rcond": 1e-15,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 3,
+          "budget": 2103,
+          "tensor_relative_l2": 0.0003530624321414758,
+          "radon": {
+            "relative_l2": 2.9162604712045055e-15,
+            "width": 521,
+            "features_with_poly": 525,
+            "parameters": 2100,
+            "lambda": 0.16,
+            "collar": 1.6,
+            "rcond": 1e-15,
+            "n_train": 2100
+          }
+        }
+      ]
+    },
+    "MacArthur": {
+      "d": 10,
+      "reference_nfev": 8162,
+      "cells": [
+        {
+          "tensor_rank": 1,
+          "budget": 707,
+          "tensor_relative_l2": 0.07444552221734328,
+          "radon": {
+            "relative_l2": 3.17773979551413e-06,
+            "width": 66,
+            "features_with_poly": 70,
+            "parameters": 700,
+            "lambda": 0.25,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 2,
+          "budget": 1414,
+          "tensor_relative_l2": 0.020932893449219083,
+          "radon": {
+            "relative_l2": 5.748157425784579e-07,
+            "width": 137,
+            "features_with_poly": 141,
+            "parameters": 1410,
+            "lambda": 0.25,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 3,
+          "budget": 2121,
+          "tensor_relative_l2": 0.0014371677067504733,
+          "radon": {
+            "relative_l2": 2.1341126391746168e-07,
+            "width": 208,
+            "features_with_poly": 212,
+            "parameters": 2120,
+            "lambda": 0.25,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 4,
+          "budget": 2828,
+          "tensor_relative_l2": 0.00033065375674518424,
+          "radon": {
+            "relative_l2": 9.60926672069664e-08,
+            "width": 278,
+            "features_with_poly": 282,
+            "parameters": 2820,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 5,
+          "budget": 3535,
+          "tensor_relative_l2": 8.067401623198717e-05,
+          "radon": {
+            "relative_l2": 5.373122690511297e-08,
+            "width": 349,
+            "features_with_poly": 353,
+            "parameters": 3530,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 6,
+          "budget": 4242,
+          "tensor_relative_l2": 4.674172905919327e-08,
+          "radon": {
+            "relative_l2": 3.490405368179014e-08,
+            "width": 420,
+            "features_with_poly": 424,
+            "parameters": 4240,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 7,
+          "budget": 4949,
+          "tensor_relative_l2": 4.6741729014539465e-08,
+          "radon": {
+            "relative_l2": 2.406455060290143e-08,
+            "width": 490,
+            "features_with_poly": 494,
+            "parameters": 4940,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2001
+          }
+        },
+        {
+          "tensor_rank": 8,
+          "budget": 5656,
+          "tensor_relative_l2": 4.674172901453925e-08,
+          "radon": {
+            "relative_l2": 1.6318105947924833e-08,
+            "width": 561,
+            "features_with_poly": 565,
+            "parameters": 5650,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-13,
+            "n_train": 2260
+          }
+        },
+        {
+          "tensor_rank": 9,
+          "budget": 6363,
+          "tensor_relative_l2": 4.674172901453796e-08,
+          "radon": {
+            "relative_l2": 1.2280384644272207e-08,
+            "width": 632,
+            "features_with_poly": 636,
+            "parameters": 6360,
+            "lambda": 0.3,
+            "collar": 1.0,
+            "rcond": 1e-15,
+            "n_train": 2544
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "problem": "u_t+u*u_x=0.1*u_xx; x=[-.5,.5], t=[0,1]; initial prescribed, spatial BC=0; no solution labels",
+  "rows": [
+    {
+      "degree": 24,
+      "neurons": 7275,
+      "coordinates": 325,
+      "relative_l2": 1.0576739873137377e-07,
+      "final_relative_l2": 5.007021714710988e-06,
+      "torch_pde_rms": 2.577184344911572e-07,
+      "seconds": 6.206429000012577,
+      "status": "line_search_failed"
+    },
+    {
+      "degree": 28,
+      "neurons": 8439,
+      "coordinates": 435,
+      "relative_l2": 6.132225745425145e-09,
+      "final_relative_l2": 7.272104954547373e-07,
+      "torch_pde_rms": 2.2828171664140434e-08,
+      "seconds": 12.974227875005454,
+      "status": "line_search_failed"
+    },
+    {
+      "degree": 32,
+      "neurons": 9603,
+      "coordinates": 561,
+      "relative_l2": 2.989167486458826e-10,
+      "final_relative_l2": 1.0100856119563815e-08,
+      "torch_pde_rms": 1.2495023004367966e-09,
+      "seconds": 29.591332541778684,
+      "status": "line_search_failed"
+    },
+    {
+      "degree": 36,
+      "neurons": 10767,
+      "coordinates": 703,
+      "relative_l2": 1.6764442577935214e-11,
+      "final_relative_l2": 4.444164547403007e-09,
+      "torch_pde_rms": 5.75287192531915e-11,
+      "seconds": 65.80857250001281,
+      "status": "line_search_failed"
+    }
+  ],
+  "best_global": "route2_burgers_global_p36_n257_l0.2_s1",
+  "tests": "7 passed: tests/test_route2_burgers_protocol.py and tests/test_ridge_pinn_features.py",
+  "conclusions": [
+    "Box-appropriate explicit coordinates plus resolution improved actual exported MLP error from1e-7 to1.7e-11.",
+    "All requested1e-11 sampled residual targets remain unmet in the best global result; this is not convergence certification.",
+    "Known-coordinate encoding discrepancy is tiny at solved coefficients; increasing N alone in a representation-only control barely changes PDE residual.",
+    "Extra PDE face collocation failed under the bounded solve, and its failure is retained.",
+    "Four time-slab MLPs are a changed, explicit collection; no matched-accuracy efficiency advantage demonstrated."
+  ],
+  "figure": "route2_burgers_summary.png"
+}

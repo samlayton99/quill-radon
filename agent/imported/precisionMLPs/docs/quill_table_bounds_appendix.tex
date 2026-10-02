@@ -1,0 +1,174 @@
+% Requires amsmath, amssymb, and the paper's existing citation package.
+% Uses the citation keys in Sam's bibliography.
+% Replace the older subsection carrying app:comparison-bounds; do not include both.
+% The final paragraph states the uniform estimates required from the QUILLS proof.
+
+\subsection{Derivation of the comparison bounds}
+\label{app:comparison-bounds}
+
+\paragraph{Common assumptions.}
+Fix a uniformly bounded class of functions analytic on a fixed complex
+neighborhood of $[-1,1]$. Constants below may depend on that class, but not
+on the requested error $\varepsilon$. Error is measured in
+$\|g\|_{2,\Omega}=(\tfrac12\int_{-1}^{1}|g(x)|^2\,dx)^{1/2}$;
+the uniform error bounds for the competing constructions imply this bound.
+Let $W$ denote maximum hidden-layer width, $B$ the largest absolute weight
+or bias, and $b$ the number of working significand bits. Assume target
+samples with absolute error $O(u)$, accurately rounded elementary functions,
+and sufficient exponent range, where $u\asymp2^{-b}$ is unit roundoff.
+If construction and evaluation add at most $uA$ error, then
+\begin{equation}
+ b\ge\log_2(1/\varepsilon)+\log_2\max\{1,A\}+O(1)
+ \label{eq:table-precision}
+\end{equation}
+suffices. We allocate fixed fractions of the error budget to approximation
+and arithmetic. All bounds concern specified implementations; none is a
+lower bound on necessary precision. Here $\widetilde O$ suppresses powers
+of $\log\log(1/\varepsilon)$.
+
+\paragraph{Classical staircase.}
+For $x_j=-1+2j/N$ and $S(t)=(1+\tanh t)/2$, take
+\[
+ q_N(x)=f(-1)+\sum_{j=1}^{N}
+ [f(x_j)-f(x_{j-1})]S(N(x-x_j)).
+\]
+The analytic class has a uniform Lipschitz bound, so each coefficient
+increment is $O(N^{-1})$. The piecewise-constant approximation error is
+$O(N^{-1})$; smoothing its jumps adds the same order, since the sigmoid
+tails decay exponentially with distance in grid cells. Hence
+$\|f-q_N\|_\infty=O(N^{-1})$ and $N=O(\varepsilon^{-1})$ suffices.
+There are $N$ tanh neurons; slopes and biases are $O(N)$.
+Coefficient formation and direct evaluation have error $O(uN)$, using
+the bounded total absolute readout weight. Thus
+\[
+ W=O(\varepsilon^{-1}),\qquad B=O(\varepsilon^{-1}),\qquad
+ b=O(\log(1/\varepsilon)).
+\]
+Jones~\citeyearpar{58342} is the historical reference; these estimates
+are for the explicit staircase above.
+
+\paragraph{Mhaskar: an explicit tanh specialization.}
+The polynomial construction underlying~\cite{mhaskar1996approximation}
+can be realized as follows. Analyticity gives a degree-$n$ polynomial
+with error $C\rho^{-n}$, for fixed $\rho>1$, so
+$n=O(\log(1/\varepsilon))$ suffices. For $1\le p\le n$, replace $x^p$ by
+\[
+ H_{p,h}(x)=
+ \frac{\sum_{r=0}^{p}(-1)^{p-r}\binom pr
+ \tanh\!\left(\beta+(r-p/2)hx\right)}
+ {h^p\tanh^{(p)}(\beta)},\qquad \beta=\tfrac12\log2,
+\]
+where $h>0$ is the finite-difference spacing. All these formulas share
+the $2n+1$ slopes $hj/2$, $-n\le j\le n$, so one hidden layer of
+width $O(n)$ suffices.
+
+The denominators are quantitatively nonzero. Indeed,
+$\tanh^{(p)}(\beta)=2^{p+2}E_p(-2)/3^{p+1}$, where
+$E_1(z)=1$ and
+$E_{p+1}(z)=(1+pz)E_p(z)+z(1-z)E_p'(z)$.
+These integer polynomials have constant term one; hence $E_p(-2)$
+is odd and $|\tanh^{(p)}(\beta)|^{-1}\le e^{Cp}$.
+The centered-difference error satisfies
+\[
+ \|H_{p,h}-x^p\|_\infty
+ \le \frac{ph^2\|\tanh^{(p+2)}\|_\infty}
+ {24|\tanh^{(p)}(\beta)|}.
+\]
+Together with Cauchy bounds on tanh derivatives and the
+$e^{O(n)}$ cost of converting a bounded Chebyshev expansion to monomials,
+this bounds the combined error by $h^2e^{Cn\log(n+2)}$.
+Choose dyadic $h$ small enough that this is $O(\varepsilon)$, with
+$\log(1/h)=O(\log(1/\varepsilon)+n\log(n+2))$.
+Summing absolute finite-difference coefficients gives
+$B\le e^{Cn}(2/h)^n$.
+Compute the $E_p(-2)$ numerators with exact integer arithmetic and use
+stable Chebyshev coefficient computation; coefficient formation and
+network evaluation then have amplification at most
+$A\le e^{Cn\log(n+2)}(2/h)^n$.
+Consequently,
+\[
+ W=O(\log(1/\varepsilon)),\qquad
+ \log B,\ \log A
+ =O\!\left(\log^2(1/\varepsilon)\log\log(1/\varepsilon)\right).
+\]
+Equation~\eqref{eq:table-precision} gives the stated
+$\widetilde O(\log^2(1/\varepsilon))$ precision bound.
+These parameter and arithmetic bounds are derived for this specialization.
+
+\paragraph{Costarelli--Spigler: sampled tanh implementation.}
+Section~5 of~\cite{Costarelli2015Approximation} uses
+$\sigma(t)=(1+\tanh t)/2$, $\phi=\sigma'$, and
+$\psi(t)=\sigma(t+1)-\sigma(t)$. The translates of $\psi$ are nonnegative
+and sum to one. Extend $f$ to a bounded Lipschitz function $F$ by linearly
+tapering its endpoint values to zero on $[-2,-1]$ and $[1,2]$, and setting
+$F=0$ elsewhere outside $[-2,2]$.
+Their Theorem~5.4, with scale $N$ and truncation $|k|\le2N$, gives
+$O(N^{-1})$ error using coefficients
+\[
+ a_k=\int_{\mathbb R}\phi(t)F((k+t)/N)\,dt.
+\]
+If $L_F$ is a Lipschitz constant for $F$, then
+\[
+ |a_k-F(k/N)|\le\frac{L_F}{N}
+ \int_{\mathbb R}|t|\phi(t)\,dt=O(N^{-1}).
+\]
+The partition of unity implies that replacing every $a_k$ by the sample
+$F(k/N)$ adds only $O(N^{-1})$ error. Thus the explicit sampled network
+\[
+ q_N(x)=\sum_{k=-2N}^{2N}F(k/N)\psi(Nx-k)
+\]
+retains that rate without quadrature. Expanding each $\psi$ into two tanh
+terms gives one hidden layer with $W=O(N)$, slopes and biases $O(N)$,
+and bounded readout coefficients. A conservative bound for sample-based
+construction and direct evaluation is $O(uN^2)$. Taking
+$N=O(\varepsilon^{-1})$ and applying~\eqref{eq:table-precision} gives
+\[
+ W=O(\varepsilon^{-1}),\qquad B=O(\varepsilon^{-1}),\qquad
+ b=O(\log(1/\varepsilon)).
+\]
+The sampled implementation and its precision bound are additional
+derivations, not bit-complexity claims made in that paper.
+
+\paragraph{ChebNet.}
+For a degree-$n$ Chebyshev polynomial,
+Theorem~1 of~\cite{tang2019chebnet} gives an exact ReQU realization
+with $O(n)$ neurons and $O(\log n)$ hidden layers.
+Analyticity supplies coefficients $|c_j|\le C\rho^{-j}$ and requires
+$n=O(\log(1/\varepsilon))$.
+In the recursive construction, an original coefficient $c_j$ is
+multiplied by at most $2\max\{1,j\}$ along any branch: every doubling
+reduces its index by at least half. Therefore the coefficient sums
+of intermediate polynomials are bounded by
+$2\sum_j\max\{1,j\}|c_j|=O(1)$.
+The ReQU implementation has bounded weights and intermediates.
+Bounded fan-in and $O(\log n)$ depth give at most polynomial-in-$n$
+arithmetic amplification; stable coefficient construction does also.
+Thus
+\[
+ W=O(\log(1/\varepsilon)),\qquad B=O(1),\qquad
+ b=\log_2(1/\varepsilon)+O(\log\log(1/\varepsilon)).
+\]
+The hidden-layer count is $O(\log\log(1/\varepsilon))$.
+The weight and precision estimates are derived for this analytic class.
+
+\paragraph{QUILLS: estimates required from the main theorem.}
+The QUILLS row requires the main construction and recovery result to
+provide, along the bandwidth choice used to attain error $\varepsilon$,
+\[
+ W=O(\log(1/\varepsilon)),\qquad
+ \|c\|_1=O(1),\qquad
+ \text{construction and evaluation error}\le u\,\mathrm{poly}(W),
+\]
+with constants independent of $\varepsilon$; $c$ is the physical readout
+vector. With spacing $h\asymp W^{-1}$, bounded center locations $x_j$,
+and bounded relative bandwidth $\lambda$, the hidden slopes and biases
+are $\gamma=\lambda/h=O(W)$ and $-\gamma x_j=O(W)$.
+These estimates give one tanh hidden layer and
+\[
+ B=O(\log(1/\varepsilon)),\qquad
+ b=\log_2(1/\varepsilon)+O(\log W)=O(\log(1/\varepsilon)).
+\]
+The uniform bandwidth and recovery estimates are inputs from the main
+proof, not consequences of logarithmic width alone. In particular,
+constants established only for fixed $\lambda$ must be controlled before
+allowing $\lambda$ to vary with $\varepsilon$.

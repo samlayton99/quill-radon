@@ -1,0 +1,64 @@
+{
+  "ordinary_velocity_relative_l2": 1.8446057181671687e-15,
+  "ordinary_pressure_relative_l2": 6.368455921120097e-14,
+  "ordinary_velocity_max_abs": 7.494005416219807e-16,
+  "ordinary_pressure_max_abs": 2.8026192477881295e-14,
+  "ordinary_momentum_rms": 9.597254201424692e-16,
+  "ordinary_momentum_max_abs": 4.0217829067046296e-14,
+  "ordinary_divergence_rms": 1.173945485443998e-16,
+  "ordinary_divergence_max_abs": 1.5152829355538505e-15,
+  "ordinary_vs_grouped_max_abs": 9.43689570931383e-16,
+  "ordinary_readout_l1_per_field": [
+    0.9787836810503838,
+    0.9715423482346865,
+    0.9748472472349115,
+    0.35599464537948416
+  ],
+  "ordinary_parameter_bytes": 54121640,
+  "value_audit_points": 2048,
+  "derivative_audit_points": 1024,
+  "constraints": {
+    "velocity_boundary": {
+      "rms": 1.5905148970986403e-16,
+      "max_abs": 5.273559366969494e-16
+    },
+    "velocity_initial": {
+      "rms": 1.5228294249262516e-16,
+      "max_abs": 8.049116928532385e-16
+    },
+    "pressure_gauge": {
+      "rms": 4.28058774623008e-18,
+      "max_abs": 5.5294310796760726e-18
+    }
+  },
+  "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+  "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve",
+  "all_corners": {
+    "points": 16,
+    "maximum_field_error": 1.318042897047178e-13,
+    "momentum_rms": 6.800612665773051e-14,
+    "momentum_max_abs": 1.4629963906998e-13,
+    "divergence_rms": 1.6309992992911836e-14
+  },
+  "larger_constraint_audit": {
+    "velocity_boundary": {
+      "points": 1024,
+      "rms": 1.496456755989823e-16,
+      "maximum_absolute": 1.7069679003611782e-15
+    },
+    "velocity_initial": {
+      "points": 1024,
+      "rms": 1.3585356435971595e-16,
+      "maximum_absolute": 9.992007221626409e-16
+    },
+    "pressure_gauge": {
+      "points": 128,
+      "rms": 5.2650960248954705e-18,
+      "maximum_absolute": 9.974659986866641e-18
+    }
+  },
+  "source_archive": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p16_n129_native_fullgroups_iteration2_native.npz",
+  "seconds": 157.30209937505424,
+  "process_peak_rss_bytes": 537608192,
+  "policy": "No solve, no coefficient update; saved native network only. Finite sampled checks, not a continuum certificate."
+}

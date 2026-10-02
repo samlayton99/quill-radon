@@ -1,0 +1,208 @@
+{
+  "case": "biharmonic_plate",
+  "degree": 8,
+  "backend": "polynomial",
+  "fields": 1,
+  "coefficients": 45,
+  "interior_points": 256,
+  "setup_seconds": 0.0034100832417607307,
+  "solve_seconds": 0.07489983411505818,
+  "features": {
+    "backend": "polynomial",
+    "dimension": 2,
+    "degree": 8,
+    "coefficient_count": 45,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 4,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 2.8999987989664078e-05
+  },
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 5,
+    "objective": 6.318305534708067e-20,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 256,
+        "output_rows": 256,
+        "equations": 1,
+        "rms": 9.876643983759871e-13,
+        "scaled_rms": [
+          9.876643983759871e-13
+        ],
+        "maximum_scaled_rms": 9.876643983759871e-13,
+        "weighted_norm": 9.876643983759871e-13
+      },
+      {
+        "name": "clamped_value",
+        "input_rows": 128,
+        "output_rows": 128,
+        "equations": 1,
+        "rms": 1.7267427133873336e-10,
+        "scaled_rms": [
+          1.7267427133873336e-10
+        ],
+        "maximum_scaled_rms": 1.7267427133873336e-10,
+        "weighted_norm": 1.7267427133873338e-10
+      },
+      {
+        "name": "clamped_normal_derivative",
+        "input_rows": 128,
+        "output_rows": 128,
+        "equations": 1,
+        "rms": 3.1072291713170275e-10,
+        "scaled_rms": [
+          3.1072291713170275e-10
+        ],
+        "maximum_scaled_rms": 3.1072291713170275e-10,
+        "weighted_norm": 3.1072291713170275e-10
+      }
+    ],
+    "residual_evaluations": 11,
+    "linearizations": 6,
+    "lsmr_iterations": 864,
+    "seconds": 0.07488849991932511,
+    "basis_setup_seconds": 0.0007269172929227352,
+    "basis_cache_bytes": 414720,
+    "unknowns": 45,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 2,
+      "degree": 8,
+      "coefficient_count": 45,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 4,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 2.8999987989664078e-05
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 9216,
+    "dense_jacobian_bytes_avoided": 184320,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 512
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 727.7901002638173,
+      "maximum_scaled_block_rms": 38.152066792346055,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.0012894580140709877,
+      "scaled_projected_gradient_inf": 34.710746674606085,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 169,
+      "estimated_condition": 133.92048490860793,
+      "step_length": 1.0,
+      "step_norm": 0.9177285624310918,
+      "trial_objective": 1.198035179058987e-05
+    },
+    {
+      "iteration": 1,
+      "objective": 1.198035179058987e-05,
+      "maximum_scaled_block_rms": 0.0036455579054795726,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.015846457798033953,
+      "scaled_projected_gradient_inf": 2.9301121405974483e-05,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 175,
+      "estimated_condition": 79.616892272355,
+      "step_length": 1.0,
+      "step_norm": 0.00788320272444962,
+      "trial_objective": 5.4745963405529396e-09
+    },
+    {
+      "iteration": 2,
+      "objective": 5.4745963405529396e-09,
+      "maximum_scaled_block_rms": 8.938514654842197e-05,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.03073316626250744,
+      "scaled_projected_gradient_inf": 2.3722036807615595e-07,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 179,
+      "estimated_condition": 53.16934265102391,
+      "step_length": 1.0,
+      "step_norm": 0.00014323253101755458,
+      "trial_objective": 8.523271821455534e-12
+    },
+    {
+      "iteration": 3,
+      "objective": 8.523271821455534e-12,
+      "maximum_scaled_block_rms": 3.6034485254342546e-06,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.045946457888931036,
+      "scaled_projected_gradient_inf": 3.6698730993019092e-09,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 162,
+      "estimated_condition": 76.0050932081398,
+      "step_length": 1.0,
+      "step_norm": 5.6947294704772e-06,
+      "trial_objective": 2.1748575728889747e-15
+    },
+    {
+      "iteration": 4,
+      "objective": 2.1748575728889747e-15,
+      "maximum_scaled_block_rms": 5.764303940619358e-08,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.05976012488827109,
+      "scaled_projected_gradient_inf": 5.98045584323466e-11,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 179,
+      "estimated_condition": 90.55918938876493,
+      "step_length": 1.0,
+      "step_norm": 9.158126260774409e-08,
+      "trial_objective": 6.318305534708067e-20
+    },
+    {
+      "iteration": 5,
+      "objective": 6.318305534708067e-20,
+      "maximum_scaled_block_rms": 3.1072291713170275e-10,
+      "damping": 4.115226337448558e-09,
+      "elapsed_seconds": 0.07488641608506441
+    }
+  ],
+  "validation": {
+    "relative_l2": 2.378339694350925e-10,
+    "component_relative_l2": [
+      2.378339694350925e-10
+    ],
+    "independent_residual_rms": {
+      "PDE": 9.874377103201535e-13,
+      "clamped_value": 1.7576899551665166e-10,
+      "clamped_normal_derivative": 3.139218269415295e-10
+    },
+    "parameter_relative_error": null
+  },
+  "manufactured_forcing": true,
+  "note": "Fourth-order equation and clamped constraints."
+}

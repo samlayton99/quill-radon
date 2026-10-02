@@ -1,0 +1,128 @@
+{
+  "status": "deliberately_stopped_after_stationary_p8_checkpoint",
+  "reason": "p8 actual residual unchanged at5.31e-8 across three native Newton iterations; preserve state and refine representation rather than repeat coarse corrections",
+  "native_state": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p8_n129_native.npz",
+  "progress": [
+    {
+      "coordinate_count": 70,
+      "iteration": 0,
+      "objective": 0.02310773030769636,
+      "maximum_scaled_block_rms": 0.0852963525994963,
+      "damping": 1e-06,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 0.16348595777526498
+    },
+    {
+      "coordinate_count": 70,
+      "iteration": 1,
+      "objective": 6.502025977383485e-05,
+      "maximum_scaled_block_rms": 0.007998955906842603,
+      "damping": 3.333333333333333e-07,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 0.6939393747597933
+    },
+    {
+      "coordinate_count": 70,
+      "iteration": 2,
+      "objective": 2.6214021436487847e-07,
+      "maximum_scaled_block_rms": 0.0003742581339828841,
+      "damping": 1.111111111111111e-07,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 1.4101657918654382
+    },
+    {
+      "coordinate_count": 70,
+      "iteration": 3,
+      "objective": 2.6213942826047076e-07,
+      "maximum_scaled_block_rms": 0.0003742588125169359,
+      "damping": 3.703703703703703e-08,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 2.0798875000327826
+    },
+    {
+      "coordinate_count": 70,
+      "iteration": 4,
+      "objective": 2.6213942825965904e-07,
+      "maximum_scaled_block_rms": 0.0003742587312133673,
+      "damping": 1.2345679012345676e-08,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 2.716850749682635
+    },
+    {
+      "coordinate_count": 70,
+      "iteration": 5,
+      "objective": 2.621394282596588e-07,
+      "maximum_scaled_block_rms": 0.0003742587312141075,
+      "damping": 4.115226337448558e-09,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 4.070963041856885
+    },
+    {
+      "coordinate_count": 495,
+      "iteration": 0,
+      "objective": 4.2497534773741846e-07,
+      "maximum_scaled_block_rms": 0.00042993132965739246,
+      "damping": 1.8484094822097348e-07,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 4.997100790962577
+    },
+    {
+      "coordinate_count": 495,
+      "iteration": 1,
+      "objective": 3.669976919775024e-14,
+      "maximum_scaled_block_rms": 1.6906732816272063e-07,
+      "damping": 2.8583761452081065e-14,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 32.11470766598359
+    },
+    {
+      "coordinate_count": 495,
+      "iteration": 2,
+      "objective": 7.219565478372027e-15,
+      "maximum_scaled_block_rms": 5.3103332790570144e-08,
+      "damping": 2.819963953466042e-15,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 57.21198795782402
+    },
+    {
+      "coordinate_count": 495,
+      "iteration": 3,
+      "objective": 7.219565478288928e-15,
+      "maximum_scaled_block_rms": 5.310333279311628e-08,
+      "damping": 9.399879844886808e-16,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 87.41384149994701
+    },
+    {
+      "coordinate_count": 495,
+      "iteration": 4,
+      "objective": 7.219565478140376e-15,
+      "maximum_scaled_block_rms": 5.31033327945482e-08,
+      "damping": 3.133293281628936e-16,
+      "scheduled_inner_tolerance": 2.220446049250313e-16,
+      "tight_inner_switch_rms": 1.4901161193847656e-08,
+      "linearization_basis": "ideal",
+      "elapsed_seconds": 132.50515649979934
+    }
+  ]
+}

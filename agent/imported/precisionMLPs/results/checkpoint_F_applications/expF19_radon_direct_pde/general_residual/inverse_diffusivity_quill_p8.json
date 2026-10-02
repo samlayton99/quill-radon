@@ -1,0 +1,845 @@
+{
+  "case": "inverse_diffusivity",
+  "degree": 8,
+  "backend": "quill",
+  "fields": 1,
+  "coefficients": 45,
+  "interior_points": 256,
+  "setup_seconds": 0.0005675000138580799,
+  "solve_seconds": 0.05839912500232458,
+  "features": {
+    "backend": "quill",
+    "dimension": 2,
+    "degree": 8,
+    "coefficient_count": 45,
+    "tanh_count": 166,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "interior_centers_per_axis": 65,
+    "halo_per_side": 9,
+    "lam": 0.3,
+    "normalized_gamma": 9.6,
+    "physical_gamma": [
+      9.6,
+      19.2
+    ],
+    "normalized_derivative_checks": [
+      {
+        "order": 0,
+        "max_absolute_error": 7.525757794724086e-11,
+        "max_scaled_error": 7.525757794724086e-11,
+        "per_mode_absolute_error": [
+          0.0,
+          1.0857981180834031e-13,
+          2.324807013565078e-13,
+          1.3627987627273797e-12,
+          1.899813639738568e-12,
+          9.811818024729746e-12,
+          1.2513240443823292e-11,
+          6.165390420420636e-11,
+          7.525757794724086e-11
+        ]
+      },
+      {
+        "order": 1,
+        "max_absolute_error": 8.55382609188382e-09,
+        "max_scaled_error": 2.3760628033010606e-10,
+        "per_mode_absolute_error": [
+          0.0,
+          5.4821702732965605e-12,
+          2.3392399128852048e-11,
+          7.408118563034805e-11,
+          2.0933299538228312e-10,
+          5.560565341511392e-10,
+          1.4190675301506417e-09,
+          3.5206113579988596e-09,
+          8.55382609188382e-09
+        ]
+      },
+      {
+        "order": 2,
+        "max_absolute_error": 9.659921715865494e-07,
+        "max_scaled_error": 1.5333209072802371e-09,
+        "per_mode_absolute_error": [
+          0.0,
+          6.955558453225832e-10,
+          2.9338553808599954e-09,
+          9.118760857518282e-09,
+          2.5189478947140742e-08,
+          6.542678931964474e-08,
+          1.6384393575208378e-07,
+          4.0093635789162363e-07,
+          9.659921715865494e-07
+        ]
+      }
+    ],
+    "derivative_check_tolerance": 1e-08,
+    "encoding_value_error": 7.525757794724086e-11,
+    "encoding_derivative_errors": [
+      8.55382609188382e-09,
+      9.659921715865494e-07
+    ],
+    "encoding_sweep": [
+      {
+        "interior_centers": 33,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.4186220498030374
+      },
+      {
+        "interior_centers": 33,
+        "lam": 0.2,
+        "maximum_scaled_error": 0.03868387548988056
+      },
+      {
+        "interior_centers": 33,
+        "lam": 0.25,
+        "maximum_scaled_error": 0.00536034454816351
+      },
+      {
+        "interior_centers": 33,
+        "lam": 0.3,
+        "maximum_scaled_error": 0.0008252655283152466
+      },
+      {
+        "interior_centers": 65,
+        "lam": 0.15,
+        "maximum_scaled_error": 0.0002759482752114511
+      },
+      {
+        "interior_centers": 65,
+        "lam": 0.2,
+        "maximum_scaled_error": 5.62044056709604e-06
+      },
+      {
+        "interior_centers": 65,
+        "lam": 0.25,
+        "maximum_scaled_error": 9.741108464194916e-08
+      },
+      {
+        "interior_centers": 65,
+        "lam": 0.3,
+        "maximum_scaled_error": 1.5333209072802371e-09
+      }
+    ],
+    "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+    "setup_seconds": 2.474989742040634e-05
+  },
+  "solver": {
+    "status": "iteration_limit",
+    "converged": false,
+    "optimization_converged": false,
+    "iterations": 35,
+    "objective": 1.8245199039784426e-05,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 256,
+        "output_rows": 256,
+        "equations": 1,
+        "rms": 0.003928773807428655,
+        "scaled_rms": [
+          0.003928773807428655
+        ],
+        "maximum_scaled_rms": 0.003928773807428655,
+        "weighted_norm": 0.003928773807428655
+      },
+      {
+        "name": "spatial_boundary",
+        "input_rows": 128,
+        "output_rows": 128,
+        "equations": 1,
+        "rms": 0.002875778142455733,
+        "scaled_rms": [
+          0.002875778142455733
+        ],
+        "maximum_scaled_rms": 0.002875778142455733,
+        "weighted_norm": 0.0028757781424557332
+      },
+      {
+        "name": "initial",
+        "input_rows": 128,
+        "output_rows": 128,
+        "equations": 1,
+        "rms": 0.003466790181316289,
+        "scaled_rms": [
+          0.003466790181316289
+        ],
+        "maximum_scaled_rms": 0.003466790181316289,
+        "weighted_norm": 0.0034667901813162896
+      },
+      {
+        "name": "observations",
+        "input_rows": 24,
+        "output_rows": 24,
+        "equations": 1,
+        "rms": 0.0008754429528725544,
+        "scaled_rms": [
+          0.0008754429528725544
+        ],
+        "maximum_scaled_rms": 0.0008754429528725544,
+        "weighted_norm": 0.0008754429528725543
+      }
+    ],
+    "residual_evaluations": 71,
+    "linearizations": 36,
+    "lsmr_iterations": 285,
+    "seconds": 0.058391124941408634,
+    "basis_setup_seconds": 0.0008280416950583458,
+    "basis_cache_bytes": 285120,
+    "unknowns": 46,
+    "feature_metrics": {
+      "backend": "quill",
+      "dimension": 2,
+      "degree": 8,
+      "coefficient_count": 45,
+      "tanh_count": 166,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "interior_centers_per_axis": 65,
+      "halo_per_side": 9,
+      "lam": 0.3,
+      "normalized_gamma": 9.6,
+      "physical_gamma": [
+        9.6,
+        19.2
+      ],
+      "normalized_derivative_checks": [
+        {
+          "order": 0,
+          "max_absolute_error": 7.525757794724086e-11,
+          "max_scaled_error": 7.525757794724086e-11,
+          "per_mode_absolute_error": [
+            0.0,
+            1.0857981180834031e-13,
+            2.324807013565078e-13,
+            1.3627987627273797e-12,
+            1.899813639738568e-12,
+            9.811818024729746e-12,
+            1.2513240443823292e-11,
+            6.165390420420636e-11,
+            7.525757794724086e-11
+          ]
+        },
+        {
+          "order": 1,
+          "max_absolute_error": 8.55382609188382e-09,
+          "max_scaled_error": 2.3760628033010606e-10,
+          "per_mode_absolute_error": [
+            0.0,
+            5.4821702732965605e-12,
+            2.3392399128852048e-11,
+            7.408118563034805e-11,
+            2.0933299538228312e-10,
+            5.560565341511392e-10,
+            1.4190675301506417e-09,
+            3.5206113579988596e-09,
+            8.55382609188382e-09
+          ]
+        },
+        {
+          "order": 2,
+          "max_absolute_error": 9.659921715865494e-07,
+          "max_scaled_error": 1.5333209072802371e-09,
+          "per_mode_absolute_error": [
+            0.0,
+            6.955558453225832e-10,
+            2.9338553808599954e-09,
+            9.118760857518282e-09,
+            2.5189478947140742e-08,
+            6.542678931964474e-08,
+            1.6384393575208378e-07,
+            4.0093635789162363e-07,
+            9.659921715865494e-07
+          ]
+        }
+      ],
+      "derivative_check_tolerance": 1e-08,
+      "encoding_value_error": 7.525757794724086e-11,
+      "encoding_derivative_errors": [
+        8.55382609188382e-09,
+        9.659921715865494e-07
+      ],
+      "encoding_sweep": [
+        {
+          "interior_centers": 33,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.4186220498030374
+        },
+        {
+          "interior_centers": 33,
+          "lam": 0.2,
+          "maximum_scaled_error": 0.03868387548988056
+        },
+        {
+          "interior_centers": 33,
+          "lam": 0.25,
+          "maximum_scaled_error": 0.00536034454816351
+        },
+        {
+          "interior_centers": 33,
+          "lam": 0.3,
+          "maximum_scaled_error": 0.0008252655283152466
+        },
+        {
+          "interior_centers": 65,
+          "lam": 0.15,
+          "maximum_scaled_error": 0.0002759482752114511
+        },
+        {
+          "interior_centers": 65,
+          "lam": 0.2,
+          "maximum_scaled_error": 5.62044056709604e-06
+        },
+        {
+          "interior_centers": 65,
+          "lam": 0.25,
+          "maximum_scaled_error": 9.741108464194916e-08
+        },
+        {
+          "interior_centers": 65,
+          "lam": 0.3,
+          "maximum_scaled_error": 1.5333209072802371e-09
+        }
+      ],
+      "encoding_check_scope": "normalized 1D basis derivatives through order 2",
+      "setup_seconds": 2.474989742040634e-05
+    },
+    "parameter_bounds": [
+      [
+        0.02
+      ],
+      [
+        1.0
+      ]
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 10624,
+    "dense_jacobian_bytes_avoided": 197248,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 536
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 0.32905950680755136,
+      "maximum_scaled_block_rms": 0.7072198489612618,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.0013465406373143196,
+      "scaled_projected_gradient_inf": 0.32613406987589516,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 41,
+      "estimated_condition": 4.696682318120938,
+      "step_length": 1.0,
+      "step_norm": 0.9813841291026189,
+      "trial_objective": 0.0069408785956096355
+    },
+    {
+      "iteration": 1,
+      "objective": 0.0069408785956096355,
+      "maximum_scaled_block_rms": 0.09719166481101565,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.005526790861040354,
+      "scaled_projected_gradient_inf": 0.041871870729878205,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 43,
+      "estimated_condition": 4.296598343300596,
+      "step_length": 1.0,
+      "step_norm": 0.29586786063803383,
+      "trial_objective": 0.003917314288715307
+    },
+    {
+      "iteration": 2,
+      "objective": 0.003917314288715307,
+      "maximum_scaled_block_rms": 0.08764336193833536,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.009792374912649393,
+      "scaled_projected_gradient_inf": 0.06124741876181939,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 51,
+      "estimated_condition": 5.944190685858692,
+      "step_length": 1.0,
+      "step_norm": 0.05403312483364151,
+      "trial_objective": 2.2721804841548037e-05
+    },
+    {
+      "iteration": 3,
+      "objective": 2.2721804841548037e-05,
+      "maximum_scaled_block_rms": 0.004910260498072705,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.014639332890510559,
+      "scaled_projected_gradient_inf": 0.0033239347662245345,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 48,
+      "estimated_condition": 4.695845512060042,
+      "step_length": 1.0,
+      "step_norm": 0.0013822738911904101,
+      "trial_objective": 1.8245210725611293e-05
+    },
+    {
+      "iteration": 4,
+      "objective": 1.8245210725611293e-05,
+      "maximum_scaled_block_rms": 0.003928476188973824,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.019274207763373852,
+      "scaled_projected_gradient_inf": 1.7948986872768728e-06,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 28,
+      "estimated_condition": 5.540896853108926,
+      "step_length": 1.0,
+      "step_norm": 6.921265380668027e-06,
+      "trial_objective": 1.8245199041181194e-05
+    },
+    {
+      "iteration": 5,
+      "objective": 1.8245199041181194e-05,
+      "maximum_scaled_block_rms": 0.003928771133157224,
+      "damping": 4.115226337448558e-09,
+      "elapsed_seconds": 0.02239916566759348,
+      "scaled_projected_gradient_inf": 1.2803629476688276e-08,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 11,
+      "estimated_condition": 3.894394743230789,
+      "step_length": 1.0,
+      "step_norm": 1.0862519496137577e-07,
+      "trial_objective": 1.8245199039857982e-05
+    },
+    {
+      "iteration": 6,
+      "objective": 1.8245199039857982e-05,
+      "maximum_scaled_block_rms": 0.003928775315028682,
+      "damping": 1.3717421124828529e-09,
+      "elapsed_seconds": 0.024234625045210123,
+      "scaled_projected_gradient_inf": 1.7027868372153466e-09,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 4,
+      "estimated_condition": 2.5594052589517213,
+      "step_length": 1.0,
+      "step_norm": 4.578040140003332e-09,
+      "trial_objective": 1.824519903982796e-05
+    },
+    {
+      "iteration": 7,
+      "objective": 1.824519903982796e-05,
+      "maximum_scaled_block_rms": 0.003928774822925303,
+      "damping": 4.5724737082761764e-10,
+      "elapsed_seconds": 0.025543874595314264,
+      "scaled_projected_gradient_inf": 1.0398058156289857e-09,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 3,
+      "estimated_condition": 3.2880362487055654,
+      "step_length": 1.0,
+      "step_norm": 1.8852591277253263e-09,
+      "trial_objective": 1.8245199039819832e-05
+    },
+    {
+      "iteration": 8,
+      "objective": 1.8245199039819832e-05,
+      "maximum_scaled_block_rms": 0.003928774684371672,
+      "damping": 1.5241579027587256e-10,
+      "elapsed_seconds": 0.026778582949191332,
+      "scaled_projected_gradient_inf": 6.990760888495416e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 3,
+      "estimated_condition": 4.365103771692066,
+      "step_length": 1.0,
+      "step_norm": 2.2987653004916266e-09,
+      "trial_objective": 1.8245199039811274e-05
+    },
+    {
+      "iteration": 9,
+      "objective": 1.8245199039811274e-05,
+      "maximum_scaled_block_rms": 0.003928774484241017,
+      "damping": 5.080526342529085e-11,
+      "elapsed_seconds": 0.0280154999345541,
+      "scaled_projected_gradient_inf": 7.416246669232959e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 3,
+      "estimated_condition": 4.82224320798637,
+      "step_length": 1.0,
+      "step_norm": 1.2905993057310597e-09,
+      "trial_objective": 1.8245199039806974e-05
+    },
+    {
+      "iteration": 10,
+      "objective": 1.8245199039806974e-05,
+      "maximum_scaled_block_rms": 0.003928774402879717,
+      "damping": 1.6935087808430282e-11,
+      "elapsed_seconds": 0.029255541041493416,
+      "scaled_projected_gradient_inf": 6.506864294504065e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 6.788296668440165,
+      "step_length": 1.0,
+      "step_norm": 7.514861239218753e-10,
+      "trial_objective": 1.8245199039804738e-05
+    },
+    {
+      "iteration": 11,
+      "objective": 1.8245199039804738e-05,
+      "maximum_scaled_block_rms": 0.0039287743366246825,
+      "damping": 5.645029269476761e-12,
+      "elapsed_seconds": 0.030407499987632036,
+      "scaled_projected_gradient_inf": 6.314848401288753e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 7.500856687555302,
+      "step_length": 1.0,
+      "step_norm": 6.979719112052655e-10,
+      "trial_objective": 1.8245199039802478e-05
+    },
+    {
+      "iteration": 12,
+      "objective": 1.8245199039802478e-05,
+      "maximum_scaled_block_rms": 0.003928774296626697,
+      "damping": 1.88167642315892e-12,
+      "elapsed_seconds": 0.03156329086050391,
+      "scaled_projected_gradient_inf": 6.072584916336104e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.014548352316703,
+      "step_length": 1.0,
+      "step_norm": 5.652256597520599e-10,
+      "trial_objective": 1.8245199039801072e-05
+    },
+    {
+      "iteration": 13,
+      "objective": 1.8245199039801072e-05,
+      "maximum_scaled_block_rms": 0.003928774253306977,
+      "damping": 6.272254743863068e-13,
+      "elapsed_seconds": 0.03271945798769593,
+      "scaled_projected_gradient_inf": 5.897890401565538e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.004959319900774,
+      "step_length": 1.0,
+      "step_norm": 5.969513394196311e-10,
+      "trial_objective": 1.8245199039799347e-05
+    },
+    {
+      "iteration": 14,
+      "objective": 1.8245199039799347e-05,
+      "maximum_scaled_block_rms": 0.00392877421738513,
+      "damping": 2.0907515812876891e-13,
+      "elapsed_seconds": 0.03386674961075187,
+      "scaled_projected_gradient_inf": 5.57574937841899e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.507423588646823,
+      "step_length": 1.0,
+      "step_norm": 5.152129899923629e-10,
+      "trial_objective": 1.824519903979813e-05
+    },
+    {
+      "iteration": 15,
+      "objective": 1.824519903979813e-05,
+      "maximum_scaled_block_rms": 0.003928774182282664,
+      "damping": 6.96917193762563e-14,
+      "elapsed_seconds": 0.03501862473785877,
+      "scaled_projected_gradient_inf": 5.603582294456253e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.310865240102443,
+      "step_length": 1.0,
+      "step_norm": 5.528217694165535e-10,
+      "trial_objective": 1.824519903979671e-05
+    },
+    {
+      "iteration": 16,
+      "objective": 1.824519903979671e-05,
+      "maximum_scaled_block_rms": 0.0039287741504539075,
+      "damping": 2.3230573125418768e-14,
+      "elapsed_seconds": 0.03618520777672529,
+      "scaled_projected_gradient_inf": 5.187442646178301e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.782212712929464,
+      "step_length": 1.0,
+      "step_norm": 4.797113143687691e-10,
+      "trial_objective": 1.82451990397957e-05
+    },
+    {
+      "iteration": 17,
+      "objective": 1.82451990397957e-05,
+      "maximum_scaled_block_rms": 0.0039287741197100825,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.03734249994158745,
+      "scaled_projected_gradient_inf": 5.286280238041203e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.534528545730721,
+      "step_length": 1.0,
+      "step_norm": 5.151428599981022e-10,
+      "trial_objective": 1.8245199039794506e-05
+    },
+    {
+      "iteration": 18,
+      "objective": 1.8245199039794506e-05,
+      "maximum_scaled_block_rms": 0.003928774092051125,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.03848929097875953,
+      "scaled_projected_gradient_inf": 4.844595264883316e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.986546108779462,
+      "step_length": 1.0,
+      "step_norm": 4.4727367162751364e-10,
+      "trial_objective": 1.8245199039793564e-05
+    },
+    {
+      "iteration": 19,
+      "objective": 1.8245199039793564e-05,
+      "maximum_scaled_block_rms": 0.003928774064761947,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.039645999670028687,
+      "scaled_projected_gradient_inf": 4.972169578965635e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.706467653227877,
+      "step_length": 1.0,
+      "step_norm": 4.806024184450182e-10,
+      "trial_objective": 1.824519903979246e-05
+    },
+    {
+      "iteration": 20,
+      "objective": 1.824519903979246e-05,
+      "maximum_scaled_block_rms": 0.00392877404079858,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.04080208297818899,
+      "scaled_projected_gradient_inf": 4.528433748878093e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.14403192448335,
+      "step_length": 1.0,
+      "step_norm": 4.1705694765761777e-10,
+      "trial_objective": 1.8245199039791717e-05
+    },
+    {
+      "iteration": 21,
+      "objective": 1.8245199039791717e-05,
+      "maximum_scaled_block_rms": 0.003928774016526921,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.041960499715059996,
+      "scaled_projected_gradient_inf": 4.669440074346976e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.837747484472194,
+      "step_length": 1.0,
+      "step_norm": 4.486412937389749e-10,
+      "trial_objective": 1.8245199039790833e-05
+    },
+    {
+      "iteration": 22,
+      "objective": 1.8245199039790833e-05,
+      "maximum_scaled_block_rms": 0.003928773995749076,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.0431210407987237,
+      "scaled_projected_gradient_inf": 4.233065211376686e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.263627899865849,
+      "step_length": 1.0,
+      "step_norm": 3.888426073515616e-10,
+      "trial_objective": 1.8245199039790223e-05
+    },
+    {
+      "iteration": 23,
+      "objective": 1.8245199039790223e-05,
+      "maximum_scaled_block_rms": 0.003928773974156818,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.04427662491798401,
+      "scaled_projected_gradient_inf": 4.380904103224111e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 8.935591454732318,
+      "step_length": 1.0,
+      "step_norm": 4.1894131508124746e-10,
+      "trial_objective": 1.824519903978949e-05
+    },
+    {
+      "iteration": 24,
+      "objective": 1.824519903978949e-05,
+      "maximum_scaled_block_rms": 0.003928773956114762,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.04543195804581046,
+      "scaled_projected_gradient_inf": 3.956008786620322e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.35179888699621,
+      "step_length": 1.0,
+      "step_norm": 3.624799032850456e-10,
+      "trial_objective": 1.8245199039788827e-05
+    },
+    {
+      "iteration": 25,
+      "objective": 1.8245199039788827e-05,
+      "maximum_scaled_block_rms": 0.003928773936904684,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.046572040766477585,
+      "scaled_projected_gradient_inf": 4.1074999948089857e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.005708095966055,
+      "step_length": 1.0,
+      "step_norm": 3.912623112440201e-10,
+      "trial_objective": 1.8245199039788197e-05
+    },
+    {
+      "iteration": 26,
+      "objective": 1.8245199039788197e-05,
+      "maximum_scaled_block_rms": 0.003928773921214347,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.04772324999794364,
+      "scaled_projected_gradient_inf": 3.695860318500118e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.413727623273537,
+      "step_length": 1.0,
+      "step_norm": 3.3783702108900877e-10,
+      "trial_objective": 1.8245199039787682e-05
+    },
+    {
+      "iteration": 27,
+      "objective": 1.8245199039787682e-05,
+      "maximum_scaled_block_rms": 0.003928773904120744,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.04888916574418545,
+      "scaled_projected_gradient_inf": 3.8493649355157874e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.05260637565596,
+      "step_length": 1.0,
+      "step_norm": 3.6541409300039543e-10,
+      "trial_objective": 1.824519903978716e-05
+    },
+    {
+      "iteration": 28,
+      "objective": 1.824519903978716e-05,
+      "maximum_scaled_block_rms": 0.003928773890454414,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05004170769825578,
+      "scaled_projected_gradient_inf": 3.451634747129861e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.45353469686308,
+      "step_length": 1.0,
+      "step_norm": 3.147955866511597e-10,
+      "trial_objective": 1.8245199039786645e-05
+    },
+    {
+      "iteration": 29,
+      "objective": 1.8245199039786645e-05,
+      "maximum_scaled_block_rms": 0.003928773875240619,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05120433261618018,
+      "scaled_projected_gradient_inf": 3.60622294687895e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.079782267764902,
+      "step_length": 1.0,
+      "step_norm": 3.4124136807384186e-10,
+      "trial_objective": 1.8245199039786286e-05
+    },
+    {
+      "iteration": 30,
+      "objective": 1.8245199039786286e-05,
+      "maximum_scaled_block_rms": 0.003928773863317315,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05235962476581335,
+      "scaled_projected_gradient_inf": 3.2225426951386843e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.474417861863426,
+      "step_length": 1.0,
+      "step_norm": 2.9324701342783616e-10,
+      "trial_objective": 1.824519903978585e-05
+    },
+    {
+      "iteration": 31,
+      "objective": 1.824519903978585e-05,
+      "maximum_scaled_block_rms": 0.00392877384977395,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05375499976798892,
+      "scaled_projected_gradient_inf": 3.3775656754701203e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.0899224018811,
+      "step_length": 1.0,
+      "step_norm": 3.1861737738399483e-10,
+      "trial_objective": 1.8245199039785348e-05
+    },
+    {
+      "iteration": 32,
+      "objective": 1.8245199039785348e-05,
+      "maximum_scaled_block_rms": 0.003928773839351536,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05491641582921147,
+      "scaled_projected_gradient_inf": 3.007904495453669e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.478839130654162,
+      "step_length": 1.0,
+      "step_norm": 2.730950999094636e-10,
+      "trial_objective": 1.8245199039784992e-05
+    },
+    {
+      "iteration": 33,
+      "objective": 1.8245199039784992e-05,
+      "maximum_scaled_block_rms": 0.003928773827293906,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05607625003904104,
+      "scaled_projected_gradient_inf": 3.162755275937928e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.085176227140593,
+      "step_length": 1.0,
+      "step_norm": 2.97433968440326e-10,
+      "trial_objective": 1.8245199039784707e-05
+    },
+    {
+      "iteration": 34,
+      "objective": 1.8245199039784707e-05,
+      "maximum_scaled_block_rms": 0.003928773818163187,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.057228915859013796,
+      "scaled_projected_gradient_inf": 2.8070868392595373e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 2,
+      "estimated_condition": 9.46884867696956,
+      "step_length": 1.0,
+      "step_norm": 2.542539893354526e-10,
+      "trial_objective": 1.8245199039784426e-05
+    },
+    {
+      "iteration": 35,
+      "objective": 1.8245199039784426e-05,
+      "maximum_scaled_block_rms": 0.003928773807428655,
+      "damping": 1e-14,
+      "elapsed_seconds": 0.05838970793411136
+    }
+  ],
+  "validation": {
+    "relative_l2": 0.003204473396576521,
+    "component_relative_l2": [
+      0.003204473396576521
+    ],
+    "independent_residual_rms": {
+      "PDE": 0.004326020258198408,
+      "spatial_boundary": 0.0028684534159135744,
+      "initial": 0.003436443433374293,
+      "observations": 0.0008754429528725544
+    },
+    "parameter_relative_error": 0.0014060119437760144
+  },
+  "manufactured_forcing": false,
+  "note": "24 noiseless measurements; joint coefficient/physical-parameter solve."
+}

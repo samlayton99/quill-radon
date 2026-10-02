@@ -1,0 +1,178 @@
+{
+  "case": "irregular_variable_diffusion",
+  "degree": 8,
+  "backend": "polynomial",
+  "fields": 1,
+  "coefficients": 45,
+  "interior_points": 256,
+  "setup_seconds": 0.005580542143434286,
+  "solve_seconds": 0.04096166603267193,
+  "features": {
+    "backend": "polynomial",
+    "dimension": 2,
+    "degree": 8,
+    "coefficient_count": 45,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 2.787495031952858e-05
+  },
+  "solver": {
+    "status": "stationary",
+    "converged": false,
+    "optimization_converged": true,
+    "iterations": 4,
+    "objective": 2.6010696866103257e-11,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 256,
+        "output_rows": 256,
+        "equations": 1,
+        "rms": 6.564219996045083e-06,
+        "scaled_rms": [
+          6.564219996045083e-06
+        ],
+        "maximum_scaled_rms": 6.564219996045083e-06,
+        "weighted_norm": 6.564219996045083e-06
+      },
+      {
+        "name": "Dirichlet",
+        "input_rows": 128,
+        "output_rows": 128,
+        "equations": 1,
+        "rms": 2.9887136991904055e-06,
+        "scaled_rms": [
+          2.9887136991904055e-06
+        ],
+        "maximum_scaled_rms": 2.9887136991904055e-06,
+        "weighted_norm": 2.9887136991904055e-06
+      }
+    ],
+    "residual_evaluations": 9,
+    "linearizations": 5,
+    "lsmr_iterations": 436,
+    "seconds": 0.040951665956526995,
+    "basis_setup_seconds": 0.0008375002071261406,
+    "basis_cache_bytes": 599040,
+    "unknowns": 45,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 2,
+      "degree": 8,
+      "coefficient_count": 45,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 2.787495031952858e-05
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 13312,
+    "dense_jacobian_bytes_avoided": 138240,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 9
+    },
+    "residual_entries": 384
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 8.063390159815594,
+      "maximum_scaled_block_rms": 3.9183350310860883,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.0013412078842520714,
+      "scaled_projected_gradient_inf": 4.693762171998402,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 123,
+      "estimated_condition": 74.35713789611599,
+      "step_length": 1.0,
+      "step_norm": 0.964127729775453,
+      "trial_objective": 0.10462373868012438
+    },
+    {
+      "iteration": 1,
+      "objective": 0.10462373868012438,
+      "maximum_scaled_block_rms": 0.45706815072331486,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.0122938328422606,
+      "scaled_projected_gradient_inf": 0.46286967188279626,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 127,
+      "estimated_condition": 32.09348889327642,
+      "step_length": 1.0,
+      "step_norm": 0.04735652654479846,
+      "trial_objective": 6.440537921886667e-08
+    },
+    {
+      "iteration": 2,
+      "objective": 6.440537921886667e-08,
+      "maximum_scaled_block_rms": 0.00035829379255550905,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.023521500173956156,
+      "scaled_projected_gradient_inf": 0.0002710024665959308,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 120,
+      "estimated_condition": 39.88298484556099,
+      "step_length": 1.0,
+      "step_norm": 7.170362661113967e-05,
+      "trial_objective": 2.6010707450924893e-11
+    },
+    {
+      "iteration": 3,
+      "objective": 2.6010707450924893e-11,
+      "maximum_scaled_block_rms": 6.565342735528519e-06,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.03419975005090237,
+      "scaled_projected_gradient_inf": 3.183414179711235e-10,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 66,
+      "estimated_condition": 28.113278319373855,
+      "step_length": 1.0,
+      "step_norm": 2.5060510026368494e-08,
+      "trial_objective": 2.6010696866103257e-11
+    },
+    {
+      "iteration": 4,
+      "objective": 2.6010696866103257e-11,
+      "maximum_scaled_block_rms": 6.564219996045083e-06,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.040556457825005054,
+      "scaled_projected_gradient_inf": 3.5529186918469692e-12
+    }
+  ],
+  "validation": {
+    "relative_l2": 2.0177796711751067e-06,
+    "component_relative_l2": [
+      2.0177796711751067e-06
+    ],
+    "independent_residual_rms": {
+      "PDE": 7.871586496829763e-06,
+      "Dirichlet": 2.9402289710140027e-06
+    },
+    "parameter_relative_error": null
+  },
+  "manufactured_forcing": true,
+  "note": "Implicit perforated ellipse; variable anisotropic diffusion, cubic reaction."
+}

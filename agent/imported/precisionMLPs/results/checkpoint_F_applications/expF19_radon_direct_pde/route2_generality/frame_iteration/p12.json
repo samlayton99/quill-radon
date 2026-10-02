@@ -1,0 +1,230 @@
+{
+  "degree": 12,
+  "directions": 13,
+  "centers": 257,
+  "halo_per_side": 17,
+  "neurons": 3783,
+  "directional_coordinates": 157,
+  "points": 320,
+  "lam": 0.2,
+  "quadrature_scale": 1,
+  "stopping": 2e-14,
+  "iterations": 40,
+  "status": "projected_correction_small",
+  "architecture": "Linear/Tanh/Linear",
+  "method": "actual neural PDE residual -> explicit frame analysis -> divide by known operator eigenvalues",
+  "no_least_squares": true,
+  "no_pde_matrix_factorization": true,
+  "no_dense_coordinate_map": true,
+  "reference_used_in_updates": false,
+  "ordinary_relative_l2": 1.4834527657079315e-12,
+  "ordinary_pde_rms": 9.352860195261685e-11,
+  "ordinary_pde_maximum": 6.645156647167028e-10,
+  "setup_and_iterations_seconds": 1.070548833347857,
+  "total_seconds": 1.091016708407551,
+  "history": [
+    {
+      "iteration": 0,
+      "physical_residual_rms": 1.0846845292436418,
+      "coordinate_correction_norm": 0.4637461512309103
+    },
+    {
+      "iteration": 1,
+      "physical_residual_rms": 0.4343035727127647,
+      "coordinate_correction_norm": 0.21524963593984597
+    },
+    {
+      "iteration": 2,
+      "physical_residual_rms": 0.1888553762928619,
+      "coordinate_correction_norm": 0.09441610320021894
+    },
+    {
+      "iteration": 3,
+      "physical_residual_rms": 0.08643106777847039,
+      "coordinate_correction_norm": 0.043184911802738646
+    },
+    {
+      "iteration": 4,
+      "physical_residual_rms": 0.03899517258233648,
+      "coordinate_correction_norm": 0.01947272175750041
+    },
+    {
+      "iteration": 5,
+      "physical_residual_rms": 0.017716826568050997,
+      "coordinate_correction_norm": 0.00884553881044514
+    },
+    {
+      "iteration": 6,
+      "physical_residual_rms": 0.00802396548251097,
+      "coordinate_correction_norm": 0.004005734175749026
+    },
+    {
+      "iteration": 7,
+      "physical_residual_rms": 0.0036391219277630026,
+      "coordinate_correction_norm": 0.0018166792210767835
+    },
+    {
+      "iteration": 8,
+      "physical_residual_rms": 0.0016493807918545216,
+      "coordinate_correction_norm": 0.0008233701953089754
+    },
+    {
+      "iteration": 9,
+      "physical_residual_rms": 0.0007477724621609988,
+      "coordinate_correction_norm": 0.0003732863297441467
+    },
+    {
+      "iteration": 10,
+      "physical_residual_rms": 0.0003389689878566729,
+      "coordinate_correction_norm": 0.00016921207564855084
+    },
+    {
+      "iteration": 11,
+      "physical_residual_rms": 0.00015366539405424582,
+      "coordinate_correction_norm": 7.67091638754355e-05
+    },
+    {
+      "iteration": 12,
+      "physical_residual_rms": 6.965949042318648e-05,
+      "coordinate_correction_norm": 3.477372860939732e-05
+    },
+    {
+      "iteration": 13,
+      "physical_residual_rms": 3.1578375933382495e-05,
+      "coordinate_correction_norm": 1.5763793322624984e-05
+    },
+    {
+      "iteration": 14,
+      "physical_residual_rms": 1.4315181257798495e-05,
+      "coordinate_correction_norm": 7.146078083778538e-06
+    },
+    {
+      "iteration": 15,
+      "physical_residual_rms": 6.4894067988365445e-06,
+      "coordinate_correction_norm": 3.239484474386037e-06
+    },
+    {
+      "iteration": 16,
+      "physical_residual_rms": 2.9417966421572083e-06,
+      "coordinate_correction_norm": 1.4685324412105583e-06
+    },
+    {
+      "iteration": 17,
+      "physical_residual_rms": 1.3335844439602669e-06,
+      "coordinate_correction_norm": 6.657197125066095e-07
+    },
+    {
+      "iteration": 18,
+      "physical_residual_rms": 6.045445281852027e-07,
+      "coordinate_correction_norm": 3.0178606722134313e-07
+    },
+    {
+      "iteration": 19,
+      "physical_residual_rms": 2.7405399072469504e-07,
+      "coordinate_correction_norm": 1.3680658479460157e-07
+    },
+    {
+      "iteration": 20,
+      "physical_residual_rms": 1.2423501669177803e-07,
+      "coordinate_correction_norm": 6.201757716839242e-08
+    },
+    {
+      "iteration": 21,
+      "physical_residual_rms": 5.631865863315524e-08,
+      "coordinate_correction_norm": 2.811399741881362e-08
+    },
+    {
+      "iteration": 22,
+      "physical_residual_rms": 2.553068187763288e-08,
+      "coordinate_correction_norm": 1.2744723017587427e-08
+    },
+    {
+      "iteration": 23,
+      "physical_residual_rms": 1.15739462683743e-08,
+      "coordinate_correction_norm": 5.777476715504198e-09
+    },
+    {
+      "iteration": 24,
+      "physical_residual_rms": 5.247397628036765e-09,
+      "coordinate_correction_norm": 2.619063355893951e-09
+    },
+    {
+      "iteration": 25,
+      "physical_residual_rms": 2.380223892094903e-09,
+      "coordinate_correction_norm": 1.1872817687417027e-09
+    },
+    {
+      "iteration": 26,
+      "physical_residual_rms": 1.0822199509010021e-09,
+      "coordinate_correction_norm": 5.382221507868389e-10
+    },
+    {
+      "iteration": 27,
+      "physical_residual_rms": 4.976147865014943e-10,
+      "coordinate_correction_norm": 2.4398846487387816e-10
+    },
+    {
+      "iteration": 28,
+      "physical_residual_rms": 2.4046476116175586e-10,
+      "coordinate_correction_norm": 1.1060558901770767e-10
+    },
+    {
+      "iteration": 29,
+      "physical_residual_rms": 1.371847929216613e-10,
+      "coordinate_correction_norm": 5.014010867900901e-11
+    },
+    {
+      "iteration": 30,
+      "physical_residual_rms": 1.0394388020815874e-10,
+      "coordinate_correction_norm": 2.2729643895287503e-11
+    },
+    {
+      "iteration": 31,
+      "physical_residual_rms": 9.569308253395785e-11,
+      "coordinate_correction_norm": 1.0303870729477668e-11
+    },
+    {
+      "iteration": 32,
+      "physical_residual_rms": 9.390778398910495e-11,
+      "coordinate_correction_norm": 4.670964936600325e-12
+    },
+    {
+      "iteration": 33,
+      "physical_residual_rms": 9.35366819407207e-11,
+      "coordinate_correction_norm": 2.117450446414298e-12
+    },
+    {
+      "iteration": 34,
+      "physical_residual_rms": 9.346022050434827e-11,
+      "coordinate_correction_norm": 9.598595592493586e-13
+    },
+    {
+      "iteration": 35,
+      "physical_residual_rms": 9.344450900893204e-11,
+      "coordinate_correction_norm": 4.3514753371819947e-13
+    },
+    {
+      "iteration": 36,
+      "physical_residual_rms": 9.344128651450853e-11,
+      "coordinate_correction_norm": 1.9727969214135317e-13
+    },
+    {
+      "iteration": 37,
+      "physical_residual_rms": 9.344062258137728e-11,
+      "coordinate_correction_norm": 8.943136303261856e-14
+    },
+    {
+      "iteration": 38,
+      "physical_residual_rms": 9.34404839950833e-11,
+      "coordinate_correction_norm": 4.0528095235069784e-14
+    },
+    {
+      "iteration": 39,
+      "physical_residual_rms": 9.344046390684223e-11,
+      "coordinate_correction_norm": 1.8364573911195113e-14
+    }
+  ],
+  "scope": "Special ball operator with natural zero normal flux from boundary-degenerate diffusion; NOT ordinary Poisson or general nonlinear PDE solver",
+  "exact_space_contraction_bound": 0.5,
+  "discrete_claim": "Exact Galerkin/frame version contracts by beta/alpha; tanh encoding and quadrature perturb it. Raw neural residual audited independently."
+}

@@ -1,0 +1,201 @@
+{
+  "heat_profile_recovery_norm": 1.8619006149354548e-16,
+  "invalid_input_checks": 8,
+  "forward_refinement": {
+    "performed": true,
+    "refined_modes": 8,
+    "refined_dt": 0.001,
+    "spatial_probe_points": 129,
+    "check_times": 2,
+    "rms_difference": 3.1339684009720505e-13,
+    "threshold": 1e-05,
+    "fraction_of_noise": 3.1339684009720505e-09,
+    "status": "agreed_on_probe_points",
+    "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+  },
+  "inverse_crime_negative_control": {
+    "status": "forward_underresolved",
+    "fitted_data_discrepancy": 3.0485545089705556e-20,
+    "refinement": {
+      "performed": true,
+      "refined_modes": 8,
+      "refined_dt": 0.001,
+      "spatial_probe_points": 129,
+      "check_times": 2,
+      "rms_difference": 0.0471632651988061,
+      "threshold": 1.0000000000000002e-06,
+      "fraction_of_noise": 4716.326519880609,
+      "status": "underresolved",
+      "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+    }
+  },
+  "inferred_profile_checks_from_recorded_study": [
+    {
+      "layout": "early",
+      "noise_label": "noiseless",
+      "status": "data_consistent",
+      "refinements": [
+        {
+          "modes": 32,
+          "dt": 0.003,
+          "status": "forward_underresolved",
+          "fit_seconds": 0.16156945936381817,
+          "forward_refinement": {
+            "performed": true,
+            "refined_modes": 64,
+            "refined_dt": 0.0008138020833333334,
+            "spatial_probe_points": 129,
+            "check_times": 4,
+            "rms_difference": 1.2925170863152053e-09,
+            "threshold": 1e-09,
+            "fraction_of_noise": 0.12925170863152052,
+            "status": "underresolved",
+            "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+          }
+        },
+        {
+          "modes": 64,
+          "dt": 0.0008138020833333334,
+          "status": "data_consistent",
+          "fit_seconds": 0.6571291252039373,
+          "forward_refinement": {
+            "performed": true,
+            "refined_modes": 128,
+            "refined_dt": 0.00020345052083333334,
+            "spatial_probe_points": 129,
+            "check_times": 4,
+            "rms_difference": 3.9545400514619355e-13,
+            "threshold": 1e-09,
+            "fraction_of_noise": 3.9545400514619356e-05,
+            "status": "agreed_on_probe_points",
+            "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+          }
+        }
+      ],
+      "final_forward_check": {
+        "performed": true,
+        "refined_modes": 128,
+        "refined_dt": 0.00020345052083333334,
+        "spatial_probe_points": 129,
+        "check_times": 4,
+        "rms_difference": 3.9545400514619355e-13,
+        "threshold": 1e-09,
+        "fraction_of_noise": 3.9545400514619356e-05,
+        "status": "agreed_on_probe_points",
+        "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+      }
+    },
+    {
+      "layout": "early",
+      "noise_label": "noisy",
+      "status": "data_consistent",
+      "refinements": [
+        {
+          "modes": 32,
+          "dt": 0.003,
+          "status": "data_consistent",
+          "fit_seconds": 0.5732754580676556,
+          "forward_refinement": {
+            "performed": true,
+            "refined_modes": 64,
+            "refined_dt": 0.0008138020833333334,
+            "spatial_probe_points": 129,
+            "check_times": 4,
+            "rms_difference": 5.625940361451362e-11,
+            "threshold": 0.00031364058976735655,
+            "fraction_of_noise": 1.7937539161064622e-08,
+            "status": "agreed_on_probe_points",
+            "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+          }
+        }
+      ],
+      "final_forward_check": {
+        "performed": true,
+        "refined_modes": 64,
+        "refined_dt": 0.0008138020833333334,
+        "spatial_probe_points": 129,
+        "check_times": 4,
+        "rms_difference": 5.625940361451362e-11,
+        "threshold": 0.00031364058976735655,
+        "fraction_of_noise": 1.7937539161064622e-08,
+        "status": "agreed_on_probe_points",
+        "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+      }
+    },
+    {
+      "layout": "late",
+      "noise_label": "noiseless",
+      "status": "data_consistent",
+      "refinements": [
+        {
+          "modes": 32,
+          "dt": 0.003,
+          "status": "data_consistent",
+          "fit_seconds": 4.828060999978334,
+          "forward_refinement": {
+            "performed": true,
+            "refined_modes": 64,
+            "refined_dt": 0.0008138020833333334,
+            "spatial_probe_points": 129,
+            "check_times": 4,
+            "rms_difference": 2.2485587616161476e-10,
+            "threshold": 1e-09,
+            "fraction_of_noise": 0.022485587616161477,
+            "status": "agreed_on_probe_points",
+            "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+          }
+        }
+      ],
+      "final_forward_check": {
+        "performed": true,
+        "refined_modes": 64,
+        "refined_dt": 0.0008138020833333334,
+        "spatial_probe_points": 129,
+        "check_times": 4,
+        "rms_difference": 2.2485587616161476e-10,
+        "threshold": 1e-09,
+        "fraction_of_noise": 0.022485587616161477,
+        "status": "agreed_on_probe_points",
+        "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+      }
+    },
+    {
+      "layout": "late",
+      "noise_label": "noisy",
+      "status": "prior_dominated_directions",
+      "refinements": [
+        {
+          "modes": 32,
+          "dt": 0.003,
+          "status": "prior_dominated_directions",
+          "fit_seconds": 15.46591475000605,
+          "forward_refinement": {
+            "performed": true,
+            "refined_modes": 64,
+            "refined_dt": 0.0008138020833333334,
+            "spatial_probe_points": 129,
+            "check_times": 4,
+            "rms_difference": 1.4240800595509692e-10,
+            "threshold": 0.0002598014783869304,
+            "fraction_of_noise": 5.4814163044524425e-08,
+            "status": "agreed_on_probe_points",
+            "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+          }
+        }
+      ],
+      "final_forward_check": {
+        "performed": true,
+        "refined_modes": 64,
+        "refined_dt": 0.0008138020833333334,
+        "spatial_probe_points": 129,
+        "check_times": 4,
+        "rms_difference": 1.4240800595509692e-10,
+        "threshold": 0.0002598014783869304,
+        "fraction_of_noise": 5.4814163044524425e-08,
+        "status": "agreed_on_probe_points",
+        "scope": "Empirical resolution agreement at inferred profile; not an error certificate"
+      }
+    }
+  ],
+  "reproduce": ".venv/bin/python experiments/expF19_radon_direct_pde/inverse_profile_study.py --checks-only"
+}

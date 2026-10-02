@@ -1,0 +1,176 @@
+{
+  "dtype": "float64",
+  "threads": 1,
+  "lambda": 0.25,
+  "one_dimensional": {
+    "x_interval": [
+      -1,
+      1
+    ],
+    "time_interval": [
+      0,
+      1
+    ],
+    "independent_sobol_points": 2048,
+    "sobol_seed": 5719,
+    "ic_grid_points": 1001,
+    "h_values": [
+      0.12,
+      0.08,
+      0.05,
+      0.03,
+      0.02
+    ],
+    "halo_inverse_widths": 25,
+    "advection_ic": "exp(-12*(x+0.5)^2)",
+    "advection_speed": 1,
+    "airy_ic_modes": [
+      [
+        1,
+        1.5
+      ],
+      [
+        0.5,
+        2.2
+      ]
+    ],
+    "heat_ic_modes": [
+      [
+        1,
+        "pi"
+      ],
+      [
+        0.4,
+        "2pi"
+      ]
+    ],
+    "heat_diffusivity": 0.15
+  },
+  "three_dimensional": {
+    "spatial_evaluation_box": [
+      -0.6,
+      0.6
+    ],
+    "independent_sobol_points": 128,
+    "heat_sobol_seed": 5731,
+    "numerical_heat_sobol_seed": 5771,
+    "wave_sobol_seed": 5791,
+    "diffusion_tensor": [
+      [
+        0.12,
+        0.025,
+        -0.01
+      ],
+      [
+        0.025,
+        0.08,
+        0.015
+      ],
+      [
+        -0.01,
+        0.015,
+        0.16
+      ]
+    ],
+    "initial_components": [
+      {
+        "amplitude": 1,
+        "precision": [
+          [
+            3,
+            0.7,
+            0.2
+          ],
+          [
+            0.7,
+            5,
+            -0.4
+          ],
+          [
+            0.2,
+            -0.4,
+            2
+          ]
+        ],
+        "center": [
+          0.12,
+          -0.15,
+          0.09
+        ]
+      },
+      {
+        "amplitude": -0.3,
+        "precision": [
+          [
+            2.2,
+            0,
+            0
+          ],
+          [
+            0,
+            2.2,
+            0
+          ],
+          [
+            0,
+            0,
+            2.2
+          ]
+        ],
+        "center": [
+          -0.21,
+          0.17,
+          -0.08
+        ]
+      }
+    ],
+    "angular_nz": [
+      4,
+      8,
+      12,
+      20,
+      32
+    ],
+    "base_centers_interval": [
+      -5,
+      5
+    ],
+    "base_h": 0.04,
+    "heat_times": [
+      0,
+      0.25,
+      1
+    ],
+    "wave_speed": 0.7,
+    "wave_times": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "wave_initial_velocity": 0,
+    "wave_reference_kirchhoff_nz": [
+      48,
+      64
+    ]
+  },
+  "numerical_heat": {
+    "profile_interval": [
+      -8,
+      8
+    ],
+    "endpoint": false,
+    "profile_samples": [
+      256,
+      512,
+      1024
+    ],
+    "angular_nz": [
+      12,
+      20,
+      32
+    ],
+    "spectrum_cutoff_relative": 1e-14,
+    "time_propagator": "exact matrix exponential of FFT heat discretization"
+  }
+}

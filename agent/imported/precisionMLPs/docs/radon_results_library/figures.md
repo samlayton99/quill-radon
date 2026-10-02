@@ -1,0 +1,22 @@
+# Existing figure guide
+
+The October 1 organization linked existing figures without regenerating them. The dated October 2 addition below reports the subsequently authorized experiments. Read the evidence alongside each plot: different campaigns use different budgets, architectures and error definitions.
+
+| Question | Existing figure | Interpretation / full evidence |
+|---|---|---|
+| October 2: can the streamed native solver access the accurate diffusion field? | [Coefficient-access comparison](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_gap_diagnosis/coefficient_access_progress.png) | [Paired diagnosis](evidence/coefficient_access_2026_10_02.md); both fields below1e-15, only contrast1000 passes every driver gate |
+| Why does the finite-halo correction matter? | [Boundary correction](../../results/checkpoint_F_applications/expF19_radon_direct_pde/quill_review/boundary_comparison.png) | [Known-function constructor](methods/analytical_construction.md); no unknown PDE inferred |
+| How should direction and center resolution be divided? | [Allocation study](../../results/checkpoint_F_applications/expF19_radon_direct_pde/quill_review/allocation_summary.png) | Angular and scalar errors must both resolve |
+| Did native 3D NS reach near-floor accuracy? | [Steady 3D accuracy ladder](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/native_3d_accuracy_ladder.png) | [Expanded ordinary-model audit](evidence/navier_stokes_and_dimensions.md) |
+| What changes with time as a fourth input? | [Four-input NS ladder](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/native_4d_accuracy_ladder.png) | Pressure and corner errors limit the floor claim |
+| Do physical flows work without a manufactured field? | [Disk flow and residuals](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/disk_resolution_flow_and_residual.png) | Unknown true field; use residual/refinement evidence |
+| How far did the general full-rank 5D test get? | [5D accuracy and cost](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/five_dimensional_refinement_control/five_dimensional_accuracy_cost.png) | About a million neurons, value error 2.73e-9; not floor |
+| How broad is the forward success? | [Forward stress comparison](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/comparison/forward_comparison.png) | Older figure omits some subsequently completed normalized cases; [complete table](evidence/forward_and_controls.md) is authoritative |
+| Where did normalization help? | [Diffusion fields](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/comparison/diffusion_fields.png) | Compare raw PDE error separately from scaled stopping |
+| Did hard initial conditions fix Allen–Cahn? | [Initial-plane controls](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/initial_plane/initial_plane_control.png) | No; large field errors and cancellation persist |
+| Can encoding itself lose the requested precision? | [Encoding limits](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/hard_encoding/encoding_limits.png) | Separates native coefficient error, stable sum and ordinary exported tanh |
+| What happened on harder inverse Burgers? | [Inverse campaign](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/inverse/accuracy_extension/inverse_campaign.png) | Includes unresolved low-viscosity cases |
+| Can the forward gate protect inverse inference? | [Burgers forward gates](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/inverse/burgers_reduced_forward_gates/forward_gate_summary.png) | Failed gates mean no trustworthy reduced-inverse answer |
+| What is the completed physical NS inverse? | [Wall-NS inverse](../../results/checkpoint_F_applications/expF19_radon_direct_pde/route2_battletest/inverse/wall_ns_reduced_inverse/wall_ns_inverse.png) | Only the noiseless case is completed; noisy case interrupted |
+
+The earlier [fluid animation folder](../../results/checkpoint_F_applications/expF19_radon_direct_pde/fluid_animation) belongs to a shared-product architecture. It remains a useful visualization, but is not evidence for the current one-hidden-layer global solver. The [file inventory](catalogue/result_inventory.csv) includes all other saved figures and animations.

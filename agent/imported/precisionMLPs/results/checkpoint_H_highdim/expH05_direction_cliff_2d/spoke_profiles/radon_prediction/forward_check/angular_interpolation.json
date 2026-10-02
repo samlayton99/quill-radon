@@ -1,0 +1,81 @@
+{
+  "construction": "trigonometric interpolation of plane-wave angle; no 2D fit",
+  "direction_lines": 32,
+  "oriented_interpolation_nodes": 64,
+  "partition_identity_roundoff_before_correction": 1.0658141036401503e-14,
+  "continuous_error": {
+    "rel_l2": [
+      3.368907276462051e-16
+    ],
+    "max_abs": [
+      1.7763568394002505e-15
+    ]
+  },
+  "cells": [
+    {
+      "N": 64,
+      "width": 2048,
+      "one_dimensional_fit_rank": 63,
+      "network_error": {
+        "rel_l2": [
+          4.1013333957988196e-15
+        ],
+        "max_abs": [
+          3.774758283725532e-14
+        ]
+      },
+      "one_dimensional_conversion_error": {
+        "rel_l2": [
+          4.140108718560322e-15
+        ],
+        "max_abs": [
+          3.8191672047105385e-14
+        ]
+      }
+    },
+    {
+      "N": 128,
+      "width": 4096,
+      "one_dimensional_fit_rank": 114,
+      "network_error": {
+        "rel_l2": [
+          3.4112820748509764e-14
+        ],
+        "max_abs": [
+          4.248823515240474e-13
+        ]
+      },
+      "one_dimensional_conversion_error": {
+        "rel_l2": [
+          3.413227461409944e-14
+        ],
+        "max_abs": [
+          4.2510439612897244e-13
+        ]
+      },
+      "projection": {
+        "rank": 3123,
+        "discarded_fraction_of_squared_coefficient_difference": 0.9999126997242743,
+        "raw_coefficient_relative_difference": 6.625366219730637,
+        "projected_coefficient_relative_difference": 0.061903855234170586,
+        "interior_coefficient_relative_difference": 0.025513341041616334,
+        "network_error": {
+          "rel_l2": [
+            3.016007719713993e-14
+          ],
+          "max_abs": [
+            3.7414515929867775e-13
+          ]
+        },
+        "function_change": {
+          "rel_l2": [
+            2.68146227337014e-14
+          ],
+          "max_abs": [
+            3.2884805989397137e-13
+          ]
+        }
+      }
+    }
+  ]
+}

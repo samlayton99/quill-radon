@@ -1,0 +1,32 @@
+# large binaries stay local (data lives in this repo, untracked)
+*.npz
+*.npy
+*.pt
+*.pth
+*.pkl
+*.h5
+*.gif
+*.mp4
+*.mat
+*.dat
+*.zip
+# caches and environments
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+.ipynb_checkpoints/
+.claude/
+*.gz
+*-ubyte
+
+# local-only (never public): paper-1 manuscripts and appendix source (double-blind review),
+# raw chat extracts with Sam's and labmates' messages
+papers/paper1_quill/*.pdf
+papers/paper1_quill/*.tex
+papers/paper1_quill/appendix_source_v7/
+agent/imported/precisionMLPs/docs/appendix_notes/
+agent/workspace/2026-10-02_import_audit/sessions/*
+!agent/workspace/2026-10-02_import_audit/sessions/RAW_SESSIONS.md

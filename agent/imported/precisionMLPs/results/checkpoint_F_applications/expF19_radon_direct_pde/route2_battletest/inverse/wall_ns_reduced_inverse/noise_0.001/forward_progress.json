@@ -1,0 +1,810 @@
+[
+  {
+    "parameters": [
+      0.05
+    ],
+    "role": "initial",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 32,
+    "seconds": 150.3703075000085,
+    "inner_parameter_count": 0,
+    "warm_start_used": false,
+    "warm_start_provenance": {
+      "kind": "cold",
+      "reason": "no previous native state requested"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 7.123118384920035e-11,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 5.306614257508707e-13,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.734723475976807e-17,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 5.670511355725507e-11,
+        "maximum_absolute": 9.389928279368576e-10
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 5.304183805661407e-13,
+        "maximum_absolute": 1.6514567491299204e-12
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 5.412337245047638e-16,
+        "maximum_absolute": 5.412337245047638e-16
+      }
+    ],
+    "sensor_objective": 89.4530971924753
+  },
+  {
+    "parameters": [
+      0.050050000000000004
+    ],
+    "role": "sensitivity_plus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 32,
+    "seconds": 125.35111029166728,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 32,
+      "degree": 24,
+      "source_modes": 561,
+      "retained_modes": 325,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 7.082286028723193e-11,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 5.278745649104038e-13,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.0408340855860843e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 5.628279377533867e-11,
+        "maximum_absolute": 9.289401470269354e-10
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 5.277879244276425e-13,
+        "maximum_absolute": 1.6406875857910563e-12
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 2.1510571102112408e-16,
+        "maximum_absolute": 2.1510571102112408e-16
+      }
+    ],
+    "sensor_objective": 89.78663561573431
+  },
+  {
+    "parameters": [
+      0.04995
+    ],
+    "role": "sensitivity_minus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 32,
+    "seconds": 138.97454704204574,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 32,
+      "degree": 24,
+      "source_modes": 561,
+      "retained_modes": 325,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 7.164307941652076e-11,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 5.33453433664866e-13,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.5612511283791264e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 5.713104319005506e-11,
+        "maximum_absolute": 9.491373242909162e-10
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 5.331082911766216e-13,
+        "maximum_absolute": 1.6646684031229597e-12
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 2.983724378680108e-16,
+        "maximum_absolute": 2.983724378680108e-16
+      }
+    ],
+    "sensor_objective": 89.11975290106122
+  },
+  {
+    "parameters": [
+      0.024968191980993894
+    ],
+    "role": "line_search",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 80.655674375128,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 32,
+      "degree": 24,
+      "source_modes": 561,
+      "retained_modes": 325,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 4.685791276263591e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 2.752767961858081e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 4.85722573273506e-17,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 3.444268315353799e-09,
+        "maximum_absolute": 7.028728687963337e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 2.7527664678058246e-11,
+        "maximum_absolute": 6.15554274219221e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 3.469446951953614e-16,
+        "maximum_absolute": 3.469446951953614e-16
+      }
+    ],
+    "sensor_objective": 13.216345655440056
+  },
+  {
+    "parameters": [
+      0.025018191980993896
+    ],
+    "role": "sensitivity_plus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 91.14007562492043,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 4.684034272178655e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 2.650756764085658e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 6.245004513516506e-17,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 3.4363882203085767e-09,
+        "maximum_absolute": 7.078739128196787e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 2.6507691378842018e-11,
+        "maximum_absolute": 6.083722414729209e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 1.8735013540549517e-16,
+        "maximum_absolute": 1.8735013540549517e-16
+      }
+    ],
+    "sensor_objective": 12.949307375307967
+  },
+  {
+    "parameters": [
+      0.024918191980993893
+    ],
+    "role": "sensitivity_minus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 91.63251629238948,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 4.6980010400413365e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 2.717997083204863e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 3.8163916471489756e-17,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 3.4524881455381573e-09,
+        "maximum_absolute": 6.998863194551674e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 2.718010461773992e-11,
+        "maximum_absolute": 6.23666673860157e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 3.3306690738754696e-16,
+        "maximum_absolute": 3.3306690738754696e-16
+      }
+    ],
+    "sensor_objective": 13.486775125027291
+  },
+  {
+    "parameters": [
+      0.029578631224095087
+    ],
+    "role": "line_search",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 90.92969854176044,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 3.0350150153008468e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 1.0544289771319257e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.3530843112619095e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.1928977765561983e-09,
+        "maximum_absolute": 5.631121374749526e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 1.054426481708919e-11,
+        "maximum_absolute": 2.5594859565103434e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 5.759281940243e-16,
+        "maximum_absolute": 5.759281940243e-16
+      }
+    ],
+    "sensor_objective": 0.7699304327727052
+  },
+  {
+    "parameters": [
+      0.02962863122409509
+    ],
+    "role": "sensitivity_plus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 92.25415604189038,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 3.0114706432954016e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 1.0445634310130685e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 3.8163916471489756e-17,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.1780161601616867e-09,
+        "maximum_absolute": 5.594386198737311e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 1.0445773882330273e-11,
+        "maximum_absolute": 2.516499508775638e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 5.204170427930421e-16,
+        "maximum_absolute": 5.204170427930421e-16
+      }
+    ],
+    "sensor_objective": 0.750005371632984
+  },
+  {
+    "parameters": [
+      0.029528631224095086
+    ],
+    "role": "sensitivity_minus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 92.24975691735744,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 3.0545139046079015e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 1.0587154270062743e-11,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.4224732503009818e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.2093599542799614e-09,
+        "maximum_absolute": 5.6690935335002024e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 1.0586910771495682e-11,
+        "maximum_absolute": 2.5554322546916808e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 1.3877787807814457e-16,
+        "maximum_absolute": 1.3877787807814457e-16
+      }
+    ],
+    "sensor_objective": 0.7919540635087409
+  },
+  {
+    "parameters": [
+      0.030083881769285767
+    ],
+    "role": "line_search",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 107.72670991672203,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 2.818163805680726e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 9.839578307435983e-12,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.214306433183765e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.0371530095152793e-09,
+        "maximum_absolute": 5.253365981117142e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 9.839790412982327e-12,
+        "maximum_absolute": 2.344394123277027e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 2.636779683484747e-16,
+        "maximum_absolute": 2.636779683484747e-16
+      }
+    ],
+    "sensor_objective": 0.6633394955564691
+  },
+  {
+    "parameters": [
+      0.03013388176928577
+    ],
+    "role": "sensitivity_plus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 91.97018983308226,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 2.797239748137033e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 9.77643295877122e-12,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 3.608224830031759e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.02189642802778e-09,
+        "maximum_absolute": 5.215959297810713e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 9.776435419570767e-12,
+        "maximum_absolute": 2.32585894988091e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 2.636779683484747e-16,
+        "maximum_absolute": 2.636779683484747e-16
+      }
+    ],
+    "sensor_objective": 0.6640343177706899
+  },
+  {
+    "parameters": [
+      0.030033881769285765
+    ],
+    "role": "sensitivity_minus_0_step1",
+    "status": "sampled_residual_checks_passed",
+    "validated": true,
+    "degree": 40,
+    "seconds": 92.42395133292302,
+    "inner_parameter_count": 0,
+    "warm_start_used": true,
+    "warm_start_provenance": {
+      "kind": "algebraic_native_truncation",
+      "source_degree": 40,
+      "degree": 32,
+      "source_modes": 861,
+      "retained_modes": 561,
+      "chart_preserved": true,
+      "source_angular_rule_preserved": true,
+      "target_or_sensor_fit": false,
+      "validated": false,
+      "policy": "greatest fixed-ladder degree strictly below the current validated degree"
+    },
+    "validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "maximum_scaled_rms": 2.839155269494319e-09,
+        "points": 1025,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "maximum_scaled_rms": 9.903345241857963e-12,
+        "points": 132,
+        "reuses_training_locations": false
+      },
+      {
+        "name": "pressure_gauge",
+        "maximum_scaled_rms": 1.0408340855860843e-16,
+        "points": 1,
+        "reuses_training_locations": true
+      }
+    ],
+    "ordinary_validation": [
+      {
+        "name": "zero_force_momentum_and_divergence",
+        "points": 1025,
+        "finite": true,
+        "maximum_scaled_rms": 2.052457760364642e-09,
+        "maximum_absolute": 5.290801874391349e-08
+      },
+      {
+        "name": "prescribed_tangential_wall",
+        "points": 132,
+        "finite": true,
+        "maximum_scaled_rms": 9.90300557628644e-12,
+        "maximum_absolute": 2.3628043965828738e-11
+      },
+      {
+        "name": "pressure_gauge",
+        "points": 1,
+        "finite": true,
+        "maximum_scaled_rms": 7.632783294297951e-17,
+        "maximum_absolute": 7.632783294297951e-17
+      }
+    ],
+    "sensor_objective": 0.6646385277839459
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "run_id": "N002_ns3_bubble",
+  "checks": {
+    "corners": {
+      "points": 8,
+      "momentum_rms": 5.3752176080146476e-08,
+      "momentum_max": 1.1586957708586976e-07,
+      "divergence_rms": 6.354126393905157e-09,
+      "divergence_max": 1.5266478572408732e-08
+    },
+    "near_edges": {
+      "points": 116,
+      "momentum_rms": 1.5008317459657212e-08,
+      "momentum_max": 1.0946562756242173e-07,
+      "divergence_rms": 1.9890642973467023e-09,
+      "divergence_max": 1.447062794033507e-08
+    }
+  },
+  "scope": "Postfit saved-state audits only; no continuum certificate or known cavity field.",
+  "ordinary_vs_ideal_max": 1.0073192280302123e-13,
+  "ideal_velocity_relative_l2": 9.208805611868643e-10,
+  "ideal_pressure_relative_l2": 2.4517228434427753e-10,
+  "seconds": 2.1629048748873174
+}

@@ -1,0 +1,79 @@
+{
+ "d": 3,
+ "r": 0.3,
+ "targets": [
+  "fast_waves",
+  "radial_runge",
+  "composition",
+  "gauss_bump",
+  "product_sines",
+  "spatial_packet"
+ ],
+ "n_train": 32768,
+ "cells": [
+  {
+   "M": 192,
+   "N": 48,
+   "units": 9216,
+   "rank": 7090,
+   "n_cols": 9217,
+   "rel_l2": {
+    "fast_waves": 7.758677566545392e-13,
+    "radial_runge": 3.235445576629772e-10,
+    "composition": 1.8881080958064815e-13,
+    "gauss_bump": 2.1600959700049327e-14,
+    "product_sines": 9.392389183677459e-14,
+    "spatial_packet": 1.3274294707194304e-07
+   },
+   "max_abs": {
+    "fast_waves": 3.5674796450280155e-12,
+    "radial_runge": 1.5568142330835144e-09,
+    "composition": 2.7975399774504695e-12,
+    "gauss_bump": 6.311617894994015e-14,
+    "product_sines": 2.800260023860801e-13,
+    "spatial_packet": 6.952187734388104e-07
+   },
+   "weight_norm": {
+    "fast_waves": 0.8785052904788074,
+    "radial_runge": 2.38965701790806,
+    "composition": 0.14406197296424836,
+    "gauss_bump": 0.030603940671547297,
+    "product_sines": 0.14919207635729223,
+    "spatial_packet": 1062.499428494269
+   },
+   "seconds": 224.1
+  },
+  {
+   "M": 256,
+   "N": 48,
+   "units": 12288,
+   "rank": 8930,
+   "n_cols": 12289,
+   "rel_l2": {
+    "fast_waves": 1.307909491451011e-11,
+    "radial_runge": 1.1304549372679339e-11,
+    "composition": 1.501021867826038e-12,
+    "gauss_bump": 1.997856101583852e-13,
+    "product_sines": 4.0973073945593115e-13,
+    "spatial_packet": 5.6985393056346475e-09
+   },
+   "max_abs": {
+    "fast_waves": 6.524658591189336e-11,
+    "radial_runge": 5.626987764628666e-11,
+    "composition": 1.96787031114809e-11,
+    "gauss_bump": 8.149869668017118e-13,
+    "product_sines": 1.4238332735061476e-12,
+    "spatial_packet": 2.7512568445686725e-08
+   },
+   "weight_norm": {
+    "fast_waves": 1.9339377653211307,
+    "radial_runge": 0.07749142339470981,
+    "composition": 0.4667027636089286,
+    "gauss_bump": 0.024991981954852135,
+    "product_sines": 0.11850283179585658,
+    "spatial_packet": 49.515550997930134
+   },
+   "seconds": 500.7
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+  "cases": [
+    {
+      "initial": 0.04,
+      "noise": 0.0,
+      "seed": 0,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.0,
+      "seed": 1,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.04,
+      "noise": 0.001,
+      "seed": 0,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.001,
+      "seed": 1,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.04,
+      "noise": 0.01,
+      "seed": 0,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.01,
+      "seed": 1,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.0,
+      "seed": 0,
+      "viscosity": 0.1
+    },
+    {
+      "initial": 0.04,
+      "noise": 0.0,
+      "seed": 0,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.0,
+      "seed": 1,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.04,
+      "noise": 0.001,
+      "seed": 0,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.001,
+      "seed": 1,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.04,
+      "noise": 0.01,
+      "seed": 0,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.01,
+      "seed": 1,
+      "viscosity": 0.02
+    },
+    {
+      "initial": 0.2,
+      "noise": 0.0,
+      "seed": 0,
+      "viscosity": 0.02
+    }
+  ],
+  "created_utc": "2026-10-01",
+  "domain": [
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "equation": "u_t+u*u_x-nu*u_xx=0",
+  "initial": "-sin(pi*x)",
+  "noise": "independent Gaussian absolute standard deviation; initial amplitude is one",
+  "observation_tolerance": "max(1e-8,1.5*known_noise_sigma); all objective weights fixed at one",
+  "oracle_convergence_check": 512,
+  "oracle_quadrature": 256,
+  "rules": [
+    "Protocol written before first solve; cannot silently overwrite.",
+    "No truth-dependent architecture, lambda, degree or initialization selection.",
+    "Zero readouts for each case; only generic native degree continuation.",
+    "No reference solution, true parameter, or held-out values in declaration.",
+    "Every attempted case is recorded, including exceptions and budget failures.",
+    "Noise does not justify machine-precision parameter claims.",
+    "Same algorithm/settings across regimes; seed/start paired except noiseless crossed control.",
+    "Independent audit only after solver returns; not used to select degree or best state."
+  ],
+  "sensors": 32,
+  "settings": {
+    "batch_size": 128,
+    "centers": 257,
+    "check_points": 257,
+    "coordinates": "affine_disk",
+    "degrees": [
+      6,
+      10,
+      14,
+      18,
+      22,
+      26,
+      32
+    ],
+    "export_check_points": 257,
+    "lam": 0.2,
+    "max_iterations": 20,
+    "max_seconds": 60.0,
+    "maximum_working_array_mb": 512,
+    "tolerance": 1e-08
+  },
+  "source_policy": {
+    "benchmark_scope": "Standard nonlinear Burgers/parameter-identification task; not the published PDEBench dataset or a head-to-head baseline",
+    "external_pde_solver": false,
+    "interior_labels": "Only declared 32 sensor values",
+    "oracle_initialization": false,
+    "parameter_truth": "Generator and post-solve evaluator only",
+    "primary_sources": [
+      "https://maziarraissi.github.io/PINNs/",
+      "https://github.com/pdebench/PDEBench"
+    ],
+    "reference": "Positive Cole-Hopf heat integral, measurement/evaluation only",
+    "target_readout_fit": false
+  },
+  "unknown": "scalar viscosity nu in [.001,.5]",
+  "untouched_audit": {
+    "curves_times": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "ordinary_ad_points": 257,
+    "points": 1024,
+    "seed": 991911
+  },
+  "version": 1,
+  "walls": "u(-1,t)=u(1,t)=0"
+}

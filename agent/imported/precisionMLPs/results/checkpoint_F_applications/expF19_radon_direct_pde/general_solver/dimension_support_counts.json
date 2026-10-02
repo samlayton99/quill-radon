@@ -1,0 +1,390 @@
+{
+  "rows": [
+    {
+      "dimension": 2,
+      "cutoff": 1,
+      "retained_box_modes": 9,
+      "quadrature_points": 16,
+      "estimated_workspace_gb": 3.584e-06,
+      "l1_support_modes": 5
+    },
+    {
+      "dimension": 2,
+      "cutoff": 2,
+      "retained_box_modes": 25,
+      "quadrature_points": 64,
+      "estimated_workspace_gb": 1.4336e-05,
+      "l1_support_modes": 13
+    },
+    {
+      "dimension": 2,
+      "cutoff": 3,
+      "retained_box_modes": 49,
+      "quadrature_points": 100,
+      "estimated_workspace_gb": 2.24e-05,
+      "l1_support_modes": 25
+    },
+    {
+      "dimension": 2,
+      "cutoff": 4,
+      "retained_box_modes": 81,
+      "quadrature_points": 196,
+      "estimated_workspace_gb": 4.3904e-05,
+      "l1_support_modes": 41
+    },
+    {
+      "dimension": 2,
+      "cutoff": 6,
+      "retained_box_modes": 169,
+      "quadrature_points": 400,
+      "estimated_workspace_gb": 8.96e-05,
+      "l1_support_modes": 85
+    },
+    {
+      "dimension": 2,
+      "cutoff": 10,
+      "retained_box_modes": 441,
+      "quadrature_points": 1024,
+      "estimated_workspace_gb": 0.000229376,
+      "l1_support_modes": 221
+    },
+    {
+      "dimension": 3,
+      "cutoff": 1,
+      "retained_box_modes": 27,
+      "quadrature_points": 64,
+      "estimated_workspace_gb": 1.4336e-05,
+      "l1_support_modes": 7
+    },
+    {
+      "dimension": 3,
+      "cutoff": 2,
+      "retained_box_modes": 125,
+      "quadrature_points": 512,
+      "estimated_workspace_gb": 0.000114688,
+      "l1_support_modes": 25
+    },
+    {
+      "dimension": 3,
+      "cutoff": 3,
+      "retained_box_modes": 343,
+      "quadrature_points": 1000,
+      "estimated_workspace_gb": 0.000224,
+      "l1_support_modes": 63
+    },
+    {
+      "dimension": 3,
+      "cutoff": 4,
+      "retained_box_modes": 729,
+      "quadrature_points": 2744,
+      "estimated_workspace_gb": 0.000614656,
+      "l1_support_modes": 129
+    },
+    {
+      "dimension": 3,
+      "cutoff": 6,
+      "retained_box_modes": 2197,
+      "quadrature_points": 8000,
+      "estimated_workspace_gb": 0.001792,
+      "l1_support_modes": 377
+    },
+    {
+      "dimension": 3,
+      "cutoff": 10,
+      "retained_box_modes": 9261,
+      "quadrature_points": 32768,
+      "estimated_workspace_gb": 0.007340032,
+      "l1_support_modes": 1561
+    },
+    {
+      "dimension": 4,
+      "cutoff": 1,
+      "retained_box_modes": 81,
+      "quadrature_points": 256,
+      "estimated_workspace_gb": 5.7344e-05,
+      "l1_support_modes": 9
+    },
+    {
+      "dimension": 4,
+      "cutoff": 2,
+      "retained_box_modes": 625,
+      "quadrature_points": 4096,
+      "estimated_workspace_gb": 0.000917504,
+      "l1_support_modes": 41
+    },
+    {
+      "dimension": 4,
+      "cutoff": 3,
+      "retained_box_modes": 2401,
+      "quadrature_points": 10000,
+      "estimated_workspace_gb": 0.00224,
+      "l1_support_modes": 129
+    },
+    {
+      "dimension": 4,
+      "cutoff": 4,
+      "retained_box_modes": 6561,
+      "quadrature_points": 38416,
+      "estimated_workspace_gb": 0.008605184,
+      "l1_support_modes": 321
+    },
+    {
+      "dimension": 4,
+      "cutoff": 6,
+      "retained_box_modes": 28561,
+      "quadrature_points": 160000,
+      "estimated_workspace_gb": 0.03584,
+      "l1_support_modes": 1289
+    },
+    {
+      "dimension": 4,
+      "cutoff": 10,
+      "retained_box_modes": 194481,
+      "quadrature_points": 1048576,
+      "estimated_workspace_gb": 0.234881024,
+      "l1_support_modes": 8361
+    },
+    {
+      "dimension": 5,
+      "cutoff": 1,
+      "retained_box_modes": 243,
+      "quadrature_points": 1024,
+      "estimated_workspace_gb": 0.000229376,
+      "l1_support_modes": 11
+    },
+    {
+      "dimension": 5,
+      "cutoff": 2,
+      "retained_box_modes": 3125,
+      "quadrature_points": 32768,
+      "estimated_workspace_gb": 0.007340032,
+      "l1_support_modes": 61
+    },
+    {
+      "dimension": 5,
+      "cutoff": 3,
+      "retained_box_modes": 16807,
+      "quadrature_points": 100000,
+      "estimated_workspace_gb": 0.0224,
+      "l1_support_modes": 231
+    },
+    {
+      "dimension": 5,
+      "cutoff": 4,
+      "retained_box_modes": 59049,
+      "quadrature_points": 537824,
+      "estimated_workspace_gb": 0.120472576,
+      "l1_support_modes": 681
+    },
+    {
+      "dimension": 5,
+      "cutoff": 6,
+      "retained_box_modes": 371293,
+      "quadrature_points": 3200000,
+      "estimated_workspace_gb": 0.7168,
+      "l1_support_modes": 3653
+    },
+    {
+      "dimension": 5,
+      "cutoff": 10,
+      "retained_box_modes": 4084101,
+      "quadrature_points": 33554432,
+      "estimated_workspace_gb": 7.516192768,
+      "l1_support_modes": 36365
+    },
+    {
+      "dimension": 10,
+      "cutoff": 1,
+      "retained_box_modes": 59049,
+      "quadrature_points": 1048576,
+      "estimated_workspace_gb": 0.234881024,
+      "l1_support_modes": 21
+    },
+    {
+      "dimension": 10,
+      "cutoff": 2,
+      "retained_box_modes": 9765625,
+      "quadrature_points": 1073741824,
+      "estimated_workspace_gb": 240.518168576,
+      "l1_support_modes": 221
+    },
+    {
+      "dimension": 10,
+      "cutoff": 3,
+      "retained_box_modes": 282475249,
+      "quadrature_points": 10000000000,
+      "estimated_workspace_gb": 2240.0,
+      "l1_support_modes": 1561
+    },
+    {
+      "dimension": 10,
+      "cutoff": 4,
+      "retained_box_modes": 3486784401,
+      "quadrature_points": 289254654976,
+      "estimated_workspace_gb": 64793.042714624,
+      "l1_support_modes": 8361
+    },
+    {
+      "dimension": 10,
+      "cutoff": 6,
+      "retained_box_modes": 137858491849,
+      "quadrature_points": 10240000000000,
+      "estimated_workspace_gb": 2293760.0,
+      "l1_support_modes": 134245
+    },
+    {
+      "dimension": 10,
+      "cutoff": 10,
+      "retained_box_modes": 16679880978201,
+      "quadrature_points": 1125899906842624,
+      "estimated_workspace_gb": 252201579.13274777,
+      "l1_support_modes": 8097453
+    },
+    {
+      "dimension": 20,
+      "cutoff": 1,
+      "retained_box_modes": 3486784401,
+      "quadrature_points": 1099511627776,
+      "estimated_workspace_gb": 246290.604621824,
+      "l1_support_modes": 41
+    },
+    {
+      "dimension": 20,
+      "cutoff": 2,
+      "retained_box_modes": 95367431640625,
+      "quadrature_points": 1152921504606846976,
+      "estimated_workspace_gb": 258254417031.93372,
+      "l1_support_modes": 841
+    },
+    {
+      "dimension": 20,
+      "cutoff": 3,
+      "retained_box_modes": 79792266297612001,
+      "quadrature_points": 100000000000000000000,
+      "estimated_workspace_gb": 22400000000000.0,
+      "l1_support_modes": 11521
+    },
+    {
+      "dimension": 20,
+      "cutoff": 4,
+      "retained_box_modes": 12157665459056928801,
+      "quadrature_points": 83668255425284801560576,
+      "estimated_workspace_gb": 1.8741689215263796e+16,
+      "l1_support_modes": 118721
+    },
+    {
+      "dimension": 20,
+      "cutoff": 6,
+      "retained_box_modes": 19004963774880799438801,
+      "quadrature_points": 104857600000000000000000000,
+      "estimated_workspace_gb": 2.34881024e+19,
+      "l1_support_modes": 6814249
+    },
+    {
+      "dimension": 20,
+      "cutoff": 10,
+      "retained_box_modes": 278218429446951548637196401,
+      "quadrature_points": 1267650600228229401496703205376,
+      "estimated_workspace_gb": 2.8395373445112338e+23,
+      "l1_support_modes": 4354393801
+    },
+    {
+      "dimension": 50,
+      "cutoff": 1,
+      "retained_box_modes": 717897987691852588770249,
+      "quadrature_points": 1267650600228229401496703205376,
+      "estimated_workspace_gb": 2.8395373445112338e+23,
+      "l1_support_modes": 101
+    },
+    {
+      "dimension": 50,
+      "cutoff": 2,
+      "retained_box_modes": 88817841970012523233890533447265625,
+      "quadrature_points": 1427247692705959881058285969449495136382746624,
+      "estimated_workspace_gb": 3.19703483166135e+38,
+      "l1_support_modes": 5101
+    },
+    {
+      "dimension": 50,
+      "cutoff": 3,
+      "retained_box_modes": 1798465042647412146620280340569649349251249,
+      "quadrature_points": 100000000000000000000000000000000000000000000000000,
+      "estimated_workspace_gb": 2.24e+43,
+      "l1_support_modes": 171801
+    },
+    {
+      "dimension": 50,
+      "cutoff": 4,
+      "retained_box_modes": 515377520732011331036461129765621272702107522001,
+      "quadrature_points": 2024891623976437135118764865774783290467102632746078437376,
+      "estimated_workspace_gb": 4.535757237707219e+50,
+      "l1_support_modes": 4341801
+    },
+    {
+      "dimension": 50,
+      "cutoff": 6,
+      "retained_box_modes": 49792922297912707801714181535533618316401192004725734249,
+      "quadrature_points": 112589990684262400000000000000000000000000000000000000000000000000,
+      "estimated_workspace_gb": 2.5220157913274777e+58,
+      "l1_support_modes": 1482288821
+    },
+    {
+      "dimension": 50,
+      "cutoff": 10,
+      "retained_box_modes": 1291114435050719026386456475646628666554089222911187324493837291001,
+      "quadrature_points": 1809251394333065553493296640760748560207343510400633813116524750123642650624,
+      "estimated_workspace_gb": 4.0527231233060667e+68,
+      "l1_support_modes": 31297149356221
+    },
+    {
+      "dimension": 100,
+      "cutoff": 1,
+      "retained_box_modes": 515377520732011331036461129765621272702107522001,
+      "quadrature_points": 1606938044258990275541962092341162602522202993782792835301376,
+      "estimated_workspace_gb": 3.599541219140138e+53,
+      "l1_support_modes": 201
+    },
+    {
+      "dimension": 100,
+      "cutoff": 2,
+      "retained_box_modes": 7888609052210118054117285652827862296732064351090230047702789306640625,
+      "quadrature_points": 2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397376,
+      "estimated_workspace_gb": 4.5629605869892487e+83,
+      "l1_support_modes": 20201
+    },
+    {
+      "dimension": 100,
+      "cutoff": 3,
+      "retained_box_modes": 3234476509624757991344647769100216810857203198904625400933895331391691459636928060001,
+      "quadrature_points": 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "estimated_workspace_gb": 2.24e+93,
+      "l1_support_modes": 1353601
+    },
+    {
+      "dimension": 100,
+      "cutoff": 4,
+      "retained_box_modes": 265613988875874769338781322035779626829233452653394495974574961739092490901302182994384699044001,
+      "quadrature_points": 4100186088849932880529641652467097254580106752379202732219712635674892614660264830614790322190186581981413953765376,
+      "estimated_workspace_gb": 9.184416839023851e+107,
+      "l1_support_modes": 68033601
+    },
+    {
+      "dimension": 100,
+      "cutoff": 6,
+      "retained_box_modes": 2479335110965972533511072884734865136238774467874941149812189099406158699837975560158285662939982180192171594001,
+      "quadrature_points": 12676506002282294014967032053760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "estimated_workspace_gb": 2.839537344511234e+123,
+      "l1_support_modes": 91713821641
+    },
+    {
+      "dimension": 100,
+      "cutoff": 10,
+      "retained_box_modes": 1666976484396337359195972108050766529167300667828951014331365469362133029070327866633033064632426906380900918045096212631206355582001,
+      "quadrature_points": 3273390607896141870013189696827599152216642046043064789483291368096133796404674554883270092325904157150886684127560071009217256545885393053328527589376,
+      "estimated_workspace_gb": 7.332394961687358e+143,
+      "l1_support_modes": 29871434052884841
+    }
+  ],
+  "support_meaning": "l1 support of products of <=degree coordinate cosines; possible modes, not all significant",
+  "workspace_meaning": "14 complex128 grid-sized arrays, conservative implementation estimate"
+}

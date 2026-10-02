@@ -1,0 +1,192 @@
+{
+  "case": "nonlinear_diffusion",
+  "degree": 12,
+  "backend": "polynomial",
+  "fields": 1,
+  "coefficients": 91,
+  "interior_points": 455,
+  "setup_seconds": 0.0012766658328473568,
+  "solve_seconds": 0.11418891698122025,
+  "features": {
+    "backend": "polynomial",
+    "dimension": 2,
+    "degree": 12,
+    "coefficient_count": 91,
+    "tanh_count": 0,
+    "basis": "total-degree Legendre products",
+    "max_derivative_calibrated": 2,
+    "product_gates": true,
+    "construction_uses_target_data": false,
+    "encoding_value_error": 0.0,
+    "encoding_derivative_errors": [
+      0.0,
+      0.0
+    ],
+    "setup_seconds": 0.00015354203060269356
+  },
+  "solver": {
+    "status": "stationary",
+    "converged": false,
+    "optimization_converged": true,
+    "iterations": 5,
+    "objective": 1.1966473801179786e-18,
+    "tolerance": 1e-09,
+    "blocks": [
+      {
+        "name": "PDE",
+        "input_rows": 455,
+        "output_rows": 455,
+        "equations": 1,
+        "rms": 1.5158921781090356e-09,
+        "scaled_rms": [
+          1.5158921781090356e-09
+        ],
+        "maximum_scaled_rms": 1.5158921781090356e-09,
+        "weighted_norm": 1.5158921781090356e-09
+      },
+      {
+        "name": "Dirichlet",
+        "input_rows": 168,
+        "output_rows": 168,
+        "equations": 1,
+        "rms": 3.0881331672031474e-10,
+        "scaled_rms": [
+          3.0881331672031474e-10
+        ],
+        "maximum_scaled_rms": 3.0881331672031474e-10,
+        "weighted_norm": 3.0881331672031474e-10
+      }
+    ],
+    "residual_evaluations": 11,
+    "linearizations": 6,
+    "lsmr_iterations": 1557,
+    "seconds": 0.11417650012299418,
+    "basis_setup_seconds": 0.000931750051677227,
+    "basis_cache_bytes": 1116024,
+    "unknowns": 91,
+    "feature_metrics": {
+      "backend": "polynomial",
+      "dimension": 2,
+      "degree": 12,
+      "coefficient_count": 91,
+      "tanh_count": 0,
+      "basis": "total-degree Legendre products",
+      "max_derivative_calibrated": 2,
+      "product_gates": true,
+      "construction_uses_target_data": false,
+      "encoding_value_error": 0.0,
+      "encoding_derivative_errors": [
+        0.0,
+        0.0
+      ],
+      "setup_seconds": 0.00015354203060269356
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal stochastic scaling, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling",
+    "local_derivative_bytes": 12264,
+    "dense_jacobian_bytes_avoided": 453544,
+    "product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 9
+    },
+    "residual_entries": 623
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 2.2455449266690772,
+      "maximum_scaled_block_rms": 2.0234783644713943,
+      "damping": 1e-06,
+      "elapsed_seconds": 0.001345583237707615,
+      "scaled_projected_gradient_inf": 1.179392510745217,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 299,
+      "estimated_condition": 42.18905675298784,
+      "step_length": 1.0,
+      "step_norm": 1.1097683833361234,
+      "trial_objective": 0.6983486516897539
+    },
+    {
+      "iteration": 1,
+      "objective": 0.6983486516897539,
+      "maximum_scaled_block_rms": 1.1818194873365697,
+      "damping": 3.333333333333333e-07,
+      "elapsed_seconds": 0.0231068329885602,
+      "scaled_projected_gradient_inf": 1.1266937763540692,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 308,
+      "estimated_condition": 30.395683746616587,
+      "step_length": 1.0,
+      "step_norm": 0.19714617246655533,
+      "trial_objective": 0.0022269483802191863
+    },
+    {
+      "iteration": 2,
+      "objective": 0.0022269483802191863,
+      "maximum_scaled_block_rms": 0.06673751974849411,
+      "damping": 1.111111111111111e-07,
+      "elapsed_seconds": 0.045314958319067955,
+      "scaled_projected_gradient_inf": 0.05345432565563298,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 337,
+      "estimated_condition": 34.24559279957984,
+      "step_length": 1.0,
+      "step_norm": 0.014955692417740663,
+      "trial_objective": 4.562101270446457e-08
+    },
+    {
+      "iteration": 3,
+      "objective": 4.562101270446457e-08,
+      "maximum_scaled_block_rms": 0.00030206272261305237,
+      "damping": 3.703703703703703e-08,
+      "elapsed_seconds": 0.0696211252361536,
+      "scaled_projected_gradient_inf": 0.00022046326315904304,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 339,
+      "estimated_condition": 38.4118396453427,
+      "step_length": 1.0,
+      "step_norm": 6.982085681391962e-05,
+      "trial_objective": 2.1025974325954814e-17
+    },
+    {
+      "iteration": 4,
+      "objective": 2.1025974325954814e-17,
+      "maximum_scaled_block_rms": 6.4403013716351374e-09,
+      "damping": 1.2345679012345676e-08,
+      "elapsed_seconds": 0.09397391602396965,
+      "scaled_projected_gradient_inf": 4.374338306262894e-09,
+      "lsmr_stop": 2,
+      "lsmr_iterations": 274,
+      "estimated_condition": 31.07837736388262,
+      "step_length": 1.0,
+      "step_norm": 2.048666696600738e-09,
+      "trial_objective": 1.1966473801179786e-18
+    },
+    {
+      "iteration": 5,
+      "objective": 1.1966473801179786e-18,
+      "maximum_scaled_block_rms": 1.5158921781090356e-09,
+      "damping": 4.115226337448558e-09,
+      "elapsed_seconds": 0.11381308315321803,
+      "scaled_projected_gradient_inf": 1.2071056483963925e-15
+    }
+  ],
+  "validation": {
+    "relative_l2": 1.3885055120136128e-10,
+    "component_relative_l2": [
+      1.3885055120136128e-10
+    ],
+    "independent_residual_rms": {
+      "PDE": 1.636557165203013e-09,
+      "Dirichlet": 3.2233138210157705e-10
+    },
+    "parameter_relative_error": null
+  },
+  "manufactured_forcing": true,
+  "note": ""
+}

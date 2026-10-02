@@ -1,0 +1,40 @@
+{
+  "provenance": "Independent ordinary Torch/AD audit of native transientp8 saved iterate; no fitting or target coefficients",
+  "source": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/transient_trig_p8_n129_native.npz",
+  "audit": {
+    "ordinary_velocity_relative_l2": 4.894369170589103e-07,
+    "ordinary_pressure_relative_l2": 1.7402924943675515e-05,
+    "ordinary_velocity_max_abs": 1.7585836406541766e-07,
+    "ordinary_pressure_max_abs": 3.5463042929017446e-06,
+    "ordinary_momentum_rms": 1.3284604931045985e-07,
+    "ordinary_momentum_max_abs": 1.0263344703276278e-06,
+    "ordinary_divergence_rms": 1.4227404845852184e-08,
+    "ordinary_divergence_max_abs": 6.186285009623356e-08,
+    "ordinary_vs_grouped_max_abs": 2.5396351688300456e-15,
+    "ordinary_readout_l1_per_field": [
+      1.4296487868124867,
+      1.4066511327351559,
+      1.3956108124045092,
+      0.6053202357982341
+    ],
+    "ordinary_parameter_bytes": 8030696,
+    "value_audit_points": 257,
+    "derivative_audit_points": 97,
+    "constraints": {
+      "velocity_boundary": {
+        "rms": 4.2203851831693664e-08,
+        "max_abs": 1.6477994750629943e-07
+      },
+      "velocity_initial": {
+        "rms": 4.3482007346256644e-08,
+        "max_abs": 1.6206220736225685e-07
+      },
+      "pressure_gauge": {
+        "rms": 2.61945596869973e-17,
+        "max_abs": 3.1968361342108624e-17
+      }
+    },
+    "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+    "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+  }
+}

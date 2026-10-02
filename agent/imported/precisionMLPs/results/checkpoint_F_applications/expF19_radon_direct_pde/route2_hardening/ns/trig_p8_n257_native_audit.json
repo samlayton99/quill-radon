@@ -1,0 +1,36 @@
+{
+  "checkpoint": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/ns/trig_p8_p12_p16_n257_auto_p8_native.npz",
+  "audit": {
+    "ordinary_velocity_relative_l2": 5.940615134164461e-07,
+    "ordinary_pressure_relative_l2": 4.57929337109471e-06,
+    "ordinary_velocity_max_abs": 2.903725223879494e-07,
+    "ordinary_pressure_max_abs": 1.928952744784107e-06,
+    "ordinary_momentum_rms": 4.047192808506248e-07,
+    "ordinary_momentum_max_abs": 4.1349752820940555e-06,
+    "ordinary_divergence_rms": 1.5662616994633814e-08,
+    "ordinary_divergence_max_abs": 9.082585779389246e-08,
+    "ordinary_vs_grouped_max_abs": 1.8596235662471372e-15,
+    "ordinary_readout_l1_per_field": [
+      0.5893437755448248,
+      0.5786371076091216,
+      0.5852589962515902,
+      0.2455748931641325
+    ],
+    "ordinary_parameter_bytes": 1508576,
+    "value_audit_points": 513,
+    "derivative_audit_points": 129,
+    "constraints": {
+      "velocity_boundary": {
+        "rms": 6.223940407659519e-08,
+        "max_abs": 3.918010122727633e-07
+      },
+      "pressure_gauge": {
+        "rms": 8.632959798415829e-18,
+        "max_abs": 8.632959798415829e-18
+      }
+    },
+    "architecture": "ordinary torch Linear/Tanh/Linear with standard AD",
+    "truth_access": "Held-out values only; manufactured source and prescribed velocity traces used during solve"
+  },
+  "scope": "Independent ordinary MLP audit of saved native p8 state; p12 solve not completed"
+}

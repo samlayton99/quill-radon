@@ -1,0 +1,16 @@
+b2 friedman1   seed 0  ridge 0.496  block 0.280 (rcond 1e-02)  mlp 0.242 (trained head 0.251, w=35)  [1633p]
+b2 friedman1   seed 1  ridge 0.507  block 0.289 (rcond 1e-02)  mlp 0.265 (trained head 0.265, w=35)  [1633p]
+b2 friedman1   seed 2  ridge 0.498  block 0.281 (rcond 1e-03)  mlp 0.249 (trained head 0.267, w=35)  [1633p]
+b2 lorenz_map  seed 0  ridge 0.304  block 0.002 (rcond 1e-14)  mlp 0.010 (trained head 0.018, w=25)  [799p]
+b2 lorenz_map  seed 1  ridge 0.305  block 0.002 (rcond 1e-14)  mlp 0.010 (trained head 0.016, w=25)  [799p]
+b2 lorenz_map  seed 2  ridge 0.303  block 0.001 (rcond 1e-14)  mlp 0.010 (trained head 0.015, w=25)  [799p]
+b2 kin8nm      seed 0  ridge 0.774  block 0.245 (rcond 1e-03)  mlp 0.257 (trained head 0.260, w=31)  [1301p]
+b2 kin8nm      seed 1  ridge 0.757  block 0.245 (rcond 1e-02)  mlp 0.255 (trained head 0.254, w=31)  [1301p]
+b2 kin8nm      seed 2  ridge 0.751  block 0.248 (rcond 1e-02)  mlp 0.253 (trained head 0.258, w=31)  [1301p]
+b2 concrete    seed 0  ridge 0.611  block 0.373 (rcond 1e-03)  mlp 0.286 (trained head 0.311, w=31)  [1301p]
+b2 concrete    seed 1  ridge 0.658  block 0.323 (rcond 1e-03)  mlp 0.297 (trained head 0.302, w=31)  [1301p]
+b2 concrete    seed 2  ridge 0.643  block 0.336 (rcond 1e-03)  mlp 0.277 (trained head 0.300, w=31)  [1301p]
+b2 done in 3.2 min -> /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/expI02_block_prior/b2.json
+/Users/sam/my-repos/research/collaborations/precisionMLPs/experiments/expI02_block_prior/plots.py:33: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(loc="lower center", bbox_to_anchor=(0.5, y), ncol=ncol, borderaxespad=0, fontsize=8, frameon=False, **kw)
+wrote /Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_I_depth_theory/expI02_block_prior/figures/fig4_headtohead.png

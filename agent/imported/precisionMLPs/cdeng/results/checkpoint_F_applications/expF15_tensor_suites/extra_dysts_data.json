@@ -1,0 +1,179 @@
+{
+  "scope": "Oracle shared-QI interpolation plus optimal function-space rank truncation; temporal factors remain in the QI span. Not a collocation ODE solve and not a rank-constrained solve.",
+  "resolution_checks": {
+    "InteriorSquirmer": [
+      {"N": 512, "p": 927, "full_relative_l2": 7.446195e-07, "rank": 2, "rank_relative_l2": 1.299140e-01},
+      {"N": 768, "p": 1389, "full_relative_l2": 2.895647e-08, "rank": 2, "rank_relative_l2": 1.299140e-01}
+    ],
+    "MacArthur": [
+      {"N": 512, "p": 927, "full_relative_l2": 2.139219e-08, "rank": 6, "rank_relative_l2": 2.139219e-08},
+      {"N": 768, "p": 1389, "full_relative_l2": 7.744930e-09, "rank": 6, "rank_relative_l2": 7.744931e-09}
+    ]
+  },
+  "systems": {
+    "InteriorSquirmer": {
+      "d": 3,
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "T": 3.5514115074413852,
+      "lyapunov": 0.84473454954854,
+      "period": 28.822573200111794,
+      "full_parameters": 2091,
+      "full_interpolation_relative_l2": 3.88721873085269e-06,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 4931,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 700,
+          "relative_l2": 0.30932218946863155,
+          "intrinsic_trajectory_relative_l2": 0.3093221894608841,
+          "coefficient_energy_fraction": 0.9043197831159693
+        },
+        {
+          "rank": 2,
+          "parameters": 1400,
+          "relative_l2": 0.12991398730993076,
+          "intrinsic_trajectory_relative_l2": 0.12991398725437417,
+          "coefficient_energy_fraction": 0.9831223559160928
+        },
+        {
+          "rank": 3,
+          "parameters": 2100,
+          "relative_l2": 3.887218730853758e-06,
+          "intrinsic_trajectory_relative_l2": 7.244932504747026e-16,
+          "coefficient_energy_fraction": 1.0
+        }
+      ]
+    },
+    "DoublePendulum": {
+      "d": 4,
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "T": 0.7527667816001623,
+      "lyapunov": 3.985298067514186,
+      "period": 4.0234,
+      "full_parameters": 2788,
+      "full_interpolation_relative_l2": 1.039854555708796e-14,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 1154,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 701,
+          "relative_l2": 0.010935853699032234,
+          "intrinsic_trajectory_relative_l2": 0.010935853699032234,
+          "coefficient_energy_fraction": 0.9998804071038733
+        },
+        {
+          "rank": 2,
+          "parameters": 1402,
+          "relative_l2": 0.003837134267306947,
+          "intrinsic_trajectory_relative_l2": 0.0038371342673069473,
+          "coefficient_energy_fraction": 0.9999852764006146
+        },
+        {
+          "rank": 3,
+          "parameters": 2103,
+          "relative_l2": 0.0003530624321414758,
+          "intrinsic_trajectory_relative_l2": 0.00035306243214147583,
+          "coefficient_energy_fraction": 0.999999875346919
+        },
+        {
+          "rank": 4,
+          "parameters": 2804,
+          "relative_l2": 1.0411205199810822e-14,
+          "intrinsic_trajectory_relative_l2": 2.751823034703436e-16,
+          "coefficient_energy_fraction": 1.0
+        }
+      ]
+    },
+    "MacArthur": {
+      "d": 10,
+      "N": 384,
+      "W": 693,
+      "p": 697,
+      "T": 12.025790458031011,
+      "lyapunov": 0.2494638510848618,
+      "period": 43.406,
+      "full_parameters": 6970,
+      "full_interpolation_relative_l2": 4.67417290158971e-08,
+      "reference": "DOP853 rtol=1e-13, atol=1e-14",
+      "reference_nfev": 8162,
+      "cells": [
+        {
+          "rank": 1,
+          "parameters": 707,
+          "relative_l2": 0.07444552221734328,
+          "intrinsic_trajectory_relative_l2": 0.07444552221733614,
+          "coefficient_energy_fraction": 0.9944578642217892
+        },
+        {
+          "rank": 2,
+          "parameters": 1414,
+          "relative_l2": 0.020932893449219083,
+          "intrinsic_trajectory_relative_l2": 0.02093289344918368,
+          "coefficient_energy_fraction": 0.9995618139718457
+        },
+        {
+          "rank": 3,
+          "parameters": 2121,
+          "relative_l2": 0.0014371677067504733,
+          "intrinsic_trajectory_relative_l2": 0.001437167706211973,
+          "coefficient_energy_fraction": 0.9999979345489847
+        },
+        {
+          "rank": 4,
+          "parameters": 2828,
+          "relative_l2": 0.00033065375674518424,
+          "intrinsic_trajectory_relative_l2": 0.00033065375380119527,
+          "coefficient_energy_fraction": 0.9999998906680951
+        },
+        {
+          "rank": 5,
+          "parameters": 3535,
+          "relative_l2": 8.067401623198717e-05,
+          "intrinsic_trajectory_relative_l2": 8.067400355627315e-05,
+          "coefficient_energy_fraction": 0.9999999934917051
+        },
+        {
+          "rank": 6,
+          "parameters": 4242,
+          "relative_l2": 4.674172905919327e-08,
+          "intrinsic_trajectory_relative_l2": 2.0293046713903144e-12,
+          "coefficient_energy_fraction": 0.9999999999999998
+        },
+        {
+          "rank": 7,
+          "parameters": 4949,
+          "relative_l2": 4.6741729014539465e-08,
+          "intrinsic_trajectory_relative_l2": 2.7748801474209254e-16,
+          "coefficient_energy_fraction": 0.9999999999999998
+        },
+        {
+          "rank": 8,
+          "parameters": 5656,
+          "relative_l2": 4.674172901453925e-08,
+          "intrinsic_trajectory_relative_l2": 2.7746743662909033e-16,
+          "coefficient_energy_fraction": 1.0
+        },
+        {
+          "rank": 9,
+          "parameters": 6363,
+          "relative_l2": 4.674172901453796e-08,
+          "intrinsic_trajectory_relative_l2": 2.774671235847745e-16,
+          "coefficient_energy_fraction": 1.0
+        },
+        {
+          "rank": 10,
+          "parameters": 7070,
+          "relative_l2": 4.674172901454007e-08,
+          "intrinsic_trajectory_relative_l2": 2.774632890555121e-16,
+          "coefficient_energy_fraction": 1.0
+        }
+      ]
+    }
+  }
+}

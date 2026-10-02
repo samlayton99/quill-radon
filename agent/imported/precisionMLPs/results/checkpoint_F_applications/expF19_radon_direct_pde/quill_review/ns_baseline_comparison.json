@@ -1,0 +1,24 @@
+{
+  "navier_stokes": {
+    "method": "old_long_halo",
+    "neurons": 1003425,
+    "centers": 425,
+    "directions": 2361,
+    "lam": 0.25,
+    "velocity_rel_l2": 1.6478276670394029e-15,
+    "pressure_rel_l2": 7.377604925968492e-14,
+    "gradient_rel_l2": 1.517307167030799e-15,
+    "laplacian_rel_l2": 8.37728613972286e-14,
+    "max_velocity_error": 2.1176050205541573e-15,
+    "max_corner_velocity_error": 6.33548015382099e-16,
+    "velocity_weight_l1": 23.07778169689404,
+    "velocity_weight_max": 0.008241389897197015,
+    "coefficient_storage_mb": 56.1918
+  },
+  "burgers_fourier_profile": {
+    "neurons": 309,
+    "value_rel_l2": 8.633535000863376e-16,
+    "first_derivative_rel_l2": 1.5237160972720464e-15,
+    "second_derivative_rel_l2": 1.0274557589412999e-13
+  }
+}

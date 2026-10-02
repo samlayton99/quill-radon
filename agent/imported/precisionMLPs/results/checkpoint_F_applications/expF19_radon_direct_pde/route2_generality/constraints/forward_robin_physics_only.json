@@ -1,0 +1,287 @@
+{
+  "label": "forward_robin_physics_only",
+  "beta": 3,
+  "boundary_kind": "robin",
+  "inverse": false,
+  "initial_field": "all zero coefficients",
+  "initial_parameter": null,
+  "kappa_true": 1.7,
+  "kappa_estimate": 1.7,
+  "parameter_relative_error": null,
+  "parameter_bounds": null,
+  "noise_sigma_absolute": 0.0,
+  "observation_count": 0,
+  "provenance": "Exact profile only manufactures declared forcing/boundary/data and final audits; never a field initializer or interior label unless this case explicitly declares sparse observations",
+  "features": {
+    "architecture": "one hidden layer tanh ridge MLP",
+    "backend": "quill",
+    "product_gates": false,
+    "degree": 10,
+    "coefficient_count": 66,
+    "directions": 11,
+    "interior_centers_per_direction": 257,
+    "halo_per_side": 17,
+    "tanh_count": 3201,
+    "lam": 0.2,
+    "radius": 1.0,
+    "readout_parameterization": "explicit E @ a",
+    "construction_uses_target_data": false,
+    "angular_reproduction_guaranteed": true,
+    "normalized_profile_checks": [
+      {
+        "order": 0,
+        "maximum_absolute": 2.5757174171303632e-14,
+        "maximum_scaled": 6.217248937900877e-15
+      },
+      {
+        "order": 1,
+        "maximum_absolute": 3.410605131648481e-13,
+        "maximum_scaled": 1.4210854715202005e-15
+      },
+      {
+        "order": 2,
+        "maximum_absolute": 1.6370904631912708e-11,
+        "maximum_scaled": 1.1376814443266038e-14
+      }
+    ],
+    "setup_seconds": 0.004839916713535786
+  },
+  "solver_settings": {
+    "max_iterations": 25,
+    "tolerance": 2e-13,
+    "high_accuracy": true,
+    "preconditioner": "block",
+    "max_seconds": 60.0,
+    "max_residual_evaluations": 200
+  },
+  "solver": {
+    "status": "converged",
+    "converged": true,
+    "optimization_converged": true,
+    "iterations": 3,
+    "objective": 4.7246243040769974e-30,
+    "tolerance": 2e-13,
+    "blocks": [
+      {
+        "name": "variable_coefficient_equation",
+        "input_rows": 396,
+        "output_rows": 396,
+        "equations": 1,
+        "rms": 2.8530791999908555e-15,
+        "pre_relation_rms": 2.8530791999908555e-15,
+        "relation": "eq",
+        "active_entries": 396,
+        "scaled_rms": [
+          2.8530791999908555e-15
+        ],
+        "maximum_scaled_rms": 2.8530791999908555e-15,
+        "weighted_norm": 2.8530791999908555e-15
+      },
+      {
+        "name": "outer_dirichlet",
+        "input_rows": 96,
+        "output_rows": 96,
+        "equations": 1,
+        "rms": 1.0937440794656672e-16,
+        "pre_relation_rms": 1.0937440794656672e-16,
+        "relation": "eq",
+        "active_entries": 96,
+        "scaled_rms": [
+          1.0937440794656674e-15
+        ],
+        "maximum_scaled_rms": 1.0937440794656674e-15,
+        "weighted_norm": 1.0937440794656672e-15
+      },
+      {
+        "name": "inner_robin",
+        "input_rows": 96,
+        "output_rows": 96,
+        "equations": 1,
+        "rms": 3.3602317683060597e-16,
+        "pre_relation_rms": 3.3602317683060597e-16,
+        "relation": "eq",
+        "active_entries": 96,
+        "scaled_rms": [
+          3.3602317683060597e-16
+        ],
+        "maximum_scaled_rms": 3.3602317683060597e-16,
+        "weighted_norm": 3.3602317683060597e-16
+      }
+    ],
+    "residual_evaluations": 7,
+    "linearizations": 4,
+    "lsmr_iterations": 274,
+    "seconds": 0.11053650034591556,
+    "basis_setup_seconds": 0.05834408337250352,
+    "basis_cache_bytes": 1248192,
+    "unknowns": 66,
+    "feature_metrics": {
+      "architecture": "one hidden layer tanh ridge MLP",
+      "backend": "quill",
+      "product_gates": false,
+      "degree": 10,
+      "coefficient_count": 66,
+      "directions": 11,
+      "interior_centers_per_direction": 257,
+      "halo_per_side": 17,
+      "tanh_count": 3201,
+      "lam": 0.2,
+      "radius": 1.0,
+      "readout_parameterization": "explicit E @ a",
+      "construction_uses_target_data": false,
+      "angular_reproduction_guaranteed": true,
+      "normalized_profile_checks": [
+        {
+          "order": 0,
+          "maximum_absolute": 2.5757174171303632e-14,
+          "maximum_scaled": 6.217248937900877e-15
+        },
+        {
+          "order": 1,
+          "maximum_absolute": 3.410605131648481e-13,
+          "maximum_scaled": 1.4210854715202005e-15
+        },
+        {
+          "order": 2,
+          "maximum_absolute": 1.6370904631912708e-11,
+          "maximum_scaled": 1.1376814443266038e-14
+        }
+      ],
+      "setup_seconds": 0.004839916713535786
+    },
+    "parameter_bounds": [
+      [],
+      []
+    ],
+    "identifiability_checked": false,
+    "preconditioner": "block",
+    "preconditioner_builds": [
+      {
+        "iteration": 0,
+        "reason": "initial_or_periodic",
+        "kind": "parity_blocks",
+        "blocks": 2,
+        "maximum_block_size": 33,
+        "factor_bytes": 17424,
+        "setup_seconds": 0.000559540931135416,
+        "ridge_relative": 1e-10,
+        "setup_matvec_calls": 0,
+        "setup_rmatvec_calls": 0,
+        "setup_column_gram_calls": 2,
+        "column_row_chunk_size": 1024,
+        "construction": "local_column_panels",
+        "interpretation": "Small regularized Gram blocks; inverse-triangular right preconditioning, reused across nonlinear steps; local row chunks avoid global Jacobian assembly"
+      }
+    ],
+    "active_preconditioner": "block",
+    "preconditioner_switches": [],
+    "preconditioner_setup_seconds": 0.000559540931135416,
+    "settings": {
+      "max_iterations": 25,
+      "lsmr_tolerance": 1e-07,
+      "effective_lsmr_tolerance": 2e-15,
+      "lsmr_condition_limit": 0.0,
+      "lsmr_max_iterations": null,
+      "gradient_tolerance": 1e-11,
+      "step_tolerance": 1e-12,
+      "scaling_probes": 8,
+      "max_seconds": 60.0,
+      "max_residual_evaluations": 200,
+      "high_accuracy": true,
+      "linear_refinement_steps": 2,
+      "iteration_callback_active": false
+    },
+    "arithmetic": {
+      "dtype": "float64",
+      "machine_epsilon": 2.220446049250313e-16,
+      "requested_tolerance_below_machine_epsilon": false,
+      "tolerance_was_relaxed": false,
+      "precision_scope": "No certified rounding-error bound; conditioning, feature approximation, and callback cancellation may prevent the requested target"
+    },
+    "budget": {
+      "time_limit_seconds": 60.0,
+      "time_overshoot_seconds": 0.0,
+      "completed_direction_trials_after_time_budget": 0,
+      "residual_evaluation_limit": 200,
+      "residual_evaluation_limit_exceeded": false,
+      "semantics": "Soft wall-clock budget between numerical calls, with one trial of an already-computed direction; hard residual evaluation-count limit"
+    },
+    "convergence_scope": "Declared sampled/aggregated residual blocks only; no continuum error, uniqueness, identifiability, or omitted-condition certificate",
+    "method": "Damped Gauss-Newton, matrix-free LSMR, local pointwise Torch derivatives, diagonal/bounded-block right preconditioning with optional automatic selection, projected parameter bounds",
+    "callback_contract": "Callbacks must be pointwise across rows; explicit aggregation supplies weak/integral coupling; optional le/ge hinge follows aggregation",
+    "local_derivative_bytes": 19500,
+    "unassembled_dense_jacobian_bytes": 310464,
+    "storage_note": "Basis jets are cached densely and may exceed the hypothetical global Jacobian size; global residual Jacobian and Gram matrix are not assembled",
+    "product_counts": {
+      "matvec_calls": 284,
+      "rmatvec_calls": 308,
+      "column_gram_calls": 2,
+      "column_panel_bytes_max": 104544
+    },
+    "last_linearization_product_counts": {
+      "matvec_calls": 0,
+      "rmatvec_calls": 0
+    },
+    "residual_entries": 588
+  },
+  "scientific_status": "converged",
+  "identifiability": {
+    "scope": "Local finite-dimensional diagnostic; dense audit does not participate in solve",
+    "columns": 66,
+    "rank": 66,
+    "relative_rank_threshold": 1e-09,
+    "smallest_scaled_singular_value": 0.01694843627470702,
+    "largest_scaled_singular_value": 3.2590257269764784,
+    "full_column_rank": true,
+    "maximum_column_normalized_gradient": 0.13816793492472004,
+    "sampled_first_order_stationarity": false,
+    "stationarity_note": "Maximum |J_j^T r|/(||J_j|| ||r||), threshold1e-8; meaningful for nonzero-residual noisy fits, not a global optimality guarantee",
+    "audit_jacobian_bytes": 310464,
+    "audit_seconds": 0.06112145818769932
+  },
+  "ordinary_forward_relative_l2": 2.0289244619205866e-15,
+  "ordinary_forward_max_error": 7.216449660063518e-16,
+  "ordinary_vs_grouped_max": 8.326672684688674e-16,
+  "stable_fresh_pde_rms": 4.1107763732387016e-15,
+  "stable_fresh_pde_max": 2.4868995751603507e-14,
+  "raw_torch_ad_pde_rms": 3.023902880219565e-14,
+  "raw_torch_ad_pde_max": 1.3500311979441904e-13,
+  "raw_torch_ad_vs_stable_jet_max": {
+    "(0, 0)": 7.771561172376096e-16,
+    "(1, 0)": 1.887379141862766e-15,
+    "(0, 1)": 1.5543122344752192e-15,
+    "(2, 0)": 5.417888360170764e-14,
+    "(0, 2)": 2.531308496145357e-14
+  },
+  "fresh_constraint_checks": [
+    {
+      "name": "outer_dirichlet",
+      "rms": 1.5802356695546049e-16,
+      "maximum": 3.365363543395006e-16,
+      "raw_ordinary_torch_ad_rms": 2.254873622441467e-16,
+      "raw_ordinary_torch_ad_max": 4.440892098500626e-16,
+      "validation_points": 96,
+      "independent_points_or_quadrature": true
+    },
+    {
+      "name": "inner_robin",
+      "rms": 3.582432845137382e-16,
+      "maximum": 9.272609114597453e-16,
+      "raw_ordinary_torch_ad_rms": 1.158304550372262e-15,
+      "raw_ordinary_torch_ad_max": 3.5123687277452345e-15,
+      "validation_points": 96,
+      "independent_points_or_quadrature": true
+    }
+  ],
+  "graph_operators": [
+    "aten::linear",
+    "aten::tanh",
+    "prim::GetAttr"
+  ],
+  "model_parameter_bytes": 102440,
+  "solve_including_cache_seconds": 0.11055516684427857,
+  "heldout_audit_seconds": 0.29886762518435717,
+  "ordinary_inference_1201_points_seconds": 0.009625792037695646,
+  "exact_profile": "(-4*x**2/5 - 4*y**2/5 + 4/5)*(x**2 + y**2 - 4/25)*(3*x*y/20 + x/5 - y/10 + 1)",
+  "known_forcing": "-17*(2*x/5 + 1/4)*(2*x*(-4*x**2/5 - 4*y**2/5 + 4/5)*(3*x*y/20 + x/5 - y/10 + 1) - 8*x*(x**2 + y**2 - 4/25)*(3*x*y/20 + x/5 - y/10 + 1)/5 + (3*y/20 + 1/5)*(-4*x**2/5 - 4*y**2/5 + 4/5)*(x**2 + y**2 - 4/25))/10 - 17*(2*y/5 + 3/20)*(2*y*(-4*x**2/5 - 4*y**2/5 + 4/5)*(3*x*y/20 + x/5 - y/10 + 1) - 8*y*(x**2 + y**2 - 4/25)*(3*x*y/20 + x/5 - y/10 + 1)/5 + (3*x/20 - 1/10)*(-4*x**2/5 - 4*y**2/5 + 4/5)*(x**2 + y**2 - 4/25))/10 + 3*(-4*x**2/5 - 4*y**2/5 + 4/5)**3*(x**2 + y**2 - 4/25)**3*(3*x*y/20 + x/5 - y/10 + 1)**3 - 17*(x**2/5 + x/4 + y**2/5 + 3*y/20 + 1)*(-32*x**2*(3*x*y/20 + x/5 - y/10 + 1)/5 + 4*x*(3*y/20 + 1/5)*(-4*x**2/5 - 4*y**2/5 + 4/5) - 16*x*(3*y/20 + 1/5)*(x**2 + y**2 - 4/25)/5 + 2*(-4*x**2/5 - 4*y**2/5 + 4/5)*(3*x*y/20 + x/5 - y/10 + 1) - 8*(x**2 + y**2 - 4/25)*(3*x*y/20 + x/5 - y/10 + 1)/5)/10 - 17*(x**2/5 + x/4 + y**2/5 + 3*y/20 + 1)*(-32*y**2*(3*x*y/20 + x/5 - y/10 + 1)/5 + 4*y*(3*x/20 - 1/10)*(-4*x**2/5 - 4*y**2/5 + 4/5) - 16*y*(3*x/20 - 1/10)*(x**2 + y**2 - 4/25)/5 + 2*(-4*x**2/5 - 4*y**2/5 + 4/5)*(3*x*y/20 + x/5 - y/10 + 1) - 8*(x**2 + y**2 - 4/25)*(3*x*y/20 + x/5 - y/10 + 1)/5)/10"
+}

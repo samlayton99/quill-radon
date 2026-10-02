@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "purpose": "Unchanged native solver on harder zero-force wall-driven Navier-Stokes; no known interior solution.",
+  "source_policy": {
+    "external_pde_solution": false,
+    "interior_solution_labels": false,
+    "target_initialized_readouts": false,
+    "body_force": "zero",
+    "continuation": "Only preceding native PDE coefficients"
+  },
+  "cases": [
+    {
+      "name": "counterrotation_nu0.1",
+      "case": "disk_counterrotating",
+      "viscosity": 0.1,
+      "initialization": "zero"
+    },
+    {
+      "name": "counterrotation_nu0.03",
+      "case": "disk_counterrotating",
+      "viscosity": 0.03,
+      "initialization": "previous native counterrotation"
+    },
+    {
+      "name": "stirring_nu0.01",
+      "case": "disk_stirring",
+      "viscosity": 0.01,
+      "initialization": "/Users/sam/my-repos/research/collaborations/precisionMLPs/results/checkpoint_F_applications/expF19_radon_direct_pde/route2_hardening/physical_flow/lowviscosity_refined_disk_stirring_nu0.03_p48_n257.npz"
+    },
+    {
+      "name": "stirring_nu0.003",
+      "case": "disk_stirring",
+      "viscosity": 0.003,
+      "initialization": "previous native stirring"
+    }
+  ],
+  "degrees_cold": [
+    8,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "degrees_warm": [
+    48,
+    64
+  ],
+  "centers": 513,
+  "lam": 0.2,
+  "max_seconds_per_degree": 120.0,
+  "inner_iteration_cap": 400,
+  "outer_iteration_cap": 12,
+  "tolerance": 1e-14,
+  "coordinate_basis": "disk",
+  "preconditioner_block_size": 640,
+  "linearization_basis": "ideal",
+  "inexact_newton": true,
+  "audit_points": 4096,
+  "stopping": "Keep all scheduled degrees and outcomes, including budget/iteration exits. No exact error available.",
+  "validation": "Unseen ordinary Torch AD residuals, wall data, mass flux, richer-field agreement; no continuum certificate.",
+  "scope": "Steady solution branch; no claim about its dynamical stability or turbulence.",
+  "resource_scope": "Bounded operator/preconditioner panels and measured RSS; time limits soft around inner solves."
+}
